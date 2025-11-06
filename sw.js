@@ -1,9 +1,15 @@
-// Service Worker for English Hub - Navigation Bypass
-const CACHE_NAME = 'english-hub-v1.0.3';
-const STATIC_CACHE = 'static-cache-v1';
+// Service Worker for English Hub - Updated with better cache management
+const CACHE_NAME = 'english-hub-v1.0.3'; // Increment version
+const STATIC_CACHE = 'static-cache-v1.0.3';
+const DYNAMIC_CACHE = 'dynamic-cache-v1.0.3';
 
-// Only cache essential assets
+// Assets to cache during installation
 const STATIC_ASSETS = [
+  '/',
+  '/index.html',
+  '/Communication-Skills-Enhancement.html',
+  '/Eh-general-reading-adventures.html',
+  '/EH-reading-workplace.html',
   '/manifest.json',
   '/scripts/common-i18n.js',
   '/scripts/sound.js',
@@ -15,51 +21,117 @@ const STATIC_ASSETS = [
   '/assets/icons/icon-512x512.png'
 ];
 
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
   console.log('Service Worker: Installing...');
+  self.skipWaiting(); // Activate immediately
+  
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
         console.log('Service Worker: Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
-      .then(() => self.skipWaiting())
+      .then(() => {
+        console.log('Service Worker: Install completed');
+      })
   );
 });
 
+// Activate event - clean up old caches more aggressively
 self.addEventListener('activate', (event) => {
   console.log('Service Worker: Activating...');
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cache) => {
-          if (cache !== STATIC_CACHE) {
+          // Delete ALL caches that don't match current version
+          if (!cache.includes('v1.0.3')) {
+            console.log('Service Worker: Deleting old cache', cache);
             return caches.delete(cache);
           }
         })
       );
-    }).then(() => self.clients.claim())
+    }).then(() => {
+      console.log('Service Worker: Activate completed');
+      return self.clients.claim(); // Take control immediately
+    })
   );
 });
 
-// COMPLETELY bypass service worker for navigation requests
+// Fetch event - serve from cache or network with cache-busting
 self.addEventListener('fetch', (event) => {
-  // Bypass service worker for all HTML navigation
-  if (event.request.mode === 'navigate') {
-    return;
-  }
-  
-  // Bypass service worker for HTML file requests
-  const url = new URL(event.request.url);
-  if (url.pathname.endsWith('.html')) {
+  // Skip non-GET requests and cross-origin requests
+  if (event.request.method !== 'GET' || !event.request.url.startsWith(self.location.origin)) {
     return;
   }
 
-  // Only handle non-HTML assets
+  // Add cache-busting for HTML files
+  if (event.request.destination === 'document') {
+    event.respondWith(
+      fetch(event.request, { cache: 'no-cache' })
+        .then((response) => {
+          // Cache the fresh version
+          const responseClone = response.clone();
+          caches.open(DYNAMIC_CACHE)
+            .then((cache) => {
+              cache.put(event.request, responseClone);
+            });
+          return response;
+        })
+        .catch(() => {
+          return caches.match(event.request);
+        })
+    );
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        return response || fetch(event.request);
+        // Return cached version but update in background
+        if (response) {
+          // Update cache in background
+          fetch(event.request)
+            .then((fetchResponse) => {
+              if (fetchResponse && fetchResponse.status === 200) {
+                caches.open(DYNAMIC_CACHE)
+                  .then((cache) => {
+                    cache.put(event.request, fetchResponse);
+                  });
+              }
+            });
+          return response;
+        }
+
+        return fetch(event.request)
+          .then((fetchResponse) => {
+            // Check if we received a valid response
+            if (!fetchResponse || fetchResponse.status !== 200) {
+              return fetchResponse;
+            }
+
+            // Clone the response because it can only be used once
+            const responseToCache = fetchResponse.clone();
+
+            // Cache the response
+            caches.open(DYNAMIC_CACHE)
+              .then((cache) => {
+                cache.put(event.request, responseToCache);
+              });
+
+            return fetchResponse;
+          })
+          .catch(() => {
+            // Fallback for HTML pages
+            if (event.request.destination === 'document') {
+              return caches.match('/index.html');
+            }
+            return new Response('Network error happened', {
+              status: 408,
+              headers: { 'Content-Type': 'text/plain' }
+            });
+          });
       })
   );
 });
