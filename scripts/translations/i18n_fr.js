@@ -38,6 +38,22 @@ window.I18N['fr'] = {
         games: "Jeux"
 	},
     
+    // Main page
+    main: {
+        title: "English Hub (Plateforme d'anglais)",
+        subtitle: "Your gateway to improving English communication and writing skills (Votre porte d'entrée pour améliorer vos compétences en communication et rédaction en anglais)",
+        communication: {
+            title: "Communication Skills (Compétences en communication)",
+            description: "Improve your speaking, listening, and pronunciation through interactive lessons, stories, and games. (Améliorez votre expression orale, votre écoute et votre prononciation grâce à des leçons interactives, des histoires et des jeux.)"
+        },
+        writing: {
+            title: "Writing Skills (Compétences en écriture)",
+            description: "Enhance your writing abilities with structured lessons, creative exercises, and practical applications. (Améliorez vos capacités d'écriture avec des leçons structurées, des exercices créatifs et des applications pratiques.)"
+        },
+        explore: "Explore Now (Explorer maintenant)",
+        comingSoon: "Coming Soon (Bientôt disponible)"
+    },
+	
     // Workplace lesson
     workplace: {
         title: "Navigating the Workplace (Naviguer sur le lieu de travail)",

@@ -38,6 +38,22 @@ window.I18N['ar'] = {
         games: "الألعاب"
 	},
     
+    // Main page
+    main: {
+        title: "English Hub (المركز الإنجليزي)",
+        subtitle: "Your gateway to improving English communication and writing skills (بوابتك لتحسين مهارات التواصل والكتابة باللغة الإنجليزية)",
+        communication: {
+            title: "Communication Skills (مهارات التواصل)",
+            description: "Improve your speaking, listening, and pronunciation through interactive lessons, stories, and games. (حسّن تحدثك واستماعك ونطقك من خلال دروس تفاعلية وقصص وألعاب.)"
+        },
+        writing: {
+            title: "Writing Skills (مهارات الكتابة)",
+            description: "Enhance your writing abilities with structured lessons, creative exercises, and practical applications. (عزز قدراتك الكتابية من خلال دروس منظمة وتمارين إبداعية وتطبيقات عملية.)"
+        },
+        explore: "Explore Now (استكشف الآن)",
+        comingSoon: "Coming Soon (قريباً)"
+    },
+	
     // Workplace lesson
     workplace: {
         title: "Navigating the Workplace (التنقل في مكان العمل)",

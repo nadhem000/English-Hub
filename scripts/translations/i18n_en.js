@@ -38,6 +38,22 @@ window.I18N['en'] = {
         games: "Games"
 	},
     
+    // Main page
+    main: {
+        title: "English Hub",
+        subtitle: "Your gateway to improving English communication and writing skills",
+        communication: {
+            title: "Communication Skills",
+            description: "Improve your speaking, listening, and pronunciation through interactive lessons, stories, and games."
+        },
+        writing: {
+            title: "Writing Skills",
+            description: "Enhance your writing abilities with structured lessons, creative exercises, and practical applications."
+        },
+        explore: "Explore Now",
+        comingSoon: "Coming Soon"
+    },
+	
     // Workplace lesson
     workplace: {
         title: "Navigating the Workplace",

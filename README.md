@@ -29,15 +29,15 @@ English-Hub/
 │   ├── translations/       # Multi-language support
 │   │   ├── i18n_en.js
 │   │   ├── i18n_fr.js
-│   │   ├── i18n_ar.js
-│   │   └── common-i18n.js
-│   └── sound.js           # Audio functionality
-├── Communication-Skills-Enhancement.html  # Main dashboard
+│   │   └── i18n_ar.js
+│   ├── sound.js
+│   └── common-i18n.js
+├── index.html       # Main dashboard
+├── Communication-Skills-Enhancement.html  # Communication portal
 ├── Eh-general-reading-adventures.html     # Reading portal
 ├── EH-reading-workplace.html              # Workplace lesson
 └── ... other HTML files
 ```
-
 ## Features
 
 - 🎯 **Age-Appropriate Content**: Separate learning paths for children and adults
