@@ -1,7 +1,7 @@
 // Service Worker for English Hub
-const CACHE_NAME = 'english-hub-v1.0.1';
-const STATIC_CACHE = 'static-cache-v1';
-const DYNAMIC_CACHE = 'dynamic-cache-v1';
+const CACHE_NAME = 'english-hub-v1.0.2';
+const STATIC_CACHE = 'static-cache-v1.0.2';
+const DYNAMIC_CACHE = 'dynamic-cache-v1.0.2';
 
 // Assets to cache during installation
 const STATIC_ASSETS = [
