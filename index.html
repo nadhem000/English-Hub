@@ -420,6 +420,51 @@
             });
         }
 
+function forceServiceWorkerUpdate() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      for(let registration of registrations) {
+        registration.update();
+      }
+    });
+    
+    // Unregister all service workers and reload
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      registrations.forEach(function(registration) {
+        registration.unregister();
+      });
+    }).then(function() {
+      // Clear all caches
+      caches.keys().then(function(cacheNames) {
+        cacheNames.forEach(function(cacheName) {
+          caches.delete(cacheName);
+        });
+      }).then(function() {
+        console.log('All caches cleared');
+        // Reload the page to get fresh content
+        window.location.reload(true);
+      });
+    });
+  }
+}
+
+// Add a hidden button for developers to force cache clear
+document.addEventListener('DOMContentLoaded', function() {
+  const clearCacheBtn = document.createElement('button');
+  clearCacheBtn.textContent = '🔄 Clear Cache';
+  clearCacheBtn.style.position = 'fixed';
+  clearCacheBtn.style.bottom = '20px';
+  clearCacheBtn.style.left = '20px';
+  clearCacheBtn.style.zIndex = '10000';
+  clearCacheBtn.style.padding = '10px';
+  clearCacheBtn.style.background = '#ff4444';
+  clearCacheBtn.style.color = 'white';
+  clearCacheBtn.style.border = 'none';
+  clearCacheBtn.style.borderRadius = '5px';
+  clearCacheBtn.style.cursor = 'pointer';
+  clearCacheBtn.addEventListener('click', forceServiceWorkerUpdate);
+  document.body.appendChild(clearCacheBtn);
+});
         // Add translations for the main page
         document.addEventListener('DOMContentLoaded', function() {
             // Ensure our main page translations are added to the existing translation files
