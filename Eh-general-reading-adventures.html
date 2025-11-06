@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Reading Adventures - Communication Skills Enhancement</title>
+			<style>
+			/* Reset and Base Styles */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			body {
+				background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				padding: 20px;
+			}
+
+			/* Reading Adventures Specific Styles */
+			.EH-reading-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				width: 100%;
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.EH-reading-header {
+				text-align: center;
+				margin-bottom: 40px;
+				color: white;
+			}
+
+			.EH-reading-title {
+				font-size: 2.8rem;
+				margin-bottom: 10px;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			}
+
+			.EH-reading-subtitle {
+				font-size: 1.2rem;
+				opacity: 0.9;
+			}
+
+			.EH-reading-content {
+				background: rgba(255, 255, 255, 0.9);
+				border-radius: 20px;
+				padding: 30px;
+				box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+				margin-bottom: 30px;
+			}
+
+			.EH-reading-intro {
+				font-size: 1.1rem;
+				line-height: 1.6;
+				color: #333;
+				margin-bottom: 30px;
+				text-align: center;
+			}
+
+			.EH-reading-category {
+				margin-bottom: 40px;
+			}
+
+			.EH-reading-category-title {
+				font-size: 1.8rem;
+				color: #1a2a6c;
+				margin-bottom: 20px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid #fdbb2d;
+			}
+
+			.EH-reading-category-subtitle {
+				font-size: 1rem;
+				color: #666;
+				margin-bottom: 20px;
+				font-style: italic;
+			}
+
+			.EH-reading-lessons-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 25px;
+			}
+
+			.EH-reading-lesson-card {
+				background: white;
+				border-radius: 15px;
+				padding: 25px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s, box-shadow 0.3s;
+				cursor: pointer;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.EH-reading-lesson-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+			}
+
+			.EH-reading-lesson-number {
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				background: linear-gradient(135deg, #11998e, #38ef7d);
+				color: white;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-weight: bold;
+				margin-bottom: 15px;
+			}
+
+			.EH-reading-lesson-title {
+				font-size: 1.4rem;
+				margin-bottom: 15px;
+				color: #333;
+			}
+
+			.EH-reading-lesson-description {
+				color: #666;
+				font-size: 0.95rem;
+				margin-bottom: 20px;
+				flex: 1;
+			}
+
+			.EH-reading-lesson-link {
+				display: inline-block;
+				background: #4e54c8;
+				color: white;
+				padding: 10px 20px;
+				border-radius: 20px;
+				text-decoration: none;
+				font-weight: bold;
+				transition: background 0.3s;
+				text-align: center;
+			}
+
+			.EH-reading-lesson-link:hover {
+				background: #3f46c5;
+			}
+
+			.EH-reading-back-button {
+				display: block;
+				margin: 20px auto 0;
+				background: #fdbb2d;
+				color: white;
+				border: none;
+				padding: 12px 25px;
+				border-radius: 20px;
+				cursor: pointer;
+				font-weight: bold;
+				transition: background 0.3s;
+				font-size: 1rem;
+			}
+
+			.EH-reading-back-button:hover {
+				background: #f7a900;
+			}
+
+			/* Footer Styles */
+			.EH-reading-footer {
+				background: rgba(0, 0, 0, 0.7);
+				color: white;
+				text-align: center;
+				padding: 20px 0;
+				font-size: 1rem;
+				width: 100%;
+				margin-top: 20px;
+				border-top: 2px solid rgba(255, 255, 255, 0.2);
+			}
+
+			.EH-reading-footer-content {
+				max-width: 1200px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 20px;
+			}
+
+			.EH-reading-footer-developer {
+				font-weight: bold;
+			}
+
+			.EH-reading-footer-links {
+				display: flex;
+				gap: 15px;
+			}
+
+			.EH-reading-footer-links a {
+				color: white;
+				text-decoration: none;
+				transition: color 0.3s;
+			}
+
+			.EH-reading-footer-links a:hover {
+				color: #fdbb2d;
+			}
+
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				.EH-reading-title {
+					font-size: 2.2rem;
+				}
+				
+				.EH-reading-lessons-container {
+					grid-template-columns: 1fr;
+				}
+				
+				.EH-reading-footer-content {
+					flex-direction: column;
+					gap: 10px;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.EH-reading-title {
+					font-size: 1.8rem;
+				}
+				
+				.EH-reading-content {
+					padding: 20px;
+				}
+			}
+			</style>
+	</head>
+	<body>
+		<!-- Language Selector -->
+		<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+			<select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+				<option value="en">English</option>
+				<option value="fr">Français</option>
+				<option value="ar">العربية</option>
+			</select>
+		</div>
+		<div class="EH-reading-container">
+			<header class="EH-reading-header">
+				<h1 class="EH-reading-title" data-i18n="readingAdventures.title">Reading Adventures</h1>
+				<p class="EH-reading-subtitle" data-i18n="readingAdventures.subtitle">Improve your reading skills through engaging stories for all ages!</p>
+			</header>
+			<div class="EH-reading-content">
+				<p class="EH-reading-intro" data-i18n="readingAdventures.intro">
+					Welcome to Reading Adventures! This platform offers reading materials for both elementary school students 
+					(ages 8-15) and young adult workers (ages 18-30). Explore stories based on real-life situations that match 
+					your age group and interests while developing your reading skills through engaging activities.
+				</p>
+				<!-- Section for Elementary Students -->
+				<div class="EH-reading-category">
+					<h2 class="EH-reading-category-title" data-i18n="readingAdventures.elementary.title">For Elementary School Students (8-15 years)</h2>
+					<p class="EH-reading-category-subtitle" data-i18n="readingAdventures.elementary.subtitle">Fun stories about school life, friendships, and adventures!</p>
+					<div class="EH-reading-lessons-container">
+						<!-- Lesson 1 -->
+						<div class="EH-reading-lesson-card">
+							<div class="EH-reading-lesson-number">1</div>
+							<h3 class="EH-reading-lesson-title" data-i18n="readingAdventures.elementary.lessons.play.title">My First School Play</h3>
+							<p class="EH-reading-lesson-description" data-i18n="readingAdventures.elementary.lessons.play.desc">
+								Follow Sarah as she prepares for her first school play, dealing with stage fright and learning 
+								how to work together with classmates. Practice reading dialogue and understanding character emotions.
+							</p>
+							<a href="EH-reading-school-play.html" class="EH-reading-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 2 -->
+						<div class="EH-reading-lesson-card">
+							<div class="EH-reading-lesson-number">2</div>
+							<h3 class="EH-reading-lesson-title" data-i18n="readingAdventures.elementary.lessons.garden.title">The Community Garden Project</h3>
+							<p class="EH-reading-lesson-description" data-i18n="readingAdventures.elementary.lessons.garden.desc">
+								Join Leo and his friends as they start a community garden in their neighborhood. 
+								Learn about teamwork, responsibility, and how plants grow while improving your reading comprehension.
+							</p>
+							<a href="EH-reading-community-garden.html" class="EH-reading-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 3 -->
+						<div class="EH-reading-lesson-card">
+							<div class="EH-reading-lesson-number">3</div>
+							<h3 class="EH-reading-lesson-title" data-i18n="readingAdventures.elementary.lessons.pet.title">The Lost Pet Adventure</h3>
+							<p class="EH-reading-lesson-description" data-i18n="readingAdventures.elementary.lessons.pet.desc">
+								Help Mia find her lost dog Sparky by following clues around the neighborhood. 
+								Practice reading instructions and descriptions while learning about community helpers.
+							</p>
+							<a href="EH-reading-lost-pet.html" class="EH-reading-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 4 -->
+						<div class="EH-reading-lesson-card">
+							<div class="EH-reading-lesson-number">4</div>
+							<h3 class="EH-reading-lesson-title" data-i18n="readingAdventures.elementary.lessons.science.title">The Science Fair Challenge</h3>
+							<p class="EH-reading-lesson-description" data-i18n="readingAdventures.elementary.lessons.science.desc">
+								Experience the excitement and challenges of preparing for a school science fair with Alex. 
+								Develop inference skills by reading about experiments and predicting outcomes.
+							</p>
+							<a href="EH-reading-science-fair.html" class="EH-reading-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 5 -->
+						<div class="EH-reading-lesson-card">
+							<div class="EH-reading-lesson-number">5</div>
+							<h3 class="EH-reading-lesson-title" data-i18n="readingAdventures.elementary.lessons.friends.title">Making New Friends</h3>
+							<p class="EH-reading-lesson-description" data-i18n="readingAdventures.elementary.lessons.friends.desc">
+								Join Sam as he moves to a new school and learns how to make friends in an unfamiliar place. 
+								Practice reading social cues and understanding different perspectives.
+							</p>
+							<a href="EH-reading-new-friends.html" class="EH-reading-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+					</div>
+				</div>
+				<!-- Section for Young Adult Workers -->
+				<div class="EH-reading-category">
+					<h2 class="EH-reading-category-title" data-i18n="readingAdventures.youngAdults.title">For Young Adult Workers (18-30 years)</h2>
+					<p class="EH-reading-category-subtitle" data-i18n="readingAdventures.youngAdults.subtitle">Practical stories about work, daily life, and adapting to new environments!</p>
+					<div class="EH-reading-lessons-container">
+						<!-- Lesson 6 -->
+						<div class="EH-reading-lesson-card">
+							<div class="EH-reading-lesson-number">1</div>
+							<h3 class="EH-reading-lesson-title" data-i18n="readingAdventures.youngAdults.lessons.workplace.title">Navigating the Workplace</h3>
+							<p class="EH-reading-lesson-description" data-i18n="readingAdventures.youngAdults.lessons.workplace.desc">
+								Follow Maria as she starts her first job in a new country. Learn workplace vocabulary, 
+								understand company policies, and practice reading professional emails and documents.
+							</p>
+							<a href="EH-reading-workplace.html" class="EH-reading-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 7 -->
+						<div class="EH-reading-lesson-card">
+							<div class="EH-reading-lesson-number">2</div>
+							<h3 class="EH-reading-lesson-title" data-i18n="readingAdventures.youngAdults.lessons.apartment.title">Finding an Apartment</h3>
+							<p class="EH-reading-lesson-description" data-i18n="readingAdventures.youngAdults.lessons.apartment.desc">
+								Join Ahmed as he searches for his first apartment. Practice reading rental listings, 
+								understanding lease agreements, and communicating with landlords in a new language.
+							</p>
+							<a href="EH-reading-apartment.html" class="EH-reading-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 8 -->
+						<div class="EH-reading-lesson-card">
+							<div class="EH-reading-lesson-number">3</div>
+							<h3 class="EH-reading-lesson-title" data-i18n="readingAdventures.youngAdults.lessons.banking.title">Banking and Financial Basics</h3>
+							<p class="EH-reading-lesson-description" data-i18n="readingAdventures.youngAdults.lessons.banking.desc">
+								Follow Li as she opens her first bank account in a foreign country. Learn banking terminology, 
+								how to read bank statements, and understand financial documents in a new language.
+							</p>
+							<a href="EH-reading-banking.html" class="EH-reading-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 9 -->
+						<div class="EH-reading-lesson-card">
+							<div class="EH-reading-lesson-number">4</div>
+							<h3 class="EH-reading-lesson-title" data-i18n="readingAdventures.youngAdults.lessons.healthcare.title">Healthcare Navigation</h3>
+							<p class="EH-reading-lesson-description" data-i18n="readingAdventures.youngAdults.lessons.healthcare.desc">
+								Join Carlos as he visits a doctor in a new country. Practice reading medical forms, 
+								understanding prescription instructions, and communicating health concerns effectively.
+							</p>
+							<a href="EH-reading-healthcare.html" class="EH-reading-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 10 -->
+						<div class="EH-reading-lesson-card">
+							<div class="EH-reading-lesson-number">5</div>
+							<h3 class="EH-reading-lesson-title" data-i18n="readingAdventures.youngAdults.lessons.transport.title">Public Transportation</h3>
+							<p class="EH-reading-lesson-description" data-i18n="readingAdventures.youngAdults.lessons.transport.desc">
+								Follow Anya as she learns to navigate a new city's public transportation system. 
+								Practice reading schedules, maps, and transportation signs while building confidence in daily commuting.
+							</p>
+							<a href="EH-reading-transport.html" class="EH-reading-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 11 -->
+						<div class="EH-reading-lesson-card">
+							<div class="EH-reading-lesson-number">6</div>
+							<h3 class="EH-reading-lesson-title" data-i18n="readingAdventures.youngAdults.lessons.grocery.title">Grocery Shopping & Meal Planning</h3>
+							<p class="EH-reading-lesson-description" data-i18n="readingAdventures.youngAdults.lessons.grocery.desc">
+								Join Omar as he adapts to grocery shopping in a new country. Learn to read food labels, 
+								understand measurement conversions, and follow recipes in a different language.
+							</p>
+							<a href="EH-reading-grocery.html" class="EH-reading-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+					</div>
+				</div>
+				<button class="EH-reading-back-button" onclick="window.location.href='Communication-Skills-Enhancement.html'" data-i18n="common.backToCourses">Back to Courses</button>
+			</div>
+		</div>
+		<footer class="EH-reading-footer">
+			<div class="EH-reading-footer-content">
+				<div class="EH-reading-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-reading-footer-links">
+					<a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+					<a href="#" data-i18n="footer.terms">Terms of Service</a>
+					<a href="#" data-i18n="footer.contact">Contact</a>
+				</div>
+			</div>
+		</footer>
+
+		<!-- i18n translations -->
+		<script src="scripts/translations/i18n_en.js"></script>
+		<script src="scripts/translations/i18n_fr.js"></script>
+		<script src="scripts/translations/i18n_ar.js"></script>
+		<script src="scripts/common-i18n.js"></script>
+
+<script>
+    // No additional page-specific JavaScript needed for this page
+    // All functionality is handled by the common translation system
+</script>
+	</body>
+</html>

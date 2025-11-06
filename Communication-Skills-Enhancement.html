@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Communication Skills Enhancement</title>
+		<style>
+			* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+			body {
+			background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			}
+			.EH-dashboard-container {
+			width: 100%;
+			max-width: 1200px;
+			text-align: center;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			}
+			.EH-dashboard-header {
+			margin-bottom: 40px;
+			color: white;
+			}
+			.EH-dashboard-title {
+			font-size: 3rem;
+			margin-bottom: 10px;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			}
+			.EH-dashboard-subtitle {
+			font-size: 1.2rem;
+			opacity: 0.9;
+			}
+			.EH-dashboard-main-circle {
+			position: relative;
+			width: 500px;
+			height: 500px;
+			margin: 0 auto 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			}
+			.EH-dashboard-center-circle {
+			width: 150px;
+			height: 150px;
+			background: linear-gradient(135deg, #4e54c8, #8f94fb);
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			font-weight: bold;
+			font-size: 1.2rem;
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+			cursor: pointer;
+			transition: transform 0.3s, box-shadow 0.3s;
+			z-index: 10;
+			}
+			.EH-dashboard-center-circle:hover {
+			transform: scale(1.05);
+			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+			}
+			.EH-dashboard-category-circle {
+			position: absolute;
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			font-weight: bold;
+			font-size: 0.9rem;
+			text-align: center;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+			cursor: pointer;
+			transition: transform 0.3s, box-shadow 0.3s;
+			z-index: 5;
+			}
+			.EH-dashboard-category-circle:hover {
+			transform: scale(1.1);
+			box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+			}
+			/* Molecular layout - positioning circles with more distance */
+			.EH-dashboard-reading {
+			background: linear-gradient(135deg, #11998e, #38ef7d);
+			top: 10%;
+			left: 50%;
+			transform: translateX(-50%);
+			}
+			.EH-dashboard-pronunciation {
+			background: linear-gradient(135deg, #fc466b, #3f5efb);
+			bottom: 10%;
+			right: 15%;
+			}
+			.EH-dashboard-other {
+			background: linear-gradient(135deg, #fdbb2d, #22c1c3);
+			bottom: 10%;
+			left: 15%;
+			}
+			/* Improved molecular bond lines using SVG */
+			.molecular-bond {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			pointer-events: none;
+			}
+			.molecular-bond-line {
+			stroke: rgba(255, 255, 255, 0.6);
+			stroke-width: 2;
+			}
+			.Eh-general-courses-container {
+			display: none;
+			max-width: 800px;
+			margin: 0 auto;
+			background: rgba(255, 255, 255, 0.9);
+			border-radius: 20px;
+			padding: 30px;
+			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+			}
+			.Eh-general-courses-header {
+			margin-bottom: 25px;
+			color: #333;
+			font-size: 1.8rem;
+			}
+			.Eh-general-courses-list {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 20px;
+			}
+			.Eh-general-course-card {
+			background: white;
+			border-radius: 15px;
+			padding: 20px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s, box-shadow 0.3s;
+			cursor: pointer;
+			}
+			.Eh-general-course-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+			}
+			.Eh-general-course-title {
+			font-size: 1.3rem;
+			margin-bottom: 10px;
+			color: #333;
+			}
+			.Eh-general-course-description {
+			color: #666;
+			font-size: 0.9rem;
+			margin-bottom: 15px;
+			}
+			.Eh-general-course-link {
+			display: inline-block;
+			background: #4e54c8;
+			color: white;
+			padding: 8px 15px;
+			border-radius: 20px;
+			text-decoration: none;
+			font-size: 0.9rem;
+			transition: background 0.3s;
+			}
+			.Eh-general-course-link:hover {
+			background: #3f46c5;
+			}
+			.Eh-general-back-button {
+			display: block;
+			margin: 20px auto 0;
+			background: #fdbb2d;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 20px;
+			cursor: pointer;
+			font-weight: bold;
+			transition: background 0.3s;
+			}
+			.Eh-general-back-button:hover {
+			background: #f7a900;
+			}
+			/* Improved Footer */
+			.EH-dashboard-footer {
+			background: rgba(0, 0, 0, 0.7);
+			color: white;
+			text-align: center;
+			padding: 20px 0;
+			font-size: 1rem;
+			width: 100%;
+			margin-top: 20px;
+			border-top: 2px solid rgba(255, 255, 255, 0.2);
+			}
+			.EH-footer-content {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 20px;
+			}
+			.EH-footer-developer {
+			font-weight: bold;
+			}
+			.EH-footer-links {
+			display: flex;
+			gap: 15px;
+			}
+			.EH-footer-links a {
+			color: white;
+			text-decoration: none;
+			transition: color 0.3s;
+			}
+			.EH-footer-links a:hover {
+			color: #fdbb2d;
+			}
+			@media (max-width: 768px) {
+			.EH-dashboard-main-circle {
+			width: 350px;
+			height: 350px;
+			}
+			.EH-dashboard-center-circle {
+			width: 120px;
+			height: 120px;
+			font-size: 1rem;
+			}
+			.EH-dashboard-category-circle {
+			width: 100px;
+			height: 100px;
+			font-size: 0.8rem;
+			}
+			.EH-dashboard-title {
+			font-size: 2.5rem;
+			}
+			.EH-footer-content {
+			flex-direction: column;
+			gap: 10px;
+			}
+			}
+			@media (max-width: 480px) {
+			.EH-dashboard-main-circle {
+			width: 300px;
+			height: 300px;
+			}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Language Selector -->
+		<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+			<select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+				<option value="en">English</option>
+				<option value="fr">Français</option>
+				<option value="ar">العربية</option>
+			</select>
+		</div>
+		<div class="EH-dashboard-container">
+			<header class="EH-dashboard-header">
+				<h1 class="EH-dashboard-title" data-i18n="dashboard.title">Communication Skills</h1>
+				<p class="EH-dashboard-subtitle" data-i18n="dashboard.subtitle">Fun ways to improve reading, speaking, and communication</p>
+			</header>
+			<div class="EH-dashboard-main-circle">
+				<div class="EH-dashboard-center-circle" data-i18n="dashboard.center">Communication Skills</div>
+				<div class="EH-dashboard-category-circle EH-dashboard-reading" data-category="reading" data-i18n="dashboard.reading">Reading Skills</div>
+				<div class="EH-dashboard-category-circle EH-dashboard-pronunciation" data-category="pronunciation" data-i18n="dashboard.pronunciation">Speaking Skills</div>
+				<div class="EH-dashboard-category-circle EH-dashboard-other" data-category="other" data-i18n="dashboard.other">Communication Games</div>
+				<!-- Improved molecular bond lines using SVG -->
+				<svg class="molecular-bond" id="molecular-bond">
+					<!-- Lines will be drawn by JavaScript -->
+				</svg>
+			</div>
+			<div id="courses-container" class="Eh-general-courses-container">
+				<h2 class="Eh-general-courses-header" id="courses-header" data-i18n="courses.header">Courses</h2>
+				<div class="Eh-general-courses-list" id="courses-list"></div>
+				<button class="Eh-general-back-button" id="back-button" data-i18n="common.backToCategories">Back to Categories</button>
+			</div>
+		</div>
+		<footer class="EH-dashboard-footer">
+			<div class="EH-footer-content">
+				<div class="EH-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-footer-links">
+					<a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+					<a href="#" data-i18n="footer.terms">Terms of Service</a>
+					<a href="#" data-i18n="footer.contact">Contact</a>
+				</div>
+			</div>
+		</footer>
+		<!-- i18n translations -->
+		<script src="scripts/translations/i18n_en.js"></script>
+		<script src="scripts/translations/i18n_fr.js"></script>
+		<script src="scripts/translations/i18n_ar.js"></script>
+		<script src="scripts/common-i18n.js"></script>
+<script>
+    // DOM elements
+    const coursesContainer = document.getElementById('courses-container');
+    const coursesHeader = document.getElementById('courses-header');
+    const coursesList = document.getElementById('courses-list');
+    const backButton = document.getElementById('back-button');
+    const categoryCircles = document.querySelectorAll('.EH-dashboard-category-circle');
+    const molecularBond = document.getElementById('molecular-bond');
+    
+    // Function to draw molecular bond lines
+    function drawMolecularBonds() {
+        const mainCircle = document.querySelector('.EH-dashboard-main-circle');
+        const centerCircle = document.querySelector('.EH-dashboard-center-circle');
+        const categoryCircles = document.querySelectorAll('.EH-dashboard-category-circle');
+        
+        // Clear existing lines
+        molecularBond.innerHTML = '';
+        
+        // Get center circle position
+        const centerRect = centerCircle.getBoundingClientRect();
+        const mainRect = mainCircle.getBoundingClientRect();
+        const centerX = centerRect.left - mainRect.left + centerRect.width / 2;
+        const centerY = centerRect.top - mainRect.top + centerRect.height / 2;
+        
+        // Draw lines to each category circle
+        categoryCircles.forEach(circle => {
+            const circleRect = circle.getBoundingClientRect();
+            const circleX = circleRect.left - mainRect.left + circleRect.width / 2;
+            const circleY = circleRect.top - mainRect.top + circleRect.height / 2;
+            
+            // Create line element
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            line.setAttribute('x1', centerX);
+            line.setAttribute('y1', centerY);
+            line.setAttribute('x2', circleX);
+            line.setAttribute('y2', circleY);
+            line.setAttribute('class', 'molecular-bond-line');
+            molecularBond.appendChild(line);
+        });
+    }
+    
+    // Function to show courses for a selected category
+    function showCourses(category) {
+        const coursesData = getCoursesForCurrentLanguage();
+        if (!coursesData || !coursesData[category]) {
+            console.error('Course data not found for category:', category);
+            return;
+        }
+        
+        const categoryData = coursesData[category];
+        coursesHeader.textContent = categoryData.title;
+        coursesList.innerHTML = '';
+        
+        // Get the current language for the "Start Course" button text
+        const currentLang = getCurrentLanguage();
+        const startCourseText = window.I18N && window.I18N[currentLang]?.common?.startCourse || "Start Course";
+        
+        categoryData.courses.forEach(course => {
+            const courseCard = document.createElement('div');
+            courseCard.className = 'Eh-general-course-card';
+            courseCard.innerHTML = `
+                <h3 class="Eh-general-course-title">${course.title}</h3>
+                <p class="Eh-general-course-description">${course.description}</p>
+                <a href="${course.link}" class="Eh-general-course-link">${startCourseText}</a>
+            `;
+            coursesList.appendChild(courseCard);
+        });
+        
+        coursesContainer.style.display = 'block';
+    }
+    
+    // Update courses when language changes
+    window.addEventListener('languageChanged', function(event) {
+        // If courses are currently displayed, update them with the new language
+        if (coursesContainer.style.display === 'block') {
+            // Find which category is currently active
+            const activeCategory = document.querySelector('.EH-dashboard-category-circle.active');
+            if (activeCategory) {
+                const category = activeCategory.getAttribute('data-category');
+                showCourses(category);
+            }
+        }
+    });
+    
+    // Add click event listeners to category circles
+    categoryCircles.forEach(circle => {
+        circle.addEventListener('click', function() {
+            // Remove active class from all circles
+            categoryCircles.forEach(c => c.classList.remove('active'));
+            // Add active class to clicked circle
+            this.classList.add('active');
+            const category = this.getAttribute('data-category');
+            showCourses(category);
+        });
+    });
+    
+    // Add click event listener to back button
+    backButton.addEventListener('click', function() {
+        coursesContainer.style.display = 'none';
+        // Remove active class from all circles when going back
+        categoryCircles.forEach(c => c.classList.remove('active'));
+    });
+    
+    // Draw molecular bonds on load and resize
+    window.addEventListener('load', drawMolecularBonds);
+    window.addEventListener('resize', drawMolecularBonds);
+</script>
+	</body>
+</html>
