@@ -1,5 +1,5 @@
 // Service Worker for English Hub
-const CACHE_NAME = 'english-hub-v1.0.0';
+const CACHE_NAME = 'english-hub-v1.0.1';
 const STATIC_CACHE = 'static-cache-v1';
 const DYNAMIC_CACHE = 'dynamic-cache-v1';
 
@@ -59,35 +59,54 @@ self.addEventListener('activate', (event) => {
 
 // Fetch event - serve from cache or network
 self.addEventListener('fetch', (event) => {
-  // Skip cross-origin requests
-  if (!event.request.url.startsWith(self.location.origin)) {
+  // Skip non-GET requests and cross-origin requests
+  if (event.request.method !== 'GET' || !event.request.url.startsWith(self.location.origin)) {
     return;
   }
 
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request)
+        // Return cached version
+        if (response) {
+          return response;
+        }
+
+        // Clone the request because it can only be used once
+        const fetchRequest = event.request.clone();
+
+        return fetch(fetchRequest)
           .then((fetchResponse) => {
-            // Cache dynamic requests
-            if (event.request.url.startsWith('http') && 
+            // Check if we received a valid response
+            if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== 'basic') {
+              return fetchResponse;
+            }
+
+            // Clone the response because it can only be used once
+            const responseToCache = fetchResponse.clone();
+
+            // Cache the response for HTML, CSS, JS files
+            if (event.request.url.indexOf('/assets/') === -1 && 
                 (event.request.destination === 'document' || 
                  event.request.destination === 'script' ||
                  event.request.destination === 'style')) {
-              return caches.open(DYNAMIC_CACHE)
+              caches.open(DYNAMIC_CACHE)
                 .then((cache) => {
-                  cache.put(event.request.url, fetchResponse.clone());
-                  return fetchResponse;
+                  cache.put(event.request, responseToCache);
                 });
             }
+
             return fetchResponse;
           })
           .catch(() => {
-            // Fallback for HTML pages
+            // Fallback for HTML pages - return index.html for navigation requests
             if (event.request.destination === 'document') {
               return caches.match('/index.html');
             }
+            return new Response('Network error happened', {
+              status: 408,
+              headers: { 'Content-Type': 'text/plain' }
+            });
           });
       })
   );
@@ -97,6 +116,5 @@ self.addEventListener('fetch', (event) => {
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     console.log('Service Worker: Background sync triggered');
-    // You can add background sync logic here for future features
   }
 });

@@ -1,6 +1,23 @@
 [build]
   publish = "."
 
+# Redirect rules for specific HTML files
+[[redirects]]
+  from = "/Communication-Skills-Enhancement"
+  to = "/Communication-Skills-Enhancement.html"
+  status = 200
+
+[[redirects]]
+  from = "/Eh-general-reading-adventures"
+  to = "/Eh-general-reading-adventures.html"
+  status = 200
+
+[[redirects]]
+  from = "/EH-reading-workplace"
+  to = "/EH-reading-workplace.html"
+  status = 200
+
+# SPA fallback - should be last
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -12,3 +29,4 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
+    Cache-Control = "public, max-age=3600"
