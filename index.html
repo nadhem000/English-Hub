@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Hub - Language Learning Platform</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1a2a6c">
+    <meta name="description" content="Interactive platform for improving English communication skills through engaging stories and exercises">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
+    
     <style>
         * {
             margin: 0;
@@ -49,6 +57,32 @@
             opacity: 0.9;
             max-width: 600px;
             margin: 0 auto;
+        }
+        
+        /* Install Button */
+        .EH-install-button {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: #4e54c8;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            z-index: 1001;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+        
+        .EH-install-button:hover {
+            background: #3f46c5;
+        }
+        
+        .EH-install-button.installed {
+            background: #11998e;
         }
         
         /* Main Content - Two Sections */
@@ -202,6 +236,13 @@
                 flex-direction: column;
                 gap: 10px;
             }
+            
+            .EH-install-button {
+                top: 70px;
+                right: 15px;
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -241,6 +282,11 @@
             <option value="ar">العربية</option>
         </select>
     </div>
+    
+    <!-- Install App Button -->
+    <button class="EH-install-button" id="install-button">
+        📱 Install App
+    </button>
     
     <div class="EH-main-container">
         <header class="EH-main-header">
@@ -289,6 +335,91 @@
     <script src="scripts/common-i18n.js"></script>
 
     <script>
+        // PWA Installation Logic
+        let deferredPrompt;
+        const installButton = document.getElementById('install-button');
+
+        // Check if the app is already installed
+        if (window.matchMedia('(display-mode: standalone)').matches || 
+            window.navigator.standalone === true) {
+            installButton.classList.add('installed');
+            installButton.innerHTML = '📱 Installed';
+            installButton.disabled = true;
+        }
+
+        // Listen for beforeinstallprompt event
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Prevent the mini-infobar from appearing on mobile
+            e.preventDefault();
+            // Stash the event so it can be triggered later
+            deferredPrompt = e;
+            // Show the install button
+            installButton.style.display = 'block';
+            
+            // Update button text based on language
+            updateInstallButtonText();
+        });
+
+        // Install button click handler
+        installButton.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                // Show the install prompt
+                deferredPrompt.prompt();
+                // Wait for the user to respond to the prompt
+                const { outcome } = await deferredPrompt.userChoice;
+                
+                if (outcome === 'accepted') {
+                    installButton.classList.add('installed');
+                    installButton.innerHTML = '📱 Installed';
+                    installButton.disabled = true;
+                    console.log('User accepted the install prompt');
+                } else {
+                    console.log('User dismissed the install prompt');
+                }
+                // Clear the saved prompt since it can't be used again
+                deferredPrompt = null;
+                // Hide the install button
+                installButton.style.display = 'none';
+            }
+        });
+
+        // Listen for app installed event
+        window.addEventListener('appinstalled', () => {
+            // Clear the deferredPrompt so it can be garbage collected
+            deferredPrompt = null;
+            installButton.classList.add('installed');
+            installButton.innerHTML = '📱 Installed';
+            installButton.disabled = true;
+            console.log('PWA was installed');
+        });
+
+        // Update install button text when language changes
+        function updateInstallButtonText() {
+            const currentLang = getCurrentLanguage();
+            const i18n = window.I18N && window.I18N[currentLang];
+            
+            if (i18n && i18n.common) {
+                if (installButton.classList.contains('installed')) {
+                    installButton.innerHTML = '📱 ' + (i18n.common.installed || 'Installed');
+                } else {
+                    installButton.innerHTML = '📱 ' + (i18n.common.install || 'Install App');
+                }
+            }
+        }
+
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('Service Worker registration failed: ', registrationError);
+                    });
+            });
+        }
+
         // Add translations for the main page
         document.addEventListener('DOMContentLoaded', function() {
             // Ensure our main page translations are added to the existing translation files
@@ -310,12 +441,20 @@
                             explore: window.I18N[lang].main?.explore || "Explore Now",
                             comingSoon: window.I18N[lang].main?.comingSoon || "Coming Soon"
                         };
+                        
+                        // Add install button translations
+                        window.I18N[lang].common = window.I18N[lang].common || {};
+                        window.I18N[lang].common.install = window.I18N[lang].common.install || "Install App";
+                        window.I18N[lang].common.installed = window.I18N[lang].common.installed || "Installed";
                     }
                 }
             };
             
             // Call the function to add translations
             addMainPageTranslations();
+            
+            // Update install button when language changes
+            window.addEventListener('languageChanged', updateInstallButtonText);
         });
     </script>
 </body>
