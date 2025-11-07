@@ -26,7 +26,9 @@ window.I18N['en'] = {
 		normal: "Normal",
 		slow: "Slow",
 		fast: "Fast",
-		startCourse: "Start Course"
+		startCourse: "Start Course",
+    siteName: "English Hub",
+    mainPage: "Main Page"
 	},
     
     // Navigation

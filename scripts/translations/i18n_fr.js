@@ -35,7 +35,9 @@ window.I18N['fr'] = {
         courses: "Cours",
         reading: "Lecture",
         speaking: "Expression orale",
-        games: "Jeux"
+        games: "Jeux",
+    siteName: "English Hub",
+    mainPage: "Page principale"
 	},
     
     // Main page

@@ -26,7 +26,9 @@ window.I18N['ar'] = {
 		normal: "عادي",
 		slow: "بطيء",
 		fast: "سريع",
-		startCourse: "ابدأ الدورة"
+		startCourse: "ابدأ الدورة",
+    siteName: "English Hub",
+    mainPage: "الصفحة الرئيسية"
 	},
     
     // Navigation

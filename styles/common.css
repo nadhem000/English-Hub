@@ -81,3 +81,94 @@
         font-size: 1.1rem;
     }
 }
+
+/* New Site Header Styles */
+.EH-site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.EH-site-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.EH-site-logo:hover {
+    transform: scale(1.05);
+}
+
+.EH-site-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.EH-site-logo-link {
+    position: relative;
+    display: inline-block;
+}
+
+.EH-site-logo-link::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.EH-site-logo-link:hover::after {
+    opacity: 1;
+}
+
+/* Responsive design for site header */
+@media (max-width: 768px) {
+    .EH-site-header {
+        padding: 12px 15px;
+        gap: 12px;
+    }
+    
+    .EH-site-logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .EH-site-name {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .EH-site-header {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+    
+    .EH-site-logo {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .EH-site-name {
+        font-size: 1.3rem;
+    }
+}

@@ -4,7 +4,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Reading Adventures - Communication Skills Enhancement</title>
-			<style>
+		
+		<!-- Common CSS -->
+		<link rel="stylesheet" href="styles/common.css">
+		
+		<style>
 			/* Reset and Base Styles */
 			* {
 				margin: 0;
@@ -29,23 +33,6 @@
 				flex: 1;
 				display: flex;
 				flex-direction: column;
-			}
-
-			.EH-reading-header {
-				text-align: center;
-				margin-bottom: 40px;
-				color: white;
-			}
-
-			.EH-reading-title {
-				font-size: 2.8rem;
-				margin-bottom: 10px;
-				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-			}
-
-			.EH-reading-subtitle {
-				font-size: 1.2rem;
-				opacity: 0.9;
 			}
 
 			.EH-reading-content {
@@ -166,72 +153,23 @@
 				background: #f7a900;
 			}
 
-			/* Footer Styles */
-			.EH-reading-footer {
-				background: rgba(0, 0, 0, 0.7);
-				color: white;
-				text-align: center;
-				padding: 20px 0;
-				font-size: 1rem;
-				width: 100%;
-				margin-top: 20px;
-				border-top: 2px solid rgba(255, 255, 255, 0.2);
-			}
-
-			.EH-reading-footer-content {
-				max-width: 1200px;
-				margin: 0 auto;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				padding: 0 20px;
-			}
-
-			.EH-reading-footer-developer {
-				font-weight: bold;
-			}
-
-			.EH-reading-footer-links {
-				display: flex;
-				gap: 15px;
-			}
-
-			.EH-reading-footer-links a {
-				color: white;
-				text-decoration: none;
-				transition: color 0.3s;
-			}
-
-			.EH-reading-footer-links a:hover {
-				color: #fdbb2d;
-			}
-
 			/* Responsive Design */
 			@media (max-width: 768px) {
-				.EH-reading-title {
-					font-size: 2.2rem;
-				}
-				
 				.EH-reading-lessons-container {
 					grid-template-columns: 1fr;
-				}
-				
-				.EH-reading-footer-content {
-					flex-direction: column;
-					gap: 10px;
-				}
-			}
-
-			@media (max-width: 480px) {
-				.EH-reading-title {
-					font-size: 1.8rem;
 				}
 				
 				.EH-reading-content {
 					padding: 20px;
 				}
 			}
-			</style>
+
+			@media (max-width: 480px) {
+				.EH-reading-content {
+					padding: 15px;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<!-- Language Selector -->
@@ -242,17 +180,26 @@
 				<option value="ar">العربية</option>
 			</select>
 		</div>
+<div class="EH-site-header">
+    <a href="index.html" class="EH-site-logo-link" data-i18n="common.mainPage" title="Main Page">
+        <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+    </a>
+    <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+</div>
+		
 		<div class="EH-reading-container">
-			<header class="EH-reading-header">
-				<h1 class="EH-reading-title" data-i18n="readingAdventures.title">Reading Adventures</h1>
-				<p class="EH-reading-subtitle" data-i18n="readingAdventures.subtitle">Improve your reading skills through engaging stories for all ages!</p>
+			<header class="EH-common-header">
+				<h1 class="EH-common-title" data-i18n="readingAdventures.title">Reading Adventures</h1>
+				<p class="EH-common-subtitle" data-i18n="readingAdventures.subtitle">Improve your reading skills through engaging stories for all ages!</p>
 			</header>
+			
 			<div class="EH-reading-content">
 				<p class="EH-reading-intro" data-i18n="readingAdventures.intro">
 					Welcome to Reading Adventures! This platform offers reading materials for both elementary school students 
 					(ages 8-15) and young adult workers (ages 18-30). Explore stories based on real-life situations that match 
 					your age group and interests while developing your reading skills through engaging activities.
 				</p>
+				
 				<!-- Section for Elementary Students -->
 				<div class="EH-reading-category">
 					<h2 class="EH-reading-category-title" data-i18n="readingAdventures.elementary.title">For Elementary School Students (8-15 years)</h2>
@@ -310,6 +257,7 @@
 						</div>
 					</div>
 				</div>
+				
 				<!-- Section for Young Adult Workers -->
 				<div class="EH-reading-category">
 					<h2 class="EH-reading-category-title" data-i18n="readingAdventures.youngAdults.title">For Young Adult Workers (18-30 years)</h2>
@@ -377,13 +325,15 @@
 						</div>
 					</div>
 				</div>
+				
 				<button class="EH-reading-back-button" onclick="window.location.href='Communication-Skills-Enhancement.html'" data-i18n="common.backToCourses">Back to Courses</button>
 			</div>
 		</div>
-		<footer class="EH-reading-footer">
-			<div class="EH-reading-footer-content">
-				<div class="EH-reading-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-				<div class="EH-reading-footer-links">
+		
+		<footer class="EH-common-footer">
+			<div class="EH-common-footer-content">
+				<div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-common-footer-links">
 					<a href="#" data-i18n="footer.privacy">Privacy Policy</a>
 					<a href="#" data-i18n="footer.terms">Terms of Service</a>
 					<a href="#" data-i18n="footer.contact">Contact</a>
@@ -397,9 +347,9 @@
 		<script src="scripts/translations/i18n_ar.js"></script>
 		<script src="scripts/common-i18n.js"></script>
 
-<script>
-    // No additional page-specific JavaScript needed for this page
-    // All functionality is handled by the common translation system
-</script>
+		<script>
+			// No additional page-specific JavaScript needed for this page
+			// All functionality is handled by the common translation system
+		</script>
 	</body>
 </html>

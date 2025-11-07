@@ -1,100 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigating the Workplace - Reading Adventures</title>
-    <style>
-        /* Reset and Base Styles */
-        * {
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Navigating the Workplace - Reading Adventures</title>
+		
+		<!-- Common CSS -->
+		<link rel="stylesheet" href="styles/common.css">
+		
+		<style>
+			/* Reset and Base Styles */
+			* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
+			}
+			
+			body {
             background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             padding: 20px;
-        }
-        
-        /* Workplace Lesson Specific Styles */
-        .EH-workplace-container {
+			}
+			
+			/* Workplace Lesson Specific Styles */
+			.EH-workplace-container {
             max-width: 1200px;
             margin: 0 auto;
             width: 100%;
             flex: 1;
             display: flex;
             flex-direction: column;
-        }
-        
-        .EH-workplace-header {
-            text-align: center;
-            margin-bottom: 40px;
-            color: white;
-        }
-        
-        .EH-workplace-title {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .EH-workplace-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .EH-workplace-content {
+			}
+			
+			.EH-workplace-content {
             background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
             margin-bottom: 30px;
-        }
-        
-        .EH-workplace-section {
+			}
+			
+			.EH-workplace-section {
             margin-bottom: 40px;
             padding-bottom: 30px;
             border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .EH-workplace-section-title {
+			}
+			
+			.EH-workplace-section-title {
             font-size: 1.8rem;
             color: #1a2a6c;
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 2px solid #fdbb2d;
-        }
-        
-        /* Audio Player Styles */
-        .EH-workplace-audio-player {
+			}
+			
+			/* Audio Player Styles */
+			.EH-workplace-audio-player {
             background: white;
             border-radius: 15px;
             padding: 25px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
             text-align: center;
-        }
-        
-        .EH-workplace-audio-title {
+			}
+			
+			.EH-workplace-audio-title {
             font-size: 1.4rem;
             margin-bottom: 20px;
             color: #333;
-        }
-        
-        .EH-workplace-audio-controls {
+			}
+			
+			.EH-workplace-audio-controls {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 15px;
             margin-bottom: 15px;
-        }
-        
-        .EH-workplace-audio-btn {
+			}
+			
+			.EH-workplace-audio-btn {
             background: #4e54c8;
             color: white;
             border: none;
@@ -108,13 +95,13 @@
             transition: background 0.3s;
             font-size: 1.2rem;
             position: relative;
-        }
-        
-        .EH-workplace-audio-btn:hover {
+			}
+			
+			.EH-workplace-audio-btn:hover {
             background: #3f46c5;
-        }
-        
-        .EH-workplace-audio-btn:hover::after {
+			}
+			
+			.EH-workplace-audio-btn:hover::after {
             content: attr(data-tooltip);
             position: absolute;
             bottom: -40px;
@@ -127,38 +114,38 @@
             font-size: 0.8rem;
             white-space: nowrap;
             z-index: 10;
-        }
-        
-        .EH-workplace-audio-btn.stop {
+			}
+			
+			.EH-workplace-audio-btn.stop {
             background: #fdbb2d;
-        }
-        
-        .EH-workplace-audio-btn.stop:hover {
+			}
+			
+			.EH-workplace-audio-btn.stop:hover {
             background: #f7a900;
-        }
-        
-        .EH-workplace-audio-btn.pause {
+			}
+			
+			.EH-workplace-audio-btn.pause {
             background: #11998e;
-        }
-        
-        .EH-workplace-audio-btn.pause:hover {
+			}
+			
+			.EH-workplace-audio-btn.pause:hover {
             background: #0d7a70;
-        }
-        
-        .EH-workplace-volume-container {
+			}
+			
+			.EH-workplace-volume-container {
             display: flex;
             align-items: center;
             gap: 10px;
             justify-content: center;
             margin-top: 10px;
-        }
-        
-        .EH-workplace-volume-slider {
+			}
+			
+			.EH-workplace-volume-slider {
             width: 150px;
-        }
-        
-        /* Story Content Styles */
-        .EH-workplace-story {
+			}
+			
+			/* Story Content Styles */
+			.EH-workplace-story {
             background: white;
             border-radius: 15px;
             padding: 25px;
@@ -166,33 +153,33 @@
             margin-bottom: 30px;
             line-height: 1.6;
             color: #333;
-        }
-        
-        .EH-workplace-story p {
+			}
+			
+			.EH-workplace-story p {
             margin-bottom: 15px;
-        }
-        
-        /* Comprehension Questions Styles */
-        .EH-workplace-questions-container {
+			}
+			
+			/* Comprehension Questions Styles */
+			.EH-workplace-questions-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
-        }
-        
-        .EH-workplace-question-card {
+			}
+			
+			.EH-workplace-question-card {
             background: white;
             border-radius: 15px;
             padding: 25px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .EH-workplace-question-card:hover {
+			}
+			
+			.EH-workplace-question-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .EH-workplace-question-number {
+			}
+			
+			.EH-workplace-question-number {
             display: inline-block;
             width: 35px;
             height: 35px;
@@ -204,42 +191,42 @@
             align-items: center;
             font-weight: bold;
             margin-bottom: 15px;
-        }
-        
-        .EH-workplace-question-text {
+			}
+			
+			.EH-workplace-question-text {
             font-size: 1.1rem;
             margin-bottom: 15px;
             color: #333;
-        }
-        
-        .EH-workplace-options {
+			}
+			
+			.EH-workplace-options {
             display: flex;
             flex-direction: column;
             gap: 10px;
-        }
-        
-        .EH-workplace-option {
+			}
+			
+			.EH-workplace-option {
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-        
-        .EH-workplace-option input {
+			}
+			
+			.EH-workplace-option input {
             cursor: pointer;
-        }
-        
-        .EH-workplace-option label {
+			}
+			
+			.EH-workplace-option label {
             cursor: pointer;
-        }
-        
-        /* Vocabulary Cards Styles */
-        .EH-workplace-vocabulary-container {
+			}
+			
+			/* Vocabulary Cards Styles */
+			.EH-workplace-vocabulary-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
-        }
-        
-        .EH-workplace-vocabulary-card {
+			}
+			
+			.EH-workplace-vocabulary-card {
             background: white;
             border-radius: 15px;
             padding: 25px;
@@ -247,61 +234,61 @@
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
-        }
-        
-        .EH-workplace-vocabulary-card:hover {
+			}
+			
+			.EH-workplace-vocabulary-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .EH-workplace-vocabulary-word {
+			}
+			
+			.EH-workplace-vocabulary-word {
             font-size: 1.3rem;
             font-weight: bold;
             margin-bottom: 10px;
             color: #1a2a6c;
-        }
-        
-        .EH-workplace-vocabulary-pronunciation {
+			}
+			
+			.EH-workplace-vocabulary-pronunciation {
             font-style: italic;
             color: #666;
             margin-bottom: 10px;
-        }
-        
-        .EH-workplace-vocabulary-definition {
+			}
+			
+			.EH-workplace-vocabulary-definition {
             margin-bottom: 15px;
             color: #333;
             flex: 1;
-        }
-        
-        .EH-workplace-vocabulary-example {
+			}
+			
+			.EH-workplace-vocabulary-example {
             background: #f5f5f5;
             padding: 15px;
             border-radius: 10px;
             font-style: italic;
             color: #555;
-        }
-        
-        /* Pronunciation Practice Styles */
-        .EH-workplace-pronunciation-container {
+			}
+			
+			/* Pronunciation Practice Styles */
+			.EH-workplace-pronunciation-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
-        }
-        
-        .EH-workplace-pronunciation-card {
+			}
+			
+			.EH-workplace-pronunciation-card {
             background: white;
             border-radius: 15px;
             padding: 25px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .EH-workplace-pronunciation-card:hover {
+			}
+			
+			.EH-workplace-pronunciation-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .EH-workplace-pronunciation-number {
+			}
+			
+			.EH-workplace-pronunciation-number {
             display: inline-block;
             width: 35px;
             height: 35px;
@@ -313,22 +300,22 @@
             align-items: center;
             font-weight: bold;
             margin-bottom: 15px;
-        }
-        
-        .EH-workplace-pronunciation-text {
+			}
+			
+			.EH-workplace-pronunciation-text {
             font-size: 1.2rem;
             margin-bottom: 15px;
             color: #333;
             text-align: center;
-        }
-        
-        .EH-workplace-pronunciation-controls {
+			}
+			
+			.EH-workplace-pronunciation-controls {
             display: flex;
             justify-content: center;
             gap: 15px;
-        }
-        
-        .EH-workplace-pronunciation-btn {
+			}
+			
+			.EH-workplace-pronunciation-btn {
             background: #4e54c8;
             color: white;
             border: none;
@@ -342,13 +329,13 @@
             align-items: center;
             justify-content: center;
             position: relative;
-        }
-        
-        .EH-workplace-pronunciation-btn:hover {
+			}
+			
+			.EH-workplace-pronunciation-btn:hover {
             background: #3f46c5;
-        }
-        
-        .EH-workplace-pronunciation-btn:hover::after {
+			}
+			
+			.EH-workplace-pronunciation-btn:hover::after {
             content: attr(data-tooltip);
             position: absolute;
             bottom: -40px;
@@ -361,44 +348,44 @@
             font-size: 0.8rem;
             white-space: nowrap;
             z-index: 10;
-        }
-        
-        .EH-workplace-pronunciation-btn.record {
+			}
+			
+			.EH-workplace-pronunciation-btn.record {
             background: #fdbb2d;
-        }
-        
-        .EH-workplace-pronunciation-btn.record:hover {
+			}
+			
+			.EH-workplace-pronunciation-btn.record:hover {
             background: #f7a900;
-        }
-        
-        .EH-workplace-pronunciation-btn.recording {
+			}
+			
+			.EH-workplace-pronunciation-btn.recording {
             background: #fc466b;
             animation: pulse 1.5s infinite;
-        }
-        
-        @keyframes pulse {
+			}
+			
+			@keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
-        }
-        
-        .EH-workplace-pronunciation-btn.play-recorded {
+			}
+			
+			.EH-workplace-pronunciation-btn.play-recorded {
             background: #11998e;
-        }
-        
-        .EH-workplace-pronunciation-btn.play-recorded:hover {
+			}
+			
+			.EH-workplace-pronunciation-btn.play-recorded:hover {
             background: #0d7a70;
-        }
-        
-        /* Recording status indicator */
-        .EH-workplace-recording-status {
+			}
+			
+			/* Recording status indicator */
+			.EH-workplace-recording-status {
             text-align: center;
             margin-top: 10px;
             font-size: 0.9rem;
             color: #666;
-        }
-        
-        .EH-workplace-recording-indicator {
+			}
+			
+			.EH-workplace-recording-indicator {
             display: inline-block;
             width: 12px;
             height: 12px;
@@ -406,21 +393,21 @@
             border-radius: 50%;
             margin-right: 5px;
             animation: blink 1s infinite;
-        }
-        
-        @keyframes blink {
+			}
+			
+			@keyframes blink {
             0%, 50% { opacity: 1; }
             51%, 100% { opacity: 0.3; }
-        }
-        
-        /* Navigation Buttons */
-        .EH-workplace-navigation {
+			}
+			
+			/* Navigation Buttons */
+			.EH-workplace-navigation {
             display: flex;
             justify-content: space-between;
             margin-top: 30px;
-        }
-        
-        .EH-workplace-nav-button {
+			}
+			
+			.EH-workplace-nav-button {
             background: #4e54c8;
             color: white;
             border: none;
@@ -433,100 +420,22 @@
             display: flex;
             align-items: center;
             gap: 8px;
-        }
-        
-        .EH-workplace-nav-button:hover {
+			}
+			
+			.EH-workplace-nav-button:hover {
             background: #3f46c5;
-        }
-        
-        .EH-workplace-nav-button.back {
+			}
+			
+			.EH-workplace-nav-button.back {
             background: #fdbb2d;
-        }
-        
-        .EH-workplace-nav-button.back:hover {
+			}
+			
+			.EH-workplace-nav-button.back:hover {
             background: #f7a900;
-        }
-        
-        /* Footer Styles */
-        .EH-workplace-footer {
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 1rem;
-            width: 100%;
-            margin-top: 20px;
-            border-top: 2px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .EH-workplace-footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-        
-        .EH-workplace-footer-developer {
-            font-weight: bold;
-        }
-        
-        .EH-workplace-footer-links {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .EH-workplace-footer-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .EH-workplace-footer-links a:hover {
-            color: #fdbb2d;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .EH-workplace-title {
-                font-size: 2.2rem;
-            }
-            
-            .EH-workplace-questions-container,
-            .EH-workplace-vocabulary-container,
-            .EH-workplace-pronunciation-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .EH-workplace-footer-content {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .EH-workplace-navigation {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .EH-workplace-nav-button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .EH-workplace-title {
-                font-size: 1.8rem;
-            }
-            
-            .EH-workplace-content {
-                padding: 20px;
-            }
-        }
-        
-        /* Progress Slider Styles */
-        .EH-workplace-progress-container {
+			}
+			
+			/* Progress Slider Styles */
+			.EH-workplace-progress-container {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -534,535 +443,566 @@
             margin: 15px 0;
             width: 100%;
             flex-wrap: wrap;
-        }
-        
-        .EH-workplace-progress-slider {
+			}
+			
+			.EH-workplace-progress-slider {
             flex: 1;
             min-width: 200px;
             max-width: 400px;
-        }
-        
-        .EH-workplace-time-display {
+			}
+			
+			.EH-workplace-time-display {
             font-size: 0.9rem;
             color: #666;
             min-width: 80px;
             text-align: center;
-        }
-        
-        /* Controls Row */
-        .EH-workplace-controls-row {
+			}
+			
+			/* Controls Row */
+			.EH-workplace-controls-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 20px;
             margin-top: 15px;
             flex-wrap: wrap;
-        }
-        
-        .EH-workplace-control-group {
+			}
+			
+			.EH-workplace-control-group {
             display: flex;
             align-items: center;
             gap: 8px;
             flex: 1;
             min-width: 150px;
             justify-content: center;
-        }
-        
-        .EH-workplace-control-slider {
+			}
+			
+			.EH-workplace-control-slider {
             width: 100px;
-        }
-        
-        .EH-workplace-speed-value {
+			}
+			
+			.EH-workplace-speed-value {
             font-size: 0.9rem;
             color: #666;
             min-width: 35px;
             text-align: center;
             font-weight: bold;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
+			}
+			
+			/* Responsive Design */
+			@media (max-width: 768px) {
+            .EH-workplace-questions-container,
+            .EH-workplace-vocabulary-container,
+            .EH-workplace-pronunciation-container {
+			grid-template-columns: 1fr;
+            }
+            
+            .EH-workplace-navigation {
+			flex-direction: column;
+			gap: 15px;
+            }
+            
+            .EH-workplace-nav-button {
+			width: 100%;
+			justify-content: center;
+            }
+            
             .EH-workplace-controls-row {
-                flex-direction: column;
-                gap: 15px;
+			flex-direction: column;
+			gap: 15px;
             }
             
             .EH-workplace-control-group {
-                min-width: 200px;
+			min-width: 200px;
             }
             
             .EH-workplace-progress-container {
-                flex-direction: column;
-                gap: 8px;
+			flex-direction: column;
+			gap: 8px;
             }
             
             .EH-workplace-progress-slider {
-                min-width: 100%;
+			min-width: 100%;
             }
-        }
-    </style>
-</head>
-<body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="ar">العربية</option>
-        </select>
-    </div>
-    <div class="EH-workplace-container">
-        <header class="EH-workplace-header">
-            <h1 class="EH-workplace-title" data-i18n="workplace.title">Navigating the Workplace</h1>
-            <p class="EH-workplace-subtitle" data-i18n="workplace.subtitle">Follow Maria as she starts her first job in a new country</p>
-        </header>
-        <div class="EH-workplace-content">
-            <!-- Audio Player Section -->
-            <div class="EH-workplace-section">
-                <h2 class="EH-workplace-section-title" data-i18n="workplace.sections.listen">Listen to the Story</h2>
-                <div class="EH-workplace-audio-player">
-                    <h3 class="EH-workplace-audio-title" data-i18n="workplace.audio.title">Maria's First Day at Work</h3>
-                    <div class="EH-workplace-audio-controls">
-                        <button class="EH-workplace-audio-btn" id="EH-workplace-play-btn" data-tooltip="Play">
-                            ▶
-                        </button>
-                        <button class="EH-workplace-audio-btn pause" id="EH-workplace-pause-btn" style="display: none;" data-tooltip="Pause">
-                            ⏸
-                        </button>
-                        <button class="EH-workplace-audio-btn stop" id="EH-workplace-stop-btn" data-tooltip="Stop">
-                            ⏹
-                        </button>
-                    </div>
-                    
-                    <!-- Progress Slider -->
-                    <div class="EH-workplace-progress-container">
-                        <span data-i18n="common.progress">Progress:</span>
-                        <input type="range" min="0" max="100" value="0" class="EH-workplace-progress-slider" id="EH-workplace-progress">
-                        <span class="EH-workplace-time-display" id="EH-workplace-time">0:00 / 0:00</span>
-                    </div>
-                    
-                    <!-- Control sliders container -->
-                    <div class="EH-workplace-controls-row">
-                        <!-- Volume Control -->
-                        <div class="EH-workplace-control-group">
-                            <span data-i18n="common.volume">Volume:</span>
-                            <input type="range" min="0" max="100" value="80" class="EH-workplace-control-slider" id="EH-workplace-volume">
-                        </div>
-                        
-                        <!-- Speed Control -->
-                        <div class="EH-workplace-control-group">
-                            <span data-i18n="common.speed">Speed:</span>
-                            <input type="range" min="50" max="200" value="100" class="EH-workplace-control-slider" id="EH-workplace-speed">
-                            <span class="EH-workplace-speed-value" id="EH-workplace-speed-value">1.0x</span>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-workplace-recording-status" id="EH-workplace-audio-status" data-i18n="workplace.audio.status.loading">Loading audio...</div>
-                </div>
-            </div>
-            <!-- Story Content Section -->
-            <div class="EH-workplace-section">
-                <h2 class="EH-workplace-section-title" data-i18n="workplace.sections.story">Story Text</h2>
-                <div class="EH-workplace-story">
-                    <p data-i18n="workplace.story.p1">Maria arrived at the office building feeling both excited and nervous. It was her first day at her new job as a marketing assistant at Global Solutions Inc. She had moved to this country just three months ago and was still getting used to the culture and language.</p>
-                    <p data-i18n="workplace.story.p2">As she entered the lobby, she approached the reception desk. "Good morning, I'm Maria Santos. I'm starting today in the marketing department," she said, trying to sound confident.</p>
-                    <p data-i18n="workplace.story.p3">The receptionist smiled warmly. "Welcome, Maria! Let me call Sarah from HR to come get you. Please have a seat in the waiting area."</p>
-                    <p data-i18n="workplace.story.p4">While waiting, Maria reviewed the employee handbook she had received last week. She wanted to make sure she understood the company policies, dress code, and work hours. The handbook mentioned something about "flex time" which allowed employees to adjust their schedules, but she wasn't completely sure how it worked.</p>
-                    <p data-i18n="workplace.story.p5">Sarah arrived and gave Maria a tour of the office. "This is the break room where we have coffee and snacks. The marketing department is on the third floor. And here's your cubicle," Sarah explained.</p>
-                    <p data-i18n="workplace.story.p6">Maria's supervisor, Mr. Johnson, welcomed her and introduced her to the team. "We have a team meeting every Monday at 10 AM. We use a collaborative platform called WorkSpace for all our projects and communication."</p>
-                    <p data-i18n="workplace.story.p7">Throughout the day, Maria tried to remember all the new information - names of colleagues, office procedures, and the technology systems. She took notes diligently and asked questions when something wasn't clear.</p>
-                    <p data-i18n="workplace.story.p8">By the end of the day, Maria felt tired but accomplished. She had survived her first day, learned a lot, and even made a few new work friends who invited her to join them for lunch the next day.</p>
-                </div>
-            </div>
-            <!-- Comprehension Questions Section -->
-            <div class="EH-workplace-section">
-                <h2 class="EH-workplace-section-title" data-i18n="workplace.sections.questions">Comprehension Questions</h2>
-                <div class="EH-workplace-questions-container">
-                    <!-- Question 1 -->
-                    <div class="EH-workplace-question-card">
-                        <div class="EH-workplace-question-number">1</div>
-                        <p class="EH-workplace-question-text" data-i18n="workplace.questions.q1">What is Maria's position at Global Solutions Inc.?</p>
-                        <div class="EH-workplace-options">
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q1-a" name="EH-workplace-q1">
-                                <label for="EH-workplace-q1-a" data-i18n="workplace.questions.q1a">Receptionist</label>
-                            </div>
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q1-b" name="EH-workplace-q1">
-                                <label for="EH-workplace-q1-b" data-i18n="workplace.questions.q1b">Marketing Assistant</label>
-                            </div>
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q1-c" name="EH-workplace-q1">
-                                <label for="EH-workplace-q1-c" data-i18n="workplace.questions.q1c">HR Manager</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Question 2 -->
-                    <div class="EH-workplace-question-card">
-                        <div class="EH-workplace-question-number">2</div>
-                        <p class="EH-workplace-question-text" data-i18n="workplace.questions.q2">How long has Maria been in the country?</p>
-                        <div class="EH-workplace-options">
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q2-a" name="EH-workplace-q2">
-                                <label for="EH-workplace-q2-a" data-i18n="workplace.questions.q2a">One week</label>
-                            </div>
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q2-b" name="EH-workplace-q2">
-                                <label for="EH-workplace-q2-b" data-i18n="workplace.questions.q2b">Three months</label>
-                            </div>
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q2-c" name="EH-workplace-q2">
-                                <label for="EH-workplace-q2-c" data-i18n="workplace.questions.q2c">One year</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Question 3 -->
-                    <div class="EH-workplace-question-card">
-                        <div class="EH-workplace-question-number">3</div>
-                        <p class="EH-workplace-question-text" data-i18n="workplace.questions.q3">What did Maria review while waiting in the lobby?</p>
-                        <div class="EH-workplace-options">
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q3-a" name="EH-workplace-q3">
-                                <label for="EH-workplace-q3-a" data-i18n="workplace.questions.q3a">A magazine</label>
-                            </div>
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q3-b" name="EH-workplace-q3">
-                                <label for="EH-workplace-q3-b" data-i18n="workplace.questions.q3b">The employee handbook</label>
-                            </div>
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q3-c" name="EH-workplace-q3">
-                                <label for="EH-workplace-q3-c" data-i18n="workplace.questions.q3c">Her passport</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Question 4 -->
-                    <div class="EH-workplace-question-card">
-                        <div class="EH-workplace-question-number">4</div>
-                        <p class="EH-workplace-question-text" data-i18n="workplace.questions.q4">What is the name of the collaborative platform used at the company?</p>
-                        <div class="EH-workplace-options">
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q4-a" name="EH-workplace-q4">
-                                <label for="EH-workplace-q4-a" data-i18n="workplace.questions.q4a">TeamSpace</label>
-                            </div>
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q4-b" name="EH-workplace-q4">
-                                <label for="EH-workplace-q4-b" data-i18n="workplace.questions.q4b">WorkSpace</label>
-                            </div>
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q4-c" name="EH-workplace-q4">
-                                <label for="EH-workplace-q4-c" data-i18n="workplace.questions.q4c">OfficeConnect</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Question 5 -->
-                    <div class="EH-workplace-question-card">
-                        <div class="EH-workplace-question-number">5</div>
-                        <p class="EH-workplace-question-text" data-i18n="workplace.questions.q5">How did Maria feel at the end of her first day?</p>
-                        <div class="EH-workplace-options">
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q5-a" name="EH-workplace-q5">
-                                <label for="EH-workplace-q5-a" data-i18n="workplace.questions.q5a">Frustrated and confused</label>
-                            </div>
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q5-b" name="EH-workplace-q5">
-                                <label for="EH-workplace-q5-b" data-i18n="workplace.questions.q5b">Tired but accomplished</label>
-                            </div>
-                            <div class="EH-workplace-option">
-                                <input type="radio" id="EH-workplace-q5-c" name="EH-workplace-q5">
-                                <label for="EH-workplace-q5-c" data-i18n="workplace.questions.q5c">Bored and uninterested</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Vocabulary Section -->
-            <div class="EH-workplace-section">
-                <h2 class="EH-workplace-section-title" data-i18n="workplace.sections.vocabulary">Vocabulary Cards</h2>
-                <div class="EH-workplace-vocabulary-container">
-                    <!-- Vocabulary Card 1 -->
-                    <div class="EH-workplace-vocabulary-card">
-                        <div class="EH-workplace-vocabulary-word" data-i18n="workplace.vocabulary.receptionist">Receptionist</div>
-                        <div class="EH-workplace-vocabulary-pronunciation" data-i18n="workplace.vocabulary.receptionist_pron">/rɪˈsɛpʃənɪst/</div>
-                        <div class="EH-workplace-vocabulary-definition" data-i18n="workplace.vocabulary.receptionist_def">A person who greets visitors and answers the telephone in an office</div>
-                        <div class="EH-workplace-vocabulary-example" data-i18n="workplace.vocabulary.receptionist_ex">"The receptionist directed Maria to the waiting area."</div>
-                    </div>
-                    <!-- Vocabulary Card 2 -->
-                    <div class="EH-workplace-vocabulary-card">
-                        <div class="EH-workplace-vocabulary-word" data-i18n="workplace.vocabulary.policy">Policy</div>
-                        <div class="EH-workplace-vocabulary-pronunciation" data-i18n="workplace.vocabulary.policy_pron">/ˈpɒlɪsi/</div>
-                        <div class="EH-workplace-vocabulary-definition" data-i18n="workplace.vocabulary.policy_def">A set of ideas or plans used as a basis for making decisions</div>
-                        <div class="EH-workplace-vocabulary-example" data-i18n="workplace.vocabulary.policy_ex">"Maria reviewed the company policies in the employee handbook."</div>
-                    </div>
-                    <!-- Vocabulary Card 3 -->
-                    <div class="EH-workplace-vocabulary-card">
-                        <div class="EH-workplace-vocabulary-word" data-i18n="workplace.vocabulary.flex_time">Flex Time</div>
-                        <div class="EH-workplace-vocabulary-pronunciation" data-i18n="workplace.vocabulary.flex_time_pron">/flɛks taɪm/</div>
-                        <div class="EH-workplace-vocabulary-definition" data-i18n="workplace.vocabulary.flex_time_def">A system that allows employees to choose their own working hours</div>
-                        <div class="EH-workplace-vocabulary-example" data-i18n="workplace.vocabulary.flex_time_ex">"The company offers flex time, so employees can adjust their schedules."</div>
-                    </div>
-                    <!-- Vocabulary Card 4 -->
-                    <div class="EH-workplace-vocabulary-card">
-                        <div class="EH-workplace-vocabulary-word" data-i18n="workplace.vocabulary.collaborative">Collaborative</div>
-                        <div class="EH-workplace-vocabulary-pronunciation" data-i18n="workplace.vocabulary.collaborative_pron">/kəˈlæbərətɪv/</div>
-                        <div class="EH-workplace-vocabulary-definition" data-i18n="workplace.vocabulary.collaborative_def">Involving two or more people working together for a common purpose</div>
-                        <div class="EH-workplace-vocabulary-example" data-i18n="workplace.vocabulary.collaborative_ex">"They use a collaborative platform for all their projects."</div>
-                    </div>
-                    <!-- Vocabulary Card 5 -->
-                    <div class="EH-workplace-vocabulary-card">
-                        <div class="EH-workplace-vocabulary-word" data-i18n="workplace.vocabulary.diligently">Diligently</div>
-                        <div class="EH-workplace-vocabulary-pronunciation" data-i18n="workplace.vocabulary.diligently_pron">/ˈdɪlɪdʒəntli/</div>
-                        <div class="EH-workplace-vocabulary-definition" data-i18n="workplace.vocabulary.diligently_def">In a way that shows care and conscientiousness in one's work or duties</div>
-                        <div class="EH-workplace-vocabulary-example" data-i18n="workplace.vocabulary.diligently_ex">"Maria took notes diligently throughout the orientation."</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Pronunciation Practice Section -->
-            <div class="EH-workplace-section">
-                <h2 class="EH-workplace-section-title" data-i18n="workplace.sections.pronunciation">Pronunciation Practice</h2>
-                <div class="EH-workplace-pronunciation-container">
-                    <!-- Pronunciation 1 -->
-                    <div class="EH-workplace-pronunciation-card">
-                        <div class="EH-workplace-pronunciation-number">1</div>
-                        <p class="EH-workplace-pronunciation-text" data-i18n="workplace.pronunciation.p1">"Good morning, I'm Maria Santos."</p>
-                        <div class="EH-workplace-pronunciation-controls">
-                            <button class="EH-workplace-pronunciation-btn" data-audio="pronunciation-1-listen" data-tooltip="Listen">
-                                🔊
-                            </button>
-                            <button class="EH-workplace-pronunciation-btn record" data-audio="pronunciation-1-record" data-tooltip="Record">
-                                ●
-                            </button>
-                            <button class="EH-workplace-pronunciation-btn play-recorded" data-audio="pronunciation-1-playback" style="display: none;" data-tooltip="Playback">
-                                ▶
-                            </button>
-                        </div>
-                        <div class="EH-workplace-recording-status" data-status="pronunciation-1-status"></div>
-                    </div>
-                    <!-- Pronunciation 2 -->
-                    <div class="EH-workplace-pronunciation-card">
-                        <div class="EH-workplace-pronunciation-number">2</div>
-                        <p class="EH-workplace-pronunciation-text" data-i18n="workplace.pronunciation.p2">"I'm starting in the marketing department."</p>
-                        <div class="EH-workplace-pronunciation-controls">
-                            <button class="EH-workplace-pronunciation-btn" data-audio="pronunciation-2-listen" data-tooltip="Listen">
-                                🔊
-                            </button>
-                            <button class="EH-workplace-pronunciation-btn record" data-audio="pronunciation-2-record" data-tooltip="Record">
-                                ●
-                            </button>
-                            <button class="EH-workplace-pronunciation-btn play-recorded" data-audio="pronunciation-2-playback" style="display: none;" data-tooltip="Playback">
-                                ▶
-                            </button>
-                        </div>
-                        <div class="EH-workplace-recording-status" data-status="pronunciation-2-status"></div>
-                    </div>
-                    <!-- Pronunciation 3 -->
-                    <div class="EH-workplace-pronunciation-card">
-                        <div class="EH-workplace-pronunciation-number">3</div>
-                        <p class="EH-workplace-pronunciation-text" data-i18n="workplace.pronunciation.p3">"Could you explain the flex time policy?"</p>
-                        <div class="EH-workplace-pronunciation-controls">
-                            <button class="EH-workplace-pronunciation-btn" data-audio="pronunciation-3-listen" data-tooltip="Listen">
-                                🔊
-                            </button>
-                            <button class="EH-workplace-pronunciation-btn record" data-audio="pronunciation-3-record" data-tooltip="Record">
-                                ●
-                            </button>
-                            <button class="EH-workplace-pronunciation-btn play-recorded" data-audio="pronunciation-3-playback" style="display: none;" data-tooltip="Playback">
-                                ▶
-                            </button>
-                        </div>
-                        <div class="EH-workplace-recording-status" data-status="pronunciation-3-status"></div>
-                    </div>
-                    <!-- Pronunciation 4 -->
-                    <div class="EH-workplace-pronunciation-card">
-                        <div class="EH-workplace-pronunciation-number">4</div>
-                        <p class="EH-workplace-pronunciation-text" data-i18n="workplace.pronunciation.p4">"I'm still learning the office procedures."</p>
-                        <div class="EH-workplace-pronunciation-controls">
-                            <button class="EH-workplace-pronunciation-btn" data-audio="pronunciation-4-listen" data-tooltip="Listen">
-                                🔊
-                            </button>
-                            <button class="EH-workplace-pronunciation-btn record" data-audio="pronunciation-4-record" data-tooltip="Record">
-                                ●
-                            </button>
-                            <button class="EH-workplace-pronunciation-btn play-recorded" data-audio="pronunciation-4-playback" style="display: none;" data-tooltip="Playback">
-                                ▶
-                            </button>
-                        </div>
-                        <div class="EH-workplace-recording-status" data-status="pronunciation-4-status"></div>
-                    </div>
-                    <!-- Pronunciation 5 -->
-                    <div class="EH-workplace-pronunciation-card">
-                        <div class="EH-workplace-pronunciation-number">5</div>
-                        <p class="EH-workplace-pronunciation-text" data-i18n="workplace.pronunciation.p5">"Thank you for the warm welcome."</p>
-                        <div class="EH-workplace-pronunciation-controls">
-                            <button class="EH-workplace-pronunciation-btn" data-audio="pronunciation-5-listen" data-tooltip="Listen">
-                                🔊
-                            </button>
-                            <button class="EH-workplace-pronunciation-btn record" data-audio="pronunciation-5-record" data-tooltip="Record">
-                                ●
-                            </button>
-                            <button class="EH-workplace-pronunciation-btn play-recorded" data-audio="pronunciation-5-playback" style="display: none;" data-tooltip="Playback">
-                                ▶
-                            </button>
-                        </div>
-                        <div class="EH-workplace-recording-status" data-status="pronunciation-5-status"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Navigation Buttons -->
-            <div class="EH-workplace-navigation">
-                <button class="EH-workplace-nav-button back" onclick="window.location.href='Eh-general-reading-adventures.html'">
-                    ← <span data-i18n="common.backToReadingAdventures">Back to Reading Adventures</span>
-                </button>
-                <button class="EH-workplace-nav-button" onclick="window.location.href='EH-reading-apartment.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson</span> →
-                </button>
-            </div>
-        </div>
-    </div>
-    <footer class="EH-workplace-footer">
-        <div class="EH-workplace-footer-content">
-            <div class="EH-workplace-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-workplace-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    <!-- i18n translations -->
-    <script src="scripts/translations/i18n_en.js"></script>
-    <script src="scripts/translations/i18n_fr.js"></script>
-    <script src="scripts/translations/i18n_ar.js"></script>
+			}
+			
+			@media (max-width: 480px) {
+            .EH-workplace-content {
+			padding: 20px;
+            }
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Language Selector -->
+		<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+			<select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+				<option value="en">English</option>
+				<option value="fr">Français</option>
+				<option value="ar">العربية</option>
+			</select>
+		</div>
+<div class="EH-site-header">
+    <a href="index.html" class="EH-site-logo-link" data-i18n="common.mainPage" title="Main Page">
+        <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+    </a>
+    <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+</div>
+		<div class="EH-workplace-container">
+			<!-- Common Header -->
+			<header class="EH-common-header">
+				<h1 class="EH-common-title" data-i18n="workplace.title">Navigating the Workplace</h1>
+				<p class="EH-common-subtitle" data-i18n="workplace.subtitle">Follow Maria as she starts her first job in a new country</p>
+			</header>
+			
+			<div class="EH-workplace-content">
+				<!-- Audio Player Section -->
+				<div class="EH-workplace-section">
+					<h2 class="EH-workplace-section-title" data-i18n="workplace.sections.listen">Listen to the Story</h2>
+					<div class="EH-workplace-audio-player">
+						<h3 class="EH-workplace-audio-title" data-i18n="workplace.audio.title">Maria's First Day at Work</h3>
+						<div class="EH-workplace-audio-controls">
+							<button class="EH-workplace-audio-btn" id="EH-workplace-play-btn" data-tooltip="Play">
+								▶
+							</button>
+							<button class="EH-workplace-audio-btn pause" id="EH-workplace-pause-btn" style="display: none;" data-tooltip="Pause">
+								⏸
+							</button>
+							<button class="EH-workplace-audio-btn stop" id="EH-workplace-stop-btn" data-tooltip="Stop">
+								⏹
+							</button>
+						</div>
+						
+						<!-- Progress Slider -->
+						<div class="EH-workplace-progress-container">
+							<span data-i18n="common.progress">Progress:</span>
+							<input type="range" min="0" max="100" value="0" class="EH-workplace-progress-slider" id="EH-workplace-progress">
+							<span class="EH-workplace-time-display" id="EH-workplace-time">0:00 / 0:00</span>
+						</div>
+						
+						<!-- Control sliders container -->
+						<div class="EH-workplace-controls-row">
+							<!-- Volume Control -->
+							<div class="EH-workplace-control-group">
+								<span data-i18n="common.volume">Volume:</span>
+								<input type="range" min="0" max="100" value="80" class="EH-workplace-control-slider" id="EH-workplace-volume">
+							</div>
+							
+							<!-- Speed Control -->
+							<div class="EH-workplace-control-group">
+								<span data-i18n="common.speed">Speed:</span>
+								<input type="range" min="50" max="200" value="100" class="EH-workplace-control-slider" id="EH-workplace-speed">
+								<span class="EH-workplace-speed-value" id="EH-workplace-speed-value">1.0x</span>
+							</div>
+						</div>
+						
+						<div class="EH-workplace-recording-status" id="EH-workplace-audio-status" data-i18n="workplace.audio.status.loading">Loading audio...</div>
+					</div>
+				</div>
+				<!-- Story Content Section -->
+				<div class="EH-workplace-section">
+					<h2 class="EH-workplace-section-title" data-i18n="workplace.sections.story">Story Text</h2>
+					<div class="EH-workplace-story">
+						<p data-i18n="workplace.story.p1">Maria arrived at the office building feeling both excited and nervous. It was her first day at her new job as a marketing assistant at Global Solutions Inc. She had moved to this country just three months ago and was still getting used to the culture and language.</p>
+						<p data-i18n="workplace.story.p2">As she entered the lobby, she approached the reception desk. "Good morning, I'm Maria Santos. I'm starting today in the marketing department," she said, trying to sound confident.</p>
+						<p data-i18n="workplace.story.p3">The receptionist smiled warmly. "Welcome, Maria! Let me call Sarah from HR to come get you. Please have a seat in the waiting area."</p>
+						<p data-i18n="workplace.story.p4">While waiting, Maria reviewed the employee handbook she had received last week. She wanted to make sure she understood the company policies, dress code, and work hours. The handbook mentioned something about "flex time" which allowed employees to adjust their schedules, but she wasn't completely sure how it worked.</p>
+						<p data-i18n="workplace.story.p5">Sarah arrived and gave Maria a tour of the office. "This is the break room where we have coffee and snacks. The marketing department is on the third floor. And here's your cubicle," Sarah explained.</p>
+						<p data-i18n="workplace.story.p6">Maria's supervisor, Mr. Johnson, welcomed her and introduced her to the team. "We have a team meeting every Monday at 10 AM. We use a collaborative platform called WorkSpace for all our projects and communication."</p>
+						<p data-i18n="workplace.story.p7">Throughout the day, Maria tried to remember all the new information - names of colleagues, office procedures, and the technology systems. She took notes diligently and asked questions when something wasn't clear.</p>
+						<p data-i18n="workplace.story.p8">By the end of the day, Maria felt tired but accomplished. She had survived her first day, learned a lot, and even made a few new work friends who invited her to join them for lunch the next day.</p>
+					</div>
+				</div>
+				<!-- Comprehension Questions Section -->
+				<div class="EH-workplace-section">
+					<h2 class="EH-workplace-section-title" data-i18n="workplace.sections.questions">Comprehension Questions</h2>
+					<div class="EH-workplace-questions-container">
+						<!-- Question 1 -->
+						<div class="EH-workplace-question-card">
+							<div class="EH-workplace-question-number">1</div>
+							<p class="EH-workplace-question-text" data-i18n="workplace.questions.q1">What is Maria's position at Global Solutions Inc.?</p>
+							<div class="EH-workplace-options">
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q1-a" name="EH-workplace-q1">
+									<label for="EH-workplace-q1-a" data-i18n="workplace.questions.q1a">Receptionist</label>
+								</div>
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q1-b" name="EH-workplace-q1">
+									<label for="EH-workplace-q1-b" data-i18n="workplace.questions.q1b">Marketing Assistant</label>
+								</div>
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q1-c" name="EH-workplace-q1">
+									<label for="EH-workplace-q1-c" data-i18n="workplace.questions.q1c">HR Manager</label>
+								</div>
+							</div>
+						</div>
+						<!-- Question 2 -->
+						<div class="EH-workplace-question-card">
+							<div class="EH-workplace-question-number">2</div>
+							<p class="EH-workplace-question-text" data-i18n="workplace.questions.q2">How long has Maria been in the country?</p>
+							<div class="EH-workplace-options">
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q2-a" name="EH-workplace-q2">
+									<label for="EH-workplace-q2-a" data-i18n="workplace.questions.q2a">One week</label>
+								</div>
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q2-b" name="EH-workplace-q2">
+									<label for="EH-workplace-q2-b" data-i18n="workplace.questions.q2b">Three months</label>
+								</div>
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q2-c" name="EH-workplace-q2">
+									<label for="EH-workplace-q2-c" data-i18n="workplace.questions.q2c">One year</label>
+								</div>
+							</div>
+						</div>
+						<!-- Question 3 -->
+						<div class="EH-workplace-question-card">
+							<div class="EH-workplace-question-number">3</div>
+							<p class="EH-workplace-question-text" data-i18n="workplace.questions.q3">What did Maria review while waiting in the lobby?</p>
+							<div class="EH-workplace-options">
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q3-a" name="EH-workplace-q3">
+									<label for="EH-workplace-q3-a" data-i18n="workplace.questions.q3a">A magazine</label>
+								</div>
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q3-b" name="EH-workplace-q3">
+									<label for="EH-workplace-q3-b" data-i18n="workplace.questions.q3b">The employee handbook</label>
+								</div>
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q3-c" name="EH-workplace-q3">
+									<label for="EH-workplace-q3-c" data-i18n="workplace.questions.q3c">Her passport</label>
+								</div>
+							</div>
+						</div>
+						<!-- Question 4 -->
+						<div class="EH-workplace-question-card">
+							<div class="EH-workplace-question-number">4</div>
+							<p class="EH-workplace-question-text" data-i18n="workplace.questions.q4">What is the name of the collaborative platform used at the company?</p>
+							<div class="EH-workplace-options">
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q4-a" name="EH-workplace-q4">
+									<label for="EH-workplace-q4-a" data-i18n="workplace.questions.q4a">TeamSpace</label>
+								</div>
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q4-b" name="EH-workplace-q4">
+									<label for="EH-workplace-q4-b" data-i18n="workplace.questions.q4b">WorkSpace</label>
+								</div>
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q4-c" name="EH-workplace-q4">
+									<label for="EH-workplace-q4-c" data-i18n="workplace.questions.q4c">OfficeConnect</label>
+								</div>
+							</div>
+						</div>
+						<!-- Question 5 -->
+						<div class="EH-workplace-question-card">
+							<div class="EH-workplace-question-number">5</div>
+							<p class="EH-workplace-question-text" data-i18n="workplace.questions.q5">How did Maria feel at the end of her first day?</p>
+							<div class="EH-workplace-options">
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q5-a" name="EH-workplace-q5">
+									<label for="EH-workplace-q5-a" data-i18n="workplace.questions.q5a">Frustrated and confused</label>
+								</div>
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q5-b" name="EH-workplace-q5">
+									<label for="EH-workplace-q5-b" data-i18n="workplace.questions.q5b">Tired but accomplished</label>
+								</div>
+								<div class="EH-workplace-option">
+									<input type="radio" id="EH-workplace-q5-c" name="EH-workplace-q5">
+									<label for="EH-workplace-q5-c" data-i18n="workplace.questions.q5c">Bored and uninterested</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Vocabulary Section -->
+				<div class="EH-workplace-section">
+					<h2 class="EH-workplace-section-title" data-i18n="workplace.sections.vocabulary">Vocabulary Cards</h2>
+					<div class="EH-workplace-vocabulary-container">
+						<!-- Vocabulary Card 1 -->
+						<div class="EH-workplace-vocabulary-card">
+							<div class="EH-workplace-vocabulary-word" data-i18n="workplace.vocabulary.receptionist">Receptionist</div>
+							<div class="EH-workplace-vocabulary-pronunciation" data-i18n="workplace.vocabulary.receptionist_pron">/rɪˈsɛpʃənɪst/</div>
+							<div class="EH-workplace-vocabulary-definition" data-i18n="workplace.vocabulary.receptionist_def">A person who greets visitors and answers the telephone in an office</div>
+							<div class="EH-workplace-vocabulary-example" data-i18n="workplace.vocabulary.receptionist_ex">"The receptionist directed Maria to the waiting area."</div>
+						</div>
+						<!-- Vocabulary Card 2 -->
+						<div class="EH-workplace-vocabulary-card">
+							<div class="EH-workplace-vocabulary-word" data-i18n="workplace.vocabulary.policy">Policy</div>
+							<div class="EH-workplace-vocabulary-pronunciation" data-i18n="workplace.vocabulary.policy_pron">/ˈpɒlɪsi/</div>
+							<div class="EH-workplace-vocabulary-definition" data-i18n="workplace.vocabulary.policy_def">A set of ideas or plans used as a basis for making decisions</div>
+							<div class="EH-workplace-vocabulary-example" data-i18n="workplace.vocabulary.policy_ex">"Maria reviewed the company policies in the employee handbook."</div>
+						</div>
+						<!-- Vocabulary Card 3 -->
+						<div class="EH-workplace-vocabulary-card">
+							<div class="EH-workplace-vocabulary-word" data-i18n="workplace.vocabulary.flex_time">Flex Time</div>
+							<div class="EH-workplace-vocabulary-pronunciation" data-i18n="workplace.vocabulary.flex_time_pron">/flɛks taɪm/</div>
+							<div class="EH-workplace-vocabulary-definition" data-i18n="workplace.vocabulary.flex_time_def">A system that allows employees to choose their own working hours</div>
+							<div class="EH-workplace-vocabulary-example" data-i18n="workplace.vocabulary.flex_time_ex">"The company offers flex time, so employees can adjust their schedules."</div>
+						</div>
+						<!-- Vocabulary Card 4 -->
+						<div class="EH-workplace-vocabulary-card">
+							<div class="EH-workplace-vocabulary-word" data-i18n="workplace.vocabulary.collaborative">Collaborative</div>
+							<div class="EH-workplace-vocabulary-pronunciation" data-i18n="workplace.vocabulary.collaborative_pron">/kəˈlæbərətɪv/</div>
+							<div class="EH-workplace-vocabulary-definition" data-i18n="workplace.vocabulary.collaborative_def">Involving two or more people working together for a common purpose</div>
+							<div class="EH-workplace-vocabulary-example" data-i18n="workplace.vocabulary.collaborative_ex">"They use a collaborative platform for all their projects."</div>
+						</div>
+						<!-- Vocabulary Card 5 -->
+						<div class="EH-workplace-vocabulary-card">
+							<div class="EH-workplace-vocabulary-word" data-i18n="workplace.vocabulary.diligently">Diligently</div>
+							<div class="EH-workplace-vocabulary-pronunciation" data-i18n="workplace.vocabulary.diligently_pron">/ˈdɪlɪdʒəntli/</div>
+							<div class="EH-workplace-vocabulary-definition" data-i18n="workplace.vocabulary.diligently_def">In a way that shows care and conscientiousness in one's work or duties</div>
+							<div class="EH-workplace-vocabulary-example" data-i18n="workplace.vocabulary.diligently_ex">"Maria took notes diligently throughout the orientation."</div>
+						</div>
+					</div>
+				</div>
+				<!-- Pronunciation Practice Section -->
+				<div class="EH-workplace-section">
+					<h2 class="EH-workplace-section-title" data-i18n="workplace.sections.pronunciation">Pronunciation Practice</h2>
+					<div class="EH-workplace-pronunciation-container">
+						<!-- Pronunciation 1 -->
+						<div class="EH-workplace-pronunciation-card">
+							<div class="EH-workplace-pronunciation-number">1</div>
+							<p class="EH-workplace-pronunciation-text" data-i18n="workplace.pronunciation.p1">"Good morning, I'm Maria Santos."</p>
+							<div class="EH-workplace-pronunciation-controls">
+								<button class="EH-workplace-pronunciation-btn" data-audio="pronunciation-1-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-workplace-pronunciation-btn record" data-audio="pronunciation-1-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-workplace-pronunciation-btn play-recorded" data-audio="pronunciation-1-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-workplace-recording-status" data-status="pronunciation-1-status"></div>
+						</div>
+						<!-- Pronunciation 2 -->
+						<div class="EH-workplace-pronunciation-card">
+							<div class="EH-workplace-pronunciation-number">2</div>
+							<p class="EH-workplace-pronunciation-text" data-i18n="workplace.pronunciation.p2">"I'm starting in the marketing department."</p>
+							<div class="EH-workplace-pronunciation-controls">
+								<button class="EH-workplace-pronunciation-btn" data-audio="pronunciation-2-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-workplace-pronunciation-btn record" data-audio="pronunciation-2-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-workplace-pronunciation-btn play-recorded" data-audio="pronunciation-2-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-workplace-recording-status" data-status="pronunciation-2-status"></div>
+						</div>
+						<!-- Pronunciation 3 -->
+						<div class="EH-workplace-pronunciation-card">
+							<div class="EH-workplace-pronunciation-number">3</div>
+							<p class="EH-workplace-pronunciation-text" data-i18n="workplace.pronunciation.p3">"Could you explain the flex time policy?"</p>
+							<div class="EH-workplace-pronunciation-controls">
+								<button class="EH-workplace-pronunciation-btn" data-audio="pronunciation-3-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-workplace-pronunciation-btn record" data-audio="pronunciation-3-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-workplace-pronunciation-btn play-recorded" data-audio="pronunciation-3-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-workplace-recording-status" data-status="pronunciation-3-status"></div>
+						</div>
+						<!-- Pronunciation 4 -->
+						<div class="EH-workplace-pronunciation-card">
+							<div class="EH-workplace-pronunciation-number">4</div>
+							<p class="EH-workplace-pronunciation-text" data-i18n="workplace.pronunciation.p4">"I'm still learning the office procedures."</p>
+							<div class="EH-workplace-pronunciation-controls">
+								<button class="EH-workplace-pronunciation-btn" data-audio="pronunciation-4-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-workplace-pronunciation-btn record" data-audio="pronunciation-4-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-workplace-pronunciation-btn play-recorded" data-audio="pronunciation-4-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-workplace-recording-status" data-status="pronunciation-4-status"></div>
+						</div>
+						<!-- Pronunciation 5 -->
+						<div class="EH-workplace-pronunciation-card">
+							<div class="EH-workplace-pronunciation-number">5</div>
+							<p class="EH-workplace-pronunciation-text" data-i18n="workplace.pronunciation.p5">"Thank you for the warm welcome."</p>
+							<div class="EH-workplace-pronunciation-controls">
+								<button class="EH-workplace-pronunciation-btn" data-audio="pronunciation-5-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-workplace-pronunciation-btn record" data-audio="pronunciation-5-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-workplace-pronunciation-btn play-recorded" data-audio="pronunciation-5-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-workplace-recording-status" data-status="pronunciation-5-status"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Navigation Buttons -->
+				<div class="EH-workplace-navigation">
+					<button class="EH-workplace-nav-button back" onclick="window.location.href='Eh-general-reading-adventures.html'">
+						← <span data-i18n="common.backToReadingAdventures">Back to Reading Adventures</span>
+					</button>
+					<button class="EH-workplace-nav-button" onclick="window.location.href='EH-reading-apartment.html'">
+						<span data-i18n="common.nextLesson">Next Lesson</span> →
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Common Footer -->
+		<footer class="EH-common-footer">
+			<div class="EH-common-footer-content">
+				<div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-common-footer-links">
+					<a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+					<a href="#" data-i18n="footer.terms">Terms of Service</a>
+					<a href="#" data-i18n="footer.contact">Contact</a>
+				</div>
+			</div>
+		</footer>
+		<!-- i18n translations -->
+		<script src="scripts/translations/i18n_en.js"></script>
+		<script src="scripts/translations/i18n_fr.js"></script>
+		<script src="scripts/translations/i18n_ar.js"></script>
 		<script src="scripts/common-i18n.js"></script>
-    <!-- Include the generic sound library -->
-    <script src="scripts/sound.js"></script>
-<script>
-    // Lesson-specific audio configuration
-    const audioConfig = {
-        'workplace-story': 'assets/audio/lessons/category2/lesson1/workplace-story.mp3',
-        'pronunciation-1-listen': 'assets/audio/lessons/category2/lesson1/pronunciation-1.mp3',
-        'pronunciation-2-listen': 'assets/audio/lessons/category2/lesson1/pronunciation-2.mp3',
-        'pronunciation-3-listen': 'assets/audio/lessons/category2/lesson1/pronunciation-3.mp3',
-        'pronunciation-4-listen': 'assets/audio/lessons/category2/lesson1/pronunciation-4.mp3',
-        'pronunciation-5-listen': 'assets/audio/lessons/category2/lesson1/pronunciation-5.mp3'
-    };
-    
-    // Audio progress tracking
-    let progressInterval;
-    
-    function updateProgressBar(audioKey) {
-        const audio = audioPlayers[audioKey];
-        if (!audio) return;
-        
-        const progressSlider = document.getElementById('EH-workplace-progress');
-        const timeDisplay = document.getElementById('EH-workplace-time');
-        
-        if (audio.duration) {
-            const progress = (audio.currentTime / audio.duration) * 100;
-            progressSlider.value = progress;
-            
-            // Update time display
-            const currentTime = formatTime(audio.currentTime);
-            const duration = formatTime(audio.duration);
-            timeDisplay.textContent = `${currentTime} / ${duration}`;
-        }
-    }
-    
-    function formatTime(seconds) {
-        const mins = Math.floor(seconds / 60);
-        const secs = Math.floor(seconds % 60);
-        return `${mins}:${secs.toString().padStart(2, '0')}`;
-    }
-    
-    function setupProgressTracking(audioKey) {
-        const audio = audioPlayers[audioKey];
-        if (!audio) return;
-        
-        // Clear any existing interval
-        if (progressInterval) {
-            clearInterval(progressInterval);
-        }
-        
-        // Update progress every 100ms
-        progressInterval = setInterval(() => {
-            updateProgressBar(audioKey);
-        }, 100);
-        
-        // Setup progress slider event
-        const progressSlider = document.getElementById('EH-workplace-progress');
-        progressSlider.addEventListener('input', function() {
-            if (audio.duration) {
-                const seekTime = (this.value / 100) * audio.duration;
-                audio.currentTime = seekTime;
-            }
-        });
-        
-        // Reset when audio ends
-        audio.addEventListener('ended', function() {
-            if (progressInterval) {
-                clearInterval(progressInterval);
-            }
-            progressSlider.value = 0;
-            document.getElementById('EH-workplace-time').textContent = '0:00 / ' + formatTime(audio.duration);
-        });
-    }
-    
-    function setupSpeedControl() {
-        const speedSlider = document.getElementById('EH-workplace-speed');
-        const speedValue = document.getElementById('EH-workplace-speed-value');
-        
-        speedSlider.addEventListener('input', function() {
-            const speed = this.value / 100;
-            speedValue.textContent = speed.toFixed(1) + 'x';
-            
-            // Apply speed to all audio players
-            for (const key in audioPlayers) {
-                if (audioPlayers[key]) {
-                    audioPlayers[key].playbackRate = speed;
-                }
-            }
-        });
-    }
-    
-    // Initialize when DOM is loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initialize audio players with lesson-specific config
-        initAudioPlayers(audioConfig);
-        
-        // Set up main story audio controls
-        document.getElementById('EH-workplace-play-btn').addEventListener('click', function() {
-            playAudio('workplace-story');
-            setupProgressTracking('workplace-story');
-        });
-        
-        document.getElementById('EH-workplace-pause-btn').addEventListener('click', function() {
-            pauseAudio('workplace-story');
-            if (progressInterval) {
-                clearInterval(progressInterval);
-            }
-        });
-        
-        document.getElementById('EH-workplace-stop-btn').addEventListener('click', function() {
-            stopAudio('workplace-story');
-            if (progressInterval) {
-                clearInterval(progressInterval);
-            }
-            document.getElementById('EH-workplace-progress').value = 0;
-            document.getElementById('EH-workplace-time').textContent = '0:00 / 0:00';
-        });
-        
-        document.getElementById('EH-workplace-volume').addEventListener('input', function() {
-            setGlobalVolume(this.value);
-        });
-        
-        // Setup speed control
-        setupSpeedControl();
-        
-        // Set up pronunciation practice listeners
-        setupPronunciationListeners();
-        
-        // Initialize with default volume
-        setGlobalVolume(80);
-    });
-</script>
-</body>
+		<!-- Include the generic sound library -->
+		<script src="scripts/sound.js"></script>
+		<script>
+			// Lesson-specific audio configuration
+			const audioConfig = {
+				'workplace-story': 'assets/audio/lessons/category2/lesson1/workplace-story.mp3',
+				'pronunciation-1-listen': 'assets/audio/lessons/category2/lesson1/pronunciation-1.mp3',
+				'pronunciation-2-listen': 'assets/audio/lessons/category2/lesson1/pronunciation-2.mp3',
+				'pronunciation-3-listen': 'assets/audio/lessons/category2/lesson1/pronunciation-3.mp3',
+				'pronunciation-4-listen': 'assets/audio/lessons/category2/lesson1/pronunciation-4.mp3',
+				'pronunciation-5-listen': 'assets/audio/lessons/category2/lesson1/pronunciation-5.mp3'
+			};
+			
+			// Audio progress tracking
+			let progressInterval;
+			
+			function updateProgressBar(audioKey) {
+				const audio = audioPlayers[audioKey];
+				if (!audio) return;
+				
+				const progressSlider = document.getElementById('EH-workplace-progress');
+				const timeDisplay = document.getElementById('EH-workplace-time');
+				
+				if (audio.duration) {
+					const progress = (audio.currentTime / audio.duration) * 100;
+					progressSlider.value = progress;
+					
+					// Update time display
+					const currentTime = formatTime(audio.currentTime);
+					const duration = formatTime(audio.duration);
+					timeDisplay.textContent = `${currentTime} / ${duration}`;
+				}
+			}
+			
+			function formatTime(seconds) {
+				const mins = Math.floor(seconds / 60);
+				const secs = Math.floor(seconds % 60);
+				return `${mins}:${secs.toString().padStart(2, '0')}`;
+			}
+			
+			function setupProgressTracking(audioKey) {
+				const audio = audioPlayers[audioKey];
+				if (!audio) return;
+				
+				// Clear any existing interval
+				if (progressInterval) {
+					clearInterval(progressInterval);
+				}
+				
+				// Update progress every 100ms
+				progressInterval = setInterval(() => {
+					updateProgressBar(audioKey);
+				}, 100);
+				
+				// Setup progress slider event
+				const progressSlider = document.getElementById('EH-workplace-progress');
+				progressSlider.addEventListener('input', function() {
+					if (audio.duration) {
+						const seekTime = (this.value / 100) * audio.duration;
+						audio.currentTime = seekTime;
+					}
+				});
+				
+				// Reset when audio ends
+				audio.addEventListener('ended', function() {
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					progressSlider.value = 0;
+					document.getElementById('EH-workplace-time').textContent = '0:00 / ' + formatTime(audio.duration);
+				});
+			}
+			
+			function setupSpeedControl() {
+				const speedSlider = document.getElementById('EH-workplace-speed');
+				const speedValue = document.getElementById('EH-workplace-speed-value');
+				
+				speedSlider.addEventListener('input', function() {
+					const speed = this.value / 100;
+					speedValue.textContent = speed.toFixed(1) + 'x';
+					
+					// Apply speed to all audio players
+					for (const key in audioPlayers) {
+						if (audioPlayers[key]) {
+							audioPlayers[key].playbackRate = speed;
+						}
+					}
+				});
+			}
+			
+			// Initialize when DOM is loaded
+			document.addEventListener('DOMContentLoaded', function() {
+				// Initialize audio players with lesson-specific config
+				initAudioPlayers(audioConfig);
+				
+				// Set up main story audio controls
+				document.getElementById('EH-workplace-play-btn').addEventListener('click', function() {
+					playAudio('workplace-story');
+					setupProgressTracking('workplace-story');
+				});
+				
+				document.getElementById('EH-workplace-pause-btn').addEventListener('click', function() {
+					pauseAudio('workplace-story');
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+				});
+				
+				document.getElementById('EH-workplace-stop-btn').addEventListener('click', function() {
+					stopAudio('workplace-story');
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					document.getElementById('EH-workplace-progress').value = 0;
+					document.getElementById('EH-workplace-time').textContent = '0:00 / 0:00';
+				});
+				
+				document.getElementById('EH-workplace-volume').addEventListener('input', function() {
+					setGlobalVolume(this.value);
+				});
+				
+				// Setup speed control
+				setupSpeedControl();
+				
+				// Set up pronunciation practice listeners
+				setupPronunciationListeners();
+				
+				// Initialize with default volume
+				setGlobalVolume(80);
+			});
+		</script>
+	</body>
 </html>
