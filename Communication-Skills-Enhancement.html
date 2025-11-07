@@ -4,6 +4,10 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Communication Skills Enhancement</title>
+		
+		<!-- Common CSS -->
+		<link rel="stylesheet" href="styles/common.css">
+		
 		<style>
 			* {
 			margin: 0;
@@ -28,19 +32,6 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			}
-			.EH-dashboard-header {
-			margin-bottom: 40px;
-			color: white;
-			}
-			.EH-dashboard-title {
-			font-size: 3rem;
-			margin-bottom: 10px;
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-			}
-			.EH-dashboard-subtitle {
-			font-size: 1.2rem;
-			opacity: 0.9;
 			}
 			.EH-dashboard-main-circle {
 			position: relative;
@@ -192,40 +183,6 @@
 			.Eh-general-back-button:hover {
 			background: #f7a900;
 			}
-			/* Improved Footer */
-			.EH-dashboard-footer {
-			background: rgba(0, 0, 0, 0.7);
-			color: white;
-			text-align: center;
-			padding: 20px 0;
-			font-size: 1rem;
-			width: 100%;
-			margin-top: 20px;
-			border-top: 2px solid rgba(255, 255, 255, 0.2);
-			}
-			.EH-footer-content {
-			max-width: 1200px;
-			margin: 0 auto;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding: 0 20px;
-			}
-			.EH-footer-developer {
-			font-weight: bold;
-			}
-			.EH-footer-links {
-			display: flex;
-			gap: 15px;
-			}
-			.EH-footer-links a {
-			color: white;
-			text-decoration: none;
-			transition: color 0.3s;
-			}
-			.EH-footer-links a:hover {
-			color: #fdbb2d;
-			}
 			@media (max-width: 768px) {
 			.EH-dashboard-main-circle {
 			width: 350px;
@@ -240,13 +197,6 @@
 			width: 100px;
 			height: 100px;
 			font-size: 0.8rem;
-			}
-			.EH-dashboard-title {
-			font-size: 2.5rem;
-			}
-			.EH-footer-content {
-			flex-direction: column;
-			gap: 10px;
 			}
 			}
 			@media (max-width: 480px) {
@@ -267,9 +217,9 @@
 			</select>
 		</div>
 		<div class="EH-dashboard-container">
-			<header class="EH-dashboard-header">
-				<h1 class="EH-dashboard-title" data-i18n="dashboard.title">Communication Skills</h1>
-				<p class="EH-dashboard-subtitle" data-i18n="dashboard.subtitle">Fun ways to improve reading, speaking, and communication</p>
+			<header class="EH-common-header">
+				<h1 class="EH-common-title" data-i18n="dashboard.title">Communication Skills</h1>
+				<p class="EH-common-subtitle" data-i18n="dashboard.subtitle">Fun ways to improve reading, speaking, and communication</p>
 			</header>
 			<div class="EH-dashboard-main-circle">
 				<div class="EH-dashboard-center-circle" data-i18n="dashboard.center">Communication Skills</div>
@@ -287,10 +237,10 @@
 				<button class="Eh-general-back-button" id="back-button" data-i18n="common.backToCategories">Back to Categories</button>
 			</div>
 		</div>
-		<footer class="EH-dashboard-footer">
-			<div class="EH-footer-content">
-				<div class="EH-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-				<div class="EH-footer-links">
+		<footer class="EH-common-footer">
+			<div class="EH-common-footer-content">
+				<div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-common-footer-links">
 					<a href="#" data-i18n="footer.privacy">Privacy Policy</a>
 					<a href="#" data-i18n="footer.terms">Terms of Service</a>
 					<a href="#" data-i18n="footer.contact">Contact</a>

@@ -1,0 +1,83 @@
+/* styles/common.css - Common header and footer styles */
+
+/* Common Header Styles */
+.EH-common-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.EH-common-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.EH-common-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Common Footer Styles */
+.EH-common-footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.EH-common-footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.EH-common-footer-developer {
+    font-weight: bold;
+}
+
+.EH-common-footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.EH-common-footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.EH-common-footer-links a:hover {
+    color: #fdbb2d;
+}
+
+/* Responsive Design for Common Elements */
+@media (max-width: 768px) {
+    .EH-common-title {
+        font-size: 2.5rem;
+    }
+    
+    .EH-common-footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .EH-common-title {
+        font-size: 2rem;
+    }
+    
+    .EH-common-subtitle {
+        font-size: 1.1rem;
+    }
+}

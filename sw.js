@@ -1,5 +1,5 @@
 // Service Worker for English Hub - Enhanced cache management
-const VERSION = 'v1.0.4'; // Increment version
+const VERSION = 'v1.0.5'; // Increment version
 const STATIC_CACHE = `static-cache-${VERSION}`;
 const DYNAMIC_CACHE = `dynamic-cache-${VERSION}`;
 
@@ -11,6 +11,7 @@ const STATIC_ASSETS = [
   '/Eh-general-reading-adventures.html',
   '/EH-reading-workplace.html',
   '/manifest.json',
+  '/styles/common.css',
   '/scripts/common-i18n.js',
   '/scripts/sound.js',
   '/scripts/translations/i18n_en.js',
