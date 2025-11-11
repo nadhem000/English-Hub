@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Making New Friends - Reading Adventures</title>
+		<!-- Common CSS -->
+		<link rel="stylesheet" href="styles/common.css">
+		<style>
+			/* Reset and Base Styles */
+			* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+			body {
+            background: linear-gradient(135deg, #74b9ff, #a29bfe, #fd79a8);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+			}
+			/* Making Friends Lesson Specific Styles */
+			.EH-makingfriends-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+			}
+			.EH-makingfriends-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            border: 5px solid #74b9ff;
+			}
+			.EH-makingfriends-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px dashed #a29bfe;
+			}
+			.EH-makingfriends-section-title {
+            font-size: 1.8rem;
+            color: #6c5ce7;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #74b9ff;
+            text-align: center;
+			}
+			/* Audio Player Styles - Friendship Theme */
+			.EH-makingfriends-audio-player {
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            text-align: center;
+            border: 3px solid #6c5ce7;
+			}
+			.EH-makingfriends-audio-title {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			}
+			.EH-makingfriends-audio-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+			}
+			.EH-makingfriends-audio-btn {
+            background: #6c5ce7;
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.5rem;
+            position: relative;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+			.EH-makingfriends-audio-btn:hover {
+            background: #5b4cde;
+            transform: scale(1.1);
+			}
+			.EH-makingfriends-audio-btn:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+			}
+			.EH-makingfriends-audio-btn.stop {
+            background: #fd79a8;
+			}
+			.EH-makingfriends-audio-btn.stop:hover {
+            background: #fc5d9d;
+			}
+			.EH-makingfriends-audio-btn.pause {
+            background: #a29bfe;
+			}
+			.EH-makingfriends-audio-btn.pause:hover {
+            background: #8f88fe;
+			}
+			/* Story Content Styles - Friendship Theme */
+			.EH-makingfriends-story {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1rem;
+            border-left: 5px solid #a29bfe;
+			}
+			.EH-makingfriends-story p {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			}
+			/* Comprehension Questions Styles */
+			.EH-makingfriends-questions-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+			}
+			.EH-makingfriends-question-card {
+            background: linear-gradient(135deg, #81ecec, #74b9ff);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid #00cec9;
+			}
+			.EH-makingfriends-question-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+			}
+			.EH-makingfriends-question-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #fd79a8, #ff9ebe);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            border: 2px solid white;
+			}
+			.EH-makingfriends-question-text {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: bold;
+			}
+			.EH-makingfriends-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+			}
+			.EH-makingfriends-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.7);
+            transition: background 0.3s;
+			}
+			.EH-makingfriends-option:hover {
+            background: rgba(255, 255, 255, 0.9);
+			}
+			.EH-makingfriends-option input {
+            cursor: pointer;
+            transform: scale(1.2);
+			}
+			.EH-makingfriends-option label {
+            cursor: pointer;
+            font-size: 1.1rem;
+			}
+			/* Vocabulary Cards Styles */
+			.EH-makingfriends-vocabulary-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+			}
+			.EH-makingfriends-vocabulary-card {
+            background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 3px solid #fd79a8;
+			}
+			.EH-makingfriends-vocabulary-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+			}
+			.EH-makingfriends-vocabulary-word {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #e17055;
+            text-align: center;
+			}
+			.EH-makingfriends-vocabulary-pronunciation {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1rem;
+			}
+			.EH-makingfriends-vocabulary-definition {
+            margin-bottom: 15px;
+            color: #333;
+            flex: 1;
+            text-align: center;
+			}
+			.EH-makingfriends-vocabulary-example {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            border: 2px dashed #fd79a8;
+			}
+			/* Pronunciation Practice Styles */
+			.EH-makingfriends-pronunciation-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+			}
+			.EH-makingfriends-pronunciation-card {
+            background: linear-gradient(135deg, #55efc4, #00b894);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid #00a085;
+			}
+			.EH-makingfriends-pronunciation-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+			}
+			.EH-makingfriends-pronunciation-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #fd79a8, #ff9ebe);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border: 2px solid white;
+			}
+			.EH-makingfriends-pronunciation-text {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+            font-weight: bold;
+			}
+			.EH-makingfriends-pronunciation-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+			}
+			.EH-makingfriends-pronunciation-btn {
+            background: #6c5ce7;
+            color: white;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1.3rem;
+			}
+			.EH-makingfriends-pronunciation-btn:hover {
+            background: #5b4cde;
+            transform: scale(1.1);
+			}
+			.EH-makingfriends-pronunciation-btn:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+			}
+			.EH-makingfriends-pronunciation-btn.record {
+            background: #fd79a8;
+			}
+			.EH-makingfriends-pronunciation-btn.record:hover {
+            background: #fc5d9d;
+			}
+			.EH-makingfriends-pronunciation-btn.recording {
+            background: #e84393;
+            animation: pulse 1.5s infinite;
+			}
+			@keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+			}
+			.EH-makingfriends-pronunciation-btn.play-recorded {
+            background: #a29bfe;
+			}
+			.EH-makingfriends-pronunciation-btn.play-recorded:hover {
+            background: #8f88fe;
+			}
+			/* Recording status indicator */
+			.EH-makingfriends-recording-status {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #666;
+            font-weight: bold;
+			}
+			.EH-makingfriends-recording-indicator {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: #e84393;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: blink 1s infinite;
+			}
+			@keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+			}
+			/* Navigation Buttons */
+			.EH-makingfriends-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+			}
+			.EH-makingfriends-nav-button {
+            background: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+			.EH-makingfriends-nav-button:hover {
+            background: #5b4cde;
+            transform: scale(1.05);
+			}
+			.EH-makingfriends-nav-button.back {
+            background: #fd79a8;
+			}
+			.EH-makingfriends-nav-button.back:hover {
+            background: #fc5d9d;
+			}
+			/* Progress and Control Styles */
+			.EH-makingfriends-progress-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+            width: 100%;
+            flex-wrap: wrap;
+			}
+			.EH-makingfriends-progress-slider {
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+            height: 12px;
+            border-radius: 10px;
+            background: #e0e0e0;
+			}
+			.EH-makingfriends-time-display {
+            font-size: 1rem;
+            color: white;
+            min-width: 100px;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+			}
+			.EH-makingfriends-controls-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+			}
+			.EH-makingfriends-control-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+            min-width: 180px;
+            justify-content: center;
+			}
+			.EH-makingfriends-control-slider {
+            width: 120px;
+            height: 10px;
+            border-radius: 10px;
+			}
+			.EH-makingfriends-speed-value {
+            font-size: 1rem;
+            color: white;
+            min-width: 45px;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+			}
+			/* Unified Exercise Styles - EH-exercise-type1-possibilities3- prefix */
+			.EH-exercise-type1-possibilities3-answers-control {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 30px;
+			gap: 20px;
+			}
+			.EH-exercise-type1-possibilities3-check-answers-btn {
+			background: #6c5ce7;
+			color: white;
+			border: none;
+			padding: 12px 25px;
+			border-radius: 20px;
+			cursor: pointer;
+			font-weight: bold;
+			transition: background 0.3s;
+			font-size: 1rem;
+			}
+			.EH-exercise-type1-possibilities3-check-answers-btn:hover {
+			background: #5b4cde;
+			}
+			.EH-exercise-type1-possibilities3-score-display {
+			background: white;
+			border-radius: 15px;
+			padding: 20px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			display: none;
+			width: 100%;
+			max-width: 500px;
+			}
+			.EH-exercise-type1-possibilities3-score-title {
+			font-size: 1.4rem;
+			margin-bottom: 15px;
+			color: #6c5ce7;
+			}
+			.EH-exercise-type1-possibilities3-score-value {
+			font-size: 2rem;
+			font-weight: bold;
+			color: #6c5ce7;
+			margin-bottom: 15px;
+			}
+			.EH-exercise-type1-possibilities3-score-feedback {
+			font-size: 1.1rem;
+			color: #333;
+			margin-bottom: 15px;
+			}
+			.EH-exercise-type1-possibilities3-answer-status {
+			margin-top: 10px;
+			font-size: 0.9rem;
+			padding: 5px 10px;
+			border-radius: 5px;
+			display: inline-block;
+			}
+			.EH-exercise-type1-possibilities3-correct-answer {
+			background-color: #d4edda;
+			color: #155724;
+			border: 1px solid #c3e6cb;
+			}
+			.EH-exercise-type1-possibilities3-incorrect-answer {
+			background-color: #f8d7da;
+			color: #721c24;
+			border: 1px solid #f5c6cb;
+			}
+			.EH-exercise-type1-possibilities3-option.correct {
+			background-color: #d4edda;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #c3e6cb;
+			}
+			.EH-exercise-type1-possibilities3-option.incorrect {
+			background-color: #f8d7da;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #f5c6cb;
+			}
+			/* Responsive Design */
+			@media (max-width: 768px) {
+            .EH-makingfriends-questions-container,
+            .EH-makingfriends-vocabulary-container,
+            .EH-makingfriends-pronunciation-container {
+			grid-template-columns: 1fr;
+            }
+            .EH-makingfriends-navigation {
+			flex-direction: column;
+			gap: 20px;
+            }
+            .EH-makingfriends-nav-button {
+			width: 100%;
+			justify-content: center;
+            }
+            .EH-makingfriends-controls-row {
+			flex-direction: column;
+			gap: 20px;
+            }
+            .EH-makingfriends-control-group {
+			min-width: 250px;
+            }
+            .EH-makingfriends-progress-container {
+			flex-direction: column;
+			gap: 12px;
+            }
+            .EH-makingfriends-progress-slider {
+			min-width: 100%;
+            }
+			}
+			@media (max-width: 480px) {
+            .EH-makingfriends-content {
+			padding: 20px;
+            }
+            .EH-makingfriends-audio-controls {
+			gap: 15px;
+            }
+            .EH-makingfriends-audio-btn {
+			width: 50px;
+			height: 50px;
+			font-size: 1.2rem;
+            }
+            .EH-makingfriends-pronunciation-controls {
+			gap: 15px;
+            }
+            .EH-makingfriends-pronunciation-btn {
+			width: 50px;
+			height: 50px;
+			font-size: 1.2rem;
+            }
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Language Selector -->
+		<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+			<select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+				<option value="en">English</option>
+				<option value="fr">Français</option>
+				<option value="ar">العربية</option>
+			</select>
+		</div>
+		<div class="EH-site-header">
+			<a href="index.html" class="EH-site-logo-link" data-i18n="common.mainPage" title="Main Page">
+				<img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+			</a>
+			<span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+		</div>
+		<div class="EH-makingfriends-container">
+			<!-- Common Header -->
+			<header class="EH-common-header">
+				<h1 class="EH-common-title" data-i18n="makingFriends.title">Making New Friends</h1>
+				<p class="EH-common-subtitle" data-i18n="makingFriends.subtitle">Join Sam as he moves to a new school and learns how to make friends in an unfamiliar place!</p>
+			</header>
+			<div class="EH-makingfriends-content">
+				<!-- Audio Player Section -->
+				<div class="EH-makingfriends-section">
+					<h2 class="EH-makingfriends-section-title" data-i18n="makingFriends.sections.listen">Listen to the Story</h2>
+					<div class="EH-makingfriends-audio-player">
+						<h3 class="EH-makingfriends-audio-title" data-i18n="makingFriends.audio.title">Making New Friends</h3>
+						<div class="EH-makingfriends-audio-controls">
+							<button class="EH-makingfriends-audio-btn" id="EH-makingfriends-play-btn" data-tooltip="Play">
+								▶
+							</button>
+							<button class="EH-makingfriends-audio-btn pause" id="EH-makingfriends-pause-btn" style="display: none;" data-tooltip="Pause">
+								⏸
+							</button>
+							<button class="EH-makingfriends-audio-btn stop" id="EH-makingfriends-stop-btn" data-tooltip="Stop">
+								⏹
+							</button>
+						</div>
+						<!-- Progress Slider -->
+						<div class="EH-makingfriends-progress-container">
+							<span data-i18n="common.progress" style="color: white; font-weight: bold;">Progress:</span>
+							<input type="range" min="0" max="100" value="0" class="EH-makingfriends-progress-slider" id="EH-makingfriends-progress">
+							<span class="EH-makingfriends-time-display" id="EH-makingfriends-time">0:00 / 0:00</span>
+						</div>
+						<!-- Control sliders container -->
+						<div class="EH-makingfriends-controls-row">
+							<!-- Volume Control -->
+							<div class="EH-makingfriends-control-group">
+								<span data-i18n="common.volume" style="color: white; font-weight: bold;">Volume:</span>
+								<input type="range" min="0" max="100" value="80" class="EH-makingfriends-control-slider" id="EH-makingfriends-volume">
+							</div>
+							<!-- Speed Control -->
+							<div class="EH-makingfriends-control-group">
+								<span data-i18n="common.speed" style="color: white; font-weight: bold;">Speed:</span>
+								<input type="range" min="50" max="200" value="100" class="EH-makingfriends-control-slider" id="EH-makingfriends-speed">
+								<span class="EH-makingfriends-speed-value" id="EH-makingfriends-speed-value">1.0x</span>
+							</div>
+						</div>
+						<div class="EH-makingfriends-recording-status" id="EH-makingfriends-audio-status" data-i18n="makingFriends.audio.status.loading">Loading audio...</div>
+					</div>
+				</div>
+				<!-- Story Content Section -->
+				<div class="EH-makingfriends-section">
+					<h2 class="EH-makingfriends-section-title" data-i18n="makingFriends.sections.story">Story Text</h2>
+					<div class="EH-makingfriends-story">
+						<p data-i18n="makingFriends.story.p1">Sam felt nervous as he walked into his new classroom. His family had just moved to a new city, and everything felt strange and unfamiliar. He missed his old friends and his old school.</p>
+						<p data-i18n="makingFriends.story.p2">During the morning, Sam sat quietly at his desk. He watched the other children laughing and talking with each other. He wanted to join them, but he didn't know how.</p>
+						<p data-i18n="makingFriends.story.p3">At recess, Sam stood by the swings alone. He saw a group of boys playing soccer. They looked like they were having so much fun, but Sam was too shy to ask if he could play.</p>
+						<p data-i18n="makingFriends.story.p4">Then, a boy named Leo came over. 'Hi, I'm Leo. Do you want to play soccer with us?' he asked with a friendly smile. Sam nodded, feeling a little bit hopeful.</p>
+						<p data-i18n="makingFriends.story.p5">Sam wasn't very good at soccer, but Leo and the other boys didn't mind. They showed him how to kick the ball and cheered when he made a goal. Sam started to feel more comfortable.</p>
+						<p data-i18n="makingFriends.story.p6">At lunch, Leo invited Sam to sit with him and his friends. They talked about their favorite video games and superheroes. Sam discovered they liked a lot of the same things.</p>
+						<p data-i18n="makingFriends.story.p7">By the end of the day, Sam had exchanged phone numbers with Leo and made plans to play video games after school. He realized that making new friends wasn't as hard as he thought.</p>
+						<p data-i18n="makingFriends.story.p8">Sam learned that being yourself and being open to new experiences can lead to wonderful friendships. He still missed his old friends, but now he was excited about his new school.</p>
+					</div>
+				</div>
+				<!-- Comprehension Questions Section -->
+				<div class="EH-makingfriends-section">
+					<h2 class="EH-makingfriends-section-title" data-i18n="makingFriends.sections.questions">Comprehension Questions</h2>
+					<div class="EH-makingfriends-questions-container">
+						<!-- Question 1 -->
+						<div class="EH-makingfriends-question-card">
+							<div class="EH-makingfriends-question-number">1</div>
+							<p class="EH-makingfriends-question-text" data-i18n="makingFriends.questions.q1">How did Sam feel at the beginning of the story?</p>
+							<div class="EH-makingfriends-options">
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
+									<label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="makingFriends.questions.q1a">Excited and happy</label>
+								</div>
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
+									<label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="makingFriends.questions.q1b">Nervous and unfamiliar</label>
+								</div>
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
+									<label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="makingFriends.questions.q1c">Angry and frustrated</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
+						</div>
+						<!-- Question 2 -->
+						<div class="EH-makingfriends-question-card">
+							<div class="EH-makingfriends-question-number">2</div>
+							<p class="EH-makingfriends-question-text" data-i18n="makingFriends.questions.q2">What did Sam do during the morning in his new classroom?</p>
+							<div class="EH-makingfriends-options">
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
+									<label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="makingFriends.questions.q2a">He talked to everyone</label>
+								</div>
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
+									<label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="makingFriends.questions.q2b">He sat quietly and watched the other children</label>
+								</div>
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
+									<label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="makingFriends.questions.q2c">He played soccer</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
+						</div>
+						<!-- Question 3 -->
+						<div class="EH-makingfriends-question-card">
+							<div class="EH-makingfriends-question-number">3</div>
+							<p class="EH-makingfriends-question-text" data-i18n="makingFriends.questions.q3">Who approached Sam at recess?</p>
+							<div class="EH-makingfriends-options">
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
+									<label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="makingFriends.questions.q3a">The teacher</label>
+								</div>
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
+									<label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="makingFriends.questions.q3b">A boy named Leo</label>
+								</div>
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
+									<label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="makingFriends.questions.q3c">No one</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
+						</div>
+						<!-- Question 4 -->
+						<div class="EH-makingfriends-question-card">
+							<div class="EH-makingfriends-question-number">4</div>
+							<p class="EH-makingfriends-question-text" data-i18n="makingFriends.questions.q4">What did Sam and Leo have in common?</p>
+							<div class="EH-makingfriends-options">
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
+									<label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="makingFriends.questions.q4a">They were in the same class last year</label>
+								</div>
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
+									<label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="makingFriends.questions.q4b">They liked the same video games and superheroes</label>
+								</div>
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
+									<label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="makingFriends.questions.q4c">They lived in the same neighborhood</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
+						</div>
+						<!-- Question 5 -->
+						<div class="EH-makingfriends-question-card">
+							<div class="EH-makingfriends-question-number">5</div>
+							<p class="EH-makingfriends-question-text" data-i18n="makingFriends.questions.q5">What did Sam learn about making new friends?</p>
+							<div class="EH-makingfriends-options">
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
+									<label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="makingFriends.questions.q5a">It's very hard and not worth it</label>
+								</div>
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
+									<label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="makingFriends.questions.q5b">Being yourself and open to new experiences can lead to friendships</label>
+								</div>
+								<div class="EH-makingfriends-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
+									<label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="makingFriends.questions.q5c">You should only stick to your old friends</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
+						</div>
+					</div>
+					<!-- Answer Check and Score System -->
+					<div class="EH-exercise-type1-possibilities3-answers-control">
+						<button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers" data-i18n="makingFriends.answers.check">Check Answers</button>
+						<div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+							<h3 class="EH-exercise-type1-possibilities3-score-title" data-i18n="makingFriends.answers.score">Your Score</h3>
+							<div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/5</div>
+							<p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback" data-i18n="makingFriends.answers.feedback.default">Check your answers to see how you did!</p>
+						</div>
+					</div>
+				</div>
+				<!-- Vocabulary Section -->
+				<div class="EH-makingfriends-section">
+					<h2 class="EH-makingfriends-section-title" data-i18n="makingFriends.sections.vocabulary">Vocabulary Cards</h2>
+					<div class="EH-makingfriends-vocabulary-container">
+						<!-- Vocabulary Card 1 -->
+						<div class="EH-makingfriends-vocabulary-card">
+							<div class="EH-makingfriends-vocabulary-word" data-i18n="makingFriends.vocabulary.nervous">Nervous</div>
+							<div class="EH-makingfriends-vocabulary-pronunciation" data-i18n="makingFriends.vocabulary.nervous_pron">/ˈnɜːrvəs/</div>
+							<div class="EH-makingfriends-vocabulary-definition" data-i18n="makingFriends.vocabulary.nervous_def">Feeling worried or slightly afraid</div>
+							<div class="EH-makingfriends-vocabulary-example" data-i18n="makingFriends.vocabulary.nervous_ex">"Sam felt nervous on his first day at a new school."</div>
+						</div>
+						<!-- Vocabulary Card 2 -->
+						<div class="EH-makingfriends-vocabulary-card">
+							<div class="EH-makingfriends-vocabulary-word" data-i18n="makingFriends.vocabulary.unfamiliar">Unfamiliar</div>
+							<div class="EH-makingfriends-vocabulary-pronunciation" data-i18n="makingFriends.vocabulary.unfamiliar_pron">/ˌʌnfəˈmɪliər/</div>
+							<div class="EH-makingfriends-vocabulary-definition" data-i18n="makingFriends.vocabulary.unfamiliar_def">Not known or recognized</div>
+							<div class="EH-makingfriends-vocabulary-example" data-i18n="makingFriends.vocabulary.unfamiliar_ex">"The new city was unfamiliar to Sam."</div>
+						</div>
+						<!-- Vocabulary Card 3 -->
+						<div class="EH-makingfriends-vocabulary-card">
+							<div class="EH-makingfriends-vocabulary-word" data-i18n="makingFriends.vocabulary.recess">Recess</div>
+							<div class="EH-makingfriends-vocabulary-pronunciation" data-i18n="makingFriends.vocabulary.recess_pron">/ˈriːses/</div>
+							<div class="EH-makingfriends-vocabulary-definition" data-i18n="makingFriends.vocabulary.recess_def">A break period between classes at school</div>
+							<div class="EH-makingfriends-vocabulary-example" data-i18n="makingFriends.vocabulary.recess_ex">"The children played outside during recess."</div>
+						</div>
+						<!-- Vocabulary Card 4 -->
+						<div class="EH-makingfriends-vocabulary-card">
+							<div class="EH-makingfriends-vocabulary-word" data-i18n="makingFriends.vocabulary.comfortable">Comfortable</div>
+							<div class="EH-makingfriends-vocabulary-pronunciation" data-i18n="makingFriends.vocabulary.comfortable_pron">/ˈkʌmftəbl/</div>
+							<div class="EH-makingfriends-vocabulary-definition" data-i18n="makingFriends.vocabulary.comfortable_def">Feeling relaxed and at ease</div>
+							<div class="EH-makingfriends-vocabulary-example" data-i18n="makingFriends.vocabulary.comfortable_ex">"Sam started to feel more comfortable after playing soccer."</div>
+						</div>
+						<!-- Vocabulary Card 5 -->
+						<div class="EH-makingfriends-vocabulary-card">
+							<div class="EH-makingfriends-vocabulary-word" data-i18n="makingFriends.vocabulary.friendship">Friendship</div>
+							<div class="EH-makingfriends-vocabulary-pronunciation" data-i18n="makingFriends.vocabulary.friendship_pron">/ˈfrendʃɪp/</div>
+							<div class="EH-makingfriends-vocabulary-definition" data-i18n="makingFriends.vocabulary.friendship_def">A relationship between friends</div>
+							<div class="EH-makingfriends-vocabulary-example" data-i18n="makingFriends.vocabulary.friendship_ex">"Sam and Leo developed a strong friendship."</div>
+						</div>
+					</div>
+				</div>
+				<!-- Pronunciation Practice Section -->
+				<div class="EH-makingfriends-section">
+					<h2 class="EH-makingfriends-section-title" data-i18n="makingFriends.sections.pronunciation">Pronunciation Practice</h2>
+					<div class="EH-makingfriends-pronunciation-container">
+						<!-- Pronunciation 1 -->
+						<div class="EH-makingfriends-pronunciation-card">
+							<div class="EH-makingfriends-pronunciation-number">1</div>
+							<p class="EH-makingfriends-pronunciation-text" data-i18n="makingFriends.pronunciation.p1">"I'm new here and I don't know anyone."</p>
+							<div class="EH-makingfriends-pronunciation-controls">
+								<button class="EH-makingfriends-pronunciation-btn" data-audio="makingfriends-pronunciation-1-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-makingfriends-pronunciation-btn record" data-audio="makingfriends-pronunciation-1-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-makingfriends-pronunciation-btn play-recorded" data-audio="makingfriends-pronunciation-1-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-makingfriends-recording-status" data-status="makingfriends-pronunciation-1-status"></div>
+						</div>
+						<!-- Pronunciation 2 -->
+						<div class="EH-makingfriends-pronunciation-card">
+							<div class="EH-makingfriends-pronunciation-number">2</div>
+							<p class="EH-makingfriends-pronunciation-text" data-i18n="makingFriends.pronunciation.p2">"Would you like to play with us?"</p>
+							<div class="EH-makingfriends-pronunciation-controls">
+								<button class="EH-makingfriends-pronunciation-btn" data-audio="makingfriends-pronunciation-2-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-makingfriends-pronunciation-btn record" data-audio="makingfriends-pronunciation-2-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-makingfriends-pronunciation-btn play-recorded" data-audio="makingfriends-pronunciation-2-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-makingfriends-recording-status" data-status="makingfriends-pronunciation-2-status"></div>
+						</div>
+						<!-- Pronunciation 3 -->
+						<div class="EH-makingfriends-pronunciation-card">
+							<div class="EH-makingfriends-pronunciation-number">3</div>
+							<p class="EH-makingfriends-pronunciation-text" data-i18n="makingFriends.pronunciation.p3">"I like your superhero backpack."</p>
+							<div class="EH-makingfriends-pronunciation-controls">
+								<button class="EH-makingfriends-pronunciation-btn" data-audio="makingfriends-pronunciation-3-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-makingfriends-pronunciation-btn record" data-audio="makingfriends-pronunciation-3-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-makingfriends-pronunciation-btn play-recorded" data-audio="makingfriends-pronunciation-3-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-makingfriends-recording-status" data-status="makingfriends-pronunciation-3-status"></div>
+						</div>
+						<!-- Pronunciation 4 -->
+						<div class="EH-makingfriends-pronunciation-card">
+							<div class="EH-makingfriends-pronunciation-number">4</div>
+							<p class="EH-makingfriends-pronunciation-text" data-i18n="makingFriends.pronunciation.p4">"Can I sit with you at lunch?"</p>
+							<div class="EH-makingfriends-pronunciation-controls">
+								<button class="EH-makingfriends-pronunciation-btn" data-audio="makingfriends-pronunciation-4-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-makingfriends-pronunciation-btn record" data-audio="makingfriends-pronunciation-4-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-makingfriends-pronunciation-btn play-recorded" data-audio="makingfriends-pronunciation-4-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-makingfriends-recording-status" data-status="makingfriends-pronunciation-4-status"></div>
+						</div>
+						<!-- Pronunciation 5 -->
+						<div class="EH-makingfriends-pronunciation-card">
+							<div class="EH-makingfriends-pronunciation-number">5</div>
+							<p class="EH-makingfriends-pronunciation-text" data-i18n="makingFriends.pronunciation.p5">"Let's be friends!"</p>
+							<div class="EH-makingfriends-pronunciation-controls">
+								<button class="EH-makingfriends-pronunciation-btn" data-audio="makingfriends-pronunciation-5-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-makingfriends-pronunciation-btn record" data-audio="makingfriends-pronunciation-5-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-makingfriends-pronunciation-btn play-recorded" data-audio="makingfriends-pronunciation-5-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-makingfriends-recording-status" data-status="makingfriends-pronunciation-5-status"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Navigation Buttons -->
+				<div class="EH-makingfriends-navigation">
+					<button class="EH-makingfriends-nav-button back" onclick="window.location.href='Eh-general-reading-adventures.html'">
+						← <span data-i18n="common.backToReadingAdventures">Back to Reading Adventures</span>
+					</button>
+					<button class="EH-makingfriends-nav-button" onclick="window.location.href='EH-reading-school-play.html'">
+						<span data-i18n="common.nextLesson">Next Lesson</span> →
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Common Footer -->
+		<footer class="EH-common-footer">
+			<div class="EH-common-footer-content">
+				<div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-common-footer-links">
+					<a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+					<a href="#" data-i18n="footer.terms">Terms of Service</a>
+					<a href="#" data-i18n="footer.contact">Contact</a>
+				</div>
+			</div>
+		</footer>
+		<!-- i18n translations -->
+		<script src="scripts/translations/i18n_en.js"></script>
+		<script src="scripts/translations/i18n_fr.js"></script>
+		<script src="scripts/translations/i18n_ar.js"></script>
+		<script src="scripts/common-i18n.js"></script>
+		<!-- Include the generic sound library -->
+		<script src="scripts/sound.js"></script>
+		<script src="scripts/exercise.js"></script>
+		<script>
+			// Lesson-specific audio configuration
+			const audioConfig = {
+				'makingfriends-story': 'assets/audio/lessons/category1/lesson5/makingfriends-story.mp3',
+				'makingfriends-pronunciation-1-listen': 'assets/audio/lessons/category1/lesson5/pronunciation-1.mp3',
+				'makingfriends-pronunciation-2-listen': 'assets/audio/lessons/category1/lesson5/pronunciation-2.mp3',
+				'makingfriends-pronunciation-3-listen': 'assets/audio/lessons/category1/lesson5/pronunciation-3.mp3',
+				'makingfriends-pronunciation-4-listen': 'assets/audio/lessons/category1/lesson5/pronunciation-4.mp3',
+				'makingfriends-pronunciation-5-listen': 'assets/audio/lessons/category1/lesson5/pronunciation-5.mp3'
+			};
+			// Correct answers for questions
+			const correctAnswers = {
+				'EH-exercise-type1-possibilities3-q1': 'b', // Nervous and unfamiliar
+				'EH-exercise-type1-possibilities3-q2': 'b', // He sat quietly and watched the other children
+				'EH-exercise-type1-possibilities3-q3': 'b', // A boy named Leo
+				'EH-exercise-type1-possibilities3-q4': 'b', // They liked the same video games and superheroes
+				'EH-exercise-type1-possibilities3-q5': 'b'  // Being yourself and open to new experiences can lead to friendships
+			};
+			// Audio progress tracking
+			let progressInterval;
+			function updateProgressBar(audioKey) {
+				const audio = audioPlayers[audioKey];
+				if (!audio) return;
+				const progressSlider = document.getElementById('EH-makingfriends-progress');
+				const timeDisplay = document.getElementById('EH-makingfriends-time');
+				if (audio.duration) {
+					const progress = (audio.currentTime / audio.duration) * 100;
+					progressSlider.value = progress;
+					// Update time display
+					const currentTime = formatTime(audio.currentTime);
+					const duration = formatTime(audio.duration);
+					timeDisplay.textContent = `${currentTime} / ${duration}`;
+				}
+			}
+			function formatTime(seconds) {
+				const mins = Math.floor(seconds / 60);
+				const secs = Math.floor(seconds % 60);
+				return `${mins}:${secs.toString().padStart(2, '0')}`;
+			}
+			function setupProgressTracking(audioKey) {
+				const audio = audioPlayers[audioKey];
+				if (!audio) return;
+				// Clear any existing interval
+				if (progressInterval) {
+					clearInterval(progressInterval);
+				}
+				// Update progress every 100ms
+				progressInterval = setInterval(() => {
+					updateProgressBar(audioKey);
+				}, 100);
+				// Setup progress slider event
+				const progressSlider = document.getElementById('EH-makingfriends-progress');
+				progressSlider.addEventListener('input', function() {
+					if (audio.duration) {
+						const seekTime = (this.value / 100) * audio.duration;
+						audio.currentTime = seekTime;
+					}
+				});
+				// Reset when audio ends
+				audio.addEventListener('ended', function() {
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					progressSlider.value = 0;
+					document.getElementById('EH-makingfriends-time').textContent = '0:00 / ' + formatTime(audio.duration);
+				});
+			}
+			function setupSpeedControl() {
+				const speedSlider = document.getElementById('EH-makingfriends-speed');
+				const speedValue = document.getElementById('EH-makingfriends-speed-value');
+				speedSlider.addEventListener('input', function() {
+					const speed = this.value / 100;
+					speedValue.textContent = speed.toFixed(1) + 'x';
+					// Apply speed to all audio players
+					for (const key in audioPlayers) {
+						if (audioPlayers[key]) {
+							audioPlayers[key].playbackRate = speed;
+						}
+					}
+				});
+			}
+			// Initialize when DOM is loaded
+			document.addEventListener('DOMContentLoaded', function() {
+				// Initialize audio players with lesson-specific config
+				initAudioPlayers(audioConfig);
+				// Set up main story audio controls
+				document.getElementById('EH-makingfriends-play-btn').addEventListener('click', function() {
+					playAudio('makingfriends-story');
+					setupProgressTracking('makingfriends-story');
+					// Show pause button, hide play button
+					document.getElementById('EH-makingfriends-play-btn').style.display = 'none';
+					document.getElementById('EH-makingfriends-pause-btn').style.display = 'flex';
+				});
+				document.getElementById('EH-makingfriends-pause-btn').addEventListener('click', function() {
+					pauseAudio('makingfriends-story');
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					// Show play button, hide pause button
+					document.getElementById('EH-makingfriends-play-btn').style.display = 'flex';
+					document.getElementById('EH-makingfriends-pause-btn').style.display = 'none';
+				});
+				document.getElementById('EH-makingfriends-stop-btn').addEventListener('click', function() {
+					stopAudio('makingfriends-story');
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					document.getElementById('EH-makingfriends-progress').value = 0;
+					document.getElementById('EH-makingfriends-time').textContent = '0:00 / 0:00';
+					// Show play button, hide pause button
+					document.getElementById('EH-makingfriends-play-btn').style.display = 'flex';
+					document.getElementById('EH-makingfriends-pause-btn').style.display = 'none';
+				});
+				document.getElementById('EH-makingfriends-volume').addEventListener('input', function() {
+					setGlobalVolume(this.value);
+				});
+				// Setup speed control
+				setupSpeedControl();
+				// Set up pronunciation practice listeners
+				setupPronunciationListeners();
+				// Set up answer checking
+				ExerciseType1Possibilities3Init(correctAnswers, Object.keys(correctAnswers).length, 'EH-exercise-type1-possibilities3');
+				// Initialize with default volume
+				setGlobalVolume(80);
+			});
+		</script>
+	</body>
+</html>

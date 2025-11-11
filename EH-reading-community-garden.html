@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>The Community Garden Project - Reading Adventures</title>
+		<!-- Common CSS -->
+		<link rel="stylesheet" href="styles/common.css">
+		<style>
+			/* Reset and Base Styles */
+			* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+			body {
+            background: linear-gradient(135deg, #6a994e, #a7c957, #386641);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+			}
+			/* Community Garden Lesson Specific Styles */
+			.EH-garden-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+			}
+			.EH-garden-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            border: 5px solid #f2e8cf;
+			}
+			.EH-garden-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px dashed #a7c957;
+			}
+			.EH-garden-section-title {
+            font-size: 1.8rem;
+            color: #386641;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f2e8cf;
+            text-align: center;
+			}
+			/* Audio Player Styles - Garden Theme */
+			.EH-garden-audio-player {
+            background: linear-gradient(135deg, #a7c957, #6a994e);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            text-align: center;
+            border: 3px solid #386641;
+			}
+			.EH-garden-audio-title {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			}
+			.EH-garden-audio-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+			}
+			.EH-garden-audio-btn {
+            background: #386641;
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.5rem;
+            position: relative;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+			.EH-garden-audio-btn:hover {
+            background: #2d5a36;
+            transform: scale(1.1);
+			}
+			.EH-garden-audio-btn:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+			}
+			.EH-garden-audio-btn.stop {
+            background: #bc4749;
+			}
+			.EH-garden-audio-btn.stop:hover {
+            background: #a5383b;
+			}
+			.EH-garden-audio-btn.pause {
+            background: #a7c957;
+			}
+			.EH-garden-audio-btn.pause:hover {
+            background: #95b44a;
+			}
+			/* Story Content Styles - Garden Theme */
+			.EH-garden-story {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1rem;
+            border-left: 5px solid #6a994e;
+			}
+			.EH-garden-story p {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			}
+			/* Comprehension Questions Styles */
+			.EH-garden-questions-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+			}
+			.EH-garden-question-card {
+            background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid #95d5b2;
+			}
+			.EH-garden-question-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+			}
+			.EH-garden-question-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #386641, #6a994e);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            border: 2px solid white;
+			}
+			.EH-garden-question-text {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: bold;
+			}
+			.EH-garden-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+			}
+			.EH-garden-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.7);
+            transition: background 0.3s;
+			}
+			.EH-garden-option:hover {
+            background: rgba(255, 255, 255, 0.9);
+			}
+			.EH-garden-option input {
+            cursor: pointer;
+            transform: scale(1.2);
+			}
+			.EH-garden-option label {
+            cursor: pointer;
+            font-size: 1.1rem;
+			}
+			/* Vocabulary Cards Styles */
+			.EH-garden-vocabulary-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+			}
+			.EH-garden-vocabulary-card {
+            background: linear-gradient(135deg, #f2e8cf, #d8b98d);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 3px solid #bc6c25;
+			}
+			.EH-garden-vocabulary-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+			}
+			.EH-garden-vocabulary-word {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #386641;
+            text-align: center;
+			}
+			.EH-garden-vocabulary-pronunciation {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1rem;
+			}
+			.EH-garden-vocabulary-definition {
+            margin-bottom: 15px;
+            color: #333;
+            flex: 1;
+            text-align: center;
+			}
+			.EH-garden-vocabulary-example {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            border: 2px dashed #bc6c25;
+			}
+			/* Pronunciation Practice Styles */
+			.EH-garden-pronunciation-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+			}
+			.EH-garden-pronunciation-card {
+            background: linear-gradient(135deg, #95d5b2, #d8f3dc);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid #52b788;
+			}
+			.EH-garden-pronunciation-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+			}
+			.EH-garden-pronunciation-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #386641, #6a994e);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border: 2px solid white;
+			}
+			.EH-garden-pronunciation-text {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+            font-weight: bold;
+			}
+			.EH-garden-pronunciation-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+			}
+			.EH-garden-pronunciation-btn {
+            background: #386641;
+            color: white;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1.3rem;
+			}
+			.EH-garden-pronunciation-btn:hover {
+            background: #2d5a36;
+            transform: scale(1.1);
+			}
+			.EH-garden-pronunciation-btn:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+			}
+			.EH-garden-pronunciation-btn.record {
+            background: #bc4749;
+			}
+			.EH-garden-pronunciation-btn.record:hover {
+            background: #a5383b;
+			}
+			.EH-garden-pronunciation-btn.recording {
+            background: #d90429;
+            animation: pulse 1.5s infinite;
+			}
+			@keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+			}
+			.EH-garden-pronunciation-btn.play-recorded {
+            background: #a7c957;
+			}
+			.EH-garden-pronunciation-btn.play-recorded:hover {
+            background: #95b44a;
+			}
+			/* Recording status indicator */
+			.EH-garden-recording-status {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #666;
+            font-weight: bold;
+			}
+			.EH-garden-recording-indicator {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: #d90429;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: blink 1s infinite;
+			}
+			@keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+			}
+			/* Navigation Buttons */
+			.EH-garden-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+			}
+			.EH-garden-nav-button {
+            background: #386641;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+			.EH-garden-nav-button:hover {
+            background: #2d5a36;
+            transform: scale(1.05);
+			}
+			.EH-garden-nav-button.back {
+            background: #bc4749;
+			}
+			.EH-garden-nav-button.back:hover {
+            background: #a5383b;
+			}
+			/* Progress and Control Styles */
+			.EH-garden-progress-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+            width: 100%;
+            flex-wrap: wrap;
+			}
+			.EH-garden-progress-slider {
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+            height: 12px;
+            border-radius: 10px;
+            background: #e0e0e0;
+			}
+			.EH-garden-time-display {
+            font-size: 1rem;
+            color: white;
+            min-width: 100px;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+			}
+			.EH-garden-controls-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+			}
+			.EH-garden-control-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+            min-width: 180px;
+            justify-content: center;
+			}
+			.EH-garden-control-slider {
+            width: 120px;
+            height: 10px;
+            border-radius: 10px;
+			}
+			.EH-garden-speed-value {
+            font-size: 1rem;
+            color: white;
+            min-width: 45px;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+			}
+			/* Unified Exercise Styles - EH-exercise-type1-possibilities3- prefix */
+			.EH-exercise-type1-possibilities3-answers-control {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 30px;
+			gap: 20px;
+			}
+			.EH-exercise-type1-possibilities3-check-answers-btn {
+			background: #386641;
+			color: white;
+			border: none;
+			padding: 12px 25px;
+			border-radius: 20px;
+			cursor: pointer;
+			font-weight: bold;
+			transition: background 0.3s;
+			font-size: 1rem;
+			}
+			.EH-exercise-type1-possibilities3-check-answers-btn:hover {
+			background: #2d5a36;
+			}
+			.EH-exercise-type1-possibilities3-score-display {
+			background: white;
+			border-radius: 15px;
+			padding: 20px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			display: none;
+			width: 100%;
+			max-width: 500px;
+			}
+			.EH-exercise-type1-possibilities3-score-title {
+			font-size: 1.4rem;
+			margin-bottom: 15px;
+			color: #386641;
+			}
+			.EH-exercise-type1-possibilities3-score-value {
+			font-size: 2rem;
+			font-weight: bold;
+			color: #386641;
+			margin-bottom: 15px;
+			}
+			.EH-exercise-type1-possibilities3-score-feedback {
+			font-size: 1.1rem;
+			color: #333;
+			margin-bottom: 15px;
+			}
+			.EH-exercise-type1-possibilities3-answer-status {
+			margin-top: 10px;
+			font-size: 0.9rem;
+			padding: 5px 10px;
+			border-radius: 5px;
+			display: inline-block;
+			}
+			.EH-exercise-type1-possibilities3-correct-answer {
+			background-color: #d4edda;
+			color: #155724;
+			border: 1px solid #c3e6cb;
+			}
+			.EH-exercise-type1-possibilities3-incorrect-answer {
+			background-color: #f8d7da;
+			color: #721c24;
+			border: 1px solid #f5c6cb;
+			}
+			.EH-exercise-type1-possibilities3-option.correct {
+			background-color: #d4edda;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #c3e6cb;
+			}
+			.EH-exercise-type1-possibilities3-option.incorrect {
+			background-color: #f8d7da;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #f5c6cb;
+			}
+			/* Responsive Design */
+			@media (max-width: 768px) {
+            .EH-garden-questions-container,
+            .EH-garden-vocabulary-container,
+            .EH-garden-pronunciation-container {
+			grid-template-columns: 1fr;
+            }
+            .EH-garden-navigation {
+			flex-direction: column;
+			gap: 20px;
+            }
+            .EH-garden-nav-button {
+			width: 100%;
+			justify-content: center;
+            }
+            .EH-garden-controls-row {
+			flex-direction: column;
+			gap: 20px;
+            }
+            .EH-garden-control-group {
+			min-width: 250px;
+            }
+            .EH-garden-progress-container {
+			flex-direction: column;
+			gap: 12px;
+            }
+            .EH-garden-progress-slider {
+			min-width: 100%;
+            }
+			}
+			@media (max-width: 480px) {
+            .EH-garden-content {
+			padding: 20px;
+            }
+            .EH-garden-audio-controls {
+			gap: 15px;
+            }
+            .EH-garden-audio-btn {
+			width: 50px;
+			height: 50px;
+			font-size: 1.2rem;
+            }
+            .EH-garden-pronunciation-controls {
+			gap: 15px;
+            }
+            .EH-garden-pronunciation-btn {
+			width: 50px;
+			height: 50px;
+			font-size: 1.2rem;
+            }
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Language Selector -->
+		<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+			<select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+				<option value="en">English</option>
+				<option value="fr">Français</option>
+				<option value="ar">العربية</option>
+			</select>
+		</div>
+		<div class="EH-site-header">
+			<a href="index.html" class="EH-site-logo-link" data-i18n="common.mainPage" title="Main Page">
+				<img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+			</a>
+			<span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+		</div>
+		<div class="EH-garden-container">
+			<!-- Common Header -->
+			<header class="EH-common-header">
+				<h1 class="EH-common-title" data-i18n="garden.title">The Community Garden Project</h1>
+				<p class="EH-common-subtitle" data-i18n="garden.subtitle">Join Leo and his friends as they start a community garden in their neighborhood!</p>
+			</header>
+			<div class="EH-garden-content">
+				<!-- Audio Player Section -->
+				<div class="EH-garden-section">
+					<h2 class="EH-garden-section-title" data-i18n="garden.sections.listen">Listen to the Story</h2>
+					<div class="EH-garden-audio-player">
+						<h3 class="EH-garden-audio-title" data-i18n="garden.audio.title">The Community Garden Project</h3>
+						<div class="EH-garden-audio-controls">
+							<button class="EH-garden-audio-btn" id="EH-garden-play-btn" data-tooltip="Play">
+								▶
+							</button>
+							<button class="EH-garden-audio-btn pause" id="EH-garden-pause-btn" style="display: none;" data-tooltip="Pause">
+								⏸
+							</button>
+							<button class="EH-garden-audio-btn stop" id="EH-garden-stop-btn" data-tooltip="Stop">
+								⏹
+							</button>
+						</div>
+						<!-- Progress Slider -->
+						<div class="EH-garden-progress-container">
+							<span data-i18n="common.progress" style="color: white; font-weight: bold;">Progress:</span>
+							<input type="range" min="0" max="100" value="0" class="EH-garden-progress-slider" id="EH-garden-progress">
+							<span class="EH-garden-time-display" id="EH-garden-time">0:00 / 0:00</span>
+						</div>
+						<!-- Control sliders container -->
+						<div class="EH-garden-controls-row">
+							<!-- Volume Control -->
+							<div class="EH-garden-control-group">
+								<span data-i18n="common.volume" style="color: white; font-weight: bold;">Volume:</span>
+								<input type="range" min="0" max="100" value="80" class="EH-garden-control-slider" id="EH-garden-volume">
+							</div>
+							<!-- Speed Control -->
+							<div class="EH-garden-control-group">
+								<span data-i18n="common.speed" style="color: white; font-weight: bold;">Speed:</span>
+								<input type="range" min="50" max="200" value="100" class="EH-garden-control-slider" id="EH-garden-speed">
+								<span class="EH-garden-speed-value" id="EH-garden-speed-value">1.0x</span>
+							</div>
+						</div>
+						<div class="EH-garden-recording-status" id="EH-garden-audio-status" data-i18n="garden.audio.status.loading">Loading audio...</div>
+					</div>
+				</div>
+				<!-- Story Content Section -->
+				<div class="EH-garden-section">
+					<h2 class="EH-garden-section-title" data-i18n="garden.sections.story">Story Text</h2>
+					<div class="EH-garden-story">
+						<p data-i18n="garden.story.p1">Leo was walking home from school when he noticed the empty lot on Elm Street. It was full of weeds and looked sad. He remembered how beautiful his grandmother's garden was and had an idea. What if they turned this empty space into a community garden?</p>
+						<p data-i18n="garden.story.p2">The next day, Leo talked to his friends Maya and Sam about his idea. They loved it! Maya said her mom knew about gardening, and Sam said his dad had some extra tools. Together, they decided to ask their teacher, Mr. Chen, for help with their project.</p>
+						<p data-i18n="garden.story.p3">Mr. Chen was excited about the idea. He helped them make a plan and write a letter to the neighborhood council. The council approved their project and gave them permission to use the empty lot. Now the real work could begin!</p>
+						<p data-i18n="garden.story.p4">On the first Saturday, ten families showed up to help. They pulled weeds, cleared rocks, and prepared the soil. Leo's job was to measure the plots while Maya organized the seeds and Sam set up the watering schedule. Everyone had an important job to do.</p>
+						<p data-i18n="garden.story.p5">After weeks of hard work, the garden started to take shape. They planted tomatoes, carrots, lettuce, and beautiful sunflowers. Each family adopted a small plot to care for. Leo loved watching the tiny green sprouts push through the soil.</p>
+						<p data-i18n="garden.story.p6">One morning, Leo noticed that some plants were wilting. He quickly gathered his friends, and they discovered that the sprinklers weren't working properly. They worked together to fix the problem and save the plants.</p>
+						<p data-i18n="garden.story.p7">As the garden grew, so did the sense of community. Neighbors who had never spoken before were now sharing gardening tips and recipes. Children played together while their parents tended the plants. The empty lot had become a beautiful, lively space.</p>
+						<p data-i18n="garden.story.p8">At the end of the summer, they held a harvest festival. Everyone brought dishes made with vegetables from the garden. Leo felt proud as he looked at the smiling faces around him. He learned that when people work together, they can create something wonderful for everyone to enjoy.</p>
+					</div>
+				</div>
+				<!-- Comprehension Questions Section -->
+				<div class="EH-garden-section">
+					<h2 class="EH-garden-section-title" data-i18n="garden.sections.questions">Comprehension Questions</h2>
+					<div class="EH-garden-questions-container">
+						<!-- Question 1 -->
+						<div class="EH-garden-question-card">
+							<div class="EH-garden-question-number">1</div>
+							<p class="EH-garden-question-text" data-i18n="garden.questions.q1">What gave Leo the idea to start a community garden?</p>
+							<div class="EH-garden-options">
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
+									<label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="garden.questions.q1a">A school assignment</label>
+								</div>
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
+									<label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="garden.questions.q1b">Seeing an empty lot and remembering his grandmother's garden</label>
+								</div>
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
+									<label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="garden.questions.q1c">Watching a gardening show on TV</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
+						</div>
+						<!-- Question 2 -->
+						<div class="EH-garden-question-card">
+							<div class="EH-garden-question-number">2</div>
+							<p class="EH-garden-question-text" data-i18n="garden.questions.q2">Who did Leo ask for help with the garden project?</p>
+							<div class="EH-garden-options">
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
+									<label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="garden.questions.q2a">Only his friends Maya and Sam</label>
+								</div>
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
+									<label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="garden.questions.q2b">His friends and their teacher Mr. Chen</label>
+								</div>
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
+									<label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="garden.questions.q2c">Just his family members</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
+						</div>
+						<!-- Question 3 -->
+						<div class="EH-garden-question-card">
+							<div class="EH-garden-question-number">3</div>
+							<p class="EH-garden-question-text" data-i18n="garden.questions.q3">What problem did they discover in the garden?</p>
+							<div class="EH-garden-options">
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
+									<label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="garden.questions.q3a">Animals were eating the plants</label>
+								</div>
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
+									<label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="garden.questions.q3b">The sprinklers weren't working properly</label>
+								</div>
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
+									<label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="garden.questions.q3c">There weren't enough volunteers</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
+						</div>
+						<!-- Question 4 -->
+						<div class="EH-garden-question-card">
+							<div class="EH-garden-question-number">4</div>
+							<p class="EH-garden-question-text" data-i18n="garden.questions.q4">How did the garden change the neighborhood?</p>
+							<div class="EH-garden-options">
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
+									<label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="garden.questions.q4a">It made the neighborhood more crowded</label>
+								</div>
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
+									<label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="garden.questions.q4b">It created a sense of community and brought neighbors together</label>
+								</div>
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
+									<label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="garden.questions.q4c">It caused arguments about who owned the vegetables</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
+						</div>
+						<!-- Question 5 -->
+						<div class="EH-garden-question-card">
+							<div class="EH-garden-question-number">5</div>
+							<p class="EH-garden-question-text" data-i18n="garden.questions.q5">What did Leo learn from this experience?</p>
+							<div class="EH-garden-options">
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
+									<label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="garden.questions.q5a">That gardening is too much work</label>
+								</div>
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
+									<label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="garden.questions.q5b">That working together can create something wonderful for everyone</label>
+								</div>
+								<div class="EH-garden-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
+									<label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="garden.questions.q5c">That he should start his own gardening business</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
+						</div>
+					</div>
+					<!-- Answer Check and Score System -->
+					<div class="EH-exercise-type1-possibilities3-answers-control">
+						<button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers" data-i18n="garden.answers.check">Check Answers</button>
+						<div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+							<h3 class="EH-exercise-type1-possibilities3-score-title" data-i18n="garden.answers.score">Your Score</h3>
+							<div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/5</div>
+							<p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback" data-i18n="garden.answers.feedback.default">Check your answers to see how you did!</p>
+						</div>
+					</div>
+				</div>
+				<!-- Vocabulary Section -->
+				<div class="EH-garden-section">
+					<h2 class="EH-garden-section-title" data-i18n="garden.sections.vocabulary">Vocabulary Cards</h2>
+					<div class="EH-garden-vocabulary-container">
+						<!-- Vocabulary Card 1 -->
+						<div class="EH-garden-vocabulary-card">
+							<div class="EH-garden-vocabulary-word" data-i18n="garden.vocabulary.community">Community</div>
+							<div class="EH-garden-vocabulary-pronunciation" data-i18n="garden.vocabulary.community_pron">/kəˈmjuːnɪti/</div>
+							<div class="EH-garden-vocabulary-definition" data-i18n="garden.vocabulary.community_def">A group of people living in the same area or having a particular characteristic in common</div>
+							<div class="EH-garden-vocabulary-example" data-i18n="garden.vocabulary.community_ex">"The whole community worked together on the garden project."</div>
+						</div>
+						<!-- Vocabulary Card 2 -->
+						<div class="EH-garden-vocabulary-card">
+							<div class="EH-garden-vocabulary-word" data-i18n="garden.vocabulary.volunteer">Volunteer</div>
+							<div class="EH-garden-vocabulary-pronunciation" data-i18n="garden.vocabulary.volunteer_pron">/ˌvɒlənˈtɪər/</div>
+							<div class="EH-garden-vocabulary-definition" data-i18n="garden.vocabulary.volunteer_def">A person who freely offers to do something without being paid</div>
+							<div class="EH-garden-vocabulary-example" data-i18n="garden.vocabulary.volunteer_ex">"Many volunteers helped clean up the empty lot."</div>
+						</div>
+						<!-- Vocabulary Card 3 -->
+						<div class="EH-garden-vocabulary-card">
+							<div class="EH-garden-vocabulary-word" data-i18n="garden.vocabulary.sprout">Sprout</div>
+							<div class="EH-garden-vocabulary-pronunciation" data-i18n="garden.vocabulary.sprout_pron">/spraʊt/</div>
+							<div class="EH-garden-vocabulary-definition" data-i18n="garden.vocabulary.sprout_def">A new growth of a plant</div>
+							<div class="EH-garden-vocabulary-example" data-i18n="garden.vocabulary.sprout_ex">"Leo loved watching the tiny green sprouts push through the soil."</div>
+						</div>
+						<!-- Vocabulary Card 4 -->
+						<div class="EH-garden-vocabulary-card">
+							<div class="EH-garden-vocabulary-word" data-i18n="garden.vocabulary.responsibility">Responsibility</div>
+							<div class="EH-garden-vocabulary-pronunciation" data-i18n="garden.vocabulary.responsibility_pron">/rɪˌspɒnsəˈbɪlɪti/</div>
+							<div class="EH-garden-vocabulary-definition" data-i18n="garden.vocabulary.responsibility_def">A duty or task that you are required or expected to do</div>
+							<div class="EH-garden-vocabulary-example" data-i18n="garden.vocabulary.responsibility_ex">"Each family had the responsibility to care for their garden plot."</div>
+						</div>
+						<!-- Vocabulary Card 5 -->
+						<div class="EH-garden-vocabulary-card">
+							<div class="EH-garden-vocabulary-word" data-i18n="garden.vocabulary.harvest">Harvest</div>
+							<div class="EH-garden-vocabulary-pronunciation" data-i18n="garden.vocabulary.harvest_pron">/ˈhɑːvɪst/</div>
+							<div class="EH-garden-vocabulary-definition" data-i18n="garden.vocabulary.harvest_def">The process of gathering mature crops from the fields</div>
+							<div class="EH-garden-vocabulary-example" data-i18n="garden.vocabulary.harvest_ex">"They held a harvest festival to celebrate their successful garden."</div>
+						</div>
+					</div>
+				</div>
+				<!-- Pronunciation Practice Section -->
+				<div class="EH-garden-section">
+					<h2 class="EH-garden-section-title" data-i18n="garden.sections.pronunciation">Pronunciation Practice</h2>
+					<div class="EH-garden-pronunciation-container">
+						<!-- Pronunciation 1 -->
+						<div class="EH-garden-pronunciation-card">
+							<div class="EH-garden-pronunciation-number">1</div>
+							<p class="EH-garden-pronunciation-text" data-i18n="garden.pronunciation.p1">"Let's create a community garden together!"</p>
+							<div class="EH-garden-pronunciation-controls">
+								<button class="EH-garden-pronunciation-btn" data-audio="garden-pronunciation-1-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-garden-pronunciation-btn record" data-audio="garden-pronunciation-1-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-garden-pronunciation-btn play-recorded" data-audio="garden-pronunciation-1-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-garden-recording-status" data-status="garden-pronunciation-1-status"></div>
+						</div>
+						<!-- Pronunciation 2 -->
+						<div class="EH-garden-pronunciation-card">
+							<div class="EH-garden-pronunciation-number">2</div>
+							<p class="EH-garden-pronunciation-text" data-i18n="garden.pronunciation.p2">"We need volunteers to help with the planting."</p>
+							<div class="EH-garden-pronunciation-controls">
+								<button class="EH-garden-pronunciation-btn" data-audio="garden-pronunciation-2-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-garden-pronunciation-btn record" data-audio="garden-pronunciation-2-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-garden-pronunciation-btn play-recorded" data-audio="garden-pronunciation-2-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-garden-recording-status" data-status="garden-pronunciation-2-status"></div>
+						</div>
+						<!-- Pronunciation 3 -->
+						<div class="EH-garden-pronunciation-card">
+							<div class="EH-garden-pronunciation-number">3</div>
+							<p class="EH-garden-pronunciation-text" data-i18n="garden.pronunciation.p3">"Look at the tiny sprouts coming up!"</p>
+							<div class="EH-garden-pronunciation-controls">
+								<button class="EH-garden-pronunciation-btn" data-audio="garden-pronunciation-3-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-garden-pronunciation-btn record" data-audio="garden-pronunciation-3-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-garden-pronunciation-btn play-recorded" data-audio="garden-pronunciation-3-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-garden-recording-status" data-status="garden-pronunciation-3-status"></div>
+						</div>
+						<!-- Pronunciation 4 -->
+						<div class="EH-garden-pronunciation-card">
+							<div class="EH-garden-pronunciation-number">4</div>
+							<p class="EH-garden-pronunciation-text" data-i18n="garden.pronunciation.p4">"Everyone has a responsibility to help."</p>
+							<div class="EH-garden-pronunciation-controls">
+								<button class="EH-garden-pronunciation-btn" data-audio="garden-pronunciation-4-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-garden-pronunciation-btn record" data-audio="garden-pronunciation-4-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-garden-pronunciation-btn play-recorded" data-audio="garden-pronunciation-4-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-garden-recording-status" data-status="garden-pronunciation-4-status"></div>
+						</div>
+						<!-- Pronunciation 5 -->
+						<div class="EH-garden-pronunciation-card">
+							<div class="EH-garden-pronunciation-number">5</div>
+							<p class="EH-garden-pronunciation-text" data-i18n="garden.pronunciation.p5">"We'll have a big harvest in the summer."</p>
+							<div class="EH-garden-pronunciation-controls">
+								<button class="EH-garden-pronunciation-btn" data-audio="garden-pronunciation-5-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-garden-pronunciation-btn record" data-audio="garden-pronunciation-5-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-garden-pronunciation-btn play-recorded" data-audio="garden-pronunciation-5-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-garden-recording-status" data-status="garden-pronunciation-5-status"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Navigation Buttons -->
+				<div class="EH-garden-navigation">
+					<button class="EH-garden-nav-button back" onclick="window.location.href='Eh-general-reading-adventures.html'">
+						← <span data-i18n="common.backToReadingAdventures">Back to Reading Adventures</span>
+					</button>
+					<button class="EH-garden-nav-button" onclick="window.location.href='EH-reading-lost-pet.html'">
+						<span data-i18n="common.nextLesson">Next Lesson</span> →
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Common Footer -->
+		<footer class="EH-common-footer">
+			<div class="EH-common-footer-content">
+				<div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-common-footer-links">
+					<a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+					<a href="#" data-i18n="footer.terms">Terms of Service</a>
+					<a href="#" data-i18n="footer.contact">Contact</a>
+				</div>
+			</div>
+		</footer>
+		<!-- i18n translations -->
+		<script src="scripts/translations/i18n_en.js"></script>
+		<script src="scripts/translations/i18n_fr.js"></script>
+		<script src="scripts/translations/i18n_ar.js"></script>
+		<script src="scripts/common-i18n.js"></script>
+		<!-- Include the generic sound library -->
+		<script src="scripts/sound.js"></script>
+		<script src="scripts/exercise.js"></script>
+		<script>
+			// Lesson-specific audio configuration
+			const audioConfig = {
+				'garden-story': 'assets/audio/lessons/category1/lesson2/garden-story.mp3',
+				'garden-pronunciation-1-listen': 'assets/audio/lessons/category1/lesson2/pronunciation-1.mp3',
+				'garden-pronunciation-2-listen': 'assets/audio/lessons/category1/lesson2/pronunciation-2.mp3',
+				'garden-pronunciation-3-listen': 'assets/audio/lessons/category1/lesson2/pronunciation-3.mp3',
+				'garden-pronunciation-4-listen': 'assets/audio/lessons/category1/lesson2/pronunciation-4.mp3',
+				'garden-pronunciation-5-listen': 'assets/audio/lessons/category1/lesson2/pronunciation-5.mp3'
+			};
+			// Correct answers for questions
+			const correctAnswers = {
+				'EH-exercise-type1-possibilities3-q1': 'b', // Seeing an empty lot and remembering his grandmother's garden
+				'EH-exercise-type1-possibilities3-q2': 'b', // His friends and their teacher Mr. Chen
+				'EH-exercise-type1-possibilities3-q3': 'b', // The sprinklers weren't working properly
+				'EH-exercise-type1-possibilities3-q4': 'b', // It created a sense of community and brought neighbors together
+				'EH-exercise-type1-possibilities3-q5': 'b'  // That working together can create something wonderful for everyone
+			};
+			// Audio progress tracking
+			let progressInterval;
+			function updateProgressBar(audioKey) {
+				const audio = audioPlayers[audioKey];
+				if (!audio) return;
+				const progressSlider = document.getElementById('EH-garden-progress');
+				const timeDisplay = document.getElementById('EH-garden-time');
+				if (audio.duration) {
+					const progress = (audio.currentTime / audio.duration) * 100;
+					progressSlider.value = progress;
+					// Update time display
+					const currentTime = formatTime(audio.currentTime);
+					const duration = formatTime(audio.duration);
+					timeDisplay.textContent = `${currentTime} / ${duration}`;
+				}
+			}
+			function formatTime(seconds) {
+				const mins = Math.floor(seconds / 60);
+				const secs = Math.floor(seconds % 60);
+				return `${mins}:${secs.toString().padStart(2, '0')}`;
+			}
+			function setupProgressTracking(audioKey) {
+				const audio = audioPlayers[audioKey];
+				if (!audio) return;
+				// Clear any existing interval
+				if (progressInterval) {
+					clearInterval(progressInterval);
+				}
+				// Update progress every 100ms
+				progressInterval = setInterval(() => {
+					updateProgressBar(audioKey);
+				}, 100);
+				// Setup progress slider event
+				const progressSlider = document.getElementById('EH-garden-progress');
+				progressSlider.addEventListener('input', function() {
+					if (audio.duration) {
+						const seekTime = (this.value / 100) * audio.duration;
+						audio.currentTime = seekTime;
+					}
+				});
+				// Reset when audio ends
+				audio.addEventListener('ended', function() {
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					progressSlider.value = 0;
+					document.getElementById('EH-garden-time').textContent = '0:00 / ' + formatTime(audio.duration);
+				});
+			}
+			function setupSpeedControl() {
+				const speedSlider = document.getElementById('EH-garden-speed');
+				const speedValue = document.getElementById('EH-garden-speed-value');
+				speedSlider.addEventListener('input', function() {
+					const speed = this.value / 100;
+					speedValue.textContent = speed.toFixed(1) + 'x';
+					// Apply speed to all audio players
+					for (const key in audioPlayers) {
+						if (audioPlayers[key]) {
+							audioPlayers[key].playbackRate = speed;
+						}
+					}
+				});
+			}
+			// Initialize when DOM is loaded
+			document.addEventListener('DOMContentLoaded', function() {
+				// Initialize audio players with lesson-specific config
+				initAudioPlayers(audioConfig);
+				// Set up main story audio controls
+				document.getElementById('EH-garden-play-btn').addEventListener('click', function() {
+					playAudio('garden-story');
+					setupProgressTracking('garden-story');
+					// Show pause button, hide play button
+					document.getElementById('EH-garden-play-btn').style.display = 'none';
+					document.getElementById('EH-garden-pause-btn').style.display = 'flex';
+				});
+				document.getElementById('EH-garden-pause-btn').addEventListener('click', function() {
+					pauseAudio('garden-story');
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					// Show play button, hide pause button
+					document.getElementById('EH-garden-play-btn').style.display = 'flex';
+					document.getElementById('EH-garden-pause-btn').style.display = 'none';
+				});
+				document.getElementById('EH-garden-stop-btn').addEventListener('click', function() {
+					stopAudio('garden-story');
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					document.getElementById('EH-garden-progress').value = 0;
+					document.getElementById('EH-garden-time').textContent = '0:00 / 0:00';
+					// Show play button, hide pause button
+					document.getElementById('EH-garden-play-btn').style.display = 'flex';
+					document.getElementById('EH-garden-pause-btn').style.display = 'none';
+				});
+				document.getElementById('EH-garden-volume').addEventListener('input', function() {
+					setGlobalVolume(this.value);
+				});
+				// Setup speed control
+				setupSpeedControl();
+				// Set up pronunciation practice listeners
+				setupPronunciationListeners();
+				// Set up answer checking
+				ExerciseType1Possibilities3Init(correctAnswers, Object.keys(correctAnswers).length, 'EH-exercise-type1-possibilities3');
+				// Initialize with default volume
+				setGlobalVolume(80);
+			});
+		</script>
+	</body>
+</html>

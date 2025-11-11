@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shopping & Meal Planning - Reading Adventures</title>
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/common.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #2e7d32, #7cb342, #c5e1a5);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        /* Grocery Lesson Specific Styles */
+        .EH-grocery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .EH-grocery-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+        .EH-grocery-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .EH-grocery-section-title {
+            font-size: 1.8rem;
+            color: #2e7d32;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #7cb342;
+        }
+        /* Audio Player Styles */
+        .EH-grocery-audio-player {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .EH-grocery-audio-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .EH-grocery-audio-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .EH-grocery-audio-btn {
+            background: #7cb342;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1.2rem;
+            position: relative;
+        }
+        .EH-grocery-audio-btn:hover {
+            background: #689f38;
+        }
+        .EH-grocery-audio-btn:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        .EH-grocery-audio-btn.stop {
+            background: #ef6c00;
+        }
+        .EH-grocery-audio-btn.stop:hover {
+            background: #e65100;
+        }
+        .EH-grocery-audio-btn.pause {
+            background: #2e7d32;
+        }
+        .EH-grocery-audio-btn.pause:hover {
+            background: #1b5e20;
+        }
+        .EH-grocery-volume-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .EH-grocery-volume-slider {
+            width: 150px;
+        }
+        /* Story Content Styles */
+        .EH-grocery-story {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .EH-grocery-story p {
+            margin-bottom: 15px;
+        }
+        /* Comprehension Questions Styles */
+        .EH-grocery-questions-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .EH-grocery-question-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .EH-grocery-question-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        .EH-grocery-question-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #7cb342, #c5e1a5);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .EH-grocery-question-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .EH-grocery-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .EH-grocery-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .EH-grocery-option input {
+            cursor: pointer;
+        }
+        .EH-grocery-option label {
+            cursor: pointer;
+        }
+        /* Vocabulary Cards Styles */
+        .EH-grocery-vocabulary-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .EH-grocery-vocabulary-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .EH-grocery-vocabulary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        .EH-grocery-vocabulary-word {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2e7d32;
+        }
+        .EH-grocery-vocabulary-pronunciation {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .EH-grocery-vocabulary-definition {
+            margin-bottom: 15px;
+            color: #333;
+            flex: 1;
+        }
+        .EH-grocery-vocabulary-example {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            font-style: italic;
+            color: #555;
+        }
+        /* Pronunciation Practice Styles */
+        .EH-grocery-pronunciation-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .EH-grocery-pronunciation-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .EH-grocery-pronunciation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        .EH-grocery-pronunciation-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #ef6c00, #ff9800);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .EH-grocery-pronunciation-text {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: center;
+        }
+        .EH-grocery-pronunciation-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .EH-grocery-pronunciation-btn {
+            background: #7cb342;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .EH-grocery-pronunciation-btn:hover {
+            background: #689f38;
+        }
+        .EH-grocery-pronunciation-btn:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        .EH-grocery-pronunciation-btn.record {
+            background: #ef6c00;
+        }
+        .EH-grocery-pronunciation-btn.record:hover {
+            background: #e65100;
+        }
+        .EH-grocery-pronunciation-btn.recording {
+            background: #d84315;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .EH-grocery-pronunciation-btn.play-recorded {
+            background: #2e7d32;
+        }
+        .EH-grocery-pronunciation-btn.play-recorded:hover {
+            background: #1b5e20;
+        }
+        /* Recording status indicator */
+        .EH-grocery-recording-status {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .EH-grocery-recording-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #d84315;
+            border-radius: 50%;
+            margin-right: 5px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+        /* Navigation Buttons */
+        .EH-grocery-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .EH-grocery-nav-button {
+            background: #7cb342;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .EH-grocery-nav-button:hover {
+            background: #689f38;
+        }
+        .EH-grocery-nav-button.back {
+            background: #ef6c00;
+        }
+        .EH-grocery-nav-button.back:hover {
+            background: #e65100;
+        }
+        /* Progress Slider Styles */
+        .EH-grocery-progress-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            margin: 15px 0;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .EH-grocery-progress-slider {
+            flex: 1;
+            min-width: 200px;
+            max-width: 400px;
+        }
+        .EH-grocery-time-display {
+            font-size: 0.9rem;
+            color: #666;
+            min-width: 80px;
+            text-align: center;
+        }
+        /* Controls Row */
+        .EH-grocery-controls-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .EH-grocery-control-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            min-width: 150px;
+            justify-content: center;
+        }
+        .EH-grocery-control-slider {
+            width: 100px;
+        }
+        .EH-grocery-speed-value {
+            font-size: 0.9rem;
+            color: #666;
+            min-width: 35px;
+            text-align: center;
+            font-weight: bold;
+        }
+        /* Unified Exercise Styles - EH-exercise-type1-possibilities3- prefix */
+        .EH-exercise-type1-possibilities3-answers-control {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            gap: 20px;
+        }
+        .EH-exercise-type1-possibilities3-check-answers-btn {
+            background: #7cb342;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            font-size: 1rem;
+        }
+        .EH-exercise-type1-possibilities3-check-answers-btn:hover {
+            background: #689f38;
+        }
+        .EH-exercise-type1-possibilities3-score-display {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: none;
+            width: 100%;
+            max-width: 500px;
+        }
+        .EH-exercise-type1-possibilities3-score-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #2e7d32;
+        }
+        .EH-exercise-type1-possibilities3-score-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #7cb342;
+            margin-bottom: 15px;
+        }
+        .EH-exercise-type1-possibilities3-score-feedback {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .EH-exercise-type1-possibilities3-answer-status {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .EH-exercise-type1-possibilities3-correct-answer {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .EH-exercise-type1-possibilities3-incorrect-answer {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .EH-exercise-type1-possibilities3-option.correct {
+            background-color: #d4edda;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+        }
+        .EH-exercise-type1-possibilities3-option.incorrect {
+            background-color: #f8d7da;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .EH-grocery-questions-container,
+            .EH-grocery-vocabulary-container,
+            .EH-grocery-pronunciation-container {
+                grid-template-columns: 1fr;
+            }
+            .EH-grocery-navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .EH-grocery-nav-button {
+                width: 100%;
+                justify-content: center;
+            }
+            .EH-grocery-controls-row {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .EH-grocery-control-group {
+                min-width: 200px;
+            }
+            .EH-grocery-progress-container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .EH-grocery-progress-slider {
+                min-width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            .EH-grocery-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Selector -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" data-i18n="common.mainPage" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+    </div>
+    <div class="EH-grocery-container">
+        <!-- Common Header -->
+        <header class="EH-common-header">
+            <h1 class="EH-common-title" data-i18n="grocery.title">Grocery Shopping & Meal Planning</h1>
+            <p class="EH-common-subtitle" data-i18n="grocery.subtitle">Join Omar as he adapts to grocery shopping in a new country</p>
+        </header>
+        <div class="EH-grocery-content">
+            <!-- Audio Player Section -->
+            <div class="EH-grocery-section">
+                <h2 class="EH-grocery-section-title" data-i18n="grocery.sections.listen">Listen to the Story</h2>
+                <div class="EH-grocery-audio-player">
+                    <h3 class="EH-grocery-audio-title" data-i18n="grocery.audio.title">Omar's First Grocery Trip</h3>
+                    <div class="EH-grocery-audio-controls">
+                        <button class="EH-grocery-audio-btn" id="EH-grocery-play-btn" data-tooltip="Play">
+                            ▶
+                        </button>
+                        <button class="EH-grocery-audio-btn pause" id="EH-grocery-pause-btn" style="display: none;" data-tooltip="Pause">
+                            ⏸
+                        </button>
+                        <button class="EH-grocery-audio-btn stop" id="EH-grocery-stop-btn" data-tooltip="Stop">
+                            ⏹
+                        </button>
+                    </div>
+                    <!-- Progress Slider -->
+                    <div class="EH-grocery-progress-container">
+                        <span data-i18n="common.progress">Progress:</span>
+                        <input type="range" min="0" max="100" value="0" class="EH-grocery-progress-slider" id="EH-grocery-progress">
+                        <span class="EH-grocery-time-display" id="EH-grocery-time">0:00 / 0:00</span>
+                    </div>
+                    <!-- Control sliders container -->
+                    <div class="EH-grocery-controls-row">
+                        <!-- Volume Control -->
+                        <div class="EH-grocery-control-group">
+                            <span data-i18n="common.volume">Volume:</span>
+                            <input type="range" min="0" max="100" value="80" class="EH-grocery-control-slider" id="EH-grocery-volume">
+                        </div>
+                        <!-- Speed Control -->
+                        <div class="EH-grocery-control-group">
+                            <span data-i18n="common.speed">Speed:</span>
+                            <input type="range" min="50" max="200" value="100" class="EH-grocery-control-slider" id="EH-grocery-speed">
+                            <span class="EH-grocery-speed-value" id="EH-grocery-speed-value">1.0x</span>
+                        </div>
+                    </div>
+                    <div class="EH-grocery-recording-status" id="EH-grocery-audio-status" data-i18n="grocery.audio.status.loading">Loading audio...</div>
+                </div>
+            </div>
+            <!-- Story Content Section -->
+            <div class="EH-grocery-section">
+                <h2 class="EH-grocery-section-title" data-i18n="grocery.sections.story">Story Text</h2>
+                <div class="EH-grocery-story">
+                    <p data-i18n="grocery.story.p1">Omar stood outside the supermarket, feeling both excited and nervous. It was his first time grocery shopping in his new country, and he wanted to make sure he bought the right ingredients for his meals for the week.</p>
+                    <p data-i18n="grocery.story.p2">He pulled out his shopping list and meal plan that he had prepared the night before. Omar had planned five dinners, making sure to include a variety of proteins, vegetables, and grains. He also included snacks and breakfast items.</p>
+                    <p data-i18n="grocery.story.p3">As he entered the store, Omar noticed how different everything looked compared to markets in his home country. The signs were in English, and the products were organized in unfamiliar ways. He took a deep breath and decided to start in the produce section.</p>
+                    <p data-i18n="grocery.story.p4">Omar carefully read the labels on fruits and vegetables, trying to understand the names and prices. Some items like "zucchini" and "eggplant" were new to him. He used his phone to look up pictures when he wasn't sure what something was.</p>
+                    <p data-i18n="grocery.story.p5">In the dairy section, Omar compared different types of milk and yogurt. He noticed that milk came in different fat percentages, and yogurt had many varieties like Greek, regular, and drinkable. He chose what seemed most similar to what he used back home.</p>
+                    <p data-i18n="grocery.story.p6">When Omar reached the meat counter, he asked the butcher for help. "Excuse me, could you show me where I can find chicken breasts?" The butcher kindly pointed him to the right section and even suggested a cut that was on sale that week.</p>
+                    <p data-i18n="grocery.story.p7">As Omar continued shopping, he paid attention to unit prices to make sure he was getting good value. He also looked for sales and discounts, putting a few unexpected items in his cart when he found good deals.</p>
+                    <p data-i18n="grocery.story.p8">At checkout, Omar carefully packed his groceries, making sure fragile items like eggs and tomatoes were on top. He felt proud of himself for completing his first grocery shopping trip successfully and looked forward to cooking his planned meals.</p>
+                </div>
+            </div>
+            <!-- Comprehension Questions Section -->
+            <div class="EH-grocery-section">
+                <h2 class="EH-grocery-section-title" data-i18n="grocery.sections.questions">Comprehension Questions</h2>
+                <div class="EH-grocery-questions-container">
+                    <!-- Question 1 -->
+                    <div class="EH-grocery-question-card">
+                        <div class="EH-grocery-question-number">1</div>
+                        <p class="EH-grocery-question-text" data-i18n="grocery.questions.q1">What did Omar prepare before going grocery shopping?</p>
+                        <div class="EH-grocery-options">
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="grocery.questions.q1a">A budget spreadsheet</label>
+                            </div>
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="grocery.questions.q1b">A shopping list and meal plan</label>
+                            </div>
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="grocery.questions.q1c">A map of the supermarket</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
+                    </div>
+                    <!-- Question 2 -->
+                    <div class="EH-grocery-question-card">
+                        <div class="EH-grocery-question-number">2</div>
+                        <p class="EH-grocery-question-text" data-i18n="grocery.questions.q2">Which section did Omar start with in the supermarket?</p>
+                        <div class="EH-grocery-options">
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="grocery.questions.q2a">The dairy section</label>
+                            </div>
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="grocery.questions.q2b">The produce section</label>
+                            </div>
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="grocery.questions.q2c">The meat counter</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
+                    </div>
+                    <!-- Question 3 -->
+                    <div class="EH-grocery-question-card">
+                        <div class="EH-grocery-question-number">3</div>
+                        <p class="EH-grocery-question-text" data-i18n="grocery.questions.q3">What did Omar use his phone for while shopping?</p>
+                        <div class="EH-grocery-options">
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="grocery.questions.q3a">To look up pictures of unfamiliar foods</label>
+                            </div>
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="grocery.questions.q3b">To call a friend for advice</label>
+                            </div>
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="grocery.questions.q3c">To calculate his total spending</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
+                    </div>
+                    <!-- Question 4 -->
+                    <div class="EH-grocery-question-card">
+                        <div class="EH-grocery-question-number">4</div>
+                        <p class="EH-grocery-question-text" data-i18n="grocery.questions.q4">Who did Omar ask for help in the meat section?</p>
+                        <div class="EH-grocery-options">
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="grocery.questions.q4a">Another customer</label>
+                            </div>
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="grocery.questions.q4b">The butcher</label>
+                            </div>
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="grocery.questions.q4c">The store manager</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
+                    </div>
+                    <!-- Question 5 -->
+                    <div class="EH-grocery-question-card">
+                        <div class="EH-grocery-question-number">5</div>
+                        <p class="EH-grocery-question-text" data-i18n="grocery.questions.q5">How did Omar feel after completing his shopping?</p>
+                        <div class="EH-grocery-options">
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="grocery.questions.q5a">Frustrated and confused</label>
+                            </div>
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="grocery.questions.q5b">Proud and successful</label>
+                            </div>
+                            <div class="EH-grocery-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="grocery.questions.q5c">Overwhelmed and tired</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
+                    </div>
+                </div>
+                <!-- Answer Check and Score System -->
+                <div class="EH-exercise-type1-possibilities3-answers-control">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers" data-i18n="grocery.answers.check">Check Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+                        <h3 class="EH-exercise-type1-possibilities3-score-title" data-i18n="grocery.answers.score">Your Score</h3>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/5</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback" data-i18n="grocery.answers.feedback.default">Check your answers to see how you did!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Vocabulary Section -->
+            <div class="EH-grocery-section">
+                <h2 class="EH-grocery-section-title" data-i18n="grocery.sections.vocabulary">Vocabulary Cards</h2>
+                <div class="EH-grocery-vocabulary-container">
+                    <!-- Vocabulary Card 1 -->
+                    <div class="EH-grocery-vocabulary-card">
+                        <div class="EH-grocery-vocabulary-word" data-i18n="grocery.vocabulary.produce">Produce</div>
+                        <div class="EH-grocery-vocabulary-pronunciation" data-i18n="grocery.vocabulary.produce_pron">/prəˈdjuːs/</div>
+                        <div class="EH-grocery-vocabulary-definition" data-i18n="grocery.vocabulary.produce_def">Fresh fruits and vegetables</div>
+                        <div class="EH-grocery-vocabulary-example" data-i18n="grocery.vocabulary.produce_ex">"Omar started his shopping in the produce section."</div>
+                    </div>
+                    <!-- Vocabulary Card 2 -->
+                    <div class="EH-grocery-vocabulary-card">
+                        <div class="EH-grocery-vocabulary-word" data-i18n="grocery.vocabulary.ingredients">Ingredients</div>
+                        <div class="EH-grocery-vocabulary-pronunciation" data-i18n="grocery.vocabulary.ingredients_pron">/ɪnˈɡriːdiənts/</div>
+                        <div class="EH-grocery-vocabulary-definition" data-i18n="grocery.vocabulary.ingredients_def">Items used in preparing a dish or meal</div>
+                        <div class="EH-grocery-vocabulary-example" data-i18n="grocery.vocabulary.ingredients_ex">"Omar bought all the ingredients for his planned meals."</div>
+                    </div>
+                    <!-- Vocabulary Card 3 -->
+                    <div class="EH-grocery-vocabulary-card">
+                        <div class="EH-grocery-vocabulary-word" data-i18n="grocery.vocabulary.butcher">Butcher</div>
+                        <div class="EH-grocery-vocabulary-pronunciation" data-i18n="grocery.vocabulary.butcher_pron">/ˈbʊtʃər/</div>
+                        <div class="EH-grocery-vocabulary-definition" data-i18n="grocery.vocabulary.butcher_def">A person who sells meat</div>
+                        <div class="EH-grocery-vocabulary-example" data-i18n="grocery.vocabulary.butcher_ex">"The butcher helped Omar find the chicken breasts."</div>
+                    </div>
+                    <!-- Vocabulary Card 4 -->
+                    <div class="EH-grocery-vocabulary-card">
+                        <div class="EH-grocery-vocabulary-word" data-i18n="grocery.vocabulary.unit_price">Unit Price</div>
+                        <div class="EH-grocery-vocabulary-pronunciation" data-i18n="grocery.vocabulary.unit_price_pron">/ˈjuːnɪt praɪs/</div>
+                        <div class="EH-grocery-vocabulary-definition" data-i18n="grocery.vocabulary.unit_price_def">The price per standard unit of measurement</div>
+                        <div class="EH-grocery-vocabulary-example" data-i18n="grocery.vocabulary.unit_price_ex">"Omar compared unit prices to get the best value."</div>
+                    </div>
+                    <!-- Vocabulary Card 5 -->
+                    <div class="EH-grocery-vocabulary-card">
+                        <div class="EH-grocery-vocabulary-word" data-i18n="grocery.vocabulary.checkout">Checkout</div>
+                        <div class="EH-grocery-vocabulary-pronunciation" data-i18n="grocery.vocabulary.checkout_pron">/ˈtʃekaʊt/</div>
+                        <div class="EH-grocery-vocabulary-definition" data-i18n="grocery.vocabulary.checkout_def">The place where customers pay for their purchases</div>
+                        <div class="EH-grocery-vocabulary-example" data-i18n="grocery.vocabulary.checkout_ex">"At checkout, Omar carefully packed his groceries."</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pronunciation Practice Section -->
+            <div class="EH-grocery-section">
+                <h2 class="EH-grocery-section-title" data-i18n="grocery.sections.pronunciation">Pronunciation Practice</h2>
+                <div class="EH-grocery-pronunciation-container">
+                    <!-- Pronunciation 1 -->
+                    <div class="EH-grocery-pronunciation-card">
+                        <div class="EH-grocery-pronunciation-number">1</div>
+                        <p class="EH-grocery-pronunciation-text" data-i18n="grocery.pronunciation.p1">"Where can I find the fruits and vegetables?"</p>
+                        <div class="EH-grocery-pronunciation-controls">
+                            <button class="EH-grocery-pronunciation-btn" data-audio="grocery-pronunciation-1-listen" data-tooltip="Listen">
+                                🔊
+                            </button>
+                            <button class="EH-grocery-pronunciation-btn record" data-audio="grocery-pronunciation-1-record" data-tooltip="Record">
+                                ●
+                            </button>
+                            <button class="EH-grocery-pronunciation-btn play-recorded" data-audio="grocery-pronunciation-1-playback" style="display: none;" data-tooltip="Playback">
+                                ▶
+                            </button>
+                        </div>
+                        <div class="EH-grocery-recording-status" data-status="grocery-pronunciation-1-status"></div>
+                    </div>
+                    <!-- Pronunciation 2 -->
+                    <div class="EH-grocery-pronunciation-card">
+                        <div class="EH-grocery-pronunciation-number">2</div>
+                        <p class="EH-grocery-pronunciation-text" data-i18n="grocery.pronunciation.p2">"Could you help me find chicken breasts?"</p>
+                        <div class="EH-grocery-pronunciation-controls">
+                            <button class="EH-grocery-pronunciation-btn" data-audio="grocery-pronunciation-2-listen" data-tooltip="Listen">
+                                🔊
+                            </button>
+                            <button class="EH-grocery-pronunciation-btn record" data-audio="grocery-pronunciation-2-record" data-tooltip="Record">
+                                ●
+                            </button>
+                            <button class="EH-grocery-pronunciation-btn play-recorded" data-audio="grocery-pronunciation-2-playback" style="display: none;" data-tooltip="Playback">
+                                ▶
+                            </button>
+                        </div>
+                        <div class="EH-grocery-recording-status" data-status="grocery-pronunciation-2-status"></div>
+                    </div>
+                    <!-- Pronunciation 3 -->
+                    <div class="EH-grocery-pronunciation-card">
+                        <div class="EH-grocery-pronunciation-number">3</div>
+                        <p class="EH-grocery-pronunciation-text" data-i18n="grocery.pronunciation.p3">"I'm looking for dairy products like milk and yogurt."</p>
+                        <div class="EH-grocery-pronunciation-controls">
+                            <button class="EH-grocery-pronunciation-btn" data-audio="grocery-pronunciation-3-listen" data-tooltip="Listen">
+                                🔊
+                            </button>
+                            <button class="EH-grocery-pronunciation-btn record" data-audio="grocery-pronunciation-3-record" data-tooltip="Record">
+                                ●
+                            </button>
+                            <button class="EH-grocery-pronunciation-btn play-recorded" data-audio="grocery-pronunciation-3-playback" style="display: none;" data-tooltip="Playback">
+                                ▶
+                            </button>
+                        </div>
+                        <div class="EH-grocery-recording-status" data-status="grocery-pronunciation-3-status"></div>
+                    </div>
+                    <!-- Pronunciation 4 -->
+                    <div class="EH-grocery-pronunciation-card">
+                        <div class="EH-grocery-pronunciation-number">4</div>
+                        <p class="EH-grocery-pronunciation-text" data-i18n="grocery.pronunciation.p4">"Do you have any discounts on this item?"</p>
+                        <div class="EH-grocery-pronunciation-controls">
+                            <button class="EH-grocery-pronunciation-btn" data-audio="grocery-pronunciation-4-listen" data-tooltip="Listen">
+                                🔊
+                            </button>
+                            <button class="EH-grocery-pronunciation-btn record" data-audio="grocery-pronunciation-4-record" data-tooltip="Record">
+                                ●
+                            </button>
+                            <button class="EH-grocery-pronunciation-btn play-recorded" data-audio="grocery-pronunciation-4-playback" style="display: none;" data-tooltip="Playback">
+                                ▶
+                            </button>
+                        </div>
+                        <div class="EH-grocery-recording-status" data-status="grocery-pronunciation-4-status"></div>
+                    </div>
+                    <!-- Pronunciation 5 -->
+                    <div class="EH-grocery-pronunciation-card">
+                        <div class="EH-grocery-pronunciation-number">5</div>
+                        <p class="EH-grocery-pronunciation-text" data-i18n="grocery.pronunciation.p5">"I need to read the labels carefully."</p>
+                        <div class="EH-grocery-pronunciation-controls">
+                            <button class="EH-grocery-pronunciation-btn" data-audio="grocery-pronunciation-5-listen" data-tooltip="Listen">
+                                🔊
+                            </button>
+                            <button class="EH-grocery-pronunciation-btn record" data-audio="grocery-pronunciation-5-record" data-tooltip="Record">
+                                ●
+                            </button>
+                            <button class="EH-grocery-pronunciation-btn play-recorded" data-audio="grocery-pronunciation-5-playback" style="display: none;" data-tooltip="Playback">
+                                ▶
+                            </button>
+                        </div>
+                        <div class="EH-grocery-recording-status" data-status="grocery-pronunciation-5-status"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="EH-grocery-navigation">
+                <button class="EH-grocery-nav-button back" onclick="window.location.href='Eh-general-reading-adventures.html'">
+                    ← <span data-i18n="common.backToReadingAdventures">Back to Reading Adventures</span>
+                </button>
+                <button class="EH-grocery-nav-button" onclick="window.location.href='EH-reading-transport.html'">
+                    <span data-i18n="common.nextLesson">Next Lesson</span> →
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Common Footer -->
+    <footer class="EH-common-footer">
+        <div class="EH-common-footer-content">
+            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+            <div class="EH-common-footer-links">
+                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                <a href="#" data-i18n="footer.contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <!-- i18n translations -->
+    <script src="scripts/translations/i18n_en.js"></script>
+    <script src="scripts/translations/i18n_fr.js"></script>
+    <script src="scripts/translations/i18n_ar.js"></script>
+    <script src="scripts/common-i18n.js"></script>
+    <!-- Include the generic sound library -->
+    <script src="scripts/sound.js"></script>
+    <script src="scripts/exercise.js"></script>
+    <script>
+        // Lesson-specific audio configuration
+        const audioConfig = {
+            'grocery-story': 'assets/audio/lessons/category2/lesson6/grocery-story.mp3',
+            'grocery-pronunciation-1-listen': 'assets/audio/lessons/category2/lesson6/pronunciation-1.mp3',
+            'grocery-pronunciation-2-listen': 'assets/audio/lessons/category2/lesson6/pronunciation-2.mp3',
+            'grocery-pronunciation-3-listen': 'assets/audio/lessons/category2/lesson6/pronunciation-3.mp3',
+            'grocery-pronunciation-4-listen': 'assets/audio/lessons/category2/lesson6/pronunciation-4.mp3',
+            'grocery-pronunciation-5-listen': 'assets/audio/lessons/category2/lesson6/pronunciation-5.mp3'
+        };
+        // Correct answers for questions
+        const correctAnswers = {
+            'EH-exercise-type1-possibilities3-q1': 'b', // A shopping list and meal plan
+            'EH-exercise-type1-possibilities3-q2': 'b', // The produce section
+            'EH-exercise-type1-possibilities3-q3': 'a', // To look up pictures of unfamiliar foods
+            'EH-exercise-type1-possibilities3-q4': 'b', // The butcher
+            'EH-exercise-type1-possibilities3-q5': 'b'  // Proud and successful
+        };
+        // Audio progress tracking
+        let progressInterval;
+        function updateProgressBar(audioKey) {
+            const audio = audioPlayers[audioKey];
+            if (!audio) return;
+            const progressSlider = document.getElementById('EH-grocery-progress');
+            const timeDisplay = document.getElementById('EH-grocery-time');
+            if (audio.duration) {
+                const progress = (audio.currentTime / audio.duration) * 100;
+                progressSlider.value = progress;
+                // Update time display
+                const currentTime = formatTime(audio.currentTime);
+                const duration = formatTime(audio.duration);
+                timeDisplay.textContent = `${currentTime} / ${duration}`;
+            }
+        }
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+        function setupProgressTracking(audioKey) {
+            const audio = audioPlayers[audioKey];
+            if (!audio) return;
+            // Clear any existing interval
+            if (progressInterval) {
+                clearInterval(progressInterval);
+            }
+            // Update progress every 100ms
+            progressInterval = setInterval(() => {
+                updateProgressBar(audioKey);
+            }, 100);
+            // Setup progress slider event
+            const progressSlider = document.getElementById('EH-grocery-progress');
+            progressSlider.addEventListener('input', function() {
+                if (audio.duration) {
+                    const seekTime = (this.value / 100) * audio.duration;
+                    audio.currentTime = seekTime;
+                }
+            });
+            // Reset when audio ends
+            audio.addEventListener('ended', function() {
+                if (progressInterval) {
+                    clearInterval(progressInterval);
+                }
+                progressSlider.value = 0;
+                document.getElementById('EH-grocery-time').textContent = '0:00 / ' + formatTime(audio.duration);
+            });
+        }
+        function setupSpeedControl() {
+            const speedSlider = document.getElementById('EH-grocery-speed');
+            const speedValue = document.getElementById('EH-grocery-speed-value');
+            speedSlider.addEventListener('input', function() {
+                const speed = this.value / 100;
+                speedValue.textContent = speed.toFixed(1) + 'x';
+                // Apply speed to all audio players
+                for (const key in audioPlayers) {
+                    if (audioPlayers[key]) {
+                        audioPlayers[key].playbackRate = speed;
+                    }
+                }
+            });
+        }
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize audio players with lesson-specific config
+            initAudioPlayers(audioConfig);
+            // Set up main story audio controls
+            document.getElementById('EH-grocery-play-btn').addEventListener('click', function() {
+    playAudio('grocery-story');
+    setupProgressTracking('grocery-story');
+    // Show pause button, hide play button
+    document.getElementById('EH-grocery-play-btn').style.display = 'none';
+    document.getElementById('EH-grocery-pause-btn').style.display = 'flex';
+});
+
+document.getElementById('EH-grocery-pause-btn').addEventListener('click', function() {
+    pauseAudio('grocery-story');
+    if (progressInterval) {
+        clearInterval(progressInterval);
+    }
+    // Show play button, hide pause button
+    document.getElementById('EH-grocery-play-btn').style.display = 'flex';
+    document.getElementById('EH-grocery-pause-btn').style.display = 'none';
+});
+
+document.getElementById('EH-grocery-stop-btn').addEventListener('click', function() {
+    stopAudio('grocery-story');
+    if (progressInterval) {
+        clearInterval(progressInterval);
+    }
+    document.getElementById('EH-grocery-progress').value = 0;
+    document.getElementById('EH-grocery-time').textContent = '0:00 / 0:00';
+    // Show play button, hide pause button
+    document.getElementById('EH-grocery-play-btn').style.display = 'flex';
+    document.getElementById('EH-grocery-pause-btn').style.display = 'none';
+});
+            document.getElementById('EH-grocery-volume').addEventListener('input', function() {
+                setGlobalVolume(this.value);
+            });
+            // Setup speed control
+            setupSpeedControl();
+            // Set up pronunciation practice listeners
+            setupPronunciationListeners();
+            // Set up answer checking
+            ExerciseType1Possibilities3Init(correctAnswers, Object.keys(correctAnswers).length, 'EH-exercise-type1-possibilities3');
+            // Initialize with default volume
+            setGlobalVolume(80);
+        });
+    </script>
+</body>
+</html>

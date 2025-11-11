@@ -230,16 +230,20 @@ function updateRecordingStatus(recordKey, status) {
 
 // Set up event listeners for pronunciation practice
 function setupPronunciationListeners() {
-    // Listen buttons
-    document.querySelectorAll('.EH-workplace-pronunciation-btn:not(.record):not(.play-recorded)').forEach(btn => {
+    // Listen buttons - support multiple lesson types
+    document.querySelectorAll('[class*="-pronunciation-btn"]:not(.record):not(.play-recorded)').forEach(btn => {
         btn.addEventListener('click', function() {
             const audioKey = this.getAttribute('data-audio');
-            playAudio(audioKey);
+            if (audioKey) {
+                playAudio(audioKey);
+            } else {
+                console.error('No data-audio attribute found on button:', this);
+            }
         });
     });
     
-    // Record buttons
-    document.querySelectorAll('.EH-workplace-pronunciation-btn.record').forEach(btn => {
+    // Record buttons - support multiple lesson types
+    document.querySelectorAll('[class*="-pronunciation-btn"].record').forEach(btn => {
         btn.addEventListener('click', function() {
             const audioKey = this.getAttribute('data-audio');
             const recordKey = audioKey.replace('-record', '');
@@ -258,8 +262,8 @@ function setupPronunciationListeners() {
         });
     });
     
-    // Playback buttons
-    document.querySelectorAll('.EH-workplace-pronunciation-btn.play-recorded').forEach(btn => {
+    // Playback buttons - support multiple lesson types
+    document.querySelectorAll('[class*="-pronunciation-btn"].play-recorded').forEach(btn => {
         btn.addEventListener('click', function() {
             const audioKey = this.getAttribute('data-audio');
             const recordKey = audioKey.replace('-playback', '');

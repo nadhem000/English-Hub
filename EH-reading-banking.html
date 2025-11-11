@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Banking and Financial Basics - Reading Adventures</title>
+		
+		<!-- Common CSS -->
+		<link rel="stylesheet" href="styles/common.css">
+		
+		<style>
+			/* Reset and Base Styles */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			body {
+				background: linear-gradient(135deg, #1e3c72, #2a5298, #6a11cb);
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				padding: 20px;
+			}
+
+			/* Banking Lesson Specific Styles */
+			.EH-banking-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				width: 100%;
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.EH-banking-content {
+				background: rgba(255, 255, 255, 0.95);
+				border-radius: 20px;
+				padding: 30px;
+				box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+				margin-bottom: 30px;
+			}
+
+			.EH-banking-section {
+				margin-bottom: 40px;
+				padding-bottom: 30px;
+				border-bottom: 1px solid #e0e0e0;
+			}
+
+			.EH-banking-section-title {
+				font-size: 1.8rem;
+				color: #1e3c72;
+				margin-bottom: 20px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid #6a11cb;
+			}
+
+			/* Audio Player Styles */
+			.EH-banking-audio-player {
+				background: white;
+				border-radius: 15px;
+				padding: 25px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+				margin-bottom: 30px;
+				text-align: center;
+				border: 2px solid #2a5298;
+			}
+
+			.EH-banking-audio-title {
+				font-size: 1.4rem;
+				margin-bottom: 20px;
+				color: #1e3c72;
+			}
+
+			.EH-banking-audio-controls {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 15px;
+				margin-bottom: 15px;
+			}
+
+			.EH-banking-audio-btn {
+				background: #2a5298;
+				color: white;
+				border: none;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+				transition: background 0.3s;
+				font-size: 1.2rem;
+				position: relative;
+			}
+
+			.EH-banking-audio-btn:hover {
+				background: #1e3c72;
+			}
+
+			.EH-banking-audio-btn:hover::after {
+				content: attr(data-tooltip);
+				position: absolute;
+				bottom: -40px;
+				left: 50%;
+				transform: translateX(-50%);
+				background: rgba(0, 0, 0, 0.8);
+				color: white;
+				padding: 5px 10px;
+				border-radius: 4px;
+				font-size: 0.8rem;
+				white-space: nowrap;
+				z-index: 10;
+			}
+
+			.EH-banking-audio-btn.stop {
+				background: #6a11cb;
+			}
+
+			.EH-banking-audio-btn.stop:hover {
+				background: #570fa8;
+			}
+
+			.EH-banking-audio-btn.pause {
+				background: #2575fc;
+			}
+
+			.EH-banking-audio-btn.pause:hover {
+				background: #1e63d4;
+			}
+
+			.EH-banking-volume-container {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				justify-content: center;
+				margin-top: 10px;
+			}
+
+			.EH-banking-volume-slider {
+				width: 150px;
+			}
+
+			/* Story Content Styles */
+			.EH-banking-story {
+				background: white;
+				border-radius: 15px;
+				padding: 25px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+				margin-bottom: 30px;
+				line-height: 1.6;
+				color: #333;
+				border-left: 4px solid #2a5298;
+			}
+
+			.EH-banking-story p {
+				margin-bottom: 15px;
+			}
+
+			/* Comprehension Questions Styles */
+			.EH-banking-questions-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 25px;
+			}
+
+			.EH-banking-question-card {
+				background: white;
+				border-radius: 15px;
+				padding: 25px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s, box-shadow 0.3s;
+				border: 1px solid #e0e0e0;
+			}
+
+			.EH-banking-question-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+			}
+
+			.EH-banking-question-number {
+				display: inline-block;
+				width: 35px;
+				height: 35px;
+				background: linear-gradient(135deg, #2575fc, #6a11cb);
+				color: white;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-weight: bold;
+				margin-bottom: 15px;
+			}
+
+			.EH-banking-question-text {
+				font-size: 1.1rem;
+				margin-bottom: 15px;
+				color: #333;
+			}
+
+			.EH-banking-options {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			.EH-banking-option {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+			.EH-banking-option input {
+				cursor: pointer;
+			}
+
+			.EH-banking-option label {
+				cursor: pointer;
+			}
+
+			/* Vocabulary Cards Styles */
+			.EH-banking-vocabulary-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 25px;
+			}
+
+			.EH-banking-vocabulary-card {
+				background: white;
+				border-radius: 15px;
+				padding: 25px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s, box-shadow 0.3s;
+				display: flex;
+				flex-direction: column;
+				border-top: 4px solid #2a5298;
+			}
+
+			.EH-banking-vocabulary-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+			}
+
+			.EH-banking-vocabulary-word {
+				font-size: 1.3rem;
+				font-weight: bold;
+				margin-bottom: 10px;
+				color: #1e3c72;
+			}
+
+			.EH-banking-vocabulary-pronunciation {
+				font-style: italic;
+				color: #666;
+				margin-bottom: 10px;
+			}
+
+			.EH-banking-vocabulary-definition {
+				margin-bottom: 15px;
+				color: #333;
+				flex: 1;
+			}
+
+			.EH-banking-vocabulary-example {
+				background: #f5f5f5;
+				padding: 15px;
+				border-radius: 10px;
+				font-style: italic;
+				color: #555;
+			}
+
+			/* Pronunciation Practice Styles */
+			.EH-banking-pronunciation-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 25px;
+			}
+
+			.EH-banking-pronunciation-card {
+				background: white;
+				border-radius: 15px;
+				padding: 25px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s, box-shadow 0.3s;
+				border: 1px solid #e0e0e0;
+			}
+
+			.EH-banking-pronunciation-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+			}
+
+			.EH-banking-pronunciation-number {
+				display: inline-block;
+				width: 35px;
+				height: 35px;
+				background: linear-gradient(135deg, #6a11cb, #2575fc);
+				color: white;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-weight: bold;
+				margin-bottom: 15px;
+			}
+
+			.EH-banking-pronunciation-text {
+				font-size: 1.2rem;
+				margin-bottom: 15px;
+				color: #333;
+				text-align: center;
+			}
+
+			.EH-banking-pronunciation-controls {
+				display: flex;
+				justify-content: center;
+				gap: 15px;
+			}
+
+			.EH-banking-pronunciation-btn {
+				background: #2a5298;
+				color: white;
+				border: none;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				cursor: pointer;
+				font-weight: bold;
+				transition: background 0.3s;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+			}
+
+			.EH-banking-pronunciation-btn:hover {
+				background: #1e3c72;
+			}
+
+			.EH-banking-pronunciation-btn:hover::after {
+				content: attr(data-tooltip);
+				position: absolute;
+				bottom: -40px;
+				left: 50%;
+				transform: translateX(-50%);
+				background: rgba(0, 0, 0, 0.8);
+				color: white;
+				padding: 5px 10px;
+				border-radius: 4px;
+				font-size: 0.8rem;
+				white-space: nowrap;
+				z-index: 10;
+			}
+
+			.EH-banking-pronunciation-btn.record {
+				background: #6a11cb;
+			}
+
+			.EH-banking-pronunciation-btn.record:hover {
+				background: #570fa8;
+			}
+
+			.EH-banking-pronunciation-btn.recording {
+				background: #2575fc;
+				animation: pulse 1.5s infinite;
+			}
+
+			@keyframes pulse {
+				0% { transform: scale(1); }
+				50% { transform: scale(1.05); }
+				100% { transform: scale(1); }
+			}
+
+			.EH-banking-pronunciation-btn.play-recorded {
+				background: #2575fc;
+			}
+
+			.EH-banking-pronunciation-btn.play-recorded:hover {
+				background: #1e63d4;
+			}
+
+			/* Recording status indicator */
+			.EH-banking-recording-status {
+				text-align: center;
+				margin-top: 10px;
+				font-size: 0.9rem;
+				color: #666;
+			}
+
+			.EH-banking-recording-indicator {
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				background: #2575fc;
+				border-radius: 50%;
+				margin-right: 5px;
+				animation: blink 1s infinite;
+			}
+
+			@keyframes blink {
+				0%, 50% { opacity: 1; }
+				51%, 100% { opacity: 0.3; }
+			}
+
+			/* Navigation Buttons */
+			.EH-banking-navigation {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 30px;
+			}
+
+			.EH-banking-nav-button {
+				background: #2a5298;
+				color: white;
+				border: none;
+				padding: 12px 25px;
+				border-radius: 20px;
+				cursor: pointer;
+				font-weight: bold;
+				transition: background 0.3s;
+				font-size: 1rem;
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+
+			.EH-banking-nav-button:hover {
+				background: #1e3c72;
+			}
+
+			.EH-banking-nav-button.back {
+				background: #6a11cb;
+			}
+
+			.EH-banking-nav-button.back:hover {
+				background: #570fa8;
+			}
+
+			/* Progress Slider Styles */
+			.EH-banking-progress-container {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				justify-content: center;
+				margin: 15px 0;
+				width: 100%;
+				flex-wrap: wrap;
+			}
+
+			.EH-banking-progress-slider {
+				flex: 1;
+				min-width: 200px;
+				max-width: 400px;
+			}
+
+			.EH-banking-time-display {
+				font-size: 0.9rem;
+				color: #666;
+				min-width: 80px;
+				text-align: center;
+			}
+
+			/* Controls Row */
+			.EH-banking-controls-row {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 20px;
+				margin-top: 15px;
+				flex-wrap: wrap;
+			}
+
+			.EH-banking-control-group {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				flex: 1;
+				min-width: 150px;
+				justify-content: center;
+			}
+
+			.EH-banking-control-slider {
+				width: 100px;
+			}
+
+			.EH-banking-speed-value {
+				font-size: 0.9rem;
+				color: #666;
+				min-width: 35px;
+				text-align: center;
+				font-weight: bold;
+			}
+
+			/* Unified Exercise Styles - EH-exercise-type1-possibilities3- prefix */
+			.EH-exercise-type1-possibilities3-answers-control {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 30px;
+			gap: 20px;
+			}
+
+			.EH-exercise-type1-possibilities3-check-answers-btn {
+			background: #2a5298;
+			color: white;
+			border: none;
+			padding: 12px 25px;
+			border-radius: 20px;
+			cursor: pointer;
+			font-weight: bold;
+			transition: background 0.3s;
+			font-size: 1rem;
+			}
+
+			.EH-exercise-type1-possibilities3-check-answers-btn:hover {
+			background: #1e3c72;
+			}
+
+			.EH-exercise-type1-possibilities3-score-display {
+			background: white;
+			border-radius: 15px;
+			padding: 20px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			display: none;
+			width: 100%;
+			max-width: 500px;
+			}
+
+			.EH-exercise-type1-possibilities3-score-title {
+			font-size: 1.4rem;
+			margin-bottom: 15px;
+			color: #1e3c72;
+			}
+
+			.EH-exercise-type1-possibilities3-score-value {
+			font-size: 2rem;
+			font-weight: bold;
+			color: #2a5298;
+			margin-bottom: 15px;
+			}
+
+			.EH-exercise-type1-possibilities3-score-feedback {
+			font-size: 1.1rem;
+			color: #333;
+			margin-bottom: 15px;
+			}
+
+			.EH-exercise-type1-possibilities3-answer-status {
+			margin-top: 10px;
+			font-size: 0.9rem;
+			padding: 5px 10px;
+			border-radius: 5px;
+			display: inline-block;
+			}
+
+			.EH-exercise-type1-possibilities3-correct-answer {
+			background-color: #d4edda;
+			color: #155724;
+			border: 1px solid #c3e6cb;
+			}
+
+			.EH-exercise-type1-possibilities3-incorrect-answer {
+			background-color: #f8d7da;
+			color: #721c24;
+			border: 1px solid #f5c6cb;
+			}
+
+			.EH-exercise-type1-possibilities3-option.correct {
+			background-color: #d4edda;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #c3e6cb;
+			}
+
+			.EH-exercise-type1-possibilities3-option.incorrect {
+			background-color: #f8d7da;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #f5c6cb;
+			}
+
+			/* Responsive Design */
+			@media (max-width: 768px) {
+            .EH-banking-questions-container,
+            .EH-banking-vocabulary-container,
+            .EH-banking-pronunciation-container {
+			grid-template-columns: 1fr;
+            }
+            .EH-banking-navigation {
+			flex-direction: column;
+			gap: 15px;
+            }
+            .EH-banking-nav-button {
+			width: 100%;
+			justify-content: center;
+            }
+            .EH-banking-controls-row {
+			flex-direction: column;
+			gap: 15px;
+            }
+            .EH-banking-control-group {
+			min-width: 200px;
+            }
+            .EH-banking-progress-container {
+			flex-direction: column;
+			gap: 8px;
+            }
+            .EH-banking-progress-slider {
+			min-width: 100%;
+            }
+			}
+
+			@media (max-width: 480px) {
+            .EH-banking-content {
+			padding: 20px;
+            }
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Language Selector -->
+		<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+			<select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+				<option value="en">English</option>
+				<option value="fr">Français</option>
+				<option value="ar">العربية</option>
+			</select>
+		</div>
+		<div class="EH-site-header">
+			<a href="index.html" class="EH-site-logo-link" data-i18n="common.mainPage" title="Main Page">
+				<img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+			</a>
+			<span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+		</div>
+		<div class="EH-banking-container">
+			<!-- Common Header -->
+			<header class="EH-common-header">
+				<h1 class="EH-common-title" data-i18n="banking.title">Banking and Financial Basics</h1>
+				<p class="EH-common-subtitle" data-i18n="banking.subtitle">Follow Li as she opens her first bank account in a foreign country</p>
+			</header>
+			<div class="EH-banking-content">
+				<!-- Audio Player Section -->
+				<div class="EH-banking-section">
+					<h2 class="EH-banking-section-title" data-i18n="banking.sections.listen">Listen to the Story</h2>
+					<div class="EH-banking-audio-player">
+						<h3 class="EH-banking-audio-title" data-i18n="banking.audio.title">Li's First Bank Account</h3>
+						<div class="EH-banking-audio-controls">
+							<button class="EH-banking-audio-btn" id="EH-banking-play-btn" data-tooltip="Play">
+								▶
+							</button>
+							<button class="EH-banking-audio-btn pause" id="EH-banking-pause-btn" style="display: none;" data-tooltip="Pause">
+								⏸
+							</button>
+							<button class="EH-banking-audio-btn stop" id="EH-banking-stop-btn" data-tooltip="Stop">
+								⏹
+							</button>
+						</div>
+						<!-- Progress Slider -->
+						<div class="EH-banking-progress-container">
+							<span data-i18n="common.progress">Progress:</span>
+							<input type="range" min="0" max="100" value="0" class="EH-banking-progress-slider" id="EH-banking-progress">
+							<span class="EH-banking-time-display" id="EH-banking-time">0:00 / 0:00</span>
+						</div>
+						<!-- Control sliders container -->
+						<div class="EH-banking-controls-row">
+							<!-- Volume Control -->
+							<div class="EH-banking-control-group">
+								<span data-i18n="common.volume">Volume:</span>
+								<input type="range" min="0" max="100" value="80" class="EH-banking-control-slider" id="EH-banking-volume">
+							</div>
+							<!-- Speed Control -->
+							<div class="EH-banking-control-group">
+								<span data-i18n="common.speed">Speed:</span>
+								<input type="range" min="50" max="200" value="100" class="EH-banking-control-slider" id="EH-banking-speed">
+								<span class="EH-banking-speed-value" id="EH-banking-speed-value">1.0x</span>
+							</div>
+						</div>
+						<div class="EH-banking-recording-status" id="EH-banking-audio-status" data-i18n="banking.audio.status.loading">Loading audio...</div>
+					</div>
+				</div>
+				<!-- Story Content Section -->
+				<div class="EH-banking-section">
+					<h2 class="EH-banking-section-title" data-i18n="banking.sections.story">Story Text</h2>
+					<div class="EH-banking-story">
+						<p data-i18n="banking.story.p1">Li had been in the country for two months and needed to open a bank account. Her cash was running low, and she needed a secure place to keep her money. She researched online and decided to visit Global Trust Bank, which had good reviews from other international students.</p>
+						<p data-i18n="banking.story.p2">At the bank, Li approached the information desk. "Hello, I'd like to open a checking account, please," she said nervously. The bank representative smiled warmly and directed her to a personal banker named Mr. Chen.</p>
+						<p data-i18n="banking.story.p3">Mr. Chen welcomed Li to his office. "What type of account are you interested in opening today?" he asked. Li explained that she needed a basic account for daily expenses and receiving money from her family back home.</p>
+						<p data-i18n="banking.story.p4">Mr. Chen explained the different account options. "We have a student account with no monthly fees and a small savings account that earns interest. You'll also need to decide if you want a debit card and online banking access."</p>
+						<p data-i18n="banking.story.p5">Li provided her passport, student visa, and proof of address. Mr. Chen helped her fill out the application forms. "You'll need to make an initial deposit of at least $25 to activate your account," he explained.</p>
+						<p data-i18n="banking.story.p6">After completing the paperwork, Mr. Chen showed Li how to use the bank's mobile app. "You can check your balance, transfer money, and pay bills using this app. We also have online banking if you prefer to use a computer."</p>
+						<p data-i18n="banking.story.p7">Li received her temporary debit card and was told her permanent card would arrive by mail in 7-10 business days. Mr. Chen also explained how to avoid ATM fees and what to do if her card was lost or stolen.</p>
+						<p data-i18n="banking.story.p8">Walking out of the bank, Li felt relieved and more confident. She had successfully opened her first bank account in a new country and now had a safe place to manage her money. She texted her family the good news and felt proud of this important adulting milestone.</p>
+					</div>
+				</div>
+				<!-- Comprehension Questions Section -->
+				<div class="EH-banking-section">
+					<h2 class="EH-banking-section-title" data-i18n="banking.sections.questions">Comprehension Questions</h2>
+					<div class="EH-banking-questions-container">
+						<!-- Question 1 -->
+						<div class="EH-banking-question-card">
+							<div class="EH-banking-question-number">1</div>
+							<p class="EH-banking-question-text" data-i18n="banking.questions.q1">Why did Li need to open a bank account?</p>
+							<div class="EH-banking-options">
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
+									<label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="banking.questions.q1a">To get a credit card</label>
+								</div>
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
+									<label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="banking.questions.q1b">Her cash was running low and she needed a secure place for her money</label>
+								</div>
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
+									<label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="banking.questions.q1c">To get a job at the bank</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
+						</div>
+						<!-- Question 2 -->
+						<div class="EH-banking-question-card">
+							<div class="EH-banking-question-number">2</div>
+							<p class="EH-banking-question-text" data-i18n="banking.questions.q2">What type of account did Mr. Chen recommend for Li?</p>
+							<div class="EH-banking-options">
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
+									<label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="banking.questions.q2a">A business account</label>
+								</div>
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
+									<label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="banking.questions.q2b">A student account with no monthly fees</label>
+								</div>
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
+									<label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="banking.questions.q2c">A premium account with high fees</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
+						</div>
+						<!-- Question 3 -->
+						<div class="EH-banking-question-card">
+							<div class="EH-banking-question-number">3</div>
+							<p class="EH-banking-question-text" data-i18n="banking.questions.q3">What documents did Li need to provide to open the account?</p>
+							<div class="EH-banking-options">
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
+									<label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="banking.questions.q3a">Only her passport</label>
+								</div>
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
+									<label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="banking.questions.q3b">Her passport, student visa, and proof of address</label>
+								</div>
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
+									<label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="banking.questions.q3c">Only her student ID</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
+						</div>
+						<!-- Question 4 -->
+						<div class="EH-banking-question-card">
+							<div class="EH-banking-question-number">4</div>
+							<p class="EH-banking-question-text" data-i18n="banking.questions.q4">What was the minimum initial deposit required?</p>
+							<div class="EH-banking-options">
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
+									<label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="banking.questions.q4a">$100</label>
+								</div>
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
+									<label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="banking.questions.q4b">$25</label>
+								</div>
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
+									<label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="banking.questions.q4c">$50</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
+						</div>
+						<!-- Question 5 -->
+						<div class="EH-banking-question-card">
+							<div class="EH-banking-question-number">5</div>
+							<p class="EH-banking-question-text" data-i18n="banking.questions.q5">How did Li feel after opening her bank account?</p>
+							<div class="EH-banking-options">
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
+									<label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="banking.questions.q5a">Confused and overwhelmed</label>
+								</div>
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
+									<label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="banking.questions.q5b">Relieved and more confident</label>
+								</div>
+								<div class="EH-banking-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
+									<label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="banking.questions.q5c">Disappointed and frustrated</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
+						</div>
+					</div>
+					<!-- Answer Check and Score System -->
+					<div class="EH-exercise-type1-possibilities3-answers-control">
+						<button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers" data-i18n="banking.answers.check">Check Answers</button>
+						<div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+							<h3 class="EH-exercise-type1-possibilities3-score-title" data-i18n="banking.answers.score">Your Score</h3>
+							<div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/5</div>
+							<p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback" data-i18n="banking.answers.feedback.default">Check your answers to see how you did!</p>
+						</div>
+					</div>
+				</div>
+				<!-- Vocabulary Section -->
+				<div class="EH-banking-section">
+					<h2 class="EH-banking-section-title" data-i18n="banking.sections.vocabulary">Vocabulary Cards</h2>
+					<div class="EH-banking-vocabulary-container">
+						<!-- Vocabulary Card 1 -->
+						<div class="EH-banking-vocabulary-card">
+							<div class="EH-banking-vocabulary-word" data-i18n="banking.vocabulary.account">Account</div>
+							<div class="EH-banking-vocabulary-pronunciation" data-i18n="banking.vocabulary.account_pron">/əˈkaʊnt/</div>
+							<div class="EH-banking-vocabulary-definition" data-i18n="banking.vocabulary.account_def">A record of financial transactions with a bank</div>
+							<div class="EH-banking-vocabulary-example" data-i18n="banking.vocabulary.account_ex">"Li opened a checking account at the bank."</div>
+						</div>
+						<!-- Vocabulary Card 2 -->
+						<div class="EH-banking-vocabulary-card">
+							<div class="EH-banking-vocabulary-word" data-i18n="banking.vocabulary.deposit">Deposit</div>
+							<div class="EH-banking-vocabulary-pronunciation" data-i18n="banking.vocabulary.deposit_pron">/dɪˈpɒzɪt/</div>
+							<div class="EH-banking-vocabulary-definition" data-i18n="banking.vocabulary.deposit_def">Money placed into a bank account</div>
+							<div class="EH-banking-vocabulary-example" data-i18n="banking.vocabulary.deposit_ex">"She made an initial deposit of $25 to activate her account."</div>
+						</div>
+						<!-- Vocabulary Card 3 -->
+						<div class="EH-banking-vocabulary-card">
+							<div class="EH-banking-vocabulary-word" data-i18n="banking.vocabulary.debit_card">Debit Card</div>
+							<div class="EH-banking-vocabulary-pronunciation" data-i18n="banking.vocabulary.debit_card_pron">/ˈdɛbɪt kɑːrd/</div>
+							<div class="EH-banking-vocabulary-definition" data-i18n="banking.vocabulary.debit_card_def">A card that allows you to make electronic payments from your bank account</div>
+							<div class="EH-banking-vocabulary-example" data-i18n="banking.vocabulary.debit_card_ex">"Li received her temporary debit card at the bank."</div>
+						</div>
+						<!-- Vocabulary Card 4 -->
+						<div class="EH-banking-vocabulary-card">
+							<div class="EH-banking-vocabulary-word" data-i18n="banking.vocabulary.interest">Interest</div>
+							<div class="EH-banking-vocabulary-pronunciation" data-i18n="banking.vocabulary.interest_pron">/ˈɪntrəst/</div>
+							<div class="EH-banking-vocabulary-definition" data-i18n="banking.vocabulary.interest_def">Money paid regularly at a particular rate for the use of money lent</div>
+							<div class="EH-banking-vocabulary-example" data-i18n="banking.vocabulary.interest_ex">"The savings account earns interest on the money deposited."</div>
+						</div>
+						<!-- Vocabulary Card 5 -->
+						<div class="EH-banking-vocabulary-card">
+							<div class="EH-banking-vocabulary-word" data-i18n="banking.vocabulary.statement">Statement</div>
+							<div class="EH-banking-vocabulary-pronunciation" data-i18n="banking.vocabulary.statement_pron">/ˈsteɪtmənt/</div>
+							<div class="EH-banking-vocabulary-definition" data-i18n="banking.vocabulary.statement_def">A summary of financial transactions during a specific period</div>
+							<div class="EH-banking-vocabulary-example" data-i18n="banking.vocabulary.statement_ex">"She checked her bank statement online each month."</div>
+						</div>
+					</div>
+				</div>
+				<!-- Pronunciation Practice Section -->
+				<div class="EH-banking-section">
+					<h2 class="EH-banking-section-title" data-i18n="banking.sections.pronunciation">Pronunciation Practice</h2>
+					<div class="EH-banking-pronunciation-container">
+						<!-- Pronunciation 1 -->
+						<div class="EH-banking-pronunciation-card">
+							<div class="EH-banking-pronunciation-number">1</div>
+							<p class="EH-banking-pronunciation-text" data-i18n="banking.pronunciation.p1">"I'd like to open a checking account, please."</p>
+							<div class="EH-banking-pronunciation-controls">
+								<button class="EH-banking-pronunciation-btn" data-audio="banking-pronunciation-1-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-banking-pronunciation-btn record" data-audio="banking-pronunciation-1-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-banking-pronunciation-btn play-recorded" data-audio="banking-pronunciation-1-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-banking-recording-status" data-status="banking-pronunciation-1-status"></div>
+						</div>
+						<!-- Pronunciation 2 -->
+						<div class="EH-banking-pronunciation-card">
+							<div class="EH-banking-pronunciation-number">2</div>
+							<p class="EH-banking-pronunciation-text" data-i18n="banking.pronunciation.p2">"What type of account are you interested in?"</p>
+							<div class="EH-banking-pronunciation-controls">
+								<button class="EH-banking-pronunciation-btn" data-audio="banking-pronunciation-2-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-banking-pronunciation-btn record" data-audio="banking-pronunciation-2-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-banking-pronunciation-btn play-recorded" data-audio="banking-pronunciation-2-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-banking-recording-status" data-status="banking-pronunciation-2-status"></div>
+						</div>
+						<!-- Pronunciation 3 -->
+						<div class="EH-banking-pronunciation-card">
+							<div class="EH-banking-pronunciation-number">3</div>
+							<p class="EH-banking-pronunciation-text" data-i18n="banking.pronunciation.p3">"I need to make an initial deposit."</p>
+							<div class="EH-banking-pronunciation-controls">
+								<button class="EH-banking-pronunciation-btn" data-audio="banking-pronunciation-3-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-banking-pronunciation-btn record" data-audio="banking-pronunciation-3-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-banking-pronunciation-btn play-recorded" data-audio="banking-pronunciation-3-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-banking-recording-status" data-status="banking-pronunciation-3-status"></div>
+						</div>
+						<!-- Pronunciation 4 -->
+						<div class="EH-banking-pronunciation-card">
+							<div class="EH-banking-pronunciation-number">4</div>
+							<p class="EH-banking-pronunciation-text" data-i18n="banking.pronunciation.p4">"How do I check my balance online?"</p>
+							<div class="EH-banking-pronunciation-controls">
+								<button class="EH-banking-pronunciation-btn" data-audio="banking-pronunciation-4-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-banking-pronunciation-btn record" data-audio="banking-pronunciation-4-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-banking-pronunciation-btn play-recorded" data-audio="banking-pronunciation-4-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-banking-recording-status" data-status="banking-pronunciation-4-status"></div>
+						</div>
+						<!-- Pronunciation 5 -->
+						<div class="EH-banking-pronunciation-card">
+							<div class="EH-banking-pronunciation-number">5</div>
+							<p class="EH-banking-pronunciation-text" data-i18n="banking.pronunciation.p5">"When will my permanent card arrive?"</p>
+							<div class="EH-banking-pronunciation-controls">
+								<button class="EH-banking-pronunciation-btn" data-audio="banking-pronunciation-5-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-banking-pronunciation-btn record" data-audio="banking-pronunciation-5-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-banking-pronunciation-btn play-recorded" data-audio="banking-pronunciation-5-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-banking-recording-status" data-status="banking-pronunciation-5-status"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Navigation Buttons -->
+				<div class="EH-banking-navigation">
+					<button class="EH-banking-nav-button back" onclick="window.location.href='Eh-general-reading-adventures.html'">
+						← <span data-i18n="common.backToReadingAdventures">Back to Reading Adventures</span>
+					</button>
+					<button class="EH-banking-nav-button" onclick="window.location.href='EH-reading-healthcare.html'">
+						<span data-i18n="common.nextLesson">Next Lesson</span> →
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Common Footer -->
+		<footer class="EH-common-footer">
+			<div class="EH-common-footer-content">
+				<div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-common-footer-links">
+					<a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+					<a href="#" data-i18n="footer.terms">Terms of Service</a>
+					<a href="#" data-i18n="footer.contact">Contact</a>
+				</div>
+			</div>
+		</footer>
+		<!-- i18n translations -->
+		<script src="scripts/translations/i18n_en.js"></script>
+		<script src="scripts/translations/i18n_fr.js"></script>
+		<script src="scripts/translations/i18n_ar.js"></script>
+		<script src="scripts/common-i18n.js"></script>
+		<!-- Include the generic sound library -->
+		<script src="scripts/sound.js"></script>
+		<script src="scripts/exercise.js"></script>
+		<script>
+			// Lesson-specific audio configuration
+			const audioConfig = {
+				'banking-story': 'assets/audio/lessons/category2/lesson3/banking-story.mp3',
+				'banking-pronunciation-1-listen': 'assets/audio/lessons/category2/lesson3/pronunciation-1.mp3',
+				'banking-pronunciation-2-listen': 'assets/audio/lessons/category2/lesson3/pronunciation-2.mp3',
+				'banking-pronunciation-3-listen': 'assets/audio/lessons/category2/lesson3/pronunciation-3.mp3',
+				'banking-pronunciation-4-listen': 'assets/audio/lessons/category2/lesson3/pronunciation-4.mp3',
+				'banking-pronunciation-5-listen': 'assets/audio/lessons/category2/lesson3/pronunciation-5.mp3'
+			};
+			// Correct answers for questions
+			const correctAnswers = {
+				'EH-exercise-type1-possibilities3-q1': 'b', // Her cash was running low and she needed a secure place for her money
+				'EH-exercise-type1-possibilities3-q2': 'b', // A student account with no monthly fees
+				'EH-exercise-type1-possibilities3-q3': 'b', // Her passport, student visa, and proof of address
+				'EH-exercise-type1-possibilities3-q4': 'b', // $25
+				'EH-exercise-type1-possibilities3-q5': 'b'  // Relieved and more confident
+			};
+			// Audio progress tracking
+			let progressInterval;
+			function updateProgressBar(audioKey) {
+				const audio = audioPlayers[audioKey];
+				if (!audio) return;
+				const progressSlider = document.getElementById('EH-banking-progress');
+				const timeDisplay = document.getElementById('EH-banking-time');
+				if (audio.duration) {
+					const progress = (audio.currentTime / audio.duration) * 100;
+					progressSlider.value = progress;
+					// Update time display
+					const currentTime = formatTime(audio.currentTime);
+					const duration = formatTime(audio.duration);
+					timeDisplay.textContent = `${currentTime} / ${duration}`;
+				}
+			}
+			function formatTime(seconds) {
+				const mins = Math.floor(seconds / 60);
+				const secs = Math.floor(seconds % 60);
+				return `${mins}:${secs.toString().padStart(2, '0')}`;
+			}
+			function setupProgressTracking(audioKey) {
+				const audio = audioPlayers[audioKey];
+				if (!audio) return;
+				// Clear any existing interval
+				if (progressInterval) {
+					clearInterval(progressInterval);
+				}
+				// Update progress every 100ms
+				progressInterval = setInterval(() => {
+					updateProgressBar(audioKey);
+				}, 100);
+				// Setup progress slider event
+				const progressSlider = document.getElementById('EH-banking-progress');
+				progressSlider.addEventListener('input', function() {
+					if (audio.duration) {
+						const seekTime = (this.value / 100) * audio.duration;
+						audio.currentTime = seekTime;
+					}
+				});
+				// Reset when audio ends
+				audio.addEventListener('ended', function() {
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					progressSlider.value = 0;
+					document.getElementById('EH-banking-time').textContent = '0:00 / ' + formatTime(audio.duration);
+				});
+			}
+			function setupSpeedControl() {
+				const speedSlider = document.getElementById('EH-banking-speed');
+				const speedValue = document.getElementById('EH-banking-speed-value');
+				speedSlider.addEventListener('input', function() {
+					const speed = this.value / 100;
+					speedValue.textContent = speed.toFixed(1) + 'x';
+					// Apply speed to all audio players
+					for (const key in audioPlayers) {
+						if (audioPlayers[key]) {
+							audioPlayers[key].playbackRate = speed;
+						}
+					}
+				});
+			}
+			// Initialize when DOM is loaded
+			document.addEventListener('DOMContentLoaded', function() {
+				// Initialize audio players with lesson-specific config
+				initAudioPlayers(audioConfig);
+				// Set up main story audio controls
+				// Set up main story audio controls
+document.getElementById('EH-banking-play-btn').addEventListener('click', function() {
+    playAudio('banking-story');
+    setupProgressTracking('banking-story');
+    // Show pause button, hide play button
+    document.getElementById('EH-banking-play-btn').style.display = 'none';
+    document.getElementById('EH-banking-pause-btn').style.display = 'flex';
+});
+
+document.getElementById('EH-banking-pause-btn').addEventListener('click', function() {
+    pauseAudio('banking-story');
+    if (progressInterval) {
+        clearInterval(progressInterval);
+    }
+    // Show play button, hide pause button
+    document.getElementById('EH-banking-play-btn').style.display = 'flex';
+    document.getElementById('EH-banking-pause-btn').style.display = 'none';
+});
+
+document.getElementById('EH-banking-stop-btn').addEventListener('click', function() {
+    stopAudio('banking-story');
+    if (progressInterval) {
+        clearInterval(progressInterval);
+    }
+    document.getElementById('EH-banking-progress').value = 0;
+    document.getElementById('EH-banking-time').textContent = '0:00 / 0:00';
+    // Show play button, hide pause button
+    document.getElementById('EH-banking-play-btn').style.display = 'flex';
+    document.getElementById('EH-banking-pause-btn').style.display = 'none';
+});
+				document.getElementById('EH-banking-volume').addEventListener('input', function() {
+					setGlobalVolume(this.value);
+				});
+				// Setup speed control
+				setupSpeedControl();
+				// Set up pronunciation practice listeners
+				setupPronunciationListeners();
+				// Set up answer checking
+				ExerciseType1Possibilities3Init(correctAnswers, Object.keys(correctAnswers).length, 'EH-exercise-type1-possibilities3');
+				// Initialize with default volume
+				setGlobalVolume(80);
+			});
+		</script>
+	</body>
+</html>

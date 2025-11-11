@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Healthcare Navigation - Reading Adventures</title>
+		<!-- Common CSS -->
+		<link rel="stylesheet" href="styles/common.css">
+		<style>
+			/* Reset and Base Styles */
+			* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+			body {
+            background: linear-gradient(135deg, #1a6c5c, #2d8c7a, #4db6ac);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+			}
+			/* Healthcare Lesson Specific Styles */
+			.EH-healthcare-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+			}
+			.EH-healthcare-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+			}
+			.EH-healthcare-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+			}
+			.EH-healthcare-section-title {
+            font-size: 1.8rem;
+            color: #1a6c5c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4db6ac;
+			}
+			/* Audio Player Styles */
+			.EH-healthcare-audio-player {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+            border: 2px solid #2d8c7a;
+			}
+			.EH-healthcare-audio-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #1a6c5c;
+			}
+			.EH-healthcare-audio-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+			}
+			.EH-healthcare-audio-btn {
+            background: #2d8c7a;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1.2rem;
+            position: relative;
+			}
+			.EH-healthcare-audio-btn:hover {
+            background: #1a6c5c;
+			}
+			.EH-healthcare-audio-btn:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            z-index: 10;
+			}
+			.EH-healthcare-audio-btn.stop {
+            background: #e57373;
+			}
+			.EH-healthcare-audio-btn.stop:hover {
+            background: #ef5350;
+			}
+			.EH-healthcare-audio-btn.pause {
+            background: #4db6ac;
+			}
+			.EH-healthcare-audio-btn.pause:hover {
+            background: #26a69a;
+			}
+			.EH-healthcare-volume-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+			}
+			.EH-healthcare-volume-slider {
+            width: 150px;
+			}
+			/* Story Content Styles */
+			.EH-healthcare-story {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #333;
+			}
+			.EH-healthcare-story p {
+            margin-bottom: 15px;
+			}
+			/* Comprehension Questions Styles */
+			.EH-healthcare-questions-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+			}
+			.EH-healthcare-question-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+			}
+			.EH-healthcare-question-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+			}
+			.EH-healthcare-question-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #2d8c7a, #4db6ac);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+			}
+			.EH-healthcare-question-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #333;
+			}
+			.EH-healthcare-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+			}
+			.EH-healthcare-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+			}
+			.EH-healthcare-option input {
+            cursor: pointer;
+			}
+			.EH-healthcare-option label {
+            cursor: pointer;
+			}
+			/* Vocabulary Cards Styles */
+			.EH-healthcare-vocabulary-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+			}
+			.EH-healthcare-vocabulary-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+			}
+			.EH-healthcare-vocabulary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+			}
+			.EH-healthcare-vocabulary-word {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1a6c5c;
+			}
+			.EH-healthcare-vocabulary-pronunciation {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+			}
+			.EH-healthcare-vocabulary-definition {
+            margin-bottom: 15px;
+            color: #333;
+            flex: 1;
+			}
+			.EH-healthcare-vocabulary-example {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            font-style: italic;
+            color: #555;
+			}
+			/* Pronunciation Practice Styles */
+			.EH-healthcare-pronunciation-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+			}
+			.EH-healthcare-pronunciation-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+			}
+			.EH-healthcare-pronunciation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+			}
+			.EH-healthcare-pronunciation-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #e57373, #ef5350);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+			}
+			.EH-healthcare-pronunciation-text {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: center;
+			}
+			.EH-healthcare-pronunciation-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+			}
+			.EH-healthcare-pronunciation-btn {
+            background: #2d8c7a;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+			}
+			.EH-healthcare-pronunciation-btn:hover {
+            background: #1a6c5c;
+			}
+			.EH-healthcare-pronunciation-btn:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            z-index: 10;
+			}
+			.EH-healthcare-pronunciation-btn.record {
+            background: #e57373;
+			}
+			.EH-healthcare-pronunciation-btn.record:hover {
+            background: #ef5350;
+			}
+			.EH-healthcare-pronunciation-btn.recording {
+            background: #f44336;
+            animation: pulse 1.5s infinite;
+			}
+			@keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+			}
+			.EH-healthcare-pronunciation-btn.play-recorded {
+            background: #4db6ac;
+			}
+			.EH-healthcare-pronunciation-btn.play-recorded:hover {
+            background: #26a69a;
+			}
+			/* Recording status indicator */
+			.EH-healthcare-recording-status {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+			}
+			.EH-healthcare-recording-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #f44336;
+            border-radius: 50%;
+            margin-right: 5px;
+            animation: blink 1s infinite;
+			}
+			@keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+			}
+			/* Navigation Buttons */
+			.EH-healthcare-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+			}
+			.EH-healthcare-nav-button {
+            background: #2d8c7a;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+			}
+			.EH-healthcare-nav-button:hover {
+            background: #1a6c5c;
+			}
+			.EH-healthcare-nav-button.back {
+            background: #e57373;
+			}
+			.EH-healthcare-nav-button.back:hover {
+            background: #ef5350;
+			}
+			/* Progress Slider Styles */
+			.EH-healthcare-progress-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            margin: 15px 0;
+            width: 100%;
+            flex-wrap: wrap;
+			}
+			.EH-healthcare-progress-slider {
+            flex: 1;
+            min-width: 200px;
+            max-width: 400px;
+			}
+			.EH-healthcare-time-display {
+            font-size: 0.9rem;
+            color: #666;
+            min-width: 80px;
+            text-align: center;
+			}
+			/* Controls Row */
+			.EH-healthcare-controls-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+			}
+			.EH-healthcare-control-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            min-width: 150px;
+            justify-content: center;
+			}
+			.EH-healthcare-control-slider {
+            width: 100px;
+			}
+			.EH-healthcare-speed-value {
+            font-size: 0.9rem;
+            color: #666;
+            min-width: 35px;
+            text-align: center;
+            font-weight: bold;
+			}
+			/* Unified Exercise Styles - EH-exercise-type1-possibilities3- prefix */
+			.EH-exercise-type1-possibilities3-answers-control {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 30px;
+			gap: 20px;
+			}
+			.EH-exercise-type1-possibilities3-check-answers-btn {
+			background: #2d8c7a;
+			color: white;
+			border: none;
+			padding: 12px 25px;
+			border-radius: 20px;
+			cursor: pointer;
+			font-weight: bold;
+			transition: background 0.3s;
+			font-size: 1rem;
+			}
+			.EH-exercise-type1-possibilities3-check-answers-btn:hover {
+			background: #1a6c5c;
+			}
+			.EH-exercise-type1-possibilities3-score-display {
+			background: white;
+			border-radius: 15px;
+			padding: 20px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			display: none;
+			width: 100%;
+			max-width: 500px;
+			}
+			.EH-exercise-type1-possibilities3-score-title {
+			font-size: 1.4rem;
+			margin-bottom: 15px;
+			color: #1a6c5c;
+			}
+			.EH-exercise-type1-possibilities3-score-value {
+			font-size: 2rem;
+			font-weight: bold;
+			color: #2d8c7a;
+			margin-bottom: 15px;
+			}
+			.EH-exercise-type1-possibilities3-score-feedback {
+			font-size: 1.1rem;
+			color: #333;
+			margin-bottom: 15px;
+			}
+			.EH-exercise-type1-possibilities3-answer-status {
+			margin-top: 10px;
+			font-size: 0.9rem;
+			padding: 5px 10px;
+			border-radius: 5px;
+			display: inline-block;
+			}
+			.EH-exercise-type1-possibilities3-correct-answer {
+			background-color: #d4edda;
+			color: #155724;
+			border: 1px solid #c3e6cb;
+			}
+			.EH-exercise-type1-possibilities3-incorrect-answer {
+			background-color: #f8d7da;
+			color: #721c24;
+			border: 1px solid #f5c6cb;
+			}
+			.EH-exercise-type1-possibilities3-option.correct {
+			background-color: #d4edda;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #c3e6cb;
+			}
+			.EH-exercise-type1-possibilities3-option.incorrect {
+			background-color: #f8d7da;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #f5c6cb;
+			}
+			/* Responsive Design */
+			@media (max-width: 768px) {
+            .EH-healthcare-questions-container,
+            .EH-healthcare-vocabulary-container,
+            .EH-healthcare-pronunciation-container {
+			grid-template-columns: 1fr;
+            }
+            .EH-healthcare-navigation {
+			flex-direction: column;
+			gap: 15px;
+            }
+            .EH-healthcare-nav-button {
+			width: 100%;
+			justify-content: center;
+            }
+            .EH-healthcare-controls-row {
+			flex-direction: column;
+			gap: 15px;
+            }
+            .EH-healthcare-control-group {
+			min-width: 200px;
+            }
+            .EH-healthcare-progress-container {
+			flex-direction: column;
+			gap: 8px;
+            }
+            .EH-healthcare-progress-slider {
+			min-width: 100%;
+            }
+			}
+			@media (max-width: 480px) {
+            .EH-healthcare-content {
+			padding: 20px;
+            }
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Language Selector -->
+		<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+			<select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+				<option value="en">English</option>
+				<option value="fr">Français</option>
+				<option value="ar">العربية</option>
+			</select>
+		</div>
+		<div class="EH-site-header">
+			<a href="index.html" class="EH-site-logo-link" data-i18n="common.mainPage" title="Main Page">
+				<img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+			</a>
+			<span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+		</div>
+		<div class="EH-healthcare-container">
+			<!-- Common Header -->
+			<header class="EH-common-header">
+				<h1 class="EH-common-title" data-i18n="healthcare.title">Healthcare Navigation</h1>
+				<p class="EH-common-subtitle" data-i18n="healthcare.subtitle">Join Carlos as he visits a doctor in a new country</p>
+			</header>
+			<div class="EH-healthcare-content">
+				<!-- Audio Player Section -->
+				<div class="EH-healthcare-section">
+					<h2 class="EH-healthcare-section-title" data-i18n="healthcare.sections.listen">Listen to the Story</h2>
+					<div class="EH-healthcare-audio-player">
+						<h3 class="EH-healthcare-audio-title" data-i18n="healthcare.audio.title">Carlos's Doctor Visit</h3>
+						<div class="EH-healthcare-audio-controls">
+							<button class="EH-healthcare-audio-btn" id="EH-healthcare-play-btn" data-tooltip="Play">
+								▶
+							</button>
+							<button class="EH-healthcare-audio-btn pause" id="EH-healthcare-pause-btn" style="display: none;" data-tooltip="Pause">
+								⏸
+							</button>
+							<button class="EH-healthcare-audio-btn stop" id="EH-healthcare-stop-btn" data-tooltip="Stop">
+								⏹
+							</button>
+						</div>
+						<!-- Progress Slider -->
+						<div class="EH-healthcare-progress-container">
+							<span data-i18n="common.progress">Progress:</span>
+							<input type="range" min="0" max="100" value="0" class="EH-healthcare-progress-slider" id="EH-healthcare-progress">
+							<span class="EH-healthcare-time-display" id="EH-healthcare-time">0:00 / 0:00</span>
+						</div>
+						<!-- Control sliders container -->
+						<div class="EH-healthcare-controls-row">
+							<!-- Volume Control -->
+							<div class="EH-healthcare-control-group">
+								<span data-i18n="common.volume">Volume:</span>
+								<input type="range" min="0" max="100" value="80" class="EH-healthcare-control-slider" id="EH-healthcare-volume">
+							</div>
+							<!-- Speed Control -->
+							<div class="EH-healthcare-control-group">
+								<span data-i18n="common.speed">Speed:</span>
+								<input type="range" min="50" max="200" value="100" class="EH-healthcare-control-slider" id="EH-healthcare-speed">
+								<span class="EH-healthcare-speed-value" id="EH-healthcare-speed-value">1.0x</span>
+							</div>
+						</div>
+						<div class="EH-healthcare-recording-status" id="EH-healthcare-audio-status" data-i18n="healthcare.audio.status.loading">Loading audio...</div>
+					</div>
+				</div>
+				<!-- Story Content Section -->
+				<div class="EH-healthcare-section">
+					<h2 class="EH-healthcare-section-title" data-i18n="healthcare.sections.story">Story Text</h2>
+					<div class="EH-healthcare-story">
+						<p data-i18n="healthcare.story.p1">Carlos woke up feeling unwell. He had a persistent cough and fever, and decided it was time to see a doctor. Since he was new to the country, he wasn't sure how the healthcare system worked.</p>
+						<p data-i18n="healthcare.story.p2">He found a nearby clinic and made an appointment. When he arrived, he approached the reception desk. "Hello, I have an appointment at 10 AM. My name is Carlos Rodriguez," he said.</p>
+						<p data-i18n="healthcare.story.p3">The receptionist asked for his health insurance card and identification. Carlos provided his documents and filled out a patient information form, listing his symptoms and medical history.</p>
+						<p data-i18n="healthcare.story.p4">After a short wait in the waiting room, a nurse called his name. She took his temperature, blood pressure, and asked about his symptoms. "The doctor will see you shortly," she said.</p>
+						<p data-i18n="healthcare.story.p5">Dr. Thompson greeted Carlos warmly. "What seems to be the problem today?" she asked. Carlos explained his symptoms - the cough, fever, and general fatigue he'd been experiencing for three days.</p>
+						<p data-i18n="healthcare.story.p6">After examining him, Dr. Thompson said, "You have a respiratory infection. I'm going to prescribe antibiotics. It's important to take them exactly as directed and complete the full course."</p>
+						<p data-i18n="healthcare.story.p7">Dr. Thompson also advised Carlos to rest, drink plenty of fluids, and use over-the-counter medication for his fever. She explained how to use the prescription and what side effects to watch for.</p>
+						<p data-i18n="healthcare.story.p8">Carlos went to the pharmacy, where the pharmacist explained the medication instructions clearly. A week later, Carlos felt much better and was grateful for the efficient and caring healthcare he received.</p>
+					</div>
+				</div>
+				<!-- Comprehension Questions Section -->
+				<div class="EH-healthcare-section">
+					<h2 class="EH-healthcare-section-title" data-i18n="healthcare.sections.questions">Comprehension Questions</h2>
+					<div class="EH-healthcare-questions-container">
+						<!-- Question 1 -->
+						<div class="EH-healthcare-question-card">
+							<div class="EH-healthcare-question-number">1</div>
+							<p class="EH-healthcare-question-text" data-i18n="healthcare.questions.q1">Why did Carlos decide to see a doctor?</p>
+							<div class="EH-healthcare-options">
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
+									<label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="healthcare.questions.q1a">For a routine check-up</label>
+								</div>
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
+									<label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="healthcare.questions.q1b">He had a cough and fever</label>
+								</div>
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
+									<label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="healthcare.questions.q1c">To get a vaccination</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
+						</div>
+						<!-- Question 2 -->
+						<div class="EH-healthcare-question-card">
+							<div class="EH-healthcare-question-number">2</div>
+							<p class="EH-healthcare-question-text" data-i18n="healthcare.questions.q2">What did the receptionist ask for when Carlos arrived?</p>
+							<div class="EH-healthcare-options">
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
+									<label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="healthcare.questions.q2a">Only his name</label>
+								</div>
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
+									<label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="healthcare.questions.q2b">Health insurance and identification</label>
+								</div>
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
+									<label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="healthcare.questions.q2c">Payment in advance</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
+						</div>
+						<!-- Question 3 -->
+						<div class="EH-healthcare-question-card">
+							<div class="EH-healthcare-question-number">3</div>
+							<p class="EH-healthcare-question-text" data-i18n="healthcare.questions.q3">What did the nurse do before Carlos saw the doctor?</p>
+							<div class="EH-healthcare-options">
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
+									<label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="healthcare.questions.q3a">Gave him medication</label>
+								</div>
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
+									<label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="healthcare.questions.q3b">Took his temperature and blood pressure</label>
+								</div>
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
+									<label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="healthcare.questions.q3c">Scheduled his next appointment</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
+						</div>
+						<!-- Question 4 -->
+						<div class="EH-healthcare-question-card">
+							<div class="EH-healthcare-question-number">4</div>
+							<p class="EH-healthcare-question-text" data-i18n="healthcare.questions.q4">What was Dr. Thompson's diagnosis?</p>
+							<div class="EH-healthcare-options">
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
+									<label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="healthcare.questions.q4a">A common cold</label>
+								</div>
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
+									<label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="healthcare.questions.q4b">A respiratory infection</label>
+								</div>
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
+									<label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="healthcare.questions.q4c">Allergies</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
+						</div>
+						<!-- Question 5 -->
+						<div class="EH-healthcare-question-card">
+							<div class="EH-healthcare-question-number">5</div>
+							<p class="EH-healthcare-question-text" data-i18n="healthcare.questions.q5">What advice did Dr. Thompson give Carlos besides taking antibiotics?</p>
+							<div class="EH-healthcare-options">
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
+									<label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="healthcare.questions.q5a">To exercise more</label>
+								</div>
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
+									<label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="healthcare.questions.q5b">To rest and drink fluids</label>
+								</div>
+								<div class="EH-healthcare-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
+									<label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="healthcare.questions.q5c">To avoid all medication</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
+						</div>
+					</div>
+					<!-- Answer Check and Score System -->
+					<div class="EH-exercise-type1-possibilities3-answers-control">
+						<button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers" data-i18n="healthcare.answers.check">Check Answers</button>
+						<div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+							<h3 class="EH-exercise-type1-possibilities3-score-title" data-i18n="healthcare.answers.score">Your Score</h3>
+							<div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/5</div>
+							<p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback" data-i18n="healthcare.answers.feedback.default">Check your answers to see how you did!</p>
+						</div>
+					</div>
+				</div>
+				<!-- Vocabulary Section -->
+				<div class="EH-healthcare-section">
+					<h2 class="EH-healthcare-section-title" data-i18n="healthcare.sections.vocabulary">Vocabulary Cards</h2>
+					<div class="EH-healthcare-vocabulary-container">
+						<!-- Vocabulary Card 1 -->
+						<div class="EH-healthcare-vocabulary-card">
+							<div class="EH-healthcare-vocabulary-word" data-i18n="healthcare.vocabulary.clinic">Clinic</div>
+							<div class="EH-healthcare-vocabulary-pronunciation" data-i18n="healthcare.vocabulary.clinic_pron">/ˈklɪnɪk/</div>
+							<div class="EH-healthcare-vocabulary-definition" data-i18n="healthcare.vocabulary.clinic_def">A healthcare facility for outpatient care</div>
+							<div class="EH-healthcare-vocabulary-example" data-i18n="healthcare.vocabulary.clinic_ex">"Carlos visited the clinic for his appointment."</div>
+						</div>
+						<!-- Vocabulary Card 2 -->
+						<div class="EH-healthcare-vocabulary-card">
+							<div class="EH-healthcare-vocabulary-word" data-i18n="healthcare.vocabulary.symptoms">Symptoms</div>
+							<div class="EH-healthcare-vocabulary-pronunciation" data-i18n="healthcare.vocabulary.symptoms_pron">/ˈsɪmptəmz/</div>
+							<div class="EH-healthcare-vocabulary-definition" data-i18n="healthcare.vocabulary.symptoms_def">Signs of illness or disease</div>
+							<div class="EH-healthcare-vocabulary-example" data-i18n="healthcare.vocabulary.symptoms_ex">"Carlos described his symptoms to the doctor."</div>
+						</div>
+						<!-- Vocabulary Card 3 -->
+						<div class="EH-healthcare-vocabulary-card">
+							<div class="EH-healthcare-vocabulary-word" data-i18n="healthcare.vocabulary.prescription">Prescription</div>
+							<div class="EH-healthcare-vocabulary-pronunciation" data-i18n="healthcare.vocabulary.prescription_pron">/prɪˈskrɪpʃən/</div>
+							<div class="EH-healthcare-vocabulary-definition" data-i18n="healthcare.vocabulary.prescription_def">A doctor's written order for medication</div>
+							<div class="EH-healthcare-vocabulary-example" data-i18n="healthcare.vocabulary.prescription_ex">"Dr. Thompson wrote a prescription for antibiotics."</div>
+						</div>
+						<!-- Vocabulary Card 4 -->
+						<div class="EH-healthcare-vocabulary-card">
+							<div class="EH-healthcare-vocabulary-word" data-i18n="healthcare.vocabulary.pharmacist">Pharmacist</div>
+							<div class="EH-healthcare-vocabulary-pronunciation" data-i18n="healthcare.vocabulary.pharmacist_pron">/ˈfɑːrməsɪst/</div>
+							<div class="EH-healthcare-vocabulary-definition" data-i18n="healthcare.vocabulary.pharmacist_def">A healthcare professional who dispenses medication</div>
+							<div class="EH-healthcare-vocabulary-example" data-i18n="healthcare.vocabulary.pharmacist_ex">"The pharmacist explained how to take the medicine."</div>
+						</div>
+						<!-- Vocabulary Card 5 -->
+						<div class="EH-healthcare-vocabulary-card">
+							<div class="EH-healthcare-vocabulary-word" data-i18n="healthcare.vocabulary.antibiotics">Antibiotics</div>
+							<div class="EH-healthcare-vocabulary-pronunciation" data-i18n="healthcare.vocabulary.antibiotics_pron">/ˌæntibaɪˈɒtɪks/</div>
+							<div class="EH-healthcare-vocabulary-definition" data-i18n="healthcare.vocabulary.antibiotics_def">Medications that treat bacterial infections</div>
+							<div class="EH-healthcare-vocabulary-example" data-i18n="healthcare.vocabulary.antibiotics_ex">"Carlos took antibiotics for his infection."</div>
+						</div>
+					</div>
+				</div>
+				<!-- Pronunciation Practice Section -->
+				<div class="EH-healthcare-section">
+					<h2 class="EH-healthcare-section-title" data-i18n="healthcare.sections.pronunciation">Pronunciation Practice</h2>
+					<div class="EH-healthcare-pronunciation-container">
+						<!-- Pronunciation 1 -->
+						<div class="EH-healthcare-pronunciation-card">
+							<div class="EH-healthcare-pronunciation-number">1</div>
+							<p class="EH-healthcare-pronunciation-text" data-i18n="healthcare.pronunciation.p1">"I have an appointment at 10 AM."</p>
+							<div class="EH-healthcare-pronunciation-controls">
+								<button class="EH-healthcare-pronunciation-btn" data-audio="healthcare-pronunciation-1-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-healthcare-pronunciation-btn record" data-audio="healthcare-pronunciation-1-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-healthcare-pronunciation-btn play-recorded" data-audio="healthcare-pronunciation-1-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-healthcare-recording-status" data-status="healthcare-pronunciation-1-status"></div>
+						</div>
+						<!-- Pronunciation 2 -->
+						<div class="EH-healthcare-pronunciation-card">
+							<div class="EH-healthcare-pronunciation-number">2</div>
+							<p class="EH-healthcare-pronunciation-text" data-i18n="healthcare.pronunciation.p2">"I've been feeling unwell for three days."</p>
+							<div class="EH-healthcare-pronunciation-controls">
+								<button class="EH-healthcare-pronunciation-btn" data-audio="healthcare-pronunciation-2-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-healthcare-pronunciation-btn record" data-audio="healthcare-pronunciation-2-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-healthcare-pronunciation-btn play-recorded" data-audio="healthcare-pronunciation-2-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-healthcare-recording-status" data-status="healthcare-pronunciation-2-status"></div>
+						</div>
+						<!-- Pronunciation 3 -->
+						<div class="EH-healthcare-pronunciation-card">
+							<div class="EH-healthcare-pronunciation-number">3</div>
+							<p class="EH-healthcare-pronunciation-text" data-i18n="healthcare.pronunciation.p3">"Could you explain how to take this medication?"</p>
+							<div class="EH-healthcare-pronunciation-controls">
+								<button class="EH-healthcare-pronunciation-btn" data-audio="healthcare-pronunciation-3-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-healthcare-pronunciation-btn record" data-audio="healthcare-pronunciation-3-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-healthcare-pronunciation-btn play-recorded" data-audio="healthcare-pronunciation-3-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-healthcare-recording-status" data-status="healthcare-pronunciation-3-status"></div>
+						</div>
+						<!-- Pronunciation 4 -->
+						<div class="EH-healthcare-pronunciation-card">
+							<div class="EH-healthcare-pronunciation-number">4</div>
+							<p class="EH-healthcare-pronunciation-text" data-i18n="healthcare.pronunciation.p4">"I need to complete the full course of antibiotics."</p>
+							<div class="EH-healthcare-pronunciation-controls">
+								<button class="EH-healthcare-pronunciation-btn" data-audio="healthcare-pronunciation-4-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-healthcare-pronunciation-btn record" data-audio="healthcare-pronunciation-4-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-healthcare-pronunciation-btn play-recorded" data-audio="healthcare-pronunciation-4-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-healthcare-recording-status" data-status="healthcare-pronunciation-4-status"></div>
+						</div>
+						<!-- Pronunciation 5 -->
+						<div class="EH-healthcare-pronunciation-card">
+							<div class="EH-healthcare-pronunciation-number">5</div>
+							<p class="EH-healthcare-pronunciation-text" data-i18n="healthcare.pronunciation.p5">"Thank you for your help and explanation."</p>
+							<div class="EH-healthcare-pronunciation-controls">
+								<button class="EH-healthcare-pronunciation-btn" data-audio="healthcare-pronunciation-5-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-healthcare-pronunciation-btn record" data-audio="healthcare-pronunciation-5-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-healthcare-pronunciation-btn play-recorded" data-audio="healthcare-pronunciation-5-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-healthcare-recording-status" data-status="healthcare-pronunciation-5-status"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Navigation Buttons -->
+				<div class="EH-healthcare-navigation">
+					<button class="EH-healthcare-nav-button back" onclick="window.location.href='Eh-general-reading-adventures.html'">
+						← <span data-i18n="common.backToReadingAdventures">Back to Reading Adventures</span>
+					</button>
+					<button class="EH-healthcare-nav-button" onclick="window.location.href='EH-reading-transport.html'">
+						<span data-i18n="common.nextLesson">Next Lesson</span> →
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Common Footer -->
+		<footer class="EH-common-footer">
+			<div class="EH-common-footer-content">
+				<div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-common-footer-links">
+					<a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+					<a href="#" data-i18n="footer.terms">Terms of Service</a>
+					<a href="#" data-i18n="footer.contact">Contact</a>
+				</div>
+			</div>
+		</footer>
+		<!-- i18n translations -->
+		<script src="scripts/translations/i18n_en.js"></script>
+		<script src="scripts/translations/i18n_fr.js"></script>
+		<script src="scripts/translations/i18n_ar.js"></script>
+		<script src="scripts/common-i18n.js"></script>
+		<!-- Include the generic sound library -->
+		<script src="scripts/sound.js"></script>
+		<script src="scripts/exercise.js"></script>
+		<script>
+			// Lesson-specific audio configuration
+			const audioConfig = {
+				'healthcare-story': 'assets/audio/lessons/category2/lesson4/healthcare-story.mp3',
+				'healthcare-pronunciation-1-listen': 'assets/audio/lessons/category2/lesson4/pronunciation-1.mp3',
+				'healthcare-pronunciation-2-listen': 'assets/audio/lessons/category2/lesson4/pronunciation-2.mp3',
+				'healthcare-pronunciation-3-listen': 'assets/audio/lessons/category2/lesson4/pronunciation-3.mp3',
+				'healthcare-pronunciation-4-listen': 'assets/audio/lessons/category2/lesson4/pronunciation-4.mp3',
+				'healthcare-pronunciation-5-listen': 'assets/audio/lessons/category2/lesson4/pronunciation-5.mp3'
+			};
+			// Correct answers for questions
+			const correctAnswers = {
+				'EH-exercise-type1-possibilities3-q1': 'b', // He had a cough and fever
+				'EH-exercise-type1-possibilities3-q2': 'b', // Health insurance and identification
+				'EH-exercise-type1-possibilities3-q3': 'b', // Took his temperature and blood pressure
+				'EH-exercise-type1-possibilities3-q4': 'b', // A respiratory infection
+				'EH-exercise-type1-possibilities3-q5': 'b'  // To rest and drink fluids
+			};
+			// Audio progress tracking
+			let progressInterval;
+			function updateProgressBar(audioKey) {
+				const audio = audioPlayers[audioKey];
+				if (!audio) return;
+				const progressSlider = document.getElementById('EH-healthcare-progress');
+				const timeDisplay = document.getElementById('EH-healthcare-time');
+				if (audio.duration) {
+					const progress = (audio.currentTime / audio.duration) * 100;
+					progressSlider.value = progress;
+					// Update time display
+					const currentTime = formatTime(audio.currentTime);
+					const duration = formatTime(audio.duration);
+					timeDisplay.textContent = `${currentTime} / ${duration}`;
+				}
+			}
+			function formatTime(seconds) {
+				const mins = Math.floor(seconds / 60);
+				const secs = Math.floor(seconds % 60);
+				return `${mins}:${secs.toString().padStart(2, '0')}`;
+			}
+			function setupProgressTracking(audioKey) {
+				const audio = audioPlayers[audioKey];
+				if (!audio) return;
+				// Clear any existing interval
+				if (progressInterval) {
+					clearInterval(progressInterval);
+				}
+				// Update progress every 100ms
+				progressInterval = setInterval(() => {
+					updateProgressBar(audioKey);
+				}, 100);
+				// Setup progress slider event
+				const progressSlider = document.getElementById('EH-healthcare-progress');
+				progressSlider.addEventListener('input', function() {
+					if (audio.duration) {
+						const seekTime = (this.value / 100) * audio.duration;
+						audio.currentTime = seekTime;
+					}
+				});
+				// Reset when audio ends
+				audio.addEventListener('ended', function() {
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					progressSlider.value = 0;
+					document.getElementById('EH-healthcare-time').textContent = '0:00 / ' + formatTime(audio.duration);
+				});
+			}
+			function setupSpeedControl() {
+				const speedSlider = document.getElementById('EH-healthcare-speed');
+				const speedValue = document.getElementById('EH-healthcare-speed-value');
+				speedSlider.addEventListener('input', function() {
+					const speed = this.value / 100;
+					speedValue.textContent = speed.toFixed(1) + 'x';
+					// Apply speed to all audio players
+					for (const key in audioPlayers) {
+						if (audioPlayers[key]) {
+							audioPlayers[key].playbackRate = speed;
+						}
+					}
+				});
+			}
+			// Initialize when DOM is loaded
+			document.addEventListener('DOMContentLoaded', function() {
+				// Initialize audio players with lesson-specific config
+				initAudioPlayers(audioConfig);
+				// Set up main story audio controls
+document.getElementById('EH-healthcare-play-btn').addEventListener('click', function() {
+    playAudio('healthcare-story');
+    setupProgressTracking('healthcare-story');
+    // Show pause button, hide play button
+    document.getElementById('EH-healthcare-play-btn').style.display = 'none';
+    document.getElementById('EH-healthcare-pause-btn').style.display = 'flex';
+});
+
+document.getElementById('EH-healthcare-pause-btn').addEventListener('click', function() {
+    pauseAudio('healthcare-story');
+    if (progressInterval) {
+        clearInterval(progressInterval);
+    }
+    // Show play button, hide pause button
+    document.getElementById('EH-healthcare-play-btn').style.display = 'flex';
+    document.getElementById('EH-healthcare-pause-btn').style.display = 'none';
+});
+
+document.getElementById('EH-healthcare-stop-btn').addEventListener('click', function() {
+    stopAudio('healthcare-story');
+    if (progressInterval) {
+        clearInterval(progressInterval);
+    }
+    document.getElementById('EH-healthcare-progress').value = 0;
+    document.getElementById('EH-healthcare-time').textContent = '0:00 / 0:00';
+    // Show play button, hide pause button
+    document.getElementById('EH-healthcare-play-btn').style.display = 'flex';
+    document.getElementById('EH-healthcare-pause-btn').style.display = 'none';
+});
+				document.getElementById('EH-healthcare-volume').addEventListener('input', function() {
+					setGlobalVolume(this.value);
+				});
+				// Setup speed control
+				setupSpeedControl();
+				// Set up pronunciation practice listeners
+				setupPronunciationListeners();
+				// Set up answer checking
+				ExerciseType1Possibilities3Init(correctAnswers, Object.keys(correctAnswers).length, 'EH-exercise-type1-possibilities3');
+				// Initialize with default volume
+				setGlobalVolume(80);
+			});
+		</script>
+	</body>
+</html>

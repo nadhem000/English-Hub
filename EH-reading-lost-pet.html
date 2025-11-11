@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>The Lost Pet Adventure - Reading Adventures</title>
+		<!-- Common CSS -->
+		<link rel="stylesheet" href="styles/common.css">
+		<style>
+			/* Reset and Base Styles */
+			* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+			body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+			}
+			/* Lost Pet Lesson Specific Styles */
+			.EH-lostpet-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+			}
+			.EH-lostpet-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            border: 5px solid #ffd1dc;
+			}
+			.EH-lostpet-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px dashed #ff9a9e;
+			}
+			.EH-lostpet-section-title {
+            font-size: 1.8rem;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ffd1dc;
+            text-align: center;
+			}
+			/* Audio Player Styles - Pet Theme */
+			.EH-lostpet-audio-player {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            text-align: center;
+            border: 3px solid #ff6b6b;
+			}
+			.EH-lostpet-audio-title {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			}
+			.EH-lostpet-audio-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+			}
+			.EH-lostpet-audio-btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.5rem;
+            position: relative;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+			.EH-lostpet-audio-btn:hover {
+            background: #ff5252;
+            transform: scale(1.1);
+			}
+			.EH-lostpet-audio-btn:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+			}
+			.EH-lostpet-audio-btn.stop {
+            background: #a8e6cf;
+			}
+			.EH-lostpet-audio-btn.stop:hover {
+            background: #85d4b7;
+			}
+			.EH-lostpet-audio-btn.pause {
+            background: #ffd93d;
+			}
+			.EH-lostpet-audio-btn.pause:hover {
+            background: #ffcd00;
+			}
+			/* Story Content Styles - Pet Theme */
+			.EH-lostpet-story {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1rem;
+            border-left: 5px solid #ff9a9e;
+			}
+			.EH-lostpet-story p {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			}
+			/* Comprehension Questions Styles */
+			.EH-lostpet-questions-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+			}
+			.EH-lostpet-question-card {
+            background: linear-gradient(135deg, #a8e6cf, #d4f1e3);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid #6bce8c;
+			}
+			.EH-lostpet-question-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+			}
+			.EH-lostpet-question-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            border: 2px solid white;
+			}
+			.EH-lostpet-question-text {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: bold;
+			}
+			.EH-lostpet-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+			}
+			.EH-lostpet-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.7);
+            transition: background 0.3s;
+			}
+			.EH-lostpet-option:hover {
+            background: rgba(255, 255, 255, 0.9);
+			}
+			.EH-lostpet-option input {
+            cursor: pointer;
+            transform: scale(1.2);
+			}
+			.EH-lostpet-option label {
+            cursor: pointer;
+            font-size: 1.1rem;
+			}
+			/* Vocabulary Cards Styles */
+			.EH-lostpet-vocabulary-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+			}
+			.EH-lostpet-vocabulary-card {
+            background: linear-gradient(135deg, #ffd1dc, #ffebf3);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 3px solid #ff9a9e;
+			}
+			.EH-lostpet-vocabulary-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+			}
+			.EH-lostpet-vocabulary-word {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ff6b6b;
+            text-align: center;
+			}
+			.EH-lostpet-vocabulary-pronunciation {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1rem;
+			}
+			.EH-lostpet-vocabulary-definition {
+            margin-bottom: 15px;
+            color: #333;
+            flex: 1;
+            text-align: center;
+			}
+			.EH-lostpet-vocabulary-example {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            border: 2px dashed #ff9a9e;
+			}
+			/* Pronunciation Practice Styles */
+			.EH-lostpet-pronunciation-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+			}
+			.EH-lostpet-pronunciation-card {
+            background: linear-gradient(135deg, #ffd93d, #ffefa0);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid #ffcd00;
+			}
+			.EH-lostpet-pronunciation-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+			}
+			.EH-lostpet-pronunciation-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border: 2px solid white;
+			}
+			.EH-lostpet-pronunciation-text {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+            font-weight: bold;
+			}
+			.EH-lostpet-pronunciation-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+			}
+			.EH-lostpet-pronunciation-btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1.3rem;
+			}
+			.EH-lostpet-pronunciation-btn:hover {
+            background: #ff5252;
+            transform: scale(1.1);
+			}
+			.EH-lostpet-pronunciation-btn:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+			}
+			.EH-lostpet-pronunciation-btn.record {
+            background: #a8e6cf;
+			}
+			.EH-lostpet-pronunciation-btn.record:hover {
+            background: #85d4b7;
+			}
+			.EH-lostpet-pronunciation-btn.recording {
+            background: #4ecdc4;
+            animation: pulse 1.5s infinite;
+			}
+			@keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+			}
+			.EH-lostpet-pronunciation-btn.play-recorded {
+            background: #ffd93d;
+			}
+			.EH-lostpet-pronunciation-btn.play-recorded:hover {
+            background: #ffcd00;
+			}
+			/* Recording status indicator */
+			.EH-lostpet-recording-status {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #666;
+            font-weight: bold;
+			}
+			.EH-lostpet-recording-indicator {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: #4ecdc4;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: blink 1s infinite;
+			}
+			@keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+			}
+			/* Navigation Buttons */
+			.EH-lostpet-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+			}
+			.EH-lostpet-nav-button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+			.EH-lostpet-nav-button:hover {
+            background: #ff5252;
+            transform: scale(1.05);
+			}
+			.EH-lostpet-nav-button.back {
+            background: #a8e6cf;
+			}
+			.EH-lostpet-nav-button.back:hover {
+            background: #85d4b7;
+			}
+			/* Progress and Control Styles */
+			.EH-lostpet-progress-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+            width: 100%;
+            flex-wrap: wrap;
+			}
+			.EH-lostpet-progress-slider {
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+            height: 12px;
+            border-radius: 10px;
+            background: #e0e0e0;
+			}
+			.EH-lostpet-time-display {
+            font-size: 1rem;
+            color: white;
+            min-width: 100px;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+			}
+			.EH-lostpet-controls-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+			}
+			.EH-lostpet-control-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+            min-width: 180px;
+            justify-content: center;
+			}
+			.EH-lostpet-control-slider {
+            width: 120px;
+            height: 10px;
+            border-radius: 10px;
+			}
+			.EH-lostpet-speed-value {
+            font-size: 1rem;
+            color: white;
+            min-width: 45px;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+			}
+			/* Unified Exercise Styles - EH-exercise-type1-possibilities3- prefix */
+			.EH-exercise-type1-possibilities3-answers-control {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 30px;
+			gap: 20px;
+			}
+			.EH-exercise-type1-possibilities3-check-answers-btn {
+			background: #ff6b6b;
+			color: white;
+			border: none;
+			padding: 12px 25px;
+			border-radius: 20px;
+			cursor: pointer;
+			font-weight: bold;
+			transition: background 0.3s;
+			font-size: 1rem;
+			}
+			.EH-exercise-type1-possibilities3-check-answers-btn:hover {
+			background: #ff5252;
+			}
+			.EH-exercise-type1-possibilities3-score-display {
+			background: white;
+			border-radius: 15px;
+			padding: 20px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			display: none;
+			width: 100%;
+			max-width: 500px;
+			}
+			.EH-exercise-type1-possibilities3-score-title {
+			font-size: 1.4rem;
+			margin-bottom: 15px;
+			color: #ff6b6b;
+			}
+			.EH-exercise-type1-possibilities3-score-value {
+			font-size: 2rem;
+			font-weight: bold;
+			color: #ff6b6b;
+			margin-bottom: 15px;
+			}
+			.EH-exercise-type1-possibilities3-score-feedback {
+			font-size: 1.1rem;
+			color: #333;
+			margin-bottom: 15px;
+			}
+			.EH-exercise-type1-possibilities3-answer-status {
+			margin-top: 10px;
+			font-size: 0.9rem;
+			padding: 5px 10px;
+			border-radius: 5px;
+			display: inline-block;
+			}
+			.EH-exercise-type1-possibilities3-correct-answer {
+			background-color: #d4edda;
+			color: #155724;
+			border: 1px solid #c3e6cb;
+			}
+			.EH-exercise-type1-possibilities3-incorrect-answer {
+			background-color: #f8d7da;
+			color: #721c24;
+			border: 1px solid #f5c6cb;
+			}
+			.EH-exercise-type1-possibilities3-option.correct {
+			background-color: #d4edda;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #c3e6cb;
+			}
+			.EH-exercise-type1-possibilities3-option.incorrect {
+			background-color: #f8d7da;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #f5c6cb;
+			}
+			/* Responsive Design */
+			@media (max-width: 768px) {
+            .EH-lostpet-questions-container,
+            .EH-lostpet-vocabulary-container,
+            .EH-lostpet-pronunciation-container {
+			grid-template-columns: 1fr;
+            }
+            .EH-lostpet-navigation {
+			flex-direction: column;
+			gap: 20px;
+            }
+            .EH-lostpet-nav-button {
+			width: 100%;
+			justify-content: center;
+            }
+            .EH-lostpet-controls-row {
+			flex-direction: column;
+			gap: 20px;
+            }
+            .EH-lostpet-control-group {
+			min-width: 250px;
+            }
+            .EH-lostpet-progress-container {
+			flex-direction: column;
+			gap: 12px;
+            }
+            .EH-lostpet-progress-slider {
+			min-width: 100%;
+            }
+			}
+			@media (max-width: 480px) {
+            .EH-lostpet-content {
+			padding: 20px;
+            }
+            .EH-lostpet-audio-controls {
+			gap: 15px;
+            }
+            .EH-lostpet-audio-btn {
+			width: 50px;
+			height: 50px;
+			font-size: 1.2rem;
+            }
+            .EH-lostpet-pronunciation-controls {
+			gap: 15px;
+            }
+            .EH-lostpet-pronunciation-btn {
+			width: 50px;
+			height: 50px;
+			font-size: 1.2rem;
+            }
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Language Selector -->
+		<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+			<select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+				<option value="en">English</option>
+				<option value="fr">Français</option>
+				<option value="ar">العربية</option>
+			</select>
+		</div>
+		<div class="EH-site-header">
+			<a href="index.html" class="EH-site-logo-link" data-i18n="common.mainPage" title="Main Page">
+				<img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+			</a>
+			<span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+		</div>
+		<div class="EH-lostpet-container">
+			<!-- Common Header -->
+			<header class="EH-common-header">
+				<h1 class="EH-common-title" data-i18n="lostPet.title">The Lost Pet Adventure</h1>
+				<p class="EH-common-subtitle" data-i18n="lostPet.subtitle">Help Mia find her lost dog Sparky by following clues around the neighborhood!</p>
+			</header>
+			<div class="EH-lostpet-content">
+				<!-- Audio Player Section -->
+				<div class="EH-lostpet-section">
+					<h2 class="EH-lostpet-section-title" data-i18n="lostPet.sections.listen">Listen to the Story</h2>
+					<div class="EH-lostpet-audio-player">
+						<h3 class="EH-lostpet-audio-title" data-i18n="lostPet.audio.title">The Lost Pet Adventure</h3>
+						<div class="EH-lostpet-audio-controls">
+							<button class="EH-lostpet-audio-btn" id="EH-lostpet-play-btn" data-tooltip="Play">
+								▶
+							</button>
+							<button class="EH-lostpet-audio-btn pause" id="EH-lostpet-pause-btn" style="display: none;" data-tooltip="Pause">
+								⏸
+							</button>
+							<button class="EH-lostpet-audio-btn stop" id="EH-lostpet-stop-btn" data-tooltip="Stop">
+								⏹
+							</button>
+						</div>
+						<!-- Progress Slider -->
+						<div class="EH-lostpet-progress-container">
+							<span data-i18n="common.progress" style="color: white; font-weight: bold;">Progress:</span>
+							<input type="range" min="0" max="100" value="0" class="EH-lostpet-progress-slider" id="EH-lostpet-progress">
+							<span class="EH-lostpet-time-display" id="EH-lostpet-time">0:00 / 0:00</span>
+						</div>
+						<!-- Control sliders container -->
+						<div class="EH-lostpet-controls-row">
+							<!-- Volume Control -->
+							<div class="EH-lostpet-control-group">
+								<span data-i18n="common.volume" style="color: white; font-weight: bold;">Volume:</span>
+								<input type="range" min="0" max="100" value="80" class="EH-lostpet-control-slider" id="EH-lostpet-volume">
+							</div>
+							<!-- Speed Control -->
+							<div class="EH-lostpet-control-group">
+								<span data-i18n="common.speed" style="color: white; font-weight: bold;">Speed:</span>
+								<input type="range" min="50" max="200" value="100" class="EH-lostpet-control-slider" id="EH-lostpet-speed">
+								<span class="EH-lostpet-speed-value" id="EH-lostpet-speed-value">1.0x</span>
+							</div>
+						</div>
+						<div class="EH-lostpet-recording-status" id="EH-lostpet-audio-status" data-i18n="lostPet.audio.status.loading">Loading audio...</div>
+					</div>
+				</div>
+				<!-- Story Content Section -->
+				<div class="EH-lostpet-section">
+					<h2 class="EH-lostpet-section-title" data-i18n="lostPet.sections.story">Story Text</h2>
+					<div class="EH-lostpet-story">
+						<p data-i18n="lostPet.story.p1">Mia was playing fetch with her golden retriever Sparky in the backyard when her mom called her for dinner. She tied Sparky's leash to the fence post and ran inside, forgetting to close the gate properly.</p>
+						<p data-i18n="lostPet.story.p2">When Mia returned after dinner, Sparky was gone! The leash was still tied to the post, but the gate was open. Mia's heart started pounding as she realized Sparky had escaped.</p>
+						<p data-i18n="lostPet.story.p3">She ran to her neighbor Mr. Johnson's house first. "Have you seen Sparky?" she asked breathlessly. Mr. Johnson said he saw a golden dog running toward the park about twenty minutes ago.</p>
+						<p data-i18n="lostPet.story.p4">Mia rushed to the park and asked everyone she met. A woman walking her poodle said she saw a golden retriever chasing squirrels near the big oak tree. Mia searched the area but found only Sparky's favorite blue ball.</p>
+						<p data-i18n="lostPet.story.p5">Next, Mia went to the ice cream shop where Sparky loved to get puppy cones. The owner, Mrs. Chen, said a golden retriever had been there earlier but ran off when a truck backfired.</p>
+						<p data-i18n="lostPet.story.p6">Mia was getting worried. She decided to make posters with Sparky's picture. As she was putting up the first poster at the grocery store, she heard a familiar bark coming from the alley.</p>
+						<p data-i18n="lostPet.story.p7">There was Sparky, sitting with the store manager who was giving him water. "This friendly fellow has been keeping me company for the past hour," the manager said with a smile.</p>
+						<p data-i18n="lostPet.story.p8">Mia hugged Sparky tightly and promised to always double-check the gate. She thanked everyone who had helped her and learned that her community was full of kind people who look out for each other - and each other's pets!</p>
+					</div>
+				</div>
+				<!-- Comprehension Questions Section -->
+				<div class="EH-lostpet-section">
+					<h2 class="EH-lostpet-section-title" data-i18n="lostPet.sections.questions">Comprehension Questions</h2>
+					<div class="EH-lostpet-questions-container">
+						<!-- Question 1 -->
+						<div class="EH-lostpet-question-card">
+							<div class="EH-lostpet-question-number">1</div>
+							<p class="EH-lostpet-question-text" data-i18n="lostPet.questions.q1">What kind of dog is Sparky?</p>
+							<div class="EH-lostpet-options">
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
+									<label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="lostPet.questions.q1a">A poodle</label>
+								</div>
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
+									<label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="lostPet.questions.q1b">A golden retriever</label>
+								</div>
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
+									<label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="lostPet.questions.q1c">A German shepherd</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
+						</div>
+						<!-- Question 2 -->
+						<div class="EH-lostpet-question-card">
+							<div class="EH-lostpet-question-number">2</div>
+							<p class="EH-lostpet-question-text" data-i18n="lostPet.questions.q2">How did Sparky escape from the backyard?</p>
+							<div class="EH-lostpet-options">
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
+									<label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="lostPet.questions.q2a">He jumped over the fence</label>
+								</div>
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
+									<label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="lostPet.questions.q2b">The gate was left open</label>
+								</div>
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
+									<label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="lostPet.questions.q2c">Someone untied his leash</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
+						</div>
+						<!-- Question 3 -->
+						<div class="EH-lostpet-question-card">
+							<div class="EH-lostpet-question-number">3</div>
+							<p class="EH-lostpet-question-text" data-i18n="lostPet.questions.q3">Where did Mr. Johnson say he saw Sparky going?</p>
+							<div class="EH-lostpet-options">
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
+									<label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="lostPet.questions.q3a">To the ice cream shop</label>
+								</div>
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
+									<label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="lostPet.questions.q3b">Toward the park</label>
+								</div>
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
+									<label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="lostPet.questions.q3c">To the grocery store</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
+						</div>
+						<!-- Question 4 -->
+						<div class="EH-lostpet-question-card">
+							<div class="EH-lostpet-question-number">4</div>
+							<p class="EH-lostpet-question-text" data-i18n="lostPet.questions.q4">What did Mia find near the big oak tree in the park?</p>
+							<div class="EH-lostpet-options">
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
+									<label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="lostPet.questions.q4a">Sparky's leash</label>
+								</div>
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
+									<label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="lostPet.questions.q4b">Sparky's favorite blue ball</label>
+								</div>
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
+									<label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="lostPet.questions.q4c">Sparky's water bowl</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
+						</div>
+						<!-- Question 5 -->
+						<div class="EH-lostpet-question-card">
+							<div class="EH-lostpet-question-number">5</div>
+							<p class="EH-lostpet-question-text" data-i18n="lostPet.questions.q5">Where was Sparky finally found?</p>
+							<div class="EH-lostpet-options">
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
+									<label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="lostPet.questions.q5a">At the ice cream shop</label>
+								</div>
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
+									<label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="lostPet.questions.q5b">In the alley behind the grocery store</label>
+								</div>
+								<div class="EH-lostpet-option">
+									<input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
+									<label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="lostPet.questions.q5c">Back in his own backyard</label>
+								</div>
+							</div>
+							<div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
+						</div>
+					</div>
+					<!-- Answer Check and Score System -->
+					<div class="EH-exercise-type1-possibilities3-answers-control">
+						<button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers" data-i18n="lostPet.answers.check">Check Answers</button>
+						<div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+							<h3 class="EH-exercise-type1-possibilities3-score-title" data-i18n="lostPet.answers.score">Your Score</h3>
+							<div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/5</div>
+							<p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback" data-i18n="lostPet.answers.feedback.default">Check your answers to see how you did!</p>
+						</div>
+					</div>
+				</div>
+				<!-- Vocabulary Section -->
+				<div class="EH-lostpet-section">
+					<h2 class="EH-lostpet-section-title" data-i18n="lostPet.sections.vocabulary">Vocabulary Cards</h2>
+					<div class="EH-lostpet-vocabulary-container">
+						<!-- Vocabulary Card 1 -->
+						<div class="EH-lostpet-vocabulary-card">
+							<div class="EH-lostpet-vocabulary-word" data-i18n="lostPet.vocabulary.retriever">Retriever</div>
+							<div class="EH-lostpet-vocabulary-pronunciation" data-i18n="lostPet.vocabulary.retriever_pron">/rɪˈtriːvər/</div>
+							<div class="EH-lostpet-vocabulary-definition" data-i18n="lostPet.vocabulary.retriever_def">A type of dog bred to retrieve game for hunters</div>
+							<div class="EH-lostpet-vocabulary-example" data-i18n="lostPet.vocabulary.retriever_ex">"Sparky is a golden retriever who loves to play fetch."</div>
+						</div>
+						<!-- Vocabulary Card 2 -->
+						<div class="EH-lostpet-vocabulary-card">
+							<div class="EH-lostpet-vocabulary-word" data-i18n="lostPet.vocabulary.leash">Leash</div>
+							<div class="EH-lostpet-vocabulary-pronunciation" data-i18n="lostPet.vocabulary.leash_pron">/liːʃ/</div>
+							<div class="EH-lostpet-vocabulary-definition" data-i18n="lostPet.vocabulary.leash_def">A strap or rope for restraining and guiding a dog</div>
+							<div class="EH-lostpet-vocabulary-example" data-i18n="lostPet.vocabulary.leash_ex">"Mia tied Sparky's leash to the fence post."</div>
+						</div>
+						<!-- Vocabulary Card 3 -->
+						<div class="EH-lostpet-vocabulary-card">
+							<div class="EH-lostpet-vocabulary-word" data-i18n="lostPet.vocabulary.breathlessly">Breathlessly</div>
+							<div class="EH-lostpet-vocabulary-pronunciation" data-i18n="lostPet.vocabulary.breathlessly_pron">/ˈbrɛθləsli/</div>
+							<div class="EH-lostpet-vocabulary-definition" data-i18n="lostPet.vocabulary.breathlessly_def">In a way that shows you are breathing quickly</div>
+							<div class="EH-lostpet-vocabulary-example" data-i18n="lostPet.vocabulary.breathlessly_ex">"Mia asked breathlessly if anyone had seen her dog."</div>
+						</div>
+						<!-- Vocabulary Card 4 -->
+						<div class="EH-lostpet-vocabulary-card">
+							<div class="EH-lostpet-vocabulary-word" data-i18n="lostPet.vocabulary.community">Community</div>
+							<div class="EH-lostpet-vocabulary-pronunciation" data-i18n="lostPet.vocabulary.community_pron">/kəˈmjuːnɪti/</div>
+							<div class="EH-lostpet-vocabulary-definition" data-i18n="lostPet.vocabulary.community_def">A group of people living in the same area</div>
+							<div class="EH-lostpet-vocabulary-example" data-i18n="lostPet.vocabulary.community_ex">"Mia learned that her community was full of kind people."</div>
+						</div>
+						<!-- Vocabulary Card 5 -->
+						<div class="EH-lostpet-vocabulary-card">
+							<div class="EH-lostpet-vocabulary-word" data-i18n="lostPet.vocabulary.familiar">Familiar</div>
+							<div class="EH-lostpet-vocabulary-pronunciation" data-i18n="lostPet.vocabulary.familiar_pron">/fəˈmɪliər/</div>
+							<div class="EH-lostpet-vocabulary-definition" data-i18n="lostPet.vocabulary.familiar_def">Well known from being seen or heard before</div>
+							<div class="EH-lostpet-vocabulary-example" data-i18n="lostPet.vocabulary.familiar_ex">"Mia heard a familiar bark coming from the alley."</div>
+						</div>
+					</div>
+				</div>
+				<!-- Pronunciation Practice Section -->
+				<div class="EH-lostpet-section">
+					<h2 class="EH-lostpet-section-title" data-i18n="lostPet.sections.pronunciation">Pronunciation Practice</h2>
+					<div class="EH-lostpet-pronunciation-container">
+						<!-- Pronunciation 1 -->
+						<div class="EH-lostpet-pronunciation-card">
+							<div class="EH-lostpet-pronunciation-number">1</div>
+							<p class="EH-lostpet-pronunciation-text" data-i18n="lostPet.pronunciation.p1">"Have you seen my dog Sparky?"</p>
+							<div class="EH-lostpet-pronunciation-controls">
+								<button class="EH-lostpet-pronunciation-btn" data-audio="lostpet-pronunciation-1-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-lostpet-pronunciation-btn record" data-audio="lostpet-pronunciation-1-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-lostpet-pronunciation-btn play-recorded" data-audio="lostpet-pronunciation-1-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-lostpet-recording-status" data-status="lostpet-pronunciation-1-status"></div>
+						</div>
+						<!-- Pronunciation 2 -->
+						<div class="EH-lostpet-pronunciation-card">
+							<div class="EH-lostpet-pronunciation-number">2</div>
+							<p class="EH-lostpet-pronunciation-text" data-i18n="lostPet.pronunciation.p2">"He's a golden retriever with a wagging tail."</p>
+							<div class="EH-lostpet-pronunciation-controls">
+								<button class="EH-lostpet-pronunciation-btn" data-audio="lostpet-pronunciation-2-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-lostpet-pronunciation-btn record" data-audio="lostpet-pronunciation-2-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-lostpet-pronunciation-btn play-recorded" data-audio="lostpet-pronunciation-2-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-lostpet-recording-status" data-status="lostpet-pronunciation-2-status"></div>
+						</div>
+						<!-- Pronunciation 3 -->
+						<div class="EH-lostpet-pronunciation-card">
+							<div class="EH-lostpet-pronunciation-number">3</div>
+							<p class="EH-lostpet-pronunciation-text" data-i18n="lostPet.pronunciation.p3">"I need to find my lost pet."</p>
+							<div class="EH-lostpet-pronunciation-controls">
+								<button class="EH-lostpet-pronunciation-btn" data-audio="lostpet-pronunciation-3-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-lostpet-pronunciation-btn record" data-audio="lostpet-pronunciation-3-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-lostpet-pronunciation-btn play-recorded" data-audio="lostpet-pronunciation-3-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-lostpet-recording-status" data-status="lostpet-pronunciation-3-status"></div>
+						</div>
+						<!-- Pronunciation 4 -->
+						<div class="EH-lostpet-pronunciation-card">
+							<div class="EH-lostpet-pronunciation-number">4</div>
+							<p class="EH-lostpet-pronunciation-text" data-i18n="lostPet.pronunciation.p4">"Thank you for helping me search."</p>
+							<div class="EH-lostpet-pronunciation-controls">
+								<button class="EH-lostpet-pronunciation-btn" data-audio="lostpet-pronunciation-4-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-lostpet-pronunciation-btn record" data-audio="lostpet-pronunciation-4-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-lostpet-pronunciation-btn play-recorded" data-audio="lostpet-pronunciation-4-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-lostpet-recording-status" data-status="lostpet-pronunciation-4-status"></div>
+						</div>
+						<!-- Pronunciation 5 -->
+						<div class="EH-lostpet-pronunciation-card">
+							<div class="EH-lostpet-pronunciation-number">5</div>
+							<p class="EH-lostpet-pronunciation-text" data-i18n="lostPet.pronunciation.p5">"I'm so happy to have found you!"</p>
+							<div class="EH-lostpet-pronunciation-controls">
+								<button class="EH-lostpet-pronunciation-btn" data-audio="lostpet-pronunciation-5-listen" data-tooltip="Listen">
+									🔊
+								</button>
+								<button class="EH-lostpet-pronunciation-btn record" data-audio="lostpet-pronunciation-5-record" data-tooltip="Record">
+									●
+								</button>
+								<button class="EH-lostpet-pronunciation-btn play-recorded" data-audio="lostpet-pronunciation-5-playback" style="display: none;" data-tooltip="Playback">
+									▶
+								</button>
+							</div>
+							<div class="EH-lostpet-recording-status" data-status="lostpet-pronunciation-5-status"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Navigation Buttons -->
+				<div class="EH-lostpet-navigation">
+					<button class="EH-lostpet-nav-button back" onclick="window.location.href='Eh-general-reading-adventures.html'">
+						← <span data-i18n="common.backToReadingAdventures">Back to Reading Adventures</span>
+					</button>
+					<button class="EH-lostpet-nav-button" onclick="window.location.href='EH-reading-science-fair.html'">
+						<span data-i18n="common.nextLesson">Next Lesson</span> →
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Common Footer -->
+		<footer class="EH-common-footer">
+			<div class="EH-common-footer-content">
+				<div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-common-footer-links">
+					<a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+					<a href="#" data-i18n="footer.terms">Terms of Service</a>
+					<a href="#" data-i18n="footer.contact">Contact</a>
+				</div>
+			</div>
+		</footer>
+		<!-- i18n translations -->
+		<script src="scripts/translations/i18n_en.js"></script>
+		<script src="scripts/translations/i18n_fr.js"></script>
+		<script src="scripts/translations/i18n_ar.js"></script>
+		<script src="scripts/common-i18n.js"></script>
+		<!-- Include the generic sound library -->
+		<script src="scripts/sound.js"></script>
+		<script src="scripts/exercise.js"></script>
+		<script>
+			// Lesson-specific audio configuration
+			const audioConfig = {
+				'lostpet-story': 'assets/audio/lessons/category1/lesson3/lostpet-story.mp3',
+				'lostpet-pronunciation-1-listen': 'assets/audio/lessons/category1/lesson3/pronunciation-1.mp3',
+				'lostpet-pronunciation-2-listen': 'assets/audio/lessons/category1/lesson3/pronunciation-2.mp3',
+				'lostpet-pronunciation-3-listen': 'assets/audio/lessons/category1/lesson3/pronunciation-3.mp3',
+				'lostpet-pronunciation-4-listen': 'assets/audio/lessons/category1/lesson3/pronunciation-4.mp3',
+				'lostpet-pronunciation-5-listen': 'assets/audio/lessons/category1/lesson3/pronunciation-5.mp3'
+			};
+			// Correct answers for questions
+			const correctAnswers = {
+				'EH-exercise-type1-possibilities3-q1': 'b', // A golden retriever
+				'EH-exercise-type1-possibilities3-q2': 'b', // The gate was left open
+				'EH-exercise-type1-possibilities3-q3': 'b', // Toward the park
+				'EH-exercise-type1-possibilities3-q4': 'b', // Sparky's favorite blue ball
+				'EH-exercise-type1-possibilities3-q5': 'b'  // In the alley behind the grocery store
+			};
+			// Audio progress tracking
+			let progressInterval;
+			function updateProgressBar(audioKey) {
+				const audio = audioPlayers[audioKey];
+				if (!audio) return;
+				const progressSlider = document.getElementById('EH-lostpet-progress');
+				const timeDisplay = document.getElementById('EH-lostpet-time');
+				if (audio.duration) {
+					const progress = (audio.currentTime / audio.duration) * 100;
+					progressSlider.value = progress;
+					// Update time display
+					const currentTime = formatTime(audio.currentTime);
+					const duration = formatTime(audio.duration);
+					timeDisplay.textContent = `${currentTime} / ${duration}`;
+				}
+			}
+			function formatTime(seconds) {
+				const mins = Math.floor(seconds / 60);
+				const secs = Math.floor(seconds % 60);
+				return `${mins}:${secs.toString().padStart(2, '0')}`;
+			}
+			function setupProgressTracking(audioKey) {
+				const audio = audioPlayers[audioKey];
+				if (!audio) return;
+				// Clear any existing interval
+				if (progressInterval) {
+					clearInterval(progressInterval);
+				}
+				// Update progress every 100ms
+				progressInterval = setInterval(() => {
+					updateProgressBar(audioKey);
+				}, 100);
+				// Setup progress slider event
+				const progressSlider = document.getElementById('EH-lostpet-progress');
+				progressSlider.addEventListener('input', function() {
+					if (audio.duration) {
+						const seekTime = (this.value / 100) * audio.duration;
+						audio.currentTime = seekTime;
+					}
+				});
+				// Reset when audio ends
+				audio.addEventListener('ended', function() {
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					progressSlider.value = 0;
+					document.getElementById('EH-lostpet-time').textContent = '0:00 / ' + formatTime(audio.duration);
+				});
+			}
+			function setupSpeedControl() {
+				const speedSlider = document.getElementById('EH-lostpet-speed');
+				const speedValue = document.getElementById('EH-lostpet-speed-value');
+				speedSlider.addEventListener('input', function() {
+					const speed = this.value / 100;
+					speedValue.textContent = speed.toFixed(1) + 'x';
+					// Apply speed to all audio players
+					for (const key in audioPlayers) {
+						if (audioPlayers[key]) {
+							audioPlayers[key].playbackRate = speed;
+						}
+					}
+				});
+			}
+			// Initialize when DOM is loaded
+			document.addEventListener('DOMContentLoaded', function() {
+				// Initialize audio players with lesson-specific config
+				initAudioPlayers(audioConfig);
+				// Set up main story audio controls
+				document.getElementById('EH-lostpet-play-btn').addEventListener('click', function() {
+					playAudio('lostpet-story');
+					setupProgressTracking('lostpet-story');
+					// Show pause button, hide play button
+					document.getElementById('EH-lostpet-play-btn').style.display = 'none';
+					document.getElementById('EH-lostpet-pause-btn').style.display = 'flex';
+				});
+				document.getElementById('EH-lostpet-pause-btn').addEventListener('click', function() {
+					pauseAudio('lostpet-story');
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					// Show play button, hide pause button
+					document.getElementById('EH-lostpet-play-btn').style.display = 'flex';
+					document.getElementById('EH-lostpet-pause-btn').style.display = 'none';
+				});
+				document.getElementById('EH-lostpet-stop-btn').addEventListener('click', function() {
+					stopAudio('lostpet-story');
+					if (progressInterval) {
+						clearInterval(progressInterval);
+					}
+					document.getElementById('EH-lostpet-progress').value = 0;
+					document.getElementById('EH-lostpet-time').textContent = '0:00 / 0:00';
+					// Show play button, hide pause button
+					document.getElementById('EH-lostpet-play-btn').style.display = 'flex';
+					document.getElementById('EH-lostpet-pause-btn').style.display = 'none';
+				});
+				document.getElementById('EH-lostpet-volume').addEventListener('input', function() {
+					setGlobalVolume(this.value);
+				});
+				// Setup speed control
+				setupSpeedControl();
+				// Set up pronunciation practice listeners
+				setupPronunciationListeners();
+				// Set up answer checking
+				ExerciseType1Possibilities3Init(correctAnswers, Object.keys(correctAnswers).length, 'EH-exercise-type1-possibilities3');
+				// Initialize with default volume
+				setGlobalVolume(80);
+			});
+		</script>
+	</body>
+</html>

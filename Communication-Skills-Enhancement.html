@@ -205,6 +205,17 @@
 			height: 300px;
 			}
 			}
+			/* Coming Soon Badge Styles */
+			.EH-coming-soon-badge {
+			display: inline-block;
+			background: #fdbb2d;
+			color: #333;
+			padding: 8px 15px;
+			border-radius: 15px;
+			font-size: 0.9rem;
+			font-weight: bold;
+			margin-top: 10px;
+			}
 		</style>
 	</head>
 	<body>
@@ -216,12 +227,12 @@
 				<option value="ar">العربية</option>
 			</select>
 		</div>
-<div class="EH-site-header">
-    <a href="index.html" class="EH-site-logo-link" data-i18n="common.mainPage" title="Main Page">
-        <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
-    </a>
-    <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
-</div>
+		<div class="EH-site-header">
+			<a href="index.html" class="EH-site-logo-link" data-i18n="common.mainPage" title="Main Page">
+				<img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+			</a>
+			<span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+		</div>
 		<div class="EH-dashboard-container">
 			<header class="EH-common-header">
 				<h1 class="EH-common-title" data-i18n="dashboard.title">Communication Skills</h1>
@@ -259,111 +270,122 @@
 		<script src="scripts/translations/i18n_ar.js"></script>
 		<script src="scripts/common-i18n.js"></script>
 <script>
-    // DOM elements
-    const coursesContainer = document.getElementById('courses-container');
-    const coursesHeader = document.getElementById('courses-header');
-    const coursesList = document.getElementById('courses-list');
-    const backButton = document.getElementById('back-button');
-    const categoryCircles = document.querySelectorAll('.EH-dashboard-category-circle');
-    const molecularBond = document.getElementById('molecular-bond');
-    
-    // Function to draw molecular bond lines
-    function drawMolecularBonds() {
-        const mainCircle = document.querySelector('.EH-dashboard-main-circle');
-        const centerCircle = document.querySelector('.EH-dashboard-center-circle');
-        const categoryCircles = document.querySelectorAll('.EH-dashboard-category-circle');
-        
-        // Clear existing lines
-        molecularBond.innerHTML = '';
-        
-        // Get center circle position
-        const centerRect = centerCircle.getBoundingClientRect();
-        const mainRect = mainCircle.getBoundingClientRect();
-        const centerX = centerRect.left - mainRect.left + centerRect.width / 2;
-        const centerY = centerRect.top - mainRect.top + centerRect.height / 2;
-        
-        // Draw lines to each category circle
-        categoryCircles.forEach(circle => {
-            const circleRect = circle.getBoundingClientRect();
-            const circleX = circleRect.left - mainRect.left + circleRect.width / 2;
-            const circleY = circleRect.top - mainRect.top + circleRect.height / 2;
-            
-            // Create line element
-            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            line.setAttribute('x1', centerX);
-            line.setAttribute('y1', centerY);
-            line.setAttribute('x2', circleX);
-            line.setAttribute('y2', circleY);
-            line.setAttribute('class', 'molecular-bond-line');
-            molecularBond.appendChild(line);
-        });
-    }
-    
-    // Function to show courses for a selected category
-    function showCourses(category) {
-        const coursesData = getCoursesForCurrentLanguage();
-        if (!coursesData || !coursesData[category]) {
-            console.error('Course data not found for category:', category);
-            return;
-        }
-        
-        const categoryData = coursesData[category];
-        coursesHeader.textContent = categoryData.title;
-        coursesList.innerHTML = '';
-        
-        // Get the current language for the "Start Course" button text
-        const currentLang = getCurrentLanguage();
-        const startCourseText = window.I18N && window.I18N[currentLang]?.common?.startCourse || "Start Course";
-        
-        categoryData.courses.forEach(course => {
-            const courseCard = document.createElement('div');
-            courseCard.className = 'Eh-general-course-card';
-            courseCard.innerHTML = `
-                <h3 class="Eh-general-course-title">${course.title}</h3>
-                <p class="Eh-general-course-description">${course.description}</p>
-                <a href="${course.link}" class="Eh-general-course-link">${startCourseText}</a>
-            `;
-            coursesList.appendChild(courseCard);
-        });
-        
-        coursesContainer.style.display = 'block';
-    }
-    
-    // Update courses when language changes
-    window.addEventListener('languageChanged', function(event) {
-        // If courses are currently displayed, update them with the new language
-        if (coursesContainer.style.display === 'block') {
-            // Find which category is currently active
-            const activeCategory = document.querySelector('.EH-dashboard-category-circle.active');
-            if (activeCategory) {
-                const category = activeCategory.getAttribute('data-category');
-                showCourses(category);
-            }
-        }
-    });
-    
-    // Add click event listeners to category circles
-    categoryCircles.forEach(circle => {
-        circle.addEventListener('click', function() {
-            // Remove active class from all circles
-            categoryCircles.forEach(c => c.classList.remove('active'));
-            // Add active class to clicked circle
-            this.classList.add('active');
-            const category = this.getAttribute('data-category');
-            showCourses(category);
-        });
-    });
-    
-    // Add click event listener to back button
-    backButton.addEventListener('click', function() {
-        coursesContainer.style.display = 'none';
-        // Remove active class from all circles when going back
-        categoryCircles.forEach(c => c.classList.remove('active'));
-    });
-    
-    // Draw molecular bonds on load and resize
-    window.addEventListener('load', drawMolecularBonds);
-    window.addEventListener('resize', drawMolecularBonds);
+	// DOM elements
+	const coursesContainer = document.getElementById('courses-container');
+	const coursesHeader = document.getElementById('courses-header');
+	const coursesList = document.getElementById('courses-list');
+	const backButton = document.getElementById('back-button');
+	const categoryCircles = document.querySelectorAll('.EH-dashboard-category-circle');
+	const molecularBond = document.getElementById('molecular-bond');
+
+	// Function to draw molecular bond lines
+	function drawMolecularBonds() {
+		const mainCircle = document.querySelector('.EH-dashboard-main-circle');
+		const centerCircle = document.querySelector('.EH-dashboard-center-circle');
+		const categoryCircles = document.querySelectorAll('.EH-dashboard-category-circle');
+		
+		// Clear existing lines
+		molecularBond.innerHTML = '';
+		
+		// Get center circle position
+		const centerRect = centerCircle.getBoundingClientRect();
+		const mainRect = mainCircle.getBoundingClientRect();
+		const centerX = centerRect.left - mainRect.left + centerRect.width / 2;
+		const centerY = centerRect.top - mainRect.top + centerRect.height / 2;
+		
+		// Draw lines to each category circle
+		categoryCircles.forEach(circle => {
+			const circleRect = circle.getBoundingClientRect();
+			const circleX = circleRect.left - mainRect.left + circleRect.width / 2;
+			const circleY = circleRect.top - mainRect.top + circleRect.height / 2;
+			
+			// Create line element
+			const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+			line.setAttribute('x1', centerX);
+			line.setAttribute('y1', centerY);
+			line.setAttribute('x2', circleX);
+			line.setAttribute('y2', circleY);
+			line.setAttribute('class', 'molecular-bond-line');
+			molecularBond.appendChild(line);
+		});
+	}
+
+	// Function to show courses for a selected category
+	function showCourses(category) {
+		const coursesData = getCoursesForCurrentLanguage();
+		if (!coursesData || !coursesData[category]) {
+			console.error('Course data not found for category:', category);
+			return;
+		}
+		
+		const categoryData = coursesData[category];
+		coursesHeader.textContent = categoryData.title;
+		coursesList.innerHTML = '';
+		
+		// Get the current language for the button texts
+		const currentLang = getCurrentLanguage();
+		const startCourseText = window.I18N && window.I18N[currentLang]?.common?.startCourse || "Start Course";
+		const comingSoonText = window.I18N && window.I18N[currentLang]?.common?.comingSoon || "Coming Soon";
+		
+		// Show "Coming Soon" for all courses except "Reading Adventures" in the reading category
+		categoryData.courses.forEach((course, index) => {
+			const courseCard = document.createElement('div');
+			courseCard.className = 'Eh-general-course-card';
+			
+			// Check if this is "Reading Adventures" in the reading category
+			// We'll use the course index to identify Reading Adventures (assuming it's the first course)
+			// Or we can check if the course has a link (since only Reading Adventures should have a real link)
+			const isReadingAdventures = category === 'reading' && course.link && course.link !== "#";
+			
+			courseCard.innerHTML = `
+			<h3 class="Eh-general-course-title">${course.title}</h3>
+			<p class="Eh-general-course-description">${course.description}</p>
+			${!isReadingAdventures ? 
+			`<span class="EH-coming-soon-badge">${comingSoonText}</span>` : 
+			`<a href="${course.link}" class="Eh-general-course-link">${startCourseText}</a>`
+			}
+			`;
+			coursesList.appendChild(courseCard);
+		});
+		
+		coursesContainer.style.display = 'block';
+	}
+
+	// Update courses when language changes
+	window.addEventListener('languageChanged', function(event) {
+		// If courses are currently displayed, update them with the new language
+		if (coursesContainer.style.display === 'block') {
+			// Find which category is currently active
+			const activeCategory = document.querySelector('.EH-dashboard-category-circle.active');
+			if (activeCategory) {
+				const category = activeCategory.getAttribute('data-category');
+				showCourses(category);
+			}
+		}
+	});
+
+	// Add click event listeners to category circles
+	categoryCircles.forEach(circle => {
+		circle.addEventListener('click', function() {
+			// Remove active class from all circles
+			categoryCircles.forEach(c => c.classList.remove('active'));
+			// Add active class to clicked circle
+			this.classList.add('active');
+			const category = this.getAttribute('data-category');
+			showCourses(category);
+		});
+	});
+
+	// Add click event listener to back button
+	backButton.addEventListener('click', function() {
+		coursesContainer.style.display = 'none';
+		// Remove active class from all circles when going back
+		categoryCircles.forEach(c => c.classList.remove('active'));
+	});
+
+	// Draw molecular bonds on load and resize
+	window.addEventListener('load', drawMolecularBonds);
+	window.addEventListener('resize', drawMolecularBonds);
 </script>
 	</body>
-</html>
+</html>	
