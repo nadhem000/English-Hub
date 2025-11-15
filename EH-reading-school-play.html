@@ -462,83 +462,83 @@
             font-weight: bold;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 			}
-			/* Unified Exercise Styles - EH-exercise-type1-possibilities3- prefix */
-			.EH-exercise-type1-possibilities3-answers-control {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin-top: 30px;
-			gap: 20px;
-			}
-			.EH-exercise-type1-possibilities3-check-answers-btn {
-			background: #4e54c8;
-			color: white;
-			border: none;
-			padding: 12px 25px;
-			border-radius: 20px;
-			cursor: pointer;
-			font-weight: bold;
-			transition: background 0.3s;
-			font-size: 1rem;
-			}
-			.EH-exercise-type1-possibilities3-check-answers-btn:hover {
-			background: #3f46c5;
-			}
-			.EH-exercise-type1-possibilities3-score-display {
-			background: white;
-			border-radius: 15px;
-			padding: 20px;
-			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-			text-align: center;
-			display: none;
-			width: 100%;
-			max-width: 500px;
-			}
-			.EH-exercise-type1-possibilities3-score-title {
-			font-size: 1.4rem;
-			margin-bottom: 15px;
-			color: #1a2a6c;
-			}
-			.EH-exercise-type1-possibilities3-score-value {
-			font-size: 2rem;
-			font-weight: bold;
-			color: #4e54c8;
-			margin-bottom: 15px;
-			}
-			.EH-exercise-type1-possibilities3-score-feedback {
-			font-size: 1.1rem;
-			color: #333;
-			margin-bottom: 15px;
-			}
-			.EH-exercise-type1-possibilities3-answer-status {
-			margin-top: 10px;
-			font-size: 0.9rem;
-			padding: 5px 10px;
-			border-radius: 5px;
-			display: inline-block;
-			}
-			.EH-exercise-type1-possibilities3-correct-answer {
-			background-color: #d4edda;
-			color: #155724;
-			border: 1px solid #c3e6cb;
-			}
-			.EH-exercise-type1-possibilities3-incorrect-answer {
-			background-color: #f8d7da;
-			color: #721c24;
-			border: 1px solid #f5c6cb;
-			}
-			.EH-exercise-type1-possibilities3-option.correct {
-			background-color: #d4edda;
-			padding: 5px;
-			border-radius: 5px;
-			border: 1px solid #c3e6cb;
-			}
-			.EH-exercise-type1-possibilities3-option.incorrect {
-			background-color: #f8d7da;
-			padding: 5px;
-			border-radius: 5px;
-			border: 1px solid #f5c6cb;
-			}
+			/* Unified Exercise Styles - Add these to School Play CSS */
+.EH-exercise-type1-possibilities3-answers-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+.EH-exercise-type1-possibilities3-check-answers-btn {
+    background: #4e54c8;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+.EH-exercise-type1-possibilities3-check-answers-btn:hover {
+    background: #3f46c5;
+}
+.EH-exercise-type1-possibilities3-score-display {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none;
+    width: 100%;
+    max-width: 500px;
+}
+.EH-exercise-type1-possibilities3-score-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #1a2a6c;
+}
+.EH-exercise-type1-possibilities3-score-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4e54c8;
+    margin-bottom: 15px;
+}
+.EH-exercise-type1-possibilities3-score-feedback {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+.EH-exercise-type1-possibilities3-answer-status {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.EH-exercise-type1-possibilities3-correct-answer {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.EH-exercise-type1-possibilities3-incorrect-answer {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.EH-exercise-type1-possibilities3-option.correct {
+    background-color: #d4edda;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #c3e6cb;
+}
+.EH-exercise-type1-possibilities3-option.incorrect {
+    background-color: #f8d7da;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb;
+}
 			/* Responsive Design */
 			@media (max-width: 768px) {
             .EH-schoolplay-questions-container,
@@ -668,120 +668,121 @@
 					</div>
 				</div>
 				<!-- Comprehension Questions Section -->
-				<div class="EH-schoolplay-section">
-					<h2 class="EH-schoolplay-section-title" data-i18n="schoolPlay.sections.questions">Comprehension Questions</h2>
-					<div class="EH-schoolplay-questions-container">
-						<!-- Question 1 -->
-						<div class="EH-schoolplay-question-card">
-							<div class="EH-schoolplay-question-number">1</div>
-							<p class="EH-schoolplay-question-text" data-i18n="schoolPlay.questions.q1">What part did Sarah get in the school play?</p>
-							<div class="EH-schoolplay-options">
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q1-a" name="EH-exercise-q1" value="a">
-									<label for="EH-exercise-q1-a" data-i18n="schoolPlay.questions.q1a">A fairy</label>
-								</div>
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q1-b" name="EH-exercise-q1" value="b">
-									<label for="EH-exercise-q1-b" data-i18n="schoolPlay.questions.q1b">A tree</label>
-								</div>
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q1-c" name="EH-exercise-q1" value="c">
-									<label for="EH-exercise-q1-c" data-i18n="schoolPlay.questions.q1c">An animal</label>
-								</div>
-							</div>
-							<div class="EH-exercise-answer-status" id="EH-exercise-q1-status"></div>
-						</div>
-						<!-- Question 2 -->
-						<div class="EH-schoolplay-question-card">
-							<div class="EH-schoolplay-question-number">2</div>
-							<p class="EH-schoolplay-question-text" data-i18n="schoolPlay.questions.q2">How did Sarah feel when she got the part of the tree?</p>
-							<div class="EH-schoolplay-options">
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q2-a" name="EH-exercise-q2" value="a">
-									<label for="EH-exercise-q2-a" data-i18n="schoolPlay.questions.q2a">Excited</label>
-								</div>
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q2-b" name="EH-exercise-q2" value="b">
-									<label for="EH-exercise-q2-b" data-i18n="schoolPlay.questions.q2b">Disappointed</label>
-								</div>
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q2-c" name="EH-exercise-q2" value="c">
-									<label for="EH-exercise-q2-c" data-i18n="schoolPlay.questions.q2c">Happy</label>
-								</div>
-							</div>
-							<div class="EH-exercise-answer-status" id="EH-exercise-q2-status"></div>
-						</div>
-						<!-- Question 3 -->
-						<div class="EH-schoolplay-question-card">
-							<div class="EH-schoolplay-question-number">3</div>
-							<p class="EH-schoolplay-question-text" data-i18n="schoolPlay.questions.q3">What did Mrs. Johnson say about the tree's role?</p>
-							<div class="EH-schoolplay-options">
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q3-a" name="EH-exercise-q3" value="a">
-									<label for="EH-exercise-q3-a" data-i18n="schoolPlay.questions.q3a">It was the most important part</label>
-								</div>
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q3-b" name="EH-exercise-q3" value="b">
-									<label for="EH-exercise-q3-b" data-i18n="schoolPlay.questions.q3b">It set the scene for the whole play</label>
-								</div>
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q3-c" name="EH-exercise-q3" value="c">
-									<label for="EH-exercise-q3-c" data-i18n="schoolPlay.questions.q3c">It was the easiest part</label>
-								</div>
-							</div>
-							<div class="EH-exercise-answer-status" id="EH-exercise-q3-status"></div>
-						</div>
-						<!-- Question 4 -->
-						<div class="EH-schoolplay-question-card">
-							<div class="EH-schoolplay-question-number">4</div>
-							<p class="EH-schoolplay-question-text" data-i18n="schoolPlay.questions.q4">What did Sarah do to make her tree role better?</p>
-							<div class="EH-schoolplay-options">
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q4-a" name="EH-exercise-q4" value="a">
-									<label for="EH-exercise-q4-a" data-i18n="schoolPlay.questions.q4a">She added a little sway when the wind blew</label>
-								</div>
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q4-b" name="EH-exercise-q4" value="b">
-									<label for="EH-exercise-q4-b" data-i18n="schoolPlay.questions.q4b">She asked to change her part</label>
-								</div>
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q4-c" name="EH-exercise-q4" value="c">
-									<label for="EH-exercise-q4-c" data-i18n="schoolPlay.questions.q4c">She decided to quit the play</label>
-								</div>
-							</div>
-							<div class="EH-exercise-answer-status" id="EH-exercise-q4-status"></div>
-						</div>
-						<!-- Question 5 -->
-						<div class="EH-schoolplay-question-card">
-							<div class="EH-schoolplay-question-number">5</div>
-							<p class="EH-schoolplay-question-text" data-i18n="schoolPlay.questions.q5">What did Sarah learn from this experience?</p>
-							<div class="EH-schoolplay-options">
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q5-a" name="EH-exercise-q5" value="a">
-									<label for="EH-exercise-q5-a" data-i18n="schoolPlay.questions.q5a">That being a tree is boring</label>
-								</div>
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q5-b" name="EH-exercise-q5" value="b">
-									<label for="EH-exercise-q5-b" data-i18n="schoolPlay.questions.q5b">That every part in a play is important</label>
-								</div>
-								<div class="EH-schoolplay-option">
-									<input type="radio" id="EH-exercise-q5-c" name="EH-exercise-q5" value="c">
-									<label for="EH-exercise-q5-c" data-i18n="schoolPlay.questions.q5c">That she should always be the main character</label>
-								</div>
-							</div>
-							<div class="EH-exercise-answer-status" id="EH-exercise-q5-status"></div>
-						</div>
-					</div>
-					<!-- Answer Check and Score System -->
-					<div class="EH-exercise-answers-control">
-						<button class="EH-exercise-check-answers-btn" id="EH-exercise-check-answers" data-i18n="schoolPlay.answers.check">Check Answers</button>
-						<div class="EH-exercise-score-display" id="EH-exercise-score-display">
-							<h3 class="EH-exercise-score-title" data-i18n="schoolPlay.answers.score">Your Score</h3>
-							<div class="EH-exercise-score-value" id="EH-exercise-score-value">0/5</div>
-							<p class="EH-exercise-score-feedback" id="EH-exercise-score-feedback" data-i18n="schoolPlay.answers.feedback.default">Check your answers to see how you did!</p>
-						</div>
-					</div>
-				</div>
+				<!-- Comprehension Questions Section -->
+<div class="EH-schoolplay-section">
+    <h2 class="EH-schoolplay-section-title" data-i18n="schoolPlay.sections.questions">Comprehension Questions</h2>
+    <div class="EH-schoolplay-questions-container">
+        <!-- Question 1 -->
+        <div class="EH-schoolplay-question-card">
+            <div class="EH-schoolplay-question-number">1</div>
+            <p class="EH-schoolplay-question-text" data-i18n="schoolPlay.questions.q1">What part did Sarah get in the school play?</p>
+            <div class="EH-schoolplay-options">
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
+                    <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="schoolPlay.questions.q1a">A fairy</label>
+                </div>
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
+                    <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="schoolPlay.questions.q1b">A tree</label>
+                </div>
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
+                    <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="schoolPlay.questions.q1c">An animal</label>
+                </div>
+            </div>
+            <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
+        </div>
+        <!-- Question 2 -->
+        <div class="EH-schoolplay-question-card">
+            <div class="EH-schoolplay-question-number">2</div>
+            <p class="EH-schoolplay-question-text" data-i18n="schoolPlay.questions.q2">How did Sarah feel when she got the part of the tree?</p>
+            <div class="EH-schoolplay-options">
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
+                    <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="schoolPlay.questions.q2a">Excited</label>
+                </div>
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
+                    <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="schoolPlay.questions.q2b">Disappointed</label>
+                </div>
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
+                    <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="schoolPlay.questions.q2c">Happy</label>
+                </div>
+            </div>
+            <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
+        </div>
+        <!-- Question 3 -->
+        <div class="EH-schoolplay-question-card">
+            <div class="EH-schoolplay-question-number">3</div>
+            <p class="EH-schoolplay-question-text" data-i18n="schoolPlay.questions.q3">What did Mrs. Johnson say about the tree's role?</p>
+            <div class="EH-schoolplay-options">
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
+                    <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="schoolPlay.questions.q3a">It was the most important part</label>
+                </div>
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
+                    <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="schoolPlay.questions.q3b">It set the scene for the whole play</label>
+                </div>
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
+                    <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="schoolPlay.questions.q3c">It was the easiest part</label>
+                </div>
+            </div>
+            <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
+        </div>
+        <!-- Question 4 -->
+        <div class="EH-schoolplay-question-card">
+            <div class="EH-schoolplay-question-number">4</div>
+            <p class="EH-schoolplay-question-text" data-i18n="schoolPlay.questions.q4">What did Sarah do to make her tree role better?</p>
+            <div class="EH-schoolplay-options">
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
+                    <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="schoolPlay.questions.q4a">She added a little sway when the wind blew</label>
+                </div>
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
+                    <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="schoolPlay.questions.q4b">She asked to change her part</label>
+                </div>
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
+                    <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="schoolPlay.questions.q4c">She decided to quit the play</label>
+                </div>
+            </div>
+            <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
+        </div>
+        <!-- Question 5 -->
+        <div class="EH-schoolplay-question-card">
+            <div class="EH-schoolplay-question-number">5</div>
+            <p class="EH-schoolplay-question-text" data-i18n="schoolPlay.questions.q5">What did Sarah learn from this experience?</p>
+            <div class="EH-schoolplay-options">
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
+                    <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="schoolPlay.questions.q5a">That being a tree is boring</label>
+                </div>
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
+                    <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="schoolPlay.questions.q5b">That every part in a play is important</label>
+                </div>
+                <div class="EH-schoolplay-option">
+                    <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
+                    <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="schoolPlay.questions.q5c">That she should always be the main character</label>
+                </div>
+            </div>
+            <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
+        </div>
+    </div>
+    <!-- Answer Check and Score System -->
+    <div class="EH-exercise-type1-possibilities3-answers-control">
+        <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers" data-i18n="schoolPlay.answers.check">Check Answers</button>
+        <div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+            <h3 class="EH-exercise-type1-possibilities3-score-title" data-i18n="schoolPlay.answers.score">Your Score</h3>
+            <div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/5</div>
+            <p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback" data-i18n="schoolPlay.answers.feedback.default">Check your answers to see how you did!</p>
+        </div>
+    </div>
+</div>
 				<!-- Vocabulary Section -->
 				<div class="EH-schoolplay-section">
 					<h2 class="EH-schoolplay-section-title" data-i18n="schoolPlay.sections.vocabulary">Vocabulary Cards</h2>
@@ -945,130 +946,145 @@
 		<script src="scripts/sound.js"></script>
 		<script src="scripts/exercise.js"></script>
 		<script>
-			// Lesson-specific audio configuration
-			const audioConfig = {
-				'schoolplay-story': 'assets/audio/lessons/category1/lesson1/schoolplay-story.mp3',
-				'schoolplay-pronunciation-1-listen': 'assets/audio/lessons/category1/lesson1/pronunciation-1.mp3',
-				'schoolplay-pronunciation-2-listen': 'assets/audio/lessons/category1/lesson1/pronunciation-2.mp3',
-				'schoolplay-pronunciation-3-listen': 'assets/audio/lessons/category1/lesson1/pronunciation-3.mp3',
-				'schoolplay-pronunciation-4-listen': 'assets/audio/lessons/category1/lesson1/pronunciation-4.mp3',
-				'schoolplay-pronunciation-5-listen': 'assets/audio/lessons/category1/lesson1/pronunciation-5.mp3'
-			};
-			// Correct answers for questions
-			const correctAnswers = {
-				'EH-exercise-q1': 'b', // A tree
-				'EH-exercise-q2': 'b', // Disappointed
-				'EH-exercise-q3': 'b', // It set the scene for the whole play
-				'EH-exercise-q4': 'a', // She added a little sway when the wind blew
-				'EH-exercise-q5': 'b'  // That every part in a play is important
-			};
-			// Audio progress tracking
-			let progressInterval;
-			function updateProgressBar(audioKey) {
-				const audio = audioPlayers[audioKey];
-				if (!audio) return;
-				const progressSlider = document.getElementById('EH-schoolplay-progress');
-				const timeDisplay = document.getElementById('EH-schoolplay-time');
-				if (audio.duration) {
-					const progress = (audio.currentTime / audio.duration) * 100;
-					progressSlider.value = progress;
-					// Update time display
-					const currentTime = formatTime(audio.currentTime);
-					const duration = formatTime(audio.duration);
-					timeDisplay.textContent = `${currentTime} / ${duration}`;
-				}
-			}
-			function formatTime(seconds) {
-				const mins = Math.floor(seconds / 60);
-				const secs = Math.floor(seconds % 60);
-				return `${mins}:${secs.toString().padStart(2, '0')}`;
-			}
-			function setupProgressTracking(audioKey) {
-				const audio = audioPlayers[audioKey];
-				if (!audio) return;
-				// Clear any existing interval
-				if (progressInterval) {
-					clearInterval(progressInterval);
-				}
-				// Update progress every 100ms
-				progressInterval = setInterval(() => {
-					updateProgressBar(audioKey);
-				}, 100);
-				// Setup progress slider event
-				const progressSlider = document.getElementById('EH-schoolplay-progress');
-				progressSlider.addEventListener('input', function() {
-					if (audio.duration) {
-						const seekTime = (this.value / 100) * audio.duration;
-						audio.currentTime = seekTime;
-					}
-				});
-				// Reset when audio ends
-				audio.addEventListener('ended', function() {
-					if (progressInterval) {
-						clearInterval(progressInterval);
-					}
-					progressSlider.value = 0;
-					document.getElementById('EH-schoolplay-time').textContent = '0:00 / ' + formatTime(audio.duration);
-				});
-			}
-			function setupSpeedControl() {
-				const speedSlider = document.getElementById('EH-schoolplay-speed');
-				const speedValue = document.getElementById('EH-schoolplay-speed-value');
-				speedSlider.addEventListener('input', function() {
-					const speed = this.value / 100;
-					speedValue.textContent = speed.toFixed(1) + 'x';
-					// Apply speed to all audio players
-					for (const key in audioPlayers) {
-						if (audioPlayers[key]) {
-							audioPlayers[key].playbackRate = speed;
-						}
-					}
-				});
-			}
-			// Initialize when DOM is loaded
-			document.addEventListener('DOMContentLoaded', function() {
-				// Initialize audio players with lesson-specific config
-				initAudioPlayers(audioConfig);
-				// Set up main story audio controls
-				document.getElementById('EH-schoolplay-play-btn').addEventListener('click', function() {
-					playAudio('schoolplay-story');
-					setupProgressTracking('schoolplay-story');
-					// Show pause button, hide play button
-					document.getElementById('EH-schoolplay-play-btn').style.display = 'none';
-					document.getElementById('EH-schoolplay-pause-btn').style.display = 'flex';
-				});
-				document.getElementById('EH-schoolplay-pause-btn').addEventListener('click', function() {
-					pauseAudio('schoolplay-story');
-					if (progressInterval) {
-						clearInterval(progressInterval);
-					}
-					// Show play button, hide pause button
-					document.getElementById('EH-schoolplay-play-btn').style.display = 'flex';
-					document.getElementById('EH-schoolplay-pause-btn').style.display = 'none';
-				});
-				document.getElementById('EH-schoolplay-stop-btn').addEventListener('click', function() {
-					stopAudio('schoolplay-story');
-					if (progressInterval) {
-						clearInterval(progressInterval);
-					}
-					document.getElementById('EH-schoolplay-progress').value = 0;
-					document.getElementById('EH-schoolplay-time').textContent = '0:00 / 0:00';
-					// Show play button, hide pause button
-					document.getElementById('EH-schoolplay-play-btn').style.display = 'flex';
-					document.getElementById('EH-schoolplay-pause-btn').style.display = 'none';
-				});
-				document.getElementById('EH-schoolplay-volume').addEventListener('input', function() {
-					setGlobalVolume(this.value);
-				});
-				// Setup speed control
-				setupSpeedControl();
-				// Set up pronunciation practice listeners
-				setupPronunciationListeners();
-				// Set up answer checking
-				EH_exercise_init(correctAnswers, Object.keys(correctAnswers).length, 'EH-exercise');
-				// Initialize with default volume
-				setGlobalVolume(80);
-			});
-		</script>
+    // Lesson-specific audio configuration
+    const audioConfig = {
+        'schoolplay-story': 'assets/audio/lessons/category1/lesson1/schoolplay-story.mp3',
+        'schoolplay-pronunciation-1-listen': 'assets/audio/lessons/category1/lesson1/pronunciation-1.mp3',
+        'schoolplay-pronunciation-2-listen': 'assets/audio/lessons/category1/lesson1/pronunciation-2.mp3',
+        'schoolplay-pronunciation-3-listen': 'assets/audio/lessons/category1/lesson1/pronunciation-3.mp3',
+        'schoolplay-pronunciation-4-listen': 'assets/audio/lessons/category1/lesson1/pronunciation-4.mp3',
+        'schoolplay-pronunciation-5-listen': 'assets/audio/lessons/category1/lesson1/pronunciation-5.mp3'
+    };
+    
+    // Correct answers for questions - UPDATED to match new HTML structure
+    const correctAnswers = {
+        'EH-exercise-type1-possibilities3-q1': 'b', // A tree
+        'EH-exercise-type1-possibilities3-q2': 'b', // Disappointed
+        'EH-exercise-type1-possibilities3-q3': 'b', // It set the scene for the whole play
+        'EH-exercise-type1-possibilities3-q4': 'a', // She added a little sway when the wind blew
+        'EH-exercise-type1-possibilities3-q5': 'b'  // That every part in a play is important
+    };
+    
+    // Audio progress tracking
+    let progressInterval;
+    
+    function updateProgressBar(audioKey) {
+        const audio = audioPlayers[audioKey];
+        if (!audio) return;
+        const progressSlider = document.getElementById('EH-schoolplay-progress');
+        const timeDisplay = document.getElementById('EH-schoolplay-time');
+        if (audio.duration) {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressSlider.value = progress;
+            // Update time display
+            const currentTime = formatTime(audio.currentTime);
+            const duration = formatTime(audio.duration);
+            timeDisplay.textContent = `${currentTime} / ${duration}`;
+        }
+    }
+    
+    function formatTime(seconds) {
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs.toString().padStart(2, '0')}`;
+    }
+    
+    function setupProgressTracking(audioKey) {
+        const audio = audioPlayers[audioKey];
+        if (!audio) return;
+        // Clear any existing interval
+        if (progressInterval) {
+            clearInterval(progressInterval);
+        }
+        // Update progress every 100ms
+        progressInterval = setInterval(() => {
+            updateProgressBar(audioKey);
+        }, 100);
+        // Setup progress slider event
+        const progressSlider = document.getElementById('EH-schoolplay-progress');
+        progressSlider.addEventListener('input', function() {
+            if (audio.duration) {
+                const seekTime = (this.value / 100) * audio.duration;
+                audio.currentTime = seekTime;
+            }
+        });
+        // Reset when audio ends
+        audio.addEventListener('ended', function() {
+            if (progressInterval) {
+                clearInterval(progressInterval);
+            }
+            progressSlider.value = 0;
+            document.getElementById('EH-schoolplay-time').textContent = '0:00 / ' + formatTime(audio.duration);
+        });
+    }
+    
+    function setupSpeedControl() {
+        const speedSlider = document.getElementById('EH-schoolplay-speed');
+        const speedValue = document.getElementById('EH-schoolplay-speed-value');
+        speedSlider.addEventListener('input', function() {
+            const speed = this.value / 100;
+            speedValue.textContent = speed.toFixed(1) + 'x';
+            // Apply speed to all audio players
+            for (const key in audioPlayers) {
+                if (audioPlayers[key]) {
+                    audioPlayers[key].playbackRate = speed;
+                }
+            }
+        });
+    }
+    
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize audio players with lesson-specific config
+        initAudioPlayers(audioConfig);
+        
+        // Set up main story audio controls
+        document.getElementById('EH-schoolplay-play-btn').addEventListener('click', function() {
+            playAudio('schoolplay-story');
+            setupProgressTracking('schoolplay-story');
+            // Show pause button, hide play button
+            document.getElementById('EH-schoolplay-play-btn').style.display = 'none';
+            document.getElementById('EH-schoolplay-pause-btn').style.display = 'flex';
+        });
+        
+        document.getElementById('EH-schoolplay-pause-btn').addEventListener('click', function() {
+            pauseAudio('schoolplay-story');
+            if (progressInterval) {
+                clearInterval(progressInterval);
+            }
+            // Show play button, hide pause button
+            document.getElementById('EH-schoolplay-play-btn').style.display = 'flex';
+            document.getElementById('EH-schoolplay-pause-btn').style.display = 'none';
+        });
+        
+        document.getElementById('EH-schoolplay-stop-btn').addEventListener('click', function() {
+            stopAudio('schoolplay-story');
+            if (progressInterval) {
+                clearInterval(progressInterval);
+            }
+            document.getElementById('EH-schoolplay-progress').value = 0;
+            document.getElementById('EH-schoolplay-time').textContent = '0:00 / 0:00';
+            // Show play button, hide pause button
+            document.getElementById('EH-schoolplay-play-btn').style.display = 'flex';
+            document.getElementById('EH-schoolplay-pause-btn').style.display = 'none';
+        });
+        
+        document.getElementById('EH-schoolplay-volume').addEventListener('input', function() {
+            setGlobalVolume(this.value);
+        });
+        
+        // Setup speed control
+        setupSpeedControl();
+        
+        // Set up pronunciation practice listeners
+        setupPronunciationListeners();
+        
+        // Set up answer checking - FIXED: Use the correct function with correct parameters
+        ExerciseType1Possibilities3Init(correctAnswers, Object.keys(correctAnswers).length, 'EH-exercise-type1-possibilities3');
+        
+        // Initialize with default volume
+        setGlobalVolume(80);
+    });
+</script>
 	</body>
 </html>

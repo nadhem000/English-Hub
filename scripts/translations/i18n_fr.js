@@ -53,6 +53,10 @@ window.I18N['fr'] = {
             title: "Writing Skills (Compétences en écriture)",
             description: "Enhance your writing abilities with structured lessons, creative exercises, and practical applications. (Améliorez vos capacités d'écriture avec des leçons structurées, des exercices créatifs et des applications pratiques.)"
 		},
+conjugation: {
+    title: "Conjugaison des Verbes",
+    description: "Maîtrisez les temps verbaux, les modaux et les modes grâce à des exercices interactifs et des exemples."
+},
         explore: "Explore Now (Explorer maintenant)",
         comingSoon: "Coming Soon (Bientôt disponible)"
 	},
@@ -1264,6 +1268,212 @@ lostPet: {
 			}
 		}
 	},
+conjugation: {
+    title: "Conjugaison des Verbes",
+    subtitle: "Maîtrisez les temps verbaux, les modaux et les modes en anglais",
+    
+    simpleTenses: "Temps Simples",
+    simpleTensesDescription: "Apprenez les temps verbaux de base utilisés dans la communication quotidienne en anglais.",
+    
+    simplePresent: "Présent Simple",
+    simplePresentDescription: "Exprimez des habitudes, des vérités générales et des arrangements fixes.",
+    
+    simplePast: "Passé Simple",
+    simplePastDescription: "Parlez d'actions terminées dans le passé.",
+    
+    simpleFuture: "Futur Simple",
+    simpleFutureDescription: "Exprimez des prédictions, des promesses et des décisions spontanées.",
+    
+    progressiveTenses: "Temps Progressifs",
+    progressiveTensesDescription: "Exprimez des actions en cours à des moments spécifiques.",
+    
+    presentProgressive: "Présent Progressif",
+    presentProgressiveDescription: "Décrivez des actions se produisant maintenant ou autour de maintenant.",
+    
+    pastProgressive: "Passé Progressif",
+    pastProgressiveDescription: "Décrivez des actions en cours dans le passé.",
+    
+    futureProgressive: "Futur Progressif",
+    futureProgressiveDescription: "Décrivez des actions en cours dans le futur.",
+    
+    perfectTenses: "Temps Parfaits",
+    perfectTensesDescription: "Exprimez des actions terminées avec pertinence par rapport à d'autres périodes.",
+    
+    presentPerfect: "Présent Parfait",
+    presentPerfectDescription: "Reliez les actions passées au présent.",
+    
+    pastPerfect: "Passé Parfait",
+    pastPerfectDescription: "Exprimez des actions terminées avant une autre action passée.",
+    
+    futurePerfect: "Futur Parfait",
+    futurePerfectDescription: "Exprimez des actions qui seront terminées avant un moment futur.",
+    
+    modalVerbs: "Verbes Modaux",
+    modalVerbsDescription: "Exprimez la capacité, la possibilité, la permission ou l'obligation.",
+    
+    conditionalMood: "Mode Conditionnel",
+    conditionalMoodDescription: "Exprimez des situations hypothétiques et leurs conséquences."
+},
+    simplePresent: {
+        title: "Le Présent Simple : Généralité (Simple Present Tense: Generality)",
+        subtitle: "Maîtrisez le temps verbal de base pour les habitudes, les faits et les vérités générales (Master the basic verb tense for habits, facts, and general truths)",
+        
+        introduction: {
+            title: "Introduction au Présent Simple (Introduction to Simple Present)",
+            whatIs: "Qu'est-ce que le Présent Simple ? (What is the Simple Present Tense?)",
+            definitionTitle: "Définition : (Definition:)",
+            definition: "Le Présent Simple est utilisé pour décrire les habitudes, les situations immuables, les vérités générales et les arrangements fixes. (The Simple Present tense is used to describe habits, unchanging situations, general truths, and fixed arrangements.)",
+            usesTitle: "Quand l'utiliser : (When to use:)",
+            use1: "Habitudes et routines (Habits and routines)",
+            use2: "Faits et vérités générales (Facts and general truths)",
+            use3: "Arrangements et horaires fixes (Fixed arrangements and schedules)",
+            use4: "Sentiments et états (Feelings and states)",
+            example1: "Je travaille dans une banque. (I work at a bank.)",
+            example2: "Le soleil se lève à l'est. (The sun rises in the east.)",
+            example3: "Le train part à 17h. (The train leaves at 5 PM.)",
+            example4: "Elle aime le café. (She likes coffee.)"
+        },
+        
+        toBe: {
+            title: "Le verbe \"Être\" (The Verb \"To Be\")",
+            conjugation: "Conjugaison du verbe \"Être\" (Conjugation of \"To Be\")",
+            am: "suis (am)",
+            are: "es (are)",
+            is: "est (is)",
+            exampleI: "Je suis étudiant. (I am a student.)",
+            exampleYou: "Tu es mon ami. (You are my friend.)",
+            exampleHe: "Il est enseignant. (He is a teacher.)",
+            exampleShe: "Elle est heureuse. (She is happy.)",
+            exampleIt: "C'est une belle journée. (It is a beautiful day.)",
+            exampleWe: "Nous sommes ici. (We are here.)",
+            exampleThey: "Ils sont étudiants. (They are students.)",
+            negativeTitle: "Forme négative : (Negative Form:)",
+            negativeRule: "Ajoutez \"ne...pas\" autour du verbe. (Add \"not\" after the verb.)",
+            negativeExample1: "Je ne suis pas médecin. (I am not a doctor.)",
+            negativeExample2: "Elle n'est pas fatiguée. (She is not tired.)",
+            negativeExample3: "Ils ne sont pas ici. (They are not here.)",
+            questionTitle: "Forme interrogative : (Question Form:)",
+            questionRule: "Inversez le sujet et le verbe. (Invert the subject and the verb.)",
+            questionExample1: "Suis-je en retard ? (Am I late?)",
+            questionExample2: "Est-elle enseignante ? (Is she a teacher?)",
+            questionExample3: "Sont-ils prêts ? (Are they ready?)"
+        },
+        
+        toHave: {
+            title: "Le verbe \"Avoir\" (The Verb \"To Have\")",
+            conjugation: "Conjugaison du verbe \"Avoir\" (Conjugation of \"To Have\")",
+            have: "ai (have)",
+            has: "a (has)",
+            exampleI: "J'ai une voiture. (I have a car.)",
+            exampleYou: "Tu as un livre. (You have a book.)",
+            exampleHe: "Il a un chat. (He has a cat.)",
+            exampleShe: "Elle a un chien. (She has a dog.)",
+            exampleIt: "Il a quatre pattes. (It has four legs.)",
+            exampleWe: "Nous avons le temps. (We have time.)",
+            exampleThey: "Ils ont de l'argent. (They have money.)",
+            negativeTitle: "Forme négative : (Negative Form:)",
+            negativeRule: "Utilisez \"ne...pas\" + avoir. (Use \"do not\" (don't) or \"does not\" (doesn't) + have.)",
+            negativeExample1: "Je n'ai pas de voiture. (I don't have a car.)",
+            negativeExample2: "Elle n'a pas de chien. (She doesn't have a dog.)",
+            negativeExample3: "Ils n'ont pas le temps. (They don't have time.)",
+            questionTitle: "Forme interrogative : (Question Form:)",
+            questionRule: "Utilisez Est-ce que + sujet + avoir. (Use \"do\" or \"does\" + subject + have.)",
+            questionExample1: "As-tu une voiture ? (Do you have a car?)",
+            questionExample2: "A-t-elle un chien ? (Does she have a dog?)",
+            questionExample3: "Ont-ils le temps ? (Do they have time?)"
+        },
+        
+        regularVerbs: {
+            title: "Verbes réguliers (Regular Verbs)",
+            conjugation: "Conjugaison des verbes réguliers (Conjugation of Regular Verbs)",
+            ruleTitle: "Règle de base : (Basic Rule:)",
+            rule: "Pour la plupart des verbes, utilisez la forme de base pour tous les sujets sauf il/elle/on. Pour il/elle/on, ajoutez -s ou -es. (For most verbs, use the base form for all subjects except he/she/it. For he/she/it, add -s or -es.)",
+            work: "travaille (work)",
+            works: "travaille (works)",
+            exampleI: "Je travaille tous les jours. (I work every day.)",
+            exampleYou: "Tu travailles ici. (You work here.)",
+            exampleHe: "Il travaille dans une banque. (He works at a bank.)",
+            exampleShe: "Elle travaille dur. (She works hard.)",
+            exampleIt: "Ça fonctionne bien. (It works well.)",
+            exampleWe: "Nous travaillons ensemble. (We work together.)",
+            exampleThey: "Ils travaillent tard. (They work late.)",
+            spellingTitle: "Règles d'orthographe pour -s/-es : (Spelling Rules for -s/-es:)",
+            spelling1: "La plupart des verbes : ajoutez -s (travaille → travaille) (Most verbs: add -s (work → works))",
+            spelling2: "Verbes se terminant par -s, -ss, -sh, -ch, -x, -o : ajoutez -es (regarde → regarde) (Verbs ending in -s, -ss, -sh, -ch, -x, -o: add -es (watch → watches))",
+            spelling3: "Verbes se terminant par consonne + y : changez y en i et ajoutez -es (étudie → étudie) (Verbs ending in consonant + y: change y to i and add -es (study → studies))",
+            spelling4: "Verbes se terminant par voyelle + y : ajoutez -s (joue → joue) (Verbs ending in vowel + y: add -s (play → plays))",
+            negativeTitle: "Forme négative : (Negative Form:)",
+            negativeRule: "Utilisez \"ne...pas\" + forme de base du verbe. (Use \"do not\" (don't) or \"does not\" (doesn't) + base form of verb.)",
+            negativeExample1: "Je ne travaille pas le week-end. (I don't work on weekends.)",
+            negativeExample2: "Elle ne travaille pas ici. (She doesn't work here.)",
+            negativeExample3: "Ils ne travaillent pas tard. (They don't work late.)",
+            questionTitle: "Forme interrogative : (Question Form:)",
+            questionRule: "Utilisez Est-ce que + sujet + forme de base du verbe. (Use \"do\" or \"does\" + subject + base form of verb.)",
+            questionExample1: "Travailles-tu ici ? (Do you work here?)",
+            questionExample2: "Travaille-t-elle dur ? (Does she work hard?)",
+            questionExample3: "Travaillent-ils ensemble ? (Do they work together?)"
+        },
+        
+        irregularVerbs: {
+            title: "Verbes irréguliers courants (Common Irregular Verbs)",
+            conjugation: "Conjugaisons des verbes irréguliers (Irregular Verb Conjugations)",
+            ruleTitle: "À propos des verbes irréguliers : (About Irregular Verbs:)",
+            rule: "Certains verbes ne suivent pas le modèle régulier -s/-es pour il/elle/on. Ils ont leurs propres formes uniques. (Some verbs don't follow the regular -s/-es pattern for he/she/it. They have their own unique forms.)",
+            go: "aller (go)",
+            goBase: "vais (go)",
+            goes: "va (goes)",
+            goExample: "Elle va à l'école. (She goes to school.)",
+            do: "faire (do)",
+            doBase: "fais (do)",
+            does: "fait (does)",
+            doExample: "Il fait ses devoirs. (He does his homework.)",
+            have: "avoir (have)",
+            haveBase: "ai (have)",
+            has: "a (has)",
+            haveExample: "Il a quatre pattes. (It has four legs.)",
+            say: "dire (say)",
+            sayBase: "dis (say)",
+            says: "dit (says)",
+            sayExample: "Il dit bonjour. (He says hello.)",
+            moreExamplesTitle: "Plus d'exemples : (More Examples:)",
+            example1: "Je vais à la salle de sport tous les jours. (I go to the gym every day.)",
+            example2: "Elle va au marché le samedi. (She goes to the market on Saturdays.)",
+            example3: "Nous faisons nos devoirs le soir. (We do our homework in the evening.)",
+            example4: "Il fait la vaisselle après le dîner. (He does the dishes after dinner.)"
+        },
+        
+        exercises: {
+            title: "Exercices pratiques (Practice Exercises)",
+            q1: "Choisissez la forme correcte du verbe \"être\" : (Choose the correct form of the verb \"to be\":)",
+            q1Sentence: "Elle ______ médecin. (She ______ a doctor.)",
+            q1a: "suis (am)",
+            q1b: "est (is)",
+            q1c: "es (are)",
+            q2: "Choisissez la forme correcte du verbe \"avoir\" : (Choose the correct form of the verb \"to have\":)",
+            q2Sentence: "Ils ______ deux chats. (They ______ two cats.)",
+            q2a: "a (has)",
+            q2b: "ont (have)",
+            q2c: "avait (had)",
+            q3: "Choisissez la forme correcte du verbe régulier : (Choose the correct form of the regular verb:)",
+            q3Sentence: "Il ______ (travailler) dans un bureau. (He ______ (work) in an office.)",
+            q3a: "travaille (work)",
+            q3b: "travaille (works)",
+            q3c: "travaillant (working)",
+            q4: "Choisissez la forme correcte du verbe irrégulier : (Choose the correct form of the irregular verb:)",
+            q4Sentence: "Elle ______ (aller) à l'école en bus. (She ______ (go) to school by bus.)",
+            q4a: "aller (go)",
+            q4b: "va (goes)",
+            q4c: "allant (going)",
+            q5: "Choisissez la forme négative correcte : (Choose the correct negative form:)",
+            q5Sentence: "Je ______ aime le café. (I ______ like coffee.)",
+            q5a: "ne...pas (doesn't)",
+            q5b: "ne...pas (don't)",
+            q5c: "pas (not)",
+            checkAnswers: "Vérifier les réponses (Check Answers)",
+            yourScore: "Votre score (Your Score)",
+            feedbackDefault: "Vérifiez vos réponses pour voir comment vous avez réussi ! (Check your answers to see how you did!)"
+        }
+    },
     
     // Footer
     footer: {

@@ -1,5 +1,5 @@
 // Service Worker for English Hub - Enhanced cache management
-const VERSION = 'v1.0.8'; // Increment version
+const VERSION = 'v1.0.9'; // Increment version
 const STATIC_CACHE = `static-cache-${VERSION}`;
 const DYNAMIC_CACHE = `dynamic-cache-${VERSION}`;
 

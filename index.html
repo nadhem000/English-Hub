@@ -68,11 +68,11 @@
             background: #11998e;
 			}
 			
-			/* Main Content - Two Sections */
+			/* Main Content - Three Sections */
 			.EH-main-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
             margin-bottom: 50px;
 			}
 			
@@ -103,6 +103,11 @@
 			
 			.EH-main-card.writing {
             background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: white;
+			}
+			
+			.EH-main-card.conjugation {
+            background: linear-gradient(135deg, #fdbb2d, #f46b45);
             color: white;
 			}
 			
@@ -210,7 +215,7 @@
 		</div>
 		
 <div class="EH-site-header">
-    <a href="index.html" class="EH-site-logo-link" data-i18n="common.mainPage" title="Main Page">
+    <a href="index.html" class="EH-site-logo-link" title="Main Page">
         <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
     </a>
     <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
@@ -245,6 +250,16 @@
 						Enhance your writing abilities with structured lessons, creative exercises, and practical applications.
 					</p>
 					<span class="EH-coming-soon" data-i18n="main.comingSoon">Coming Soon</span>
+				</div>
+				
+				<!-- Conjugation Section -->
+				<div class="EH-main-card conjugation" onclick="window.location.href='conjugation.html'">
+					<span class="EH-main-card-icon">⏱️</span>
+					<h2 class="EH-main-card-title" data-i18n="main.conjugation.title">Verb Conjugation</h2>
+					<p class="EH-main-card-description" data-i18n="main.conjugation.description">
+						Master verb tenses, modals, and modes through interactive exercises and examples.
+					</p>
+					<a href="conjugation.html" class="EH-main-card-link" data-i18n="main.explore">Explore Now</a>
 				</div>
 			</div>
 		</div>
@@ -414,6 +429,10 @@
 								writing: {
 									title: window.I18N[lang].main?.writing?.title || "Writing Skills",
 									description: window.I18N[lang].main?.writing?.description || "Enhance your writing abilities with structured lessons, creative exercises, and practical applications."
+								},
+								conjugation: {
+									title: window.I18N[lang].main?.conjugation?.title || "Verb Conjugation",
+									description: window.I18N[lang].main?.conjugation?.description || "Master verb tenses, modals, and modes through interactive exercises and examples."
 								},
 								explore: window.I18N[lang].main?.explore || "Explore Now",
 								comingSoon: window.I18N[lang].main?.comingSoon || "Coming Soon"

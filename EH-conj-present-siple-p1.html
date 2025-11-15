@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Present Tense: Generality - English Hub</title>
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/common.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e6b52, #2a8f6c, #4caf7d);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .EH-conjugation-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1;
+        }
+        
+        .EH-conjugation-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .EH-conjugation-title {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .EH-conjugation-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+        }
+        
+        .EH-conjugation-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+        
+        .EH-conjugation-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .EH-conjugation-section-title {
+            font-size: 1.8rem;
+            color: #1e6b52;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4caf7d;
+        }
+        
+        .EH-conjugation-subsection {
+            margin-bottom: 25px;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .EH-conjugation-subsection-title {
+            font-size: 1.4rem;
+            color: #2a8f6c;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .EH-conjugation-subsection-icon {
+            font-size: 1.6rem;
+            margin-right: 10px;
+        }
+        
+        .EH-conjugation-rule {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            border-left: 4px solid #4caf7d;
+        }
+        
+        .EH-conjugation-rule-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1e6b52;
+        }
+        
+        .EH-conjugation-examples {
+            background: #e8f5e9;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .EH-conjugation-example {
+            margin-bottom: 8px;
+            padding-left: 10px;
+            border-left: 2px solid #4caf7d;
+        }
+        
+        .EH-conjugation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .EH-conjugation-table th,
+        .EH-conjugation-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .EH-conjugation-table th {
+            background-color: #2a8f6c;
+            color: white;
+        }
+        
+        .EH-conjugation-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .EH-conjugation-table tr:hover {
+            background-color: #e0f2e1;
+        }
+        
+        /* Exercise Styles */
+        .EH-exercise-section {
+            margin-top: 40px;
+        }
+        
+        .EH-exercise-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .EH-exercise-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .EH-exercise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .EH-exercise-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #2a8f6c, #4caf7d);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .EH-exercise-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .EH-exercise-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .EH-exercise-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .EH-exercise-option input {
+            cursor: pointer;
+        }
+        
+        .EH-exercise-option label {
+            cursor: pointer;
+        }
+        
+        .EH-exercise-answers-control {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            gap: 20px;
+        }
+        
+        .EH-exercise-check-answers-btn {
+            background: #2a8f6c;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            font-size: 1rem;
+        }
+        
+        .EH-exercise-check-answers-btn:hover {
+            background: #1e6b52;
+        }
+        
+        .EH-exercise-score-display {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: none;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .EH-exercise-score-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #1e6b52;
+        }
+        
+        .EH-exercise-score-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2a8f6c;
+            margin-bottom: 15px;
+        }
+        
+        .EH-exercise-score-feedback {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .EH-exercise-answer-status {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .EH-exercise-correct-answer {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .EH-exercise-incorrect-answer {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .EH-exercise-option.correct {
+            background-color: #d4edda;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .EH-exercise-option.incorrect {
+            background-color: #f8d7da;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* Navigation Buttons */
+        .EH-conjugation-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .EH-conjugation-nav-button {
+            background: #2a8f6c;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .EH-conjugation-nav-button:hover {
+            background: #1e6b52;
+        }
+        
+        .EH-conjugation-nav-button.back {
+            background: #4caf7d;
+        }
+        
+        .EH-conjugation-nav-button.back:hover {
+            background: #3d8b63;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .EH-conjugation-title {
+                font-size: 2rem;
+            }
+            
+            .EH-exercise-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .EH-conjugation-navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .EH-conjugation-nav-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .EH-conjugation-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Selector -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+    
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+    </div>
+    
+    <div class="EH-conjugation-container">
+        <header class="EH-conjugation-header">
+            <h1 class="EH-conjugation-title" data-i18n="simplePresent.title">Simple Present Tense: Generality</h1>
+            <p class="EH-conjugation-subtitle" data-i18n="simplePresent.subtitle">Master the basic verb tense for habits, facts, and general truths</p>
+        </header>
+        
+        <div class="EH-conjugation-content">
+            <!-- Introduction Section -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent.introduction.title">Introduction to Simple Present</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">📚</span>
+                        <span data-i18n="simplePresent.introduction.whatIs">What is the Simple Present Tense?</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent.introduction.definitionTitle">Definition:</div>
+                        <p data-i18n="simplePresent.introduction.definition">The Simple Present tense is used to describe habits, unchanging situations, general truths, and fixed arrangements.</p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent.introduction.usesTitle">When to use:</div>
+                        <ul>
+                            <li data-i18n="simplePresent.introduction.use1">Habits and routines</li>
+                            <li data-i18n="simplePresent.introduction.use2">Facts and general truths</li>
+                            <li data-i18n="simplePresent.introduction.use3">Fixed arrangements and schedules</li>
+                            <li data-i18n="simplePresent.introduction.use4">Feelings and states</li>
+                        </ul>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
+                        <div class="EH-conjugation-example" data-i18n="simplePresent.introduction.example1">I work at a bank.</div>
+                        <div class="EH-conjugation-example" data-i18n="simplePresent.introduction.example2">The sun rises in the east.</div>
+                        <div class="EH-conjugation-example" data-i18n="simplePresent.introduction.example3">The train leaves at 5 PM.</div>
+                        <div class="EH-conjugation-example" data-i18n="simplePresent.introduction.example4">She likes coffee.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- To Be Section -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent.toBe.title">The Verb "To Be"</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🔤</span>
+                        <span data-i18n="simplePresent.toBe.conjugation">Conjugation of "To Be"</span>
+                    </h3>
+                    <table class="EH-conjugation-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="common.subject">Subject</th>
+                                <th data-i18n="common.conjugation">Conjugation</th>
+                                <th data-i18n="common.example">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="common.i">I</td>
+                                <td data-i18n="simplePresent.toBe.am">am</td>
+                                <td data-i18n="simplePresent.toBe.exampleI">I am a student.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.you">You</td>
+                                <td data-i18n="simplePresent.toBe.are">are</td>
+                                <td data-i18n="simplePresent.toBe.exampleYou">You are my friend.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.he">He</td>
+                                <td data-i18n="simplePresent.toBe.is">is</td>
+                                <td data-i18n="simplePresent.toBe.exampleHe">He is a teacher.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.she">She</td>
+                                <td data-i18n="simplePresent.toBe.is">is</td>
+                                <td data-i18n="simplePresent.toBe.exampleShe">She is happy.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.it">It</td>
+                                <td data-i18n="simplePresent.toBe.is">is</td>
+                                <td data-i18n="simplePresent.toBe.exampleIt">It is a beautiful day.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.we">We</td>
+                                <td data-i18n="simplePresent.toBe.are">are</td>
+                                <td data-i18n="simplePresent.toBe.exampleWe">We are here.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.they">They</td>
+                                <td data-i18n="simplePresent.toBe.are">are</td>
+                                <td data-i18n="simplePresent.toBe.exampleThey">They are students.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent.toBe.negativeTitle">Negative Form:</div>
+                        <p data-i18n="simplePresent.toBe.negativeRule">Add "not" after the verb.</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.toBe.negativeExample1">I am not a doctor.</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.toBe.negativeExample2">She is not tired.</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.toBe.negativeExample3">They are not here.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent.toBe.questionTitle">Question Form:</div>
+                        <p data-i18n="simplePresent.toBe.questionRule">Invert the subject and the verb.</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.toBe.questionExample1">Am I late?</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.toBe.questionExample2">Is she a teacher?</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.toBe.questionExample3">Are they ready?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- To Have Section -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent.toHave.title">The Verb "To Have"</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🔤</span>
+                        <span data-i18n="simplePresent.toHave.conjugation">Conjugation of "To Have"</span>
+                    </h3>
+                    <table class="EH-conjugation-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="common.subject">Subject</th>
+                                <th data-i18n="common.conjugation">Conjugation</th>
+                                <th data-i18n="common.example">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="common.i">I</td>
+                                <td data-i18n="simplePresent.toHave.have">have</td>
+                                <td data-i18n="simplePresent.toHave.exampleI">I have a car.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.you">You</td>
+                                <td data-i18n="simplePresent.toHave.have">have</td>
+                                <td data-i18n="simplePresent.toHave.exampleYou">You have a book.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.he">He</td>
+                                <td data-i18n="simplePresent.toHave.has">has</td>
+                                <td data-i18n="simplePresent.toHave.exampleHe">He has a cat.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.she">She</td>
+                                <td data-i18n="simplePresent.toHave.has">has</td>
+                                <td data-i18n="simplePresent.toHave.exampleShe">She has a dog.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.it">It</td>
+                                <td data-i18n="simplePresent.toHave.has">has</td>
+                                <td data-i18n="simplePresent.toHave.exampleIt">It has four legs.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.we">We</td>
+                                <td data-i18n="simplePresent.toHave.have">have</td>
+                                <td data-i18n="simplePresent.toHave.exampleWe">We have time.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.they">They</td>
+                                <td data-i18n="simplePresent.toHave.have">have</td>
+                                <td data-i18n="simplePresent.toHave.exampleThey">They have money.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent.toHave.negativeTitle">Negative Form:</div>
+                        <p data-i18n="simplePresent.toHave.negativeRule">Use "do not" (don't) or "does not" (doesn't) + have.</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.toHave.negativeExample1">I don't have a car.</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.toHave.negativeExample2">She doesn't have a dog.</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.toHave.negativeExample3">They don't have time.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent.toHave.questionTitle">Question Form:</div>
+                        <p data-i18n="simplePresent.toHave.questionRule">Use "do" or "does" + subject + have.</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.toHave.questionExample1">Do you have a car?</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.toHave.questionExample2">Does she have a dog?</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.toHave.questionExample3">Do they have time?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Regular Verbs Section -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent.regularVerbs.title">Regular Verbs</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">📝</span>
+                        <span data-i18n="simplePresent.regularVerbs.conjugation">Conjugation of Regular Verbs</span>
+                    </h3>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent.regularVerbs.ruleTitle">Basic Rule:</div>
+                        <p data-i18n="simplePresent.regularVerbs.rule">For most verbs, use the base form for all subjects except he/she/it. For he/she/it, add -s or -es.</p>
+                    </div>
+                    
+                    <table class="EH-conjugation-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="common.subject">Subject</th>
+                                <th data-i18n="common.conjugation">Conjugation</th>
+                                <th data-i18n="common.example">Example (work)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="common.i">I</td>
+                                <td data-i18n="simplePresent.regularVerbs.work">work</td>
+                                <td data-i18n="simplePresent.regularVerbs.exampleI">I work every day.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.you">You</td>
+                                <td data-i18n="simplePresent.regularVerbs.work">work</td>
+                                <td data-i18n="simplePresent.regularVerbs.exampleYou">You work here.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.he">He</td>
+                                <td data-i18n="simplePresent.regularVerbs.works">works</td>
+                                <td data-i18n="simplePresent.regularVerbs.exampleHe">He works at a bank.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.she">She</td>
+                                <td data-i18n="simplePresent.regularVerbs.works">works</td>
+                                <td data-i18n="simplePresent.regularVerbs.exampleShe">She works hard.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.it">It</td>
+                                <td data-i18n="simplePresent.regularVerbs.works">works</td>
+                                <td data-i18n="simplePresent.regularVerbs.exampleIt">It works well.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.we">We</td>
+                                <td data-i18n="simplePresent.regularVerbs.work">work</td>
+                                <td data-i18n="simplePresent.regularVerbs.exampleWe">We work together.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.they">They</td>
+                                <td data-i18n="simplePresent.regularVerbs.work">work</td>
+                                <td data-i18n="simplePresent.regularVerbs.exampleThey">They work late.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent.regularVerbs.spellingTitle">Spelling Rules for -s/-es:</div>
+                        <ul>
+                            <li data-i18n="simplePresent.regularVerbs.spelling1">Most verbs: add -s (work → works)</li>
+                            <li data-i18n="simplePresent.regularVerbs.spelling2">Verbs ending in -s, -ss, -sh, -ch, -x, -o: add -es (watch → watches)</li>
+                            <li data-i18n="simplePresent.regularVerbs.spelling3">Verbs ending in consonant + y: change y to i and add -es (study → studies)</li>
+                            <li data-i18n="simplePresent.regularVerbs.spelling4">Verbs ending in vowel + y: add -s (play → plays)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent.regularVerbs.negativeTitle">Negative Form:</div>
+                        <p data-i18n="simplePresent.regularVerbs.negativeRule">Use "do not" (don't) or "does not" (doesn't) + base form of verb.</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.regularVerbs.negativeExample1">I don't work on weekends.</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.regularVerbs.negativeExample2">She doesn't work here.</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.regularVerbs.negativeExample3">They don't work late.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent.regularVerbs.questionTitle">Question Form:</div>
+                        <p data-i18n="simplePresent.regularVerbs.questionRule">Use "do" or "does" + subject + base form of verb.</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.regularVerbs.questionExample1">Do you work here?</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.regularVerbs.questionExample2">Does she work hard?</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.regularVerbs.questionExample3">Do they work together?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Irregular Verbs Section -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent.irregularVerbs.title">Common Irregular Verbs</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">⚠️</span>
+                        <span data-i18n="simplePresent.irregularVerbs.conjugation">Irregular Verb Conjugations</span>
+                    </h3>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent.irregularVerbs.ruleTitle">About Irregular Verbs:</div>
+                        <p data-i18n="simplePresent.irregularVerbs.rule">Some verbs don't follow the regular -s/-es pattern for he/she/it. They have their own unique forms.</p>
+                    </div>
+                    
+                    <table class="EH-conjugation-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="common.verb">Verb</th>
+                                <th data-i18n="common.iYouWeThey">I/You/We/They</th>
+                                <th data-i18n="common.heSheIt">He/She/It</th>
+                                <th data-i18n="common.example">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="simplePresent.irregularVerbs.go">go</td>
+                                <td data-i18n="simplePresent.irregularVerbs.goBase">go</td>
+                                <td data-i18n="simplePresent.irregularVerbs.goes">goes</td>
+                                <td data-i18n="simplePresent.irregularVerbs.goExample">She goes to school.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="simplePresent.irregularVerbs.do">do</td>
+                                <td data-i18n="simplePresent.irregularVerbs.doBase">do</td>
+                                <td data-i18n="simplePresent.irregularVerbs.does">does</td>
+                                <td data-i18n="simplePresent.irregularVerbs.doExample">He does his homework.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="simplePresent.irregularVerbs.have">have</td>
+                                <td data-i18n="simplePresent.irregularVerbs.haveBase">have</td>
+                                <td data-i18n="simplePresent.irregularVerbs.has">has</td>
+                                <td data-i18n="simplePresent.irregularVerbs.haveExample">It has four legs.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="simplePresent.irregularVerbs.say">say</td>
+                                <td data-i18n="simplePresent.irregularVerbs.sayBase">say</td>
+                                <td data-i18n="simplePresent.irregularVerbs.says">says</td>
+                                <td data-i18n="simplePresent.irregularVerbs.sayExample">He says hello.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent.irregularVerbs.moreExamplesTitle">More Examples:</div>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.irregularVerbs.example1">I go to the gym every day.</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.irregularVerbs.example2">She goes to the market on Saturdays.</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.irregularVerbs.example3">We do our homework in the evening.</div>
+                            <div class="EH-conjugation-example" data-i18n="simplePresent.irregularVerbs.example4">He does the dishes after dinner.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Exercises Section -->
+            <div class="EH-conjugation-section EH-exercise-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent.exercises.title">Practice Exercises</h2>
+                <div class="EH-exercise-container">
+                    <!-- Exercise 1 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">1</div>
+                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q1">Choose the correct form of the verb "to be":</p>
+                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q1Sentence">She ______ a doctor.</p>
+                        <div class="EH-exercise-options">
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="simplePresent.exercises.q1a">am</label>
+                            </div>
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="simplePresent.exercises.q1b">is</label>
+                            </div>
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="simplePresent.exercises.q1c">are</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 2 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">2</div>
+                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q2">Choose the correct form of the verb "to have":</p>
+                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q2Sentence">They ______ two cats.</p>
+                        <div class="EH-exercise-options">
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="simplePresent.exercises.q2a">has</label>
+                            </div>
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="simplePresent.exercises.q2b">have</label>
+                            </div>
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="simplePresent.exercises.q2c">had</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 3 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">3</div>
+                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q3">Choose the correct form of the regular verb:</p>
+                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q3Sentence">He ______ (work) in an office.</p>
+                        <div class="EH-exercise-options">
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="simplePresent.exercises.q3a">work</label>
+                            </div>
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="simplePresent.exercises.q3b">works</label>
+                            </div>
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="simplePresent.exercises.q3c">working</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 4 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">4</div>
+                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q4">Choose the correct form of the irregular verb:</p>
+                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q4Sentence">She ______ (go) to school by bus.</p>
+                        <div class="EH-exercise-options">
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="simplePresent.exercises.q4a">go</label>
+                            </div>
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="simplePresent.exercises.q4b">goes</label>
+                            </div>
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="simplePresent.exercises.q4c">going</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 5 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">5</div>
+                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q5">Choose the correct negative form:</p>
+                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q5Sentence">I ______ like coffee.</p>
+                        <div class="EH-exercise-options">
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="simplePresent.exercises.q5a">doesn't</label>
+                            </div>
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="simplePresent.exercises.q5b">don't</label>
+                            </div>
+                            <div class="EH-exercise-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="simplePresent.exercises.q5c">not</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
+                    </div>
+                </div>
+                
+                <!-- Answer Check and Score System -->
+                <div class="EH-exercise-answers-control">
+                    <button class="EH-exercise-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers" data-i18n="simplePresent.exercises.checkAnswers">Check Answers</button>
+                    <div class="EH-exercise-score-display" id="EH-exercise-type1-possibilities3-score-display">
+                        <h3 class="EH-exercise-score-title" data-i18n="simplePresent.exercises.yourScore">Your Score</h3>
+                        <div class="EH-exercise-score-value" id="EH-exercise-type1-possibilities3-score-value">0/5</div>
+                        <p class="EH-exercise-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback" data-i18n="simplePresent.exercises.feedbackDefault">Check your answers to see how you did!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="EH-conjugation-navigation">
+                <button class="EH-conjugation-nav-button back" onclick="window.location.href='conjugation.html'">
+                    ← <span data-i18n="common.backToConjugation">Back to Verb Conjugation</span>
+                </button>
+                <button class="EH-conjugation-nav-button" onclick="window.location.href='EH-conj-present-simple-p2.html'">
+                    <span data-i18n="common.nextLesson">Next Lesson</span> →
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="EH-common-footer">
+        <div class="EH-common-footer-content">
+            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+            <div class="EH-common-footer-links">
+                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                <a href="#" data-i18n="footer.contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- i18n translations -->
+    <script src="scripts/translations/i18n_en.js"></script>
+    <script src="scripts/translations/i18n_fr.js"></script>
+    <script src="scripts/translations/i18n_ar.js"></script>
+    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/exercise.js"></script>
+    
+    <script>
+        // Correct answers for exercises
+        const correctAnswers = {
+            'EH-exercise-type1-possibilities3-q1': 'b', // She is a doctor.
+            'EH-exercise-type1-possibilities3-q2': 'b', // They have two cats.
+            'EH-exercise-type1-possibilities3-q3': 'b', // He works in an office.
+            'EH-exercise-type1-possibilities3-q4': 'b', // She goes to school by bus.
+            'EH-exercise-type1-possibilities3-q5': 'b'  // I don't like coffee.
+        };
+        
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up answer checking
+            ExerciseType1Possibilities3Init(correctAnswers, Object.keys(correctAnswers).length, 'EH-exercise-type1-possibilities3');
+        });
+    </script>
+</body>
+</html>

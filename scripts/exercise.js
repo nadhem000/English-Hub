@@ -4,12 +4,30 @@
 function ExerciseType1Possibilities3CheckAnswers(correctAnswers, totalQuestions, prefix = 'EH-exercise-type1-possibilities3') {
     let score = 0;
     
-    // Auto-detect lesson type for styling
+    // Auto-detect lesson type for styling - UPDATED to include all lesson types
     let optionClass = 'EH-workplace-option'; // default
     if (document.querySelector('.EH-schoolplay-option')) {
         optionClass = 'EH-schoolplay-option';
-    } else if (document.querySelector('.EH-grammar-option')) {
-        optionClass = 'EH-grammar-option';
+    } else if (document.querySelector('.EH-lostpet-option')) {
+        optionClass = 'EH-lostpet-option';
+    } else if (document.querySelector('.EH-garden-option')) {
+        optionClass = 'EH-garden-option';
+    } else if (document.querySelector('.EH-workplace-option')) {
+        optionClass = 'EH-workplace-option';
+    } else if (document.querySelector('.EH-sciencefair-option')) {
+        optionClass = 'EH-sciencefair-option';
+    } else if (document.querySelector('.EH-makingfriends-option')) {
+        optionClass = 'EH-makingfriends-option';
+    } else if (document.querySelector('.EH-banking-option')) {
+        optionClass = 'EH-banking-option';
+    } else if (document.querySelector('.EH-apartment-option')) {
+        optionClass = 'EH-apartment-option';
+    } else if (document.querySelector('.EH-healthcare-option')) {
+        optionClass = 'EH-healthcare-option';
+    } else if (document.querySelector('.EH-transport-option')) {
+        optionClass = 'EH-transport-option';
+    } else if (document.querySelector('.EH-grocery-option')) {
+        optionClass = 'EH-grocery-option';
     }
     // Add more lesson types as needed
     
@@ -127,12 +145,30 @@ function ExerciseType1Possibilities3Init(correctAnswers, totalQuestions, prefix 
 
 // Support for different exercise types
 function ExerciseType1Possibilities3Reset(totalQuestions, prefix = 'EH-exercise-type1-possibilities3') {
-    // Auto-detect lesson type for styling
+    // Auto-detect lesson type for styling - UPDATED to include all lesson types
     let optionClass = 'EH-workplace-option'; // default
     if (document.querySelector('.EH-schoolplay-option')) {
         optionClass = 'EH-schoolplay-option';
-    } else if (document.querySelector('.EH-grammar-option')) {
-        optionClass = 'EH-grammar-option';
+    } else if (document.querySelector('.EH-lostpet-option')) {
+        optionClass = 'EH-lostpet-option';
+    } else if (document.querySelector('.EH-garden-option')) {
+        optionClass = 'EH-garden-option';
+    } else if (document.querySelector('.EH-workplace-option')) {
+        optionClass = 'EH-workplace-option';
+    } else if (document.querySelector('.EH-sciencefair-option')) {
+        optionClass = 'EH-sciencefair-option';
+    } else if (document.querySelector('.EH-makingfriends-option')) {
+        optionClass = 'EH-makingfriends-option';
+    } else if (document.querySelector('.EH-banking-option')) {
+        optionClass = 'EH-banking-option';
+    } else if (document.querySelector('.EH-apartment-option')) {
+        optionClass = 'EH-apartment-option';
+    } else if (document.querySelector('.EH-healthcare-option')) {
+        optionClass = 'EH-healthcare-option';
+    } else if (document.querySelector('.EH-transport-option')) {
+        optionClass = 'EH-transport-option';
+    } else if (document.querySelector('.EH-grocery-option')) {
+        optionClass = 'EH-grocery-option';
     }
     
     for (let i = 1; i <= totalQuestions; i++) {
@@ -163,4 +199,9 @@ function ExerciseType1Possibilities3Reset(totalQuestions, prefix = 'EH-exercise-
     if (scoreDisplay) {
         scoreDisplay.style.display = 'none';
     }
+}
+
+// Backward compatibility - alias for old function name
+function EH_exercise_init(correctAnswers, totalQuestions, prefix = 'EH-exercise-type1-possibilities3') {
+    return ExerciseType1Possibilities3Init(correctAnswers, totalQuestions, prefix);
 }

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verb Conjugation - English Hub</title>
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/common.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .EH-conjugation-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1;
+        }
+        
+        .EH-conjugation-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .EH-conjugation-title {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .EH-conjugation-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+        }
+        
+        .EH-conjugation-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .EH-conjugation-category {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .EH-conjugation-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .EH-conjugation-category-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+        
+        .EH-conjugation-category-icon {
+            font-size: 1.8rem;
+            margin-right: 10px;
+        }
+        
+        .EH-conjugation-category-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .EH-conjugation-lessons {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .EH-conjugation-lesson {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .EH-conjugation-lesson:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .EH-conjugation-lesson-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .EH-conjugation-lesson-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .EH-conjugation-lesson-link {
+            display: inline-block;
+            background: #4e54c8;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        
+        .EH-conjugation-lesson-link:hover {
+            background: #3f46c5;
+        }
+        
+        .EH-coming-soon-badge {
+            display: inline-block;
+            background: #fdbb2d;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .EH-conjugation-categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .EH-conjugation-lessons {
+                grid-template-columns: 1fr;
+            }
+            
+            .EH-conjugation-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Selector -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+    
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+    </div>
+    
+    <div class="EH-conjugation-container">
+        <header class="EH-conjugation-header">
+            <h1 class="EH-conjugation-title" data-i18n="conjugation.title">Verb Conjugation</h1>
+            <p class="EH-conjugation-subtitle" data-i18n="conjugation.subtitle">Master English verb tenses, modals, and modes</p>
+        </header>
+        
+        <!-- Simple Tenses -->
+        <div class="EH-conjugation-category">
+            <h2 class="EH-conjugation-category-title">
+                <span class="EH-conjugation-category-icon">⏱️</span>
+                <span data-i18n="conjugation.simpleTenses">Simple Tenses</span>
+            </h2>
+            <p class="EH-conjugation-category-description" data-i18n="conjugation.simpleTensesDescription">
+                Learn the basic verb tenses used in everyday English communication.
+            </p>
+            
+            <div class="EH-conjugation-lessons">
+                <!-- Simple Present -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title" data-i18n="conjugation.simplePresent">Simple Present</h3>
+                    <p class="EH-conjugation-lesson-description" data-i18n="conjugation.simplePresentDescription">
+                        Express habits, general truths, and fixed arrangements.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="EH-conj-present-siple-p1.html" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+                
+                <!-- Simple Past -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title" data-i18n="conjugation.simplePast">Simple Past</h3>
+                    <p class="EH-conjugation-lesson-description" data-i18n="conjugation.simplePastDescription">
+                        Talk about completed actions in the past.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+                
+                <!-- Simple Future -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title" data-i18n="conjugation.simpleFuture">Simple Future</h3>
+                    <p class="EH-conjugation-lesson-description" data-i18n="conjugation.simpleFutureDescription">
+                        Express predictions, promises, and spontaneous decisions.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Progressive Tenses -->
+        <div class="EH-conjugation-category">
+            <h2 class="EH-conjugation-category-title">
+                <span class="EH-conjugation-category-icon">🔄</span>
+                <span data-i18n="conjugation.progressiveTenses">Progressive Tenses</span>
+            </h2>
+            <p class="EH-conjugation-category-description" data-i18n="conjugation.progressiveTensesDescription">
+                Express ongoing actions at specific times.
+            </p>
+            
+            <div class="EH-conjugation-lessons">
+                <!-- Present Progressive -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title" data-i18n="conjugation.presentProgressive">Present Progressive</h3>
+                    <p class="EH-conjugation-lesson-description" data-i18n="conjugation.presentProgressiveDescription">
+                        Describe actions happening now or around now.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+                
+                <!-- Past Progressive -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title" data-i18n="conjugation.pastProgressive">Past Progressive</h3>
+                    <p class="EH-conjugation-lesson-description" data-i18n="conjugation.pastProgressiveDescription">
+                        Describe ongoing actions in the past.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+                
+                <!-- Future Progressive -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title" data-i18n="conjugation.futureProgressive">Future Progressive</h3>
+                    <p class="EH-conjugation-lesson-description" data-i18n="conjugation.futureProgressiveDescription">
+                        Describe ongoing actions in the future.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Perfect Tenses -->
+        <div class="EH-conjugation-category">
+            <h2 class="EH-conjugation-category-title">
+                <span class="EH-conjugation-category-icon">✅</span>
+                <span data-i18n="conjugation.perfectTenses">Perfect Tenses</span>
+            </h2>
+            <p class="EH-conjugation-category-description" data-i18n="conjugation.perfectTensesDescription">
+                Express completed actions with relevance to other time frames.
+            </p>
+            
+            <div class="EH-conjugation-lessons">
+                <!-- Present Perfect -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title" data-i18n="conjugation.presentPerfect">Present Perfect</h3>
+                    <p class="EH-conjugation-lesson-description" data-i18n="conjugation.presentPerfectDescription">
+                        Connect past actions to the present.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+                
+                <!-- Past Perfect -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title" data-i18n="conjugation.pastPerfect">Past Perfect</h3>
+                    <p class="EH-conjugation-lesson-description" data-i18n="conjugation.pastPerfectDescription">
+                        Express actions completed before another past action.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+                
+                <!-- Future Perfect -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title" data-i18n="conjugation.futurePerfect">Future Perfect</h3>
+                    <p class="EH-conjugation-lesson-description" data-i18n="conjugation.futurePerfectDescription">
+                        Express actions that will be completed before a future time.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal Verbs -->
+        <div class="EH-conjugation-category">
+            <h2 class="EH-conjugation-category-title">
+                <span class="EH-conjugation-category-icon">🔮</span>
+                <span data-i18n="conjugation.modalVerbs">Modal Verbs</span>
+            </h2>
+            <p class="EH-conjugation-category-description" data-i18n="conjugation.modalVerbsDescription">
+                Express ability, possibility, permission, or obligation.
+            </p>
+            
+            <div class="EH-conjugation-lessons">
+                <!-- Can/Could -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title">Can / Could</h3>
+                    <p class="EH-conjugation-lesson-description">
+                        Express ability, possibility, and permission.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+                
+                <!-- May/Might -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title">May / Might</h3>
+                    <p class="EH-conjugation-lesson-description">
+                        Express possibility and permission.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+                
+                <!-- Must/Have to -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title">Must / Have to</h3>
+                    <p class="EH-conjugation-lesson-description">
+                        Express obligation and necessity.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+                
+                <!-- Should/Ought to -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title">Should / Ought to</h3>
+                    <p class="EH-conjugation-lesson-description">
+                        Express advice and mild obligation.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Conditional Mood -->
+        <div class="EH-conjugation-category">
+            <h2 class="EH-conjugation-category-title">
+                <span class="EH-conjugation-category-icon">❓</span>
+                <span data-i18n="conjugation.conditionalMood">Conditional Mood</span>
+            </h2>
+            <p class="EH-conjugation-category-description" data-i18n="conjugation.conditionalMoodDescription">
+                Express hypothetical situations and their consequences.
+            </p>
+            
+            <div class="EH-conjugation-lessons">
+                <!-- Zero Conditional -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title">Zero Conditional</h3>
+                    <p class="EH-conjugation-lesson-description">
+                        Express general truths and scientific facts.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+                
+                <!-- First Conditional -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title">First Conditional</h3>
+                    <p class="EH-conjugation-lesson-description">
+                        Express real and possible future situations.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+                
+                <!-- Second Conditional -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title">Second Conditional</h3>
+                    <p class="EH-conjugation-lesson-description">
+                        Express unreal or improbable present/future situations.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+                
+                <!-- Third Conditional -->
+                <div class="EH-conjugation-lesson">
+                    <h3 class="EH-conjugation-lesson-title">Third Conditional</h3>
+                    <p class="EH-conjugation-lesson-description">
+                        Express unreal past situations and their consequences.
+                    </p>
+                    <div class="EH-conjugation-lesson-links">
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson I</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson II</a>
+                        <a href="#" class="EH-conjugation-lesson-link" data-i18n="common.startLesson">Lesson III</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="EH-common-footer">
+        <div class="EH-common-footer-content">
+            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+            <div class="EH-common-footer-links">
+                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                <a href="#" data-i18n="footer.contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- i18n translations -->
+    <script src="scripts/translations/i18n_en.js"></script>
+    <script src="scripts/translations/i18n_fr.js"></script>
+    <script src="scripts/translations/i18n_ar.js"></script>
+    <script src="scripts/common-i18n.js"></script>
+    
+    <script>
+        // Add conjugation translations to existing i18n objects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add conjugation translations to each language
+            for (const lang in window.I18N) {
+                if (window.I18N.hasOwnProperty(lang)) {
+                    window.I18N[lang].conjugation = {
+                        title: window.I18N[lang].conjugation?.title || "Verb Conjugation",
+                        subtitle: window.I18N[lang].conjugation?.subtitle || "Master English verb tenses, modals, and modes",
+                        
+                        simpleTenses: window.I18N[lang].conjugation?.simpleTenses || "Simple Tenses",
+                        simpleTensesDescription: window.I18N[lang].conjugation?.simpleTensesDescription || "Learn the basic verb tenses used in everyday English communication.",
+                        
+                        simplePresent: window.I18N[lang].conjugation?.simplePresent || "Simple Present",
+                        simplePresentDescription: window.I18N[lang].conjugation?.simplePresentDescription || "Express habits, general truths, and fixed arrangements.",
+                        
+                        simplePast: window.I18N[lang].conjugation?.simplePast || "Simple Past",
+                        simplePastDescription: window.I18N[lang].conjugation?.simplePastDescription || "Talk about completed actions in the past.",
+                        
+                        simpleFuture: window.I18N[lang].conjugation?.simpleFuture || "Simple Future",
+                        simpleFutureDescription: window.I18N[lang].conjugation?.simpleFutureDescription || "Express predictions, promises, and spontaneous decisions.",
+                        
+                        progressiveTenses: window.I18N[lang].conjugation?.progressiveTenses || "Progressive Tenses",
+                        progressiveTensesDescription: window.I18N[lang].conjugation?.progressiveTensesDescription || "Express ongoing actions at specific times.",
+                        
+                        presentProgressive: window.I18N[lang].conjugation?.presentProgressive || "Present Progressive",
+                        presentProgressiveDescription: window.I18N[lang].conjugation?.presentProgressiveDescription || "Describe actions happening now or around now.",
+                        
+                        pastProgressive: window.I18N[lang].conjugation?.pastProgressive || "Past Progressive",
+                        pastProgressiveDescription: window.I18N[lang].conjugation?.pastProgressiveDescription || "Describe ongoing actions in the past.",
+                        
+                        futureProgressive: window.I18N[lang].conjugation?.futureProgressive || "Future Progressive",
+                        futureProgressiveDescription: window.I18N[lang].conjugation?.futureProgressiveDescription || "Describe ongoing actions in the future.",
+                        
+                        perfectTenses: window.I18N[lang].conjugation?.perfectTenses || "Perfect Tenses",
+                        perfectTensesDescription: window.I18N[lang].conjugation?.perfectTensesDescription || "Express completed actions with relevance to other time frames.",
+                        
+                        presentPerfect: window.I18N[lang].conjugation?.presentPerfect || "Present Perfect",
+                        presentPerfectDescription: window.I18N[lang].conjugation?.presentPerfectDescription || "Connect past actions to the present.",
+                        
+                        pastPerfect: window.I18N[lang].conjugation?.pastPerfect || "Past Perfect",
+                        pastPerfectDescription: window.I18N[lang].conjugation?.pastPerfectDescription || "Express actions completed before another past action.",
+                        
+                        futurePerfect: window.I18N[lang].conjugation?.futurePerfect || "Future Perfect",
+                        futurePerfectDescription: window.I18N[lang].conjugation?.futurePerfectDescription || "Express actions that will be completed before a future time.",
+                        
+                        modalVerbs: window.I18N[lang].conjugation?.modalVerbs || "Modal Verbs",
+                        modalVerbsDescription: window.I18N[lang].conjugation?.modalVerbsDescription || "Express ability, possibility, permission, or obligation.",
+                        
+                        conditionalMood: window.I18N[lang].conjugation?.conditionalMood || "Conditional Mood",
+                        conditionalMoodDescription: window.I18N[lang].conjugation?.conditionalMoodDescription || "Express hypothetical situations and their consequences."
+                    };
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -28,7 +28,7 @@ window.I18N['en'] = {
 		fast: "Fast",
 		startCourse: "Start Course",
 		siteName: "English Hub",
-    comingSoon: "Coming Soon",
+		comingSoon: "Coming Soon",
 		mainPage: "Main Page"
 	},
     
@@ -52,6 +52,10 @@ window.I18N['en'] = {
         writing: {
             title: "Writing Skills",
             description: "Enhance your writing abilities with structured lessons, creative exercises, and practical applications."
+		},
+		conjugation: {
+			title: "Verb Conjugation",
+			description: "Master verb tenses, modals, and modes through interactive exercises and examples."
 		},
         explore: "Explore Now",
         comingSoon: "Coming Soon"
@@ -343,105 +347,105 @@ window.I18N['en'] = {
 			}
 		}
 	},
-// Grocery lesson
-grocery: {
-    title: "Grocery Shopping & Meal Planning",
-    subtitle: "Join Omar as he adapts to grocery shopping in a new country",
-    audio: {
-        title: "Omar's First Grocery Trip",
-        status: {
-            loading: "Loading audio...",
-            playing: "Playing story...",
-            paused: "Audio paused",
-            stopped: "Audio stopped",
-            error: "Audio not available"
-        }
-    },
-    sections: {
-        listen: "Listen to the Story",
-        story: "Story Text",
-        questions: "Comprehension Questions",
-        vocabulary: "Vocabulary Cards",
-        pronunciation: "Pronunciation Practice"
-    },
-    story: {
-        p1: "Omar stood outside the supermarket, feeling both excited and nervous. It was his first time grocery shopping in his new country, and he wanted to make sure he bought the right ingredients for his meals for the week.",
-        p2: "He pulled out his shopping list and meal plan that he had prepared the night before. Omar had planned five dinners, making sure to include a variety of proteins, vegetables, and grains. He also included snacks and breakfast items.",
-        p3: "As he entered the store, Omar noticed how different everything looked compared to markets in his home country. The signs were in English, and the products were organized in unfamiliar ways. He took a deep breath and decided to start in the produce section.",
-        p4: "Omar carefully read the labels on fruits and vegetables, trying to understand the names and prices. Some items like \"zucchini\" and \"eggplant\" were new to him. He used his phone to look up pictures when he wasn't sure what something was.",
-        p5: "In the dairy section, Omar compared different types of milk and yogurt. He noticed that milk came in different fat percentages, and yogurt had many varieties like Greek, regular, and drinkable. He chose what seemed most similar to what he used back home.",
-        p6: "When Omar reached the meat counter, he asked the butcher for help. \"Excuse me, could you show me where I can find chicken breasts?\" The butcher kindly pointed him to the right section and even suggested a cut that was on sale that week.",
-        p7: "As Omar continued shopping, he paid attention to unit prices to make sure he was getting good value. He also looked for sales and discounts, putting a few unexpected items in his cart when he found good deals.",
-        p8: "At checkout, Omar carefully packed his groceries, making sure fragile items like eggs and tomatoes were on top. He felt proud of himself for completing his first grocery shopping trip successfully and looked forward to cooking his planned meals."
-    },
-    questions: {
-        q1: "What did Omar prepare before going grocery shopping?",
-        q1a: "A budget spreadsheet",
-        q1b: "A shopping list and meal plan",
-        q1c: "A map of the supermarket",
-        
-        q2: "Which section did Omar start with in the supermarket?",
-        q2a: "The dairy section",
-        q2b: "The produce section",
-        q2c: "The meat counter",
-        
-        q3: "What did Omar use his phone for while shopping?",
-        q3a: "To look up pictures of unfamiliar foods",
-        q3b: "To call a friend for advice",
-        q3c: "To calculate his total spending",
-        
-        q4: "Who did Omar ask for help in the meat section?",
-        q4a: "Another customer",
-        q4b: "The butcher",
-        q4c: "The store manager",
-        
-        q5: "How did Omar feel after completing his shopping?",
-        q5a: "Frustrated and confused",
-        q5b: "Proud and successful",
-        q5c: "Overwhelmed and tired"
-    },
-    vocabulary: {
-        produce: "Produce",
-        produce_pron: "/prəˈdjuːs/",
-        produce_def: "Fresh fruits and vegetables",
-        produce_ex: "\"Omar started his shopping in the produce section.\"",
-        
-        ingredients: "Ingredients",
-        ingredients_pron: "/ɪnˈɡriːdiənts/",
-        ingredients_def: "Items used in preparing a dish or meal",
-        ingredients_ex: "\"Omar bought all the ingredients for his planned meals.\"",
-        
-        butcher: "Butcher",
-        butcher_pron: "/ˈbʊtʃər/",
-        butcher_def: "A person who sells meat",
-        butcher_ex: "\"The butcher helped Omar find the chicken breasts.\"",
-        
-        unit_price: "Unit Price",
-        unit_price_pron: "/ˈjuːnɪt praɪs/",
-        unit_price_def: "The price per standard unit of measurement",
-        unit_price_ex: "\"Omar compared unit prices to get the best value.\"",
-        
-        checkout: "Checkout",
-        checkout_pron: "/ˈtʃekaʊt/",
-        checkout_def: "The place where customers pay for their purchases",
-        checkout_ex: "\"At checkout, Omar carefully packed his groceries.\""
-    },
-    pronunciation: {
-        p1: "\"Where can I find the fruits and vegetables?\"",
-        p2: "\"Could you help me find chicken breasts?\"",
-        p3: "\"I'm looking for dairy products like milk and yogurt.\"",
-        p4: "\"Do you have any discounts on this item?\"",
-        p5: "\"I need to read the labels carefully.\""
-    },
-    answers: {
-        check: "Check Answers",
-        score: "Your Score",
-        feedback: {
-            default: "Check your answers to see how you did!"
-        }
-    }
-},
-
+	// Grocery lesson
+	grocery: {
+		title: "Grocery Shopping & Meal Planning",
+		subtitle: "Join Omar as he adapts to grocery shopping in a new country",
+		audio: {
+			title: "Omar's First Grocery Trip",
+			status: {
+				loading: "Loading audio...",
+				playing: "Playing story...",
+				paused: "Audio paused",
+				stopped: "Audio stopped",
+				error: "Audio not available"
+			}
+		},
+		sections: {
+			listen: "Listen to the Story",
+			story: "Story Text",
+			questions: "Comprehension Questions",
+			vocabulary: "Vocabulary Cards",
+			pronunciation: "Pronunciation Practice"
+		},
+		story: {
+			p1: "Omar stood outside the supermarket, feeling both excited and nervous. It was his first time grocery shopping in his new country, and he wanted to make sure he bought the right ingredients for his meals for the week.",
+			p2: "He pulled out his shopping list and meal plan that he had prepared the night before. Omar had planned five dinners, making sure to include a variety of proteins, vegetables, and grains. He also included snacks and breakfast items.",
+			p3: "As he entered the store, Omar noticed how different everything looked compared to markets in his home country. The signs were in English, and the products were organized in unfamiliar ways. He took a deep breath and decided to start in the produce section.",
+			p4: "Omar carefully read the labels on fruits and vegetables, trying to understand the names and prices. Some items like \"zucchini\" and \"eggplant\" were new to him. He used his phone to look up pictures when he wasn't sure what something was.",
+			p5: "In the dairy section, Omar compared different types of milk and yogurt. He noticed that milk came in different fat percentages, and yogurt had many varieties like Greek, regular, and drinkable. He chose what seemed most similar to what he used back home.",
+			p6: "When Omar reached the meat counter, he asked the butcher for help. \"Excuse me, could you show me where I can find chicken breasts?\" The butcher kindly pointed him to the right section and even suggested a cut that was on sale that week.",
+			p7: "As Omar continued shopping, he paid attention to unit prices to make sure he was getting good value. He also looked for sales and discounts, putting a few unexpected items in his cart when he found good deals.",
+			p8: "At checkout, Omar carefully packed his groceries, making sure fragile items like eggs and tomatoes were on top. He felt proud of himself for completing his first grocery shopping trip successfully and looked forward to cooking his planned meals."
+		},
+		questions: {
+			q1: "What did Omar prepare before going grocery shopping?",
+			q1a: "A budget spreadsheet",
+			q1b: "A shopping list and meal plan",
+			q1c: "A map of the supermarket",
+			
+			q2: "Which section did Omar start with in the supermarket?",
+			q2a: "The dairy section",
+			q2b: "The produce section",
+			q2c: "The meat counter",
+			
+			q3: "What did Omar use his phone for while shopping?",
+			q3a: "To look up pictures of unfamiliar foods",
+			q3b: "To call a friend for advice",
+			q3c: "To calculate his total spending",
+			
+			q4: "Who did Omar ask for help in the meat section?",
+			q4a: "Another customer",
+			q4b: "The butcher",
+			q4c: "The store manager",
+			
+			q5: "How did Omar feel after completing his shopping?",
+			q5a: "Frustrated and confused",
+			q5b: "Proud and successful",
+			q5c: "Overwhelmed and tired"
+		},
+		vocabulary: {
+			produce: "Produce",
+			produce_pron: "/prəˈdjuːs/",
+			produce_def: "Fresh fruits and vegetables",
+			produce_ex: "\"Omar started his shopping in the produce section.\"",
+			
+			ingredients: "Ingredients",
+			ingredients_pron: "/ɪnˈɡriːdiənts/",
+			ingredients_def: "Items used in preparing a dish or meal",
+			ingredients_ex: "\"Omar bought all the ingredients for his planned meals.\"",
+			
+			butcher: "Butcher",
+			butcher_pron: "/ˈbʊtʃər/",
+			butcher_def: "A person who sells meat",
+			butcher_ex: "\"The butcher helped Omar find the chicken breasts.\"",
+			
+			unit_price: "Unit Price",
+			unit_price_pron: "/ˈjuːnɪt praɪs/",
+			unit_price_def: "The price per standard unit of measurement",
+			unit_price_ex: "\"Omar compared unit prices to get the best value.\"",
+			
+			checkout: "Checkout",
+			checkout_pron: "/ˈtʃekaʊt/",
+			checkout_def: "The place where customers pay for their purchases",
+			checkout_ex: "\"At checkout, Omar carefully packed his groceries.\""
+		},
+		pronunciation: {
+			p1: "\"Where can I find the fruits and vegetables?\"",
+			p2: "\"Could you help me find chicken breasts?\"",
+			p3: "\"I'm looking for dairy products like milk and yogurt.\"",
+			p4: "\"Do you have any discounts on this item?\"",
+			p5: "\"I need to read the labels carefully.\""
+		},
+		answers: {
+			check: "Check Answers",
+			score: "Your Score",
+			feedback: {
+				default: "Check your answers to see how you did!"
+			}
+		}
+	},
+	
     // Healthcare Navigation lesson
     healthcare: {
         title: "Healthcare Navigation",
@@ -454,15 +458,15 @@ grocery: {
                 paused: "Audio paused",
                 stopped: "Audio stopped",
                 error: "Audio not available"
-            }
-        },
+			}
+		},
         sections: {
             listen: "Listen to the Story",
             story: "Story Text",
             questions: "Comprehension Questions",
             vocabulary: "Vocabulary Cards",
             pronunciation: "Pronunciation Practice"
-        },
+		},
         story: {
             p1: "Carlos woke up feeling unwell. He had a persistent cough and fever, and decided it was time to see a doctor. Since he was new to the country, he wasn't sure how the healthcare system worked.",
             p2: "He found a nearby clinic and made an appointment. When he arrived, he approached the reception desk. \"Hello, I have an appointment at 10 AM. My name is Carlos Rodriguez,\" he said.",
@@ -472,7 +476,7 @@ grocery: {
             p6: "After examining him, Dr. Thompson said, \"You have a respiratory infection. I'm going to prescribe antibiotics. It's important to take them exactly as directed and complete the full course.\"",
             p7: "Dr. Thompson also advised Carlos to rest, drink plenty of fluids, and use over-the-counter medication for his fever. She explained how to use the prescription and what side effects to watch for.",
             p8: "Carlos went to the pharmacy, where the pharmacist explained the medication instructions clearly. A week later, Carlos felt much better and was grateful for the efficient and caring healthcare he received."
-        },
+		},
         questions: {
             q1: "Why did Carlos decide to see a doctor?",
             q1a: "For a routine check-up",
@@ -498,7 +502,7 @@ grocery: {
             q5a: "To exercise more",
             q5b: "To rest and drink fluids",
             q5c: "To avoid all medication"
-        },
+		},
         vocabulary: {
             clinic: "Clinic",
             clinic_pron: "/ˈklɪnɪk/",
@@ -524,14 +528,14 @@ grocery: {
             antibiotics_pron: "/ˌæntibaɪˈɒtɪks/",
             antibiotics_def: "Medications that treat bacterial infections",
             antibiotics_ex: "\"Carlos took antibiotics for his infection.\""
-        },
+		},
         pronunciation: {
             p1: "\"I have an appointment at 10 AM.\"",
             p2: "\"I've been feeling unwell for three days.\"",
             p3: "\"Could you explain how to take this medication?\"",
             p4: "\"I need to complete the full course of antibiotics.\"",
             p5: "\"Thank you for your help and explanation.\""
-        },
+		},
         answers: {
             check: "Check Answers",
             score: "Your Score",
@@ -540,10 +544,10 @@ grocery: {
                 perfect: "Excellent! You got all answers correct!",
                 good: "Good job! You're getting there!",
                 needs_work: "Keep practicing - you'll improve!"
-            }
-        }
-    },
-
+			}
+		}
+	},
+	
     // Transport lesson
     transport: {
         title: "Public Transportation",
@@ -556,15 +560,15 @@ grocery: {
                 paused: "Audio paused",
                 stopped: "Audio stopped",
                 error: "Audio not available"
-            }
-        },
+			}
+		},
         sections: {
             listen: "Listen to the Story",
             story: "Story Text",
             questions: "Comprehension Questions",
             vocabulary: "Vocabulary Cards",
             pronunciation: "Pronunciation Practice"
-        },
+		},
         story: {
             p1: "Anya looked at the complex metro map, feeling both excited and overwhelmed. She had just moved to the city for her new job and needed to figure out the public transportation system to get to work.",
             p2: "She approached the information desk at the station. \"Excuse me, could you help me? I need to get to the city center,\" she asked politely.",
@@ -574,7 +578,7 @@ grocery: {
             p6: "During her journey, Anya observed how other passengers behaved - where they stood, how they made space for others, and how they validated their tickets.",
             p7: "After a few days, Anya became more confident. She even helped a lost tourist find their way, using the skills she had just learned.",
             p8: "By the end of the week, Anya was navigating the city like a local. She realized that mastering public transportation was key to feeling at home in her new city."
-        },
+		},
         questions: {
             q1: "How did Anya feel when she first looked at the metro map?",
             q1a: "Excited and overwhelmed",
@@ -600,7 +604,7 @@ grocery: {
             q5a: "Still confused",
             q5b: "Like a local",
             q5c: "Frustrated"
-        },
+		},
         vocabulary: {
             metro: "Metro",
             metro_pron: "/ˈmɛtroʊ/",
@@ -626,504 +630,504 @@ grocery: {
             validate_pron: "/ˈvælɪdeɪt/",
             validate_def: "To confirm or check the validity of something, such as a ticket",
             validate_ex: "\"Passengers must validate their tickets before boarding.\""
-        },
+		},
         pronunciation: {
             p1: "\"Excuse me, could you help me?\"",
             p2: "\"I need to get to the city center.\"",
             p3: "\"Which line goes to Downtown?\"",
             p4: "\"How much is a monthly pass?\"",
             p5: "\"Thank you for your assistance.\""
-        },
+		},
         answers: {
             check: "Check Answers",
             score: "Your Score",
             feedback: {
                 default: "Check your answers to see how you did!"
-            }
-        }
-    },
-
-// Banking lesson
-banking: {
-    title: "Banking and Financial Basics",
-    subtitle: "Follow Li as she opens her first bank account in a foreign country",
-    audio: {
-        title: "Li's First Bank Account",
-        status: {
-            loading: "Loading audio...",
-            playing: "Playing story...",
-            paused: "Audio paused",
-            stopped: "Audio stopped",
-            error: "Audio not available"
-        }
-    },
-    sections: {
-        listen: "Listen to the Story",
-        story: "Story Text",
-        questions: "Comprehension Questions",
-        vocabulary: "Vocabulary Cards",
-        pronunciation: "Pronunciation Practice"
-    },
-    story: {
-        p1: "Li had been in the country for two months and needed to open a bank account. Her cash was running low, and she needed a secure place to keep her money. She researched online and decided to visit Global Trust Bank, which had good reviews from other international students.",
-        p2: "At the bank, Li approached the information desk. \"Hello, I'd like to open a checking account, please,\" she said nervously. The bank representative smiled warmly and directed her to a personal banker named Mr. Chen.",
-        p3: "Mr. Chen welcomed Li to his office. \"What type of account are you interested in opening today?\" he asked. Li explained that she needed a basic account for daily expenses and receiving money from her family back home.",
-        p4: "Mr. Chen explained the different account options. \"We have a student account with no monthly fees and a small savings account that earns interest. You'll also need to decide if you want a debit card and online banking access.\"",
-        p5: "Li provided her passport, student visa, and proof of address. Mr. Chen helped her fill out the application forms. \"You'll need to make an initial deposit of at least $25 to activate your account,\" he explained.",
-        p6: "After completing the paperwork, Mr. Chen showed Li how to use the bank's mobile app. \"You can check your balance, transfer money, and pay bills using this app. We also have online banking if you prefer to use a computer.\"",
-        p7: "Li received her temporary debit card and was told her permanent card would arrive by mail in 7-10 business days. Mr. Chen also explained how to avoid ATM fees and what to do if her card was lost or stolen.",
-        p8: "Walking out of the bank, Li felt relieved and more confident. She had successfully opened her first bank account in a new country and now had a safe place to manage her money. She texted her family the good news and felt proud of this important adulting milestone."
-    },
-    questions: {
-        q1: "Why did Li need to open a bank account?",
-        q1a: "To get a credit card",
-        q1b: "Her cash was running low and she needed a secure place for her money",
-        q1c: "To get a job at the bank",
-        
-        q2: "What type of account did Mr. Chen recommend for Li?",
-        q2a: "A business account",
-        q2b: "A student account with no monthly fees",
-        q2c: "A premium account with high fees",
-        
-        q3: "What documents did Li need to provide to open the account?",
-        q3a: "Only her passport",
-        q3b: "Her passport, student visa, and proof of address",
-        q3c: "Only her student ID",
-        
-        q4: "What was the minimum initial deposit required?",
-        q4a: "$100",
-        q4b: "$25",
-        q4c: "$50",
-        
-        q5: "How did Li feel after opening her bank account?",
-        q5a: "Confused and overwhelmed",
-        q5b: "Relieved and more confident",
-        q5c: "Disappointed and frustrated"
-    },
-    vocabulary: {
-        account: "Account",
-        account_pron: "/əˈkaʊnt/",
-        account_def: "A record of financial transactions with a bank",
-        account_ex: "\"Li opened a checking account at the bank.\"",
-        
-        deposit: "Deposit",
-        deposit_pron: "/dɪˈpɒzɪt/",
-        deposit_def: "Money placed into a bank account",
-        deposit_ex: "\"She made an initial deposit of $25 to activate her account.\"",
-        
-        debit_card: "Debit Card",
-        debit_card_pron: "/ˈdɛbɪt kɑːrd/",
-        debit_card_def: "A card that allows you to make electronic payments from your bank account",
-        debit_card_ex: "\"Li received her temporary debit card at the bank.\"",
-        
-        interest: "Interest",
-        interest_pron: "/ˈɪntrəst/",
-        interest_def: "Money paid regularly at a particular rate for the use of money lent",
-        interest_ex: "\"The savings account earns interest on the money deposited.\"",
-        
-        statement: "Statement",
-        statement_pron: "/ˈsteɪtmənt/",
-        statement_def: "A summary of financial transactions during a specific period",
-        statement_ex: "\"She checked her bank statement online each month.\""
-    },
-    pronunciation: {
-        p1: "\"I'd like to open a checking account, please.\"",
-        p2: "\"What type of account are you interested in?\"",
-        p3: "\"I need to make an initial deposit.\"",
-        p4: "\"How do I check my balance online?\"",
-        p5: "\"When will my permanent card arrive?\""
-    },
-    answers: {
-        check: "Check Answers",
-        score: "Your Score",
-        feedback: {
-            default: "Check your answers to see how you did!"
-        }
-    }
-},
-
-// Apartment lesson
-apartment: {
-    title: "Finding an Apartment",
-    subtitle: "Join Ahmed as he searches for his first apartment in a new city",
-    audio: {
-        title: "Ahmed's Apartment Search",
-        status: {
-            loading: "Loading audio...",
-            playing: "Playing story...",
-            paused: "Audio paused",
-            stopped: "Audio stopped",
-            error: "Audio not available"
-        }
-    },
-    sections: {
-        listen: "Listen to the Story",
-        story: "Story Text",
-        questions: "Comprehension Questions",
-        vocabulary: "Vocabulary Cards",
-        pronunciation: "Pronunciation Practice"
-    },
-    story: {
-        p1: "Ahmed had just started his new job in the city and needed to find an apartment quickly. He had been staying in a temporary hostel for two weeks, but it was expensive and he wanted his own space.",
-        p2: "He spent his first weekend looking at rental websites and making a list of apartments to visit. He knew he needed something close to public transportation and within his budget of $1200 per month.",
-        p3: "The first apartment he visited was in an old building downtown. The landlord showed him a small studio with a view of another building's wall. \"The rent is $1100, plus utilities,\" the landlord said. Ahmed thanked him but decided to keep looking.",
-        p4: "The second apartment was in a newer building near the subway station. It had a modern kitchen and a small balcony. The rent was $1300, which was over his budget. Ahmed asked if the landlord would consider $1200, but he refused.",
-        p5: "Feeling discouraged, Ahmed almost settled for the first apartment he saw. But then his coworker Maria told him about a neighborhood website where people posted apartment listings directly.",
-        p6: "On the website, Ahmed found a perfect one-bedroom apartment in a quiet neighborhood. It was only three blocks from the subway and the rent was $1150 including utilities. He immediately called the number listed.",
-        p7: "The owner, Mrs. Chen, invited him to see the apartment that evening. She explained that she preferred renting to people who worked in the area. The apartment was clean, bright, and had everything Ahmed needed.",
-        p8: "Ahmed filled out the rental application that night. Two days later, Mrs. Chen called to say he was approved. He signed the lease agreement and moved in the following weekend, excited to finally have his own place in the city."
-    },
-    questions: {
-        q1: "Where was Ahmed staying before he found his apartment?",
-        q1a: "With a friend",
-        q1b: "In a temporary hostel",
-        q1c: "At a hotel",
-        
-        q2: "What was Ahmed's monthly budget for rent?",
-        q2a: "$1000",
-        q2b: "$1200",
-        q2c: "$1300",
-        
-        q3: "What was wrong with the first apartment Ahmed visited?",
-        q3a: "It was too expensive",
-        q3b: "It had a view of another building's wall",
-        q3c: "It was too far from public transportation",
-        
-        q4: "Who told Ahmed about the neighborhood website?",
-        q4a: "His landlord",
-        q4b: "His coworker Maria",
-        q4c: "A real estate agent",
-        
-        q5: "What was the rent for the apartment Ahmed finally chose?",
-        q5a: "$1100 plus utilities",
-        q5b: "$1150 including utilities",
-        q5c: "$1300"
-    },
-    vocabulary: {
-        rental: "Rental",
-        rental_pron: "/ˈrɛntl/",
-        rental_def: "Related to property that is rented rather than owned",
-        rental_ex: "\"Ahmed looked at rental websites to find an apartment.\"",
-        
-        utilities: "Utilities",
-        utilities_pron: "/juːˈtɪlɪtiz/",
-        utilities_def: "Basic services like electricity, water, and gas",
-        utilities_ex: "\"The rent was $1100 plus utilities.\"",
-        
-        landlord: "Landlord",
-        landlord_pron: "/ˈlændlɔːrd/",
-        landlord_def: "A person who owns and rents out property",
-        landlord_ex: "\"The landlord showed Ahmed the apartment.\"",
-        
-        lease: "Lease",
-        lease_pron: "/liːs/",
-        lease_def: "A legal contract for renting property",
-        lease_ex: "\"Ahmed signed the lease agreement for his new apartment.\"",
-        
-        budget: "Budget",
-        budget_pron: "/ˈbʌdʒɪt/",
-        budget_def: "A plan for how much money to spend on something",
-        budget_ex: "\"Ahmed had a budget of $1200 for rent each month.\""
-    },
-    pronunciation: {
-        p1: "\"I'm calling about the apartment for rent.\"",
-        p2: "\"What is the monthly rent including utilities?\"",
-        p3: "\"Could I see the apartment this afternoon?\"",
-        p4: "\"I'd like to fill out a rental application.\"",
-        p5: "\"When can I sign the lease agreement?\""
-    },
-    answers: {
-        check: "Check Answers",
-        score: "Your Score",
-        feedback: {
-            default: "Check your answers to see how you did!"
-        }
-    }
-},
-makingFriends: {
-    title: "Making New Friends",
-    subtitle: "Join Sam as he moves to a new school and learns how to make friends in an unfamiliar place!",
-    audio: {
-        title: "Making New Friends",
-        status: {
-            loading: "Loading audio...",
-            playing: "Playing story...",
-            paused: "Audio paused",
-            stopped: "Audio stopped",
-            error: "Audio not available"
-        }
-    },
-    sections: {
-        listen: "Listen to the Story",
-        story: "Story Text",
-        questions: "Comprehension Questions",
-        vocabulary: "Vocabulary Cards",
-        pronunciation: "Pronunciation Practice"
-    },
-    story: {
-        p1: "Sam felt nervous as he walked into his new classroom. His family had just moved to a new city, and everything felt strange and unfamiliar. He missed his old friends and his old school.",
-        p2: "During the morning, Sam sat quietly at his desk. He watched the other children laughing and talking with each other. He wanted to join them, but he didn't know how.",
-        p3: "At recess, Sam stood by the swings alone. He saw a group of boys playing soccer. They looked like they were having so much fun, but Sam was too shy to ask if he could play.",
-        p4: "Then, a boy named Leo came over. 'Hi, I'm Leo. Do you want to play soccer with us?' he asked with a friendly smile. Sam nodded, feeling a little bit hopeful.",
-        p5: "Sam wasn't very good at soccer, but Leo and the other boys didn't mind. They showed him how to kick the ball and cheered when he made a goal. Sam started to feel more comfortable.",
-        p6: "At lunch, Leo invited Sam to sit with him and his friends. They talked about their favorite video games and superheroes. Sam discovered they liked a lot of the same things.",
-        p7: "By the end of the day, Sam had exchanged phone numbers with Leo and made plans to play video games after school. He realized that making new friends wasn't as hard as he thought.",
-        p8: "Sam learned that being yourself and being open to new experiences can lead to wonderful friendships. He still missed his old friends, but now he was excited about his new school."
-    },
-    questions: {
-        q1: "How did Sam feel at the beginning of the story?",
-        q1a: "Excited and happy",
-        q1b: "Nervous and unfamiliar",
-        q1c: "Angry and frustrated",
-        
-        q2: "What did Sam do during the morning in his new classroom?",
-        q2a: "He talked to everyone",
-        q2b: "He sat quietly and watched the other children",
-        q2c: "He played soccer",
-        
-        q3: "Who approached Sam at recess?",
-        q3a: "The teacher",
-        q3b: "A boy named Leo",
-        q3c: "No one",
-        
-        q4: "What did Sam and Leo have in common?",
-        q4a: "They were in the same class last year",
-        q4b: "They liked the same video games and superheroes",
-        q4c: "They lived in the same neighborhood",
-        
-        q5: "What did Sam learn about making new friends?",
-        q5a: "It's very hard and not worth it",
-        q5b: "Being yourself and open to new experiences can lead to friendships",
-        q5c: "You should only stick to your old friends"
-    },
-    vocabulary: {
-        nervous: "Nervous",
-        nervous_pron: "/ˈnɜːrvəs/",
-        nervous_def: "Feeling worried or slightly afraid",
-        nervous_ex: "\"Sam felt nervous on his first day at a new school.\"",
-        
-        unfamiliar: "Unfamiliar",
-        unfamiliar_pron: "/ˌʌnfəˈmɪliər/",
-        unfamiliar_def: "Not known or recognized",
-        unfamiliar_ex: "\"The new city was unfamiliar to Sam.\"",
-        
-        recess: "Recess",
-        recess_pron: "/ˈriːses/",
-        recess_def: "A break period between classes at school",
-        recess_ex: "\"The children played outside during recess.\"",
-        
-        comfortable: "Comfortable",
-        comfortable_pron: "/ˈkʌmftəbl/",
-        comfortable_def: "Feeling relaxed and at ease",
-        comfortable_ex: "\"Sam started to feel more comfortable after playing soccer.\"",
-        
-        friendship: "Friendship",
-        friendship_pron: "/ˈfrendʃɪp/",
-        friendship_def: "A relationship between friends",
-        friendship_ex: "\"Sam and Leo developed a strong friendship.\""
-    },
-    pronunciation: {
-        p1: "\"I'm new here and I don't know anyone.\"",
-        p2: "\"Would you like to play with us?\"",
-        p3: "\"I like your superhero backpack.\"",
-        p4: "\"Can I sit with you at lunch?\"",
-        p5: "\"Let's be friends!\""
-    },
-    answers: {
-        check: "Check Answers",
-        score: "Your Score",
-        feedback: {
-            default: "Check your answers to see how you did!"
-        }
-    }
-},
-
-// Science Fair lesson
-scienceFair: {
-    title: "The Science Fair Challenge",
-    subtitle: "Join Alex as he prepares for the school science fair and discovers the excitement of scientific discovery!",
-    audio: {
-        title: "Alex's Science Fair Adventure",
-        status: {
-            loading: "Loading audio...",
-            playing: "Playing story...",
-            paused: "Audio paused",
-            stopped: "Audio stopped",
-            error: "Audio not available"
-        }
-    },
-    sections: {
-        listen: "Listen to the Story",
-        story: "Story Text",
-        questions: "Comprehension Questions",
-        vocabulary: "Vocabulary Cards",
-        pronunciation: "Pronunciation Practice"
-    },
-    story: {
-        p1: "Alex couldn't wait for the annual science fair at his school. He loved science class more than any other subject and had been thinking about his project for weeks. The theme this year was \"Environmental Solutions,\" and Alex wanted to create something that would help the planet.",
-        p2: "He decided to build a simple water filtration system using natural materials. His idea was to show how people in areas without clean water could use sand, gravel, and charcoal to purify water. Alex spent hours researching different filtration methods online and at the library.",
-        p3: "The first challenge came when Alex tried to build his prototype. The water kept leaking from the bottom of his container, and the filtered water still looked cloudy. He felt frustrated and thought about giving up and choosing an easier project.",
-        p4: "His science teacher, Mr. Rodriguez, noticed Alex's frustration. \"Science isn't about getting it right the first time,\" he said. \"It's about learning from what doesn't work and trying again. That's called the scientific method.\"",
-        p5: "Encouraged by his teacher, Alex went back to work. He added more layers to his filter and tested different combinations of materials. After several attempts, he finally created a filter that produced clear, clean water. Alex documented each step of his process in his science journal.",
-        p6: "On the day of the science fair, Alex set up his display with pride. He had charts showing his experimental process, samples of his filtered water, and clear explanations of how his system worked. Other students gathered around his booth, asking questions about his project.",
-        p7: "When the judges came by, Alex explained his project confidently. He talked about the problem of water pollution and how his simple filter could help communities without access to expensive filtration systems. The judges were impressed with his scientific approach and clear presentation.",
-        p8: "At the award ceremony, Alex won second place for his water filtration project. But more importantly, he discovered that he loved the process of asking questions, testing ideas, and solving problems. Alex realized that science wasn't just a school subject—it was a way of exploring and understanding the world."
-    },
-    questions: {
-        q1: "What was the theme of the science fair this year?",
-        q1a: "Space Exploration",
-        q1b: "Environmental Solutions",
-        q1c: "Animal Habitats",
-        
-        q2: "What problem did Alex encounter when building his prototype?",
-        q2a: "The water leaked and looked cloudy",
-        q2b: "He couldn't find the right materials",
-        q2c: "His filter worked perfectly on the first try",
-        
-        q3: "What did Mr. Rodriguez teach Alex about science?",
-        q3a: "It's about getting everything right the first time",
-        q3b: "It's about learning from mistakes and trying again",
-        q3c: "Only smart people can be good at science",
-        
-        q4: "What materials did Alex use in his water filtration system?",
-        q4a: "Plastic bottles and chemicals",
-        q4b: "Sand, gravel, and charcoal",
-        q4c: "Metal filters and electric pumps",
-        
-        q5: "What was the most important thing Alex discovered through this experience?",
-        q5a: "That winning is the most important part of science fairs",
-        q5b: "That science is a way of exploring and understanding the world",
-        q5c: "That water filtration is too complicated to understand"
-    },
-    vocabulary: {
-        prototype: "Prototype",
-        prototype_pron: "/ˈproʊtətaɪp/",
-        prototype_def: "A first or preliminary model of something",
-        prototype_ex: "\"Alex built a prototype of his water filtration system.\"",
-        
-        filtration: "Filtration",
-        filtration_pron: "/fɪlˈtreɪʃən/",
-        filtration_def: "The process of removing solid particles from a liquid or gas",
-        filtration_ex: "\"The filtration system made the dirty water clean.\"",
-        
-        environmental: "Environmental",
-        environmental_pron: "/ɪnˌvaɪrənˈmentl/",
-        environmental_def: "Relating to the natural world and the impact of human activity on it",
-        environmental_ex: "\"The science fair theme was environmental solutions.\"",
-        
-        scientific_method: "Scientific Method",
-        scientific_method_pron: "/ˌsaɪənˈtɪfɪk ˈmeθəd/",
-        scientific_method_def: "A systematic approach to research involving observation, hypothesis, experimentation, and conclusion",
-        scientific_method_ex: "\"Alex used the scientific method to improve his project.\"",
-        
-        documentation: "Documentation",
-        documentation_pron: "/ˌdɑːkjumenˈteɪʃən/",
-        documentation_def: "Material that provides official information or evidence",
-        documentation_ex: "\"Alex kept careful documentation of his experiments.\""
-    },
-    pronunciation: {
-        p1: "\"I'm excited about the science fair!\"",
-        p2: "\"My project is about water filtration.\"",
-        p3: "\"Science is about learning from mistakes.\"",
-        p4: "\"I used the scientific method for my project.\"",
-        p5: "\"This prototype needs more testing.\""
-    },
-    answers: {
-        check: "Check Answers",
-        score: "Your Score",
-        feedback: {
-            default: "Check your answers to see how you did!"
-        }
-    }
-},
-
-// The Lost Pet Adventure
-lostPet: {
-    title: "The Lost Pet Adventure",
-    subtitle: "Help Mia find her lost dog Sparky by following clues around the neighborhood!",
-    sections: {
-        listen: "Listen to the Story",
-        story: "Story Text",
-        questions: "Comprehension Questions",
-        vocabulary: "Vocabulary Cards",
-        pronunciation: "Pronunciation Practice"
-    },
-    audio: {
-        title: "The Lost Pet Adventure",
-        status: {
-            loading: "Loading audio..."
-        }
-    },
-    story: {
-        p1: "Mia was playing fetch with her golden retriever Sparky in the backyard when her mom called her for dinner. She tied Sparky's leash to the fence post and ran inside, forgetting to close the gate properly.",
-        p2: "When Mia returned after dinner, Sparky was gone! The leash was still tied to the post, but the gate was open. Mia's heart started pounding as she realized Sparky had escaped.",
-        p3: "She ran to her neighbor Mr. Johnson's house first. \"Have you seen Sparky?\" she asked breathlessly. Mr. Johnson said he saw a golden dog running toward the park about twenty minutes ago.",
-        p4: "Mia rushed to the park and asked everyone she met. A woman walking her poodle said she saw a golden retriever chasing squirrels near the big oak tree. Mia searched the area but found only Sparky's favorite blue ball.",
-        p5: "Next, Mia went to the ice cream shop where Sparky loved to get puppy cones. The owner, Mrs. Chen, said a golden retriever had been there earlier but ran off when a truck backfired.",
-        p6: "Mia was getting worried. She decided to make posters with Sparky's picture. As she was putting up the first poster at the grocery store, she heard a familiar bark coming from the alley.",
-        p7: "There was Sparky, sitting with the store manager who was giving him water. \"This friendly fellow has been keeping me company for the past hour,\" the manager said with a smile.",
-        p8: "Mia hugged Sparky tightly and promised to always double-check the gate. She thanked everyone who had helped her and learned that her community was full of kind people who look out for each other - and each other's pets!"
-    },
-    questions: {
-        q1: "What kind of dog is Sparky?",
-        q1a: "A poodle",
-        q1b: "A golden retriever",
-        q1c: "A German shepherd",
-        q2: "How did Sparky escape from the backyard?",
-        q2a: "He jumped over the fence",
-        q2b: "The gate was left open",
-        q2c: "Someone untied his leash",
-        q3: "Where did Mr. Johnson say he saw Sparky going?",
-        q3a: "To the ice cream shop",
-        q3b: "Toward the park",
-        q3c: "To the grocery store",
-        q4: "What did Mia find near the big oak tree in the park?",
-        q4a: "Sparky's leash",
-        q4b: "Sparky's favorite blue ball",
-        q4c: "Sparky's water bowl",
-        q5: "Where was Sparky finally found?",
-        q5a: "At the ice cream shop",
-        q5b: "In the alley behind the grocery store",
-        q5c: "Back in his own backyard"
-    },
-    answers: {
-        check: "Check Answers",
-        score: "Your Score",
-        feedback: {
-            default: "Check your answers to see how you did!"
-        }
-    },
-    vocabulary: {
-        retriever: "Retriever",
-        retriever_pron: "/rɪˈtriːvər/",
-        retriever_def: "A type of dog bred to retrieve game for hunters",
-        retriever_ex: "\"Sparky is a golden retriever who loves to play fetch.\"",
-        leash: "Leash",
-        leash_pron: "/liːʃ/",
-        leash_def: "A strap or rope for restraining and guiding a dog",
-        leash_ex: "\"Mia tied Sparky's leash to the fence post.\"",
-        breathlessly: "Breathlessly",
-        breathlessly_pron: "/ˈbrɛθləsli/",
-        breathlessly_def: "In a way that shows you are breathing quickly",
-        breathlessly_ex: "\"Mia asked breathlessly if anyone had seen her dog.\"",
-        community: "Community",
-        community_pron: "/kəˈmjuːnɪti/",
-        community_def: "A group of people living in the same area",
-        community_ex: "\"Mia learned that her community was full of kind people.\"",
-        familiar: "Familiar",
-        familiar_pron: "/fəˈmɪliər/",
-        familiar_def: "Well known from being seen or heard before",
-        familiar_ex: "\"Mia heard a familiar bark coming from the alley.\""
-    },
-    pronunciation: {
-        p1: "\"Have you seen my dog Sparky?\"",
-        p2: "\"He's a golden retriever with a wagging tail.\"",
-        p3: "\"I need to find my lost pet.\"",
-        p4: "\"Thank you for helping me search.\"",
-        p5: "\"I'm so happy to have found you!\""
-    }
-},
-
+			}
+		}
+	},
+	
+	// Banking lesson
+	banking: {
+		title: "Banking and Financial Basics",
+		subtitle: "Follow Li as she opens her first bank account in a foreign country",
+		audio: {
+			title: "Li's First Bank Account",
+			status: {
+				loading: "Loading audio...",
+				playing: "Playing story...",
+				paused: "Audio paused",
+				stopped: "Audio stopped",
+				error: "Audio not available"
+			}
+		},
+		sections: {
+			listen: "Listen to the Story",
+			story: "Story Text",
+			questions: "Comprehension Questions",
+			vocabulary: "Vocabulary Cards",
+			pronunciation: "Pronunciation Practice"
+		},
+		story: {
+			p1: "Li had been in the country for two months and needed to open a bank account. Her cash was running low, and she needed a secure place to keep her money. She researched online and decided to visit Global Trust Bank, which had good reviews from other international students.",
+			p2: "At the bank, Li approached the information desk. \"Hello, I'd like to open a checking account, please,\" she said nervously. The bank representative smiled warmly and directed her to a personal banker named Mr. Chen.",
+			p3: "Mr. Chen welcomed Li to his office. \"What type of account are you interested in opening today?\" he asked. Li explained that she needed a basic account for daily expenses and receiving money from her family back home.",
+			p4: "Mr. Chen explained the different account options. \"We have a student account with no monthly fees and a small savings account that earns interest. You'll also need to decide if you want a debit card and online banking access.\"",
+			p5: "Li provided her passport, student visa, and proof of address. Mr. Chen helped her fill out the application forms. \"You'll need to make an initial deposit of at least $25 to activate your account,\" he explained.",
+			p6: "After completing the paperwork, Mr. Chen showed Li how to use the bank's mobile app. \"You can check your balance, transfer money, and pay bills using this app. We also have online banking if you prefer to use a computer.\"",
+			p7: "Li received her temporary debit card and was told her permanent card would arrive by mail in 7-10 business days. Mr. Chen also explained how to avoid ATM fees and what to do if her card was lost or stolen.",
+			p8: "Walking out of the bank, Li felt relieved and more confident. She had successfully opened her first bank account in a new country and now had a safe place to manage her money. She texted her family the good news and felt proud of this important adulting milestone."
+		},
+		questions: {
+			q1: "Why did Li need to open a bank account?",
+			q1a: "To get a credit card",
+			q1b: "Her cash was running low and she needed a secure place for her money",
+			q1c: "To get a job at the bank",
+			
+			q2: "What type of account did Mr. Chen recommend for Li?",
+			q2a: "A business account",
+			q2b: "A student account with no monthly fees",
+			q2c: "A premium account with high fees",
+			
+			q3: "What documents did Li need to provide to open the account?",
+			q3a: "Only her passport",
+			q3b: "Her passport, student visa, and proof of address",
+			q3c: "Only her student ID",
+			
+			q4: "What was the minimum initial deposit required?",
+			q4a: "$100",
+			q4b: "$25",
+			q4c: "$50",
+			
+			q5: "How did Li feel after opening her bank account?",
+			q5a: "Confused and overwhelmed",
+			q5b: "Relieved and more confident",
+			q5c: "Disappointed and frustrated"
+		},
+		vocabulary: {
+			account: "Account",
+			account_pron: "/əˈkaʊnt/",
+			account_def: "A record of financial transactions with a bank",
+			account_ex: "\"Li opened a checking account at the bank.\"",
+			
+			deposit: "Deposit",
+			deposit_pron: "/dɪˈpɒzɪt/",
+			deposit_def: "Money placed into a bank account",
+			deposit_ex: "\"She made an initial deposit of $25 to activate her account.\"",
+			
+			debit_card: "Debit Card",
+			debit_card_pron: "/ˈdɛbɪt kɑːrd/",
+			debit_card_def: "A card that allows you to make electronic payments from your bank account",
+			debit_card_ex: "\"Li received her temporary debit card at the bank.\"",
+			
+			interest: "Interest",
+			interest_pron: "/ˈɪntrəst/",
+			interest_def: "Money paid regularly at a particular rate for the use of money lent",
+			interest_ex: "\"The savings account earns interest on the money deposited.\"",
+			
+			statement: "Statement",
+			statement_pron: "/ˈsteɪtmənt/",
+			statement_def: "A summary of financial transactions during a specific period",
+			statement_ex: "\"She checked her bank statement online each month.\""
+		},
+		pronunciation: {
+			p1: "\"I'd like to open a checking account, please.\"",
+			p2: "\"What type of account are you interested in?\"",
+			p3: "\"I need to make an initial deposit.\"",
+			p4: "\"How do I check my balance online?\"",
+			p5: "\"When will my permanent card arrive?\""
+		},
+		answers: {
+			check: "Check Answers",
+			score: "Your Score",
+			feedback: {
+				default: "Check your answers to see how you did!"
+			}
+		}
+	},
+	
+	// Apartment lesson
+	apartment: {
+		title: "Finding an Apartment",
+		subtitle: "Join Ahmed as he searches for his first apartment in a new city",
+		audio: {
+			title: "Ahmed's Apartment Search",
+			status: {
+				loading: "Loading audio...",
+				playing: "Playing story...",
+				paused: "Audio paused",
+				stopped: "Audio stopped",
+				error: "Audio not available"
+			}
+		},
+		sections: {
+			listen: "Listen to the Story",
+			story: "Story Text",
+			questions: "Comprehension Questions",
+			vocabulary: "Vocabulary Cards",
+			pronunciation: "Pronunciation Practice"
+		},
+		story: {
+			p1: "Ahmed had just started his new job in the city and needed to find an apartment quickly. He had been staying in a temporary hostel for two weeks, but it was expensive and he wanted his own space.",
+			p2: "He spent his first weekend looking at rental websites and making a list of apartments to visit. He knew he needed something close to public transportation and within his budget of $1200 per month.",
+			p3: "The first apartment he visited was in an old building downtown. The landlord showed him a small studio with a view of another building's wall. \"The rent is $1100, plus utilities,\" the landlord said. Ahmed thanked him but decided to keep looking.",
+			p4: "The second apartment was in a newer building near the subway station. It had a modern kitchen and a small balcony. The rent was $1300, which was over his budget. Ahmed asked if the landlord would consider $1200, but he refused.",
+			p5: "Feeling discouraged, Ahmed almost settled for the first apartment he saw. But then his coworker Maria told him about a neighborhood website where people posted apartment listings directly.",
+			p6: "On the website, Ahmed found a perfect one-bedroom apartment in a quiet neighborhood. It was only three blocks from the subway and the rent was $1150 including utilities. He immediately called the number listed.",
+			p7: "The owner, Mrs. Chen, invited him to see the apartment that evening. She explained that she preferred renting to people who worked in the area. The apartment was clean, bright, and had everything Ahmed needed.",
+			p8: "Ahmed filled out the rental application that night. Two days later, Mrs. Chen called to say he was approved. He signed the lease agreement and moved in the following weekend, excited to finally have his own place in the city."
+		},
+		questions: {
+			q1: "Where was Ahmed staying before he found his apartment?",
+			q1a: "With a friend",
+			q1b: "In a temporary hostel",
+			q1c: "At a hotel",
+			
+			q2: "What was Ahmed's monthly budget for rent?",
+			q2a: "$1000",
+			q2b: "$1200",
+			q2c: "$1300",
+			
+			q3: "What was wrong with the first apartment Ahmed visited?",
+			q3a: "It was too expensive",
+			q3b: "It had a view of another building's wall",
+			q3c: "It was too far from public transportation",
+			
+			q4: "Who told Ahmed about the neighborhood website?",
+			q4a: "His landlord",
+			q4b: "His coworker Maria",
+			q4c: "A real estate agent",
+			
+			q5: "What was the rent for the apartment Ahmed finally chose?",
+			q5a: "$1100 plus utilities",
+			q5b: "$1150 including utilities",
+			q5c: "$1300"
+		},
+		vocabulary: {
+			rental: "Rental",
+			rental_pron: "/ˈrɛntl/",
+			rental_def: "Related to property that is rented rather than owned",
+			rental_ex: "\"Ahmed looked at rental websites to find an apartment.\"",
+			
+			utilities: "Utilities",
+			utilities_pron: "/juːˈtɪlɪtiz/",
+			utilities_def: "Basic services like electricity, water, and gas",
+			utilities_ex: "\"The rent was $1100 plus utilities.\"",
+			
+			landlord: "Landlord",
+			landlord_pron: "/ˈlændlɔːrd/",
+			landlord_def: "A person who owns and rents out property",
+			landlord_ex: "\"The landlord showed Ahmed the apartment.\"",
+			
+			lease: "Lease",
+			lease_pron: "/liːs/",
+			lease_def: "A legal contract for renting property",
+			lease_ex: "\"Ahmed signed the lease agreement for his new apartment.\"",
+			
+			budget: "Budget",
+			budget_pron: "/ˈbʌdʒɪt/",
+			budget_def: "A plan for how much money to spend on something",
+			budget_ex: "\"Ahmed had a budget of $1200 for rent each month.\""
+		},
+		pronunciation: {
+			p1: "\"I'm calling about the apartment for rent.\"",
+			p2: "\"What is the monthly rent including utilities?\"",
+			p3: "\"Could I see the apartment this afternoon?\"",
+			p4: "\"I'd like to fill out a rental application.\"",
+			p5: "\"When can I sign the lease agreement?\""
+		},
+		answers: {
+			check: "Check Answers",
+			score: "Your Score",
+			feedback: {
+				default: "Check your answers to see how you did!"
+			}
+		}
+	},
+	makingFriends: {
+		title: "Making New Friends",
+		subtitle: "Join Sam as he moves to a new school and learns how to make friends in an unfamiliar place!",
+		audio: {
+			title: "Making New Friends",
+			status: {
+				loading: "Loading audio...",
+				playing: "Playing story...",
+				paused: "Audio paused",
+				stopped: "Audio stopped",
+				error: "Audio not available"
+			}
+		},
+		sections: {
+			listen: "Listen to the Story",
+			story: "Story Text",
+			questions: "Comprehension Questions",
+			vocabulary: "Vocabulary Cards",
+			pronunciation: "Pronunciation Practice"
+		},
+		story: {
+			p1: "Sam felt nervous as he walked into his new classroom. His family had just moved to a new city, and everything felt strange and unfamiliar. He missed his old friends and his old school.",
+			p2: "During the morning, Sam sat quietly at his desk. He watched the other children laughing and talking with each other. He wanted to join them, but he didn't know how.",
+			p3: "At recess, Sam stood by the swings alone. He saw a group of boys playing soccer. They looked like they were having so much fun, but Sam was too shy to ask if he could play.",
+			p4: "Then, a boy named Leo came over. 'Hi, I'm Leo. Do you want to play soccer with us?' he asked with a friendly smile. Sam nodded, feeling a little bit hopeful.",
+			p5: "Sam wasn't very good at soccer, but Leo and the other boys didn't mind. They showed him how to kick the ball and cheered when he made a goal. Sam started to feel more comfortable.",
+			p6: "At lunch, Leo invited Sam to sit with him and his friends. They talked about their favorite video games and superheroes. Sam discovered they liked a lot of the same things.",
+			p7: "By the end of the day, Sam had exchanged phone numbers with Leo and made plans to play video games after school. He realized that making new friends wasn't as hard as he thought.",
+			p8: "Sam learned that being yourself and being open to new experiences can lead to wonderful friendships. He still missed his old friends, but now he was excited about his new school."
+		},
+		questions: {
+			q1: "How did Sam feel at the beginning of the story?",
+			q1a: "Excited and happy",
+			q1b: "Nervous and unfamiliar",
+			q1c: "Angry and frustrated",
+			
+			q2: "What did Sam do during the morning in his new classroom?",
+			q2a: "He talked to everyone",
+			q2b: "He sat quietly and watched the other children",
+			q2c: "He played soccer",
+			
+			q3: "Who approached Sam at recess?",
+			q3a: "The teacher",
+			q3b: "A boy named Leo",
+			q3c: "No one",
+			
+			q4: "What did Sam and Leo have in common?",
+			q4a: "They were in the same class last year",
+			q4b: "They liked the same video games and superheroes",
+			q4c: "They lived in the same neighborhood",
+			
+			q5: "What did Sam learn about making new friends?",
+			q5a: "It's very hard and not worth it",
+			q5b: "Being yourself and open to new experiences can lead to friendships",
+			q5c: "You should only stick to your old friends"
+		},
+		vocabulary: {
+			nervous: "Nervous",
+			nervous_pron: "/ˈnɜːrvəs/",
+			nervous_def: "Feeling worried or slightly afraid",
+			nervous_ex: "\"Sam felt nervous on his first day at a new school.\"",
+			
+			unfamiliar: "Unfamiliar",
+			unfamiliar_pron: "/ˌʌnfəˈmɪliər/",
+			unfamiliar_def: "Not known or recognized",
+			unfamiliar_ex: "\"The new city was unfamiliar to Sam.\"",
+			
+			recess: "Recess",
+			recess_pron: "/ˈriːses/",
+			recess_def: "A break period between classes at school",
+			recess_ex: "\"The children played outside during recess.\"",
+			
+			comfortable: "Comfortable",
+			comfortable_pron: "/ˈkʌmftəbl/",
+			comfortable_def: "Feeling relaxed and at ease",
+			comfortable_ex: "\"Sam started to feel more comfortable after playing soccer.\"",
+			
+			friendship: "Friendship",
+			friendship_pron: "/ˈfrendʃɪp/",
+			friendship_def: "A relationship between friends",
+			friendship_ex: "\"Sam and Leo developed a strong friendship.\""
+		},
+		pronunciation: {
+			p1: "\"I'm new here and I don't know anyone.\"",
+			p2: "\"Would you like to play with us?\"",
+			p3: "\"I like your superhero backpack.\"",
+			p4: "\"Can I sit with you at lunch?\"",
+			p5: "\"Let's be friends!\""
+		},
+		answers: {
+			check: "Check Answers",
+			score: "Your Score",
+			feedback: {
+				default: "Check your answers to see how you did!"
+			}
+		}
+	},
+	
+	// Science Fair lesson
+	scienceFair: {
+		title: "The Science Fair Challenge",
+		subtitle: "Join Alex as he prepares for the school science fair and discovers the excitement of scientific discovery!",
+		audio: {
+			title: "Alex's Science Fair Adventure",
+			status: {
+				loading: "Loading audio...",
+				playing: "Playing story...",
+				paused: "Audio paused",
+				stopped: "Audio stopped",
+				error: "Audio not available"
+			}
+		},
+		sections: {
+			listen: "Listen to the Story",
+			story: "Story Text",
+			questions: "Comprehension Questions",
+			vocabulary: "Vocabulary Cards",
+			pronunciation: "Pronunciation Practice"
+		},
+		story: {
+			p1: "Alex couldn't wait for the annual science fair at his school. He loved science class more than any other subject and had been thinking about his project for weeks. The theme this year was \"Environmental Solutions,\" and Alex wanted to create something that would help the planet.",
+			p2: "He decided to build a simple water filtration system using natural materials. His idea was to show how people in areas without clean water could use sand, gravel, and charcoal to purify water. Alex spent hours researching different filtration methods online and at the library.",
+			p3: "The first challenge came when Alex tried to build his prototype. The water kept leaking from the bottom of his container, and the filtered water still looked cloudy. He felt frustrated and thought about giving up and choosing an easier project.",
+			p4: "His science teacher, Mr. Rodriguez, noticed Alex's frustration. \"Science isn't about getting it right the first time,\" he said. \"It's about learning from what doesn't work and trying again. That's called the scientific method.\"",
+			p5: "Encouraged by his teacher, Alex went back to work. He added more layers to his filter and tested different combinations of materials. After several attempts, he finally created a filter that produced clear, clean water. Alex documented each step of his process in his science journal.",
+			p6: "On the day of the science fair, Alex set up his display with pride. He had charts showing his experimental process, samples of his filtered water, and clear explanations of how his system worked. Other students gathered around his booth, asking questions about his project.",
+			p7: "When the judges came by, Alex explained his project confidently. He talked about the problem of water pollution and how his simple filter could help communities without access to expensive filtration systems. The judges were impressed with his scientific approach and clear presentation.",
+			p8: "At the award ceremony, Alex won second place for his water filtration project. But more importantly, he discovered that he loved the process of asking questions, testing ideas, and solving problems. Alex realized that science wasn't just a school subject—it was a way of exploring and understanding the world."
+		},
+		questions: {
+			q1: "What was the theme of the science fair this year?",
+			q1a: "Space Exploration",
+			q1b: "Environmental Solutions",
+			q1c: "Animal Habitats",
+			
+			q2: "What problem did Alex encounter when building his prototype?",
+			q2a: "The water leaked and looked cloudy",
+			q2b: "He couldn't find the right materials",
+			q2c: "His filter worked perfectly on the first try",
+			
+			q3: "What did Mr. Rodriguez teach Alex about science?",
+			q3a: "It's about getting everything right the first time",
+			q3b: "It's about learning from mistakes and trying again",
+			q3c: "Only smart people can be good at science",
+			
+			q4: "What materials did Alex use in his water filtration system?",
+			q4a: "Plastic bottles and chemicals",
+			q4b: "Sand, gravel, and charcoal",
+			q4c: "Metal filters and electric pumps",
+			
+			q5: "What was the most important thing Alex discovered through this experience?",
+			q5a: "That winning is the most important part of science fairs",
+			q5b: "That science is a way of exploring and understanding the world",
+			q5c: "That water filtration is too complicated to understand"
+		},
+		vocabulary: {
+			prototype: "Prototype",
+			prototype_pron: "/ˈproʊtətaɪp/",
+			prototype_def: "A first or preliminary model of something",
+			prototype_ex: "\"Alex built a prototype of his water filtration system.\"",
+			
+			filtration: "Filtration",
+			filtration_pron: "/fɪlˈtreɪʃən/",
+			filtration_def: "The process of removing solid particles from a liquid or gas",
+			filtration_ex: "\"The filtration system made the dirty water clean.\"",
+			
+			environmental: "Environmental",
+			environmental_pron: "/ɪnˌvaɪrənˈmentl/",
+			environmental_def: "Relating to the natural world and the impact of human activity on it",
+			environmental_ex: "\"The science fair theme was environmental solutions.\"",
+			
+			scientific_method: "Scientific Method",
+			scientific_method_pron: "/ˌsaɪənˈtɪfɪk ˈmeθəd/",
+			scientific_method_def: "A systematic approach to research involving observation, hypothesis, experimentation, and conclusion",
+			scientific_method_ex: "\"Alex used the scientific method to improve his project.\"",
+			
+			documentation: "Documentation",
+			documentation_pron: "/ˌdɑːkjumenˈteɪʃən/",
+			documentation_def: "Material that provides official information or evidence",
+			documentation_ex: "\"Alex kept careful documentation of his experiments.\""
+		},
+		pronunciation: {
+			p1: "\"I'm excited about the science fair!\"",
+			p2: "\"My project is about water filtration.\"",
+			p3: "\"Science is about learning from mistakes.\"",
+			p4: "\"I used the scientific method for my project.\"",
+			p5: "\"This prototype needs more testing.\""
+		},
+		answers: {
+			check: "Check Answers",
+			score: "Your Score",
+			feedback: {
+				default: "Check your answers to see how you did!"
+			}
+		}
+	},
+	
+	// The Lost Pet Adventure
+	lostPet: {
+		title: "The Lost Pet Adventure",
+		subtitle: "Help Mia find her lost dog Sparky by following clues around the neighborhood!",
+		sections: {
+			listen: "Listen to the Story",
+			story: "Story Text",
+			questions: "Comprehension Questions",
+			vocabulary: "Vocabulary Cards",
+			pronunciation: "Pronunciation Practice"
+		},
+		audio: {
+			title: "The Lost Pet Adventure",
+			status: {
+				loading: "Loading audio..."
+			}
+		},
+		story: {
+			p1: "Mia was playing fetch with her golden retriever Sparky in the backyard when her mom called her for dinner. She tied Sparky's leash to the fence post and ran inside, forgetting to close the gate properly.",
+			p2: "When Mia returned after dinner, Sparky was gone! The leash was still tied to the post, but the gate was open. Mia's heart started pounding as she realized Sparky had escaped.",
+			p3: "She ran to her neighbor Mr. Johnson's house first. \"Have you seen Sparky?\" she asked breathlessly. Mr. Johnson said he saw a golden dog running toward the park about twenty minutes ago.",
+			p4: "Mia rushed to the park and asked everyone she met. A woman walking her poodle said she saw a golden retriever chasing squirrels near the big oak tree. Mia searched the area but found only Sparky's favorite blue ball.",
+			p5: "Next, Mia went to the ice cream shop where Sparky loved to get puppy cones. The owner, Mrs. Chen, said a golden retriever had been there earlier but ran off when a truck backfired.",
+			p6: "Mia was getting worried. She decided to make posters with Sparky's picture. As she was putting up the first poster at the grocery store, she heard a familiar bark coming from the alley.",
+			p7: "There was Sparky, sitting with the store manager who was giving him water. \"This friendly fellow has been keeping me company for the past hour,\" the manager said with a smile.",
+			p8: "Mia hugged Sparky tightly and promised to always double-check the gate. She thanked everyone who had helped her and learned that her community was full of kind people who look out for each other - and each other's pets!"
+		},
+		questions: {
+			q1: "What kind of dog is Sparky?",
+			q1a: "A poodle",
+			q1b: "A golden retriever",
+			q1c: "A German shepherd",
+			q2: "How did Sparky escape from the backyard?",
+			q2a: "He jumped over the fence",
+			q2b: "The gate was left open",
+			q2c: "Someone untied his leash",
+			q3: "Where did Mr. Johnson say he saw Sparky going?",
+			q3a: "To the ice cream shop",
+			q3b: "Toward the park",
+			q3c: "To the grocery store",
+			q4: "What did Mia find near the big oak tree in the park?",
+			q4a: "Sparky's leash",
+			q4b: "Sparky's favorite blue ball",
+			q4c: "Sparky's water bowl",
+			q5: "Where was Sparky finally found?",
+			q5a: "At the ice cream shop",
+			q5b: "In the alley behind the grocery store",
+			q5c: "Back in his own backyard"
+		},
+		answers: {
+			check: "Check Answers",
+			score: "Your Score",
+			feedback: {
+				default: "Check your answers to see how you did!"
+			}
+		},
+		vocabulary: {
+			retriever: "Retriever",
+			retriever_pron: "/rɪˈtriːvər/",
+			retriever_def: "A type of dog bred to retrieve game for hunters",
+			retriever_ex: "\"Sparky is a golden retriever who loves to play fetch.\"",
+			leash: "Leash",
+			leash_pron: "/liːʃ/",
+			leash_def: "A strap or rope for restraining and guiding a dog",
+			leash_ex: "\"Mia tied Sparky's leash to the fence post.\"",
+			breathlessly: "Breathlessly",
+			breathlessly_pron: "/ˈbrɛθləsli/",
+			breathlessly_def: "In a way that shows you are breathing quickly",
+			breathlessly_ex: "\"Mia asked breathlessly if anyone had seen her dog.\"",
+			community: "Community",
+			community_pron: "/kəˈmjuːnɪti/",
+			community_def: "A group of people living in the same area",
+			community_ex: "\"Mia learned that her community was full of kind people.\"",
+			familiar: "Familiar",
+			familiar_pron: "/fəˈmɪliər/",
+			familiar_def: "Well known from being seen or heard before",
+			familiar_ex: "\"Mia heard a familiar bark coming from the alley.\""
+		},
+		pronunciation: {
+			p1: "\"Have you seen my dog Sparky?\"",
+			p2: "\"He's a golden retriever with a wagging tail.\"",
+			p3: "\"I need to find my lost pet.\"",
+			p4: "\"Thank you for helping me search.\"",
+			p5: "\"I'm so happy to have found you!\""
+		}
+	},
+	
     // Dashboard
     dashboard: {
         title: "Communication Skills",
@@ -1263,7 +1267,212 @@ lostPet: {
 			}
 		}
 	},
-    
+	conjugation: {
+		title: "Verb Conjugation",
+		subtitle: "Master English verb tenses, modals, and modes",
+		
+		simpleTenses: "Simple Tenses",
+		simpleTensesDescription: "Learn the basic verb tenses used in everyday English communication.",
+		
+		simplePresent: "Simple Present",
+		simplePresentDescription: "Express habits, general truths, and fixed arrangements.",
+		
+		simplePast: "Simple Past",
+		simplePastDescription: "Talk about completed actions in the past.",
+		
+		simpleFuture: "Simple Future",
+		simpleFutureDescription: "Express predictions, promises, and spontaneous decisions.",
+		
+		progressiveTenses: "Progressive Tenses",
+		progressiveTensesDescription: "Express ongoing actions at specific times.",
+		
+		presentProgressive: "Present Progressive",
+		presentProgressiveDescription: "Describe actions happening now or around now.",
+		
+		pastProgressive: "Past Progressive",
+		pastProgressiveDescription: "Describe ongoing actions in the past.",
+		
+		futureProgressive: "Future Progressive",
+		futureProgressiveDescription: "Describe ongoing actions in the future.",
+		
+		perfectTenses: "Perfect Tenses",
+		perfectTensesDescription: "Express completed actions with relevance to other time frames.",
+		
+		presentPerfect: "Present Perfect",
+		presentPerfectDescription: "Connect past actions to the present.",
+		
+		pastPerfect: "Past Perfect",
+		pastPerfectDescription: "Express actions completed before another past action.",
+		
+		futurePerfect: "Future Perfect",
+		futurePerfectDescription: "Express actions that will be completed before a future time.",
+		
+		modalVerbs: "Modal Verbs",
+		modalVerbsDescription: "Express ability, possibility, permission, or obligation.",
+		
+		conditionalMood: "Conditional Mood",
+		conditionalMoodDescription: "Express hypothetical situations and their consequences."
+	},
+    simplePresent: {
+		title: "Simple Present Tense: Generality",
+		subtitle: "Master the basic verb tense for habits, facts, and general truths",
+		
+		introduction: {
+			title: "Introduction to Simple Present",
+			whatIs: "What is the Simple Present Tense?",
+			definitionTitle: "Definition:",
+			definition: "The Simple Present tense is used to describe habits, unchanging situations, general truths, and fixed arrangements.",
+			usesTitle: "When to use:",
+			use1: "Habits and routines",
+			use2: "Facts and general truths",
+			use3: "Fixed arrangements and schedules",
+			use4: "Feelings and states",
+			example1: "I work at a bank.",
+			example2: "The sun rises in the east.",
+			example3: "The train leaves at 5 PM.",
+			example4: "She likes coffee."
+		},
+		
+		toBe: {
+			title: "The Verb \"To Be\"",
+			conjugation: "Conjugation of \"To Be\"",
+			am: "am",
+			are: "are",
+			is: "is",
+			exampleI: "I am a student.",
+			exampleYou: "You are my friend.",
+			exampleHe: "He is a teacher.",
+			exampleShe: "She is happy.",
+			exampleIt: "It is a beautiful day.",
+			exampleWe: "We are here.",
+			exampleThey: "They are students.",
+			negativeTitle: "Negative Form:",
+			negativeRule: "Add \"not\" after the verb.",
+			negativeExample1: "I am not a doctor.",
+			negativeExample2: "She is not tired.",
+			negativeExample3: "They are not here.",
+			questionTitle: "Question Form:",
+			questionRule: "Invert the subject and the verb.",
+			questionExample1: "Am I late?",
+			questionExample2: "Is she a teacher?",
+			questionExample3: "Are they ready?"
+		},
+		
+		toHave: {
+			title: "The Verb \"To Have\"",
+			conjugation: "Conjugation of \"To Have\"",
+			have: "have",
+			has: "has",
+			exampleI: "I have a car.",
+			exampleYou: "You have a book.",
+			exampleHe: "He has a cat.",
+			exampleShe: "She has a dog.",
+			exampleIt: "It has four legs.",
+			exampleWe: "We have time.",
+			exampleThey: "They have money.",
+			negativeTitle: "Negative Form:",
+			negativeRule: "Use \"do not\" (don't) or \"does not\" (doesn't) + have.",
+			negativeExample1: "I don't have a car.",
+			negativeExample2: "She doesn't have a dog.",
+			negativeExample3: "They don't have time.",
+			questionTitle: "Question Form:",
+			questionRule: "Use \"do\" or \"does\" + subject + have.",
+			questionExample1: "Do you have a car?",
+			questionExample2: "Does she have a dog?",
+			questionExample3: "Do they have time?"
+		},
+		
+		regularVerbs: {
+			title: "Regular Verbs",
+			conjugation: "Conjugation of Regular Verbs",
+			ruleTitle: "Basic Rule:",
+			rule: "For most verbs, use the base form for all subjects except he/she/it. For he/she/it, add -s or -es.",
+			work: "work",
+			works: "works",
+			exampleI: "I work every day.",
+			exampleYou: "You work here.",
+			exampleHe: "He works at a bank.",
+			exampleShe: "She works hard.",
+			exampleIt: "It works well.",
+			exampleWe: "We work together.",
+			exampleThey: "They work late.",
+			spellingTitle: "Spelling Rules for -s/-es:",
+			spelling1: "Most verbs: add -s (work → works)",
+			spelling2: "Verbs ending in -s, -ss, -sh, -ch, -x, -o: add -es (watch → watches)",
+			spelling3: "Verbs ending in consonant + y: change y to i and add -es (study → studies)",
+			spelling4: "Verbs ending in vowel + y: add -s (play → plays)",
+			negativeTitle: "Negative Form:",
+			negativeRule: "Use \"do not\" (don't) or \"does not\" (doesn't) + base form of verb.",
+			negativeExample1: "I don't work on weekends.",
+			negativeExample2: "She doesn't work here.",
+			negativeExample3: "They don't work late.",
+			questionTitle: "Question Form:",
+			questionRule: "Use \"do\" or \"does\" + subject + base form of verb.",
+			questionExample1: "Do you work here?",
+			questionExample2: "Does she work hard?",
+			questionExample3: "Do they work together?"
+		},
+		
+		irregularVerbs: {
+			title: "Common Irregular Verbs",
+			conjugation: "Irregular Verb Conjugations",
+			ruleTitle: "About Irregular Verbs:",
+			rule: "Some verbs don't follow the regular -s/-es pattern for he/she/it. They have their own unique forms.",
+			go: "go",
+			goBase: "go",
+			goes: "goes",
+			goExample: "She goes to school.",
+			do: "do",
+			doBase: "do",
+			does: "does",
+			doExample: "He does his homework.",
+			have: "have",
+			haveBase: "have",
+			has: "has",
+			haveExample: "It has four legs.",
+			say: "say",
+			sayBase: "say",
+			says: "says",
+			sayExample: "He says hello.",
+			moreExamplesTitle: "More Examples:",
+			example1: "I go to the gym every day.",
+			example2: "She goes to the market on Saturdays.",
+			example3: "We do our homework in the evening.",
+			example4: "He does the dishes after dinner."
+		},
+		
+		exercises: {
+			title: "Practice Exercises",
+			q1: "Choose the correct form of the verb \"to be\":",
+			q1Sentence: "She ______ a doctor.",
+			q1a: "am",
+			q1b: "is",
+			q1c: "are",
+			q2: "Choose the correct form of the verb \"to have\":",
+			q2Sentence: "They ______ two cats.",
+			q2a: "has",
+			q2b: "have",
+			q2c: "had",
+			q3: "Choose the correct form of the regular verb:",
+			q3Sentence: "He ______ (work) in an office.",
+			q3a: "work",
+			q3b: "works",
+			q3c: "working",
+			q4: "Choose the correct form of the irregular verb:",
+			q4Sentence: "She ______ (go) to school by bus.",
+			q4a: "go",
+			q4b: "goes",
+			q4c: "going",
+			q5: "Choose the correct negative form:",
+			q5Sentence: "I ______ like coffee.",
+			q5a: "doesn't",
+			q5b: "don't",
+			q5c: "not",
+			checkAnswers: "Check Answers",
+			yourScore: "Your Score",
+			feedbackDefault: "Check your answers to see how you did!"
+		}
+	},
     // Footer
     footer: {
         developer: "Developer: Mejri Ziad",
