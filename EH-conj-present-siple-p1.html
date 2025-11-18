@@ -209,15 +209,16 @@
             cursor: pointer;
         }
         
-        .EH-exercise-answers-control {
+        /* Type 1: Multiple Choice Styles */
+        .EH-exercise-type1-possibilities3-answers-control {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 30px;
             gap: 20px;
         }
-        
-        .EH-exercise-check-answers-btn {
+
+        .EH-exercise-type1-possibilities3-check-answers-btn {
             background: #2a8f6c;
             color: white;
             border: none;
@@ -228,12 +229,12 @@
             transition: background 0.3s;
             font-size: 1rem;
         }
-        
-        .EH-exercise-check-answers-btn:hover {
+
+        .EH-exercise-type1-possibilities3-check-answers-btn:hover {
             background: #1e6b52;
         }
-        
-        .EH-exercise-score-display {
+
+        .EH-exercise-type1-possibilities3-score-display {
             background: white;
             border-radius: 15px;
             padding: 20px;
@@ -243,27 +244,90 @@
             width: 100%;
             max-width: 500px;
         }
-        
-        .EH-exercise-score-title {
+
+        .EH-exercise-type1-possibilities3-score-title {
             font-size: 1.4rem;
             margin-bottom: 15px;
             color: #1e6b52;
         }
-        
-        .EH-exercise-score-value {
+
+        .EH-exercise-type1-possibilities3-score-value {
             font-size: 2rem;
             font-weight: bold;
             color: #2a8f6c;
             margin-bottom: 15px;
         }
-        
-        .EH-exercise-score-feedback {
+
+        .EH-exercise-type1-possibilities3-score-feedback {
             font-size: 1.1rem;
             color: #333;
             margin-bottom: 15px;
         }
+
+        .EH-exercise-type1-possibilities3-answer-status {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .EH-exercise-type1-possibilities3-correct-answer {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .EH-exercise-type1-possibilities3-incorrect-answer {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .EH-exercise-type1-possibilities3-option.correct {
+            background-color: #d4edda;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+        }
+
+        .EH-exercise-type1-possibilities3-option.incorrect {
+            background-color: #f8d7da;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+        }
         
-        .EH-exercise-answer-status {
+        /* Type 2: Fill in the Blank Styles */
+        .EH-exercise-type2-fillblank-input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .EH-exercise-type2-fillblank-input:focus {
+            border-color: #2a8f6c;
+            outline: none;
+        }
+        
+        .EH-exercise-type2-fillblank-input-correct {
+            border-color: #28a745;
+            background-color: #d4edda;
+        }
+        
+        .EH-exercise-type2-fillblank-input-incorrect {
+            border-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        
+        .EH-exercise-type2-fillblank-input-empty {
+            border-color: #ffc107;
+        }
+        
+        .EH-exercise-type2-fillblank-answer-status {
             margin-top: 10px;
             font-size: 0.9rem;
             padding: 5px 10px;
@@ -271,29 +335,74 @@
             display: inline-block;
         }
         
-        .EH-exercise-correct-answer {
+        .EH-exercise-type2-fillblank-correct-answer {
             background-color: #d4edda;
             color: #155724;
             border: 1px solid #c3e6cb;
         }
         
-        .EH-exercise-incorrect-answer {
+        .EH-exercise-type2-fillblank-incorrect-answer {
             background-color: #f8d7da;
             color: #721c24;
             border: 1px solid #f5c6cb;
         }
         
-        .EH-exercise-option.correct {
-            background-color: #d4edda;
-            padding: 5px;
+        /* Type 3: Sentence Ordering Styles */
+        .EH-exercise-type3-sentenceorder-word-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 15px;
+            border: 2px dashed #e0e0e0;
+            border-radius: 10px;
+            min-height: 60px;
+            margin-bottom: 15px;
+        }
+        
+        .EH-exercise-type3-sentenceorder-word {
+            background: #f1f8e9;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid #c5e1a5;
+            cursor: move;
+            user-select: none;
+        }
+        
+        .EH-exercise-type3-sentenceorder-word:hover {
+            background: #e8f5e8;
+        }
+        
+        .EH-exercise-type3-sentenceorder-dragging {
+            opacity: 0.5;
+        }
+        
+        .EH-exercise-type3-sentenceorder-correct {
+            border-color: #28a745;
+            background-color: #f8fff8;
+        }
+        
+        .EH-exercise-type3-sentenceorder-incorrect {
+            border-color: #dc3545;
+            background-color: #fff8f8;
+        }
+        
+        .EH-exercise-type3-sentenceorder-answer-status {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            padding: 5px 10px;
             border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .EH-exercise-type3-sentenceorder-correct-answer {
+            background-color: #d4edda;
+            color: #155724;
             border: 1px solid #c3e6cb;
         }
         
-        .EH-exercise-option.incorrect {
+        .EH-exercise-type3-sentenceorder-incorrect-answer {
             background-color: #f8d7da;
-            padding: 5px;
-            border-radius: 5px;
+            color: #721c24;
             border: 1px solid #f5c6cb;
         }
         
@@ -727,6 +836,9 @@
             <!-- Exercises Section -->
             <div class="EH-conjugation-section EH-exercise-section">
                 <h2 class="EH-conjugation-section-title" data-i18n="simplePresent.exercises.title">Practice Exercises</h2>
+                
+                <!-- Type 1: Multiple Choice Exercises -->
+                <h3 style="color: #1e6b52; margin-bottom: 20px;">Multiple Choice</h3>
                 <div class="EH-exercise-container">
                     <!-- Exercise 1 -->
                     <div class="EH-exercise-card">
@@ -734,20 +846,20 @@
                         <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q1">Choose the correct form of the verb "to be":</p>
                         <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q1Sentence">She ______ a doctor.</p>
                         <div class="EH-exercise-options">
-                            <div class="EH-exercise-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="simplePresent.exercises.q1a">am</label>
-                            </div>
-                            <div class="EH-exercise-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="simplePresent.exercises.q1b">is</label>
-                            </div>
-                            <div class="EH-exercise-option">
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
                                 <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
                                 <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="simplePresent.exercises.q1c">are</label>
                             </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="simplePresent.exercises.q1a">am</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="simplePresent.exercises.q1b">is</label>
+                            </div>
                         </div>
-                        <div class="EH-exercise-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
                     </div>
                     
                     <!-- Exercise 2 -->
@@ -756,20 +868,20 @@
                         <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q2">Choose the correct form of the verb "to have":</p>
                         <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q2Sentence">They ______ two cats.</p>
                         <div class="EH-exercise-options">
-                            <div class="EH-exercise-option">
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
                                 <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
                                 <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="simplePresent.exercises.q2a">has</label>
                             </div>
-                            <div class="EH-exercise-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="simplePresent.exercises.q2b">have</label>
-                            </div>
-                            <div class="EH-exercise-option">
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
                                 <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
                                 <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="simplePresent.exercises.q2c">had</label>
                             </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="simplePresent.exercises.q2b">have</label>
+                            </div>
                         </div>
-                        <div class="EH-exercise-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
                     </div>
                     
                     <!-- Exercise 3 -->
@@ -778,74 +890,171 @@
                         <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q3">Choose the correct form of the regular verb:</p>
                         <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q3Sentence">He ______ (work) in an office.</p>
                         <div class="EH-exercise-options">
-                            <div class="EH-exercise-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="simplePresent.exercises.q3a">work</label>
-                            </div>
-                            <div class="EH-exercise-option">
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
                                 <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
                                 <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="simplePresent.exercises.q3b">works</label>
                             </div>
-                            <div class="EH-exercise-option">
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="simplePresent.exercises.q3a">work</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
                                 <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
                                 <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="simplePresent.exercises.q3c">working</label>
                             </div>
                         </div>
-                        <div class="EH-exercise-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
                     </div>
-                    
+					<!-- Exercise 4 -->
+<div class="EH-exercise-card">
+    <div class="EH-exercise-number">4</div>
+    <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q4">Choose the correct negative form:</p>
+    <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q4Sentence">I ______ like coffee.</p>
+    <div class="EH-exercise-options">
+        <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+            <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
+            <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="simplePresent.exercises.q4a">doesn't</label>
+        </div>
+        <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+            <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
+            <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="simplePresent.exercises.q4b">don't</label>
+        </div>
+        <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+            <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
+            <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="simplePresent.exercises.q4c">not</label>
+        </div>
+    </div>
+    <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
+</div>
+
+<!-- Exercise 5 -->
+<div class="EH-exercise-card">
+    <div class="EH-exercise-number">5</div>
+    <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q5">Choose the correct question form:</p>
+    <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q5Sentence">______ she work here?</p>
+    <div class="EH-exercise-options">
+        <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+            <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
+            <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="simplePresent.exercises.q5a">Do</label>
+        </div>
+        <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+            <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
+            <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="simplePresent.exercises.q5b">Does</label>
+        </div>
+        <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+            <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
+            <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="simplePresent.exercises.q5c">Is</label>
+        </div>
+    </div>
+    <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
+</div>
+
+<!-- Exercise 6 -->
+<div class="EH-exercise-card">
+    <div class="EH-exercise-number">6</div>
+    <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q6">Choose the correct form of the irregular verb:</p>
+    <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q6Sentence">He ______ to school every day.</p>
+    <div class="EH-exercise-options">
+        <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+            <input type="radio" id="EH-exercise-type1-possibilities3-q6-a" name="EH-exercise-type1-possibilities3-q6" value="a">
+            <label for="EH-exercise-type1-possibilities3-q6-a" data-i18n="simplePresent.exercises.q6a">go</label>
+        </div>
+        <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+            <input type="radio" id="EH-exercise-type1-possibilities3-q6-b" name="EH-exercise-type1-possibilities3-q6" value="b">
+            <label for="EH-exercise-type1-possibilities3-q6-b" data-i18n="simplePresent.exercises.q6b">goes</label>
+        </div>
+        <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+            <input type="radio" id="EH-exercise-type1-possibilities3-q6-c" name="EH-exercise-type1-possibilities3-q6" value="c">
+            <label for="EH-exercise-type1-possibilities3-q6-c" data-i18n="simplePresent.exercises.q6c">going</label>
+        </div>
+    </div>
+    <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q6-status"></div>
+</div>
+                </div>
+                
+                <!-- Type 2: Fill in the Blank Exercises -->
+                <h3 style="color: #1e6b52; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <div class="EH-exercise-container">
                     <!-- Exercise 4 -->
                     <div class="EH-exercise-card">
                         <div class="EH-exercise-number">4</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q4">Choose the correct form of the irregular verb:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q4Sentence">She ______ (go) to school by bus.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="simplePresent.exercises.q4a">go</label>
-                            </div>
-                            <div class="EH-exercise-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="simplePresent.exercises.q4b">goes</label>
-                            </div>
-                            <div class="EH-exercise-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="simplePresent.exercises.q4c">going</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
+                        <p class="EH-exercise-text">Complete the sentence with the correct form of the verb:</p>
+                        <p class="EH-exercise-text">I ______ (to be) a student.</p>
+                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q1-input" placeholder="Type your answer here">
+                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q1-status"></div>
                     </div>
                     
                     <!-- Exercise 5 -->
                     <div class="EH-exercise-card">
                         <div class="EH-exercise-number">5</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q5">Choose the correct negative form:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePresent.exercises.q5Sentence">I ______ like coffee.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="simplePresent.exercises.q5a">doesn't</label>
-                            </div>
-                            <div class="EH-exercise-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="simplePresent.exercises.q5b">don't</label>
-                            </div>
-                            <div class="EH-exercise-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="simplePresent.exercises.q5c">not</label>
-                            </div>
+                        <p class="EH-exercise-text">Complete the sentence with the correct form of the verb:</p>
+                        <p class="EH-exercise-text">She ______ (to have) a cat.</p>
+                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q2-input" placeholder="Type your answer here">
+                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q2-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 6 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">6</div>
+                        <p class="EH-exercise-text">Complete the sentence with the correct form of the verb:</p>
+                        <p class="EH-exercise-text">They ______ (to go) to school every day.</p>
+                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q3-input" placeholder="Type your answer here">
+                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q3-status"></div>
+                    </div>
+                </div>
+                
+                <!-- Type 3: Sentence Ordering Exercises -->
+                <h3 style="color: #1e6b52; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <div class="EH-exercise-container">
+                    <!-- Exercise 7 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">7</div>
+                        <p class="EH-exercise-text">Arrange the words to form a correct sentence:</p>
+                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q1-words">
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word1" data-original-index="1">He</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word3" data-original-index="3">soccer</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word4" data-original-index="4">every</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word2" data-original-index="2">plays</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word5" data-original-index="5">day</span>
                         </div>
-                        <div class="EH-exercise-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
+                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q1-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 8 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">8</div>
+                        <p class="EH-exercise-text">Arrange the words to form a correct sentence:</p>
+                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q2-words">
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word1" data-original-index="1">We</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word3" data-original-index="3">like</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word2" data-original-index="2">don't</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word4" data-original-index="4">coffee</span>
+                        </div>
+                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q2-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 9 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">9</div>
+                        <p class="EH-exercise-text">Arrange the words to form a correct question:</p>
+                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q3-words">
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word1" data-original-index="1">Do</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word3" data-original-index="3">speak</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word5" data-original-index="5">?</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word4" data-original-index="4">English</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word2" data-original-index="2">you</span>
+                        </div>
+                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q3-status"></div>
                     </div>
                 </div>
                 
                 <!-- Answer Check and Score System -->
-                <div class="EH-exercise-answers-control">
-                    <button class="EH-exercise-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers" data-i18n="simplePresent.exercises.checkAnswers">Check Answers</button>
-                    <div class="EH-exercise-score-display" id="EH-exercise-type1-possibilities3-score-display">
-                        <h3 class="EH-exercise-score-title" data-i18n="simplePresent.exercises.yourScore">Your Score</h3>
-                        <div class="EH-exercise-score-value" id="EH-exercise-type1-possibilities3-score-value">0/5</div>
-                        <p class="EH-exercise-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback" data-i18n="simplePresent.exercises.feedbackDefault">Check your answers to see how you did!</p>
+                <div class="EH-exercise-type1-possibilities3-answers-control">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers">Check All Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+                        <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/9</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback">Check your answers to see how you did!</p>
                     </div>
                 </div>
             </div>
@@ -881,19 +1090,84 @@
     <script src="scripts/exercise.js"></script>
     
     <script>
-        // Correct answers for exercises
-        const correctAnswers = {
-            'EH-exercise-type1-possibilities3-q1': 'b', // She is a doctor.
-            'EH-exercise-type1-possibilities3-q2': 'b', // They have two cats.
-            'EH-exercise-type1-possibilities3-q3': 'b', // He works in an office.
-            'EH-exercise-type1-possibilities3-q4': 'b', // She goes to school by bus.
-            'EH-exercise-type1-possibilities3-q5': 'b'  // I don't like coffee.
+        // Correct answers for Type 1 exercises
+        // Correct answers for Type 1 exercises
+const correctAnswersType1 = {
+    'EH-exercise-type1-possibilities3-q1': 'b', // She is a doctor.
+    'EH-exercise-type1-possibilities3-q2': 'b', // They have two cats.
+    'EH-exercise-type1-possibilities3-q3': 'b', // He works in an office.
+    'EH-exercise-type1-possibilities3-q4': 'b', // I don't like coffee.
+    'EH-exercise-type1-possibilities3-q5': 'b', // Does she work here?
+    'EH-exercise-type1-possibilities3-q6': 'b'  // He goes to school every day.
+};
+        
+        // Correct answers for Type 2 exercises
+        const correctAnswersType2 = {
+            'EH-exercise-type2-fillblank-q1': 'am',     // I am a student.
+            'EH-exercise-type2-fillblank-q2': 'has',    // She has a cat.
+            'EH-exercise-type2-fillblank-q3': 'go'      // They go to school every day.
         };
+        
+        // Correct answers for Type 3 exercises
+        const correctAnswersType3 = {
+            'EH-exercise-type3-sentenceorder-q1': 'He plays soccer every day',
+            'EH-exercise-type3-sentenceorder-q2': 'We don\'t like coffee',
+            'EH-exercise-type3-sentenceorder-q3': 'Do you speak English ?'
+        };
+        
+        // Combined function to check all exercise types
+        function checkAllExercises() {
+            let totalScore = 0;
+            let totalQuestions = 0;
+            
+            // Check Type 1 exercises
+            const type1Score = ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
+            totalScore += type1Score;
+            totalQuestions += Object.keys(correctAnswersType1).length;
+            
+            // Check Type 2 exercises
+            const type2Score = ExerciseType2FillBlankCheckAnswers(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
+            totalScore += type2Score;
+            totalQuestions += Object.keys(correctAnswersType2).length;
+            
+            // Check Type 3 exercises
+            const type3Score = ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
+            totalScore += type3Score;
+            totalQuestions += Object.keys(correctAnswersType3).length;
+            
+            // Update combined score display
+            const scoreValue = document.getElementById('EH-exercise-type1-possibilities3-score-value');
+            const scoreFeedback = document.getElementById('EH-exercise-type1-possibilities3-score-feedback');
+            
+            if (scoreValue) scoreValue.textContent = `${totalScore}/${totalQuestions}`;
+            
+            if (scoreFeedback) {
+                if (totalScore === totalQuestions) {
+                    scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
+                } else if (totalScore >= totalQuestions * 0.7) {
+                    scoreFeedback.textContent = 'Good job! You did well on this exercise.';
+                } else if (totalScore >= totalQuestions * 0.5) {
+                    scoreFeedback.textContent = 'Not bad, but you might want to review the material again.';
+                } else {
+                    scoreFeedback.textContent = 'You might want to review the material and try again.';
+                }
+            }
+            
+            return totalScore;
+        }
         
         // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
-            // Set up answer checking
-            ExerciseType1Possibilities3Init(correctAnswers, Object.keys(correctAnswers).length, 'EH-exercise-type1-possibilities3');
+            // Set up answer checking for all exercise types
+            ExerciseType1Possibilities3Init(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
+            ExerciseType2FillBlankInit(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
+            ExerciseType3SentenceOrderInit(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
+            
+            // Replace the default check button with our combined function
+            const checkButton = document.getElementById('EH-exercise-type1-possibilities3-check-answers');
+            if (checkButton) {
+                checkButton.addEventListener('click', checkAllExercises);
+            }
         });
     </script>
 </body>

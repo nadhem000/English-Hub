@@ -1,6 +1,7 @@
 {
   "name": "English Hub - Language Learning",
   "short_name": "English Hub",
+	"id": "EnglishHub",
   "description": "Interactive platform for improving English communication skills through engaging stories and exercises",
   "start_url": "/",
   "display": "standalone",
@@ -9,6 +10,9 @@
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
+	"related_applications": [],
+	"prefer_related_applications": false,
+	"iarc_rating_id": "e58f13d1-5619-4cbc-8c0f-98bc5e5a75d9",
   "categories": ["education", "language", "learning"],
   "icons": [
     {

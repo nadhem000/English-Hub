@@ -201,6 +201,291 @@ function ExerciseType1Possibilities3Reset(totalQuestions, prefix = 'EH-exercise-
     }
 }
 
+// TYPE 2: Fill in the blank exercises
+function ExerciseType2FillBlankCheckAnswers(correctAnswers, totalQuestions, prefix = 'EH-exercise-type2-fillblank') {
+    let score = 0;
+    
+    // Reset all status indicators and styling
+    for (let i = 1; i <= totalQuestions; i++) {
+        const statusElement = document.getElementById(`${prefix}-q${i}-status`);
+        const inputElement = document.getElementById(`${prefix}-q${i}-input`);
+        
+        if (statusElement) {
+            statusElement.textContent = '';
+            statusElement.className = `${prefix}-answer-status`;
+        }
+        
+        if (inputElement) {
+            inputElement.className = `${prefix}-input`;
+        }
+    }
+    
+    // Check each question
+    for (const question in correctAnswers) {
+        const correctAnswer = correctAnswers[question].toLowerCase().trim();
+        const inputElement = document.getElementById(`${question}-input`);
+        const statusElement = document.getElementById(`${question}-status`);
+        
+        if (inputElement) {
+            const userAnswer = inputElement.value.toLowerCase().trim();
+            
+            if (userAnswer === '') {
+                if (statusElement) {
+                    statusElement.textContent = 'Not answered';
+                    statusElement.className = `${prefix}-answer-status`;
+                }
+                inputElement.className = `${prefix}-input ${prefix}-input-empty`;
+            } else if (userAnswer === correctAnswer) {
+                score++;
+                if (statusElement) {
+                    statusElement.textContent = 'Correct!';
+                    statusElement.className = `${prefix}-answer-status ${prefix}-correct-answer`;
+                }
+                inputElement.className = `${prefix}-input ${prefix}-input-correct`;
+            } else {
+                if (statusElement) {
+                    statusElement.textContent = `Incorrect. Correct answer: ${correctAnswers[question]}`;
+                    statusElement.className = `${prefix}-answer-status ${prefix}-incorrect-answer`;
+                }
+                inputElement.className = `${prefix}-input ${prefix}-input-incorrect`;
+            }
+        }
+    }
+    
+    // Display score
+    const scoreValue = document.getElementById(`${prefix}-score-value`);
+    const scoreDisplay = document.getElementById(`${prefix}-score-display`);
+    const scoreFeedback = document.getElementById(`${prefix}-score-feedback`);
+    
+    if (scoreValue) scoreValue.textContent = `${score}/${totalQuestions}`;
+    if (scoreDisplay) scoreDisplay.style.display = 'block';
+    
+    // Provide feedback based on score
+    if (scoreFeedback) {
+        if (score === totalQuestions) {
+            scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
+        } else if (score >= totalQuestions * 0.7) {
+            scoreFeedback.textContent = 'Good job! You did well on this exercise.';
+        } else if (score >= totalQuestions * 0.5) {
+            scoreFeedback.textContent = 'Not bad, but you might want to review the material again.';
+        } else {
+            scoreFeedback.textContent = 'You might want to review the material and try again.';
+        }
+    }
+    
+    return score;
+}
+
+function ExerciseType2FillBlankInit(correctAnswers, totalQuestions, prefix = 'EH-exercise-type2-fillblank') {
+    const checkButton = document.getElementById(`${prefix}-check-answers`);
+    if (checkButton) {
+        checkButton.addEventListener('click', function() {
+            ExerciseType2FillBlankCheckAnswers(correctAnswers, totalQuestions, prefix);
+        });
+    }
+}
+
+function ExerciseType2FillBlankReset(totalQuestions, prefix = 'EH-exercise-type2-fillblank') {
+    for (let i = 1; i <= totalQuestions; i++) {
+        const inputElement = document.getElementById(`${prefix}-q${i}-input`);
+        const statusElement = document.getElementById(`${prefix}-q${i}-status`);
+        
+        if (inputElement) {
+            inputElement.value = '';
+            inputElement.className = `${prefix}-input`;
+        }
+        
+        if (statusElement) {
+            statusElement.textContent = '';
+            statusElement.className = `${prefix}-answer-status`;
+        }
+    }
+    
+    // Hide score display
+    const scoreDisplay = document.getElementById(`${prefix}-score-display`);
+    if (scoreDisplay) {
+        scoreDisplay.style.display = 'none';
+    }
+}
+
+// TYPE 3: Sentence ordering exercises
+// TYPE 3: Sentence ordering exercises
+function ExerciseType3SentenceOrderCheckAnswers(correctAnswers, totalQuestions, prefix = 'EH-exercise-type3-sentenceorder') {
+    let score = 0;
+    
+    // Reset all status indicators and styling
+    for (let i = 1; i <= totalQuestions; i++) {
+        const statusElement = document.getElementById(`${prefix}-q${i}-status`);
+        const wordContainer = document.getElementById(`${prefix}-q${i}-words`);
+        
+        if (statusElement) {
+            statusElement.textContent = '';
+            statusElement.className = `${prefix}-answer-status`;
+        }
+        
+        if (wordContainer) {
+            wordContainer.className = `${prefix}-word-container`;
+        }
+    }
+    
+    // Check each question
+    for (const question in correctAnswers) {
+        const correctOrder = correctAnswers[question];
+        const wordContainer = document.getElementById(`${question}-words`);
+        const statusElement = document.getElementById(`${question}-status`);
+        const wordElements = wordContainer ? wordContainer.querySelectorAll(`.${prefix}-word`) : [];
+        
+        let userOrder = '';
+        if (wordElements.length > 0) {
+            userOrder = Array.from(wordElements).map(word => word.textContent).join(' ').trim();
+        }
+        
+        // FIX: Normalize both strings for comparison (remove extra spaces and make case-insensitive)
+        const normalizedUserOrder = userOrder.replace(/\s+/g, ' ').trim().toLowerCase();
+        const normalizedCorrectSentence = correctOrder.replace(/\s+/g, ' ').trim().toLowerCase();
+        
+        if (userOrder === '') {
+            if (statusElement) {
+                statusElement.textContent = 'Not answered';
+                statusElement.className = `${prefix}-answer-status`;
+            }
+        } else if (normalizedUserOrder === normalizedCorrectSentence) {
+            score++;
+            if (statusElement) {
+                statusElement.textContent = 'Correct!';
+                statusElement.className = `${prefix}-answer-status ${prefix}-correct-answer`;
+            }
+            if (wordContainer) {
+                wordContainer.className = `${prefix}-word-container ${prefix}-correct`;
+            }
+        } else {
+            if (statusElement) {
+                statusElement.textContent = `Incorrect. Correct sentence: ${correctOrder}`;
+                statusElement.className = `${prefix}-answer-status ${prefix}-incorrect-answer`;
+            }
+            if (wordContainer) {
+                wordContainer.className = `${prefix}-word-container ${prefix}-incorrect`;
+            }
+        }
+    }
+    
+    // Display score
+    const scoreValue = document.getElementById(`${prefix}-score-value`);
+    const scoreDisplay = document.getElementById(`${prefix}-score-display`);
+    const scoreFeedback = document.getElementById(`${prefix}-score-feedback`);
+    
+    if (scoreValue) scoreValue.textContent = `${score}/${totalQuestions}`;
+    if (scoreDisplay) scoreDisplay.style.display = 'block';
+    
+    // Provide feedback based on score
+    if (scoreFeedback) {
+        if (score === totalQuestions) {
+            scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
+        } else if (score >= totalQuestions * 0.7) {
+            scoreFeedback.textContent = 'Good job! You did well on this exercise.';
+        } else if (score >= totalQuestions * 0.5) {
+            scoreFeedback.textContent = 'Not bad, but you might want to review the material again.';
+        } else {
+            scoreFeedback.textContent = 'You might want to review the material and try again.';
+        }
+    }
+    
+    return score;
+}
+
+function ExerciseType3SentenceOrderInit(correctAnswers, totalQuestions, prefix = 'EH-exercise-type3-sentenceorder') {
+    const checkButton = document.getElementById(`${prefix}-check-answers`);
+    if (checkButton) {
+        checkButton.addEventListener('click', function() {
+            ExerciseType3SentenceOrderCheckAnswers(correctAnswers, totalQuestions, prefix);
+        });
+    }
+    
+    // Make words draggable
+    for (let i = 1; i <= totalQuestions; i++) {
+        const wordContainer = document.getElementById(`${prefix}-q${i}-words`);
+        if (wordContainer) {
+            const words = wordContainer.querySelectorAll(`.${prefix}-word`);
+            
+            words.forEach(word => {
+                word.setAttribute('draggable', 'true');
+                
+                word.addEventListener('dragstart', function(e) {
+                    e.dataTransfer.setData('text/plain', this.id);
+                    this.classList.add(`${prefix}-dragging`);
+                });
+                
+                word.addEventListener('dragend', function() {
+                    this.classList.remove(`${prefix}-dragging`);
+                });
+            });
+            
+            wordContainer.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                const afterElement = getDragAfterElement(wordContainer, e.clientY);
+                const draggable = document.querySelector(`.${prefix}-dragging`);
+                if (draggable) {
+                    if (afterElement == null) {
+                        wordContainer.appendChild(draggable);
+                    } else {
+                        wordContainer.insertBefore(draggable, afterElement);
+                    }
+                }
+            });
+        }
+    }
+    
+    function getDragAfterElement(container, y) {
+        const draggableElements = [...container.querySelectorAll(`.${prefix}-word:not(.${prefix}-dragging)`)];
+        
+        return draggableElements.reduce((closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = y - box.top - box.height / 2;
+            
+            if (offset < 0 && offset > closest.offset) {
+                return { offset: offset, element: child };
+            } else {
+                return closest;
+            }
+        }, { offset: Number.NEGATIVE_INFINITY }).element;
+    }
+}
+
+function ExerciseType3SentenceOrderReset(totalQuestions, prefix = 'EH-exercise-type3-sentenceorder') {
+    for (let i = 1; i <= totalQuestions; i++) {
+        const wordContainer = document.getElementById(`${prefix}-q${i}-words`);
+        const statusElement = document.getElementById(`${prefix}-q${i}-status`);
+        
+        if (wordContainer) {
+            wordContainer.className = `${prefix}-word-container`;
+            
+            // Reset word order (this would need to be customized based on initial order)
+            // For simplicity, we'll just remove and re-add the words in original order
+            const words = Array.from(wordContainer.querySelectorAll(`.${prefix}-word`));
+            words.sort((a, b) => {
+                return parseInt(a.getAttribute('data-original-index')) - parseInt(b.getAttribute('data-original-index'));
+            });
+            
+            // Clear and re-add in original order
+            wordContainer.innerHTML = '';
+            words.forEach(word => {
+                wordContainer.appendChild(word);
+            });
+        }
+        
+        if (statusElement) {
+            statusElement.textContent = '';
+            statusElement.className = `${prefix}-answer-status`;
+        }
+    }
+    
+    // Hide score display
+    const scoreDisplay = document.getElementById(`${prefix}-score-display`);
+    if (scoreDisplay) {
+        scoreDisplay.style.display = 'none';
+    }
+}
+
 // Backward compatibility - alias for old function name
 function EH_exercise_init(correctAnswers, totalQuestions, prefix = 'EH-exercise-type1-possibilities3') {
     return ExerciseType1Possibilities3Init(correctAnswers, totalQuestions, prefix);
