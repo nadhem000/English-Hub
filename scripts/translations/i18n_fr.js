@@ -29,7 +29,6 @@ window.I18N['fr'] = {
 		comingSoon: "Bientôt disponible",
 		startCourse: "Commencer le cours"
 	},
-    
     // Navigation
     nav: {
         home: "Accueil",
@@ -40,7 +39,6 @@ window.I18N['fr'] = {
 		siteName: "English Hub",
 		mainPage: "Page principale"
 	},
-    
     // Main page
     main: {
         title: "English Hub (Plateforme d'anglais)",
@@ -60,7 +58,6 @@ window.I18N['fr'] = {
         explore: "Explore Now (Explorer maintenant)",
         comingSoon: "Coming Soon (Bientôt disponible)"
 	},
-	
     // Workplace lesson
     workplace: {
         title: "Navigating the Workplace (Naviguer sur le lieu de travail)",
@@ -97,22 +94,18 @@ window.I18N['fr'] = {
             q1a: "Receptionist (Réceptionniste)",
             q1b: "Marketing Assistant (Assistante marketing)",
             q1c: "HR Manager (Responsable RH)",
-            
             q2: "How long has Maria been in the country? (Depuis combien de temps Maria est-elle dans le pays?)",
             q2a: "One week (Une semaine)",
             q2b: "Three months (Trois mois)",
             q2c: "One year (Un an)",
-            
             q3: "What did Maria review while waiting in the lobby? (Qu'est-ce que Maria a relu en attendant dans le hall?)",
             q3a: "A magazine (Un magazine)",
             q3b: "The employee handbook (Le manuel de l'employé)",
             q3c: "Her passport (Son passeport)",
-            
             q4: "What is the name of the collaborative platform used at the company? (Quel est le nom de la plateforme collaborative utilisée dans l'entreprise?)",
             q4a: "TeamSpace",
             q4b: "WorkSpace",
             q4c: "OfficeConnect",
-            
             q5: "How did Maria feel at the end of her first day? (Comment Maria s'est-elle sentie à la fin de son premier jour?)",
             q5a: "Frustrated and confused (Frustrée et confuse)",
             q5b: "Tired but accomplished (Fatiguée mais accomplie)",
@@ -123,22 +116,18 @@ window.I18N['fr'] = {
             receptionist_pron: "/rɪˈsɛpʃənɪst/",
             receptionist_def: "A person who greets visitors and answers the telephone in an office (Personne qui accueille les visiteurs et répond au téléphone dans un bureau)",
             receptionist_ex: "\"The receptionist directed Maria to the waiting area.\" (« La réceptionniste a dirigé Maria vers la zone d'attente. »)",
-            
             policy: "Policy (Politique)",
             policy_pron: "/ˈpɒlɪsi/",
             policy_def: "A set of ideas or plans used as a basis for making decisions (Ensemble d'idées ou de plans utilisés comme base pour prendre des décisions)",
             policy_ex: "\"Maria reviewed the company policies in the employee handbook.\" (« Maria a relu les politiques de l'entreprise dans le manuel de l'employé. »)",
-            
             flex_time: "Flex Time (Temps flexible)",
             flex_time_pron: "/flɛks taɪm/",
             flex_time_def: "A system that allows employees to choose their own working hours (Système qui permet aux employés de choisir leurs propres heures de travail)",
             flex_time_ex: "\"The company offers flex time, so employees can adjust their schedules.\" (« L'entreprise offre du temps flexible, donc les employés peuvent ajuster leurs horaires. »)",
-            
             collaborative: "Collaborative (Collaboratif)",
             collaborative_pron: "/kəˈlæbərətɪv/",
             collaborative_def: "Involving two or more people working together for a common purpose (Impliquant deux personnes ou plus travaillant ensemble pour un objectif commun)",
             collaborative_ex: "\"They use a collaborative platform for all their projects.\" (« Ils utilisent une plateforme collaborative pour tous leurs projets. »)",
-            
             diligently: "Diligently (Assidûment)",
             diligently_pron: "/ˈdɪlɪdʒəntli/",
             diligently_def: "In a way that shows care and conscientiousness in one's work or duties (D'une manière qui montre du soin et de la conscience professionnelle dans son travail ou ses devoirs)",
@@ -188,22 +177,18 @@ window.I18N['fr'] = {
 			q1a: "A fairy (Une fée)",
 			q1b: "A tree (Un arbre)", 
 			q1c: "An animal (Un animal)",
-			
 			q2: "How did Sarah feel when she got the part of the tree? (Comment Sarah s'est-elle sentie quand elle a eu le rôle de l'arbre?)",
 			q2a: "Excited (Excitée)",
 			q2b: "Disappointed (Déçue)",
 			q2c: "Happy (Heureuse)",
-			
 			q3: "What did Mrs. Johnson say about the tree's role? (Qu'est-ce que Mme Johnson a dit sur le rôle de l'arbre?)",
 			q3a: "It was the most important part (C'était le rôle le plus important)",
 			q3b: "It set the scene for the whole play (Il créait la scène pour toute la pièce)",
 			q3c: "It was the easiest part (C'était le rôle le plus facile)",
-			
 			q4: "What did Sarah do to make her tree role better? (Qu'est-ce que Sarah a fait pour améliorer son rôle d'arbre?)",
 			q4a: "She added a little sway when the wind blew (Elle a ajouté un petit balancement quand le vent soufflait)",
 			q4b: "She asked to change her part (Elle a demandé à changer de rôle)",
 			q4c: "She decided to quit the play (Elle a décidé d'abandonner la pièce)",
-			
 			q5: "What did Sarah learn from this experience? (Qu'est-ce que Sarah a appris de cette expérience?)",
 			q5a: "That being a tree is boring (Qu'être un arbre est ennuyeux)",
 			q5b: "That every part in a play is important (Que chaque rôle dans une pièce est important)",
@@ -214,22 +199,18 @@ window.I18N['fr'] = {
 			rehearsal_pron: "/rɪˈhɜːrsəl/",
 			rehearsal_def: "A practice session for a performance (Une session d'entraînement pour une performance)",
 			rehearsal_ex: "\"The cast had a rehearsal every day after school.\" (« La troupe avait une répétition chaque jour après l'école. »)",
-			
 			role: "Role (Rôle)",
 			role_pron: "/roʊl/",
 			role_def: "The part played by a performer in a play (La partie jouée par un acteur dans une pièce)",
 			role_ex: "\"Sarah's role was a tree in the school play.\" (« Le rôle de Sarah était un arbre dans la pièce scolaire. »)",
-			
 			costume: "Costume (Costume)",
 			costume_pron: "/ˈkɑːstuːm/",
 			costume_def: "Clothes worn by an actor to look like a character (Vêtements portés par un acteur pour ressembler à un personnage)",
 			costume_ex: "\"Sarah wore a brown and green costume for her tree role.\" (« Sarah portait un costume marron et vert pour son rôle d'arbre. »)",
-			
 			teamwork: "Teamwork (Travail d'équipe)",
 			teamwork_pron: "/ˈtiːmwɜːrk/",
 			teamwork_def: "Working together as a group to achieve something (Travailler ensemble en groupe pour atteindre un objectif)",
 			teamwork_ex: "\"The play required teamwork from all the students.\" (« La pièce nécessitait un travail d'équipe de tous les élèves. »)",
-			
 			confidence: "Confidence (Confiance)",
 			confidence_pron: "/ˈkɑːnfɪdəns/",
 			confidence_def: "Feeling sure about your own abilities (Se sentir sûr de ses propres capacités)",
@@ -285,22 +266,18 @@ window.I18N['fr'] = {
 			q1a: "A school assignment (Un devoir scolaire)",
 			q1b: "Seeing an empty lot and remembering his grandmother's garden (Voir un terrain vide et se souvenir du jardin de sa grand-mère)",
 			q1c: "Watching a gardening show on TV (Regarder une émission de jardinage à la télévision)",
-			
 			q2: "Who did Leo ask for help with the garden project? (À qui Leo a-t-il demandé de l'aide pour le projet de jardin ?)",
 			q2a: "Only his friends Maya and Sam (Seulement ses amis Maya et Sam)",
 			q2b: "His friends and their teacher Mr. Chen (Ses amis et leur enseignant M. Chen)",
 			q2c: "Just his family members (Seulement les membres de sa famille)",
-			
 			q3: "What problem did they discover in the garden? (Quel problème ont-ils découvert dans le jardin ?)",
 			q3a: "Animals were eating the plants (Les animaux mangeaient les plantes)",
 			q3b: "The sprinklers weren't working properly (Les arroseurs ne fonctionnaient pas correctement)",
 			q3c: "There weren't enough volunteers (Il n'y avait pas assez de bénévoles)",
-			
 			q4: "How did the garden change the neighborhood? (Comment le jardin a-t-il changé le quartier ?)",
 			q4a: "It made the neighborhood more crowded (Cela a rendu le quartier plus bondé)",
 			q4b: "It created a sense of community and brought neighbors together (Cela a créé un sentiment de communauté et a rassemblé les voisins)",
 			q4c: "It caused arguments about who owned the vegetables (Cela a provoqué des disputes sur la propriété des légumes)",
-			
 			q5: "What did Leo learn from this experience? (Qu'est-ce que Leo a appris de cette expérience ?)",
 			q5a: "That gardening is too much work (Que le jardinage est trop de travail)",
 			q5b: "That working together can create something wonderful for everyone (Que travailler ensemble peut créer quelque chose de merveilleux pour tout le monde)",
@@ -311,22 +288,18 @@ window.I18N['fr'] = {
 			community_pron: "/kəˈmjuːnɪti/",
 			community_def: "A group of people living in the same area or having a particular characteristic in common (Un groupe de personnes vivant dans la même région ou ayant une caractéristique particulière en commun)",
 			community_ex: "\"The whole community worked together on the garden project.\" (\"Toute la communauté a travaillé ensemble sur le projet de jardin.\")",
-			
 			volunteer: "Volunteer (Bénévole)",
 			volunteer_pron: "/ˌvɒlənˈtɪər/",
 			volunteer_def: "A person who freely offers to do something without being paid (Personne qui propose librement de faire quelque chose sans être payée)",
 			volunteer_ex: "\"Many volunteers helped clean up the empty lot.\" (\"De nombreux bénévoles ont aidé à nettoyer le terrain vague.\")",
-			
 			sprout: "Sprout (Pousse)",
 			sprout_pron: "/spraʊt/",
 			sprout_def: "A new growth of a plant (Une nouvelle croissance d'une plante)",
 			sprout_ex: "\"Leo loved watching the tiny green sprouts push through the soil.\" (\"Leo adorait regarder les petites pousses vertes sortir de la terre.\")",
-			
 			responsibility: "Responsibility (Responsabilité)",
 			responsibility_pron: "/rɪˌspɒnsəˈbɪlɪti/",
 			responsibility_def: "A duty or task that you are required or expected to do (Un devoir ou une tâche que vous êtes tenu ou censé faire)",
 			responsibility_ex: "\"Each family had the responsibility to care for their garden plot.\" (\"Chaque famille avait la responsabilité de s'occuper de sa parcelle de jardin.\")",
-			
 			harvest: "Harvest (Récolte)",
 			harvest_pron: "/ˈhɑːvɪst/",
 			harvest_def: "The process of gathering mature crops from the fields (Le processus de collecte des cultures mûres dans les champs)",
@@ -347,7 +320,6 @@ window.I18N['fr'] = {
 			}
 		}
 	},
-	
 	// Grocery lesson
 	grocery: {
 		title: "Grocery Shopping & Meal Planning (Courses alimentaires et planification des repas)",
@@ -384,22 +356,18 @@ window.I18N['fr'] = {
 			q1a: "A budget spreadsheet (Une feuille de calcul budgétaire)",
 			q1b: "A shopping list and meal plan (Une liste de courses et un plan de repas)",
 			q1c: "A map of the supermarket (Une carte du supermarché)",
-			
 			q2: "Which section did Omar start with in the supermarket? (Par quelle section Omar a-t-il commencé dans le supermarché?)",
 			q2a: "The dairy section (La section des produits laitiers)",
 			q2b: "The produce section (La section des fruits et légumes)",
 			q2c: "The meat counter (Le comptoir de viande)",
-			
 			q3: "What did Omar use his phone for while shopping? (Pourquoi Omar a-t-il utilisé son téléphone pendant ses courses?)",
 			q3a: "To look up pictures of unfamiliar foods (Pour rechercher des images d'aliments inconnus)",
 			q3b: "To call a friend for advice (Pour appeler un ami pour des conseils)",
 			q3c: "To calculate his total spending (Pour calculer ses dépenses totales)",
-			
 			q4: "Who did Omar ask for help in the meat section? (À qui Omar a-t-il demandé de l'aide dans la section viande?)",
 			q4a: "Another customer (Un autre client)",
 			q4b: "The butcher (Le boucher)",
 			q4c: "The store manager (Le gérant du magasin)",
-			
 			q5: "How did Omar feel after completing his shopping? (Comment Omar s'est-il senti après avoir terminé ses courses?)",
 			q5a: "Frustrated and confused (Frustré et confus)",
 			q5b: "Proud and successful (Fier et réussi)",
@@ -410,22 +378,18 @@ window.I18N['fr'] = {
 			produce_pron: "/prəˈdjuːs/",
 			produce_def: "Fresh fruits and vegetables (Fruits et légumes frais)",
 			produce_ex: "\"Omar started his shopping in the produce section.\" (\"Omar a commencé ses courses dans la section des fruits et légumes.\")",
-			
 			ingredients: "Ingredients (Ingrédients)",
 			ingredients_pron: "/ɪnˈɡriːdiənts/",
 			ingredients_def: "Items used in preparing a dish or meal (Articles utilisés dans la préparation d'un plat ou d'un repas)",
 			ingredients_ex: "\"Omar bought all the ingredients for his planned meals.\" (\"Omar a acheté tous les ingrédients pour ses repas planifiés.\")",
-			
 			butcher: "Butcher (Boucher)",
 			butcher_pron: "/ˈbʊtʃər/",
 			butcher_def: "A person who sells meat (Personne qui vend de la viande)",
 			butcher_ex: "\"The butcher helped Omar find the chicken breasts.\" (\"Le boucher a aidé Omar à trouver les poitrines de poulet.\")",
-			
 			unit_price: "Unit Price (Prix unitaire)",
 			unit_price_pron: "/ˈjuːnɪt praɪs/",
 			unit_price_def: "The price per standard unit of measurement (Le prix par unité de mesure standard)",
 			unit_price_ex: "\"Omar compared unit prices to get the best value.\" (\"Omar a comparé les prix unitaires pour obtenir le meilleur rapport qualité-prix.\")",
-			
 			checkout: "Checkout (Caisse)",
 			checkout_pron: "/ˈtʃekaʊt/",
 			checkout_def: "The place where customers pay for their purchases (L'endroit où les clients paient leurs achats)",
@@ -446,7 +410,6 @@ window.I18N['fr'] = {
 			}
 		}
 	},
-	
     // Transport lesson
     transport: {
         title: "Public Transportation (Transports en commun)",
@@ -483,22 +446,18 @@ window.I18N['fr'] = {
             q1a: "Excited and overwhelmed (Excitée et dépassée)",
             q1b: "Bored and uninterested (Ennuyée et désintéressée)",
             q1c: "Confident and prepared (Confiance et préparée)",
-            
             q2: "What did the station attendant tell Anya to do? (Qu'est-ce que l'agent de station a dit à Anya de faire ?)",
             q2a: "Take the Red Line (Prendre la Ligne Rouge)",
             q2b: "Take the Blue Line and transfer to Green Line (Prendre la Ligne Bleue et transférer à la Ligne Verte)",
             q2c: "Take a bus (Prendre un bus)",
-            
             q3: "What type of ticket did Anya decide to buy? (Quel type de billet Anya a-t-elle décidé d'acheter ?)",
             q3a: "Single ride (Trajet simple)",
             q3b: "Day pass (Pass journée)",
             q3c: "Monthly pass (Pass mensuel)",
-            
             q4: "What did Anya observe on the platform? (Qu'est-ce qu'Anya a observé sur le quai ?)",
             q4a: "The cleanliness of the station (La propreté de la station)",
             q4b: "Electronic signs with arrival times (Panneaux électroniques avec les heures d'arrivée)",
             q4c: "The advertisements (Les publicités)",
-            
             q5: "How did Anya feel by the end of the week? (Comment Anya s'est-elle sentie à la fin de la semaine ?)",
             q5a: "Still confused (Toujours confuse)",
             q5b: "Like a local (Comme une habitante locale)",
@@ -509,22 +468,18 @@ window.I18N['fr'] = {
             metro_pron: "/ˈmɛtroʊ/",
             metro_def: "An underground railway system in a city (Un système de chemin de fer souterrain dans une ville)",
             metro_ex: "\"Anya studied the metro map to find her route.\" (« Anya a étudié la carte du métro pour trouver son itinéraire. »)",
-            
             transit_card: "Transit Card (Carte de transport)",
             transit_card_pron: "/ˈtrænzɪt kɑrd/",
             transit_card_def: "A card used to pay for public transportation (Carte utilisée pour payer les transports en commun)",
             transit_card_ex: "\"Anya bought a transit card and loaded it with credit.\" (« Anya a acheté une carte de transport et l'a chargée de crédit. »)",
-            
             transfer: "Transfer (Correspondance)",
             transfer_pron: "/ˈtrænsfər/",
             transfer_def: "To change from one vehicle to another in the course of a journey (Changer d'un véhicule à un autre au cours d'un voyage)",
             transfer_ex: "\"She needed to transfer from the Blue Line to the Green Line.\" (« Elle devait effectuer une correspondance de la Ligne Bleue à la Ligne Verte. »)",
-            
             commute: "Commute (Trajet)",
             commute_pron: "/kəˈmjuːt/",
             commute_def: "The journey to and from work (Le voyage aller-retour au travail)",
             commute_ex: "\"The monthly pass was most economical for her daily commute.\" (« Le pass mensuel était le plus économique pour ses trajets quotidiens. »)",
-            
             validate: "Validate (Valider)",
             validate_pron: "/ˈvælɪdeɪt/",
             validate_def: "To confirm or check the validity of something, such as a ticket (Confirmer ou vérifier la validité de quelque chose, comme un billet)",
@@ -545,7 +500,6 @@ window.I18N['fr'] = {
 			}
 		}
 	},
-	
     // Healthcare Navigation lesson
     healthcare: {
         title: "Healthcare Navigation (Navigation dans le système de santé)",
@@ -582,22 +536,18 @@ window.I18N['fr'] = {
             q1a: "For a routine check-up (Pour un examen de routine)",
             q1b: "He had a cough and fever (Il avait une toux et de la fièvre)",
             q1c: "To get a vaccination (Pour se faire vacciner)",
-            
             q2: "What did the receptionist ask for when Carlos arrived? (Qu'est-ce que la réceptionniste a demandé quand Carlos est arrivé ?)",
             q2a: "Only his name (Seulement son nom)",
             q2b: "Health insurance and identification (Assurance maladie et pièce d'identité)",
             q2c: "Payment in advance (Paiement à l'avance)",
-            
             q3: "What did the nurse do before Carlos saw the doctor? (Qu'est-ce que l'infirmière a fait avant que Carlos ne voie le médecin ?)",
             q3a: "Gave him medication (Lui a donné des médicaments)",
             q3b: "Took his temperature and blood pressure (A pris sa température et sa tension artérielle)",
             q3c: "Scheduled his next appointment (A programmé son prochain rendez-vous)",
-            
             q4: "What was Dr. Thompson's diagnosis? (Quel était le diagnostic du Dr Thompson ?)",
             q4a: "A common cold (Un rhume)",
             q4b: "A respiratory infection (Une infection respiratoire)",
             q4c: "Allergies (Allergies)",
-            
             q5: "What advice did Dr. Thompson give Carlos besides taking antibiotics? (Quels conseils le Dr Thompson a-t-il donnés à Carlos en plus de prendre des antibiotiques ?)",
             q5a: "To exercise more (Faire plus d'exercice)",
             q5b: "To rest and drink fluids (Se reposer et boire des liquides)",
@@ -608,22 +558,18 @@ window.I18N['fr'] = {
             clinic_pron: "/ˈklɪnɪk/",
             clinic_def: "A healthcare facility for outpatient care (Établissement de santé pour les soins ambulatoires)",
             clinic_ex: "\"Carlos visited the clinic for his appointment.\" (\"Carlos a visité la clinique pour son rendez-vous.\")",
-            
             symptoms: "Symptoms (Symptômes)",
             symptoms_pron: "/ˈsɪmptəmz/",
             symptoms_def: "Signs of illness or disease (Signes de maladie)",
             symptoms_ex: "\"Carlos described his symptoms to the doctor.\" (\"Carlos a décrit ses symptômes au médecin.\")",
-            
             prescription: "Prescription (Ordonnance)",
             prescription_pron: "/prɪˈskrɪpʃən/",
             prescription_def: "A doctor's written order for medication (Ordre écrit d'un médecin pour un médicament)",
             prescription_ex: "\"Dr. Thompson wrote a prescription for antibiotics.\" (\"Le Dr Thompson a rédigé une ordonnance pour des antibiotiques.\")",
-            
             pharmacist: "Pharmacist (Pharmacien)",
             pharmacist_pron: "/ˈfɑːrməsɪst/",
             pharmacist_def: "A healthcare professional who dispenses medication (Professionnel de santé qui délivre des médicaments)",
             pharmacist_ex: "\"The pharmacist explained how to take the medicine.\" (\"Le pharmacien a expliqué comment prendre le médicament.\")",
-            
             antibiotics: "Antibiotics (Antibiotiques)",
             antibiotics_pron: "/ˌæntibaɪˈɒtɪks/",
             antibiotics_def: "Medications that treat bacterial infections (Médicaments qui traitent les infections bactériennes)",
@@ -647,7 +593,6 @@ window.I18N['fr'] = {
 			}
 		}
 	},
-	
 	// Banking lesson
 	banking: {
 		title: "Banking and Financial Basics (Les bases bancaires et financières)",
@@ -684,22 +629,18 @@ window.I18N['fr'] = {
 			q1a: "To get a credit card (Pour obtenir une carte de crédit)",
 			q1b: "Her cash was running low and she needed a secure place for her money (Son argent liquide s'épuisait et elle avait besoin d'un endroit sûr pour son argent)",
 			q1c: "To get a job at the bank (Pour obtenir un emploi à la banque)",
-			
 			q2: "What type of account did Mr. Chen recommend for Li? (Quel type de compte M. Chen a-t-il recommandé pour Li ?)",
 			q2a: "A business account (Un compte professionnel)",
 			q2b: "A student account with no monthly fees (Un compte étudiant sans frais mensuels)",
 			q2c: "A premium account with high fees (Un compte premium avec des frais élevés)",
-			
 			q3: "What documents did Li need to provide to open the account? (Quels documents Li devait-elle fournir pour ouvrir le compte ?)",
 			q3a: "Only her passport (Seulement son passeport)",
 			q3b: "Her passport, student visa, and proof of address (Son passeport, son visa étudiant et une preuve d'adresse)",
 			q3c: "Only her student ID (Seulement sa carte d'étudiante)",
-			
 			q4: "What was the minimum initial deposit required? (Quel était le dépôt initial minimum requis ?)",
 			q4a: "$100",
 			q4b: "$25",
 			q4c: "$50",
-			
 			q5: "How did Li feel after opening her bank account? (Comment Li s'est-elle sentie après avoir ouvert son compte bancaire ?)",
 			q5a: "Confused and overwhelmed (Confuse et dépassée)",
 			q5b: "Relieved and more confident (Soulagée et plus confiante)",
@@ -710,22 +651,18 @@ window.I18N['fr'] = {
 			account_pron: "/əˈkaʊnt/",
 			account_def: "A record of financial transactions with a bank (Un enregistrement des transactions financières avec une banque)",
 			account_ex: "\"Li opened a checking account at the bank.\" (\"Li a ouvert un compte courant à la banque.\")",
-			
 			deposit: "Deposit (Dépôt)",
 			deposit_pron: "/dɪˈpɒzɪt/",
 			deposit_def: "Money placed into a bank account (Argent placé sur un compte bancaire)",
 			deposit_ex: "\"She made an initial deposit of $25 to activate her account.\" (\"Elle a effectué un dépôt initial de 25 $ pour activer son compte.\")",
-			
 			debit_card: "Debit Card (Carte de débit)",
 			debit_card_pron: "/ˈdɛbɪt kɑːrd/",
 			debit_card_def: "A card that allows you to make electronic payments from your bank account (Une carte qui vous permet d'effectuer des paiements électroniques depuis votre compte bancaire)",
 			debit_card_ex: "\"Li received her temporary debit card at the bank.\" (\"Li a reçu sa carte de débit temporaire à la banque.\")",
-			
 			interest: "Interest (Intérêt)",
 			interest_pron: "/ˈɪntrəst/",
 			interest_def: "Money paid regularly at a particular rate for the use of money lent (Argent payé régulièrement à un taux particulier pour l'utilisation d'argent prêté)",
 			interest_ex: "\"The savings account earns interest on the money deposited.\" (\"Le compte d'épargne rapporte des intérêts sur l'argent déposé.\")",
-			
 			statement: "Statement (Relevé)",
 			statement_pron: "/ˈsteɪtmənt/",
 			statement_def: "A summary of financial transactions during a specific period (Un résumé des transactions financières pendant une période spécifique)",
@@ -746,7 +683,6 @@ window.I18N['fr'] = {
 			}
 		}
 	},
-	
 	// Apartment lesson
 	apartment: {
 		title: "Finding an Apartment (Trouver un appartement)",
@@ -783,22 +719,18 @@ window.I18N['fr'] = {
 			q1a: "With a friend (Chez un ami)",
 			q1b: "In a temporary hostel (Dans une auberge temporaire)",
 			q1c: "At a hotel (Dans un hôtel)",
-			
 			q2: "What was Ahmed's monthly budget for rent? (Quel était le budget mensuel d'Ahmed pour le loyer ?)",
 			q2a: "$1000",
 			q2b: "$1200",
 			q2c: "$1300",
-			
 			q3: "What was wrong with the first apartment Ahmed visited? (Quel était le problème avec le premier appartement qu'Ahmed a visité ?)",
 			q3a: "It was too expensive (C'était trop cher)",
 			q3b: "It had a view of another building's wall (Il avait une vue sur le mur d'un autre bâtiment)",
 			q3c: "It was too far from public transportation (Il était trop loin des transports en commun)",
-			
 			q4: "Who told Ahmed about the neighborhood website? (Qui a parlé à Ahmed du site Web du quartier ?)",
 			q4a: "His landlord (Son propriétaire)",
 			q4b: "His coworker Maria (Sa collègue Maria)",
 			q4c: "A real estate agent (Un agent immobilier)",
-			
 			q5: "What was the rent for the apartment Ahmed finally chose? (Quel était le loyer de l'appartement qu'Ahmed a finalement choisi ?)",
 			q5a: "$1100 plus utilities (1100 $ plus charges)",
 			q5b: "$1150 including utilities (1150 $ charges comprises)",
@@ -809,22 +741,18 @@ window.I18N['fr'] = {
 			rental_pron: "/ˈrɛntl/",
 			rental_def: "Related to property that is rented rather than owned (Relatif à un bien loué plutôt que possédé)",
 			rental_ex: "\"Ahmed looked at rental websites to find an apartment.\" (\"Ahmed a consulté des sites de location pour trouver un appartement.\")",
-			
 			utilities: "Utilities (Charges)",
 			utilities_pron: "/juːˈtɪlɪtiz/",
 			utilities_def: "Basic services like electricity, water, and gas (Services de base comme l'électricité, l'eau et le gaz)",
 			utilities_ex: "\"The rent was $1100 plus utilities.\" (\"Le loyer était de 1100 $ plus les charges.\")",
-			
 			landlord: "Landlord (Propriétaire)",
 			landlord_pron: "/ˈlændlɔːrd/",
 			landlord_def: "A person who owns and rents out property (Personne qui possède et loue un bien)",
 			landlord_ex: "\"The landlord showed Ahmed the apartment.\" (\"Le propriétaire a montré l'appartement à Ahmed.\")",
-			
 			lease: "Lease (Bail)",
 			lease_pron: "/liːs/",
 			lease_def: "A legal contract for renting property (Contrat légal pour la location d'un bien)",
 			lease_ex: "\"Ahmed signed the lease agreement for his new apartment.\" (\"Ahmed a signé le contrat de location pour son nouvel appartement.\")",
-			
 			budget: "Budget (Budget)",
 			budget_pron: "/ˈbʌdʒɪt/",
 			budget_def: "A plan for how much money to spend on something (Planification de la quantité d'argent à dépenser pour quelque chose)",
@@ -880,22 +808,18 @@ window.I18N['fr'] = {
 			q1a: "Excited and happy (Excité et heureux)",
 			q1b: "Nervous and unfamiliar (Nerveux et inconnu)",
 			q1c: "Angry and frustrated (En colère et frustré)",
-			
 			q2: "What did Sam do during the morning in his new classroom? (Qu'est-ce que Sam a fait pendant la matinée dans sa nouvelle salle de classe?)",
 			q2a: "He talked to everyone (Il a parlé à tout le monde)",
 			q2b: "He sat quietly and watched the other children (Il s'est assis tranquillement et a regardé les autres enfants)",
 			q2c: "He played soccer (Il a joué au football)",
-			
 			q3: "Who approached Sam at recess? (Qui a approché Sam à la récréation?)",
 			q3a: "The teacher (L'enseignant)",
 			q3b: "A boy named Leo (Un garçon nommé Leo)",
 			q3c: "No one (Personne)",
-			
 			q4: "What did Sam and Leo have in common? (Qu'avaient Sam et Leo en commun?)",
 			q4a: "They were in the same class last year (Ils étaient dans la même classe l'année dernière)",
 			q4b: "They liked the same video games and superheroes (Ils aimaient les mêmes jeux vidéo et super-héros)",
 			q4c: "They lived in the same neighborhood (Ils vivaient dans le même quartier)",
-			
 			q5: "What did Sam learn about making new friends? (Qu'a appris Sam sur le fait de se faire de nouveaux amis?)",
 			q5a: "It's very hard and not worth it (C'est très difficile et ça n'en vaut pas la peine)",
 			q5b: "Being yourself and open to new experiences can lead to friendships (Être soi-même et ouvert à de nouvelles expériences peut mener à des amitiés)",
@@ -906,22 +830,18 @@ window.I18N['fr'] = {
 			nervous_pron: "/ˈnɜːrvəs/",
 			nervous_def: "Feeling worried or slightly afraid (Se sentir inquiet ou légèrement effrayé)",
 			nervous_ex: "\"Sam felt nervous on his first day at a new school.\" (\"Sam se sentait nerveux lors de son premier jour dans une nouvelle école.\")",
-			
 			unfamiliar: "Unfamiliar (Inconnu)",
 			unfamiliar_pron: "/ˌʌnfəˈmɪliər/",
 			unfamiliar_def: "Not known or recognized (Pas connu ou reconnu)",
 			unfamiliar_ex: "\"The new city was unfamiliar to Sam.\" (\"La nouvelle ville était inconnue pour Sam.\")",
-			
 			recess: "Recess (Récréation)",
 			recess_pron: "/ˈriːses/",
 			recess_def: "A break period between classes at school (Une période de pause entre les cours à l'école)",
 			recess_ex: "\"The children played outside during recess.\" (\"Les enfants jouaient dehors pendant la récréation.\")",
-			
 			comfortable: "Comfortable (À l'aise)",
 			comfortable_pron: "/ˈkʌmftəbl/",
 			comfortable_def: "Feeling relaxed and at ease (Se sentir détendu et à l'aise)",
 			comfortable_ex: "\"Sam started to feel more comfortable after playing soccer.\" (\"Sam a commencé à se sentir plus à l'aise après avoir joué au football.\")",
-			
 			friendship: "Friendship (Amitié)",
 			friendship_pron: "/ˈfrendʃɪp/",
 			friendship_def: "A relationship between friends (Une relation entre amis)",
@@ -942,7 +862,6 @@ window.I18N['fr'] = {
 			}
 		}
 	},
-	
 	// Science Fair lesson
 	scienceFair: {
 		title: "The Science Fair Challenge (Le Défi de la Foire Scientifique)",
@@ -979,22 +898,18 @@ window.I18N['fr'] = {
 			q1a: "Space Exploration (Exploration Spatiale)",
 			q1b: "Environmental Solutions (Solutions Environnementales)",
 			q1c: "Animal Habitats (Habitats Animaux)",
-			
 			q2: "What problem did Alex encounter when building his prototype? (Quel problème Alex a-t-il rencontré en construisant son prototype ?)",
 			q2a: "The water leaked and looked cloudy (L'eau fuyait et paraissait trouble)",
 			q2b: "He couldn't find the right materials (Il ne pouvait pas trouver les bons matériaux)",
 			q2c: "His filter worked perfectly on the first try (Son filtre a fonctionné parfaitement du premier coup)",
-			
 			q3: "What did Mr. Rodriguez teach Alex about science? (Qu'est-ce que M. Rodriguez a enseigné à Alex sur la science ?)",
 			q3a: "It's about getting everything right the first time (Il s'agit de tout réussir du premier coup)",
 			q3b: "It's about learning from mistakes and trying again (Il s'agit d'apprendre des erreurs et de réessayer)",
 			q3c: "Only smart people can be good at science (Seules les personnes intelligentes peuvent être bonnes en science)",
-			
 			q4: "What materials did Alex use in his water filtration system? (Quels matériaux Alex a-t-il utilisés dans son système de filtration d'eau ?)",
 			q4a: "Plastic bottles and chemicals (Bouteilles en plastique et produits chimiques)",
 			q4b: "Sand, gravel, and charcoal (Sable, gravier et charbon de bois)",
 			q4c: "Metal filters and electric pumps (Filtres en métal et pompes électriques)",
-			
 			q5: "What was the most important thing Alex discovered through this experience? (Quelle était la chose la plus importante qu'Alex a découverte grâce à cette expérience ?)",
 			q5a: "That winning is the most important part of science fairs (Que gagner est la partie la plus importante des foires scientifiques)",
 			q5b: "That science is a way of exploring and understanding the world (Que la science est une façon d'explorer et de comprendre le monde)",
@@ -1005,22 +920,18 @@ window.I18N['fr'] = {
 			prototype_pron: "/ˈproʊtətaɪp/",
 			prototype_def: "A first or preliminary model of something (Un premier ou préliminaire modèle de quelque chose)",
 			prototype_ex: "\"Alex built a prototype of his water filtration system.\" (\"Alex a construit un prototype de son système de filtration d'eau.\")",
-			
 			filtration: "Filtration (Filtration)",
 			filtration_pron: "/fɪlˈtreɪʃən/",
 			filtration_def: "The process of removing solid particles from a liquid or gas (Le processus d'élimination des particules solides d'un liquide ou d'un gaz)",
 			filtration_ex: "\"The filtration system made the dirty water clean.\" (\"Le système de filtration a rendu l'eau sale propre.\")",
-			
 			environmental: "Environmental (Environnemental)",
 			environmental_pron: "/ɪnˌvaɪrənˈmentl/",
 			environmental_def: "Relating to the natural world and the impact of human activity on it (Relatif au monde naturel et à l'impact de l'activité humaine sur celui-ci)",
 			environmental_ex: "\"The science fair theme was environmental solutions.\" (\"Le thème de la foire scientifique était les solutions environnementales.\")",
-			
 			scientific_method: "Scientific Method (Méthode Scientifique)",
 			scientific_method_pron: "/ˌsaɪənˈtɪfɪk ˈmeθəd/",
 			scientific_method_def: "A systematic approach to research involving observation, hypothesis, experimentation, and conclusion (Une approche systématique de la recherche impliquant l'observation, l'hypothèse, l'expérimentation et la conclusion)",
 			scientific_method_ex: "\"Alex used the scientific method to improve his project.\" (\"Alex a utilisé la méthode scientifique pour améliorer son projet.\")",
-			
 			documentation: "Documentation (Documentation)",
 			documentation_pron: "/ˌdɑːkjumenˈteɪʃən/",
 			documentation_def: "Material that provides official information or evidence (Matériel qui fournit des informations ou des preuves officielles)",
@@ -1041,7 +952,6 @@ window.I18N['fr'] = {
 			}
 		}
 	},
-	
 	// The Lost Pet Adventure
 	lostPet: {
 		title: "The Lost Pet Adventure (L'aventure de l'animal perdu)",
@@ -1128,7 +1038,6 @@ window.I18N['fr'] = {
 			p5: "\"I'm so happy to have found you!\" (\"Je suis tellement heureux de t'avoir retrouvé !\")"
 		}
 	},
-    
     // Dashboard
     dashboard: {
         title: "Communication Skills (Compétences en communication)",
@@ -1138,7 +1047,6 @@ window.I18N['fr'] = {
         pronunciation: "Compétences en expression orale",
         other: "Jeux de communication"
 	},
-    
     // Courses
     courses: {
 		header: "Cours",
@@ -1203,13 +1111,11 @@ window.I18N['fr'] = {
 			]
 		}
 	},
-    
     // Reading Adventures page
     readingAdventures: {
         title: "Reading Adventures (Aventures de lecture)",
         subtitle: "Improve your reading skills through engaging stories for all ages! (Améliorez vos compétences en lecture grâce à des histoires captivantes pour tous les âges !)",
         intro: "Welcome to Reading Adventures! This platform offers reading materials for both elementary school students (ages 8-15) and young adult workers (ages 18-30). Explore stories based on real-life situations that match your age group and interests while developing your reading skills through engaging activities. (Bienvenue aux Aventures de lecture ! Cette plateforme propose du matériel de lecture pour les élèves du primaire (8-15 ans) et les jeunes travailleurs adultes (18-30 ans). Explorez des histoires basées sur des situations réelles qui correspondent à votre groupe d'âge et à vos intérêts tout en développant vos compétences en lecture grâce à des activités engageantes.)",
-        
         elementary: {
             title: "For Elementary School Students (8-15 years) (Pour les élèves du primaire (8-15 ans))",
             subtitle: "Fun stories about school life, friendships, and adventures! (Histoires amusantes sur la vie scolaire, les amitiés et les aventures !)",
@@ -1236,7 +1142,6 @@ window.I18N['fr'] = {
 				}
 			}
 		},
-        
         youngAdults: {
             title: "For Young Adult Workers (18-30 years) (Pour les jeunes travailleurs adultes (18-30 ans))",
             subtitle: "Practical stories about work, daily life, and adapting to new environments! (Histoires pratiques sur le travail, la vie quotidienne et l'adaptation à de nouveaux environnements !)",
@@ -1271,53 +1176,38 @@ window.I18N['fr'] = {
 	conjugation: {
 		title: "Conjugaison des Verbes",
 		subtitle: "Maîtrisez les temps verbaux, les modaux et les modes en anglais",
-		
 		simpleTenses: "Temps Simples",
 		simpleTensesDescription: "Apprenez les temps verbaux de base utilisés dans la communication quotidienne en anglais.",
-		
 		simplePresent: "Présent Simple",
 		simplePresentDescription: "Exprimez des habitudes, des vérités générales et des arrangements fixes.",
-		
 		simplePast: "Passé Simple",
 		simplePastDescription: "Parlez d'actions terminées dans le passé.",
-		
 		simpleFuture: "Futur Simple",
 		simpleFutureDescription: "Exprimez des prédictions, des promesses et des décisions spontanées.",
-		
 		progressiveTenses: "Temps Progressifs",
 		progressiveTensesDescription: "Exprimez des actions en cours à des moments spécifiques.",
-		
 		presentProgressive: "Présent Progressif",
 		presentProgressiveDescription: "Décrivez des actions se produisant maintenant ou autour de maintenant.",
-		
 		pastProgressive: "Passé Progressif",
 		pastProgressiveDescription: "Décrivez des actions en cours dans le passé.",
-		
 		futureProgressive: "Futur Progressif",
 		futureProgressiveDescription: "Décrivez des actions en cours dans le futur.",
-		
 		perfectTenses: "Temps Parfaits",
 		perfectTensesDescription: "Exprimez des actions terminées avec pertinence par rapport à d'autres périodes.",
-		
 		presentPerfect: "Présent Parfait",
 		presentPerfectDescription: "Reliez les actions passées au présent.",
-		
 		pastPerfect: "Passé Parfait",
 		pastPerfectDescription: "Exprimez des actions terminées avant une autre action passée.",
-		
 		futurePerfect: "Futur Parfait",
 		futurePerfectDescription: "Exprimez des actions qui seront terminées avant un moment futur.",
-		
 		modalVerbs: "Verbes Modaux",
 		modalVerbsDescription: "Exprimez la capacité, la possibilité, la permission ou l'obligation.",
-		
 		conditionalMood: "Mode Conditionnel",
 		conditionalMoodDescription: "Exprimez des situations hypothétiques et leurs conséquences."
 	},
 	simplePresent: {
         title: "Simple Present Tense: Generality (Le Présent Simple : Généralité)",
         subtitle: "Master the basic verb tense for habits, facts, and general truths (Maîtrisez le temps verbal de base pour les habitudes, les faits et les vérités générales)",
-        
         introduction: {
             title: "Introduction to Simple Present (Introduction au Présent Simple)",
             whatIs: "What is the Simple Present Tense? (Qu'est-ce que le Présent Simple ?)",
@@ -1333,7 +1223,6 @@ window.I18N['fr'] = {
             example3: "The train leaves at 5 PM. (Le train part à 17h.)",
             example4: "She likes coffee. (Elle aime le café.)"
 		},
-        
         toBe: {
             title: "The Verb \"To Be\" (Le verbe \"Être\")",
             conjugation: "Conjugation of \"To Be\" (Conjugaison du verbe \"Être\")",
@@ -1358,7 +1247,6 @@ window.I18N['fr'] = {
             questionExample2: "Is she a teacher? (Est-elle enseignante ?)",
             questionExample3: "Are they ready? (Sont-ils prêts ?)"
 		},
-        
         toHave: {
             title: "The Verb \"To Have\" (Le verbe \"Avoir\")",
             conjugation: "Conjugation of \"To Have\" (Conjugaison du verbe \"Avoir\")",
@@ -1382,7 +1270,6 @@ window.I18N['fr'] = {
             questionExample2: "Does she have a dog? (A-t-elle un chien ?)",
             questionExample3: "Do they have time? (Ont-ils le temps ?)"
 		},
-        
         regularVerbs: {
             title: "Regular Verbs (Verbes réguliers)",
             conjugation: "Conjugation of Regular Verbs (Conjugaison des verbes réguliers)",
@@ -1413,7 +1300,6 @@ window.I18N['fr'] = {
             questionExample2: "Does she work hard? (Travaille-t-elle dur ?)",
             questionExample3: "Do they work together? (Travaillent-ils ensemble ?)"
 		},
-        
         irregularVerbs: {
             title: "Common Irregular Verbs (Verbes irréguliers courants)",
             conjugation: "Irregular Verb Conjugations (Conjugaisons des verbes irréguliers)",
@@ -1441,7 +1327,6 @@ window.I18N['fr'] = {
             example3: "We do our homework in the evening. (Nous faisons nos devoirs le soir.)",
             example4: "He does the dishes after dinner. (Il fait la vaisselle après le dîner.)"
 		},
-        
         exercises: {
             title: "Practice Exercises (Exercices pratiques)",
             q1: "Choose the correct form of the verb \"to be\": (Choisissez la forme correcte du verbe \"être\" :)",
@@ -1663,7 +1548,6 @@ window.I18N['fr'] = {
 simplePresent3: {
     title: "Simple Present Tense: Negative, Passive & Idioms (Le présent simple : Négation, passif et expressions idiomatiques)",
     subtitle: "Learn to form negative sentences, use passive voice, and understand common idioms (Apprendre à former des phrases négatives, utiliser la voix passive et comprendre les expressions idiomatiques courantes)",
-    
     introduction: {
         title: "Negative Forms in Simple Present (Formes négatives au présent simple)",
         whatIs: "How to Form Negative Sentences (Comment former des phrases négatives)",
@@ -1674,7 +1558,6 @@ simplePresent3: {
         type2: "Negative with \"To Have\" (Négation avec \"avoir\")",
         type3: "Negative with Other Verbs (Négation avec d'autres verbes)"
     },
-    
     toBeNegative: {
         title: "Negative with \"To Be\" (Négation avec \"être\")",
         conjugation: "Negative Formation with \"To Be\" (Formation de la négation avec \"être\")",
@@ -1704,7 +1587,6 @@ simplePresent3: {
         contractionExample5: "We aren't here. (or We're not here) (Nous ne sommes pas ici.)",
         contractionExample6: "They aren't students. (or They're not students) (Ils ne sont pas étudiants.)"
     },
-    
     toHaveNegative: {
         title: "Negative with \"To Have\" (Négation avec \"avoir\")",
         conjugation: "Negative Formation with \"To Have\" (Formation de la négation avec \"avoir\")",
@@ -1734,7 +1616,6 @@ simplePresent3: {
         contractionExample5: "We don't have time. (Nous n'avons pas de temps.)",
         contractionExample6: "They don't have money. (Ils n'ont pas d'argent.)"
     },
-    
     otherVerbsNegative: {
         title: "Negative with Other Verbs (Négation avec d'autres verbes)",
         conjugation: "Negative Formation with Regular and Irregular Verbs (Formation de la négation avec des verbes réguliers et irréguliers)",
@@ -1770,7 +1651,6 @@ simplePresent3: {
         irregularExample2: "She doesn't do her homework. (do → does for he/she/it) (Elle ne fait pas ses devoirs.)",
         irregularExample3: "They don't have classes today. (have → has for he/she/it) (Ils n'ont pas de cours aujourd'hui.)"
     },
-    
     passive: {
         title: "Passive Voice in Simple Present (Voix passive au présent simple)",
         whatIs: "What is Passive Voice? (Qu'est-ce que la voix passive ?)",
@@ -1806,7 +1686,6 @@ simplePresent3: {
         questionExample2: "Is the car fixed by him? (La voiture est-elle réparée par lui ?)",
         questionExample3: "Are the students taught by her? (Les étudiants sont-ils enseignés par elle ?)"
     },
-    
     idioms: {
         title: "Common Idioms in Simple Present (Expressions idiomatiques courantes au présent simple)",
         whatAre: "What Are Idioms? (Que sont les expressions idiomatiques ?)",
@@ -1840,7 +1719,6 @@ simplePresent3: {
         usageExample2: "\"The early bird catches the worm.\" (People who act early get advantages) (\"L'avenir appartient à ceux qui se lèvent tôt.\")",
         usageExample3: "\"Actions speak louder than words.\" (What you do is more important than what you say) (\"Les actes sont plus éloquents que les paroles.\")"
     },
-    
     exercises: {
         title: "Practice Exercises (Exercices pratiques)",
         q1: "Choose the correct negative form: (Choisissez la forme négative correcte :)",
@@ -1883,8 +1761,577 @@ simplePresent3: {
         q11: "Arrange the words to form a correct passive sentence: (Disposez les mots pour former une phrase passive correcte :)",
         q12: "Arrange the words to form a sentence with an idiom: (Disposez les mots pour former une phrase avec une expression idiomatique :)"
     },
-    
     backToPart2: "Back to Simple Present Part 2 (Retour au présent simple partie 2)"
+},
+	// Simple Past Tense Part 1
+simplePast1: {
+    title: "Simple Past Tense: Generality (Le Passé Simple : Généralité)",
+    subtitle: "Learn to talk about completed actions and events in the past (Apprenez à parler d'actions et d'événements terminés dans le passé)",
+    introduction: {
+        title: "Introduction to Simple Past (Introduction au Passé Simple)",
+        whatIs: "What is the Simple Past Tense? (Qu'est-ce que le Passé Simple ?)",
+        definitionTitle: "Definition: (Définition :)",
+        definition: "The Simple Past tense is used to talk about actions or events that happened in the past and are now completed. (Le Passé Simple est utilisé pour parler d'actions ou d'événements qui se sont produits dans le passé et qui sont maintenant terminés.)",
+        usesTitle: "When to use: (Quand l'utiliser :)",
+        use1: "Completed actions in the past (Actions terminées dans le passé)",
+        use2: "Past habits or routines (Habitudes ou routines passées)",
+        use3: "Past facts or general truths (Faits passés ou vérités générales)",
+        use4: "Sequences of past actions (Séquences d'actions passées)",
+        example1: "I worked at a bank last year. (J'ai travaillé dans une banque l'année dernière.)",
+        example2: "She visited her grandmother yesterday. (Elle a visité sa grand-mère hier.)",
+        example3: "They played soccer when they were children. (Ils jouaient au football quand ils étaient enfants.)",
+        example4: "He lived in Paris for five years. (Il a vécu à Paris pendant cinq ans.)"
+    },
+    toBe: {
+        title: "The Verb \"To Be\" in Past (Le verbe \"Être\" au passé)",
+        conjugation: "Conjugation of \"To Be\" in Past (Conjugaison du verbe \"Être\" au passé)",
+        was: "was (étais/était)",
+        were: "were (étiez/étaient)",
+        exampleI: "I was a student. (J'étais étudiant.)",
+        exampleYou: "You were my friend. (Tu étais mon ami.)",
+        exampleHe: "He was a teacher. (Il était enseignant.)",
+        exampleShe: "She was happy. (Elle était heureuse.)",
+        exampleIt: "It was a beautiful day. (C'était une belle journée.)",
+        exampleWe: "We were here. (Nous étions ici.)",
+        exampleThey: "They were students. (Ils étaient étudiants.)",
+        negativeTitle: "Negative Form: (Forme négative :)",
+        negativeRule: "Add \"not\" after the verb. (Ajoutez \"not\" après le verbe.)",
+        negativeExample1: "I was not a doctor. (Je n'étais pas médecin.)",
+        negativeExample2: "She was not tired. (Elle n'était pas fatiguée.)",
+        negativeExample3: "They were not here. (Ils n'étaient pas ici.)",
+        questionTitle: "Question Form: (Forme interrogative :)",
+        questionRule: "Invert the subject and the verb. (Inversez le sujet et le verbe.)",
+        questionExample1: "Was I late? (Étais-je en retard ?)",
+        questionExample2: "Was she a teacher? (Était-elle enseignante ?)",
+        questionExample3: "Were they ready? (Étaient-ils prêts ?)"
+    },
+    toHave: {
+        title: "The Verb \"To Have\" in Past (Le verbe \"Avoir\" au passé)",
+        conjugation: "Conjugation of \"To Have\" in Past (Conjugaison du verbe \"Avoir\" au passé)",
+        had: "had (avais/avait/avions/avaient)",
+        exampleI: "I had a car. (J'avais une voiture.)",
+        exampleYou: "You had a book. (Tu avais un livre.)",
+        exampleHe: "He had a cat. (Il avait un chat.)",
+        exampleShe: "She had a dog. (Elle avait un chien.)",
+        exampleIt: "It had four legs. (Il avait quatre pattes.)",
+        exampleWe: "We had time. (Nous avions le temps.)",
+        exampleThey: "They had money. (Ils avaient de l'argent.)",
+        negativeTitle: "Negative Form: (Forme négative :)",
+        negativeRule: "Use \"did not\" (didn't) + have. (Utilisez \"did not\" (didn't) + have.)",
+        negativeExample1: "I didn't have a car. (Je n'avais pas de voiture.)",
+        negativeExample2: "She didn't have a dog. (Elle n'avait pas de chien.)",
+        negativeExample3: "They didn't have time. (Ils n'avaient pas le temps.)",
+        questionTitle: "Question Form: (Forme interrogative :)",
+        questionRule: "Use \"did\" + subject + have. (Utilisez \"did\" + sujet + have.)",
+        questionExample1: "Did you have a car? (Avais-tu une voiture ?)",
+        questionExample2: "Did she have a dog? (Avait-elle un chien ?)",
+        questionExample3: "Did they have time? (Avaient-ils le temps ?)"
+    },
+    regularVerbs: {
+        title: "Regular Verbs in Past (Verbes réguliers au passé)",
+        conjugation: "Conjugation of Regular Verbs in Past (Conjugaison des verbes réguliers au passé)",
+        ruleTitle: "Basic Rule: (Règle de base :)",
+        rule: "For most regular verbs, add -ed to the base form for all subjects. (Pour la plupart des verbes réguliers, ajoutez -ed à la forme de base pour tous les sujets.)",
+        worked: "worked (a travaillé/travaillait)",
+        exampleI: "I worked yesterday. (J'ai travaillé hier.)",
+        exampleYou: "You worked here. (Tu as travaillé ici.)",
+        exampleHe: "He worked at a bank. (Il a travaillé dans une banque.)",
+        exampleShe: "She worked hard. (Elle a travaillé dur.)",
+        exampleIt: "It worked well. (Ça a bien fonctionné.)",
+        exampleWe: "We worked together. (Nous avons travaillé ensemble.)",
+        exampleThey: "They worked late. (Ils ont travaillé tard.)",
+        spellingTitle: "Spelling Rules for -ed: (Règles d'orthographe pour -ed :)",
+        spelling1: "Most verbs: add -ed (work → worked) (La plupart des verbes : ajoutez -ed (travailler → a travaillé))",
+        spelling2: "Verbs ending in -e: add -d (live → lived) (Verbes se terminant par -e : ajoutez -d (vivre → a vécu))",
+        spelling3: "Verbs ending in consonant + y: change y to i and add -ed (study → studied) (Verbes se terminant par consonne + y : changez y en i et ajoutez -ed (étudier → a étudié))",
+        spelling4: "Verbs ending in vowel + y: add -ed (play → played) (Verbes se terminant par voyelle + y : ajoutez -ed (jouer → a joué))",
+        spelling5: "One-syllable verbs ending in consonant-vowel-consonant: double the final consonant and add -ed (stop → stopped) (Verbes d'une syllabe se terminant par consonne-voyelle-consonne : doublez la consonne finale et ajoutez -ed (arrêter → a arrêté))",
+        negativeTitle: "Negative Form: (Forme négative :)",
+        negativeRule: "Use \"did not\" (didn't) + base form of verb. (Utilisez \"did not\" (didn't) + forme de base du verbe.)",
+        negativeExample1: "I didn't work yesterday. (Je n'ai pas travaillé hier.)",
+        negativeExample2: "She didn't work here. (Elle n'a pas travaillé ici.)",
+        negativeExample3: "They didn't work late. (Ils n'ont pas travaillé tard.)",
+        questionTitle: "Question Form: (Forme interrogative :)",
+        questionRule: "Use \"did\" + subject + base form of verb. (Utilisez \"did\" + sujet + forme de base du verbe.)",
+        questionExample1: "Did you work yesterday? (As-tu travaillé hier ?)",
+        questionExample2: "Did she work hard? (A-t-elle travaillé dur ?)",
+        questionExample3: "Did they work together? (Ont-ils travaillé ensemble ?)"
+    },
+    irregularVerbs: {
+        title: "Common Irregular Verbs (Verbes irréguliers courants)",
+        conjugation: "Irregular Verb Conjugations in Past (Conjugaisons des verbes irréguliers au passé)",
+        ruleTitle: "About Irregular Verbs: (À propos des verbes irréguliers :)",
+        rule: "Some verbs don't follow the regular -ed pattern. They have their own unique past forms that must be memorized. (Certains verbes ne suivent pas le modèle régulier en -ed. Ils ont leurs propres formes passées uniques qui doivent être mémorisées.)",
+        pastForm: "Past Form (Forme passée)",
+        go: "go (aller)",
+        went: "went (est allé/allait)",
+        goExample: "I went to school yesterday. (Je suis allé à l'école hier.)",
+        do: "do (faire)",
+        did: "did (a fait/faisait)",
+        doExample: "He did his homework. (Il a fait ses devoirs.)",
+        have: "have (avoir)",
+        had: "had (avait/eu)",
+        haveExample: "She had a cat. (Elle avait un chat.)",
+        eat: "eat (manger)",
+        ate: "ate (a mangé/mangeait)",
+        eatExample: "We ate dinner at 7 PM. (Nous avons dîné à 19h.)",
+        see: "see (voir)",
+        saw: "saw (a vu/voyait)",
+        seeExample: "They saw a movie last night. (Ils ont vu un film hier soir.)",
+        take: "take (prendre)",
+        took: "took (a pris/prenait)",
+        takeExample: "I took a bus to work. (J'ai pris le bus pour aller au travail.)",
+        moreExamplesTitle: "More Examples: (Plus d'exemples :)",
+        example1: "I went to the gym yesterday. (Je suis allé à la salle de sport hier.)",
+        example2: "She did her homework after school. (Elle a fait ses devoirs après l'école.)",
+        example3: "We had a great time at the party. (Nous avons passé un bon moment à la fête.)",
+        example4: "He ate breakfast at 8 AM. (Il a pris le petit déjeuner à 8h.)"
+    },
+    exercises: {
+        title: "Practice Exercises (Exercices pratiques)",
+        q1: "Choose the correct past form of the verb \"to be\": (Choisissez la forme passée correcte du verbe \"être\" :)",
+        q1Sentence: "She ______ a doctor last year. (Elle ______ médecin l'année dernière.)",
+        q1a: "is (est)",
+        q1b: "was (était)",
+        q1c: "were (étaient)",
+        q2: "Choose the correct past form of the verb \"to have\": (Choisissez la forme passée correcte du verbe \"avoir\" :)",
+        q2Sentence: "They ______ two cats when they were children. (Ils ______ deux chats quand ils étaient enfants.)",
+        q2a: "has (a)",
+        q2b: "had (avaient)",
+        q2c: "have (ont)",
+        q3: "Choose the correct past form of the regular verb: (Choisissez la forme passée correcte du verbe régulier :)",
+        q3Sentence: "He ______ (work) in an office last year. (Il ______ (travailler) dans un bureau l'année dernière.)",
+        q3a: "work (travaille)",
+        q3b: "worked (a travaillé)",
+        q3c: "working (travaillant)",
+        q4: "Choose the correct negative form: (Choisissez la forme négative correcte :)",
+        q4Sentence: "I ______ like coffee when I was young. (Je ______ aimer le café quand j'étais jeune.)",
+        q4a: "didn't (n'aimais pas)",
+        q4b: "don't (n'aime pas)",
+        q4c: "not (pas)",
+        q5: "Choose the correct question form: (Choisissez la forme interrogative correcte :)",
+        q5Sentence: "______ she work here last year? (______ elle travailler ici l'année dernière ?)",
+        q5a: "Do (Est-ce que)",
+        q5b: "Did (Est-ce qu'elle a)",
+        q5c: "Was (Était)",
+        q6: "Choose the correct form of the irregular verb: (Choisissez la forme correcte du verbe irrégulier :)",
+        q6Sentence: "He ______ to school yesterday. (Il ______ à l'école hier.)",
+        q6a: "go (va)",
+        q6b: "went (est allé)",
+        q6c: "goed (allé - incorrect)",
+        q7: "Complete the sentence with the correct form of the verb: (Complétez la phrase avec la forme correcte du verbe :)",
+        q7Sentence: "I ______ (to be) a student last year. (Je ______ (être) étudiant l'année dernière.)",
+        q8: "Complete the sentence with the correct form of the verb: (Complétez la phrase avec la forme correcte du verbe :)",
+        q8Sentence: "She ______ (to have) a cat when she was young. (Elle ______ (avoir) un chat quand elle était jeune.)",
+        q9: "Complete the sentence with the correct form of the verb: (Complétez la phrase avec la forme correcte du verbe :)",
+        q9Sentence: "They ______ (to go) to school yesterday. (Ils ______ (aller) à l'école hier.)",
+        q10: "Arrange the words to form a correct sentence: (Ordonnez les mots pour former une phrase correcte :)",
+        q11: "Arrange the words to form a correct sentence: (Ordonnez les mots pour former une phrase correcte :)",
+        q12: "Arrange the words to form a correct question: (Ordonnez les mots pour former une question correcte :)"
+    }
+},
+// // Simple Past Part 2
+// // Simple Past Part 2
+simplePast2: {
+    title: "Simple Past Tense: Questions & Adverbs (Le Passé Simple : Questions et Adverbes)",
+    subtitle: "Learn to form questions and use adverbs of time correctly in the past (Apprenez à former des questions et utiliser correctement les adverbes de temps au passé)",
+    introduction: {
+        title: "Forming Questions in Simple Past (Formation des Questions au Passé Simple)",
+        whatIs: "How to Form Questions (Comment Former des Questions)",
+        definitionTitle: "Basic Question Structure: (Structure de Question de Base :)",
+        definition: "In the simple past tense, we use the auxiliary verb \"did\" to form questions for all subjects. The main verb stays in its base form. (Au passé simple, nous utilisons le verbe auxiliaire \"did\" pour former des questions pour tous les sujets. Le verbe principal reste sous sa forme de base.)",
+        typesTitle: "Types of Questions: (Types de Questions :)",
+        type1: "Yes/No Questions (questions that can be answered with yes or no) (Questions Oui/Non (questions qui peuvent être répondues par oui ou non))",
+        type2: "Wh- Questions (questions that begin with what, where, when, why, who, how) (Questions Wh- (questions qui commencent par quoi, où, quand, pourquoi, qui, comment))",
+        type3: "Negative Questions (Questions Négatives)"
+    },
+    toBeQuestions: {
+        title: "Questions with \"To Be\" in Past (Questions avec \"Être\" au Passé)",
+        conjugation: "Question Formation with \"To Be\" in Past (Formation de Questions avec \"Être\" au Passé)",
+        ruleTitle: "Step-by-Step Process: (Processus Étape par Étape :)",
+        rule: "With the verb \"to be\" in the past tense, we invert the subject and the verb to form questions. We don't use \"did\" with \"to be\". (Avec le verbe \"être\" au passé, nous inversons le sujet et le verbe pour former des questions. Nous n'utilisons pas \"did\" avec \"être\".)",
+        formula: "Formula: [Was/Were] + [Subject] + [Rest of Sentence] + ? (Formule : [Was/Were] + [Sujet] + [Reste de la Phrase] + ?)",
+        statement: "Statement (Affirmation)",
+        question: "Question (Question)",
+        statementI: "I was a student. (J'étais étudiant.)",
+        questionI: "Was I a student? (Étais-je étudiant ?)",
+        statementYou: "You were my friend. (Tu étais mon ami.)",
+        questionYou: "Were you my friend? (Étais-tu mon ami ?)",
+        statementHe: "He was a teacher. (Il était enseignant.)",
+        questionHe: "Was he a teacher? (Était-il enseignant ?)",
+        statementShe: "She was happy. (Elle était heureuse.)",
+        questionShe: "Was she happy? (Était-elle heureuse ?)",
+        statementWe: "We were here. (Nous étions ici.)",
+        questionWe: "Were we here? (Étions-nous ici ?)",
+        statementThey: "They were students. (Ils étaient étudiants.)",
+        questionThey: "Were they students? (Étaient-ils étudiants ?)",
+        whTitle: "Wh- Questions with \"To Be\": (Questions Wh- avec \"Être\" :)",
+        whRule: "For Wh- questions, place the question word at the beginning, then follow with the inverted subject and verb. (Pour les questions Wh-, placez le mot interrogatif au début, puis suivez avec le sujet et le verbe inversés.)",
+        whExample1: "Where were you yesterday? (Où étais-tu hier ?)",
+        whExample2: "What was your first job? (Quelle était ta première profession ?)",
+        whExample3: "How was your vacation? (Comment étaient tes vacances ?)"
+    },
+    toHaveQuestions: {
+        title: "Questions with \"To Have\" in Past (Questions avec \"Avoir\" au Passé)",
+        conjugation: "Question Formation with \"To Have\" in Past (Formation de Questions avec \"Avoir\" au Passé)",
+        ruleTitle: "Step-by-Step Process: (Processus Étape par Étape :)",
+        rule: "With the verb \"to have\" in the past tense, we use \"did\" as the auxiliary verb to form questions. (Avec le verbe \"avoir\" au passé, nous utilisons \"did\" comme verbe auxiliaire pour former des questions.)",
+        formula: "Formula: [Did] + [Subject] + [Have] + [Rest of Sentence] + ? (Formule : [Did] + [Sujet] + [Have] + [Reste de la Phrase] + ?)",
+        statement: "Statement (Affirmation)",
+        question: "Question (Question)",
+        statementI: "I had a car. (J'avais une voiture.)",
+        questionI: "Did I have a car? (Avais-je une voiture ?)",
+        statementYou: "You had a book. (Tu avais un livre.)",
+        questionYou: "Did you have a book? (Avais-tu un livre ?)",
+        statementHe: "He had a cat. (Il avait un chat.)",
+        questionHe: "Did he have a cat? (Avait-il un chat ?)",
+        statementShe: "She had a dog. (Elle avait un chien.)",
+        questionShe: "Did she have a dog? (Avait-elle un chien ?)",
+        statementWe: "We had time. (Nous avions le temps.)",
+        questionWe: "Did we have time? (Avions-nous le temps ?)",
+        statementThey: "They had money. (Ils avaient de l'argent.)",
+        questionThey: "Did they have money? (Avaient-ils de l'argent ?)",
+        whTitle: "Wh- Questions with \"To Have\": (Questions Wh- avec \"Avoir\" :)",
+        whRule: "For Wh- questions, place the question word at the beginning, then follow with \"did,\" subject, \"have,\" and the rest of the sentence. (Pour les questions Wh-, placez le mot interrogatif au début, puis suivez avec \"did,\" sujet, \"have,\" et le reste de la phrase.)",
+        whExample1: "What did you have for breakfast? (Qu'as-tu pris pour le petit déjeuner ?)",
+        whExample2: "Where did she have her party? (Où a-t-elle fait sa fête ?)",
+        whExample3: "How many siblings did they have? (Combien de frères et sœurs avaient-ils ?)"
+    },
+    otherVerbsQuestions: {
+        title: "Questions with Other Verbs (Questions avec d'Autres Verbes)",
+        conjugation: "Question Formation with Regular and Irregular Verbs (Formation de Questions avec les Verbes Réguliers et Irréguliers)",
+        ruleTitle: "Step-by-Step Process: (Processus Étape par Étape :)",
+        rule: "For all other verbs (not \"to be\" or \"to have\"), we use \"did\" as the auxiliary verb to form questions in the past tense. (Pour tous les autres verbes (pas \"être\" ou \"avoir\"), nous utilisons \"did\" comme verbe auxiliaire pour former des questions au passé.)",
+        formula: "Formula: [Did] + [Subject] + [Base Form of Verb] + [Rest of Sentence] + ? (Formule : [Did] + [Sujet] + [Forme de Base du Verbe] + [Reste de la Phrase] + ?)",
+        subjects: "Use \"did\" for all subjects (I, you, he, she, it, we, they). (Utilisez \"did\" pour tous les sujets (je, tu, il, elle, on, nous, vous, ils, elles).)",
+        statement: "Statement (Affirmation)",
+        question: "Question (Question)",
+        statementI: "I worked yesterday. (J'ai travaillé hier.)",
+        questionI: "Did I work yesterday? (Ai-je travaillé hier ?)",
+        statementYou: "You liked the movie. (Tu as aimé le film.)",
+        questionYou: "Did you like the movie? (As-tu aimé le film ?)",
+        statementHe: "He played soccer. (Il a joué au football.)",
+        questionHe: "Did he play soccer? (A-t-il joué au football ?)",
+        statementShe: "She studied English. (Elle a étudié l'anglais.)",
+        questionShe: "Did she study English? (A-t-elle étudié l'anglais ?)",
+        statementWe: "We lived in Paris. (Nous avons vécu à Paris.)",
+        questionWe: "Did we live in Paris? (Avons-nous vécu à Paris ?)",
+        statementThey: "They spoke French. (Ils ont parlé français.)",
+        questionThey: "Did they speak French? (Ont-ils parlé français ?)",
+        whTitle: "Wh- Questions with Other Verbs: (Questions Wh- avec d'Autres Verbes :)",
+        whRule: "For Wh- questions, place the question word at the beginning, then follow with \"did,\" subject, base form of verb, and the rest of the sentence. (Pour les questions Wh-, placez le mot interrogatif au début, puis suivez avec \"did,\" sujet, forme de base du verbe, et le reste de la phrase.)",
+        whExample1: "What did you do yesterday? (Qu'as-tu fait hier ?)",
+        whExample2: "Where did he work last year? (Où a-t-il travaillé l'année dernière ?)",
+        whExample3: "How often did they exercise? (À quelle fréquence ont-ils fait de l'exercice ?)",
+        irregularTitle: "Questions with Irregular Verbs: (Questions avec les Verbes Irréguliers :)",
+        irregularRule: "Even with irregular verbs, we still use \"did\" to form questions, and the main verb stays in its base form. (Même avec les verbes irréguliers, nous utilisons toujours \"did\" pour former des questions, et le verbe principal reste sous sa forme de base.)",
+        irregularExample1: "Did you go to the gym yesterday? (go → went in statements) (Es-tu allé à la salle de sport hier ? (go → went dans les affirmations))",
+        irregularExample2: "Did she do her homework? (do → did in statements) (A-t-elle fait ses devoirs ? (do → did dans les affirmations))",
+        irregularExample3: "Did they have classes yesterday? (have → had in statements) (Ont-ils eu des cours hier ? (have → had dans les affirmations))"
+    },
+    adverbs: {
+        title: "Adverbs of Time in Past (Adverbes de Temps au Passé)",
+        whatAre: "What Are Adverbs of Time? (Que sont les Adverbes de Temps ?)",
+        definitionTitle: "Definition: (Définition :)",
+        definition: "Adverbs of time tell us when something happened. They are commonly used with the simple past tense to specify when an action occurred. (Les adverbes de temps nous disent quand quelque chose s'est passé. Ils sont couramment utilisés avec le passé simple pour spécifier quand une action s'est produite.)",
+        commonAdverbsTitle: "Common Adverbs of Time in Past: (Adverbes de Temps Courants au Passé :)",
+        adverb: "Adverb (Adverbe)",
+        meaning: "Meaning (Signification)",
+        example: "Example (Exemple)",
+        yesterday: "yesterday (hier)",
+        yesterdayMeaning: "the day before today (le jour avant aujourd'hui)",
+        yesterdayExample: "I worked yesterday. (J'ai travaillé hier.)",
+        lastWeek: "last week (la semaine dernière)",
+        lastWeekMeaning: "the week before this week (la semaine avant cette semaine)",
+        lastWeekExample: "She visited her grandmother last week. (Elle a visité sa grand-mère la semaine dernière.)",
+        lastMonth: "last month (le mois dernier)",
+        lastMonthMeaning: "the month before this month (le mois avant ce mois)",
+        lastMonthExample: "We moved last month. (Nous avons déménagé le mois dernier.)",
+        lastYear: "last year (l'année dernière)",
+        lastYearMeaning: "the year before this year (l'année avant cette année)",
+        lastYearExample: "They graduated last year. (Ils ont obtenu leur diplôme l'année dernière.)",
+        twoDaysAgo: "two days ago (il y a deux jours)",
+        twoDaysAgoMeaning: "two days before today (deux jours avant aujourd'hui)",
+        twoDaysAgoExample: "He called two days ago. (Il a appelé il y a deux jours.)",
+        in2010: "in 2010 (en 2010)",
+        in2010Meaning: "during the year 2010 (pendant l'année 2010)",
+        in2010Example: "I was born in 2010. (Je suis né en 2010.)",
+        placementTitle: "Placement in Sentences: (Placement dans les Phrases :)",
+        placementRule1: "1. Usually at the end of the sentence: (Généralement à la fin de la phrase :)",
+        placementExample1: "I went to the store yesterday. (Je suis allé au magasin hier.)",
+        placementExample2: "She called me last night. (Elle m'a appelé hier soir.)",
+        placementExample3: "They arrived two hours ago. (Ils sont arrivés il y a deux heures.)",
+        placementRule2: "2. Sometimes at the beginning for emphasis: (Parfois au début pour l'emphase :)",
+        placementExample4: "Yesterday, I went to the store. (Hier, je suis allé au magasin.)",
+        placementExample5: "Last year, we visited Paris. (L'année dernière, nous avons visité Paris.)",
+        questionsTitle: "Adverbs of Time in Questions: (Adverbes de Temps dans les Questions :)",
+        questionsRule: "In questions, adverbs of time usually come at the end of the question. (Dans les questions, les adverbes de temps viennent généralement à la fin de la question.)",
+        questionsExample1: "Did you work yesterday? (As-tu travaillé hier ?)",
+        questionsExample2: "When did she arrive last night? (Quand est-elle arrivée hier soir ?)",
+        questionsExample3: "Where were you last week? (Où étais-tu la semaine dernière ?)"
+    },
+    exercises: {
+        title: "Practice Exercises (Exercices Pratiques)",
+        q1: "Choose the correct question form: (Choisissez la forme de question correcte :)",
+        q1Sentence: "______ you at home yesterday? (______ tu à la maison hier ?)",
+        q1a: "Did (As-tu)",
+        q1b: "Were (Étais)",
+        q1c: "Was (Était)",
+        q2: "Choose the correct question form: (Choisissez la forme de question correcte :)",
+        q2Sentence: "______ she have a car last year? (______ elle une voiture l'année dernière ?)",
+        q2a: "Did (Avait)",
+        q2b: "Does (A)",
+        q2c: "Was (Était)",
+        q3: "Choose the correct question form: (Choisissez la forme de question correcte :)",
+        q3Sentence: "Where ______ they live last year? (Où ______ ils vécu l'année dernière ?)",
+        q3a: "did (ont)",
+        q3b: "do (vivent)",
+        q3c: "were (étaient)",
+        q4: "Choose the correct adverb placement: (Choisissez le placement correct de l'adverbe :)",
+        q4Sentence: "She ______ went to the store. (yesterday) (Elle ______ est allée au magasin. (hier))",
+        q4a: "yesterday (hier)",
+        q4b: "went yesterday (est allée hier)",
+        q4c: "yesterday went (hier est allée)",
+        q5: "Choose the correct adverb of time: (Choisissez l'adverbe de temps correct :)",
+        q5Sentence: "We visited Paris ______. (the year before this year) (Nous avons visité Paris ______. (l'année avant cette année))",
+        q5a: "yesterday (hier)",
+        q5b: "last year (l'année dernière)",
+        q5c: "tomorrow (demain)",
+        q6: "Choose the correct form of the irregular verb in a question: (Choisissez la forme correcte du verbe irrégulier dans une question :)",
+        q6Sentence: "______ you ______ to school yesterday? (go) (______ tu ______ à l'école hier ? (aller))",
+        q6a: "Did, went (Es, allé)",
+        q6b: "Did, go (Es, allé)",
+        q6c: "Do, went (As, allé)",
+        q7: "Complete the question with the correct form: (Complétez la question avec la forme correcte :)",
+        q7Sentence: "______ you like the movie? (______ tu aimé le film ?)",
+        q8: "Complete the question with the correct form: (Complétez la question avec la forme correcte :)",
+        q8Sentence: "Where ______ she work last year? (Où ______ elle travaillé l'année dernière ?)",
+        q9: "Complete the sentence with the correct adverb: (Complétez la phrase avec l'adverbe correct :)",
+        q9Sentence: "They visited their grandparents ______. (the week before this week) (Ils ont visité leurs grands-parents ______. (la semaine avant cette semaine))",
+        q10: "Arrange the words to form a correct question: (Ordonnez les mots pour former une question correcte :)",
+        q11: "Arrange the words to form a correct question: (Ordonnez les mots pour former une question correcte :)",
+        q12: "Arrange the words to form a correct sentence with an adverb: (Ordonnez les mots pour former une phrase correcte avec un adverbe :)"
+    },
+    backToPart1: "Back to Simple Past Part 1 (Retour au Passé Simple Partie 1)"
+},
+// Simple Past Part 3
+simplePast3: {
+    title: "Simple Past Tense: Negative, Passive & Idioms (Le Passé Simple : Négation, Voix Passive et Expressions Idiomatiques)",
+    subtitle: "Learn to form negative sentences, use passive voice, and understand common idioms in the past (Apprenez à former des phrases négatives, utiliser la voix passive et comprendre les expressions idiomatiques courantes au passé)",
+    introduction: {
+        title: "Negative Forms in Simple Past (Formes Négatives au Passé Simple)",
+        whatIs: "How to Form Negative Sentences (Comment Former des Phrases Négatives)",
+        definitionTitle: "Basic Negative Structure: (Structure Négative de Base :)",
+        definition: "In English, we use the word \"not\" to form negative sentences in the simple past tense. The structure depends on the type of verb used in the sentence. (En anglais, nous utilisons le mot \"not\" pour former des phrases négatives au passé simple. La structure dépend du type de verbe utilisé dans la phrase.)",
+        typesTitle: "Types of Negative Sentences: (Types de Phrases Négatives :)",
+        type1: "Negative with \"To Be\" (Négatif avec \"Être\")",
+        type2: "Negative with \"To Have\" (Négatif avec \"Avoir\")", 
+        type3: "Negative with Other Verbs (Négatif avec d'Autres Verbes)"
+    },
+    toBeNegative: {
+        title: "Negative with \"To Be\" (Négatif avec \"Être\")",
+        conjugation: "Negative Formation with \"To Be\" (Formation Négative avec \"Être\")",
+        ruleTitle: "Step-by-Step Process: (Processus Étape par Étape :)",
+        rule: "With the verb \"to be,\" we simply add \"not\" after the verb to form negative sentences. (Avec le verbe \"être\", nous ajoutons simplement \"not\" après le verbe pour former des phrases négatives.)",
+        formula: "Formula: [Subject] + [Was/Were] + \"not\" + [Rest of Sentence] (Formule : [Sujet] + [Was/Were] + \"not\" + [Reste de la Phrase])",
+        positive: "Positive (Affirmatif)",
+        negative: "Negative (Négatif)",
+        positiveI: "I was a student. (J'étais étudiant.)",
+        negativeI: "I was not a student. (Je n'étais pas étudiant.)",
+        positiveYou: "You were my friend. (Tu étais mon ami.)",
+        negativeYou: "You were not my friend. (Tu n'étais pas mon ami.)",
+        positiveHe: "He was a teacher. (Il était enseignant.)",
+        negativeHe: "He was not a teacher. (Il n'était pas enseignant.)",
+        positiveShe: "She was happy. (Elle était heureuse.)",
+        negativeShe: "She was not happy. (Elle n'était pas heureuse.)",
+        positiveWe: "We were here. (Nous étions ici.)",
+        negativeWe: "We were not here. (Nous n'étions pas ici.)",
+        positiveThey: "They were students. (Ils étaient étudiants.)",
+        negativeThey: "They were not students. (Ils n'étaient pas étudiants.)",
+        contractionsTitle: "Contractions: (Contractions :)",
+        contractionsRule: "In spoken English and informal writing, we often use contractions (short forms) of \"was/were + not\". (En anglais parlé et dans l'écriture informelle, nous utilisons souvent des contractions (formes courtes) de \"was/were + not\".)",
+        contractionExample1: "I wasn't a student. (Je n'étais pas étudiant.)",
+        contractionExample2: "You weren't my friend. (Tu n'étais pas mon ami.)",
+        contractionExample3: "He wasn't a teacher. (Il n'était pas enseignant.)",
+        contractionExample4: "She wasn't happy. (Elle n'était pas heureuse.)",
+        contractionExample5: "We weren't here. (Nous n'étions pas ici.)",
+        contractionExample6: "They weren't students. (Ils n'étaient pas étudiants.)"
+    },
+    toHaveNegative: {
+        title: "Negative with \"To Have\" (Négatif avec \"Avoir\")",
+        conjugation: "Negative Formation with \"To Have\" (Formation Négative avec \"Avoir\")",
+        ruleTitle: "Step-by-Step Process: (Processus Étape par Étape :)",
+        rule: "With the verb \"to have,\" we use \"did not\" (didn't) to form negative sentences. (Avec le verbe \"avoir\", nous utilisons \"did not\" (didn't) pour former des phrases négatives.)",
+        formula: "Formula: [Subject] + \"did not\" + \"have\" + [Rest of Sentence] (Formule : [Sujet] + \"did not\" + \"have\" + [Reste de la Phrase])",
+        positive: "Positive (Affirmatif)",
+        negative: "Negative (Négatif)",
+        positiveI: "I had a car. (J'avais une voiture.)",
+        negativeI: "I did not have a car. (Je n'avais pas de voiture.)",
+        positiveYou: "You had a book. (Tu avais un livre.)",
+        negativeYou: "You did not have a book. (Tu n'avais pas de livre.)",
+        positiveHe: "He had a cat. (Il avait un chat.)",
+        negativeHe: "He did not have a cat. (Il n'avait pas de chat.)",
+        positiveShe: "She had a dog. (Elle avait un chien.)",
+        negativeShe: "She did not have a dog. (Elle n'avait pas de chien.)",
+        positiveWe: "We had time. (Nous avions le temps.)",
+        negativeWe: "We did not have time. (Nous n'avions pas le temps.)",
+        positiveThey: "They had money. (Ils avaient de l'argent.)",
+        negativeThey: "They did not have money. (Ils n'avaient pas d'argent.)",
+        contractionsTitle: "Contractions: (Contractions :)",
+        contractionsRule: "In spoken English and informal writing, we often use contractions (short forms). (En anglais parlé et dans l'écriture informelle, nous utilisons souvent des contractions (formes courtes).)",
+        contractionExample1: "I didn't have a car. (Je n'avais pas de voiture.)",
+        contractionExample2: "You didn't have a book. (Tu n'avais pas de livre.)",
+        contractionExample3: "He didn't have a cat. (Il n'avait pas de chat.)",
+        contractionExample4: "She didn't have a dog. (Elle n'avait pas de chien.)",
+        contractionExample5: "We didn't have time. (Nous n'avions pas le temps.)",
+        contractionExample6: "They didn't have money. (Ils n'avaient pas d'argent.)"
+    },
+    otherVerbsNegative: {
+        title: "Negative with Other Verbs (Négatif avec d'Autres Verbes)",
+        conjugation: "Negative Formation with Regular and Irregular Verbs (Formation Négative avec les Verbes Réguliers et Irréguliers)",
+        ruleTitle: "Step-by-Step Process: (Processus Étape par Étape :)",
+        rule: "For all other verbs (not \"to be\" or \"to have\"), we use \"did not\" (didn't) to form negative sentences. (Pour tous les autres verbes (pas \"être\" ou \"avoir\"), nous utilisons \"did not\" (didn't) pour former des phrases négatives.)",
+        formula: "Formula: [Subject] + \"did not\" + [Base Form of Verb] + [Rest of Sentence] (Formule : [Sujet] + \"did not\" + [Forme de Base du Verbe] + [Reste de la Phrase])",
+        doDoesRule: "Use \"did not\" for all subjects (I, you, he, she, it, we, they). (Utilisez \"did not\" pour tous les sujets (je, tu, il, elle, on, nous, vous, ils, elles).)",
+        positive: "Positive (Affirmatif)",
+        negative: "Negative (Négatif)",
+        positiveI: "I worked yesterday. (J'ai travaillé hier.)",
+        negativeI: "I did not work yesterday. (Je n'ai pas travaillé hier.)",
+        positiveYou: "You liked the movie. (Tu as aimé le film.)",
+        negativeYou: "You did not like the movie. (Tu n'as pas aimé le film.)",
+        positiveHe: "He played soccer. (Il a joué au football.)",
+        negativeHe: "He did not play soccer. (Il n'a pas joué au football.)",
+        positiveShe: "She studied English. (Elle a étudié l'anglais.)",
+        negativeShe: "She did not study English. (Elle n'a pas étudié l'anglais.)",
+        positiveWe: "We lived in Paris. (Nous avons vécu à Paris.)",
+        negativeWe: "We did not live in Paris. (Nous n'avons pas vécu à Paris.)",
+        positiveThey: "They spoke French. (Ils ont parlé français.)",
+        negativeThey: "They did not speak French. (Ils n'ont pas parlé français.)",
+        contractionsTitle: "Contractions: (Contractions :)",
+        contractionsRule: "In spoken English and informal writing, we often use contractions (short forms). (En anglais parlé et dans l'écriture informelle, nous utilisons souvent des contractions (formes courtes).)",
+        contractionExample1: "I didn't work yesterday. (Je n'ai pas travaillé hier.)",
+        contractionExample2: "You didn't like the movie. (Tu n'as pas aimé le film.)",
+        contractionExample3: "He didn't play soccer. (Il n'a pas joué au football.)",
+        contractionExample4: "She didn't study English. (Elle n'a pas étudié l'anglais.)",
+        contractionExample5: "We didn't live in Paris. (Nous n'avons pas vécu à Paris.)",
+        contractionExample6: "They didn't speak French. (Ils n'ont pas parlé français.)",
+        irregularTitle: "Negative with Irregular Verbs: (Négatif avec les Verbes Irréguliers :)",
+        irregularRule: "Even with irregular verbs, we still use \"did not\" to form negatives, and the main verb stays in its base form. (Même avec les verbes irréguliers, nous utilisons toujours \"did not\" pour former des négatifs, et le verbe principal reste sous sa forme de base.)",
+        irregularExample1: "I didn't go to the gym yesterday. (go → went in statements) (Je ne suis pas allé à la salle de sport hier. (go → went dans les affirmations))",
+        irregularExample2: "She didn't do her homework. (do → did in statements) (Elle n'a pas fait ses devoirs. (do → did dans les affirmations))", 
+        irregularExample3: "They didn't have classes yesterday. (have → had in statements) (Ils n'ont pas eu de cours hier. (have → had dans les affirmations))"
+    },
+    passive: {
+        title: "Passive Voice in Simple Past (Voix Passive au Passé Simple)",
+        whatIs: "What is Passive Voice? (Qu'est-ce que la Voix Passive ?)",
+        definitionTitle: "Definition: (Définition :)",
+        definition: "In passive voice, the subject receives the action rather than performing it. We use passive voice when the doer of the action is unknown, unimportant, or obvious from context. (À la voix passive, le sujet subit l'action plutôt que de la réaliser. Nous utilisons la voix passive lorsque l'auteur de l'action est inconnu, sans importance ou évident dans le contexte.)",
+        structureTitle: "Structure of Passive Voice: (Structure de la Voix Passive :)",
+        structureRule: "Formula: [Subject] + [was/were] + [Past Participle] + [by + agent (optional)] (Formule : [Sujet] + [was/were] + [Participe Passé] + [by + agent (optionnel)])",
+        structureExample: "Example: \"The book was read by students.\" (Exemple : \"Le livre a été lu par les étudiants.\")",
+        formationTitle: "Forming Passive Voice: (Formation de la Voix Passive :)",
+        formationRule: "To form passive voice in simple past tense, use the appropriate form of \"to be\" (was/were) followed by the past participle of the main verb. (Pour former la voix passive au passé simple, utilisez la forme appropriée de \"être\" (was/were) suivie du participe passé du verbe principal.)",
+        active: "Active Voice (Voix Active)",
+        passive: "Passive Voice (Voix Passive)",
+        activeExample1: "I wrote a letter. (J'ai écrit une lettre.)",
+        passiveExample1: "A letter was written by me. (Une lettre a été écrite par moi.)",
+        activeExample2: "You cleaned the room. (Tu as nettoyé la pièce.)",
+        passiveExample2: "The room was cleaned by you. (La pièce a été nettoyée par toi.)",
+        activeExample3: "He fixed the car. (Il a réparé la voiture.)",
+        passiveExample3: "The car was fixed by him. (La voiture a été réparée par lui.)",
+        activeExample4: "She taught the students. (Elle a enseigné aux étudiants.)",
+        passiveExample4: "The students were taught by her. (Les étudiants ont été enseignés par elle.)",
+        activeExample5: "We built houses. (Nous avons construit des maisons.)",
+        passiveExample5: "Houses were built by us. (Des maisons ont été construites par nous.)",
+        activeExample6: "They sold fruits. (Ils ont vendu des fruits.)",
+        passiveExample6: "Fruits were sold by them. (Des fruits ont été vendus par eux.)",
+        negativeTitle: "Negative Passive Voice: (Voix Passive Négative :)",
+        negativeRule: "To form negative passive voice, add \"not\" after \"was/were\". (Pour former la voix passive négative, ajoutez \"not\" après \"was/were\".)",
+        negativeExample1: "The book was not read by students. (Le livre n'a pas été lu par les étudiants.)",
+        negativeExample2: "The car was not fixed by him. (La voiture n'a pas été réparée par lui.)",
+        negativeExample3: "The students were not taught by her. (Les étudiants n'ont pas été enseignés par elle.)",
+        questionTitle: "Question Form in Passive Voice: (Forme Interrogative à la Voix Passive :)",
+        questionRule: "To form questions in passive voice, invert the subject and \"was/were\". (Pour former des questions à la voix passive, inversez le sujet et \"was/were\".)",
+        questionExample1: "Was the book read by students? (Le livre a-t-il été lu par les étudiants ?)",
+        questionExample2: "Was the car fixed by him? (La voiture a-t-elle été réparée par lui ?)",
+        questionExample3: "Were the students taught by her? (Les étudiants ont-ils été enseignés par elle ?)"
+    },
+    idioms: {
+        title: "Common Past Tense Idioms (Expressions Idiomatiques Courantes au Passé)",
+        whatAre: "What Are Idioms? (Que sont les Expressions Idiomatiques ?)",
+        definitionTitle: "Definition: (Définition :)",
+        definition: "Idioms are expressions whose meanings cannot be understood from the literal definitions of the words that make them up. They often use the simple past tense to express completed actions or past experiences. (Les expressions idiomatiques sont des expressions dont les significations ne peuvent pas être comprises à partir des définitions littérales des mots qui les composent. Elles utilisent souvent le passé simple pour exprimer des actions terminées ou des expériences passées.)",
+        commonIdiomsTitle: "Common Past Tense Idioms: (Expressions Idiomatiques Courantes au Passé :)",
+        idiom: "Idiom (Expression Idiomatique)",
+        meaning: "Meaning (Signification)",
+        example: "Example (Exemple)",
+        biteTheBullet: "Bite the bullet (Mordre la balle)",
+        biteTheBulletMeaning: "Endure a painful experience (Supporter une expérience douloureuse)",
+        biteTheBulletExample: "\"I bit the bullet and told my boss about the mistake.\" (\"J'ai mordu la balle et j'ai dit à mon patron l'erreur.\")",
+        burnTheMidnightOil: "Burn the midnight oil (Brûler l'huile de minuit)",
+        burnTheMidnightOilMeaning: "Work late into the night (Travailler tard dans la nuit)",
+        burnTheMidnightOilExample: "\"She burned the midnight oil to finish the project.\" (\"Elle a brûlé l'huile de minuit pour finir le projet.\")",
+        hitTheRoad: "Hit the road (Prendre la route)",
+        hitTheRoadMeaning: "Begin a journey (Commencer un voyage)",
+        hitTheRoadExample: "\"We hit the road early in the morning.\" (\"Nous avons pris la route tôt le matin.\")",
+        letTheCatOutOfTheBag: "Let the cat out of the bag (Laisser le chat sortir du sac)",
+        letTheCatOutOfTheBagMeaning: "Reveal a secret (Révéler un secret)",
+        letTheCatOutOfTheBagExample: "\"He let the cat out of the bag about the surprise party.\" (\"Il a laissé le chat sortir du sac à propos de la fête surprise.\")",
+        spillTheBeans: "Spill the beans (Renverser les haricots)",
+        spillTheBeansMeaning: "Reveal secret information (Révéler des informations secrètes)",
+        spillTheBeansExample: "\"She spilled the beans about their relationship.\" (\"Elle a renversé les haricots sur leur relation.\")",
+        breakTheIce: "Break the ice (Briser la glace)",
+        breakTheIceMeaning: "Make people feel more comfortable (Mettre les gens plus à l'aise)",
+        breakTheIceExample: "\"He told a joke to break the ice at the meeting.\" (\"Il a dit une blague pour briser la glace à la réunion.\")",
+        usageTitle: "Using Past Tense Idioms in Sentences: (Utiliser les Expressions Idiomatiques au Passé dans les Phrases :)",
+        usageRule: "Past tense idioms are typically used to describe completed actions or experiences in the past. (Les expressions idiomatiques au passé sont généralement utilisées pour décrire des actions terminées ou des expériences dans le passé.)",
+        usageExample1: "\"I bit the bullet and went to the dentist yesterday.\" (\"J'ai mordu la balle et je suis allé chez le dentiste hier.\")",
+        usageExample2: "\"She burned the midnight oil to study for her exam.\" (\"Elle a brûlé l'huile de minuit pour étudier pour son examen.\")",
+        usageExample3: "\"They hit the road as soon as the sun rose.\" (\"Ils ont pris la route dès que le soleil s'est levé.\")"
+    },
+    exercises: {
+        title: "Practice Exercises (Exercices Pratiques)",
+        q1: "Choose the correct negative form: (Choisissez la forme négative correcte :)",
+        q1Sentence: "She ______ a doctor last year. (Elle ______ médecin l'année dernière.)",
+        q1a: "was not (n'était pas)",
+        q1b: "did not (n'a pas)", 
+        q1c: "not was (pas était)",
+        q2: "Choose the correct negative form: (Choisissez la forme négative correcte :)",
+        q2Sentence: "They ______ coffee yesterday. (Ils ______ café hier.)",
+        q2a: "didn't drink (n'ont pas bu)",
+        q2b: "didn't drank (n'ont pas bu - incorrect)",
+        q2c: "not drank (pas bu)",
+        q3: "Choose the correct passive form: (Choisissez la forme passive correcte :)",
+        q3Sentence: "The book ______ by students yesterday. (Le livre ______ par les étudiants hier.)",
+        q3a: "was read (a été lu)",
+        q3b: "read (lu)",
+        q3c: "was reading (était en train de lire)",
+        q4: "Choose the correct idiom meaning: (Choisissez la signification correcte de l'expression idiomatique :)",
+        q4Sentence: "\"Bite the bullet\" means: (\"Mordre la balle\" signifie :)",
+        q4a: "Eat something hard (Manger quelque chose de dur)",
+        q4b: "Endure a painful experience (Supporter une expérience douloureuse)",
+        q4c: "Break something with teeth (Casser quelque chose avec les dents)",
+        q5: "Choose the correct negative passive form: (Choisissez la forme passive négative correcte :)",
+        q5Sentence: "The car ______ by him yesterday. (La voiture ______ par lui hier.)",
+        q5a: "was not fixed (n'a pas été réparée)",
+        q5b: "didn't fix (n'a pas réparé)",
+        q5c: "not fixed (pas réparée)",
+        q6: "Choose the correct idiom meaning: (Choisissez la signification correcte de l'expression idiomatique :)",
+        q6Sentence: "\"Spill the beans\" means: (\"Renverser les haricots\" signifie :)",
+        q6a: "Reveal secret information (Révéler des informations secrètes)",
+        q6b: "Drop food on the floor (Faire tomber de la nourriture par terre)",
+        q6c: "Cook beans (Cuire des haricots)",
+        q7: "Complete the negative sentence: (Complétez la phrase négative :)",
+        q7Sentence: "I ______ (not/like) the movie yesterday. (Je ______ (ne/pas aimer) le film hier.)",
+        q8: "Complete the passive sentence: (Complétez la phrase passive :)",
+        q8Sentence: "The house ______ (build) last year. (La maison ______ (construire) l'année dernière.)",
+        q9: "Complete the negative passive sentence: (Complétez la phrase passive négative :)",
+        q9Sentence: "The letter ______ (not/send) yesterday. (La lettre ______ (ne/pas envoyer) hier.)",
+        q10: "Arrange the words to form a correct negative sentence: (Ordonnez les mots pour former une phrase négative correcte :)",
+        q11: "Arrange the words to form a correct passive sentence: (Ordonnez les mots pour former une phrase passive correcte :)",
+        q12: "Arrange the words to form a sentence with an idiom: (Ordonnez les mots pour former une phrase avec une expression idiomatique :)"
+    },
+    backToPart2: "Back to Simple Past Part 2 (Retour au Passé Simple Partie 2)"
 },
     // Footer
     footer: {

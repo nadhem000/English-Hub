@@ -31,7 +31,6 @@ window.I18N['ar'] = {
 		comingSoon: "قريباً",
 		mainPage: "الصفحة الرئيسية"
 	},
-    
     // Navigation
     nav: {
         home: "الرئيسية",
@@ -40,7 +39,6 @@ window.I18N['ar'] = {
         speaking: "التحدث",
         games: "الألعاب"
 	},
-    
     // Main page
     main: {
         title: "English Hub (المركز الإنجليزي)",
@@ -60,7 +58,6 @@ window.I18N['ar'] = {
         explore: "Explore Now (استكشف الآن)",
         comingSoon: "Coming Soon (قريباً)"
 	},
-	
     // Workplace lesson
     workplace: {
         title: "Navigating the Workplace (التنقل في مكان العمل)",
@@ -97,22 +94,18 @@ window.I18N['ar'] = {
             q1a: "Receptionist (موظفة استقبال)",
             q1b: "Marketing Assistant (مساعدة تسويق)",
             q1c: "HR Manager (مديرة موارد بشرية)",
-            
             q2: "How long has Maria been in the country? (منذ متى كانت ماريا في البلد?)",
             q2a: "One week (أسبوع واحد)",
             q2b: "Three months (ثلاثة أشهر)",
             q2c: "One year (سنة واحدة)",
-            
             q3: "What did Maria review while waiting in the lobby? (ماذا راجعت ماريا أثناء الانتظار في الردهة?)",
             q3a: "A magazine (مجلة)",
             q3b: "The employee handbook (دليل الموظف)",
             q3c: "Her passport (جواز سفرها)",
-            
             q4: "What is the name of the collaborative platform used at the company? (ما اسم المنصة التعاونية المستخدمة في الشركة?)",
             q4a: "TeamSpace",
             q4b: "WorkSpace",
             q4c: "OfficeConnect",
-            
             q5: "How did Maria feel at the end of her first day? (كيف شعرت ماريا في نهاية يومها الأول?)",
             q5a: "Frustrated and confused (محبطة ومربكة)",
             q5b: "Tired but accomplished (متعبمة لكنها حققت إنجازاً)",
@@ -123,22 +116,18 @@ window.I18N['ar'] = {
             receptionist_pron: "/rɪˈsɛpʃənɪst/",
             receptionist_def: "A person who greets visitors and answers the telephone in an office (شخص يستقبل الزوار ويجيب على الهاتف في المكتب)",
             receptionist_ex: "\"The receptionist directed Maria to the waiting area.\" (\"وجهت موظفة الاستقبال ماريا إلى منطقة الانتظار.\")",
-            
             policy: "Policy (سياسة)",
             policy_pron: "/ˈpɒlɪsi/",
             policy_def: "A set of ideas or plans used as a basis for making decisions (مجموعة من الأفكار أو الخطط تستخدم كأساس لاتخاذ القرارات)",
             policy_ex: "\"Maria reviewed the company policies in the employee handbook.\" (\"راجعت ماريا سياسات الشركة في دليل الموظف.\")",
-            
             flex_time: "Flex Time (الوقت المرن)",
             flex_time_pron: "/flɛks taɪm/",
             flex_time_def: "A system that allows employees to choose their own working hours (نظام يسمح للموظفين باختيار ساعات عملهم الخاصة)",
             flex_time_ex: "\"The company offers flex time, so employees can adjust their schedules.\" (\"تقدم الشركة وقتاً مرناً، حتى يتمكن الموظفون من ضبط جداولهم.\")",
-            
             collaborative: "Collaborative (تعاوني)",
             collaborative_pron: "/kəˈlæbərətɪv/",
             collaborative_def: "Involving two or more people working together for a common purpose (يشمل شخصين أو أكثر يعملون معاً لتحقيق هدف مشترك)",
             collaborative_ex: "\"They use a collaborative platform for all their projects.\" (\"يستخدمون منصة تعاونية لجميع مشاريعهم.\")",
-            
             diligently: "Diligently (باجتهاد)",
             diligently_pron: "/ˈdɪlɪdʒəntli/",
             diligently_def: "In a way that shows care and conscientiousness in one's work or duties (بطريقة تظهر العناية والضمير في العمل أو الواجبات)",
@@ -188,22 +177,18 @@ window.I18N['ar'] = {
 			q1a: "A fairy (جنية)",
 			q1b: "A tree (شجرة)",
 			q1c: "An animal (حيوان)",
-			
 			q2: "How did Sarah feel when she got the part of the tree? (كيف شعرت سارة عندما حصلت على دور الشجرة؟)",
 			q2a: "Excited (متحمسة)",
 			q2b: "Disappointed (محبطة)",
 			q2c: "Happy (سعيدة)",
-			
 			q3: "What did Mrs. Johnson say about the tree's role? (ماذا قالت السيدة جونسون عن دور الشجرة؟)",
 			q3a: "It was the most important part (كان أهم دور)",
 			q3b: "It set the scene for the whole play (هي التي شكلت المشهد للمسرحية بأكملها)",
 			q3c: "It was the easiest part (كان أسهل دور)",
-			
 			q4: "What did Sarah do to make her tree role better? (ماذا فعلت سارة لتحسين دور الشجرة؟)",
 			q4a: "She added a little sway when the wind blew (أضافت تأرجحاً طفيفاً عندما هبت الرياح)",
 			q4b: "She asked to change her part (طلبت تغيير دورها)",
 			q4c: "She decided to quit the play (قررت الانسحاب من المسرحية)",
-			
 			q5: "What did Sarah learn from this experience? (ماذا تعلمت سارة من هذه التجربة؟)",
 			q5a: "That being a tree is boring (أن كونها شجرة ممل)",
 			q5b: "That every part in a play is important (أن كل دور في المسرحية مهم)",
@@ -214,22 +199,18 @@ window.I18N['ar'] = {
 			rehearsal_pron: "/rɪˈhɜːrsəl/",
 			rehearsal_def: "A practice session for a performance (جلسة تدريب لأداء مسرحي)",
 			rehearsal_ex: "\"The cast had a rehearsal every day after school.\" (\"كان للطاقم بروفة كل يوم بعد المدرسة.\")",
-			
 			role: "Role (دور)",
 			role_pron: "/roʊl/",
 			role_def: "The part played by a performer in a play (الجزء الذي يؤديه الممثل في مسرحية)",
 			role_ex: "\"Sarah's role was a tree in the school play.\" (\"كان دور سارة شجرة في المسرحية المدرسية.\")",
-			
 			costume: "Costume (زي)",
 			costume_pron: "/ˈkɑːstuːm/",
 			costume_def: "Clothes worn by an actor to look like a character (ملابس يرتديها الممثل ليشبه الشخصية)",
 			costume_ex: "\"Sarah wore a brown and green costume for her tree role.\" (\"ارتدت سارة زيًا بنيًا وأخضر لدور الشجرة.\")",
-			
 			teamwork: "Teamwork (عمل جماعي)",
 			teamwork_pron: "/ˈtiːmwɜːrk/",
 			teamwork_def: "Working together as a group to achieve something (العمل معًا كمجموعة لتحقيق شيء ما)",
 			teamwork_ex: "\"The play required teamwork from all the students.\" (\"تطلبت المسرحية عملاً جماعيًا من جميع الطلاب.\")",
-			
 			confidence: "Confidence (ثقة)",
 			confidence_pron: "/ˈkɑːnfɪdəns/",
 			confidence_def: "Feeling sure about your own abilities (الشعور باليقين بشأن قدراتك الخاصة)",
@@ -285,22 +266,18 @@ window.I18N['ar'] = {
 			q1a: "A school assignment (واجب مدرسي)",
 			q1b: "Seeing an empty lot and remembering his grandmother's garden (رؤية أرض فارغة وتذكر حديقة جدته)",
 			q1c: "Watching a gardening show on TV (مشاهدة برنامج عن البستنة على التلفزيون)",
-			
 			q2: "Who did Leo ask for help with the garden project? (من طلب ليو المساعدة منهم لمشروع الحديقة؟)",
 			q2a: "Only his friends Maya and Sam (فقط صديقيه مايا وسام)",
 			q2b: "His friends and their teacher Mr. Chen (أصدقاؤه ومعلمهم السيد تشين)",
 			q2c: "Just his family members (فقط أفراد عائلته)",
-			
 			q3: "What problem did they discover in the garden? (ما المشكلة التي اكتشفوها في الحديقة؟)",
 			q3a: "Animals were eating the plants (الحيوانات كانت تأكل النباتات)",
 			q3b: "The sprinklers weren't working properly (المرشات لم تكن تعمل بشكل صحيح)",
 			q3c: "There weren't enough volunteers (لم يكن هناك متطوعون كافون)",
-			
 			q4: "How did the garden change the neighborhood? (كيف غيرت الحديقة الحي؟)",
 			q4a: "It made the neighborhood more crowded (جعلت الحي أكثر ازدحاماً)",
 			q4b: "It created a sense of community and brought neighbors together (خلقت شعوراً بالم community وجمعت الجيران معاً)",
 			q4c: "It caused arguments about who owned the vegetables (تسببت في خلافات حول من يمتلك الخضروات)",
-			
 			q5: "What did Leo learn from this experience? (ماذا تعلم ليو من هذه التجربة؟)",
 			q5a: "That gardening is too much work (أن البستنة تتطلب الكثير من العمل)",
 			q5b: "That working together can create something wonderful for everyone (أن العمل معاً يمكن أن يخلق شيئاً رائعاً للجميع)",
@@ -311,22 +288,18 @@ window.I18N['ar'] = {
 			community_pron: "/kəˈmjuːnɪti/",
 			community_def: "A group of people living in the same area or having a particular characteristic in common (مجموعة من الأشخاص يعيشون في نفس المنطقة أو لديهم خاصية معينة مشتركة)",
 			community_ex: "\"The whole community worked together on the garden project.\" (\"عمل المجتمع بأكمله معاً في مشروع الحديقة.\")",
-			
 			volunteer: "Volunteer (متطوع)",
 			volunteer_pron: "/ˌvɒlənˈtɪər/",
 			volunteer_def: "A person who freely offers to do something without being paid (شخص يقدم بحرية أن يفعل شيئاً دون أن يدفع له)",
 			volunteer_ex: "\"Many volunteers helped clean up the empty lot.\" (\"ساعد العديد من المتطوعين في تنظيف الأرض الفارغة.\")",
-			
 			sprout: "Sprout (برعم)",
 			sprout_pron: "/spraʊt/",
 			sprout_def: "A new growth of a plant (نمو جديد للنبات)",
 			sprout_ex: "\"Leo loved watching the tiny green sprouts push through the soil.\" (\"أحب ليو مشاهدة البراعم الخضراء الصغيرة تدفع عبر التربة.\")",
-			
 			responsibility: "Responsibility (مسؤولية)",
 			responsibility_pron: "/rɪˌspɒnsəˈbɪlɪti/",
 			responsibility_def: "A duty or task that you are required or expected to do (واجب أو مهمة مطلوبة أو متوقعة منك أن تقوم بها)",
 			responsibility_ex: "\"Each family had the responsibility to care for their garden plot.\" (\"كانت لكل عائلة المسؤولية للاعتناء بقطعة أرض الحديقة الخاصة بهم.\")",
-			
 			harvest: "Harvest (حصاد)",
 			harvest_pron: "/ˈhɑːvɪst/",
 			harvest_def: "The process of gathering mature crops from the fields (عملية جمع المحاصيل الناضجة من الحقول)",
@@ -347,7 +320,6 @@ window.I18N['ar'] = {
 			}
 		}
 	},
-	
 	// Grocery lesson
 	grocery: {
 		title: "Grocery Shopping & Meal Planning (تسوق البقالة وتخطيط الوجبات)",
@@ -384,22 +356,18 @@ window.I18N['ar'] = {
 			q1a: "A budget spreadsheet (جدول بيانات للميزانية)",
 			q1b: "A shopping list and meal plan (قائمة تسوق وخطة وجبات)",
 			q1c: "A map of the supermarket (خريطة للسوبرماركت)",
-			
 			q2: "Which section did Omar start with in the supermarket? (أي قسم بدأ به عمر في السوبرماركت?)",
 			q2a: "The dairy section (قسم الألبان)",
 			q2b: "The produce section (قسم المنتجات الطازجة)",
 			q2c: "The meat counter (منضدة اللحوم)",
-			
 			q3: "What did Omar use his phone for while shopping? (ماذا استخدم عمر هاتفه لأجله أثناء التسوق?)",
 			q3a: "To look up pictures of unfamiliar foods (للبحث عن صور للأطعمة غير المألوفة)",
 			q3b: "To call a friend for advice (لاتصال بصديق للحصول على نصيحة)",
 			q3c: "To calculate his total spending (لحساب إجمالي إنفاقه)",
-			
 			q4: "Who did Omar ask for help in the meat section? (من طلب عمر المساعدة منه في قسم اللحوم?)",
 			q4a: "Another customer (زبون آخر)",
 			q4b: "The butcher (الجزار)",
 			q4c: "The store manager (مدير المتجر)",
-			
 			q5: "How did Omar feel after completing his shopping? (كيف شعر عمر بعد إكمال تسوقه?)",
 			q5a: "Frustrated and confused (محبط ومربك)",
 			q5b: "Proud and successful (فخور وناجح)",
@@ -410,22 +378,18 @@ window.I18N['ar'] = {
 			produce_pron: "/prəˈdjuːs/",
 			produce_def: "Fresh fruits and vegetables (الفواكه والخضروات الطازجة)",
 			produce_ex: "\"Omar started his shopping in the produce section.\" (\"بدأ عمر تسوقه في قسم المنتجات الطازجة.\")",
-			
 			ingredients: "Ingredients (المكونات)",
 			ingredients_pron: "/ɪnˈɡriːdiənts/",
 			ingredients_def: "Items used in preparing a dish or meal (العناصر المستخدمة في تحضير طبق أو وجبة)",
 			ingredients_ex: "\"Omar bought all the ingredients for his planned meals.\" (\"اشترى عمر جميع المكونات لوجباته المخطط لها.\")",
-			
 			butcher: "Butcher (جزار)",
 			butcher_pron: "/ˈbʊtʃər/",
 			butcher_def: "A person who sells meat (شخص يبيع اللحوم)",
 			butcher_ex: "\"The butcher helped Omar find the chicken breasts.\" (\"ساعد الجزار عمر في العثور على صدور الدجاج.\")",
-			
 			unit_price: "Unit Price (سعر الوحدة)",
 			unit_price_pron: "/ˈjuːnɪt praɪs/",
 			unit_price_def: "The price per standard unit of measurement (السعر لكل وحدة قياس قياسية)",
 			unit_price_ex: "\"Omar compared unit prices to get the best value.\" (\"قارن عمر أسعار الوحدات للحصول على أفضل قيمة.\")",
-			
 			checkout: "Checkout (الدفع)",
 			checkout_pron: "/ˈtʃekaʊt/",
 			checkout_def: "The place where customers pay for their purchases (المكان الذي يدفع فيه العملاء مقابل مشترياتهم)",
@@ -446,7 +410,6 @@ window.I18N['ar'] = {
 			}
 		}
 	},
-	
     // Transport lesson
     transport: {
         title: "Public Transportation (النقل العام)",
@@ -483,22 +446,18 @@ window.I18N['ar'] = {
             q1a: "Excited and overwhelmed (متحمسة ومرتبكة)",
             q1b: "Bored and uninterested (تشعر بالملل وعدم الاهتمام)",
             q1c: "Confident and prepared (واثقة ومستعدة)",
-            
             q2: "What did the station attendant tell Anya to do? (ماذا قال موظف المحطة لأنيا أن تفعل؟)",
             q2a: "Take the Red Line (خذ الخط الأحمر)",
             q2b: "Take the Blue Line and transfer to Green Line (خذ الخط الأزرق وانتقل إلى الخط الأخضر)",
             q2c: "Take a bus (خذ الحافلة)",
-            
             q3: "What type of ticket did Anya decide to buy? (ما نوع التذكرة التي قررت أنيا شراؤها؟)",
             q3a: "Single ride (رحلة واحدة)",
             q3b: "Day pass (تذكرة يومية)",
             q3c: "Monthly pass (تذكرة شهرية)",
-            
             q4: "What did Anya observe on the platform? (ماذا لاحظت أنيا على المنصة؟)",
             q4a: "The cleanliness of the station (نظافة المحطة)",
             q4b: "Electronic signs with arrival times (لافتات إلكترونية تعرض أوقات الوصول)",
             q4c: "The advertisements (الإعلانات)",
-            
             q5: "How did Anya feel by the end of the week? (كيف شعرت أنيا بنهاية الأسبوع؟)",
             q5a: "Still confused (لا تزال مرتبكة)",
             q5b: "Like a local (مثل أحد السكان المحليين)",
@@ -509,22 +468,18 @@ window.I18N['ar'] = {
             metro_pron: "/ˈmɛtroʊ/",
             metro_def: "An underground railway system in a city (نظام سكك حديدية تحت الأرض في المدينة)",
             metro_ex: "\"Anya studied the metro map to find her route.\" (\"درست أنيا خريطة المترو لإيجاد طريقها.\")",
-            
             transit_card: "Transit Card (بطاقة النقل)",
             transit_card_pron: "/ˈtrænzɪt kɑrd/",
             transit_card_def: "A card used to pay for public transportation (بطاقة تستخدم للدفع مقابل النقل العام)",
             transit_card_ex: "\"Anya bought a transit card and loaded it with credit.\" (\"اشترت أنيا بطاقة نقل وحملتها برصيد.\")",
-            
             transfer: "Transfer (انتقال)",
             transfer_pron: "/ˈtrænsfər/",
             transfer_def: "To change from one vehicle to another in the course of a journey (التغيير من مركبة إلى أخرى خلال الرحلة)",
             transfer_ex: "\"She needed to transfer from the Blue Line to the Green Line.\" (\"كانت بحاجة إلى الانتقال من الخط الأزرق إلى الخط الأخضر.\")",
-            
             commute: "Commute (تنقل)",
             commute_pron: "/kəˈmjuːt/",
             commute_def: "The journey to and from work (الرحلة من وإلى العمل)",
             commute_ex: "\"The monthly pass was most economical for her daily commute.\" (\"كانت التذكرة الشهرية الأكثر اقتصاداً لتنقلها اليومي.\")",
-            
             validate: "Validate (التحقق)",
             validate_pron: "/ˈvælɪdeɪt/",
             validate_def: "To confirm or check the validity of something, such as a ticket (تأكيد أو فحص صلاحية شيء ما، مثل التذكرة)",
@@ -545,7 +500,6 @@ window.I18N['ar'] = {
 			}
 		}
 	},
-	
     // Healthcare Navigation lesson
     healthcare: {
         title: "Healthcare Navigation (التنقل في نظام الرعاية الصحية)",
@@ -582,22 +536,18 @@ window.I18N['ar'] = {
             q1a: "For a routine check-up (لفحص روتيني)",
             q1b: "He had a cough and fever (كان يعاني من سعال وحمى)",
             q1c: "To get a vaccination (للحصول على تطعيم)",
-            
             q2: "What did the receptionist ask for when Carlos arrived? (ماذا طلبت موظفة الاستقبال عندما وصل كارلوس؟)",
             q2a: "Only his name (اسمه فقط)",
             q2b: "Health insurance and identification (التأمين الصحي وبطاقة الهوية)",
             q2c: "Payment in advance (الدفع مقدماً)",
-            
             q3: "What did the nurse do before Carlos saw the doctor? (ماذا فعلت الممرضة قبل أن يرى كارلوس الطبيب؟)",
             q3a: "Gave him medication (أعطته دواء)",
             q3b: "Took his temperature and blood pressure (أخذت درجة حرارته وضغط دمه)",
             q3c: "Scheduled his next appointment (حددت موعده التالي)",
-            
             q4: "What was Dr. Thompson's diagnosis? (ما كان تشخيص الدكتورة طومسون؟)",
             q4a: "A common cold (نزلة برد)",
             q4b: "A respiratory infection (عدوى في الجهاز التنفسي)",
             q4c: "Allergies (حساسية)",
-            
             q5: "What advice did Dr. Thompson give Carlos besides taking antibiotics? (ما النصيحة التي قدمتها الدكتورة طومسون لكارلوس بجانب تناول المضادات الحيوية؟)",
             q5a: "To exercise more (ممارسة المزيد من التمارين)",
             q5b: "To rest and drink fluids (الراحة وشرب السوائل)",
@@ -608,22 +558,18 @@ window.I18N['ar'] = {
             clinic_pron: "/ˈklɪnɪk/",
             clinic_def: "A healthcare facility for outpatient care (منشأة رعاية صحية للرعاية الخارجية)",
             clinic_ex: "\"Carlos visited the clinic for his appointment.\" (\"زار كارلوس العيادة لموعده.\")",
-            
             symptoms: "Symptoms (أعراض)",
             symptoms_pron: "/ˈsɪmptəmz/",
             symptoms_def: "Signs of illness or disease (علامات المرض)",
             symptoms_ex: "\"Carlos described his symptoms to the doctor.\" (\"وصف كارلوس أعراضه للطبيب.\")",
-            
             prescription: "Prescription (وصفة طبية)",
             prescription_pron: "/prɪˈskrɪpʃən/",
             prescription_def: "A doctor's written order for medication (طلب كتابي من الطبيب للحصول على دواء)",
             prescription_ex: "\"Dr. Thompson wrote a prescription for antibiotics.\" (\"كتبت الدكتورة طومسون وصفة طبية للمضادات الحيوية.\")",
-            
             pharmacist: "Pharmacist (صيدلي)",
             pharmacist_pron: "/ˈfɑːrməsɪst/",
             pharmacist_def: "A healthcare professional who dispenses medication (أخصائي رعاية صحية يصرف الأدوية)",
             pharmacist_ex: "\"The pharmacist explained how to take the medicine.\" (\"شرح الصيدلي كيفية تناول الدواء.\")",
-            
             antibiotics: "Antibiotics (مضادات حيوية)",
             antibiotics_pron: "/ˌæntibaɪˈɒtɪks/",
             antibiotics_def: "Medications that treat bacterial infections (أدوية تعالج الالتهابات البكتيرية)",
@@ -647,7 +593,6 @@ window.I18N['ar'] = {
 			}
 		}
 	},
-	
 	// Banking lesson
 	banking: {
 		title: "Banking and Financial Basics (أساسيات البنوك والتمويل)",
@@ -684,22 +629,18 @@ window.I18N['ar'] = {
 			q1a: "To get a credit card (للحصول على بطاقة ائتمان)",
 			q1b: "Her cash was running low and she needed a secure place for her money (نقودها كانت تنفد وكانت بحاجة إلى مكان آمن لأموالها)",
 			q1c: "To get a job at the bank (للحصول على وظيفة في البنك)",
-			
 			q2: "What type of account did Mr. Chen recommend for Li? (ما نوع الحساب الذي أوصى به السيد تشين للي؟)",
 			q2a: "A business account (حساب أعمال)",
 			q2b: "A student account with no monthly fees (حساب طالب بدون رسوم شهرية)",
 			q2c: "A premium account with high fees (حساب ممتاز برسوم عالية)",
-			
 			q3: "What documents did Li need to provide to open the account? (ما هي المستندات التي احتاجت لي لتقديمها لفتح الحساب؟)",
 			q3a: "Only her passport (جواز سفرها فقط)",
 			q3b: "Her passport, student visa, and proof of address (جواز سفرها، وتأشيرة الطالب، وإثبات العنوان)",
 			q3c: "Only her student ID (هوية الطالب فقط)",
-			
 			q4: "What was the minimum initial deposit required? (ما هو الحد الأدنى للإيداع الأولي المطلوب؟)",
 			q4a: "$100",
 			q4b: "$25", 
 			q4c: "$50",
-			
 			q5: "How did Li feel after opening her bank account? (كيف شعرت لي بعد فتح حسابها البنكي؟)",
 			q5a: "Confused and overwhelmed (مرتبكة ومشتتة)",
 			q5b: "Relieved and more confident (مرتاحة وأكثر ثقة)",
@@ -710,22 +651,18 @@ window.I18N['ar'] = {
 			account_pron: "/əˈkaʊnt/",
 			account_def: "A record of financial transactions with a bank (سجل للمعاملات المالية مع البنك)",
 			account_ex: "\"Li opened a checking account at the bank.\" (\"فتحت لي حساب جاري في البنك.\")",
-			
 			deposit: "Deposit (إيداع)",
 			deposit_pron: "/dɪˈpɒzɪt/",
 			deposit_def: "Money placed into a bank account (الأموال الموضوعة في حساب بنكي)",
 			deposit_ex: "\"She made an initial deposit of $25 to activate her account.\" (\"قامت بإيداع أولي بقيمة 25 دولاراً لتفعيل حسابها.\")",
-			
 			debit_card: "Debit Card (بطاقة خصم)",
 			debit_card_pron: "/ˈdɛbɪt kɑːrd/",
 			debit_card_def: "A card that allows you to make electronic payments from your bank account (بطاقة تسمح لك بإجراء مدفوعات إلكترونية من حسابك البنكي)",
 			debit_card_ex: "\"Li received her temporary debit card at the bank.\" (\"تلقت لي بطاقة الخصم المؤقتة في البنك.\")",
-			
 			interest: "Interest (فائدة)",
 			interest_pron: "/ˈɪntrəst/",
 			interest_def: "Money paid regularly at a particular rate for the use of money lent (الأموال المدفوعة بانتظام بمعدل معين لاستخدام الأموال المقترضة)",
 			interest_ex: "\"The savings account earns interest on the money deposited.\" (\"يكسب حساب التوفير فائدة على الأموال المودعة.\")",
-			
 			statement: "Statement (كشف حساب)",
 			statement_pron: "/ˈsteɪtmənt/",
 			statement_def: "A summary of financial transactions during a specific period (ملخص للمعاملات المالية خلال فترة محددة)",
@@ -746,7 +683,6 @@ window.I18N['ar'] = {
 			}
 		}
 	},
-	
 	// Apartment lesson
 	apartment: {
 		title: "Finding an Apartment (العثور على شقة)",
@@ -783,22 +719,18 @@ window.I18N['ar'] = {
 			q1a: "With a friend (مع صديق)",
 			q1b: "In a temporary hostel (في نزل مؤقت)",
 			q1c: "At a hotel (في فندق)",
-			
 			q2: "What was Ahmed's monthly budget for rent? (ما كانت ميزانية أحمد الشهرية للإيجار؟)",
 			q2a: "$1000",
 			q2b: "$1200",
 			q2c: "$1300",
-			
 			q3: "What was wrong with the first apartment Ahmed visited? (ما الخطأ في الشقة الأولى التي زارها أحمد؟)",
 			q3a: "It was too expensive (كانت مكلفة جداً)",
 			q3b: "It had a view of another building's wall (كانت بإطلالة على جدار مبنى آخر)",
 			q3c: "It was too far from public transportation (كانت بعيدة جداً عن وسائل النقل العام)",
-			
 			q4: "Who told Ahmed about the neighborhood website? (من أخبر أحمد عن موقع الحي؟)",
 			q4a: "His landlord (مالكه)",
 			q4b: "His coworker Maria (زميلته ماريا)",
 			q4c: "A real estate agent (وسيط عقاري)",
-			
 			q5: "What was the rent for the apartment Ahmed finally chose? (ما كان إيجار الشقة التي اختارها أحمد في النهاية؟)",
 			q5a: "$1100 plus utilities (1100 دولار بالإضافة إلى المرافق)",
 			q5b: "$1150 including utilities (1150 دولاراً شاملاً المرافق)",
@@ -809,22 +741,18 @@ window.I18N['ar'] = {
 			rental_pron: "/ˈrɛntl/",
 			rental_def: "Related to property that is rented rather than owned (متعلق بممتلكات مستأجرة بدلاً من مملوكة)",
 			rental_ex: "\"Ahmed looked at rental websites to find an apartment.\" (\"نظر أحمد إلى مواقع الويب للإيجار للعثور على شقة.\")",
-			
 			utilities: "Utilities (مرافق)",
 			utilities_pron: "/juːˈtɪlɪtiz/",
 			utilities_def: "Basic services like electricity, water, and gas (خدمات أساسية مثل الكهرباء والماء والغاز)",
 			utilities_ex: "\"The rent was $1100 plus utilities.\" (\"كان الإيجار 1100 دولار بالإضافة إلى المرافق.\")",
-			
 			landlord: "Landlord (مالك)",
 			landlord_pron: "/ˈlændlɔːrd/",
 			landlord_def: "A person who owns and rents out property (شخص يمتلك ويؤجر الممتلكات)",
 			landlord_ex: "\"The landlord showed Ahmed the apartment.\" (\"أظهر المالك الشقة لأحمد.\")",
-			
 			lease: "Lease (عقد إيجار)",
 			lease_pron: "/liːs/",
 			lease_def: "A legal contract for renting property (عقد قانوني لتأجير الممتلكات)",
 			lease_ex: "\"Ahmed signed the lease agreement for his new apartment.\" (\"وقع أحمد عقد الإيجار لشقته الجديدة.\")",
-			
 			budget: "Budget (ميزانية)",
 			budget_pron: "/ˈbʌdʒɪt/",
 			budget_def: "A plan for how much money to spend on something (خطة لمقدار الأموال التي سيتم إنفاقها على شيء ما)",
@@ -880,22 +808,18 @@ window.I18N['ar'] = {
 			q1a: "Excited and happy (متحمس وسعيد)",
 			q1b: "Nervous and unfamiliar (متوتر وغير مألوف)",
 			q1c: "Angry and frustrated (غاضب ومحبط)",
-			
 			q2: "What did Sam do during the morning in his new classroom? (ماذا فعل سام خلال فترة الصباح في فصله الدراسي الجديد?)",
 			q2a: "He talked to everyone (تحدث إلى الجميع)",
 			q2b: "He sat quietly and watched the other children (جلس بهدوء وشاهد الأطفال الآخرين)",
 			q2c: "He played soccer (لعب كرة القدم)",
-			
 			q3: "Who approached Sam at recess? (من اقترب من سام في فترة الاستراحة?)",
 			q3a: "The teacher (المعلم)",
 			q3b: "A boy named Leo (صبي اسمه ليو)",
 			q3c: "No one (لا أحد)",
-			
 			q4: "What did Sam and Leo have in common? (ما المشترك بين سام وليو?)",
 			q4a: "They were in the same class last year (كانا في نفس الفصل العام الماضي)",
 			q4b: "They liked the same video games and superheroes (أحبا نفس ألعاب الفيديو والابطال الخارقين)",
 			q4c: "They lived in the same neighborhood (كانا يعيشان في نفس الحي)",
-			
 			q5: "What did Sam learn about making new friends? (ماذا تعلم سام عن تكوين صداقات جديدة?)",
 			q5a: "It's very hard and not worth it (إنه صعب جداً ولا يستحق العناء)",
 			q5b: "Being yourself and open to new experiences can lead to friendships (كونك على طبيعتك ومنفتحاً على تجارب جديدة يمكن أن يؤدي إلى صداقات)",
@@ -906,22 +830,18 @@ window.I18N['ar'] = {
 			nervous_pron: "/ˈnɜːrvəs/",
 			nervous_def: "Feeling worried or slightly afraid (شعور بالقلق أو الخوف قليلاً)",
 			nervous_ex: "\"Sam felt nervous on his first day at a new school.\" (\"شعر سام بالتوتر في يومه الأول في مدرسة جديدة.\")",
-			
 			unfamiliar: "Unfamiliar (غير مألوف)",
 			unfamiliar_pron: "/ˌʌnfəˈmɪliər/",
 			unfamiliar_def: "Not known or recognized (غير معروف أو مألوف)",
 			unfamiliar_ex: "\"The new city was unfamiliar to Sam.\" (\"كانت المدينة الجديدة غير مألوفة لسام.\")",
-			
 			recess: "Recess (استراحة)",
 			recess_pron: "/ˈriːses/",
 			recess_def: "A break period between classes at school (فترة راحة بين الحصص في المدرسة)",
 			recess_ex: "\"The children played outside during recess.\" (\"لعب الأطفال في الخارج خلال فترة الاستراحة.\")",
-			
 			comfortable: "Comfortable (مرتاح)",
 			comfortable_pron: "/ˈkʌmftəbl/",
 			comfortable_def: "Feeling relaxed and at ease (شعور بالاسترخاء والراحة)",
 			comfortable_ex: "\"Sam started to feel more comfortable after playing soccer.\" (\"بدأ سام يشعر براحة أكبر بعد لعب كرة القدم.\")",
-			
 			friendship: "Friendship (صداقة)",
 			friendship_pron: "/ˈfrendʃɪp/",
 			friendship_def: "A relationship between friends (علاقة بين الأصدقاء)",
@@ -942,7 +862,6 @@ window.I18N['ar'] = {
 			}
 		}
 	},
-	
 	// Science Fair lesson
 	scienceFair: {
 		title: "The Science Fair Challenge (تحدي معرض العلوم)",
@@ -979,22 +898,18 @@ window.I18N['ar'] = {
 			q1a: "Space Exploration (استكشاف الفضاء)",
 			q1b: "Environmental Solutions (الحلول البيئية)",
 			q1c: "Animal Habitats (موائل الحيوانات)",
-			
 			q2: "What problem did Alex encounter when building his prototype? (ما المشكلة التي واجهها أليكس عند بناء النموذج الأولي؟)",
 			q2a: "The water leaked and looked cloudy (تسربت المياه وبدت غائمة)",
 			q2b: "He couldn't find the right materials (لم يتمكن من العثور على المواد المناسبة)",
 			q2c: "His filter worked perfectly on the first try (عمل مرشحه بشكل مثالي من المحاولة الأولى)",
-			
 			q3: "What did Mr. Rodriguez teach Alex about science? (ماذا علم السيد رودريغيز أليكس عن العلم؟)",
 			q3a: "It's about getting everything right the first time (إنه يتعلق بفعل كل شيء بشكل صحيح من المرة الأولى)",
 			q3b: "It's about learning from mistakes and trying again (إنه يتعلق بالتعلم من الأخطاء والمحاولة مرة أخرى)",
 			q3c: "Only smart people can be good at science (فقط الأشخاص الأذكياء يمكن أن يكونوا جيدين في العلوم)",
-			
 			q4: "What materials did Alex use in his water filtration system? (ما المواد التي استخدمها أليكس في نظام ترشيح المياه؟)",
 			q4a: "Plastic bottles and chemicals (زجاجات بلاستيكية ومواد كيميائية)",
 			q4b: "Sand, gravel, and charcoal (رمل، حصى، وفحم)",
 			q4c: "Metal filters and electric pumps (مرشحات معدنية ومضخات كهربائية)",
-			
 			q5: "What was the most important thing Alex discovered through this experience? (ما هو أهم شيء اكتشفه أليكس من خلال هذه التجربة؟)",
 			q5a: "That winning is the most important part of science fairs (أن الفوز هو الجزء الأكثر أهمية في معارض العلوم)",
 			q5b: "That science is a way of exploring and understanding the world (أن العلم هو وسيلة لاستكشاف العالم وفهمه)",
@@ -1005,22 +920,18 @@ window.I18N['ar'] = {
 			prototype_pron: "/ˈproʊtətaɪp/",
 			prototype_def: "A first or preliminary model of something (نموذج أولي أو تمهيدي لشيء ما)",
 			prototype_ex: "\"Alex built a prototype of his water filtration system.\" (\"بنى أليكس نموذجاً أولياً لنظام ترشيح المياه الخاص به.\")",
-			
 			filtration: "Filtration (ترشيح)",
 			filtration_pron: "/fɪlˈtreɪʃən/",
 			filtration_def: "The process of removing solid particles from a liquid or gas (عملية إزالة الجسيمات الصلبة من سائل أو غاز)",
 			filtration_ex: "\"The filtration system made the dirty water clean.\" (\"جعل نظام الترشيح المياه القذرة نظيفة.\")",
-			
 			environmental: "Environmental (بيئي)",
 			environmental_pron: "/ɪnˌvaɪrənˈmentl/",
 			environmental_def: "Relating to the natural world and the impact of human activity on it (يتعلق بالعالم الطبيعي وتأثير النشاط البشري عليه)",
 			environmental_ex: "\"The science fair theme was environmental solutions.\" (\"كان موضوع معرض العلوم هو الحلول البيئية.\")",
-			
 			scientific_method: "Scientific Method (منهج علمي)",
 			scientific_method_pron: "/ˌsaɪənˈtɪfɪk ˈmeθəd/",
 			scientific_method_def: "A systematic approach to research involving observation, hypothesis, experimentation, and conclusion (نهج منهجي للبحث يتضمن الملاحظة، والفرضية، والتجربة، والاستنتاج)",
 			scientific_method_ex: "\"Alex used the scientific method to improve his project.\" (\"استخدم أليكس المنهج العلمي لتحسين مشروعه.\")",
-			
 			documentation: "Documentation (توثيق)",
 			documentation_pron: "/ˌdɑːkjumenˈteɪʃən/",
 			documentation_def: "Material that provides official information or evidence (مواد تقدم معلومات أو أدلة رسمية)",
@@ -1041,7 +952,6 @@ window.I18N['ar'] = {
 			}
 		}
 	},
-	
 	// The Lost Pet Adventure
 	lostPet: {
 		title: "The Lost Pet Adventure (مغامرة الحيوان الأليف المفقود)",
@@ -1128,7 +1038,6 @@ window.I18N['ar'] = {
 			p5: "\"I'm so happy to have found you!\" (\"أنا سعيد جدًا لأنني وجدتك!\")"
 		}
 	},
-    
     // Dashboard
     dashboard: {
         title: "مهارات التواصل",
@@ -1138,7 +1047,6 @@ window.I18N['ar'] = {
         pronunciation: "مهارات التحدث",
         other: "ألعاب التواصل"
 	},
-    
     // Courses
     courses: {
 		header: "الدورات",
@@ -1203,13 +1111,11 @@ window.I18N['ar'] = {
 			]
 		}
 	},
-    
     // Reading Adventures page
     readingAdventures: {
         title: "Reading Adventures (مغامرات القراءة)",
         subtitle: "Improve your reading skills through engaging stories for all ages! (حسّن مهارات القراءة لديك من خلال قصص جذابة لجميع الأعمار!)",
         intro: "Welcome to Reading Adventures! This platform offers reading materials for both elementary school students (ages 8-15) and young adult workers (ages 18-30). Explore stories based on real-life situations that match your age group and interests while developing your reading skills through engaging activities. (مرحباً بك في مغامرات القراءة! تقدم هذه المنصة مواد قرائية لكل من طلاب المدارس الابتدائية (8-15 سنة) والعمال الشباب البالغين (18-30 سنة). استكشف قصصاً مبنية على مواقف حياتية حقيقية تناسب فئتك العمرية واهتماماتك بينما تطور مهارات القراءة لديك من خلال أنشطة جذابة.)",
-        
         elementary: {
             title: "For Elementary School Students (8-15 years) (لطلاب المدارس الابتدائية (8-15 سنة))",
             subtitle: "Fun stories about school life, friendships, and adventures! (قصص ممتعة عن الحياة المدرسية والصداقات والمغامرات!)",
@@ -1236,7 +1142,6 @@ window.I18N['ar'] = {
 				}
 			}
 		},
-        
         youngAdults: {
             title: "For Young Adult Workers (18-30 years) (للعاملين الشباب البالغين (18-30 سنة))",
             subtitle: "Practical stories about work, daily life, and adapting to new environments! (قصص عملية عن العمل والحياة اليومية والتكيف مع البيئات الجديدة!)",
@@ -1271,53 +1176,38 @@ window.I18N['ar'] = {
 	conjugation: {
 		title: "تصريف الأفعال",
 		subtitle: "أتقن الأزمنة والأفعال المساعدة والصفات في اللغة الإنجليزية",
-		
 		simpleTenses: "الأزمنة البسيطة",
 		simpleTensesDescription: "تعلم الأزمنة الأساسية المستخدمة في التواصل اليومي باللغة الإنجليزية.",
-		
 		simplePresent: "المضارع البسيط",
 		simplePresentDescription: "عبر عن العادات والحقائق العامة والترتيبات الثابتة.",
-		
 		simplePast: "الماضي البسيط",
 		simplePastDescription: "تحدث عن الإجراءات المكتملة في الماضي.",
-		
 		simpleFuture: "المستقبل البسيط",
 		simpleFutureDescription: "عبر عن التوقعات والوعود والقرارات العفوية.",
-		
 		progressiveTenses: "أزمنة الاستمرارية",
 		progressiveTensesDescription: "عبر عن الإجراءات المستمرة في أوقات محددة.",
-		
 		presentProgressive: "المضارع المستمر",
 		presentProgressiveDescription: "صف الإجراءات التي تحدث الآن أو حول الوقت الحالي.",
-		
 		pastProgressive: "الماضي المستمر",
 		pastProgressiveDescription: "صف الإجراءات المستمرة في الماضي.",
-		
 		futureProgressive: "المستقبل المستمر",
 		futureProgressiveDescription: "صف الإجراءات المستمرة في المستقبل.",
-		
 		perfectTenses: "أزمنة التمام",
 		perfectTensesDescription: "عبر عن الإجراءات المكتملة ذات الصلة بأطر زمنية أخرى.",
-		
 		presentPerfect: " المضارع التام",
 		presentPerfectDescription: "اربط الإجراءات الماضية بالحاضر.",
-		
 		pastPerfect: "الماضي التام",
 		pastPerfectDescription: "عبر عن الإجراءات المكتملة قبل إجراء ماضي آخر.",
-		
 		futurePerfect: "المستقبل التام",
 		futurePerfectDescription: "عبر عن الإجراءات التي ستكتمل قبل وقت مستقبلي.",
-		
 		modalVerbs: "الأفعال المساعدة",
 		modalVerbsDescription: "عبر عن القدرة والإمكانية والإذن أو الالتزام.",
-		
 		conditionalMood: "صيغة الشرط",
 		conditionalMoodDescription: "عبر عن المواقف الافتراضية وعواقبها."
 	},
     simplePresent: {
 		title: "Simple Present Tense: Generality (زمن المضارع البسيط: العمومية)",
 		subtitle: "Master the basic verb tense for habits, facts, and general truths (أتقن زمن الفعل الأساسي للعادات، الحقائق، والحقائق العامة)",
-		
 		introduction: {
 			title: "Introduction to Simple Present (مقدمة في زمن المضارع البسيط)",
 			whatIs: "What is the Simple Present Tense? (ما هو زمن المضارع البسيط؟)",
@@ -1333,7 +1223,6 @@ window.I18N['ar'] = {
 			example3: "The train leaves at 5 PM. (يغادر القطار الساعة 5 مساءً.)",
 			example4: "She likes coffee. (هي تحب القهوة.)"
 		},
-		
 		toBe: {
 			title: "The Verb \"To Be\" (فعل الكينونة \"يكون\")",
 			conjugation: "Conjugation of \"To Be\" (تصريف فعل \"يكون\")",
@@ -1358,7 +1247,6 @@ window.I18N['ar'] = {
 			questionExample2: "Is she a teacher? (هل هي معلمة؟)",
 			questionExample3: "Are they ready? (هل هم مستعدون؟)"
 		},
-		
 		toHave: {
 			title: "The Verb \"To Have\" (فعل الامتلاك \"يملك\")",
 			conjugation: "Conjugation of \"To Have\" (تصريف فعل \"يملك\")",
@@ -1382,7 +1270,6 @@ window.I18N['ar'] = {
 			questionExample2: "Does she have a dog? (هل هي تملك كلباً؟)",
 			questionExample3: "Do they have time? (هل لديهم وقت؟)"
 		},
-		
 		regularVerbs: {
 			title: "Regular Verbs (الأفعال المنتظمة)",
 			conjugation: "Conjugation of Regular Verbs (تصريف الأفعال المنتظمة)",
@@ -1413,7 +1300,6 @@ window.I18N['ar'] = {
 			questionExample2: "Does she work hard? (هل هي تعمل بجد؟)",
 			questionExample3: "Do they work together? (هل هم يعملون معاً؟)"
 		},
-		
 		irregularVerbs: {
 			title: "Common Irregular Verbs (الأفعال الشاذة الشائعة)",
 			conjugation: "Irregular Verb Conjugations (تصريفات الأفعال الشاذة)",
@@ -1441,7 +1327,6 @@ window.I18N['ar'] = {
 			example3: "We do our homework in the evening. (نحن نفعل واجباتنا المدرسية في المساء.)",
 			example4: "He does the dishes after dinner. (هو يفعل الأطباق بعد العشاء.)"
 		},
-		
 		exercises: {
 			title: "Practice Exercises (تمارين التدريب)",
 			q1: "Choose the correct form of the verb \"to be\": (اختر الصيغة الصحيحة للفعل \"يكون\":)",
@@ -1663,7 +1548,6 @@ window.I18N['ar'] = {
 simplePresent3: {
     title: "Simple Present Tense: Negative, Passive & Idioms (زمن المضارع البسيط: النفي، المبني للمجهول والتعابير الاصطلاحية)",
     subtitle: "Learn to form negative sentences, use passive voice, and understand common idioms (تعلم تكوين الجمل المنفية، استخدام المبني للمجهول وفهم التعابير الاصطلاحية الشائعة)",
-    
     introduction: {
         title: "Negative Forms in Simple Present (صيغ النفي في المضارع البسيط)",
         whatIs: "How to Form Negative Sentences (كيفية تكوين الجمل المنفية)",
@@ -1674,7 +1558,6 @@ simplePresent3: {
         type2: "Negative with \"To Have\" (النفي مع فعل \"يملك\")",
         type3: "Negative with Other Verbs (النفي مع الأفعال الأخرى)"
     },
-    
     toBeNegative: {
         title: "Negative with \"To Be\" (النفي مع فعل \"يكون\")",
         conjugation: "Negative Formation with \"To Be\" (تكوين النفي مع فعل \"يكون\")",
@@ -1704,7 +1587,6 @@ simplePresent3: {
         contractionExample5: "We aren't here. (or We're not here) (نحن لسنا هنا)",
         contractionExample6: "They aren't students. (or They're not students) (هم ليسوا طلاباً)"
     },
-    
     toHaveNegative: {
         title: "Negative with \"To Have\" (النفي مع فعل \"يملك\")",
         conjugation: "Negative Formation with \"To Have\" (تكوين النفي مع فعل \"يملك\")",
@@ -1734,7 +1616,6 @@ simplePresent3: {
         contractionExample5: "We don't have time. (نحن لا نملك وقتاً)",
         contractionExample6: "They don't have money. (هم لا يملكون مالاً)"
     },
-    
     otherVerbsNegative: {
         title: "Negative with Other Verbs (النفي مع الأفعال الأخرى)",
         conjugation: "Negative Formation with Regular and Irregular Verbs (تكوين النفي مع الأفعال المنتظمة وغير المنتظمة)",
@@ -1770,7 +1651,6 @@ simplePresent3: {
         irregularExample2: "She doesn't do her homework. (do → does for he/she/it) (هي لا تفعل واجباتها المنزلية)",
         irregularExample3: "They don't have classes today. (have → has for he/she/it) (هم لا يحضرون حصصاً اليوم)"
     },
-    
     passive: {
         title: "Passive Voice in Simple Present (المبني للمجهول في المضارع البسيط)",
         whatIs: "What is Passive Voice? (ما هو المبني للمجهول؟)",
@@ -1806,7 +1686,6 @@ simplePresent3: {
         questionExample2: "Is the car fixed by him? (هل السيارة تُصلح من قبله؟)",
         questionExample3: "Are the students taught by her? (هل الطلاب يُدرسون من قبلها؟)"
     },
-    
     idioms: {
         title: "Common Idioms in Simple Present (التعابير الاصطلاحية الشائعة في المضارع البسيط)",
         whatAre: "What Are Idioms? (ما هي التعابير الاصطلاحية؟)",
@@ -1840,7 +1719,6 @@ simplePresent3: {
         usageExample2: "\"The early bird catches the worm.\" (People who act early get advantages) (\"من جد وجد.\")",
         usageExample3: "\"Actions speak louder than words.\" (What you do is more important than what you say) (\"الأفعال أبلغ من الأقوال.\")"
     },
-    
     exercises: {
         title: "Practice Exercises (تمارين практики)",
         q1: "Choose the correct negative form: (اختر صيغة النفي الصحيحة:)",
@@ -1883,8 +1761,576 @@ simplePresent3: {
         q11: "Arrange the words to form a correct passive sentence: (رتب الكلمات لتكوين جملة مبني للمجهول صحيحة:)",
         q12: "Arrange the words to form a sentence with an idiom: (رتب الكلمات لتكوين جملة بتعبير اصطلاحي:)"
     },
-    
     backToPart2: "Back to Simple Present Part 2 (العودة إلى المضارع البسيط الجزء الثاني)"
+},
+	// Simple Past Tense Part 1
+simplePast1: {
+    title: "Simple Past Tense: Generality (Le Passé Simple : Généralité)",
+    subtitle: "Learn to talk about completed actions and events in the past (Apprenez à parler d'actions et d'événements terminés dans le passé)",
+    introduction: {
+        title: "Introduction to Simple Past (Introduction au Passé Simple)",
+        whatIs: "What is the Simple Past Tense? (Qu'est-ce que le Passé Simple ?)",
+        definitionTitle: "Definition: (Définition :)",
+        definition: "The Simple Past tense is used to talk about actions or events that happened in the past and are now completed. (Le Passé Simple est utilisé pour parler d'actions ou d'événements qui se sont produits dans le passé et qui sont maintenant terminés.)",
+        usesTitle: "When to use: (Quand l'utiliser :)",
+        use1: "Completed actions in the past (Actions terminées dans le passé)",
+        use2: "Past habits or routines (Habitudes ou routines passées)",
+        use3: "Past facts or general truths (Faits passés ou vérités générales)",
+        use4: "Sequences of past actions (Séquences d'actions passées)",
+        example1: "I worked at a bank last year. (J'ai travaillé dans une banque l'année dernière.)",
+        example2: "She visited her grandmother yesterday. (Elle a visité sa grand-mère hier.)",
+        example3: "They played soccer when they were children. (Ils jouaient au football quand ils étaient enfants.)",
+        example4: "He lived in Paris for five years. (Il a vécu à Paris pendant cinq ans.)"
+    },
+    toBe: {
+        title: "The Verb \"To Be\" in Past (Le verbe \"Être\" au passé)",
+        conjugation: "Conjugation of \"To Be\" in Past (Conjugaison du verbe \"Être\" au passé)",
+        was: "was (étais/était)",
+        were: "were (étiez/étaient)",
+        exampleI: "I was a student. (J'étais étudiant.)",
+        exampleYou: "You were my friend. (Tu étais mon ami.)",
+        exampleHe: "He was a teacher. (Il était enseignant.)",
+        exampleShe: "She was happy. (Elle était heureuse.)",
+        exampleIt: "It was a beautiful day. (C'était une belle journée.)",
+        exampleWe: "We were here. (Nous étions ici.)",
+        exampleThey: "They were students. (Ils étaient étudiants.)",
+        negativeTitle: "Negative Form: (Forme négative :)",
+        negativeRule: "Add \"not\" after the verb. (Ajoutez \"not\" après le verbe.)",
+        negativeExample1: "I was not a doctor. (Je n'étais pas médecin.)",
+        negativeExample2: "She was not tired. (Elle n'était pas fatiguée.)",
+        negativeExample3: "They were not here. (Ils n'étaient pas ici.)",
+        questionTitle: "Question Form: (Forme interrogative :)",
+        questionRule: "Invert the subject and the verb. (Inversez le sujet et le verbe.)",
+        questionExample1: "Was I late? (Étais-je en retard ?)",
+        questionExample2: "Was she a teacher? (Était-elle enseignante ?)",
+        questionExample3: "Were they ready? (Étaient-ils prêts ?)"
+    },
+    toHave: {
+        title: "The Verb \"To Have\" in Past (Le verbe \"Avoir\" au passé)",
+        conjugation: "Conjugation of \"To Have\" in Past (Conjugaison du verbe \"Avoir\" au passé)",
+        had: "had (avais/avait/avions/avaient)",
+        exampleI: "I had a car. (J'avais une voiture.)",
+        exampleYou: "You had a book. (Tu avais un livre.)",
+        exampleHe: "He had a cat. (Il avait un chat.)",
+        exampleShe: "She had a dog. (Elle avait un chien.)",
+        exampleIt: "It had four legs. (Il avait quatre pattes.)",
+        exampleWe: "We had time. (Nous avions le temps.)",
+        exampleThey: "They had money. (Ils avaient de l'argent.)",
+        negativeTitle: "Negative Form: (Forme négative :)",
+        negativeRule: "Use \"did not\" (didn't) + have. (Utilisez \"did not\" (didn't) + have.)",
+        negativeExample1: "I didn't have a car. (Je n'avais pas de voiture.)",
+        negativeExample2: "She didn't have a dog. (Elle n'avait pas de chien.)",
+        negativeExample3: "They didn't have time. (Ils n'avaient pas le temps.)",
+        questionTitle: "Question Form: (Forme interrogative :)",
+        questionRule: "Use \"did\" + subject + have. (Utilisez \"did\" + sujet + have.)",
+        questionExample1: "Did you have a car? (Avais-tu une voiture ?)",
+        questionExample2: "Did she have a dog? (Avait-elle un chien ?)",
+        questionExample3: "Did they have time? (Avaient-ils le temps ?)"
+    },
+    regularVerbs: {
+        title: "Regular Verbs in Past (Verbes réguliers au passé)",
+        conjugation: "Conjugation of Regular Verbs in Past (Conjugaison des verbes réguliers au passé)",
+        ruleTitle: "Basic Rule: (Règle de base :)",
+        rule: "For most regular verbs, add -ed to the base form for all subjects. (Pour la plupart des verbes réguliers, ajoutez -ed à la forme de base pour tous les sujets.)",
+        worked: "worked (a travaillé/travaillait)",
+        exampleI: "I worked yesterday. (J'ai travaillé hier.)",
+        exampleYou: "You worked here. (Tu as travaillé ici.)",
+        exampleHe: "He worked at a bank. (Il a travaillé dans une banque.)",
+        exampleShe: "She worked hard. (Elle a travaillé dur.)",
+        exampleIt: "It worked well. (Ça a bien fonctionné.)",
+        exampleWe: "We worked together. (Nous avons travaillé ensemble.)",
+        exampleThey: "They worked late. (Ils ont travaillé tard.)",
+        spellingTitle: "Spelling Rules for -ed: (Règles d'orthographe pour -ed :)",
+        spelling1: "Most verbs: add -ed (work → worked) (La plupart des verbes : ajoutez -ed (travailler → a travaillé))",
+        spelling2: "Verbs ending in -e: add -d (live → lived) (Verbes se terminant par -e : ajoutez -d (vivre → a vécu))",
+        spelling3: "Verbs ending in consonant + y: change y to i and add -ed (study → studied) (Verbes se terminant par consonne + y : changez y en i et ajoutez -ed (étudier → a étudié))",
+        spelling4: "Verbs ending in vowel + y: add -ed (play → played) (Verbes se terminant par voyelle + y : ajoutez -ed (jouer → a joué))",
+        spelling5: "One-syllable verbs ending in consonant-vowel-consonant: double the final consonant and add -ed (stop → stopped) (Verbes d'une syllabe se terminant par consonne-voyelle-consonne : doublez la consonne finale et ajoutez -ed (arrêter → a arrêté))",
+        negativeTitle: "Negative Form: (Forme négative :)",
+        negativeRule: "Use \"did not\" (didn't) + base form of verb. (Utilisez \"did not\" (didn't) + forme de base du verbe.)",
+        negativeExample1: "I didn't work yesterday. (Je n'ai pas travaillé hier.)",
+        negativeExample2: "She didn't work here. (Elle n'a pas travaillé ici.)",
+        negativeExample3: "They didn't work late. (Ils n'ont pas travaillé tard.)",
+        questionTitle: "Question Form: (Forme interrogative :)",
+        questionRule: "Use \"did\" + subject + base form of verb. (Utilisez \"did\" + sujet + forme de base du verbe.)",
+        questionExample1: "Did you work yesterday? (As-tu travaillé hier ?)",
+        questionExample2: "Did she work hard? (A-t-elle travaillé dur ?)",
+        questionExample3: "Did they work together? (Ont-ils travaillé ensemble ?)"
+    },
+    irregularVerbs: {
+        title: "Common Irregular Verbs (Verbes irréguliers courants)",
+        conjugation: "Irregular Verb Conjugations in Past (Conjugaisons des verbes irréguliers au passé)",
+        ruleTitle: "About Irregular Verbs: (À propos des verbes irréguliers :)",
+        rule: "Some verbs don't follow the regular -ed pattern. They have their own unique past forms that must be memorized. (Certains verbes ne suivent pas le modèle régulier en -ed. Ils ont leurs propres formes passées uniques qui doivent être mémorisées.)",
+        pastForm: "Past Form (Forme passée)",
+        go: "go (aller)",
+        went: "went (est allé/allait)",
+        goExample: "I went to school yesterday. (Je suis allé à l'école hier.)",
+        do: "do (faire)",
+        did: "did (a fait/faisait)",
+        doExample: "He did his homework. (Il a fait ses devoirs.)",
+        have: "have (avoir)",
+        had: "had (avait/eu)",
+        haveExample: "She had a cat. (Elle avait un chat.)",
+        eat: "eat (manger)",
+        ate: "ate (a mangé/mangeait)",
+        eatExample: "We ate dinner at 7 PM. (Nous avons dîné à 19h.)",
+        see: "see (voir)",
+        saw: "saw (a vu/voyait)",
+        seeExample: "They saw a movie last night. (Ils ont vu un film hier soir.)",
+        take: "take (prendre)",
+        took: "took (a pris/prenait)",
+        takeExample: "I took a bus to work. (J'ai pris le bus pour aller au travail.)",
+        moreExamplesTitle: "More Examples: (Plus d'exemples :)",
+        example1: "I went to the gym yesterday. (Je suis allé à la salle de sport hier.)",
+        example2: "She did her homework after school. (Elle a fait ses devoirs après l'école.)",
+        example3: "We had a great time at the party. (Nous avons passé un bon moment à la fête.)",
+        example4: "He ate breakfast at 8 AM. (Il a pris le petit déjeuner à 8h.)"
+    },
+    exercises: {
+        title: "Practice Exercises (Exercices pratiques)",
+        q1: "Choose the correct past form of the verb \"to be\": (Choisissez la forme passée correcte du verbe \"être\" :)",
+        q1Sentence: "She ______ a doctor last year. (Elle ______ médecin l'année dernière.)",
+        q1a: "is (est)",
+        q1b: "was (était)",
+        q1c: "were (étaient)",
+        q2: "Choose the correct past form of the verb \"to have\": (Choisissez la forme passée correcte du verbe \"avoir\" :)",
+        q2Sentence: "They ______ two cats when they were children. (Ils ______ deux chats quand ils étaient enfants.)",
+        q2a: "has (a)",
+        q2b: "had (avaient)",
+        q2c: "have (ont)",
+        q3: "Choose the correct past form of the regular verb: (Choisissez la forme passée correcte du verbe régulier :)",
+        q3Sentence: "He ______ (work) in an office last year. (Il ______ (travailler) dans un bureau l'année dernière.)",
+        q3a: "work (travaille)",
+        q3b: "worked (a travaillé)",
+        q3c: "working (travaillant)",
+        q4: "Choose the correct negative form: (Choisissez la forme négative correcte :)",
+        q4Sentence: "I ______ like coffee when I was young. (Je ______ aimer le café quand j'étais jeune.)",
+        q4a: "didn't (n'aimais pas)",
+        q4b: "don't (n'aime pas)",
+        q4c: "not (pas)",
+        q5: "Choose the correct question form: (Choisissez la forme interrogative correcte :)",
+        q5Sentence: "______ she work here last year? (______ elle travailler ici l'année dernière ?)",
+        q5a: "Do (Est-ce que)",
+        q5b: "Did (Est-ce qu'elle a)",
+        q5c: "Was (Était)",
+        q6: "Choose the correct form of the irregular verb: (Choisissez la forme correcte du verbe irrégulier :)",
+        q6Sentence: "He ______ to school yesterday. (Il ______ à l'école hier.)",
+        q6a: "go (va)",
+        q6b: "went (est allé)",
+        q6c: "goed (allé - incorrect)",
+        q7: "Complete the sentence with the correct form of the verb: (Complétez la phrase avec la forme correcte du verbe :)",
+        q7Sentence: "I ______ (to be) a student last year. (Je ______ (être) étudiant l'année dernière.)",
+        q8: "Complete the sentence with the correct form of the verb: (Complétez la phrase avec la forme correcte du verbe :)",
+        q8Sentence: "She ______ (to have) a cat when she was young. (Elle ______ (avoir) un chat quand elle était jeune.)",
+        q9: "Complete the sentence with the correct form of the verb: (Complétez la phrase avec la forme correcte du verbe :)",
+        q9Sentence: "They ______ (to go) to school yesterday. (Ils ______ (aller) à l'école hier.)",
+        q10: "Arrange the words to form a correct sentence: (Ordonnez les mots pour former une phrase correcte :)",
+        q11: "Arrange the words to form a correct sentence: (Ordonnez les mots pour former une phrase correcte :)",
+        q12: "Arrange the words to form a correct question: (Ordonnez les mots pour former une question correcte :)"
+    }
+},
+// // Simple Past Part 2
+simplePast2: {
+    title: "Simple Past Tense: Questions & Adverbs (زمن الماضي البسيط: الأسئلة وظروف الزمن)",
+    subtitle: "Learn to form questions and use adverbs of time correctly in the past (تعلم تكوين الأسئلة واستخدام ظروف الزمن بشكل صحيح في الماضي)",
+    introduction: {
+        title: "Forming Questions in Simple Past (تكوين الأسئلة في الماضي البسيط)",
+        whatIs: "How to Form Questions (كيفية تكوين الأسئلة)",
+        definitionTitle: "Basic Question Structure: (البنية الأساسية للسؤال:)",
+        definition: "In the simple past tense, we use the auxiliary verb \"did\" to form questions for all subjects. The main verb stays in its base form. (في زمن الماضي البسيط، نستخدم الفعل المساعد \"did\" لتكوين الأسئلة لجميع الفاعلين. يبقى الفعل الرئيسي في صيغته الأساسية.)",
+        typesTitle: "Types of Questions: (أنواع الأسئلة:)",
+        type1: "Yes/No Questions (questions that can be answered with yes or no) (أسئلة نعم/لا (أسئلة يمكن الإجابة عليها بنعم أو لا))",
+        type2: "Wh- Questions (questions that begin with what, where, when, why, who, how) (أسئلة Wh- (أسئلة تبدأ بماذا، أين، متى، لماذا، من، كيف))",
+        type3: "Negative Questions (أسئلة النفي)"
+    },
+    toBeQuestions: {
+        title: "Questions with \"To Be\" in Past (أسئلة مع \"يكون\" في الماضي)",
+        conjugation: "Question Formation with \"To Be\" in Past (تكوين الأسئلة مع \"يكون\" في الماضي)",
+        ruleTitle: "Step-by-Step Process: (الخطوات خطوة بخطوة:)",
+        rule: "With the verb \"to be\" in the past tense, we invert the subject and the verb to form questions. We don't use \"did\" with \"to be\". (مع فعل \"يكون\" في زمن الماضي، نقلب الفاعل والفعل لتكوين الأسئلة. لا نستخدم \"did\" مع \"يكون\".)",
+        formula: "Formula: [Was/Were] + [Subject] + [Rest of Sentence] + ? (الصيغة: [كان/كانوا] + [الفاعل] + [بقية الجملة] + ؟)",
+        statement: "Statement (الجملة الخبرية)",
+        question: "Question (السؤال)",
+        statementI: "I was a student. (كنت طالباً.)",
+        questionI: "Was I a student? (هل كنت طالباً؟)",
+        statementYou: "You were my friend. (كنت صديقي.)",
+        questionYou: "Were you my friend? (هل كنت صديقي؟)",
+        statementHe: "He was a teacher. (كان مدرساً.)",
+        questionHe: "Was he a teacher? (هل كان مدرساً؟)",
+        statementShe: "She was happy. (كانت سعيدة.)",
+        questionShe: "Was she happy? (هل كانت سعيدة؟)",
+        statementWe: "We were here. (كنا هنا.)",
+        questionWe: "Were we here? (هل كنا هنا؟)",
+        statementThey: "They were students. (كانوا طلاباً.)",
+        questionThey: "Were they students? (هل كانوا طلاباً؟)",
+        whTitle: "Wh- Questions with \"To Be\": (أسئلة Wh- مع \"يكون\":)",
+        whRule: "For Wh- questions, place the question word at the beginning, then follow with the inverted subject and verb. (لأسئلة Wh-، ضع كلمة السؤال في البداية، ثم اتبعها بالفاعل والفعل المقلوب.)",
+        whExample1: "Where were you yesterday? (أين كنت أمس؟)",
+        whExample2: "What was your first job? (ما كانت وظيفتك الأولى؟)",
+        whExample3: "How was your vacation? (كيف كانت إجازتك؟)"
+    },
+    toHaveQuestions: {
+        title: "Questions with \"To Have\" in Past (أسئلة مع \"يملك\" في الماضي)",
+        conjugation: "Question Formation with \"To Have\" in Past (تكوين الأسئلة مع \"يملك\" في الماضي)",
+        ruleTitle: "Step-by-Step Process: (الخطوات خطوة بخطوة:)",
+        rule: "With the verb \"to have\" in the past tense, we use \"did\" as the auxiliary verb to form questions. (مع فعل \"يملك\" في زمن الماضي، نستخدم \"did\" كفعل مساعد لتكوين الأسئلة.)",
+        formula: "Formula: [Did] + [Subject] + [Have] + [Rest of Sentence] + ? (الصيغة: [هل] + [الفاعل] + [يملك] + [بقية الجملة] + ؟)",
+        statement: "Statement (الجملة الخبرية)",
+        question: "Question (السؤال)",
+        statementI: "I had a car. (كان لدي سيارة.)",
+        questionI: "Did I have a car? (هل كان لدي سيارة؟)",
+        statementYou: "You had a book. (كان لديك كتاب.)",
+        questionYou: "Did you have a book? (هل كان لديك كتاب؟)",
+        statementHe: "He had a cat. (كان لديه قطة.)",
+        questionHe: "Did he have a cat? (هل كان لديه قطة؟)",
+        statementShe: "She had a dog. (كان لديها كلب.)",
+        questionShe: "Did she have a dog? (هل كان لديها كلب؟)",
+        statementWe: "We had time. (كان لدينا وقت.)",
+        questionWe: "Did we have time? (هل كان لدينا وقت؟)",
+        statementThey: "They had money. (كان لديهم مال.)",
+        questionThey: "Did they have money? (هل كان لديهم مال؟)",
+        whTitle: "Wh- Questions with \"To Have\": (أسئلة Wh- مع \"يملك\":)",
+        whRule: "For Wh- questions, place the question word at the beginning, then follow with \"did,\" subject, \"have,\" and the rest of the sentence. (لأسئلة Wh-، ضع كلمة السؤال في البداية، ثم اتبعها بـ \"did\"، الفاعل، \"يملك\"، وبقية الجملة.)",
+        whExample1: "What did you have for breakfast? (ماذا تناولت على الإفطار؟)",
+        whExample2: "Where did she have her party? (أين أقامت حفلتها؟)",
+        whExample3: "How many siblings did they have? (كم عدد الإخوة الذين كان لديهم؟)"
+    },
+    otherVerbsQuestions: {
+        title: "Questions with Other Verbs (أسئلة مع الأفعال الأخرى)",
+        conjugation: "Question Formation with Regular and Irregular Verbs (تكوين الأسئلة مع الأفعال المنتظمة والشاذة)",
+        ruleTitle: "Step-by-Step Process: (الخطوات خطوة بخطوة:)",
+        rule: "For all other verbs (not \"to be\" or \"to have\"), we use \"did\" as the auxiliary verb to form questions in the past tense. (لجميع الأفعال الأخرى (ليس \"يكون\" أو \"يملك\")، نستخدم \"did\" كفعل مساعد لتكوين الأسئلة في زمن الماضي.)",
+        formula: "Formula: [Did] + [Subject] + [Base Form of Verb] + [Rest of Sentence] + ? (الصيغة: [هل] + [الفاعل] + [الصيغة الأساسية للفعل] + [بقية الجملة] + ؟)",
+        subjects: "Use \"did\" for all subjects (I, you, he, she, it, we, they). (استخدم \"did\" لجميع الفاعلين (أنا، أنت، هو، هي، هو، نحن، هم).)",
+        statement: "Statement (الجملة الخبرية)",
+        question: "Question (السؤال)",
+        statementI: "I worked yesterday. (عملت أمس.)",
+        questionI: "Did I work yesterday? (هل عملت أمس؟)",
+        statementYou: "You liked the movie. (أعجبك الفيلم.)",
+        questionYou: "Did you like the movie? (هل أعجبك الفيلم؟)",
+        statementHe: "He played soccer. (لعب كرة القدم.)",
+        questionHe: "Did he play soccer? (هل لعب كرة القدم؟)",
+        statementShe: "She studied English. (درست الإنجليزية.)",
+        questionShe: "Did she study English? (هل درست الإنجليزية؟)",
+        statementWe: "We lived in Paris. (عشنا في باريس.)",
+        questionWe: "Did we live in Paris? (هل عشنا في باريس؟)",
+        statementThey: "They spoke French. (تحدثوا الفرنسية.)",
+        questionThey: "Did they speak French? (هل تحدثوا الفرنسية؟)",
+        whTitle: "Wh- Questions with Other Verbs: (أسئلة Wh- مع الأفعال الأخرى:)",
+        whRule: "For Wh- questions, place the question word at the beginning, then follow with \"did,\" subject, base form of verb, and the rest of the sentence. (لأسئلة Wh-، ضع كلمة السؤال في البداية، ثم اتبعها بـ \"did\"، الفاعل، الصيغة الأساسية للفعل، وبقية الجملة.)",
+        whExample1: "What did you do yesterday? (ماذا فعلت أمس؟)",
+        whExample2: "Where did he work last year? (أين عمل العام الماضي؟)",
+        whExample3: "How often did they exercise? (كم مرة تمرنوا؟)",
+        irregularTitle: "Questions with Irregular Verbs: (أسئلة مع الأفعال الشاذة:)",
+        irregularRule: "Even with irregular verbs, we still use \"did\" to form questions, and the main verb stays in its base form. (حتى مع الأفعال الشاذة، لا نزال نستخدم \"did\" لتكوين الأسئلة، ويبقى الفعل الرئيسي في صيغته الأساسية.)",
+        irregularExample1: "Did you go to the gym yesterday? (go → went in statements) (هل ذهبت إلى الصالة الرياضية أمس؟ (يذهب → ذهب في الجمل الخبرية))",
+        irregularExample2: "Did she do her homework? (do → did in statements) (هل فعلت واجباتها المدرسية؟ (يفعل → فعل في الجمل الخبرية))",
+        irregularExample3: "Did they have classes yesterday? (have → had in statements) (هل كان لديهم حصص أمس؟ (يملك → امتلك في الجمل الخبرية))"
+    },
+    adverbs: {
+        title: "Adverbs of Time in Past (ظروف الزمن في الماضي)",
+        whatAre: "What Are Adverbs of Time? (ما هي ظروف الزمن؟)",
+        definitionTitle: "Definition: (التعريف:)",
+        definition: "Adverbs of time tell us when something happened. They are commonly used with the simple past tense to specify when an action occurred. (ظروف الزمن تخبرنا متى حدث شيء ما. غالباً ما تستخدم مع زمن الماضي البسيط لتحديد وقت حدوث الفعل.)",
+        commonAdverbsTitle: "Common Adverbs of Time in Past: (ظروف الزمن الشائعة في الماضي:)",
+        adverb: "Adverb (ظرف الزمن)",
+        meaning: "Meaning (المعنى)",
+        example: "Example (مثال)",
+        yesterday: "yesterday (أمس)",
+        yesterdayMeaning: "the day before today (اليوم الذي قبل اليوم)",
+        yesterdayExample: "I worked yesterday. (عملت أمس.)",
+        lastWeek: "last week (الأسبوع الماضي)",
+        lastWeekMeaning: "the week before this week (الأسبوع الذي قبل هذا الأسبوع)",
+        lastWeekExample: "She visited her grandmother last week. (زارت جدتها الأسبوع الماضي.)",
+        lastMonth: "last month (الشهر الماضي)",
+        lastMonthMeaning: "the month before this month (الشهر الذي قبل هذا الشهر)",
+        lastMonthExample: "We moved last month. (انتقلنا الشهر الماضي.)",
+        lastYear: "last year (العام الماضي)",
+        lastYearMeaning: "the year before this year (العام الذي قبل هذا العام)",
+        lastYearExample: "They graduated last year. (تخرجوا العام الماضي.)",
+        twoDaysAgo: "two days ago (قبل يومين)",
+        twoDaysAgoMeaning: "two days before today (قبل يومين من اليوم)",
+        twoDaysAgoExample: "He called two days ago. (اتصل قبل يومين.)",
+        in2010: "in 2010 (في 2010)",
+        in2010Meaning: "during the year 2010 (خلال عام 2010)",
+        in2010Example: "I was born in 2010. (ولدت في 2010.)",
+        placementTitle: "Placement in Sentences: (الموضع في الجمل:)",
+        placementRule1: "1. Usually at the end of the sentence: (عادة في نهاية الجملة:)",
+        placementExample1: "I went to the store yesterday. (ذهبت إلى المتجر أمس.)",
+        placementExample2: "She called me last night. (اتصلت بي الليلة الماضية.)",
+        placementExample3: "They arrived two hours ago. (وصلوا قبل ساعتين.)",
+        placementRule2: "2. Sometimes at the beginning for emphasis: (أحياناً في البداية للتأكيد:)",
+        placementExample4: "Yesterday, I went to the store. (أمس، ذهبت إلى المتجر.)",
+        placementExample5: "Last year, we visited Paris. (العام الماضي، زرنا باريس.)",
+        questionsTitle: "Adverbs of Time in Questions: (ظروف الزمن في الأسئلة:)",
+        questionsRule: "In questions, adverbs of time usually come at the end of the question. (في الأسئلة، تأتي ظروف الزمن عادة في نهاية السؤال.)",
+        questionsExample1: "Did you work yesterday? (هل عملت أمس؟)",
+        questionsExample2: "When did she arrive last night? (متى وصلت الليلة الماضية؟)",
+        questionsExample3: "Where were you last week? (أين كنت الأسبوع الماضي؟)"
+    },
+    exercises: {
+        title: "Practice Exercises (تمارين التدريب)",
+        q1: "Choose the correct question form: (اختر صيغة السؤال الصحيحة:)",
+        q1Sentence: "______ you at home yesterday? (______ أنت في المنزل أمس؟)",
+        q1a: "Did (هل)",
+        q1b: "Were (كنت)",
+        q1c: "Was (كان)",
+        q2: "Choose the correct question form: (اختر صيغة السؤال الصحيحة:)",
+        q2Sentence: "______ she have a car last year? (______ هي تملك سيارة العام الماضي؟)",
+        q2a: "Did (هل)",
+        q2b: "Does (هل)",
+        q2c: "Was (كانت)",
+        q3: "Choose the correct question form: (اختر صيغة السؤال الصحيحة:)",
+        q3Sentence: "Where ______ they live last year? (أين ______ هم يعيشون العام الماضي؟)",
+        q3a: "did (هل)",
+        q3b: "do (هل)",
+        q3c: "were (كانوا)",
+        q4: "Choose the correct adverb placement: (اختر الموضع الصحيح لظرف الزمن:)",
+        q4Sentence: "She ______ went to the store. (yesterday) (هي ______ ذهبت إلى المتجر. (أمس))",
+        q4a: "yesterday (أمس)",
+        q4b: "went yesterday (ذهبت أمس)",
+        q4c: "yesterday went (أمس ذهبت)",
+        q5: "Choose the correct adverb of time: (اختر ظرف الزمن الصحيح:)",
+        q5Sentence: "We visited Paris ______. (the year before this year) (زرنا باريس ______. (العام الذي قبل هذا العام))",
+        q5a: "yesterday (أمس)",
+        q5b: "last year (العام الماضي)",
+        q5c: "tomorrow (غداً)",
+        q6: "Choose the correct form of the irregular verb in a question: (اختر الصيغة الصحيحة للفعل الشاذ في سؤال:)",
+        q6Sentence: "______ you ______ to school yesterday? (go) (______ أنت ______ إلى المدرسة أمس؟ (يذهب))",
+        q6a: "Did, went (هل، ذهب)",
+        q6b: "Did, go (هل، يذهب)",
+        q6c: "Do, went (هل، ذهب)",
+        q7: "Complete the question with the correct form: (أكمل السؤال بالصيغة الصحيحة:)",
+        q7Sentence: "______ you like the movie? (______ أنت تحب الفيلم؟)",
+        q8: "Complete the question with the correct form: (أكمل السؤال بالصيغة الصحيحة:)",
+        q8Sentence: "Where ______ she work last year? (أين ______ هي تعمل العام الماضي؟)",
+        q9: "Complete the sentence with the correct adverb: (أكمل الجملة بظرف الزمن الصحيح:)",
+        q9Sentence: "They visited their grandparents ______. (the week before this week) (زاروا أجدادهم ______. (الأسبوع الذي قبل هذا الأسبوع))",
+        q10: "Arrange the words to form a correct question: (رتب الكلمات لتشكيل سؤال صحيح:)",
+        q11: "Arrange the words to form a correct question: (رتب الكلمات لتشكيل سؤال صحيح:)",
+        q12: "Arrange the words to form a correct sentence with an adverb: (رتب الكلمات لتشكيل جملة صحيحة بظرف زمن:)"
+    },
+    backToPart1: "Back to Simple Past Part 1 (العودة إلى الماضي البسيط الجزء 1)"
+},
+// Simple Past Part 3
+simplePast3: {
+    title: "Simple Past Tense: Negative, Passive & Idioms (زمن الماضي البسيط: النفي، المبني للمجهول والتعابير الاصطلاحية)",
+    subtitle: "Learn to form negative sentences, use passive voice, and understand common idioms in the past (تعلم تكوين جمل النفي، استخدام المبني للمجهول، وفهم التعابير الاصطلاحية الشائعة في الماضي)",
+    introduction: {
+        title: "Negative Forms in Simple Past (أشكال النفي في الماضي البسيط)",
+        whatIs: "How to Form Negative Sentences (كيفية تكوين جمل النفي)",
+        definitionTitle: "Basic Negative Structure: (البنية الأساسية للنفي:)",
+        definition: "In English, we use the word \"not\" to form negative sentences in the simple past tense. The structure depends on the type of verb used in the sentence. (في اللغة الإنجليزية، نستخدم كلمة \"ليس\" لتكوين جمل النفي في زمن الماضي البسيط. تعتمد البنية على نوع الفعل المستخدم في الجملة.)",
+        typesTitle: "Types of Negative Sentences: (أنواع جمل النفي:)",
+        type1: "Negative with \"To Be\" (النفي مع فعل \"يكون\")",
+        type2: "Negative with \"To Have\" (النفي مع فعل \"يملك\")", 
+        type3: "Negative with Other Verbs (النفي مع الأفعال الأخرى)"
+    },
+    toBeNegative: {
+        title: "Negative with \"To Be\" (النفي مع فعل \"يكون\")",
+        conjugation: "Negative Formation with \"To Be\" (تكوين النفي مع فعل \"يكون\")",
+        ruleTitle: "Step-by-Step Process: (الخطوات خطوة بخطوة:)",
+        rule: "With the verb \"to be,\" we simply add \"not\" after the verb to form negative sentences. (مع فعل \"يكون\"، نضيف ببساطة \"ليس\" بعد الفعل لتكوين جمل النفي.)",
+        formula: "Formula: [Subject] + [Was/Were] + \"not\" + [Rest of Sentence] (الصيغة: [الفاعل] + [كان/كانوا] + \"ليس\" + [بقية الجملة])",
+        positive: "Positive (الإيجابية)",
+        negative: "Negative (النفي)",
+        positiveI: "I was a student. (كنت طالباً.)",
+        negativeI: "I was not a student. (لم أكن طالباً.)",
+        positiveYou: "You were my friend. (كنت صديقي.)",
+        negativeYou: "You were not my friend. (لم تكن صديقي.)",
+        positiveHe: "He was a teacher. (كان مدرساً.)",
+        negativeHe: "He was not a teacher. (لم يكن مدرساً.)",
+        positiveShe: "She was happy. (كانت سعيدة.)",
+        negativeShe: "She was not happy. (لم تكن سعيدة.)",
+        positiveWe: "We were here. (كنا هنا.)",
+        negativeWe: "We were not here. (لم نكن هنا.)",
+        positiveThey: "They were students. (كانوا طلاباً.)",
+        negativeThey: "They were not students. (لم يكونوا طلاباً.)",
+        contractionsTitle: "Contractions: (الاختصارات:)",
+        contractionsRule: "In spoken English and informal writing, we often use contractions (short forms) of \"was/were + not\". (في الإنجليزية المحكية والكتابة غير الرسمية، نستخدم غالباً الاختصارات (الأشكال القصيرة) لـ \"كان/كانوا + ليس\".)",
+        contractionExample1: "I wasn't a student. (لم أكن طالباً.)",
+        contractionExample2: "You weren't my friend. (لم تكن صديقي.)",
+        contractionExample3: "He wasn't a teacher. (لم يكن مدرساً.)",
+        contractionExample4: "She wasn't happy. (لم تكن سعيدة.)",
+        contractionExample5: "We weren't here. (لم نكن هنا.)",
+        contractionExample6: "They weren't students. (لم يكونوا طلاباً.)"
+    },
+    toHaveNegative: {
+        title: "Negative with \"To Have\" (النفي مع فعل \"يملك\")",
+        conjugation: "Negative Formation with \"To Have\" (تكوين النفي مع فعل \"يملك\")",
+        ruleTitle: "Step-by-Step Process: (الخطوات خطوة بخطوة:)",
+        rule: "With the verb \"to have,\" we use \"did not\" (didn't) to form negative sentences. (مع فعل \"يملك\"، نستخدم \"لم\" (لم) لتكوين جمل النفي.)",
+        formula: "Formula: [Subject] + \"did not\" + \"have\" + [Rest of Sentence] (الصيغة: [الفاعل] + \"لم\" + \"يملك\" + [بقية الجملة])",
+        positive: "Positive (الإيجابية)",
+        negative: "Negative (النفي)",
+        positiveI: "I had a car. (كان لدي سيارة.)",
+        negativeI: "I did not have a car. (لم يكن لدي سيارة.)",
+        positiveYou: "You had a book. (كان لديك كتاب.)",
+        negativeYou: "You did not have a book. (لم يكن لديك كتاب.)",
+        positiveHe: "He had a cat. (كان لديه قطة.)",
+        negativeHe: "He did not have a cat. (لم يكن لديه قطة.)",
+        positiveShe: "She had a dog. (كان لديها كلب.)",
+        negativeShe: "She did not have a dog. (لم يكن لديها كلب.)",
+        positiveWe: "We had time. (كان لدينا وقت.)",
+        negativeWe: "We did not have time. (لم يكن لدينا وقت.)",
+        positiveThey: "They had money. (كان لديهم مال.)",
+        negativeThey: "They did not have money. (لم يكن لديهم مال.)",
+        contractionsTitle: "Contractions: (الاختصارات:)",
+        contractionsRule: "In spoken English and informal writing, we often use contractions (short forms). (في الإنجليزية المحكية والكتابة غير الرسمية، نستخدم غالباً الاختصارات (الأشكال القصيرة).)",
+        contractionExample1: "I didn't have a car. (لم يكن لدي سيارة.)",
+        contractionExample2: "You didn't have a book. (لم يكن لديك كتاب.)",
+        contractionExample3: "He didn't have a cat. (لم يكن لديه قطة.)",
+        contractionExample4: "She didn't have a dog. (لم يكن لديها كلب.)",
+        contractionExample5: "We didn't have time. (لم يكن لدينا وقت.)",
+        contractionExample6: "They didn't have money. (لم يكن لديهم مال.)"
+    },
+    otherVerbsNegative: {
+        title: "Negative with Other Verbs (النفي مع الأفعال الأخرى)",
+        conjugation: "Negative Formation with Regular and Irregular Verbs (تكوين النفي مع الأفعال المنتظمة والشاذة)",
+        ruleTitle: "Step-by-Step Process: (الخطوات خطوة بخطوة:)",
+        rule: "For all other verbs (not \"to be\" or \"to have\"), we use \"did not\" (didn't) to form negative sentences. (لجميع الأفعال الأخرى (ليس \"يكون\" أو \"يملك\")، نستخدم \"لم\" (لم) لتكوين جمل النفي.)",
+        formula: "Formula: [Subject] + \"did not\" + [Base Form of Verb] + [Rest of Sentence] (الصيغة: [الفاعل] + \"لم\" + [الصيغة الأساسية للفعل] + [بقية الجملة])",
+        doDoesRule: "Use \"did not\" for all subjects (I, you, he, she, it, we, they). (استخدم \"لم\" لجميع الفاعلين (أنا، أنت، هو، هي، هو، نحن، هم).)",
+        positive: "Positive (الإيجابية)",
+        negative: "Negative (النفي)",
+        positiveI: "I worked yesterday. (عملت أمس.)",
+        negativeI: "I did not work yesterday. (لم أعمل أمس.)",
+        positiveYou: "You liked the movie. (أعجبك الفيلم.)",
+        negativeYou: "You did not like the movie. (لم يعجبك الفيلم.)",
+        positiveHe: "He played soccer. (لعب كرة القدم.)",
+        negativeHe: "He did not play soccer. (لم يلعب كرة القدم.)",
+        positiveShe: "She studied English. (درست الإنجليزية.)",
+        negativeShe: "She did not study English. (لم تدرس الإنجليزية.)",
+        positiveWe: "We lived in Paris. (عشنا في باريس.)",
+        negativeWe: "We did not live in Paris. (لم نعش في باريس.)",
+        positiveThey: "They spoke French. (تحدثوا الفرنسية.)",
+        negativeThey: "They did not speak French. (لم يتحدثوا الفرنسية.)",
+        contractionsTitle: "Contractions: (الاختصارات:)",
+        contractionsRule: "In spoken English and informal writing, we often use contractions (short forms). (في الإنجليزية المحكية والكتابة غير الرسمية، نستخدم غالباً الاختصارات (الأشكال القصيرة).)",
+        contractionExample1: "I didn't work yesterday. (لم أعمل أمس.)",
+        contractionExample2: "You didn't like the movie. (لم يعجبك الفيلم.)",
+        contractionExample3: "He didn't play soccer. (لم يلعب كرة القدم.)",
+        contractionExample4: "She didn't study English. (لم تدرس الإنجليزية.)",
+        contractionExample5: "We didn't live in Paris. (لم نعش في باريس.)",
+        contractionExample6: "They didn't speak French. (لم يتحدثوا الفرنسية.)",
+        irregularTitle: "Negative with Irregular Verbs: (النفي مع الأفعال الشاذة:)",
+        irregularRule: "Even with irregular verbs, we still use \"did not\" to form negatives, and the main verb stays in its base form. (حتى مع الأفعال الشاذة، لا نزال نستخدم \"لم\" لتكوين النفي، ويبقى الفعل الرئيسي في صيغته الأساسية.)",
+        irregularExample1: "I didn't go to the gym yesterday. (go → went in statements) (لم أذهب إلى الصالة الرياضية أمس. (يذهب → ذهب في الجمل الخبرية))",
+        irregularExample2: "She didn't do her homework. (do → did in statements) (لم تفعل واجباتها المدرسية. (يفعل → فعل في الجمل الخبرية))", 
+        irregularExample3: "They didn't have classes yesterday. (have → had in statements) (لم يكن لديهم حصص أمس. (يملك → امتلك في الجمل الخبرية))"
+    },
+    passive: {
+        title: "Passive Voice in Simple Past (المبني للمجهول في الماضي البسيط)",
+        whatIs: "What is Passive Voice? (ما هو المبني للمجهول؟)",
+        definitionTitle: "Definition: (التعريف:)",
+        definition: "In passive voice, the subject receives the action rather than performing it. We use passive voice when the doer of the action is unknown, unimportant, or obvious from context. (في المبني للمجهول، يتلقى الفاعل الفعل بدلاً من تنفيذه. نستخدم المبني للمجهول عندما يكون فاعل الفعل مجهولاً، غير مهم، أو واضحاً من السياق.)",
+        structureTitle: "Structure of Passive Voice: (بنية المبني للمجهول:)",
+        structureRule: "Formula: [Subject] + [was/were] + [Past Participle] + [by + agent (optional)] (الصيغة: [الفاعل] + [كان/كانوا] + [التصريف الثالث للفعل] + [بواسطة + الفاعل (اختياري)])",
+        structureExample: "Example: \"The book was read by students.\" (مثال: \"الكتاب قُرئ من قبل الطلاب.\")",
+        formationTitle: "Forming Passive Voice: (تكوين المبني للمجهول:)",
+        formationRule: "To form passive voice in simple past tense, use the appropriate form of \"to be\" (was/were) followed by the past participle of the main verb. (لتكوين المبني للمجهول في زمن الماضي البسيط، استخدم الصيغة المناسبة لـ \"يكون\" (كان/كانوا) متبوعة بالتصريف الثالث للفعل الرئيسي.)",
+        active: "Active Voice (المبني للمعلوم)",
+        passive: "Passive Voice (المبني للمجهول)",
+        activeExample1: "I wrote a letter. (كتبت رسالة.)",
+        passiveExample1: "A letter was written by me. (كُتبت رسالة من قبلي.)",
+        activeExample2: "You cleaned the room. (نظفت الغرفة.)",
+        passiveExample2: "The room was cleaned by you. (نُظفت الغرفة من قبلك.)",
+        activeExample3: "He fixed the car. (أصلح السيارة.)",
+        passiveExample3: "The car was fixed by him. (أُصلحت السيارة من قبله.)",
+        activeExample4: "She taught the students. (درست الطلاب.)",
+        passiveExample4: "The students were taught by her. (دُرّس الطلاب من قبلها.)",
+        activeExample5: "We built houses. (بنينا منازل.)",
+        passiveExample5: "Houses were built by us. (بُنيت منازل من قبلنا.)",
+        activeExample6: "They sold fruits. (باعوا فواكه.)",
+        passiveExample6: "Fruits were sold by them. (بِيعت فواكه من قبلهم.)",
+        negativeTitle: "Negative Passive Voice: (المبني للمجهول المنفي:)",
+        negativeRule: "To form negative passive voice, add \"not\" after \"was/were\". (لتكوين المبني للمجهول المنفي، أضف \"ليس\" بعد \"كان/كانوا\".)",
+        negativeExample1: "The book was not read by students. (الكتاب لم يُقرأ من قبل الطلاب.)",
+        negativeExample2: "The car was not fixed by him. (السيارة لم تُصلح من قبله.)",
+        negativeExample3: "The students were not taught by her. (الطلاب لم يُدرسوا من قبلها.)",
+        questionTitle: "Question Form in Passive Voice: (صيغة السؤال في المبني للمجهول:)",
+        questionRule: "To form questions in passive voice, invert the subject and \"was/were\". (لتكوين الأسئلة في المبني للمجهول، اقلب الفاعل و\"كان/كانوا\".)",
+        questionExample1: "Was the book read by students? (هل قُرئ الكتاب من قبل الطلاب؟)",
+        questionExample2: "Was the car fixed by him? (هل أُصلحت السيارة من قبله؟)",
+        questionExample3: "Were the students taught by her? (هل دُرّس الطلاب من قبلها؟)"
+    },
+    idioms: {
+        title: "Common Past Tense Idioms (التعابير الاصطلاحية الشائعة في الماضي)",
+        whatAre: "What Are Idioms? (ما هي التعابير الاصطلاحية؟)",
+        definitionTitle: "Definition: (التعريف:)",
+        definition: "Idioms are expressions whose meanings cannot be understood from the literal definitions of the words that make them up. They often use the simple past tense to express completed actions or past experiences. (التعابير الاصطلاحية هي تعابير لا يمكن فهم معانيها من التعريفات الحرفية للكلمات التي تتكون منها. غالباً ما تستخدم زمن الماضي البسيط للتعبير عن الإجراءات المكتملة أو التجارب الماضية.)",
+        commonIdiomsTitle: "Common Past Tense Idioms: (التعابير الاصطلاحية الشائعة في الماضي:)",
+        idiom: "Idiom (التعبير الاصطلاحي)",
+        meaning: "Meaning (المعنى)",
+        example: "Example (مثال)",
+        biteTheBullet: "Bite the bullet (يبتلع المر)",
+        biteTheBulletMeaning: "Endure a painful experience (تحمل تجربة مؤلمة)",
+        biteTheBulletExample: "\"I bit the bullet and told my boss about the mistake.\" (\"ابتلعت المر وأخبرت مديري عن الخطأ.\")",
+        burnTheMidnightOil: "Burn the midnight oil (يحترق زيت منتصف الليل)",
+        burnTheMidnightOilMeaning: "Work late into the night (العمل حتى وقت متأخر من الليل)",
+        burnTheMidnightOilExample: "\"She burned the midnight oil to finish the project.\" (\"أحرقت زيت منتصف الليل لإنهاء المشروع.\")",
+        hitTheRoad: "Hit the road (يضرب الطريق)",
+        hitTheRoadMeaning: "Begin a journey (بدء رحلة)",
+        hitTheRoadExample: "\"We hit the road early in the morning.\" (\"ضربنا الطريق في الصباح الباكر.\")",
+        letTheCatOutOfTheBag: "Let the cat out of the bag (أطلق القط من الحقيبة)",
+        letTheCatOutOfTheBagMeaning: "Reveal a secret (الكشف عن سر)",
+        letTheCatOutOfTheBagExample: "\"He let the cat out of the bag about the surprise party.\" (\"أطلق القط من الحقيبة حول حفلة المفاجأة.\")",
+        spillTheBeans: "Spill the beans (يسكب الفاصوليا)",
+        spillTheBeansMeaning: "Reveal secret information (الكشف عن معلومات سرية)",
+        spillTheBeansExample: "\"She spilled the beans about their relationship.\" (\"سكبت الفاصوليا حول علاقتهم.\")",
+        breakTheIce: "Break the ice (يكسر الجليد)",
+        breakTheIceMeaning: "Make people feel more comfortable (جعل الناس يشعرون براحة أكثر)",
+        breakTheIceExample: "\"He told a joke to break the ice at the meeting.\" (\"قال نكتة لكسر الجليد في الاجتماع.\")",
+        usageTitle: "Using Past Tense Idioms in Sentences: (استخدام التعابير الاصطلاحية في الماضي في الجمل:)",
+        usageRule: "Past tense idioms are typically used to describe completed actions or experiences in the past. (عادة ما تستخدم التعابير الاصطلاحية في الماضي لوصف الإجراءات المكتملة أو التجارب في الماضي.)",
+        usageExample1: "\"I bit the bullet and went to the dentist yesterday.\" (\"ابتلعت المر وذهبت إلى طبيب الأسنان أمس.\")",
+        usageExample2: "\"She burned the midnight oil to study for her exam.\" (\"أحرقت زيت منتصف الليل لدراسة امتحانها.\")",
+        usageExample3: "\"They hit the road as soon as the sun rose.\" (\"ضربوا الطريق بمجرد شروق الشمس.\")"
+    },
+    exercises: {
+        title: "Practice Exercises (تمارين التدريب)",
+        q1: "Choose the correct negative form: (اختر صيغة النفي الصحيحة:)",
+        q1Sentence: "She ______ a doctor last year. (هي ______ طبيبة العام الماضي.)",
+        q1a: "was not (لم تكن)",
+        q1b: "did not (لم)", 
+        q1c: "not was (ليس كانت)",
+        q2: "Choose the correct negative form: (اختر صيغة النفي الصحيحة:)",
+        q2Sentence: "They ______ coffee yesterday. (هم ______ القهوة أمس.)",
+        q2a: "didn't drink (لم يشربوا)",
+        q2b: "didn't drank (لم شربوا)",
+        q2c: "not drank (ليس شربوا)",
+        q3: "Choose the correct passive form: (اختر صيغة المبني للمجهول الصحيحة:)",
+        q3Sentence: "The book ______ by students yesterday. (الكتاب ______ من قبل الطلاب أمس.)",
+        q3a: "was read (قُرئ)",
+        q3b: "read (قرأ)",
+        q3c: "was reading (كان يقرأ)",
+        q4: "Choose the correct idiom meaning: (اختر المعنى الصحيح للتعبير الاصطلاحي:)",
+        q4Sentence: "\"Bite the bullet\" means: (\"يبتلع المر\" يعني:)",
+        q4a: "Eat something hard (أكل شيء صلب)",
+        q4b: "Endure a painful experience (تحمل تجربة مؤلمة)",
+        q4c: "Break something with teeth (كسر شيء بالأسنان)",
+        q5: "Choose the correct negative passive form: (اختر صيغة المبني للمجهول المنفي الصحيحة:)",
+        q5Sentence: "The car ______ by him yesterday. (السيارة ______ من قبله أمس.)",
+        q5a: "was not fixed (لم تُصلح)",
+        q5b: "didn't fix (لم يصلح)",
+        q5c: "not fixed (ليس مُصلحة)",
+        q6: "Choose the correct idiom meaning: (اختر المعنى الصحيح للتعبير الاصطلاحي:)",
+        q6Sentence: "\"Spill the beans\" means: (\"يسكب الفاصوليا\" يعني:)",
+        q6a: "Reveal secret information (الكشف عن معلومات سرية)",
+        q6b: "Drop food on the floor (إسقاط الطعام على الأرض)",
+        q6c: "Cook beans (طبخ الفاصوليا)",
+        q7: "Complete the negative sentence: (أكمل جملة النفي:)",
+        q7Sentence: "I ______ (not/like) the movie yesterday. (أنا ______ (لا/أعجب) الفيلم أمس.)",
+        q8: "Complete the passive sentence: (أكمل جملة المبني للمجهول:)",
+        q8Sentence: "The house ______ (build) last year. (المنزل ______ (يبني) العام الماضي.)",
+        q9: "Complete the negative passive sentence: (أكمل جملة المبني للمجهول المنفي:)",
+        q9Sentence: "The letter ______ (not/send) yesterday. (الرسالة ______ (لا/يرسل) أمس.)",
+        q10: "Arrange the words to form a correct negative sentence: (رتب الكلمات لتشكيل جملة نفي صحيحة:)",
+        q11: "Arrange the words to form a correct passive sentence: (رتب الكلمات لتشكيل جملة مبني للمجهول صحيحة:)",
+        q12: "Arrange the words to form a sentence with an idiom: (رتب الكلمات لتشكيل جملة بتعبير اصطلاحي:)"
+    },
+    backToPart2: "Back to Simple Past Part 2 (العودة إلى الماضي البسيط الجزء 2)"
 },
 	// Footer
 	footer: {

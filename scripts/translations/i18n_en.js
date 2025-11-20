@@ -31,7 +31,6 @@ window.I18N['en'] = {
 		comingSoon: "Coming Soon",
 		mainPage: "Main Page"
 	},
-    
     // Navigation
     nav: {
         home: "Home",
@@ -40,7 +39,6 @@ window.I18N['en'] = {
         speaking: "Speaking",
         games: "Games"
 	},
-    
     // Main page
     main: {
         title: "English Hub",
@@ -60,7 +58,6 @@ window.I18N['en'] = {
         explore: "Explore Now",
         comingSoon: "Coming Soon"
 	},
-	
     // Workplace lesson
     workplace: {
         title: "Navigating the Workplace",
@@ -97,22 +94,18 @@ window.I18N['en'] = {
             q1a: "Receptionist",
             q1b: "Marketing Assistant",
             q1c: "HR Manager",
-            
             q2: "How long has Maria been in the country?",
             q2a: "One week",
             q2b: "Three months",
             q2c: "One year",
-            
             q3: "What did Maria review while waiting in the lobby?",
             q3a: "A magazine",
             q3b: "The employee handbook",
             q3c: "Her passport",
-            
             q4: "What is the name of the collaborative platform used at the company?",
             q4a: "TeamSpace",
             q4b: "WorkSpace",
             q4c: "OfficeConnect",
-            
             q5: "How did Maria feel at the end of her first day?",
             q5a: "Frustrated and confused",
             q5b: "Tired but accomplished",
@@ -123,22 +116,18 @@ window.I18N['en'] = {
             receptionist_pron: "/rɪˈsɛpʃənɪst/",
             receptionist_def: "A person who greets visitors and answers the telephone in an office",
             receptionist_ex: "\"The receptionist directed Maria to the waiting area.\"",
-            
             policy: "Policy",
             policy_pron: "/ˈpɒlɪsi/",
             policy_def: "A set of ideas or plans used as a basis for making decisions",
             policy_ex: "\"Maria reviewed the company policies in the employee handbook.\"",
-            
             flex_time: "Flex Time",
             flex_time_pron: "/flɛks taɪm/",
             flex_time_def: "A system that allows employees to choose their own working hours",
             flex_time_ex: "\"The company offers flex time, so employees can adjust their schedules.\"",
-            
             collaborative: "Collaborative",
             collaborative_pron: "/kəˈlæbərətɪv/",
             collaborative_def: "Involving two or more people working together for a common purpose",
             collaborative_ex: "\"They use a collaborative platform for all their projects.\"",
-            
             diligently: "Diligently",
             diligently_pron: "/ˈdɪlɪdʒəntli/",
             diligently_def: "In a way that shows care and conscientiousness in one's work or duties",
@@ -188,22 +177,18 @@ window.I18N['en'] = {
 			q1a: "A fairy",
 			q1b: "A tree",
 			q1c: "An animal",
-			
 			q2: "How did Sarah feel when she got the part of the tree?",
 			q2a: "Excited",
 			q2b: "Disappointed",
 			q2c: "Happy",
-			
 			q3: "What did Mrs. Johnson say about the tree's role?",
 			q3a: "It was the most important part",
 			q3b: "It set the scene for the whole play",
 			q3c: "It was the easiest part",
-			
 			q4: "What did Sarah do to make her tree role better?",
 			q4a: "She added a little sway when the wind blew",
 			q4b: "She asked to change her part",
 			q4c: "She decided to quit the play",
-			
 			q5: "What did Sarah learn from this experience?",
 			q5a: "That being a tree is boring",
 			q5b: "That every part in a play is important",
@@ -214,22 +199,18 @@ window.I18N['en'] = {
 			rehearsal_pron: "/rɪˈhɜːrsəl/",
 			rehearsal_def: "A practice session for a performance",
 			rehearsal_ex: "\"The cast had a rehearsal every day after school.\"",
-			
 			role: "Role",
 			role_pron: "/roʊl/",
 			role_def: "The part played by a performer in a play",
 			role_ex: "\"Sarah's role was a tree in the school play.\"",
-			
 			costume: "Costume",
 			costume_pron: "/ˈkɑːstuːm/",
 			costume_def: "Clothes worn by an actor to look like a character",
 			costume_ex: "\"Sarah wore a brown and green costume for her tree role.\"",
-			
 			teamwork: "Teamwork",
 			teamwork_pron: "/ˈtiːmwɜːrk/",
 			teamwork_def: "Working together as a group to achieve something",
 			teamwork_ex: "\"The play required teamwork from all the students.\"",
-			
 			confidence: "Confidence",
 			confidence_pron: "/ˈkɑːnfɪdəns/",
 			confidence_def: "Feeling sure about your own abilities",
@@ -285,22 +266,18 @@ window.I18N['en'] = {
 			q1a: "A school assignment",
 			q1b: "Seeing an empty lot and remembering his grandmother's garden",
 			q1c: "Watching a gardening show on TV",
-			
 			q2: "Who did Leo ask for help with the garden project?",
 			q2a: "Only his friends Maya and Sam",
 			q2b: "His friends and their teacher Mr. Chen",
 			q2c: "Just his family members",
-			
 			q3: "What problem did they discover in the garden?",
 			q3a: "Animals were eating the plants",
 			q3b: "The sprinklers weren't working properly",
 			q3c: "There weren't enough volunteers",
-			
 			q4: "How did the garden change the neighborhood?",
 			q4a: "It made the neighborhood more crowded",
 			q4b: "It created a sense of community and brought neighbors together",
 			q4c: "It caused arguments about who owned the vegetables",
-			
 			q5: "What did Leo learn from this experience?",
 			q5a: "That gardening is too much work",
 			q5b: "That working together can create something wonderful for everyone",
@@ -311,22 +288,18 @@ window.I18N['en'] = {
 			community_pron: "/kəˈmjuːnɪti/",
 			community_def: "A group of people living in the same area or having a particular characteristic in common",
 			community_ex: "\"The whole community worked together on the garden project.\"",
-			
 			volunteer: "Volunteer",
 			volunteer_pron: "/ˌvɒlənˈtɪər/",
 			volunteer_def: "A person who freely offers to do something without being paid",
 			volunteer_ex: "\"Many volunteers helped clean up the empty lot.\"",
-			
 			sprout: "Sprout",
 			sprout_pron: "/spraʊt/",
 			sprout_def: "A new growth of a plant",
 			sprout_ex: "\"Leo loved watching the tiny green sprouts push through the soil.\"",
-			
 			responsibility: "Responsibility",
 			responsibility_pron: "/rɪˌspɒnsəˈbɪlɪti/",
 			responsibility_def: "A duty or task that you are required or expected to do",
 			responsibility_ex: "\"Each family had the responsibility to care for their garden plot.\"",
-			
 			harvest: "Harvest",
 			harvest_pron: "/ˈhɑːvɪst/",
 			harvest_def: "The process of gathering mature crops from the fields",
@@ -383,22 +356,18 @@ window.I18N['en'] = {
 			q1a: "A budget spreadsheet",
 			q1b: "A shopping list and meal plan",
 			q1c: "A map of the supermarket",
-			
 			q2: "Which section did Omar start with in the supermarket?",
 			q2a: "The dairy section",
 			q2b: "The produce section",
 			q2c: "The meat counter",
-			
 			q3: "What did Omar use his phone for while shopping?",
 			q3a: "To look up pictures of unfamiliar foods",
 			q3b: "To call a friend for advice",
 			q3c: "To calculate his total spending",
-			
 			q4: "Who did Omar ask for help in the meat section?",
 			q4a: "Another customer",
 			q4b: "The butcher",
 			q4c: "The store manager",
-			
 			q5: "How did Omar feel after completing his shopping?",
 			q5a: "Frustrated and confused",
 			q5b: "Proud and successful",
@@ -409,22 +378,18 @@ window.I18N['en'] = {
 			produce_pron: "/prəˈdjuːs/",
 			produce_def: "Fresh fruits and vegetables",
 			produce_ex: "\"Omar started his shopping in the produce section.\"",
-			
 			ingredients: "Ingredients",
 			ingredients_pron: "/ɪnˈɡriːdiənts/",
 			ingredients_def: "Items used in preparing a dish or meal",
 			ingredients_ex: "\"Omar bought all the ingredients for his planned meals.\"",
-			
 			butcher: "Butcher",
 			butcher_pron: "/ˈbʊtʃər/",
 			butcher_def: "A person who sells meat",
 			butcher_ex: "\"The butcher helped Omar find the chicken breasts.\"",
-			
 			unit_price: "Unit Price",
 			unit_price_pron: "/ˈjuːnɪt praɪs/",
 			unit_price_def: "The price per standard unit of measurement",
 			unit_price_ex: "\"Omar compared unit prices to get the best value.\"",
-			
 			checkout: "Checkout",
 			checkout_pron: "/ˈtʃekaʊt/",
 			checkout_def: "The place where customers pay for their purchases",
@@ -445,7 +410,6 @@ window.I18N['en'] = {
 			}
 		}
 	},
-	
     // Healthcare Navigation lesson
     healthcare: {
         title: "Healthcare Navigation",
@@ -482,22 +446,18 @@ window.I18N['en'] = {
             q1a: "For a routine check-up",
             q1b: "He had a cough and fever",
             q1c: "To get a vaccination",
-            
             q2: "What did the receptionist ask for when Carlos arrived?",
             q2a: "Only his name",
             q2b: "Health insurance and identification",
             q2c: "Payment in advance",
-            
             q3: "What did the nurse do before Carlos saw the doctor?",
             q3a: "Gave him medication",
             q3b: "Took his temperature and blood pressure",
             q3c: "Scheduled his next appointment",
-            
             q4: "What was Dr. Thompson's diagnosis?",
             q4a: "A common cold",
             q4b: "A respiratory infection",
             q4c: "Allergies",
-            
             q5: "What advice did Dr. Thompson give Carlos besides taking antibiotics?",
             q5a: "To exercise more",
             q5b: "To rest and drink fluids",
@@ -508,22 +468,18 @@ window.I18N['en'] = {
             clinic_pron: "/ˈklɪnɪk/",
             clinic_def: "A healthcare facility for outpatient care",
             clinic_ex: "\"Carlos visited the clinic for his appointment.\"",
-            
             symptoms: "Symptoms",
             symptoms_pron: "/ˈsɪmptəmz/",
             symptoms_def: "Signs of illness or disease",
             symptoms_ex: "\"Carlos described his symptoms to the doctor.\"",
-            
             prescription: "Prescription",
             prescription_pron: "/prɪˈskrɪpʃən/",
             prescription_def: "A doctor's written order for medication",
             prescription_ex: "\"Dr. Thompson wrote a prescription for antibiotics.\"",
-            
             pharmacist: "Pharmacist",
             pharmacist_pron: "/ˈfɑːrməsɪst/",
             pharmacist_def: "A healthcare professional who dispenses medication",
             pharmacist_ex: "\"The pharmacist explained how to take the medicine.\"",
-            
             antibiotics: "Antibiotics",
             antibiotics_pron: "/ˌæntibaɪˈɒtɪks/",
             antibiotics_def: "Medications that treat bacterial infections",
@@ -547,7 +503,6 @@ window.I18N['en'] = {
 			}
 		}
 	},
-	
     // Transport lesson
     transport: {
         title: "Public Transportation",
@@ -584,22 +539,18 @@ window.I18N['en'] = {
             q1a: "Excited and overwhelmed",
             q1b: "Bored and uninterested",
             q1c: "Confident and prepared",
-            
             q2: "What did the station attendant tell Anya to do?",
             q2a: "Take the Red Line",
             q2b: "Take the Blue Line and transfer to Green Line",
             q2c: "Take a bus",
-            
             q3: "What type of ticket did Anya decide to buy?",
             q3a: "Single ride",
             q3b: "Day pass",
             q3c: "Monthly pass",
-            
             q4: "What did Anya observe on the platform?",
             q4a: "The cleanliness of the station",
             q4b: "Electronic signs with arrival times",
             q4c: "The advertisements",
-            
             q5: "How did Anya feel by the end of the week?",
             q5a: "Still confused",
             q5b: "Like a local",
@@ -610,22 +561,18 @@ window.I18N['en'] = {
             metro_pron: "/ˈmɛtroʊ/",
             metro_def: "An underground railway system in a city",
             metro_ex: "\"Anya studied the metro map to find her route.\"",
-            
             transit_card: "Transit Card",
             transit_card_pron: "/ˈtrænzɪt kɑrd/",
             transit_card_def: "A card used to pay for public transportation",
             transit_card_ex: "\"Anya bought a transit card and loaded it with credit.\"",
-            
             transfer: "Transfer",
             transfer_pron: "/ˈtrænsfər/",
             transfer_def: "To change from one vehicle to another in the course of a journey",
             transfer_ex: "\"She needed to transfer from the Blue Line to the Green Line.\"",
-            
             commute: "Commute",
             commute_pron: "/kəˈmjuːt/",
             commute_def: "The journey to and from work",
             commute_ex: "\"The monthly pass was most economical for her daily commute.\"",
-            
             validate: "Validate",
             validate_pron: "/ˈvælɪdeɪt/",
             validate_def: "To confirm or check the validity of something, such as a ticket",
@@ -646,7 +593,6 @@ window.I18N['en'] = {
 			}
 		}
 	},
-	
 	// Banking lesson
 	banking: {
 		title: "Banking and Financial Basics",
@@ -683,22 +629,18 @@ window.I18N['en'] = {
 			q1a: "To get a credit card",
 			q1b: "Her cash was running low and she needed a secure place for her money",
 			q1c: "To get a job at the bank",
-			
 			q2: "What type of account did Mr. Chen recommend for Li?",
 			q2a: "A business account",
 			q2b: "A student account with no monthly fees",
 			q2c: "A premium account with high fees",
-			
 			q3: "What documents did Li need to provide to open the account?",
 			q3a: "Only her passport",
 			q3b: "Her passport, student visa, and proof of address",
 			q3c: "Only her student ID",
-			
 			q4: "What was the minimum initial deposit required?",
 			q4a: "$100",
 			q4b: "$25",
 			q4c: "$50",
-			
 			q5: "How did Li feel after opening her bank account?",
 			q5a: "Confused and overwhelmed",
 			q5b: "Relieved and more confident",
@@ -709,22 +651,18 @@ window.I18N['en'] = {
 			account_pron: "/əˈkaʊnt/",
 			account_def: "A record of financial transactions with a bank",
 			account_ex: "\"Li opened a checking account at the bank.\"",
-			
 			deposit: "Deposit",
 			deposit_pron: "/dɪˈpɒzɪt/",
 			deposit_def: "Money placed into a bank account",
 			deposit_ex: "\"She made an initial deposit of $25 to activate her account.\"",
-			
 			debit_card: "Debit Card",
 			debit_card_pron: "/ˈdɛbɪt kɑːrd/",
 			debit_card_def: "A card that allows you to make electronic payments from your bank account",
 			debit_card_ex: "\"Li received her temporary debit card at the bank.\"",
-			
 			interest: "Interest",
 			interest_pron: "/ˈɪntrəst/",
 			interest_def: "Money paid regularly at a particular rate for the use of money lent",
 			interest_ex: "\"The savings account earns interest on the money deposited.\"",
-			
 			statement: "Statement",
 			statement_pron: "/ˈsteɪtmənt/",
 			statement_def: "A summary of financial transactions during a specific period",
@@ -745,7 +683,6 @@ window.I18N['en'] = {
 			}
 		}
 	},
-	
 	// Apartment lesson
 	apartment: {
 		title: "Finding an Apartment",
@@ -782,22 +719,18 @@ window.I18N['en'] = {
 			q1a: "With a friend",
 			q1b: "In a temporary hostel",
 			q1c: "At a hotel",
-			
 			q2: "What was Ahmed's monthly budget for rent?",
 			q2a: "$1000",
 			q2b: "$1200",
 			q2c: "$1300",
-			
 			q3: "What was wrong with the first apartment Ahmed visited?",
 			q3a: "It was too expensive",
 			q3b: "It had a view of another building's wall",
 			q3c: "It was too far from public transportation",
-			
 			q4: "Who told Ahmed about the neighborhood website?",
 			q4a: "His landlord",
 			q4b: "His coworker Maria",
 			q4c: "A real estate agent",
-			
 			q5: "What was the rent for the apartment Ahmed finally chose?",
 			q5a: "$1100 plus utilities",
 			q5b: "$1150 including utilities",
@@ -808,22 +741,18 @@ window.I18N['en'] = {
 			rental_pron: "/ˈrɛntl/",
 			rental_def: "Related to property that is rented rather than owned",
 			rental_ex: "\"Ahmed looked at rental websites to find an apartment.\"",
-			
 			utilities: "Utilities",
 			utilities_pron: "/juːˈtɪlɪtiz/",
 			utilities_def: "Basic services like electricity, water, and gas",
 			utilities_ex: "\"The rent was $1100 plus utilities.\"",
-			
 			landlord: "Landlord",
 			landlord_pron: "/ˈlændlɔːrd/",
 			landlord_def: "A person who owns and rents out property",
 			landlord_ex: "\"The landlord showed Ahmed the apartment.\"",
-			
 			lease: "Lease",
 			lease_pron: "/liːs/",
 			lease_def: "A legal contract for renting property",
 			lease_ex: "\"Ahmed signed the lease agreement for his new apartment.\"",
-			
 			budget: "Budget",
 			budget_pron: "/ˈbʌdʒɪt/",
 			budget_def: "A plan for how much money to spend on something",
@@ -879,22 +808,18 @@ window.I18N['en'] = {
 			q1a: "Excited and happy",
 			q1b: "Nervous and unfamiliar",
 			q1c: "Angry and frustrated",
-			
 			q2: "What did Sam do during the morning in his new classroom?",
 			q2a: "He talked to everyone",
 			q2b: "He sat quietly and watched the other children",
 			q2c: "He played soccer",
-			
 			q3: "Who approached Sam at recess?",
 			q3a: "The teacher",
 			q3b: "A boy named Leo",
 			q3c: "No one",
-			
 			q4: "What did Sam and Leo have in common?",
 			q4a: "They were in the same class last year",
 			q4b: "They liked the same video games and superheroes",
 			q4c: "They lived in the same neighborhood",
-			
 			q5: "What did Sam learn about making new friends?",
 			q5a: "It's very hard and not worth it",
 			q5b: "Being yourself and open to new experiences can lead to friendships",
@@ -905,22 +830,18 @@ window.I18N['en'] = {
 			nervous_pron: "/ˈnɜːrvəs/",
 			nervous_def: "Feeling worried or slightly afraid",
 			nervous_ex: "\"Sam felt nervous on his first day at a new school.\"",
-			
 			unfamiliar: "Unfamiliar",
 			unfamiliar_pron: "/ˌʌnfəˈmɪliər/",
 			unfamiliar_def: "Not known or recognized",
 			unfamiliar_ex: "\"The new city was unfamiliar to Sam.\"",
-			
 			recess: "Recess",
 			recess_pron: "/ˈriːses/",
 			recess_def: "A break period between classes at school",
 			recess_ex: "\"The children played outside during recess.\"",
-			
 			comfortable: "Comfortable",
 			comfortable_pron: "/ˈkʌmftəbl/",
 			comfortable_def: "Feeling relaxed and at ease",
 			comfortable_ex: "\"Sam started to feel more comfortable after playing soccer.\"",
-			
 			friendship: "Friendship",
 			friendship_pron: "/ˈfrendʃɪp/",
 			friendship_def: "A relationship between friends",
@@ -941,7 +862,6 @@ window.I18N['en'] = {
 			}
 		}
 	},
-	
 	// Science Fair lesson
 	scienceFair: {
 		title: "The Science Fair Challenge",
@@ -978,22 +898,18 @@ window.I18N['en'] = {
 			q1a: "Space Exploration",
 			q1b: "Environmental Solutions",
 			q1c: "Animal Habitats",
-			
 			q2: "What problem did Alex encounter when building his prototype?",
 			q2a: "The water leaked and looked cloudy",
 			q2b: "He couldn't find the right materials",
 			q2c: "His filter worked perfectly on the first try",
-			
 			q3: "What did Mr. Rodriguez teach Alex about science?",
 			q3a: "It's about getting everything right the first time",
 			q3b: "It's about learning from mistakes and trying again",
 			q3c: "Only smart people can be good at science",
-			
 			q4: "What materials did Alex use in his water filtration system?",
 			q4a: "Plastic bottles and chemicals",
 			q4b: "Sand, gravel, and charcoal",
 			q4c: "Metal filters and electric pumps",
-			
 			q5: "What was the most important thing Alex discovered through this experience?",
 			q5a: "That winning is the most important part of science fairs",
 			q5b: "That science is a way of exploring and understanding the world",
@@ -1004,22 +920,18 @@ window.I18N['en'] = {
 			prototype_pron: "/ˈproʊtətaɪp/",
 			prototype_def: "A first or preliminary model of something",
 			prototype_ex: "\"Alex built a prototype of his water filtration system.\"",
-			
 			filtration: "Filtration",
 			filtration_pron: "/fɪlˈtreɪʃən/",
 			filtration_def: "The process of removing solid particles from a liquid or gas",
 			filtration_ex: "\"The filtration system made the dirty water clean.\"",
-			
 			environmental: "Environmental",
 			environmental_pron: "/ɪnˌvaɪrənˈmentl/",
 			environmental_def: "Relating to the natural world and the impact of human activity on it",
 			environmental_ex: "\"The science fair theme was environmental solutions.\"",
-			
 			scientific_method: "Scientific Method",
 			scientific_method_pron: "/ˌsaɪənˈtɪfɪk ˈmeθəd/",
 			scientific_method_def: "A systematic approach to research involving observation, hypothesis, experimentation, and conclusion",
 			scientific_method_ex: "\"Alex used the scientific method to improve his project.\"",
-			
 			documentation: "Documentation",
 			documentation_pron: "/ˌdɑːkjumenˈteɪʃən/",
 			documentation_def: "Material that provides official information or evidence",
@@ -1040,7 +952,6 @@ window.I18N['en'] = {
 			}
 		}
 	},
-	
 	// The Lost Pet Adventure
 	lostPet: {
 		title: "The Lost Pet Adventure",
@@ -1127,7 +1038,6 @@ window.I18N['en'] = {
 			p5: "\"I'm so happy to have found you!\""
 		}
 	},
-	
     // Dashboard
     dashboard: {
         title: "Communication Skills",
@@ -1137,7 +1047,6 @@ window.I18N['en'] = {
         pronunciation: "Speaking Skills",
         other: "Communication Games"
 	},
-    
     // Courses
     courses: {
 		header: "Courses",
@@ -1202,13 +1111,11 @@ window.I18N['en'] = {
 			]
 		}
 	},
-    
     // Reading Adventures page
     readingAdventures: {
         title: "Reading Adventures",
         subtitle: "Improve your reading skills through engaging stories for all ages!",
         intro: "Welcome to Reading Adventures! This platform offers reading materials for both elementary school students (ages 8-15) and young adult workers (ages 18-30). Explore stories based on real-life situations that match your age group and interests while developing your reading skills through engaging activities.",
-        
         elementary: {
             title: "For Elementary School Students (8-15 years)",
             subtitle: "Fun stories about school life, friendships, and adventures!",
@@ -1235,7 +1142,6 @@ window.I18N['en'] = {
 				}
 			}
 		},
-        
         youngAdults: {
             title: "For Young Adult Workers (18-30 years)",
             subtitle: "Practical stories about work, daily life, and adapting to new environments!",
@@ -1270,53 +1176,38 @@ window.I18N['en'] = {
 	conjugation: {
 		title: "Verb Conjugation",
 		subtitle: "Master English verb tenses, modals, and modes",
-		
 		simpleTenses: "Simple Tenses",
 		simpleTensesDescription: "Learn the basic verb tenses used in everyday English communication.",
-		
 		simplePresent: "Simple Present",
 		simplePresentDescription: "Express habits, general truths, and fixed arrangements.",
-		
 		simplePast: "Simple Past",
 		simplePastDescription: "Talk about completed actions in the past.",
-		
 		simpleFuture: "Simple Future",
 		simpleFutureDescription: "Express predictions, promises, and spontaneous decisions.",
-		
 		progressiveTenses: "Progressive Tenses",
 		progressiveTensesDescription: "Express ongoing actions at specific times.",
-		
 		presentProgressive: "Present Progressive",
 		presentProgressiveDescription: "Describe actions happening now or around now.",
-		
 		pastProgressive: "Past Progressive",
 		pastProgressiveDescription: "Describe ongoing actions in the past.",
-		
 		futureProgressive: "Future Progressive",
 		futureProgressiveDescription: "Describe ongoing actions in the future.",
-		
 		perfectTenses: "Perfect Tenses",
 		perfectTensesDescription: "Express completed actions with relevance to other time frames.",
-		
 		presentPerfect: "Present Perfect",
 		presentPerfectDescription: "Connect past actions to the present.",
-		
 		pastPerfect: "Past Perfect",
 		pastPerfectDescription: "Express actions completed before another past action.",
-		
 		futurePerfect: "Future Perfect",
 		futurePerfectDescription: "Express actions that will be completed before a future time.",
-		
 		modalVerbs: "Modal Verbs",
 		modalVerbsDescription: "Express ability, possibility, permission, or obligation.",
-		
 		conditionalMood: "Conditional Mood",
 		conditionalMoodDescription: "Express hypothetical situations and their consequences."
 	},
     simplePresent: {
 		title: "Simple Present Tense: Generality",
 		subtitle: "Master the basic verb tense for habits, facts, and general truths",
-		
 		introduction: {
 			title: "Introduction to Simple Present",
 			whatIs: "What is the Simple Present Tense?",
@@ -1332,7 +1223,6 @@ window.I18N['en'] = {
 			example3: "The train leaves at 5 PM.",
 			example4: "She likes coffee."
 		},
-		
 		toBe: {
 			title: "The Verb \"To Be\"",
 			conjugation: "Conjugation of \"To Be\"",
@@ -1357,7 +1247,6 @@ window.I18N['en'] = {
 			questionExample2: "Is she a teacher?",
 			questionExample3: "Are they ready?"
 		},
-		
 		toHave: {
 			title: "The Verb \"To Have\"",
 			conjugation: "Conjugation of \"To Have\"",
@@ -1381,7 +1270,6 @@ window.I18N['en'] = {
 			questionExample2: "Does she have a dog?",
 			questionExample3: "Do they have time?"
 		},
-		
 		regularVerbs: {
 			title: "Regular Verbs",
 			conjugation: "Conjugation of Regular Verbs",
@@ -1412,7 +1300,6 @@ window.I18N['en'] = {
 			questionExample2: "Does she work hard?",
 			questionExample3: "Do they work together?"
 		},
-		
 		irregularVerbs: {
 			title: "Common Irregular Verbs",
 			conjugation: "Irregular Verb Conjugations",
@@ -1440,7 +1327,6 @@ window.I18N['en'] = {
 			example3: "We do our homework in the evening.",
 			example4: "He does the dishes after dinner."
 		},
-		
 		exercises: {
 			title: "Practice Exercises",
 			q1: "Choose the correct form of the verb \"to be\":",
@@ -1877,6 +1763,575 @@ window.I18N['en'] = {
 		},
 		backToPart2: "Back to Simple Present Part 2"
 	},
+	// Simple Past Tense Part 1
+simplePast1: {
+    title: "Simple Past Tense: Generality",
+    subtitle: "Learn to talk about completed actions and events in the past",
+    introduction: {
+        title: "Introduction to Simple Past",
+        whatIs: "What is the Simple Past Tense?",
+        definitionTitle: "Definition:",
+        definition: "The Simple Past tense is used to talk about actions or events that happened in the past and are now completed.",
+        usesTitle: "When to use:",
+        use1: "Completed actions in the past",
+        use2: "Past habits or routines",
+        use3: "Past facts or general truths",
+        use4: "Sequences of past actions",
+        example1: "I worked at a bank last year.",
+        example2: "She visited her grandmother yesterday.",
+        example3: "They played soccer when they were children.",
+        example4: "He lived in Paris for five years."
+    },
+    toBe: {
+        title: "The Verb \"To Be\" in Past",
+        conjugation: "Conjugation of \"To Be\" in Past",
+        was: "was",
+        were: "were",
+        exampleI: "I was a student.",
+        exampleYou: "You were my friend.",
+        exampleHe: "He was a teacher.",
+        exampleShe: "She was happy.",
+        exampleIt: "It was a beautiful day.",
+        exampleWe: "We were here.",
+        exampleThey: "They were students.",
+        negativeTitle: "Negative Form:",
+        negativeRule: "Add \"not\" after the verb.",
+        negativeExample1: "I was not a doctor.",
+        negativeExample2: "She was not tired.",
+        negativeExample3: "They were not here.",
+        questionTitle: "Question Form:",
+        questionRule: "Invert the subject and the verb.",
+        questionExample1: "Was I late?",
+        questionExample2: "Was she a teacher?",
+        questionExample3: "Were they ready?"
+    },
+    toHave: {
+        title: "The Verb \"To Have\" in Past",
+        conjugation: "Conjugation of \"To Have\" in Past",
+        had: "had",
+        exampleI: "I had a car.",
+        exampleYou: "You had a book.",
+        exampleHe: "He had a cat.",
+        exampleShe: "She had a dog.",
+        exampleIt: "It had four legs.",
+        exampleWe: "We had time.",
+        exampleThey: "They had money.",
+        negativeTitle: "Negative Form:",
+        negativeRule: "Use \"did not\" (didn't) + have.",
+        negativeExample1: "I didn't have a car.",
+        negativeExample2: "She didn't have a dog.",
+        negativeExample3: "They didn't have time.",
+        questionTitle: "Question Form:",
+        questionRule: "Use \"did\" + subject + have.",
+        questionExample1: "Did you have a car?",
+        questionExample2: "Did she have a dog?",
+        questionExample3: "Did they have time?"
+    },
+    regularVerbs: {
+        title: "Regular Verbs in Past",
+        conjugation: "Conjugation of Regular Verbs in Past",
+        ruleTitle: "Basic Rule:",
+        rule: "For most regular verbs, add -ed to the base form for all subjects.",
+        worked: "worked",
+        exampleI: "I worked yesterday.",
+        exampleYou: "You worked here.",
+        exampleHe: "He worked at a bank.",
+        exampleShe: "She worked hard.",
+        exampleIt: "It worked well.",
+        exampleWe: "We worked together.",
+        exampleThey: "They worked late.",
+        spellingTitle: "Spelling Rules for -ed:",
+        spelling1: "Most verbs: add -ed (work → worked)",
+        spelling2: "Verbs ending in -e: add -d (live → lived)",
+        spelling3: "Verbs ending in consonant + y: change y to i and add -ed (study → studied)",
+        spelling4: "Verbs ending in vowel + y: add -ed (play → played)",
+        spelling5: "One-syllable verbs ending in consonant-vowel-consonant: double the final consonant and add -ed (stop → stopped)",
+        negativeTitle: "Negative Form:",
+        negativeRule: "Use \"did not\" (didn't) + base form of verb.",
+        negativeExample1: "I didn't work yesterday.",
+        negativeExample2: "She didn't work here.",
+        negativeExample3: "They didn't work late.",
+        questionTitle: "Question Form:",
+        questionRule: "Use \"did\" + subject + base form of verb.",
+        questionExample1: "Did you work yesterday?",
+        questionExample2: "Did she work hard?",
+        questionExample3: "Did they work together?"
+    },
+    irregularVerbs: {
+        title: "Common Irregular Verbs",
+        conjugation: "Irregular Verb Conjugations in Past",
+        ruleTitle: "About Irregular Verbs:",
+        rule: "Some verbs don't follow the regular -ed pattern. They have their own unique past forms that must be memorized.",
+        pastForm: "Past Form",
+        go: "go",
+        went: "went",
+        goExample: "I went to school yesterday.",
+        do: "do",
+        did: "did",
+        doExample: "He did his homework.",
+        have: "have",
+        had: "had",
+        haveExample: "She had a cat.",
+        eat: "eat",
+        ate: "ate",
+        eatExample: "We ate dinner at 7 PM.",
+        see: "see",
+        saw: "saw",
+        seeExample: "They saw a movie last night.",
+        take: "take",
+        took: "took",
+        takeExample: "I took a bus to work.",
+        moreExamplesTitle: "More Examples:",
+        example1: "I went to the gym yesterday.",
+        example2: "She did her homework after school.",
+        example3: "We had a great time at the party.",
+        example4: "He ate breakfast at 8 AM."
+    },
+    exercises: {
+        title: "Practice Exercises",
+        q1: "Choose the correct past form of the verb \"to be\":",
+        q1Sentence: "She ______ a doctor last year.",
+        q1a: "is",
+        q1b: "was",
+        q1c: "were",
+        q2: "Choose the correct past form of the verb \"to have\":",
+        q2Sentence: "They ______ two cats when they were children.",
+        q2a: "has",
+        q2b: "had",
+        q2c: "have",
+        q3: "Choose the correct past form of the regular verb:",
+        q3Sentence: "He ______ (work) in an office last year.",
+        q3a: "work",
+        q3b: "worked",
+        q3c: "working",
+        q4: "Choose the correct negative form:",
+        q4Sentence: "I ______ like coffee when I was young.",
+        q4a: "didn't",
+        q4b: "don't",
+        q4c: "not",
+        q5: "Choose the correct question form:",
+        q5Sentence: "______ she work here last year?",
+        q5a: "Do",
+        q5b: "Did",
+        q5c: "Was",
+        q6: "Choose the correct form of the irregular verb:",
+        q6Sentence: "He ______ to school yesterday.",
+        q6a: "go",
+        q6b: "went",
+        q6c: "goed",
+        q7: "Complete the sentence with the correct form of the verb:",
+        q7Sentence: "I ______ (to be) a student last year.",
+        q8: "Complete the sentence with the correct form of the verb:",
+        q8Sentence: "She ______ (to have) a cat when she was young.",
+        q9: "Complete the sentence with the correct form of the verb:",
+        q9Sentence: "They ______ (to go) to school yesterday.",
+        q10: "Arrange the words to form a correct sentence:",
+        q11: "Arrange the words to form a correct sentence:",
+        q12: "Arrange the words to form a correct question:"
+    }
+},
+// // Simple Past Part 2
+simplePast2: {
+    title: "Simple Past Tense: Questions & Adverbs",
+    subtitle: "Learn to form questions and use adverbs of time correctly in the past",
+    introduction: {
+        title: "Forming Questions in Simple Past",
+        whatIs: "How to Form Questions",
+        definitionTitle: "Basic Question Structure:",
+        definition: "In the simple past tense, we use the auxiliary verb \"did\" to form questions for all subjects. The main verb stays in its base form.",
+        typesTitle: "Types of Questions:",
+        type1: "Yes/No Questions (questions that can be answered with yes or no)",
+        type2: "Wh- Questions (questions that begin with what, where, when, why, who, how)",
+        type3: "Negative Questions"
+    },
+    toBeQuestions: {
+        title: "Questions with \"To Be\" in Past",
+        conjugation: "Question Formation with \"To Be\" in Past",
+        ruleTitle: "Step-by-Step Process:",
+        rule: "With the verb \"to be\" in the past tense, we invert the subject and the verb to form questions. We don't use \"did\" with \"to be\".",
+        formula: "Formula: [Was/Were] + [Subject] + [Rest of Sentence] + ?",
+        statement: "Statement",
+        question: "Question",
+        statementI: "I was a student.",
+        questionI: "Was I a student?",
+        statementYou: "You were my friend.",
+        questionYou: "Were you my friend?",
+        statementHe: "He was a teacher.",
+        questionHe: "Was he a teacher?",
+        statementShe: "She was happy.",
+        questionShe: "Was she happy?",
+        statementWe: "We were here.",
+        questionWe: "Were we here?",
+        statementThey: "They were students.",
+        questionThey: "Were they students?",
+        whTitle: "Wh- Questions with \"To Be\":",
+        whRule: "For Wh- questions, place the question word at the beginning, then follow with the inverted subject and verb.",
+        whExample1: "Where were you yesterday?",
+        whExample2: "What was your first job?",
+        whExample3: "How was your vacation?"
+    },
+    toHaveQuestions: {
+        title: "Questions with \"To Have\" in Past",
+        conjugation: "Question Formation with \"To Have\" in Past",
+        ruleTitle: "Step-by-Step Process:",
+        rule: "With the verb \"to have\" in the past tense, we use \"did\" as the auxiliary verb to form questions.",
+        formula: "Formula: [Did] + [Subject] + [Have] + [Rest of Sentence] + ?",
+        statement: "Statement",
+        question: "Question",
+        statementI: "I had a car.",
+        questionI: "Did I have a car?",
+        statementYou: "You had a book.",
+        questionYou: "Did you have a book?",
+        statementHe: "He had a cat.",
+        questionHe: "Did he have a cat?",
+        statementShe: "She had a dog.",
+        questionShe: "Did she have a dog?",
+        statementWe: "We had time.",
+        questionWe: "Did we have time?",
+        statementThey: "They had money.",
+        questionThey: "Did they have money?",
+        whTitle: "Wh- Questions with \"To Have\":",
+        whRule: "For Wh- questions, place the question word at the beginning, then follow with \"did,\" subject, \"have,\" and the rest of the sentence.",
+        whExample1: "What did you have for breakfast?",
+        whExample2: "Where did she have her party?",
+        whExample3: "How many siblings did they have?"
+    },
+    otherVerbsQuestions: {
+        title: "Questions with Other Verbs",
+        conjugation: "Question Formation with Regular and Irregular Verbs",
+        ruleTitle: "Step-by-Step Process:",
+        rule: "For all other verbs (not \"to be\" or \"to have\"), we use \"did\" as the auxiliary verb to form questions in the past tense.",
+        formula: "Formula: [Did] + [Subject] + [Base Form of Verb] + [Rest of Sentence] + ?",
+        subjects: "Use \"did\" for all subjects (I, you, he, she, it, we, they).",
+        statement: "Statement",
+        question: "Question",
+        statementI: "I worked yesterday.",
+        questionI: "Did I work yesterday?",
+        statementYou: "You liked the movie.",
+        questionYou: "Did you like the movie?",
+        statementHe: "He played soccer.",
+        questionHe: "Did he play soccer?",
+        statementShe: "She studied English.",
+        questionShe: "Did she study English?",
+        statementWe: "We lived in Paris.",
+        questionWe: "Did we live in Paris?",
+        statementThey: "They spoke French.",
+        questionThey: "Did they speak French?",
+        whTitle: "Wh- Questions with Other Verbs:",
+        whRule: "For Wh- questions, place the question word at the beginning, then follow with \"did,\" subject, base form of verb, and the rest of the sentence.",
+        whExample1: "What did you do yesterday?",
+        whExample2: "Where did he work last year?",
+        whExample3: "How often did they exercise?",
+        irregularTitle: "Questions with Irregular Verbs:",
+        irregularRule: "Even with irregular verbs, we still use \"did\" to form questions, and the main verb stays in its base form.",
+        irregularExample1: "Did you go to the gym yesterday? (go → went in statements)",
+        irregularExample2: "Did she do her homework? (do → did in statements)",
+        irregularExample3: "Did they have classes yesterday? (have → had in statements)"
+    },
+    adverbs: {
+        title: "Adverbs of Time in Past",
+        whatAre: "What Are Adverbs of Time?",
+        definitionTitle: "Definition:",
+        definition: "Adverbs of time tell us when something happened. They are commonly used with the simple past tense to specify when an action occurred.",
+        commonAdverbsTitle: "Common Adverbs of Time in Past:",
+        adverb: "Adverb",
+        meaning: "Meaning",
+        example: "Example",
+        yesterday: "yesterday",
+        yesterdayMeaning: "the day before today",
+        yesterdayExample: "I worked yesterday.",
+        lastWeek: "last week",
+        lastWeekMeaning: "the week before this week",
+        lastWeekExample: "She visited her grandmother last week.",
+        lastMonth: "last month",
+        lastMonthMeaning: "the month before this month",
+        lastMonthExample: "We moved last month.",
+        lastYear: "last year",
+        lastYearMeaning: "the year before this year",
+        lastYearExample: "They graduated last year.",
+        twoDaysAgo: "two days ago",
+        twoDaysAgoMeaning: "two days before today",
+        twoDaysAgoExample: "He called two days ago.",
+        in2010: "in 2010",
+        in2010Meaning: "during the year 2010",
+        in2010Example: "I was born in 2010.",
+        placementTitle: "Placement in Sentences:",
+        placementRule1: "1. Usually at the end of the sentence:",
+        placementExample1: "I went to the store yesterday.",
+        placementExample2: "She called me last night.",
+        placementExample3: "They arrived two hours ago.",
+        placementRule2: "2. Sometimes at the beginning for emphasis:",
+        placementExample4: "Yesterday, I went to the store.",
+        placementExample5: "Last year, we visited Paris.",
+        questionsTitle: "Adverbs of Time in Questions:",
+        questionsRule: "In questions, adverbs of time usually come at the end of the question.",
+        questionsExample1: "Did you work yesterday?",
+        questionsExample2: "When did she arrive last night?",
+        questionsExample3: "Where were you last week?"
+    },
+    exercises: {
+        title: "Practice Exercises",
+        q1: "Choose the correct question form:",
+        q1Sentence: "______ you at home yesterday?",
+        q1a: "Did",
+        q1b: "Were",
+        q1c: "Was",
+        q2: "Choose the correct question form:",
+        q2Sentence: "______ she have a car last year?",
+        q2a: "Did",
+        q2b: "Does",
+        q2c: "Was",
+        q3: "Choose the correct question form:",
+        q3Sentence: "Where ______ they live last year?",
+        q3a: "did",
+        q3b: "do",
+        q3c: "were",
+        q4: "Choose the correct adverb placement:",
+        q4Sentence: "She ______ went to the store. (yesterday)",
+        q4a: "yesterday",
+        q4b: "went yesterday",
+        q4c: "yesterday went",
+        q5: "Choose the correct adverb of time:",
+        q5Sentence: "We visited Paris ______. (the year before this year)",
+        q5a: "yesterday",
+        q5b: "last year",
+        q5c: "tomorrow",
+        q6: "Choose the correct form of the irregular verb in a question:",
+        q6Sentence: "______ you ______ to school yesterday? (go)",
+        q6a: "Did, went",
+        q6b: "Did, go",
+        q6c: "Do, went",
+        q7: "Complete the question with the correct form:",
+        q7Sentence: "______ you like the movie?",
+        q8: "Complete the question with the correct form:",
+        q8Sentence: "Where ______ she work last year?",
+        q9: "Complete the sentence with the correct adverb:",
+        q9Sentence: "They visited their grandparents ______. (the week before this week)",
+        q10: "Arrange the words to form a correct question:",
+        q11: "Arrange the words to form a correct question:",
+        q12: "Arrange the words to form a correct sentence with an adverb:"
+    },
+    backToPart1: "Back to Simple Past Part 1"
+},
+// Simple Past Part 3
+simplePast3: {
+    title: "Simple Past Tense: Negative, Passive & Idioms",
+    subtitle: "Learn to form negative sentences, use passive voice, and understand common idioms in the past",
+    introduction: {
+        title: "Negative Forms in Simple Past",
+        whatIs: "How to Form Negative Sentences",
+        definitionTitle: "Basic Negative Structure:",
+        definition: "In English, we use the word \"not\" to form negative sentences in the simple past tense. The structure depends on the type of verb used in the sentence.",
+        typesTitle: "Types of Negative Sentences:",
+        type1: "Negative with \"To Be\"",
+        type2: "Negative with \"To Have\"", 
+        type3: "Negative with Other Verbs"
+    },
+    toBeNegative: {
+        title: "Negative with \"To Be\"",
+        conjugation: "Negative Formation with \"To Be\"",
+        ruleTitle: "Step-by-Step Process:",
+        rule: "With the verb \"to be,\" we simply add \"not\" after the verb to form negative sentences.",
+        formula: "Formula: [Subject] + [Was/Were] + \"not\" + [Rest of Sentence]",
+        positive: "Positive",
+        negative: "Negative",
+        positiveI: "I was a student.",
+        negativeI: "I was not a student.",
+        positiveYou: "You were my friend.",
+        negativeYou: "You were not my friend.",
+        positiveHe: "He was a teacher.",
+        negativeHe: "He was not a teacher.",
+        positiveShe: "She was happy.",
+        negativeShe: "She was not happy.",
+        positiveWe: "We were here.",
+        negativeWe: "We were not here.",
+        positiveThey: "They were students.",
+        negativeThey: "They were not students.",
+        contractionsTitle: "Contractions:",
+        contractionsRule: "In spoken English and informal writing, we often use contractions (short forms) of \"was/were + not\".",
+        contractionExample1: "I wasn't a student.",
+        contractionExample2: "You weren't my friend.",
+        contractionExample3: "He wasn't a teacher.",
+        contractionExample4: "She wasn't happy.",
+        contractionExample5: "We weren't here.",
+        contractionExample6: "They weren't students."
+    },
+    toHaveNegative: {
+        title: "Negative with \"To Have\"",
+        conjugation: "Negative Formation with \"To Have\"",
+        ruleTitle: "Step-by-Step Process:",
+        rule: "With the verb \"to have,\" we use \"did not\" (didn't) to form negative sentences.",
+        formula: "Formula: [Subject] + \"did not\" + \"have\" + [Rest of Sentence]",
+        positive: "Positive",
+        negative: "Negative",
+        positiveI: "I had a car.",
+        negativeI: "I did not have a car.",
+        positiveYou: "You had a book.",
+        negativeYou: "You did not have a book.",
+        positiveHe: "He had a cat.",
+        negativeHe: "He did not have a cat.",
+        positiveShe: "She had a dog.",
+        negativeShe: "She did not have a dog.",
+        positiveWe: "We had time.",
+        negativeWe: "We did not have time.",
+        positiveThey: "They had money.",
+        negativeThey: "They did not have money.",
+        contractionsTitle: "Contractions:",
+        contractionsRule: "In spoken English and informal writing, we often use contractions (short forms).",
+        contractionExample1: "I didn't have a car.",
+        contractionExample2: "You didn't have a book.",
+        contractionExample3: "He didn't have a cat.",
+        contractionExample4: "She didn't have a dog.",
+        contractionExample5: "We didn't have time.",
+        contractionExample6: "They didn't have money."
+    },
+    otherVerbsNegative: {
+        title: "Negative with Other Verbs",
+        conjugation: "Negative Formation with Regular and Irregular Verbs",
+        ruleTitle: "Step-by-Step Process:",
+        rule: "For all other verbs (not \"to be\" or \"to have\"), we use \"did not\" (didn't) to form negative sentences.",
+        formula: "Formula: [Subject] + \"did not\" + [Base Form of Verb] + [Rest of Sentence]",
+        doDoesRule: "Use \"did not\" for all subjects (I, you, he, she, it, we, they).",
+        positive: "Positive",
+        negative: "Negative",
+        positiveI: "I worked yesterday.",
+        negativeI: "I did not work yesterday.",
+        positiveYou: "You liked the movie.",
+        negativeYou: "You did not like the movie.",
+        positiveHe: "He played soccer.",
+        negativeHe: "He did not play soccer.",
+        positiveShe: "She studied English.",
+        negativeShe: "She did not study English.",
+        positiveWe: "We lived in Paris.",
+        negativeWe: "We did not live in Paris.",
+        positiveThey: "They spoke French.",
+        negativeThey: "They did not speak French.",
+        contractionsTitle: "Contractions:",
+        contractionsRule: "In spoken English and informal writing, we often use contractions (short forms).",
+        contractionExample1: "I didn't work yesterday.",
+        contractionExample2: "You didn't like the movie.",
+        contractionExample3: "He didn't play soccer.",
+        contractionExample4: "She didn't study English.",
+        contractionExample5: "We didn't live in Paris.",
+        contractionExample6: "They didn't speak French.",
+        irregularTitle: "Negative with Irregular Verbs:",
+        irregularRule: "Even with irregular verbs, we still use \"did not\" to form negatives, and the main verb stays in its base form.",
+        irregularExample1: "I didn't go to the gym yesterday. (go → went in statements)",
+        irregularExample2: "She didn't do her homework. (do → did in statements)", 
+        irregularExample3: "They didn't have classes yesterday. (have → had in statements)"
+    },
+    passive: {
+        title: "Passive Voice in Simple Past",
+        whatIs: "What is Passive Voice?",
+        definitionTitle: "Definition:",
+        definition: "In passive voice, the subject receives the action rather than performing it. We use passive voice when the doer of the action is unknown, unimportant, or obvious from context.",
+        structureTitle: "Structure of Passive Voice:",
+        structureRule: "Formula: [Subject] + [was/were] + [Past Participle] + [by + agent (optional)]",
+        structureExample: "Example: \"The book was read by students.\"",
+        formationTitle: "Forming Passive Voice:",
+        formationRule: "To form passive voice in simple past tense, use the appropriate form of \"to be\" (was/were) followed by the past participle of the main verb.",
+        active: "Active Voice",
+        passive: "Passive Voice",
+        activeExample1: "I wrote a letter.",
+        passiveExample1: "A letter was written by me.",
+        activeExample2: "You cleaned the room.",
+        passiveExample2: "The room was cleaned by you.",
+        activeExample3: "He fixed the car.",
+        passiveExample3: "The car was fixed by him.",
+        activeExample4: "She taught the students.",
+        passiveExample4: "The students were taught by her.",
+        activeExample5: "We built houses.",
+        passiveExample5: "Houses were built by us.",
+        activeExample6: "They sold fruits.",
+        passiveExample6: "Fruits were sold by them.",
+        negativeTitle: "Negative Passive Voice:",
+        negativeRule: "To form negative passive voice, add \"not\" after \"was/were\".",
+        negativeExample1: "The book was not read by students.",
+        negativeExample2: "The car was not fixed by him.",
+        negativeExample3: "The students were not taught by her.",
+        questionTitle: "Question Form in Passive Voice:",
+        questionRule: "To form questions in passive voice, invert the subject and \"was/were\".",
+        questionExample1: "Was the book read by students?",
+        questionExample2: "Was the car fixed by him?",
+        questionExample3: "Were the students taught by her?"
+    },
+    idioms: {
+        title: "Common Past Tense Idioms",
+        whatAre: "What Are Idioms?",
+        definitionTitle: "Definition:",
+        definition: "Idioms are expressions whose meanings cannot be understood from the literal definitions of the words that make them up. They often use the simple past tense to express completed actions or past experiences.",
+        commonIdiomsTitle: "Common Past Tense Idioms:",
+        idiom: "Idiom",
+        meaning: "Meaning",
+        example: "Example",
+        biteTheBullet: "Bite the bullet",
+        biteTheBulletMeaning: "Endure a painful experience",
+        biteTheBulletExample: "\"I bit the bullet and told my boss about the mistake.\"",
+        burnTheMidnightOil: "Burn the midnight oil",
+        burnTheMidnightOilMeaning: "Work late into the night",
+        burnTheMidnightOilExample: "\"She burned the midnight oil to finish the project.\"",
+        hitTheRoad: "Hit the road",
+        hitTheRoadMeaning: "Begin a journey",
+        hitTheRoadExample: "\"We hit the road early in the morning.\"",
+        letTheCatOutOfTheBag: "Let the cat out of the bag",
+        letTheCatOutOfTheBagMeaning: "Reveal a secret",
+        letTheCatOutOfTheBagExample: "\"He let the cat out of the bag about the surprise party.\"",
+        spillTheBeans: "Spill the beans",
+        spillTheBeansMeaning: "Reveal secret information",
+        spillTheBeansExample: "\"She spilled the beans about their relationship.\"",
+        breakTheIce: "Break the ice",
+        breakTheIceMeaning: "Make people feel more comfortable",
+        breakTheIceExample: "\"He told a joke to break the ice at the meeting.\"",
+        usageTitle: "Using Past Tense Idioms in Sentences:",
+        usageRule: "Past tense idioms are typically used to describe completed actions or experiences in the past.",
+        usageExample1: "\"I bit the bullet and went to the dentist yesterday.\"",
+        usageExample2: "\"She burned the midnight oil to study for her exam.\"",
+        usageExample3: "\"They hit the road as soon as the sun rose.\""
+    },
+    exercises: {
+        title: "Practice Exercises",
+        q1: "Choose the correct negative form:",
+        q1Sentence: "She ______ a doctor last year.",
+        q1a: "was not",
+        q1b: "did not", 
+        q1c: "not was",
+        q2: "Choose the correct negative form:",
+        q2Sentence: "They ______ coffee yesterday.",
+        q2a: "didn't drink",
+        q2b: "didn't drank",
+        q2c: "not drank",
+        q3: "Choose the correct passive form:",
+        q3Sentence: "The book ______ by students yesterday.",
+        q3a: "was read",
+        q3b: "read",
+        q3c: "was reading",
+        q4: "Choose the correct idiom meaning:",
+        q4Sentence: "\"Bite the bullet\" means:",
+        q4a: "Eat something hard",
+        q4b: "Endure a painful experience",
+        q4c: "Break something with teeth",
+        q5: "Choose the correct negative passive form:",
+        q5Sentence: "The car ______ by him yesterday.",
+        q5a: "was not fixed",
+        q5b: "didn't fix",
+        q5c: "not fixed",
+        q6: "Choose the correct idiom meaning:",
+        q6Sentence: "\"Spill the beans\" means:",
+        q6a: "Reveal secret information",
+        q6b: "Drop food on the floor",
+        q6c: "Cook beans",
+        q7: "Complete the negative sentence:",
+        q7Sentence: "I ______ (not/like) the movie yesterday.",
+        q8: "Complete the passive sentence:",
+        q8Sentence: "The house ______ (build) last year.",
+        q9: "Complete the negative passive sentence:",
+        q9Sentence: "The letter ______ (not/send) yesterday.",
+        q10: "Arrange the words to form a correct negative sentence:",
+        q11: "Arrange the words to form a correct passive sentence:",
+        q12: "Arrange the words to form a sentence with an idiom:"
+    },
+    backToPart2: "Back to Simple Past Part 2"
+},
     // Footer
     footer: {
         developer: "Developer: Mejri Ziad",
