@@ -1,35 +1,26 @@
 [build]
   publish = "."
+  command = "echo 'No build step required'"
 
-# Redirect rules for specific HTML files
-[[redirects]]
-  from = "/Communication-Skills-Enhancement"
-  to = "/Communication-Skills-Enhancement.html"
-  status = 200
+[build.environment]
+  NODE_VERSION = "18"
 
-[[redirects]]
-  from = "/Eh-general-reading-adventures"
-  to = "/Eh-general-reading-adventures.html"
-  status = 200
-
-[[redirects]]
-  from = "/EH-reading-workplace"
-  to = "/EH-reading-workplace.html"
-  status = 200
-
-# SPA fallback - should be last
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
+
+# Cache headers for better performance
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
 
 [[headers]]
-  for = "/*.html"
+  for = "/*.css"
   [headers.values]
-    Cache-Control = "no-cache, no-store, must-revalidate"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
+    Cache-Control = "public, max-age=31536000"
 
 [[headers]]
   for = "/assets/*"
@@ -37,6 +28,59 @@
     Cache-Control = "public, max-age=31536000"
 
 [[headers]]
-  for = "/scripts/*"
+  for = "/*.html"
   [headers.values]
-    Cache-Control = "public, max-age=3600"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Service Worker and Manifest should not be cached
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Service-Worker-Allowed = "/"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Handle SPA routing - redirect all non-file requests to index.html
+[[redirects]]
+  from = "/app/*"
+  to = "/index.html"
+  status = 200
+
+# Ensure proper MIME types
+[[headers]]
+  for = "/*.mp3"
+  [headers.values]
+    Content-Type = "audio/mpeg"
+
+[[headers]]
+  for = "/*.wav"
+  [headers.values]
+    Content-Type = "audio/wav"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Content-Type = "image/png"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Content-Type = "image/jpeg"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Content-Type = "image/svg+xml"

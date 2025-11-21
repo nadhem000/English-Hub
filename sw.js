@@ -1,152 +1,164 @@
-// Service Worker for English Hub - Enhanced cache management
-const VERSION = 'v1.1.6'; // Increment version
-const STATIC_CACHE = `static-cache-${VERSION}`;
-const DYNAMIC_CACHE = `dynamic-cache-${VERSION}`;
+// Service Worker for English Hub
+// Version: 2.0.0
+const CACHE_NAME = 'english-hub-v2.0.0';
+const DYNAMIC_CACHE_NAME = 'english-hub-dynamic-v2.0.0';
 
-// Assets to cache during installation
-const STATIC_ASSETS = [
+// Core assets that are essential for the app to work
+const CORE_ASSETS = [
   '/',
   '/index.html',
-  '/Communication-Skills-Enhancement.html',
-  '/Eh-general-reading-adventures.html',
-  '/EH-reading-workplace.html',
   '/manifest.json',
   '/styles/common.css',
   '/scripts/common-i18n.js',
   '/scripts/sound.js',
+  '/scripts/exercise.js',
   '/scripts/translations/i18n_en.js',
   '/scripts/translations/i18n_fr.js',
   '/scripts/translations/i18n_ar.js',
-  '/assets/icons/icon-72x72.png',
   '/assets/icons/icon-192x192.png',
   '/assets/icons/icon-512x512.png'
 ];
 
-// Install event - cache static assets
+// HTML files pattern (will cache all HTML files as they're accessed)
+const HTML_FILES = [
+  '/Communication-Skills-Enhancement.html',
+  '/conjugation.html'
+  // Note: Other HTML files will be cached dynamically as they're accessed
+];
+
+// Install event - cache core assets
 self.addEventListener('install', (event) => {
-  console.log('Service Worker: Installing version', VERSION);
-  self.skipWaiting(); // Activate immediately
+  console.log('Service Worker installing...');
   
   event.waitUntil(
-    caches.open(STATIC_CACHE)
+    caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('Service Worker: Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
+        console.log('Caching core assets...');
+        return cache.addAll(CORE_ASSETS);
       })
       .then(() => {
-        console.log('Service Worker: Install completed');
+        console.log('Core assets cached successfully');
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Cache installation failed:', error);
       })
   );
 });
 
-// Activate event - clean up ALL old caches
+// Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker: Activating version', VERSION);
+  console.log('Service Worker activating...');
+  
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
-          // Delete ALL caches that don't match current version
-          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-            console.log('Service Worker: Deleting old cache', cacheName);
+          // Delete old caches that don't match current version
+          if (cacheName !== CACHE_NAME && cacheName !== DYNAMIC_CACHE_NAME) {
+            console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
         })
       );
-    }).then(() => {
-      console.log('Service Worker: Activate completed - all old caches deleted');
+    })
+    .then(() => {
+      console.log('Service Worker activated and old caches cleaned');
       return self.clients.claim();
     })
   );
 });
 
-// Fetch event - network first strategy for HTML, cache first for assets
+// Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
-  // Skip non-GET requests and cross-origin requests
-  if (event.request.method !== 'GET' || !event.request.url.startsWith(self.location.origin)) {
+  // Skip non-GET requests
+  if (event.request.method !== 'GET') {
     return;
   }
 
-  // For HTML pages, use network first strategy
-  if (event.request.destination === 'document' || 
-      event.request.url.endsWith('.html')) {
-    event.respondWith(
-      fetch(event.request)
-        .then((response) => {
-          // Cache the fresh version
-          const responseClone = response.clone();
-          caches.open(DYNAMIC_CACHE)
-            .then((cache) => {
-              cache.put(event.request, responseClone);
-            });
-          return response;
-        })
-        .catch(() => {
-          // If network fails, try cache
-          return caches.match(event.request)
-            .then((cachedResponse) => {
-              if (cachedResponse) {
-                return cachedResponse;
-              }
-              // If not in cache, return offline page or index
-              return caches.match('/index.html');
-            });
-        })
-    );
+  // Skip cross-origin requests
+  if (!event.request.url.startsWith(self.location.origin)) {
     return;
   }
 
-  // For other resources (JS, CSS, images), use cache first
   event.respondWith(
     caches.match(event.request)
       .then((cachedResponse) => {
+        // Return cached version if available
         if (cachedResponse) {
-          // Update cache in background
-          fetch(event.request)
-            .then((response) => {
-              if (response.status === 200) {
-                caches.open(DYNAMIC_CACHE)
-                  .then((cache) => {
-                    cache.put(event.request, response);
-                  });
-              }
-            })
-            .catch(() => {
-              // Ignore fetch errors for background updates
-            });
           return cachedResponse;
         }
 
-        // Not in cache, fetch from network
+        // Otherwise, fetch from network
         return fetch(event.request)
-          .then((response) => {
-            // Cache the response
-            if (response.status === 200) {
-              const responseToCache = response.clone();
-              caches.open(DYNAMIC_CACHE)
-                .then((cache) => {
-                  cache.put(event.request, responseToCache);
-                });
+          .then((networkResponse) => {
+            // Check if we received a valid response
+            if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
+              return networkResponse;
             }
-            return response;
+
+            // Clone the response
+            const responseToCache = networkResponse.clone();
+
+            // Add to dynamic cache
+            caches.open(DYNAMIC_CACHE_NAME)
+              .then((cache) => {
+                cache.put(event.request, responseToCache);
+              })
+              .catch((error) => {
+                console.warn('Failed to cache response:', error);
+              });
+
+            return networkResponse;
           })
           .catch(() => {
-            // Return appropriate fallback for different file types
-            if (event.request.url.endsWith('.js')) {
-              return new Response('// Network error', {
-                headers: { 'Content-Type': 'application/javascript' }
-              });
-            }
-            if (event.request.url.endsWith('.css')) {
-              return new Response('/* Network error */', {
-                headers: { 'Content-Type': 'text/css' }
-              });
-            }
-            return new Response('Network error', {
-              status: 408
-            });
+            // If both cache and network fail, we could show a custom offline page
+            // For now, we'll let the browser handle the error
+            console.warn('Both cache and network failed for:', event.request.url);
           });
       })
   );
-
 });
+
+// Message event - handle messages from the client
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+  
+  if (event.data && event.data.type === 'CLEAR_CACHE') {
+    // Clear all caches and reload
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          return caches.delete(cacheName);
+        })
+      );
+    }).then(() => {
+      console.log('All caches cleared by user request');
+      event.ports[0].postMessage({ success: true });
+    });
+  }
+  
+  if (event.data && event.data.type === 'GET_VERSION') {
+    event.ports[0].postMessage({ version: '2.0.0', cacheName: CACHE_NAME });
+  }
+});
+
+// Background sync for offline functionality
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    console.log('Background sync triggered');
+    // You can implement background sync logic here
+  }
+});
+
+// Periodic sync for updates (if supported)
+if ('periodicSync' in self.registration) {
+  self.addEventListener('periodicsync', (event) => {
+    if (event.tag === 'content-update') {
+      console.log('Periodic sync for content updates');
+      // Check for updates to content
+    }
+  });
+}
