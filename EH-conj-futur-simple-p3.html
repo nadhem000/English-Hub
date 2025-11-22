@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Future Tense: Negative, Passive & Idioms - English Hub</title>
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/common.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #00796b, #009688, #4db6ac);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .EH-conjugation-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1;
+        }
+        
+        .EH-conjugation-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .EH-conjugation-title {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .EH-conjugation-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+        }
+        
+        .EH-conjugation-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+        
+        .EH-conjugation-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .EH-conjugation-section-title {
+            font-size: 1.8rem;
+            color: #00796b;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4db6ac;
+        }
+        
+        .EH-conjugation-subsection {
+            margin-bottom: 25px;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .EH-conjugation-subsection-title {
+            font-size: 1.4rem;
+            color: #009688;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .EH-conjugation-subsection-icon {
+            font-size: 1.6rem;
+            margin-right: 10px;
+        }
+        
+        .EH-conjugation-rule {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            border-left: 4px solid #4db6ac;
+        }
+        
+        .EH-conjugation-rule-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #00796b;
+        }
+        
+        .EH-conjugation-examples {
+            background: #e0f2f1;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .EH-conjugation-example {
+            margin-bottom: 8px;
+            padding-left: 10px;
+            border-left: 2px solid #4db6ac;
+        }
+        
+        .EH-conjugation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .EH-conjugation-table th,
+        .EH-conjugation-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .EH-conjugation-table th {
+            background-color: #009688;
+            color: white;
+        }
+        
+        .EH-conjugation-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .EH-conjugation-table tr:hover {
+            background-color: #e0f2f1;
+        }
+        
+        /* Exercise Styles */
+        .EH-exercise-section {
+            margin-top: 40px;
+        }
+        
+        .EH-exercise-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .EH-exercise-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .EH-exercise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .EH-exercise-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #009688, #4db6ac);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .EH-exercise-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .EH-exercise-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .EH-exercise-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .EH-exercise-option input {
+            cursor: pointer;
+        }
+        
+        .EH-exercise-option label {
+            cursor: pointer;
+        }
+        
+        /* Type 1: Multiple Choice Styles */
+        .EH-exercise-type1-possibilities3-answers-control {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .EH-exercise-type1-possibilities3-check-answers-btn {
+            background: #009688;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            font-size: 1rem;
+        }
+
+        .EH-exercise-type1-possibilities3-check-answers-btn:hover {
+            background: #00796b;
+        }
+
+        .EH-exercise-type1-possibilities3-score-display {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: none;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .EH-exercise-type1-possibilities3-score-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #00796b;
+        }
+
+        .EH-exercise-type1-possibilities3-score-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #009688;
+            margin-bottom: 15px;
+        }
+
+        .EH-exercise-type1-possibilities3-score-feedback {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .EH-exercise-type1-possibilities3-answer-status {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .EH-exercise-type1-possibilities3-correct-answer {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .EH-exercise-type1-possibilities3-incorrect-answer {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .EH-exercise-type1-possibilities3-option.correct {
+            background-color: #d4edda;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+        }
+
+        .EH-exercise-type1-possibilities3-option.incorrect {
+            background-color: #f8d7da;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* Type 2: Fill in the Blank Styles */
+        .EH-exercise-type2-fillblank-input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .EH-exercise-type2-fillblank-input:focus {
+            border-color: #009688;
+            outline: none;
+        }
+        
+        .EH-exercise-type2-fillblank-input-correct {
+            border-color: #28a745;
+            background-color: #d4edda;
+        }
+        
+        .EH-exercise-type2-fillblank-input-incorrect {
+            border-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        
+        .EH-exercise-type2-fillblank-input-empty {
+            border-color: #ffc107;
+        }
+        
+        .EH-exercise-type2-fillblank-answer-status {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .EH-exercise-type2-fillblank-correct-answer {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .EH-exercise-type2-fillblank-incorrect-answer {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* Type 3: Sentence Ordering Styles */
+        .EH-exercise-type3-sentenceorder-word-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 15px;
+            border: 2px dashed #e0e0e0;
+            border-radius: 10px;
+            min-height: 60px;
+            margin-bottom: 15px;
+        }
+        
+        .EH-exercise-type3-sentenceorder-word {
+            background: #e0f2f1;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid #80cbc4;
+            cursor: move;
+            user-select: none;
+        }
+        
+        .EH-exercise-type3-sentenceorder-word:hover {
+            background: #b2dfdb;
+        }
+        
+        .EH-exercise-type3-sentenceorder-dragging {
+            opacity: 0.5;
+        }
+        
+        .EH-exercise-type3-sentenceorder-correct {
+            border-color: #28a745;
+            background-color: #f8fff8;
+        }
+        
+        .EH-exercise-type3-sentenceorder-incorrect {
+            border-color: #dc3545;
+            background-color: #fff8f8;
+        }
+        
+        .EH-exercise-type3-sentenceorder-answer-status {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .EH-exercise-type3-sentenceorder-correct-answer {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .EH-exercise-type3-sentenceorder-incorrect-answer {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* Navigation Buttons */
+        .EH-conjugation-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .EH-conjugation-nav-button {
+            background: #009688;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .EH-conjugation-nav-button:hover {
+            background: #00796b;
+        }
+        
+        .EH-conjugation-nav-button.back {
+            background: #4db6ac;
+        }
+        
+        .EH-conjugation-nav-button.back:hover {
+            background: #009688;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .EH-conjugation-title {
+                font-size: 2rem;
+            }
+            
+            .EH-exercise-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .EH-conjugation-navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .EH-conjugation-nav-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .EH-conjugation-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Selector -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+    
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+    </div>
+    
+    <div class="EH-conjugation-container">
+        <header class="EH-conjugation-header">
+            <h1 class="EH-conjugation-title" data-i18n="simpleFuture3.title">Simple Future Tense: Negative, Passive & Idioms</h1>
+            <p class="EH-conjugation-subtitle" data-i18n="simpleFuture3.subtitle">Learn to form negative sentences, use passive voice, and understand common idioms in the future tense</p>
+        </header>
+        
+        <div class="EH-conjugation-content">
+            <!-- Introduction Section -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simpleFuture3.introduction.title">Negative Forms in Simple Future</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">❌</span>
+                        <span data-i18n="simpleFuture3.introduction.whatIs">How to Form Negative Sentences</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.introduction.definitionTitle">Basic Negative Structure:</div>
+                        <p data-i18n="simpleFuture3.introduction.definition">In English, we use the word "not" to form negative sentences in the simple future tense. The structure is the same for all verbs.</p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.introduction.typesTitle">Types of Negative Sentences:</div>
+                        <ul>
+                            <li data-i18n="simpleFuture3.introduction.type1">Negative with "Will"</li>
+                            <li data-i18n="simpleFuture3.introduction.type2">Negative with "Going To"</li>
+                            <li data-i18n="simpleFuture3.introduction.type3">Negative with All Verbs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Negative with Will Section -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simpleFuture3.willNegative.title">Negative with "Will"</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🔤</span>
+                        <span data-i18n="simpleFuture3.willNegative.conjugation">Negative Formation with "Will"</span>
+                    </h3>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.willNegative.ruleTitle">Step-by-Step Process:</div>
+                        <p data-i18n="simpleFuture3.willNegative.rule">With "will," we add "not" after "will" to form negative sentences.</p>
+                        <p data-i18n="simpleFuture3.willNegative.formula">Formula: [Subject] + "will not" + [Base Form of Verb] + [Rest of Sentence]</p>
+                    </div>
+                    
+                    <table class="EH-conjugation-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="common.subject">Subject</th>
+                                <th data-i18n="simpleFuture3.willNegative.positive">Positive</th>
+                                <th data-i18n="simpleFuture3.willNegative.negative">Negative</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="common.i">I</td>
+                                <td data-i18n="simpleFuture3.willNegative.positiveI">I will study tomorrow.</td>
+                                <td data-i18n="simpleFuture3.willNegative.negativeI">I will not study tomorrow.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.you">You</td>
+                                <td data-i18n="simpleFuture3.willNegative.positiveYou">You will call me later.</td>
+                                <td data-i18n="simpleFuture3.willNegative.negativeYou">You will not call me later.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.he">He</td>
+                                <td data-i18n="simpleFuture3.willNegative.positiveHe">He will arrive soon.</td>
+                                <td data-i18n="simpleFuture3.willNegative.negativeHe">He will not arrive soon.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.she">She</td>
+                                <td data-i18n="simpleFuture3.willNegative.positiveShe">She will finish the work.</td>
+                                <td data-i18n="simpleFuture3.willNegative.negativeShe">She will not finish the work.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.we">We</td>
+                                <td data-i18n="simpleFuture3.willNegative.positiveWe">We will travel next week.</td>
+                                <td data-i18n="simpleFuture3.willNegative.negativeWe">We will not travel next week.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.they">They</td>
+                                <td data-i18n="simpleFuture3.willNegative.positiveThey">They will buy a car.</td>
+                                <td data-i18n="simpleFuture3.willNegative.negativeThey">They will not buy a car.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.willNegative.contractionsTitle">Contractions:</div>
+                        <p data-i18n="simpleFuture3.willNegative.contractionsRule">In spoken English and informal writing, we often use contractions (short forms) of "will not".</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.willNegative.contractionExample1">I won't study tomorrow.</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.willNegative.contractionExample2">You won't call me later.</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.willNegative.contractionExample3">He won't arrive soon.</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.willNegative.contractionExample4">She won't finish the work.</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.willNegative.contractionExample5">We won't travel next week.</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.willNegative.contractionExample6">They won't buy a car.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Negative with Going To Section -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simpleFuture3.goingToNegative.title">Negative with "Going To"</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🔤</span>
+                        <span data-i18n="simpleFuture3.goingToNegative.conjugation">Negative Formation with "Going To"</span>
+                    </h3>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.goingToNegative.ruleTitle">Step-by-Step Process:</div>
+                        <p data-i18n="simpleFuture3.goingToNegative.rule">With "going to," we add "not" after the appropriate form of "to be" (am, is, are).</p>
+                        <p data-i18n="simpleFuture3.goingToNegative.formula">Formula: [Subject] + [am/is/are] + "not" + "going to" + [Base Form of Verb] + [Rest of Sentence]</p>
+                    </div>
+                    
+                    <table class="EH-conjugation-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="common.subject">Subject</th>
+                                <th data-i18n="simpleFuture3.goingToNegative.positive">Positive</th>
+                                <th data-i18n="simpleFuture3.goingToNegative.negative">Negative</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="common.i">I</td>
+                                <td data-i18n="simpleFuture3.goingToNegative.positiveI">I am going to study tomorrow.</td>
+                                <td data-i18n="simpleFuture3.goingToNegative.negativeI">I am not going to study tomorrow.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.you">You</td>
+                                <td data-i18n="simpleFuture3.goingToNegative.positiveYou">You are going to call me later.</td>
+                                <td data-i18n="simpleFuture3.goingToNegative.negativeYou">You are not going to call me later.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.he">He</td>
+                                <td data-i18n="simpleFuture3.goingToNegative.positiveHe">He is going to arrive soon.</td>
+                                <td data-i18n="simpleFuture3.goingToNegative.negativeHe">He is not going to arrive soon.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.she">She</td>
+                                <td data-i18n="simpleFuture3.goingToNegative.positiveShe">She is going to finish the work.</td>
+                                <td data-i18n="simpleFuture3.goingToNegative.negativeShe">She is not going to finish the work.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.we">We</td>
+                                <td data-i18n="simpleFuture3.goingToNegative.positiveWe">We are going to travel next week.</td>
+                                <td data-i18n="simpleFuture3.goingToNegative.negativeWe">We are not going to travel next week.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.they">They</td>
+                                <td data-i18n="simpleFuture3.goingToNegative.positiveThey">They are going to buy a car.</td>
+                                <td data-i18n="simpleFuture3.goingToNegative.negativeThey">They are not going to buy a car.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.goingToNegative.contractionsTitle">Contractions:</div>
+                        <p data-i18n="simpleFuture3.goingToNegative.contractionsRule">In spoken English and informal writing, we often use contractions (short forms).</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.goingToNegative.contractionExample1">I'm not going to study tomorrow.</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.goingToNegative.contractionExample2">You aren't going to call me later.</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.goingToNegative.contractionExample3">He isn't going to arrive soon.</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.goingToNegative.contractionExample4">She isn't going to finish the work.</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.goingToNegative.contractionExample5">We aren't going to travel next week.</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.goingToNegative.contractionExample6">They aren't going to buy a car.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Negative with All Verbs Section -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simpleFuture3.allVerbsNegative.title">Negative with All Verbs</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">📝</span>
+                        <span data-i18n="simpleFuture3.allVerbsNegative.conjugation">Negative Formation with Regular and Irregular Verbs</span>
+                    </h3>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.allVerbsNegative.ruleTitle">Step-by-Step Process:</div>
+                        <p data-i18n="simpleFuture3.allVerbsNegative.rule">For all verbs, we use "will not" or "am/is/are not going to" to form negative sentences in the future tense.</p>
+                        <p data-i18n="simpleFuture3.allVerbsNegative.formula">Formula 1: [Subject] + "will not" + [Base Form of Verb] + [Rest of Sentence]</p>
+                        <p data-i18n="simpleFuture3.allVerbsNegative.formula2">Formula 2: [Subject] + [am/is/are] + "not" + "going to" + [Base Form of Verb] + [Rest of Sentence]</p>
+                    </div>
+                    
+                    <table class="EH-conjugation-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="common.subject">Subject</th>
+                                <th data-i18n="simpleFuture3.allVerbsNegative.positive">Positive (Will)</th>
+                                <th data-i18n="simpleFuture3.allVerbsNegative.negative">Negative (Will)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="common.i">I</td>
+                                <td data-i18n="simpleFuture3.allVerbsNegative.positiveI">I will work tomorrow.</td>
+                                <td data-i18n="simpleFuture3.allVerbsNegative.negativeI">I will not work tomorrow.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.you">You</td>
+                                <td data-i18n="simpleFuture3.allVerbsNegative.positiveYou">You will like the movie.</td>
+                                <td data-i18n="simpleFuture3.allVerbsNegative.negativeYou">You will not like the movie.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.he">He</td>
+                                <td data-i18n="simpleFuture3.allVerbsNegative.positiveHe">He will play soccer.</td>
+                                <td data-i18n="simpleFuture3.allVerbsNegative.negativeHe">He will not play soccer.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.she">She</td>
+                                <td data-i18n="simpleFuture3.allVerbsNegative.positiveShe">She will study English.</td>
+                                <td data-i18n="simpleFuture3.allVerbsNegative.negativeShe">She will not study English.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.we">We</td>
+                                <td data-i18n="simpleFuture3.allVerbsNegative.positiveWe">We will live in Paris.</td>
+                                <td data-i18n="simpleFuture3.allVerbsNegative.negativeWe">We will not live in Paris.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="common.they">They</td>
+                                <td data-i18n="simpleFuture3.allVerbsNegative.positiveThey">They will speak French.</td>
+                                <td data-i18n="simpleFuture3.allVerbsNegative.negativeThey">They will not speak French.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.allVerbsNegative.irregularTitle">Negative with Irregular Verbs:</div>
+                        <p data-i18n="simpleFuture3.allVerbsNegative.irregularRule">Even with irregular verbs, we still use "will not" or "am/is/are not going to" to form negatives, and the main verb stays in its base form.</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.allVerbsNegative.irregularExample1">I won't go to the gym tomorrow. (go → will go in statements)</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.allVerbsNegative.irregularExample2">She won't do her homework. (do → will do in statements)</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.allVerbsNegative.irregularExample3">They won't have classes tomorrow. (have → will have in statements)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Passive Voice Section -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simpleFuture3.passive.title">Passive Voice in Simple Future</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🔄</span>
+                        <span data-i18n="simpleFuture3.passive.whatIs">What is Passive Voice?</span>
+                    </h3>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.passive.definitionTitle">Definition:</div>
+                        <p data-i18n="simpleFuture3.passive.definition">In passive voice, the subject receives the action rather than performing it. We use passive voice when the doer of the action is unknown, unimportant, or obvious from context.</p>
+                    </div>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.passive.structureTitle">Structure of Passive Voice:</div>
+                        <p data-i18n="simpleFuture3.passive.structureRule">Formula: [Subject] + [will be] + [Past Participle] + [by + agent (optional)]</p>
+                        <p data-i18n="simpleFuture3.passive.structureExample">Example: "The book will be read by students."</p>
+                    </div>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.passive.formationTitle">Forming Passive Voice:</div>
+                        <p data-i18n="simpleFuture3.passive.formationRule">To form passive voice in simple future tense, use "will be" followed by the past participle of the main verb.</p>
+                    </div>
+                    
+                    <table class="EH-conjugation-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="simpleFuture3.passive.active">Active Voice</th>
+                                <th data-i18n="simpleFuture3.passive.passive">Passive Voice</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="simpleFuture3.passive.activeExample1">I will write a letter.</td>
+                                <td data-i18n="simpleFuture3.passive.passiveExample1">A letter will be written by me.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="simpleFuture3.passive.activeExample2">You will clean the room.</td>
+                                <td data-i18n="simpleFuture3.passive.passiveExample2">The room will be cleaned by you.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="simpleFuture3.passive.activeExample3">He will fix the car.</td>
+                                <td data-i18n="simpleFuture3.passive.passiveExample3">The car will be fixed by him.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="simpleFuture3.passive.activeExample4">She will teach the students.</td>
+                                <td data-i18n="simpleFuture3.passive.passiveExample4">The students will be taught by her.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="simpleFuture3.passive.activeExample5">We will build houses.</td>
+                                <td data-i18n="simpleFuture3.passive.passiveExample5">Houses will be built by us.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="simpleFuture3.passive.activeExample6">They will sell fruits.</td>
+                                <td data-i18n="simpleFuture3.passive.passiveExample6">Fruits will be sold by them.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.passive.negativeTitle">Negative Passive Voice:</div>
+                        <p data-i18n="simpleFuture3.passive.negativeRule">To form negative passive voice, add "not" after "will".</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.passive.negativeExample1">The book will not be read by students.</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.passive.negativeExample2">The car will not be fixed by him.</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.passive.negativeExample3">The students will not be taught by her.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.passive.questionTitle">Question Form in Passive Voice:</div>
+                        <p data-i18n="simpleFuture3.passive.questionRule">To form questions in passive voice, invert the subject and "will".</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.passive.questionExample1">Will the book be read by students?</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.passive.questionExample2">Will the car be fixed by him?</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.passive.questionExample3">Will the students be taught by her?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Idioms Section -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simpleFuture3.idioms.title">Common Future Tense Idioms</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">💬</span>
+                        <span data-i18n="simpleFuture3.idioms.whatAre">What Are Idioms?</span>
+                    </h3>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.idioms.definitionTitle">Definition:</div>
+                        <p data-i18n="simpleFuture3.idioms.definition">Idioms are expressions whose meanings cannot be understood from the literal definitions of the words that make them up. They often use the simple future tense to express future plans or predictions.</p>
+                    </div>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.idioms.commonIdiomsTitle">Common Future Tense Idioms:</div>
+                        <table class="EH-conjugation-table">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="simpleFuture3.idioms.idiom">Idiom</th>
+                                    <th data-i18n="simpleFuture3.idioms.meaning">Meaning</th>
+                                    <th data-i18n="simpleFuture3.idioms.example">Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-i18n="simpleFuture3.idioms.crossThatBridge">Cross that bridge when we come to it</td>
+                                    <td data-i18n="simpleFuture3.idioms.crossThatBridgeMeaning">Deal with a problem when it happens</td>
+                                    <td data-i18n="simpleFuture3.idioms.crossThatBridgeExample">"We'll cross that bridge when we come to it."</td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="simpleFuture3.idioms.hitTheRoad">Hit the road</td>
+                                    <td data-i18n="simpleFuture3.idioms.hitTheRoadMeaning">Begin a journey</td>
+                                    <td data-i18n="simpleFuture3.idioms.hitTheRoadExample">"We'll hit the road early tomorrow morning."</td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="simpleFuture3.idioms.turnOverANewLeaf">Turn over a new leaf</td>
+                                    <td data-i18n="simpleFuture3.idioms.turnOverANewLeafMeaning">Start behaving better</td>
+                                    <td data-i18n="simpleFuture3.idioms.turnOverANewLeafExample">"I'll turn over a new leaf starting next month."</td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="simpleFuture3.idioms.biteTheBullet">Bite the bullet</td>
+                                    <td data-i18n="simpleFuture3.idioms.biteTheBulletMeaning">Endure a painful experience</td>
+                                    <td data-i18n="simpleFuture3.idioms.biteTheBulletExample">"I'll bite the bullet and tell my boss tomorrow."</td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="simpleFuture3.idioms.goTheExtraMile">Go the extra mile</td>
+                                    <td data-i18n="simpleFuture3.idioms.goTheExtraMileMeaning">Make extra effort</td>
+                                    <td data-i18n="simpleFuture3.idioms.goTheExtraMileExample">"I'll go the extra mile to finish this project on time."</td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="simpleFuture3.idioms.jumpOnTheBandwagon">Jump on the bandwagon</td>
+                                    <td data-i18n="simpleFuture3.idioms.jumpOnTheBandwagonMeaning">Join a popular activity</td>
+                                    <td data-i18n="simpleFuture3.idioms.jumpOnTheBandwagonExample">"I think I'll jump on the bandwagon and try that new app."</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="simpleFuture3.idioms.usageTitle">Using Future Tense Idioms in Sentences:</div>
+                        <p data-i18n="simpleFuture3.idioms.usageRule">Future tense idioms are typically used to describe future plans, decisions, or predictions.</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.idioms.usageExample1">"I'll cross that bridge when I come to it."</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.idioms.usageExample2">"We'll hit the road as soon as the sun rises."</div>
+                            <div class="EH-conjugation-example" data-i18n="simpleFuture3.idioms.usageExample3">"She'll turn over a new leaf starting next week."</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Exercises Section -->
+            <div class="EH-conjugation-section EH-exercise-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="simpleFuture3.exercises.title">Practice Exercises</h2>
+                
+                <!-- Type 1: Multiple Choice Exercises -->
+                <h3 style="color: #00796b; margin-bottom: 20px;">Multiple Choice</h3>
+                <div class="EH-exercise-container">
+                    <!-- Exercise 1 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">1</div>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q1">Choose the correct negative form:</p>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q1Sentence">She ______ a doctor next year.</p>
+                        <div class="EH-exercise-options">
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="simpleFuture3.exercises.q1a">will not be</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="simpleFuture3.exercises.q1b">does not be</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="simpleFuture3.exercises.q1c">not will be</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 2 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">2</div>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q2">Choose the correct negative form:</p>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q2Sentence">They ______ coffee tomorrow.</p>
+                        <div class="EH-exercise-options">
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="simpleFuture3.exercises.q2a">won't drink</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="simpleFuture3.exercises.q2b">won't drank</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="simpleFuture3.exercises.q2c">not will drink</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 3 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">3</div>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q3">Choose the correct passive form:</p>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q3Sentence">The book ______ by students tomorrow.</p>
+                        <div class="EH-exercise-options">
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="simpleFuture3.exercises.q3a">will be read</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="simpleFuture3.exercises.q3b">will read</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="simpleFuture3.exercises.q3c">will be reading</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 4 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">4</div>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q4">Choose the correct idiom meaning:</p>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q4Sentence">"Cross that bridge when we come to it" means:</p>
+                        <div class="EH-exercise-options">
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="simpleFuture3.exercises.q4a">Build a bridge</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="simpleFuture3.exercises.q4b">Deal with a problem when it happens</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="simpleFuture3.exercises.q4c">Go on a trip</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 5 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">5</div>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q5">Choose the correct negative passive form:</p>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q5Sentence">The car ______ by him tomorrow.</p>
+                        <div class="EH-exercise-options">
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="simpleFuture3.exercises.q5a">will not be fixed</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="simpleFuture3.exercises.q5b">won't fix</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="simpleFuture3.exercises.q5c">not will be fixed</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 6 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">6</div>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q6">Choose the correct idiom meaning:</p>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q6Sentence">"Turn over a new leaf" means:</p>
+                        <div class="EH-exercise-options">
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-a" name="EH-exercise-type1-possibilities3-q6" value="a">
+                                <label for="EH-exercise-type1-possibilities3-q6-a" data-i18n="simpleFuture3.exercises.q6a">Start behaving better</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-b" name="EH-exercise-type1-possibilities3-q6" value="b">
+                                <label for="EH-exercise-type1-possibilities3-q6-b" data-i18n="simpleFuture3.exercises.q6b">Read a book</label>
+                            </div>
+                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
+                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-c" name="EH-exercise-type1-possibilities3-q6" value="c">
+                                <label for="EH-exercise-type1-possibilities3-q6-c" data-i18n="simpleFuture3.exercises.q6c">Garden work</label>
+                            </div>
+                        </div>
+                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q6-status"></div>
+                    </div>
+                </div>
+                
+                <!-- Type 2: Fill in the Blank Exercises -->
+                <h3 style="color: #00796b; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <div class="EH-exercise-container">
+                    <!-- Exercise 7 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">7</div>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q7">Complete the negative sentence:</p>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q7Sentence">I ______ (not/like) the movie tomorrow.</p>
+                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q1-input" placeholder="Type your answer here">
+                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q1-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 8 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">8</div>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q8">Complete the passive sentence:</p>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q8Sentence">The house ______ (build) next year.</p>
+                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q2-input" placeholder="Type your answer here">
+                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q2-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 9 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">9</div>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q9">Complete the negative passive sentence:</p>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q9Sentence">The letter ______ (not/send) tomorrow.</p>
+                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q3-input" placeholder="Type your answer here">
+                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q3-status"></div>
+                    </div>
+                </div>
+                
+                <!-- Type 3: Sentence Ordering Exercises -->
+                <h3 style="color: #00796b; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <div class="EH-exercise-container">
+                    <!-- Exercise 10 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">10</div>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q10">Arrange the words to form a correct negative sentence:</p>
+                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q1-words">
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word1" data-original-index="1">He</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word3" data-original-index="3">not</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word5" data-original-index="5">.</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word4" data-original-index="4">French</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word2" data-original-index="2">will</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word6" data-original-index="6">speak</span>
+                        </div>
+                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q1-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 11 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">11</div>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q11">Arrange the words to form a correct passive sentence:</p>
+                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q2-words">
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word1" data-original-index="1">The</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word3" data-original-index="3">by</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word5" data-original-index="5">.</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word4" data-original-index="4">students</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word2" data-original-index="2">book</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word7" data-original-index="7">will</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word8" data-original-index="8">be</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word6" data-original-index="6">read</span>
+                        </div>
+                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q2-status"></div>
+                    </div>
+                    
+                    <!-- Exercise 12 -->
+                    <div class="EH-exercise-card">
+                        <div class="EH-exercise-number">12</div>
+                        <p class="EH-exercise-text" data-i18n="simpleFuture3.exercises.q12">Arrange the words to form a sentence with an idiom:</p>
+                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q3-words">
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word1" data-original-index="1">We</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word3" data-original-index="3">that</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word5" data-original-index="5">when</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word4" data-original-index="4">bridge</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word2" data-original-index="2">will</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word7" data-original-index="7">to</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word8" data-original-index="8">it</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word6" data-original-index="6">come</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word9" data-original-index="9">.</span>
+                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word10" data-original-index="10">cross</span>
+                        </div>
+                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q3-status"></div>
+                    </div>
+                </div>
+                
+                <!-- Answer Check and Score System -->
+                <div class="EH-exercise-type1-possibilities3-answers-control">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers">Check All Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+                        <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/12</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback">Check your answers to see how you did!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="EH-conjugation-navigation">
+                <button class="EH-conjugation-nav-button back" onclick="window.location.href='conjugation.html'">
+                    ← <span data-i18n="common.backToConjugation">Back to Verb Conjugation</span>
+                </button>
+                <!-- <button class="EH-conjugation-nav-button" onclick="window.location.href='EH-conj-past-simple-p1.html'">
+                    <span data-i18n="common.nextLesson">Next Lesson</span> →
+                </button> -->
+            </div>
+        </div>
+    </div>
+    
+    <footer class="EH-common-footer">
+        <div class="EH-common-footer-content">
+            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+            <div class="EH-common-footer-links">
+                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                <a href="#" data-i18n="footer.contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- i18n translations -->
+    <script src="scripts/translations/i18n_en.js"></script>
+    <script src="scripts/translations/i18n_fr.js"></script>
+    <script src="scripts/translations/i18n_ar.js"></script>
+    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/exercise.js"></script>
+    
+    <script>
+        // Correct answers for Type 1 exercises
+        const correctAnswersType1 = {
+            'EH-exercise-type1-possibilities3-q1': 'a', // She will not be a doctor.
+            'EH-exercise-type1-possibilities3-q2': 'a', // They won't drink coffee tomorrow.
+            'EH-exercise-type1-possibilities3-q3': 'a', // The book will be read by students tomorrow.
+            'EH-exercise-type1-possibilities3-q4': 'b', // Cross that bridge means deal with a problem when it happens.
+            'EH-exercise-type1-possibilities3-q5': 'a', // The car will not be fixed by him tomorrow.
+            'EH-exercise-type1-possibilities3-q6': 'a'  // Turn over a new leaf means start behaving better.
+        };
+        
+        // Correct answers for Type 2 exercises
+        const correctAnswersType2 = {
+            'EH-exercise-type2-fillblank-q1': 'will not like',     // I will not like the movie tomorrow.
+            'EH-exercise-type2-fillblank-q2': 'will be built',     // The house will be built next year.
+            'EH-exercise-type2-fillblank-q3': 'will not be sent'   // The letter will not be sent tomorrow.
+        };
+        
+        // Correct answers for Type 3 exercises
+        const correctAnswersType3 = {
+            'EH-exercise-type3-sentenceorder-q1': 'He will not speak French .',
+            'EH-exercise-type3-sentenceorder-q2': 'The book will be read by students .',
+            'EH-exercise-type3-sentenceorder-q3': 'We will cross that bridge when we come to it .'
+        };
+        
+        // Combined function to check all exercise types
+        function checkAllExercises() {
+            let totalScore = 0;
+            let totalQuestions = 0;
+            
+            // Check Type 1 exercises
+            const type1Score = ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
+            totalScore += type1Score;
+            totalQuestions += Object.keys(correctAnswersType1).length;
+            
+            // Check Type 2 exercises
+            const type2Score = ExerciseType2FillBlankCheckAnswers(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
+            totalScore += type2Score;
+            totalQuestions += Object.keys(correctAnswersType2).length;
+            
+            // Check Type 3 exercises
+            const type3Score = ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
+            totalScore += type3Score;
+            totalQuestions += Object.keys(correctAnswersType3).length;
+            
+            // Update combined score display
+            const scoreValue = document.getElementById('EH-exercise-type1-possibilities3-score-value');
+            const scoreFeedback = document.getElementById('EH-exercise-type1-possibilities3-score-feedback');
+            
+            if (scoreValue) scoreValue.textContent = `${totalScore}/${totalQuestions}`;
+            
+            if (scoreFeedback) {
+                if (totalScore === totalQuestions) {
+                    scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
+                } else if (totalScore >= totalQuestions * 0.7) {
+                    scoreFeedback.textContent = 'Good job! You did well on this exercise.';
+                } else if (totalScore >= totalQuestions * 0.5) {
+                    scoreFeedback.textContent = 'Not bad, but you might want to review the material again.';
+                } else {
+                    scoreFeedback.textContent = 'You might want to review the material and try again.';
+                }
+            }
+            
+            return totalScore;
+        }
+        
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up answer checking for all exercise types
+            ExerciseType1Possibilities3Init(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
+            ExerciseType2FillBlankInit(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
+            ExerciseType3SentenceOrderInit(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
+            
+            // Replace the default check button with our combined function
+            const checkButton = document.getElementById('EH-exercise-type1-possibilities3-check-answers');
+            if (checkButton) {
+                checkButton.addEventListener('click', checkAllExercises);
+            }
+        });
+    </script>
+</body>
+</html>
