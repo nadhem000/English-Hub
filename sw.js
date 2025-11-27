@@ -1,7 +1,7 @@
 // Service Worker for English Hub
 // Version: 2.0.0
-const CACHE_NAME = 'english-hub-v2.0.2';
-const DYNAMIC_CACHE_NAME = 'english-hub-dynamic-v2.0.2';
+const CACHE_NAME = 'english-hub-v2.0.3';
+const DYNAMIC_CACHE_NAME = 'english-hub-dynamic-v2.0.3';
 
 // Core assets that are essential for the app to work
 const CORE_ASSETS = [
