@@ -1203,7 +1203,10 @@ window.I18N['en'] = {
 		modalVerbs: "Modal Verbs",
 		modalVerbsDescription: "Express ability, possibility, permission, or obligation.",
 		conditionalMood: "Conditional Mood",
-		conditionalMoodDescription: "Express hypothetical situations and their consequences."
+		conditionalMoodDescription: "Express hypothetical situations and their consequences.",
+		irregularVerbs: "Irregular Verbs",
+		irregularVerbsDescription: "Master the most common irregular verbs that don't follow standard conjugation patterns.",
+viewFullTable: "View Full Irregular Verbs Table"
 	},
     simplePresent: {
 		title: "Simple Present Tense: Generality",

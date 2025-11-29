@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irregular Verbs - English Hub</title>
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/common.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .EH-irregular-verbs-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .EH-irregular-verbs-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .EH-irregular-verbs-title {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .EH-irregular-verbs-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+        }
+        
+        .EH-irregular-verbs-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .EH-irregular-verbs-table-container {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .EH-irregular-verbs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .EH-irregular-verbs-table th {
+            background: linear-gradient(135deg, #e9967a, #d87c60);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+            border: none;
+        }
+        
+        .EH-irregular-verbs-table tr:nth-child(even) {
+            background-color: rgba(144, 238, 144, 0.2);
+        }
+        
+        .EH-irregular-verbs-table tr:nth-child(odd) {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .EH-irregular-verbs-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(233, 150, 122, 0.3);
+        }
+        
+        .EH-irregular-verbs-table tr:hover {
+            background-color: rgba(233, 150, 122, 0.2);
+        }
+        
+        .EH-irregular-verbs-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .EH-irregular-verbs-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e9967a, #d87c60);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .EH-irregular-verbs-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .EH-irregular-verbs-button:active {
+            transform: translateY(-1px);
+        }
+        
+        .EH-irregular-verbs-button.back {
+            background: linear-gradient(135deg, #90ee90, #7ad87c);
+        }
+        
+        @media (max-width: 768px) {
+            .EH-irregular-verbs-title {
+                font-size: 2rem;
+            }
+            
+            .EH-irregular-verbs-table th,
+            .EH-irregular-verbs-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .EH-irregular-verbs-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Selector -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+    
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n="EH.common.header.siteName">English Hub</span>
+    </div>
+    
+    <div class="EH-irregular-verbs-container">
+        <header class="EH-irregular-verbs-header">
+            <h1 class="EH-irregular-verbs-title" data-i18n="EH.conjugation.irregularVerbs.title">Irregular Verbs</h1>
+            <p class="EH-irregular-verbs-subtitle" data-i18n="EH.conjugation.irregularVerbs.subtitle">Master the most common irregular verbs</p>
+        </header>
+        
+        <div class="EH-irregular-verbs-content">
+            <div class="EH-irregular-verbs-table-container">
+                <table class="EH-irregular-verbs-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="EH.conjugation.irregularVerbs.baseForm">Base Form</th>
+                            <th data-i18n="EH.conjugation.irregularVerbs.pastSimple">Past Simple</th>
+                            <th data-i18n="EH.conjugation.irregularVerbs.pastParticiple">Past Participle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_be_base">be</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_be_past">was/were</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_be_participle">been</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_begin_base">begin</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_begin_past">began</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_begin_participle">begun</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_break_base">break</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_break_past">broke</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_break_participle">broken</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_bring_base">bring</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_bring_past">brought</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_bring_participle">brought</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_build_base">build</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_build_past">built</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_build_participle">built</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_buy_base">buy</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_buy_past">bought</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_buy_participle">bought</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_catch_base">catch</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_catch_past">caught</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_catch_participle">caught</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_choose_base">choose</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_choose_past">chose</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_choose_participle">chosen</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_come_base">come</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_come_past">came</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_come_participle">come</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_do_base">do</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_do_past">did</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_do_participle">done</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_draw_base">draw</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_draw_past">drew</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_draw_participle">drawn</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_drink_base">drink</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_drink_past">drank</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_drink_participle">drunk</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_drive_base">drive</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_drive_past">drove</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_drive_participle">driven</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_eat_base">eat</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_eat_past">ate</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_eat_participle">eaten</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_fall_base">fall</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_fall_past">fell</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_fall_participle">fallen</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_feel_base">feel</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_feel_past">felt</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_feel_participle">felt</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_find_base">find</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_find_past">found</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_find_participle">found</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_fly_base">fly</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_fly_past">flew</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_fly_participle">flown</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_forget_base">forget</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_forget_past">forgot</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_forget_participle">forgotten</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_get_base">get</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_get_past">got</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_get_participle">gotten</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_give_base">give</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_give_past">gave</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_give_participle">given</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_go_base">go</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_go_past">went</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_go_participle">gone</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_grow_base">grow</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_grow_past">grew</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_grow_participle">grown</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_have_base">have</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_have_past">had</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_have_participle">had</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_hear_base">hear</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_hear_past">heard</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_hear_participle">heard</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_keep_base">keep</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_keep_past">kept</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_keep_participle">kept</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_know_base">know</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_know_past">knew</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_know_participle">known</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_leave_base">leave</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_leave_past">left</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_leave_participle">left</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_make_base">make</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_make_past">made</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_make_participle">made</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_meet_base">meet</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_meet_past">met</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_meet_participle">met</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_pay_base">pay</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_pay_past">paid</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_pay_participle">paid</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_put_base">put</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_put_past">put</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_put_participle">put</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_read_base">read</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_read_past">read</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_read_participle">read</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_run_base">run</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_run_past">ran</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_run_participle">run</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_say_base">say</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_say_past">said</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_say_participle">said</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_see_base">see</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_see_past">saw</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_see_participle">seen</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_sell_base">sell</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_sell_past">sold</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_sell_participle">sold</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_send_base">send</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_send_past">sent</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_send_participle">sent</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_sing_base">sing</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_sing_past">sang</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_sing_participle">sung</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_sit_base">sit</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_sit_past">sat</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_sit_participle">sat</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_sleep_base">sleep</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_sleep_past">slept</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_sleep_participle">slept</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_speak_base">speak</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_speak_past">spoke</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_speak_participle">spoken</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_spend_base">spend</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_spend_past">spent</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_spend_participle">spent</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_stand_base">stand</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_stand_past">stood</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_stand_participle">stood</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_swim_base">swim</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_swim_past">swam</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_swim_participle">swum</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_take_base">take</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_take_past">took</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_take_participle">taken</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_teach_base">teach</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_teach_past">taught</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_teach_participle">taught</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_tell_base">tell</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_tell_past">told</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_tell_participle">told</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_think_base">think</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_think_past">thought</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_think_participle">thought</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_understand_base">understand</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_understand_past">understood</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_understand_participle">understood</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_wear_base">wear</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_wear_past">wore</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_wear_participle">worn</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_win_base">win</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_win_past">won</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_win_participle">won</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_write_base">write</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_write_past">wrote</td>
+                            <td data-i18n="EH.conjugation.irregularVerbs.verb_write_participle">written</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="EH-irregular-verbs-actions">
+                <button class="EH-irregular-verbs-button back" onclick="window.location.href='conjugation.html'" data-i18n="EH.conjugation.irregularVerbs.backToConjugation">
+                    Back to Conjugation
+                </button>
+                <button class="EH-irregular-verbs-button" onclick="window.location.href='index.html'" data-i18n="EH.conjugation.irregularVerbs.backToHome">
+                    Back to Home
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="EH-common-footer">
+        <div class="EH-common-footer-content">
+            <div class="EH-common-footer-developer" data-i18n="EH.common.footer.developer">Developer: Mejri Ziad</div>
+            <div class="EH-common-footer-links">
+                <a href="#" data-i18n="EH.common.footer.privacy">Privacy Policy</a>
+                <a href="#" data-i18n="EH.common.footer.terms">Terms of Service</a>
+                <a href="#" data-i18n="EH.common.footer.contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Translation container with nested structure
+        const irregular_verbs_translation = {
+            ar: {
+                EH: {
+                    common: {
+                        header: {
+                            siteName: "English Hub"
+                        },
+                        footer: {
+                            developer: "زياد الماجري",
+                            privacy: "سياسة الخصوصية",
+                            terms: "قواعد الاستعمال",
+                            contact: "التواصل"
+                        }
+                    },
+                    conjugation: {
+                        irregularVerbs: {
+    title: "Irregular Verbs (الأفعال الشاذة)",
+    subtitle: "Master the most common irregular verbs (إتقان أكثر الأفعال الشاذة شيوعاً)",
+    baseForm: "Base Form (الصيغة الأساسية)",
+    pastSimple: "Past Simple (الماضي البسيط)",
+    pastParticiple: "Past Participle (التصريف الثالث)",
+    backToConjugation: "Back to Conjugation (العودة إلى التصريف)",
+    backToHome: "Back to Home (العودة إلى الرئيسية)",
+    // Verb translations
+    verb_be_base: "be (يكون)",
+    verb_be_past: "was/were (كان)",
+    verb_be_participle: "been (كان)",
+    verb_begin_base: "begin (يبدأ)",
+    verb_begin_past: "began (بدأ)",
+    verb_begin_participle: "begun (بدأ)",
+    verb_break_base: "break (يكسر)",
+    verb_break_past: "broke (كسر)",
+    verb_break_participle: "broken (كسر)",
+    verb_bring_base: "bring (يأتي بـ)",
+    verb_bring_past: "brought (أتى بـ)",
+    verb_bring_participle: "brought (أتى بـ)",
+    verb_build_base: "build (يبني)",
+    verb_build_past: "built (بنى)",
+    verb_build_participle: "built (بنى)",
+    verb_buy_base: "buy (يشتري)",
+    verb_buy_past: "bought (اشترى)",
+    verb_buy_participle: "bought (اشترى)",
+    verb_catch_base: "catch (يمسك)",
+    verb_catch_past: "caught (أمسك)",
+    verb_catch_participle: "caught (أمسك)",
+    verb_choose_base: "choose (يختار)",
+    verb_choose_past: "chose (اختار)",
+    verb_choose_participle: "chosen (اختار)",
+    verb_come_base: "come (يأتي)",
+    verb_come_past: "came (أتى)",
+    verb_come_participle: "come (أتى)",
+    verb_do_base: "do (يفعل)",
+    verb_do_past: "did (فعل)",
+    verb_do_participle: "done (فعل)",
+    verb_draw_base: "draw (يرسم)",
+    verb_draw_past: "drew (رسم)",
+    verb_draw_participle: "drawn (رسم)",
+    verb_drink_base: "drink (يشرب)",
+    verb_drink_past: "drank (شرب)",
+    verb_drink_participle: "drunk (شرب)",
+    verb_drive_base: "drive (يقود)",
+    verb_drive_past: "drove (قاد)",
+    verb_drive_participle: "driven (قاد)",
+    verb_eat_base: "eat (يأكل)",
+    verb_eat_past: "ate (أكل)",
+    verb_eat_participle: "eaten (أكل)",
+    verb_fall_base: "fall (يسقط)",
+    verb_fall_past: "fell (سقط)",
+    verb_fall_participle: "fallen (سقط)",
+    verb_feel_base: "feel (يشعر)",
+    verb_feel_past: "felt (شعر)",
+    verb_feel_participle: "felt (شعر)",
+    verb_find_base: "find (يجد)",
+    verb_find_past: "found (وجد)",
+    verb_find_participle: "found (وجد)",
+    verb_fly_base: "fly (يطير)",
+    verb_fly_past: "flew (طار)",
+    verb_fly_participle: "flown (طار)",
+    verb_forget_base: "forget (ينسى)",
+    verb_forget_past: "forgot (نسي)",
+    verb_forget_participle: "forgotten (نسي)",
+    verb_get_base: "get (يحصل)",
+    verb_get_past: "got (حصل)",
+    verb_get_participle: "gotten (حصل)",
+    verb_give_base: "give (يعطي)",
+    verb_give_past: "gave (أعطى)",
+    verb_give_participle: "given (أعطى)",
+    verb_go_base: "go (يذهب)",
+    verb_go_past: "went (ذهب)",
+    verb_go_participle: "gone (ذهب)",
+    verb_grow_base: "grow (ينمو)",
+    verb_grow_past: "grew (نما)",
+    verb_grow_participle: "grown (نما)",
+    verb_have_base: "have (يملك)",
+    verb_have_past: "had (املك)",
+    verb_have_participle: "had (املك)",
+    verb_hear_base: "hear (يسمع)",
+    verb_hear_past: "heard (سمع)",
+    verb_hear_participle: "heard (سمع)",
+    verb_keep_base: "keep (يحتفظ)",
+    verb_keep_past: "kept (احتفظ)",
+    verb_keep_participle: "kept (احتفظ)",
+    verb_know_base: "know (يعرف)",
+    verb_know_past: "knew (عرف)",
+    verb_know_participle: "known (عرف)",
+    verb_leave_base: "leave (يغادر)",
+    verb_leave_past: "left (غادر)",
+    verb_leave_participle: "left (غادر)",
+    verb_make_base: "make (يصنع)",
+    verb_make_past: "made (صنع)",
+    verb_make_participle: "made (صنع)",
+    verb_meet_base: "meet (يلتقي)",
+    verb_meet_past: "met (التقى)",
+    verb_meet_participle: "met (التقى)",
+    verb_pay_base: "pay (يدفع)",
+    verb_pay_past: "paid (دفع)",
+    verb_pay_participle: "paid (دفع)",
+    verb_put_base: "put (يضع)",
+    verb_put_past: "put (وضع)",
+    verb_put_participle: "put (وضع)",
+    verb_read_base: "read (يقرأ)",
+    verb_read_past: "read (قرأ)",
+    verb_read_participle: "read (قرأ)",
+    verb_run_base: "run (يركض)",
+    verb_run_past: "ran (ركض)",
+    verb_run_participle: "run (ركض)",
+    verb_say_base: "say (يقول)",
+    verb_say_past: "said (قال)",
+    verb_say_participle: "said (قال)",
+    verb_see_base: "see (يرى)",
+    verb_see_past: "saw (رأى)",
+    verb_see_participle: "seen (رأى)",
+    verb_sell_base: "sell (يبيع)",
+    verb_sell_past: "sold (باع)",
+    verb_sell_participle: "sold (باع)",
+    verb_send_base: "send (يرسل)",
+    verb_send_past: "sent (أرسل)",
+    verb_send_participle: "sent (أرسل)",
+    verb_sing_base: "sing (يغني)",
+    verb_sing_past: "sang (غنى)",
+    verb_sing_participle: "sung (غنى)",
+    verb_sit_base: "sit (يجلس)",
+    verb_sit_past: "sat (جلس)",
+    verb_sit_participle: "sat (جلس)",
+    verb_sleep_base: "sleep (ينام)",
+    verb_sleep_past: "slept (نام)",
+    verb_sleep_participle: "slept (نام)",
+    verb_speak_base: "speak (يتكلم)",
+    verb_speak_past: "spoke (تكلم)",
+    verb_speak_participle: "spoken (تكلم)",
+    verb_spend_base: "spend (ينفق)",
+    verb_spend_past: "spent (أنفق)",
+    verb_spend_participle: "spent (أنفق)",
+    verb_stand_base: "stand (يقف)",
+    verb_stand_past: "stood (وقف)",
+    verb_stand_participle: "stood (وقف)",
+    verb_swim_base: "swim (يسبح)",
+    verb_swim_past: "swam (سبح)",
+    verb_swim_participle: "swum (سبح)",
+    verb_take_base: "take (يأخذ)",
+    verb_take_past: "took (أخذ)",
+    verb_take_participle: "taken (أخذ)",
+    verb_teach_base: "teach (يعلم)",
+    verb_teach_past: "taught (علم)",
+    verb_teach_participle: "taught (علم)",
+    verb_tell_base: "tell (يخبر)",
+    verb_tell_past: "told (أخبر)",
+    verb_tell_participle: "told (أخبر)",
+    verb_think_base: "think (يفكر)",
+    verb_think_past: "thought (فكر)",
+    verb_think_participle: "thought (فكر)",
+    verb_understand_base: "understand (يفهم)",
+    verb_understand_past: "understood (فهم)",
+    verb_understand_participle: "understood (فهم)",
+    verb_wear_base: "wear (يرتدي)",
+    verb_wear_past: "wore (ارتدى)",
+    verb_wear_participle: "worn (ارتدى)",
+    verb_win_base: "win (يفوز)",
+    verb_win_past: "won (فاز)",
+    verb_win_participle: "won (فاز)",
+    verb_write_base: "write (يكتب)",
+    verb_write_past: "wrote (كتب)",
+    verb_write_participle: "written (كتب)"
+}
+                    }
+                }
+            },
+            en: {
+                EH: {
+                    common: {
+                        header: {
+                            siteName: "English Hub"
+                        },
+                        footer: {
+                            developer: "Developer: Mejri Ziad",
+                            privacy: "Privacy Policy",
+                            terms: "Terms of Service",
+                            contact: "Contact"
+                        }
+                    },
+                    conjugation: {
+                        irregularVerbs: {
+                            title: "Irregular Verbs",
+                            subtitle: "Master the most common irregular verbs",
+                            baseForm: "Base Form",
+                            pastSimple: "Past Simple",
+                            pastParticiple: "Past Participle",
+                            backToConjugation: "Back to Conjugation",
+                            backToHome: "Back to Home",
+                            // Verb translations
+                            verb_be_base: "be",
+                            verb_be_past: "was/were",
+                            verb_be_participle: "been",
+                            verb_begin_base: "begin",
+                            verb_begin_past: "began",
+                            verb_begin_participle: "begun",
+                            verb_break_base: "break",
+                            verb_break_past: "broke",
+                            verb_break_participle: "broken",
+                            verb_bring_base: "bring",
+                            verb_bring_past: "brought",
+                            verb_bring_participle: "brought",
+                            verb_build_base: "build",
+                            verb_build_past: "built",
+                            verb_build_participle: "built",
+                            verb_buy_base: "buy",
+                            verb_buy_past: "bought",
+                            verb_buy_participle: "bought",
+                            verb_catch_base: "catch",
+                            verb_catch_past: "caught",
+                            verb_catch_participle: "caught",
+                            verb_choose_base: "choose",
+                            verb_choose_past: "chose",
+                            verb_choose_participle: "chosen",
+                            verb_come_base: "come",
+                            verb_come_past: "came",
+                            verb_come_participle: "come",
+                            verb_do_base: "do",
+                            verb_do_past: "did",
+                            verb_do_participle: "done",
+                            verb_draw_base: "draw",
+                            verb_draw_past: "drew",
+                            verb_draw_participle: "drawn",
+                            verb_drink_base: "drink",
+                            verb_drink_past: "drank",
+                            verb_drink_participle: "drunk",
+                            verb_drive_base: "drive",
+                            verb_drive_past: "drove",
+                            verb_drive_participle: "driven",
+                            verb_eat_base: "eat",
+                            verb_eat_past: "ate",
+                            verb_eat_participle: "eaten",
+                            verb_fall_base: "fall",
+                            verb_fall_past: "fell",
+                            verb_fall_participle: "fallen",
+                            verb_feel_base: "feel",
+                            verb_feel_past: "felt",
+                            verb_feel_participle: "felt",
+                            verb_find_base: "find",
+                            verb_find_past: "found",
+                            verb_find_participle: "found",
+                            verb_fly_base: "fly",
+                            verb_fly_past: "flew",
+                            verb_fly_participle: "flown",
+                            verb_forget_base: "forget",
+                            verb_forget_past: "forgot",
+                            verb_forget_participle: "forgotten",
+                            verb_get_base: "get",
+                            verb_get_past: "got",
+                            verb_get_participle: "gotten",
+                            verb_give_base: "give",
+                            verb_give_past: "gave",
+                            verb_give_participle: "given",
+                            verb_go_base: "go",
+                            verb_go_past: "went",
+                            verb_go_participle: "gone",
+                            verb_grow_base: "grow",
+                            verb_grow_past: "grew",
+                            verb_grow_participle: "grown",
+                            verb_have_base: "have",
+                            verb_have_past: "had",
+                            verb_have_participle: "had",
+                            verb_hear_base: "hear",
+                            verb_hear_past: "heard",
+                            verb_hear_participle: "heard",
+                            verb_keep_base: "keep",
+                            verb_keep_past: "kept",
+                            verb_keep_participle: "kept",
+                            verb_know_base: "know",
+                            verb_know_past: "knew",
+                            verb_know_participle: "known",
+                            verb_leave_base: "leave",
+                            verb_leave_past: "left",
+                            verb_leave_participle: "left",
+                            verb_make_base: "make",
+                            verb_make_past: "made",
+                            verb_make_participle: "made",
+                            verb_meet_base: "meet",
+                            verb_meet_past: "met",
+                            verb_meet_participle: "met",
+                            verb_pay_base: "pay",
+                            verb_pay_past: "paid",
+                            verb_pay_participle: "paid",
+                            verb_put_base: "put",
+                            verb_put_past: "put",
+                            verb_put_participle: "put",
+                            verb_read_base: "read",
+                            verb_read_past: "read",
+                            verb_read_participle: "read",
+                            verb_run_base: "run",
+                            verb_run_past: "ran",
+                            verb_run_participle: "run",
+                            verb_say_base: "say",
+                            verb_say_past: "said",
+                            verb_say_participle: "said",
+                            verb_see_base: "see",
+                            verb_see_past: "saw",
+                            verb_see_participle: "seen",
+                            verb_sell_base: "sell",
+                            verb_sell_past: "sold",
+                            verb_sell_participle: "sold",
+                            verb_send_base: "send",
+                            verb_send_past: "sent",
+                            verb_send_participle: "sent",
+                            verb_sing_base: "sing",
+                            verb_sing_past: "sang",
+                            verb_sing_participle: "sung",
+                            verb_sit_base: "sit",
+                            verb_sit_past: "sat",
+                            verb_sit_participle: "sat",
+                            verb_sleep_base: "sleep",
+                            verb_sleep_past: "slept",
+                            verb_sleep_participle: "slept",
+                            verb_speak_base: "speak",
+                            verb_speak_past: "spoke",
+                            verb_speak_participle: "spoken",
+                            verb_spend_base: "spend",
+                            verb_spend_past: "spent",
+                            verb_spend_participle: "spent",
+                            verb_stand_base: "stand",
+                            verb_stand_past: "stood",
+                            verb_stand_participle: "stood",
+                            verb_swim_base: "swim",
+                            verb_swim_past: "swam",
+                            verb_swim_participle: "swum",
+                            verb_take_base: "take",
+                            verb_take_past: "took",
+                            verb_take_participle: "taken",
+                            verb_teach_base: "teach",
+                            verb_teach_past: "taught",
+                            verb_teach_participle: "taught",
+                            verb_tell_base: "tell",
+                            verb_tell_past: "told",
+                            verb_tell_participle: "told",
+                            verb_think_base: "think",
+                            verb_think_past: "thought",
+                            verb_think_participle: "thought",
+                            verb_understand_base: "understand",
+                            verb_understand_past: "understood",
+                            verb_understand_participle: "understood",
+                            verb_wear_base: "wear",
+                            verb_wear_past: "wore",
+                            verb_wear_participle: "worn",
+                            verb_win_base: "win",
+                            verb_win_past: "won",
+                            verb_win_participle: "won",
+                            verb_write_base: "write",
+                            verb_write_past: "wrote",
+                            verb_write_participle: "written"
+                        }
+                    }
+                }
+            },
+            fr: {
+                EH: {
+                    common: {
+                        header: {
+                            siteName: "English Hub"
+                        },
+                        footer: {
+                            developer: "Développeur: Mejri Ziad",
+                            privacy: "Politique de Confidentialité",
+                            terms: "Conditions d'Utilisation",
+                            contact: "Contact"
+                        }
+                    },
+                    conjugation: {
+                        irregularVerbs: {
+    title: "Irregular Verbs (Verbes irréguliers)",
+    subtitle: "Master the most common irregular verbs (Maîtriser les verbes irréguliers les plus courants)",
+    baseForm: "Base Form (Forme de base)",
+    pastSimple: "Past Simple (Passé)",
+    pastParticiple: "Past Participle (Participe passé)",
+    backToConjugation: "Back to Conjugation (Retour à la conjugaison)",
+    backToHome: "Back to Home (Retour à l'accueil)",
+    // Verb translations
+    verb_be_base: "be (être)",
+    verb_be_past: "was/were (il était)",
+    verb_be_participle: "been (été)",
+    verb_begin_base: "begin (commencer)",
+    verb_begin_past: "began (il commençait)",
+    verb_begin_participle: "begun (commencé)",
+    verb_break_base: "break (casser)",
+    verb_break_past: "broke (il cassait)",
+    verb_break_participle: "broken (cassé)",
+    verb_bring_base: "bring (apporter)",
+    verb_bring_past: "brought (il apportait)",
+    verb_bring_participle: "brought (apporté)",
+    verb_build_base: "build (construire)",
+    verb_build_past: "built (il construisait)",
+    verb_build_participle: "built (construit)",
+    verb_buy_base: "buy (acheter)",
+    verb_buy_past: "bought (il achetait)",
+    verb_buy_participle: "bought (acheté)",
+    verb_catch_base: "catch (attraper)",
+    verb_catch_past: "caught (il attrapait)",
+    verb_catch_participle: "caught (attrapé)",
+    verb_choose_base: "choose (choisir)",
+    verb_choose_past: "chose (il choisissait)",
+    verb_choose_participle: "chosen (choisi)",
+    verb_come_base: "come (venir)",
+    verb_come_past: "came (il venait)",
+    verb_come_participle: "come (venu)",
+    verb_do_base: "do (faire)",
+    verb_do_past: "did (il faisait)",
+    verb_do_participle: "done (fait)",
+    verb_draw_base: "draw (dessiner)",
+    verb_draw_past: "drew (il dessinait)",
+    verb_draw_participle: "drawn (dessiné)",
+    verb_drink_base: "drink (boire)",
+    verb_drink_past: "drank (il buvait)",
+    verb_drink_participle: "drunk (bu)",
+    verb_drive_base: "drive (conduire)",
+    verb_drive_past: "drove (il conduisait)",
+    verb_drive_participle: "driven (conduit)",
+    verb_eat_base: "eat (manger)",
+    verb_eat_past: "ate (il mangeait)",
+    verb_eat_participle: "eaten (mangé)",
+    verb_fall_base: "fall (tomber)",
+    verb_fall_past: "fell (il tombait)",
+    verb_fall_participle: "fallen (tombé)",
+    verb_feel_base: "feel (sentir)",
+    verb_feel_past: "felt (il sentait)",
+    verb_feel_participle: "felt (sentí)",
+    verb_find_base: "find (trouver)",
+    verb_find_past: "found (il trouvait)",
+    verb_find_participle: "found (trouvé)",
+    verb_fly_base: "fly (voler)",
+    verb_fly_past: "flew (il volait)",
+    verb_fly_participle: "flown (volé)",
+    verb_forget_base: "forget (oublier)",
+    verb_forget_past: "forgot (il oubliait)",
+    verb_forget_participle: "forgotten (oublié)",
+    verb_get_base: "get (obtenir)",
+    verb_get_past: "got (il obtenait)",
+    verb_get_participle: "gotten (obtenu)",
+    verb_give_base: "give (donner)",
+    verb_give_past: "gave (il donnait)",
+    verb_give_participle: "given (donné)",
+    verb_go_base: "go (aller)",
+    verb_go_past: "went (il allait)",
+    verb_go_participle: "gone (allé)",
+    verb_grow_base: "grow (grandir)",
+    verb_grow_past: "grew (il grandissait)",
+    verb_grow_participle: "grown (grandi)",
+    verb_have_base: "have (avoir)",
+    verb_have_past: "had (il avait)",
+    verb_have_participle: "had (eu)",
+    verb_hear_base: "hear (entendre)",
+    verb_hear_past: "heard (il entendait)",
+    verb_hear_participle: "heard (entendu)",
+    verb_keep_base: "keep (garder)",
+    verb_keep_past: "kept (il gardait)",
+    verb_keep_participle: "kept (gardé)",
+    verb_know_base: "know (savoir)",
+    verb_know_past: "knew (il savait)",
+    verb_know_participle: "known (su)",
+    verb_leave_base: "leave (partir)",
+    verb_leave_past: "left (il partait)",
+    verb_leave_participle: "left (parti)",
+    verb_make_base: "make (faire)",
+    verb_make_past: "made (il faisait)",
+    verb_make_participle: "made (fait)",
+    verb_meet_base: "meet (rencontrer)",
+    verb_meet_past: "met (il rencontrait)",
+    verb_meet_participle: "met (rencontré)",
+    verb_pay_base: "pay (payer)",
+    verb_pay_past: "paid (il payait)",
+    verb_pay_participle: "paid (payé)",
+    verb_put_base: "put (mettre)",
+    verb_put_past: "put (il mettait)",
+    verb_put_participle: "put (mis)",
+    verb_read_base: "read (lire)",
+    verb_read_past: "read (il lisait)",
+    verb_read_participle: "read (lu)",
+    verb_run_base: "run (courir)",
+    verb_run_past: "ran (il courait)",
+    verb_run_participle: "run (couru)",
+    verb_say_base: "say (dire)",
+    verb_say_past: "said (il disait)",
+    verb_say_participle: "said (dit)",
+    verb_see_base: "see (voir)",
+    verb_see_past: "saw (il voyait)",
+    verb_see_participle: "seen (vu)",
+    verb_sell_base: "sell (vendre)",
+    verb_sell_past: "sold (il vendait)",
+    verb_sell_participle: "sold (vendu)",
+    verb_send_base: "send (envoyer)",
+    verb_send_past: "sent (il envoyait)",
+    verb_send_participle: "sent (envoyé)",
+    verb_sing_base: "sing (chanter)",
+    verb_sing_past: "sang (il chantait)",
+    verb_sing_participle: "sung (chanté)",
+    verb_sit_base: "sit (s'asseoir)",
+    verb_sit_past: "sat (il s'asseyait)",
+    verb_sit_participle: "sat (assis)",
+    verb_sleep_base: "sleep (dormir)",
+    verb_sleep_past: "slept (il dormait)",
+    verb_sleep_participle: "slept (dormi)",
+    verb_speak_base: "speak (parler)",
+    verb_speak_past: "spoke (il parlait)",
+    verb_speak_participle: "spoken (parlé)",
+    verb_spend_base: "spend (dépenser)",
+    verb_spend_past: "spent (il dépensait)",
+    verb_spend_participle: "spent (dépensé)",
+    verb_stand_base: "stand (se tenir debout)",
+    verb_stand_past: "stood (il se tenait debout)",
+    verb_stand_participle: "stood (tenu debout)",
+    verb_swim_base: "swim (nager)",
+    verb_swim_past: "swam (il nageait)",
+    verb_swim_participle: "swum (nagé)",
+    verb_take_base: "take (prendre)",
+    verb_take_past: "took (il prenait)",
+    verb_take_participle: "taken (pris)",
+    verb_teach_base: "teach (enseigner)",
+    verb_teach_past: "taught (il enseignait)",
+    verb_teach_participle: "taught (enseigné)",
+    verb_tell_base: "tell (dire)",
+    verb_tell_past: "told (il disait)",
+    verb_tell_participle: "told (dit)",
+    verb_think_base: "think (penser)",
+    verb_think_past: "thought (il pensait)",
+    verb_think_participle: "thought (pensé)",
+    verb_understand_base: "understand (comprendre)",
+    verb_understand_past: "understood (il comprenait)",
+    verb_understand_participle: "understood (compris)",
+    verb_wear_base: "wear (porter)",
+    verb_wear_past: "wore (il portait)",
+    verb_wear_participle: "worn (porté)",
+    verb_win_base: "win (gagner)",
+    verb_win_past: "won (il gagnait)",
+    verb_win_participle: "won (gagné)",
+    verb_write_base: "write (écrire)",
+    verb_write_past: "wrote (il écrivait)",
+    verb_write_participle: "written (écrit)"
+}
+                    }
+                }
+            }
+        };
+
+        // Function to update translations with nested structure support
+        function updateTranslations(lang) {
+            const translations = irregular_verbs_translation[lang];
+            const elements = document.querySelectorAll('[data-i18n]');
+            
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const keys = key.split('.');
+                let value = translations;
+                
+                // Navigate through the nested structure
+                for (const k of keys) {
+                    value = value[k];
+                    if (value === undefined) break;
+                }
+                
+                if (value !== undefined) {
+                    element.textContent = value;
+                }
+            });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get initial language
+            const languageSelector = document.getElementById('language-selector');
+            const currentLang = languageSelector.value;
+            
+            // Set translations
+            updateTranslations(currentLang);
+            
+            // Add event listener for language change
+            languageSelector.addEventListener('change', function() {
+                updateTranslations(this.value);
+            });
+        });
+    </script>
+</body>
+</html>

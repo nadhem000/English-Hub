@@ -158,6 +158,91 @@
                 font-size: 2rem;
             }
         }
+		.EH-irregular-verbs-preview {
+    margin-top: 20px;
+}
+
+.EH-irregular-verbs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.EH-irregular-verb-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.EH-irregular-verb-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.EH-irregular-verb-base {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 8px;
+}
+
+.EH-irregular-verb-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.EH-irregular-verb-forms span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.EH-irregular-verbs-action {
+    text-align: center;
+}
+
+.EH-irregular-verbs-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #fdbb2d, #b21f1f);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.EH-irregular-verbs-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.EH-irregular-verbs-button:active {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .EH-irregular-verbs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .EH-irregular-verbs-grid {
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 </head>
 <body>
@@ -338,6 +423,24 @@
                 </div>
             </div>
         </div>
+
+<div class="EH-conjugation-category">
+    <h2 class="EH-conjugation-category-title">
+        <span class="EH-conjugation-category-icon">🌟</span>
+        <span data-i18n="conjugation.irregularVerbs">Irregular Verbs</span>
+    </h2>
+    <p class="EH-conjugation-category-description" data-i18n="conjugation.irregularVerbsDescription">
+        Master the most common irregular verbs that don't follow standard conjugation patterns.
+    </p>
+    
+        
+        <div class="EH-irregular-verbs-action">
+            <a href="EH-irregular-verbs.html" class="EH-irregular-verbs-button" data-i18n="conjugation.viewFullTable">
+                View Full Irregular Verbs Table
+            </a>
+        </div>
+    </div>
+</div>
         
         <!-- Modal Verbs -->
         <div class="EH-conjugation-category">
@@ -538,6 +641,10 @@
                         
                         conditionalMood: window.I18N[lang].conjugation?.conditionalMood || "Conditional Mood",
                         conditionalMoodDescription: window.I18N[lang].conjugation?.conditionalMoodDescription || "Express hypothetical situations and their consequences."
+						
+irregularVerbs: window.I18N[lang].conjugation?.irregularVerbs || "Irregular Verbs",
+irregularVerbsDescription: window.I18N[lang].conjugation?.irregularVerbsDescription || "Master the most common irregular verbs that don't follow standard conjugation patterns.",
+viewFullTable: window.I18N[lang].conjugation?.viewFullTable || "View Full Irregular Verbs Table"
                     };
                 }
             }

@@ -1203,7 +1203,10 @@ window.I18N['fr'] = {
 		modalVerbs: "Verbes Modaux",
 		modalVerbsDescription: "Exprimez la capacité, la possibilité, la permission ou l'obligation.",
 		conditionalMood: "Mode Conditionnel",
-		conditionalMoodDescription: "Exprimez des situations hypothétiques et leurs conséquences."
+		conditionalMoodDescription: "Exprimez des situations hypothétiques et leurs conséquences.",
+		irregularVerbs: "Verbes Irréguliers",
+irregularVerbsDescription: "Maîtrisez les verbes irréguliers les plus courants qui ne suivent pas les modèles de conjugaison standard.",
+viewFullTable: "Voir le Tableau Complet des Verbes Irréguliers"
 	},
 	simplePresent: {
         title: "Simple Present Tense: Generality (Le Présent Simple : Généralité)",

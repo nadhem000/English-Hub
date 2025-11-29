@@ -1203,7 +1203,10 @@ window.I18N['ar'] = {
 		modalVerbs: "الأفعال المساعدة",
 		modalVerbsDescription: "عبر عن القدرة والإمكانية والإذن أو الالتزام.",
 		conditionalMood: "صيغة الشرط",
-		conditionalMoodDescription: "عبر عن المواقف الافتراضية وعواقبها."
+		conditionalMoodDescription: "عبر عن المواقف الافتراضية وعواقبها.",
+		irregularVerbs: "الافعال الشاذة",
+irregularVerbsDescription: "أتقن الأفعال الشاذة الأكثر شيوعًا التي لا تتبع أنماط التصريف القياسية",
+viewFullTable: "عرض الجدول الكامل للأفعال الشاذة"
 	},
     simplePresent: {
 		title: "Simple Present Tense: Generality (زمن المضارع البسيط: العمومية)",
