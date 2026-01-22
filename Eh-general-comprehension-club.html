@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Comprehension Club - Reading Skills Enhancement</title>
+		
+		<!-- Common CSS -->
+		<link rel="stylesheet" href="styles/common.css">
+		
+		<style>
+			/* Reset and Base Styles */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			body {
+				background: linear-gradient(135deg, #0f3460, #533483, #e94560);
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				padding: 20px;
+			}
+
+			/* Comprehension Club Specific Styles */
+			.EH-comprehension-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				width: 100%;
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.EH-comprehension-content {
+				background: rgba(255, 255, 255, 0.95);
+				border-radius: 20px;
+				padding: 40px;
+				box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+				margin-bottom: 30px;
+				border: 3px solid #e94560;
+			}
+
+			.EH-comprehension-intro {
+				font-size: 1.2rem;
+				line-height: 1.7;
+				color: #333;
+				margin-bottom: 40px;
+				text-align: center;
+				padding: 20px;
+				background: linear-gradient(to right, #f8f9fa, #e9ecef);
+				border-radius: 15px;
+				border-left: 5px solid #533483;
+			}
+
+			.EH-comprehension-category {
+				margin-bottom: 50px;
+				padding: 25px;
+				background: white;
+				border-radius: 15px;
+				box-shadow: 0 5px 15px rgba(83, 52, 131, 0.1);
+			}
+
+			.EH-comprehension-category-title {
+				font-size: 2rem;
+				color: #0f3460;
+				margin-bottom: 25px;
+				padding-bottom: 15px;
+				border-bottom: 3px solid #e94560;
+				position: relative;
+			}
+
+			.EH-comprehension-category-title::after {
+				content: '';
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				width: 100px;
+				height: 3px;
+				background: #533483;
+			}
+
+			.EH-comprehension-category-subtitle {
+				font-size: 1.1rem;
+				color: #666;
+				margin-bottom: 25px;
+				font-style: italic;
+				padding: 10px 15px;
+				background: #f8f9fa;
+				border-radius: 10px;
+				border-left: 4px solid #0f3460;
+			}
+
+			.EH-comprehension-lessons-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+				gap: 30px;
+			}
+
+			.EH-comprehension-lesson-card {
+				background: linear-gradient(145deg, #ffffff, #f8f9fa);
+				border-radius: 15px;
+				padding: 30px;
+				box-shadow: 0 8px 20px rgba(15, 52, 96, 0.1);
+				transition: all 0.3s ease;
+				cursor: pointer;
+				display: flex;
+				flex-direction: column;
+				border: 2px solid transparent;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.EH-comprehension-lesson-card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 5px;
+				background: linear-gradient(to right, #e94560, #533483);
+			}
+
+			.EH-comprehension-lesson-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 15px 30px rgba(15, 52, 96, 0.2);
+				border-color: #e94560;
+			}
+
+			.EH-comprehension-lesson-number {
+				display: inline-block;
+				width: 45px;
+				height: 45px;
+				background: linear-gradient(135deg, #e94560, #ff7a8a);
+				color: white;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-weight: bold;
+				font-size: 1.2rem;
+				margin-bottom: 20px;
+				box-shadow: 0 4px 10px rgba(233, 69, 96, 0.3);
+			}
+
+			.EH-comprehension-lesson-title {
+				font-size: 1.5rem;
+				margin-bottom: 15px;
+				color: #0f3460;
+				font-weight: 600;
+			}
+
+			.EH-comprehension-lesson-description {
+				color: #555;
+				font-size: 1rem;
+				margin-bottom: 25px;
+				line-height: 1.6;
+				flex: 1;
+			}
+
+			.EH-comprehension-difficulty {
+				display: inline-block;
+				background: #533483;
+				color: white;
+				padding: 5px 15px;
+				border-radius: 20px;
+				font-size: 0.85rem;
+				margin-bottom: 20px;
+				font-weight: 500;
+			}
+
+			.EH-comprehension-lesson-link {
+				display: inline-block;
+				background: linear-gradient(to right, #0f3460, #533483);
+				color: white;
+				padding: 12px 25px;
+				border-radius: 25px;
+				text-decoration: none;
+				font-weight: bold;
+				transition: all 0.3s ease;
+				text-align: center;
+				letter-spacing: 0.5px;
+				border: 2px solid transparent;
+			}
+
+			.EH-comprehension-lesson-link:hover {
+				background: linear-gradient(to right, #533483, #e94560);
+				transform: scale(1.05);
+				border-color: #e94560;
+			}
+
+			.EH-comprehension-back-button {
+				display: block;
+				margin: 40px auto 0;
+				background: linear-gradient(to right, #e94560, #ff7a8a);
+				color: white;
+				border: none;
+				padding: 14px 35px;
+				border-radius: 25px;
+				cursor: pointer;
+				font-weight: bold;
+				font-size: 1.1rem;
+				transition: all 0.3s ease;
+				box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
+			}
+
+			.EH-comprehension-back-button:hover {
+				background: linear-gradient(to right, #d43f57, #e94560);
+				transform: translateY(-3px);
+				box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+			}
+
+			.EH-comprehension-features {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 20px;
+				margin: 40px 0;
+			}
+
+			.EH-comprehension-feature {
+				background: white;
+				padding: 25px;
+				border-radius: 15px;
+				text-align: center;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s;
+			}
+
+			.EH-comprehension-feature:hover {
+				transform: translateY(-5px);
+			}
+
+			.EH-comprehension-feature-icon {
+				font-size: 2.5rem;
+				margin-bottom: 15px;
+				display: block;
+			}
+
+			.EH-comprehension-feature-title {
+				font-size: 1.3rem;
+				color: #0f3460;
+				margin-bottom: 10px;
+			}
+
+			.EH-comprehension-feature-desc {
+				color: #666;
+				font-size: 0.95rem;
+			}
+
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				.EH-comprehension-lessons-container {
+					grid-template-columns: 1fr;
+				}
+				
+				.EH-comprehension-content {
+					padding: 25px;
+				}
+				
+				.EH-comprehension-category {
+					padding: 20px;
+				}
+				
+				.EH-comprehension-category-title {
+					font-size: 1.7rem;
+				}
+				
+				.EH-comprehension-features {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.EH-comprehension-content {
+					padding: 20px;
+				}
+				
+				.EH-comprehension-lesson-card {
+					padding: 20px;
+				}
+				
+				.EH-comprehension-lesson-title {
+					font-size: 1.3rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Language Selector -->
+		<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+			<select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+				<option value="en">English</option>
+				<option value="fr">Français</option>
+				<option value="ar">العربية</option>
+			</select>
+		</div>
+		
+		<div class="EH-site-header">
+			<a href="index.html" class="EH-site-logo-link" data-i18n="common.mainPage" title="Main Page">
+				<img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+			</a>
+			<span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+		</div>
+		
+		<div class="EH-comprehension-container">
+			<header class="EH-common-header">
+				<h1 class="EH-common-title" data-i18n="comprehensionClub.title">Comprehension Club</h1>
+				<p class="EH-common-subtitle" data-i18n="comprehensionClub.subtitle">Master reading comprehension through engaging texts and interactive exercises!</p>
+			</header>
+			
+			<div class="EH-comprehension-content">
+				<p class="EH-comprehension-intro" data-i18n="comprehensionClub.intro">
+					Welcome to the Comprehension Club! This is your space to develop advanced reading comprehension skills. 
+					Through carefully selected texts, challenging questions, and interactive activities, you'll learn to 
+					analyze, interpret, and critically engage with various types of written material. Perfect for both 
+					academic improvement and real-world application.
+				</p>
+				
+				<div class="EH-comprehension-features">
+					<div class="EH-comprehension-feature">
+						<span class="EH-comprehension-feature-icon">📖</span>
+						<h3 class="EH-comprehension-feature-title" data-i18n="comprehensionClub.features.variety">Diverse Texts</h3>
+						<p class="EH-comprehension-feature-desc" data-i18n="comprehensionClub.features.varietyDesc">Articles, stories, reports, and more from different genres and difficulty levels</p>
+					</div>
+					
+					<div class="EH-comprehension-feature">
+						<span class="EH-comprehension-feature-icon">❓</span>
+						<h3 class="EH-comprehension-feature-title" data-i18n="comprehensionClub.features.questions">Critical Questions</h3>
+						<p class="EH-comprehension-feature-desc" data-i18n="comprehensionClub.features.questionsDesc">Multiple-choice, short answer, and inference questions to test understanding</p>
+					</div>
+					
+					<div class="EH-comprehension-feature">
+						<span class="EH-comprehension-feature-icon">📊</span>
+						<h3 class="EH-comprehension-feature-title" data-i18n="comprehensionClub.features.progress">Progress Tracking</h3>
+						<p class="EH-comprehension-feature-desc" data-i18n="comprehensionClub.features.progressDesc">Monitor your improvement with detailed feedback and performance analytics</p>
+					</div>
+				</div>
+				
+				<!-- Section for Elementary Students -->
+				<div class="EH-comprehension-category">
+					<h2 class="EH-comprehension-category-title" data-i18n="comprehensionClub.elementary.title">Elementary Level (A1-A2)</h2>
+					<p class="EH-comprehension-category-subtitle" data-i18n="comprehensionClub.elementary.subtitle">Simple texts with basic comprehension questions for beginners</p>
+					<div class="EH-comprehension-lessons-container">
+						<!-- Lesson 1 -->
+						<div class="EH-comprehension-lesson-card">
+							<div class="EH-comprehension-lesson-number">1</div>
+							<span class="EH-comprehension-difficulty" data-i18n="comprehensionClub.difficulty.easy">Easy</span>
+							<h3 class="EH-comprehension-lesson-title" data-i18n="comprehensionClub.elementary.lessons.park.title">A Day at the Park</h3>
+							<p class="EH-comprehension-lesson-description" data-i18n="comprehensionClub.elementary.lessons.park.desc">
+								A simple narrative about a family spending time at the local park. Practice identifying main ideas and basic vocabulary.
+							</p>
+							<a href="EH-comprehension-park.html" class="EH-comprehension-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 2 -->
+						<div class="EH-comprehension-lesson-card">
+							<div class="EH-comprehension-lesson-number">2</div>
+							<span class="EH-comprehension-difficulty" data-i18n="comprehensionClub.difficulty.easy">Easy</span>
+							<h3 class="EH-comprehension-lesson-title" data-i18n="comprehensionClub.elementary.lessons.market.title">The Farmer's Market</h3>
+							<p class="EH-comprehension-lesson-description" data-i18n="comprehensionClub.elementary.lessons.market.desc">
+								Learn about different fruits and vegetables while practicing reading short descriptions and answering questions.
+							</p>
+							<a href="EH-comprehension-market.html" class="EH-comprehension-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 3 -->
+						<div class="EH-comprehension-lesson-card">
+							<div class="EH-comprehension-lesson-number">3</div>
+							<span class="EH-comprehension-difficulty" data-i18n="comprehensionClub.difficulty.medium">Medium</span>
+							<h3 class="EH-comprehension-lesson-title" data-i18n="comprehensionClub.elementary.lessons.weather.title">Understanding Weather</h3>
+							<p class="EH-comprehension-lesson-description" data-i18n="comprehensionClub.elementary.lessons.weather.desc">
+								A factual text about different weather conditions with comprehension questions focusing on details.
+							</p>
+							<a href="EH-comprehension-weather.html" class="EH-comprehension-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Section for Intermediate Learners -->
+				<div class="EH-comprehension-category">
+					<h2 class="EH-comprehension-category-title" data-i18n="comprehensionClub.intermediate.title">Intermediate Level (B1-B2)</h2>
+					<p class="EH-comprehension-category-subtitle" data-i18n="comprehensionClub.intermediate.subtitle">Longer texts with more complex language and inference questions</p>
+					<div class="EH-comprehension-lessons-container">
+						<!-- Lesson 4 -->
+						<div class="EH-comprehension-lesson-card">
+							<div class="EH-comprehension-lesson-number">4</div>
+							<span class="EH-comprehension-difficulty" data-i18n="comprehensionClub.difficulty.medium">Medium</span>
+							<h3 class="EH-comprehension-lesson-title" data-i18n="comprehensionClub.intermediate.lessons.culture.title">Cultural Differences</h3>
+							<p class="EH-comprehension-lesson-description" data-i18n="comprehensionClub.intermediate.lessons.culture.desc">
+								An article about cultural customs around the world. Practice making inferences and understanding implied meaning.
+							</p>
+							<a href="EH-comprehension-culture.html" class="EH-comprehension-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 5 -->
+						<div class="EH-comprehension-lesson-card">
+							<div class="EH-comprehension-lesson-number">5</div>
+							<span class="EH-comprehension-difficulty" data-i18n="comprehensionClub.difficulty.medium">Medium</span>
+							<h3 class="EH-comprehension-lesson-title" data-i18n="comprehensionClub.intermediate.lessons.technology.title">Technology in Education</h3>
+							<p class="EH-comprehension-lesson-description" data-i18n="comprehensionClub.intermediate.lessons.technology.desc">
+								Read about how technology is changing education. Focus on identifying arguments and supporting evidence.
+							</p>
+							<a href="EH-comprehension-technology.html" class="EH-comprehension-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 6 -->
+						<div class="EH-comprehension-lesson-card">
+							<div class="EH-comprehension-lesson-number">6</div>
+							<span class="EH-comprehension-difficulty" data-i18n="comprehensionClub.difficulty.hard">Hard</span>
+							<h3 class="EH-comprehension-lesson-title" data-i18n="comprehensionClub.intermediate.lessons.environment.title">Environmental Challenges</h3>
+							<p class="EH-comprehension-lesson-description" data-i18n="comprehensionClub.intermediate.lessons.environment.desc">
+								A comprehensive text about climate change. Practice understanding cause-effect relationships and technical vocabulary.
+							</p>
+							<a href="EH-comprehension-environment.html" class="EH-comprehension-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Section for Advanced Learners -->
+				<div class="EH-comprehension-category">
+					<h2 class="EH-comprehension-category-title" data-i18n="comprehensionClub.advanced.title">Advanced Level (C1-C2)</h2>
+					<p class="EH-comprehension-category-subtitle" data-i18n="comprehensionClub.advanced.subtitle">Complex texts with critical thinking and analysis questions</p>
+					<div class="EH-comprehension-lessons-container">
+						<!-- Lesson 7 -->
+						<div class="EH-comprehension-lesson-card">
+							<div class="EH-comprehension-lesson-number">7</div>
+							<span class="EH-comprehension-difficulty" data-i18n="comprehensionClub.difficulty.hard">Hard</span>
+							<h3 class="EH-comprehension-lesson-title" data-i18n="comprehensionClub.advanced.lessons.philosophy.title">Philosophical Concepts</h3>
+							<p class="EH-comprehension-lesson-description" data-i18n="comprehensionClub.advanced.lessons.philosophy.desc">
+								An excerpt from a philosophical text. Practice analyzing abstract concepts and complex arguments.
+							</p>
+							<a href="EH-comprehension-philosophy.html" class="EH-comprehension-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 8 -->
+						<div class="EH-comprehension-lesson-card">
+							<div class="EH-comprehension-lesson-number">8</div>
+							<span class="EH-comprehension-difficulty" data-i18n="comprehensionClub.difficulty.hard">Hard</span>
+							<h3 class="EH-comprehension-lesson-title" data-i18n="comprehensionClub.advanced.lessons.economics.title">Economic Theories</h3>
+							<p class="EH-comprehension-lesson-description" data-i18n="comprehensionClub.advanced.lessons.economics.desc">
+								A scholarly article about economic systems. Focus on understanding specialized terminology and complex ideas.
+							</p>
+							<a href="EH-comprehension-economics.html" class="EH-comprehension-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+						<!-- Lesson 9 -->
+						<div class="EH-comprehension-lesson-card">
+							<div class="EH-comprehension-lesson-number">9</div>
+							<span class="EH-comprehension-difficulty" data-i18n="comprehensionClub.difficulty.hard">Hard</span>
+							<h3 class="EH-comprehension-lesson-title" data-i18n="comprehensionClub.advanced.lessons.literature.title">Literary Analysis</h3>
+							<p class="EH-comprehension-lesson-description" data-i18n="comprehensionClub.advanced.lessons.literature.desc">
+								An analysis of a classic literary work. Practice interpreting symbolism, themes, and author's intent.
+							</p>
+							<a href="EH-comprehension-literature.html" class="EH-comprehension-lesson-link" data-i18n="common.startLesson">Start Lesson</a>
+						</div>
+					</div>
+				</div>
+				
+				<button class="EH-comprehension-back-button" onclick="window.location.href='Communication-Skills-Enhancement.html'" data-i18n="common.backToCourses">Back to Courses</button>
+			</div>
+		</div>
+		
+		<footer class="EH-common-footer">
+			<div class="EH-common-footer-content">
+				<div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-common-footer-links">
+					<a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+					<a href="#" data-i18n="footer.terms">Terms of Service</a>
+					<a href="#" data-i18n="footer.contact">Contact</a>
+				</div>
+			</div>
+		</footer>
+
+		<!-- i18n translations -->
+		<script src="scripts/translations/i18n_en.js"></script>
+		<script src="scripts/translations/i18n_fr.js"></script>
+		<script src="scripts/translations/i18n_ar.js"></script>
+		<script src="scripts/common-i18n.js"></script>
+
+		<script>
+			// Add comprehension club translations to the existing translation system
+			document.addEventListener('DOMContentLoaded', function() {
+				// Check if I18N exists
+				if (window.I18N) {
+					// Add comprehension club translations to each language
+					for (const lang in window.I18N) {
+						if (window.I18N.hasOwnProperty(lang)) {
+							// Initialize comprehensionClub object if it doesn't exist
+							window.I18N[lang].comprehensionClub = window.I18N[lang].comprehensionClub || {};
+							
+							// Add base translations
+							window.I18N[lang].comprehensionClub.title = window.I18N[lang].comprehensionClub.title || "Comprehension Club";
+							window.I18N[lang].comprehensionClub.subtitle = window.I18N[lang].comprehensionClub.subtitle || "Master reading comprehension through engaging texts and interactive exercises!";
+							window.I18N[lang].comprehensionClub.intro = window.I18N[lang].comprehensionClub.intro || "Welcome to the Comprehension Club! This is your space to develop advanced reading comprehension skills. Through carefully selected texts, challenging questions, and interactive activities, you'll learn to analyze, interpret, and critically engage with various types of written material. Perfect for both academic improvement and real-world application.";
+							
+							// Add difficulty levels
+							window.I18N[lang].comprehensionClub.difficulty = window.I18N[lang].comprehensionClub.difficulty || {};
+							window.I18N[lang].comprehensionClub.difficulty.easy = window.I18N[lang].comprehensionClub.difficulty.easy || "Easy";
+							window.I18N[lang].comprehensionClub.difficulty.medium = window.I18N[lang].comprehensionClub.difficulty.medium || "Medium";
+							window.I18N[lang].comprehensionClub.difficulty.hard = window.I18N[lang].comprehensionClub.difficulty.hard || "Hard";
+							
+							// Add features section
+							window.I18N[lang].comprehensionClub.features = window.I18N[lang].comprehensionClub.features || {};
+							window.I18N[lang].comprehensionClub.features.variety = window.I18N[lang].comprehensionClub.features.variety || "Diverse Texts";
+							window.I18N[lang].comprehensionClub.features.varietyDesc = window.I18N[lang].comprehensionClub.features.varietyDesc || "Articles, stories, reports, and more from different genres and difficulty levels";
+							window.I18N[lang].comprehensionClub.features.questions = window.I18N[lang].comprehensionClub.features.questions || "Critical Questions";
+							window.I18N[lang].comprehensionClub.features.questionsDesc = window.I18N[lang].comprehensionClub.features.questionsDesc || "Multiple-choice, short answer, and inference questions to test understanding";
+							window.I18N[lang].comprehensionClub.features.progress = window.I18N[lang].comprehensionClub.features.progress || "Progress Tracking";
+							window.I18N[lang].comprehensionClub.features.progressDesc = window.I18N[lang].comprehensionClub.features.progressDesc || "Monitor your improvement with detailed feedback and performance analytics";
+							
+							// Add elementary level
+							window.I18N[lang].comprehensionClub.elementary = window.I18N[lang].comprehensionClub.elementary || {};
+							window.I18N[lang].comprehensionClub.elementary.title = window.I18N[lang].comprehensionClub.elementary.title || "Elementary Level (A1-A2)";
+							window.I18N[lang].comprehensionClub.elementary.subtitle = window.I18N[lang].comprehensionClub.elementary.subtitle || "Simple texts with basic comprehension questions for beginners";
+							window.I18N[lang].comprehensionClub.elementary.lessons = window.I18N[lang].comprehensionClub.elementary.lessons || {};
+							window.I18N[lang].comprehensionClub.elementary.lessons.park = window.I18N[lang].comprehensionClub.elementary.lessons.park || {};
+							window.I18N[lang].comprehensionClub.elementary.lessons.park.title = window.I18N[lang].comprehensionClub.elementary.lessons.park.title || "A Day at the Park";
+							window.I18N[lang].comprehensionClub.elementary.lessons.park.desc = window.I18N[lang].comprehensionClub.elementary.lessons.park.desc || "A simple narrative about a family spending time at the local park. Practice identifying main ideas and basic vocabulary.";
+							window.I18N[lang].comprehensionClub.elementary.lessons.market = window.I18N[lang].comprehensionClub.elementary.lessons.market || {};
+							window.I18N[lang].comprehensionClub.elementary.lessons.market.title = window.I18N[lang].comprehensionClub.elementary.lessons.market.title || "The Farmer's Market";
+							window.I18N[lang].comprehensionClub.elementary.lessons.market.desc = window.I18N[lang].comprehensionClub.elementary.lessons.market.desc || "Learn about different fruits and vegetables while practicing reading short descriptions and answering questions.";
+							window.I18N[lang].comprehensionClub.elementary.lessons.weather = window.I18N[lang].comprehensionClub.elementary.lessons.weather || {};
+							window.I18N[lang].comprehensionClub.elementary.lessons.weather.title = window.I18N[lang].comprehensionClub.elementary.lessons.weather.title || "Understanding Weather";
+							window.I18N[lang].comprehensionClub.elementary.lessons.weather.desc = window.I18N[lang].comprehensionClub.elementary.lessons.weather.desc || "A factual text about different weather conditions with comprehension questions focusing on details.";
+							
+							// Add intermediate level
+							window.I18N[lang].comprehensionClub.intermediate = window.I18N[lang].comprehensionClub.intermediate || {};
+							window.I18N[lang].comprehensionClub.intermediate.title = window.I18N[lang].comprehensionClub.intermediate.title || "Intermediate Level (B1-B2)";
+							window.I18N[lang].comprehensionClub.intermediate.subtitle = window.I18N[lang].comprehensionClub.intermediate.subtitle || "Longer texts with more complex language and inference questions";
+							window.I18N[lang].comprehensionClub.intermediate.lessons = window.I18N[lang].comprehensionClub.intermediate.lessons || {};
+							window.I18N[lang].comprehensionClub.intermediate.lessons.culture = window.I18N[lang].comprehensionClub.intermediate.lessons.culture || {};
+							window.I18N[lang].comprehensionClub.intermediate.lessons.culture.title = window.I18N[lang].comprehensionClub.intermediate.lessons.culture.title || "Cultural Differences";
+							window.I18N[lang].comprehensionClub.intermediate.lessons.culture.desc = window.I18N[lang].comprehensionClub.intermediate.lessons.culture.desc || "An article about cultural customs around the world. Practice making inferences and understanding implied meaning.";
+							window.I18N[lang].comprehensionClub.intermediate.lessons.technology = window.I18N[lang].comprehensionClub.intermediate.lessons.technology || {};
+							window.I18N[lang].comprehensionClub.intermediate.lessons.technology.title = window.I18N[lang].comprehensionClub.intermediate.lessons.technology.title || "Technology in Education";
+							window.I18N[lang].comprehensionClub.intermediate.lessons.technology.desc = window.I18N[lang].comprehensionClub.intermediate.lessons.technology.desc || "Read about how technology is changing education. Focus on identifying arguments and supporting evidence.";
+							window.I18N[lang].comprehensionClub.intermediate.lessons.environment = window.I18N[lang].comprehensionClub.intermediate.lessons.environment || {};
+							window.I18N[lang].comprehensionClub.intermediate.lessons.environment.title = window.I18N[lang].comprehensionClub.intermediate.lessons.environment.title || "Environmental Challenges";
+							window.I18N[lang].comprehensionClub.intermediate.lessons.environment.desc = window.I18N[lang].comprehensionClub.intermediate.lessons.environment.desc || "A comprehensive text about climate change. Practice understanding cause-effect relationships and technical vocabulary.";
+							
+							// Add advanced level
+							window.I18N[lang].comprehensionClub.advanced = window.I18N[lang].comprehensionClub.advanced || {};
+							window.I18N[lang].comprehensionClub.advanced.title = window.I18N[lang].comprehensionClub.advanced.title || "Advanced Level (C1-C2)";
+							window.I18N[lang].comprehensionClub.advanced.subtitle = window.I18N[lang].comprehensionClub.advanced.subtitle || "Complex texts with critical thinking and analysis questions";
+							window.I18N[lang].comprehensionClub.advanced.lessons = window.I18N[lang].comprehensionClub.advanced.lessons || {};
+							window.I18N[lang].comprehensionClub.advanced.lessons.philosophy = window.I18N[lang].comprehensionClub.advanced.lessons.philosophy || {};
+							window.I18N[lang].comprehensionClub.advanced.lessons.philosophy.title = window.I18N[lang].comprehensionClub.advanced.lessons.philosophy.title || "Philosophical Concepts";
+							window.I18N[lang].comprehensionClub.advanced.lessons.philosophy.desc = window.I18N[lang].comprehensionClub.advanced.lessons.philosophy.desc || "An excerpt from a philosophical text. Practice analyzing abstract concepts and complex arguments.";
+							window.I18N[lang].comprehensionClub.advanced.lessons.economics = window.I18N[lang].comprehensionClub.advanced.lessons.economics || {};
+							window.I18N[lang].comprehensionClub.advanced.lessons.economics.title = window.I18N[lang].comprehensionClub.advanced.lessons.economics.title || "Economic Theories";
+							window.I18N[lang].comprehensionClub.advanced.lessons.economics.desc = window.I18N[lang].comprehensionClub.advanced.lessons.economics.desc || "A scholarly article about economic systems. Focus on understanding specialized terminology and complex ideas.";
+							window.I18N[lang].comprehensionClub.advanced.lessons.literature = window.I18N[lang].comprehensionClub.advanced.lessons.literature || {};
+							window.I18N[lang].comprehensionClub.advanced.lessons.literature.title = window.I18N[lang].comprehensionClub.advanced.lessons.literature.title || "Literary Analysis";
+							window.I18N[lang].comprehensionClub.advanced.lessons.literature.desc = window.I18N[lang].comprehensionClub.advanced.lessons.literature.desc || "An analysis of a classic literary work. Practice interpreting symbolism, themes, and author's intent.";
+						}
+					}
+					
+					// Apply translations
+					if (typeof applyTranslations === 'function') {
+						applyTranslations();
+					}
+				}
+				
+				// Add language selector functionality if not already handled
+				const languageSelector = document.getElementById('language-selector');
+				if (languageSelector && window.I18N) {
+					// Get saved language or default to English
+					const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+					languageSelector.value = savedLang;
+					
+					// Apply saved language on load
+					if (typeof applyTranslations === 'function') {
+						applyTranslations(savedLang);
+					}
+					
+					// Add change event listener
+					languageSelector.addEventListener('change', function() {
+						const selectedLang = this.value;
+						localStorage.setItem('preferredLanguage', selectedLang);
+						
+						if (typeof applyTranslations === 'function') {
+							applyTranslations(selectedLang);
+						}
+					});
+				}
+			});
+		</script>
+	</body>
+</html>

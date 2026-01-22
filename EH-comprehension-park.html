@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>A Day at the Park - Comprehension Club</title>
+		<link rel="stylesheet" href="styles/comprehension.css">
+		<style>
+			:root {
+            /* Park theme overrides */
+            --primary-color: #4a9c60;
+            --primary-light: #c8e6c9;
+            --primary-dark: #3d8052;
+            --bg-body: linear-gradient(135deg, #e8f5e8, #f0f9ff, #fff8e1);
+			}
+			
+			/* Add body class */
+			body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+			}
+		</style>
+	</head>
+	<body class="EH-comprehension-body">
+		<!-- Language Selector -->
+		<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+			<select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #4a9c60; background: white; color: #333; font-weight: bold;">
+				<option value="en">English</option>
+				<option value="fr">Français</option>
+				<option value="ar">العربية</option>
+			</select>
+		</div>
+		
+		<div class="EH-site-header">
+			<a href="index.html" class="EH-site-logo-link" data-i18n-comprehension="common.mainPage" title="Main Page">
+				<img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+			</a>
+			<span class="EH-site-name" data-i18n-comprehension="common.siteName">English Hub</span>
+		</div>
+		
+		<div class="EH-comprehension-lesson-container">
+			<div class="EH-comprehension-lesson-content">
+				<!-- Lesson Header -->
+				<div class="EH-comprehension-lesson-header">
+					<h1 class="EH-comprehension-lesson-title" data-i18n-comprehension="parkLesson.title">A Day at the Park</h1>
+					<p class="EH-comprehension-lesson-subtitle" data-i18n-comprehension="parkLesson.subtitle">Elementary Level Reading Comprehension</p>
+					<div class="EH-comprehension-lesson-level" data-i18n-comprehension="parkLesson.level">Level: A1-A2 (Elementary)</div>
+				</div>
+				
+				<!-- Reading Passage -->
+				<div class="EH-comprehension-passage-container">
+					<div class="EH-comprehension-passage-header">
+						<h2 class="EH-comprehension-passage-title" data-i18n-comprehension="parkLesson.passageTitle">Reading Passage</h2>
+						<div class="EH-comprehension-reading-time" data-i18n-comprehension="parkLesson.readingTime">Reading Time: 3-4 minutes</div>
+					</div>
+					
+					<div class="EH-comprehension-passage-text">
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="parkLesson.passage.p1">
+							It was a beautiful Saturday morning. The sun was shining brightly, and the sky was clear and blue. The Johnson family decided it was the perfect day to visit their local park. Mr. Johnson packed a picnic basket with sandwiches, apples, and lemonade. Mrs. Johnson brought a big blanket to sit on.
+						</p>
+						
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="parkLesson.passage.p2">
+							When they arrived at the park, the children, Lily and Ben, immediately ran to the playground. Lily loved the swings. She went higher and higher, feeling the wind in her hair. Ben preferred the slide. He climbed up the ladder and slid down again and again, laughing each time.
+						</p>
+						
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="parkLesson.passage.p3">
+							After playing for a while, the family found a nice spot under a large oak tree. They spread out their blanket and enjoyed their picnic lunch. While eating, they watched ducks swimming in the nearby pond. An old man was feeding the ducks with bread crumbs.
+						</p>
+						
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="parkLesson.passage.p4">
+							After lunch, Mr. Johnson took the children for a walk around the park. They saw many interesting things: people walking their dogs, children riding bicycles, and families playing games. They even saw a squirrel running up a tree with a nut in its mouth.
+						</p>
+						
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="parkLesson.passage.p5">
+							Mrs. Johnson stayed on the blanket and read her book. She enjoyed the peaceful atmosphere and the warm sunshine. Sometimes she looked up from her book to watch her family having fun together.
+						</p>
+						
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="parkLesson.passage.p6">
+							As the afternoon went on, the park became busier. More families arrived, and the playground got crowded. The Johnsons decided it was time to go home. Before leaving, they made sure to clean up their area, putting all their trash in the bin.
+						</p>
+						
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="parkLesson.passage.p7">
+							On the drive home, Lily and Ben talked excitedly about their day. Lily said the swings were her favorite part. Ben said he liked the slide best. Both children asked when they could visit the park again. Mr. and Mrs. Johnson smiled at each other, happy that their family had enjoyed such a wonderful day together.
+						</p>
+					</div>
+					
+					<!-- Vocabulary Preview -->
+					<div class="EH-comprehension-vocabulary-preview">
+						<h3 class="EH-comprehension-vocabulary-title" data-i18n-comprehension="parkLesson.vocabularyPreview">Vocabulary Preview</h3>
+						<div class="EH-comprehension-vocabulary-list">
+							<span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="parkLesson.vocab.picnic">picnic</span>
+							<span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="parkLesson.vocab.playground">playground</span>
+							<span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="parkLesson.vocab.blanket">blanket</span>
+							<span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="parkLesson.vocab.pond">pond</span>
+							<span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="parkLesson.vocab.squirrel">squirrel</span>
+						</div>
+					</div>
+					
+					<!-- Audio Player -->
+					<div class="EH-comprehension-audio-player">
+    <h3 class="EH-comprehension-audio-title" data-i18n-comprehension="parkLesson.listenTitle">Listen to the Story</h3>
+    
+    <div class="EH-comprehension-audio-controls">
+        <!-- Play button with icon and tooltip -->
+        <button class="EH-comprehension-audio-btn play" id="EH-park-play-btn" title="Play">
+            <span class="EH-comprehension-audio-icon">▶</span>
+            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.play">Play</span>
+        </button>
+        
+        <!-- Pause button with icon and tooltip -->
+        <button class="EH-comprehension-audio-btn" id="EH-park-pause-btn" title="Pause">
+            <span class="EH-comprehension-audio-icon">⏸</span>
+            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.pause">Pause</span>
+        </button>
+        
+        <!-- Stop button with icon and tooltip -->
+        <button class="EH-comprehension-audio-btn" id="EH-park-stop-btn" title="Stop">
+            <span class="EH-comprehension-audio-icon">⏹</span>
+            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.stop">Stop</span>
+        </button>
+        
+        <!-- Volume Control -->
+        <div class="EH-audio-volume-control">
+            <button class="EH-comprehension-audio-btn volume" id="EH-park-volume-btn" title="Volume">
+                <span class="EH-comprehension-audio-icon">🔊</span>
+                <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.volume">Volume</span>
+            </button>
+            <div class="EH-audio-volume-slider-container">
+                <input type="range" class="EH-audio-volume-slider" id="EH-park-volume-slider" min="0" max="1" step="0.1" value="1">
+            </div>
+        </div>
+        
+        <!-- Speed Control -->
+        <div class="EH-audio-speed-control">
+            <button class="EH-comprehension-audio-btn speed" id="EH-park-speed-btn" title="Playback Speed">
+                <span class="EH-comprehension-audio-icon">1x</span>
+                <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.speed">Speed</span>
+            </button>
+            <div class="EH-audio-speed-options" id="EH-park-speed-options">
+                <button class="EH-audio-speed-option" data-speed="0.5" title="0.5x Speed">0.5x</button>
+                <button class="EH-audio-speed-option" data-speed="0.75" title="0.75x Speed">0.75x</button>
+                <button class="EH-audio-speed-option" data-speed="1" data-selected="true" title="Normal Speed">1x</button>
+                <button class="EH-audio-speed-option" data-speed="1.25" title="1.25x Speed">1.25x</button>
+                <button class="EH-audio-speed-option" data-speed="1.5" title="1.5x Speed">1.5x</button>
+                <button class="EH-audio-speed-option" data-speed="2" title="2x Speed">2x</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Enhanced Progress Bar -->
+    <div class="EH-comprehension-audio-progress">
+        <div class="EH-comprehension-audio-progress-background" id="EH-park-progress-background">
+            <div class="EH-comprehension-audio-progress-bar" id="EH-park-progress-bar"></div>
+            <div class="EH-comprehension-audio-progress-thumb" id="EH-park-progress-thumb"></div>
+        </div>
+        <input type="range" class="EH-comprehension-audio-progress-slider" id="EH-park-progress-slider" min="0" max="100" value="0" step="0.1">
+    </div>
+    
+    <div style="text-align: center; color: #666; font-size: 0.9rem;" id="EH-park-time-display">0:00 / 0:00</div>
+</div>
+				</div>
+				
+				<!-- Original Comprehension Questions (unchanged) -->
+				<div class="EH-comprehension-questions-container">
+					<h2 class="EH-comprehension-questions-title" data-i18n-comprehension="parkLesson.questionsTitle">Comprehension Questions</h2>
+					
+					
+					<!-- Question 1 -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">1</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="parkLesson.question1">What day of the week did the Johnson family go to the park?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q1-a" name="park-q1" value="a">
+								<label for="park-q1-a" data-i18n-comprehension="parkLesson.q1a">Friday</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q1-b" name="park-q1" value="b">
+								<label for="park-q1-b" data-i18n-comprehension="parkLesson.q1b">Saturday</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q1-c" name="park-q1" value="c">
+								<label for="park-q1-c" data-i18n-comprehension="parkLesson.q1c">Sunday</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="park-q1-feedback"></div>
+					</div>
+					
+					<!-- Question 2 -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">2</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="parkLesson.question2">What did Lily enjoy most at the playground?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q2-a" name="park-q2" value="a">
+								<label for="park-q2-a" data-i18n-comprehension="parkLesson.q2a">The slide</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q2-b" name="park-q2" value="b">
+								<label for="park-q2-b" data-i18n-comprehension="parkLesson.q2b">The swings</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q2-c" name="park-q2" value="c">
+								<label for="park-q2-c" data-i18n-comprehension="parkLesson.q2c">The climbing frame</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="park-q2-feedback"></div>
+					</div>
+					
+					<!-- Question 3 -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">3</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="parkLesson.question3">What did the family do after their picnic lunch?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q3-a" name="park-q3" value="a">
+								<label for="park-q3-a" data-i18n-comprehension="parkLesson.q3a">They went home immediately</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q3-b" name="park-q3" value="b">
+								<label for="park-q3-b" data-i18n-comprehension="parkLesson.q3b">Mr. Johnson took the children for a walk</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q3-c" name="park-q3" value="c">
+								<label for="park-q3-c" data-i18n-comprehension="parkLesson.q3c">They played football</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="park-q3-feedback"></div>
+					</div>
+					
+					<!-- Question 4 -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">4</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="parkLesson.question4">What did they see an old man doing at the pond?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q4-a" name="park-q4" value="a">
+								<label for="park-q4-a" data-i18n-comprehension="parkLesson.q4a">Fishing</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q4-b" name="park-q4" value="b">
+								<label for="park-q4-b" data-i18n-comprehension="parkLesson.q4b">Feeding the ducks</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q4-c" name="park-q4" value="c">
+								<label for="park-q4-c" data-i18n-comprehension="parkLesson.q4c">Reading a book</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="park-q4-feedback"></div>
+					</div>
+					
+					<!-- Question 5 -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">5</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="parkLesson.question5">What did the family do before leaving the park?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q5-a" name="park-q5" value="a">
+								<label for="park-q5-a" data-i18n-comprehension="parkLesson.q5a">They bought ice cream</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q5-b" name="park-q5" value="b">
+								<label for="park-q5-b" data-i18n-comprehension="parkLesson.q5b">They took more photos</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q5-c" name="park-q5" value="c">
+								<label for="park-q5-c" data-i18n-comprehension="parkLesson.q5c">They cleaned up their area</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="park-q5-feedback"></div>
+					</div>
+					
+					
+					<!-- Question 6 (new) -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">6</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="parkLesson.question6">Where did the family have their picnic?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q6-a" name="park-q6" value="a">
+								<label for="park-q6-a" data-i18n-comprehension="parkLesson.q6a">On a bench near the pond</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q6-b" name="park-q6" value="b">
+								<label for="park-q6-b" data-i18n-comprehension="parkLesson.q6b">Under a large oak tree</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q6-c" name="park-q6" value="c">
+								<label for="park-q6-c" data-i18n-comprehension="parkLesson.q6c">On the playground grass</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="park-q6-feedback"></div>
+					</div>
+					
+					<!-- Question 7 (new) -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">7</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="parkLesson.question7">What did the children ask at the end of the day?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q7-a" name="park-q7" value="a">
+								<label for="park-q7-a" data-i18n-comprehension="parkLesson.q7a">If they could have ice cream</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q7-b" name="park-q7" value="b">
+								<label for="park-q7-b" data-i18n-comprehension="parkLesson.q7b">When they could visit the park again</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="park-q7-c" name="park-q7" value="c">
+								<label for="park-q7-c" data-i18n-comprehension="parkLesson.q7c">If they could get a pet squirrel</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="park-q7-feedback"></div>
+					</div>
+				</div>
+				
+				<!-- NEW: True/False Exercise -->
+				<div class="EH-comprehension-true-false-container">
+					<h2 class="EH-comprehension-true-false-title" data-i18n-comprehension="parkLesson.trueFalseTitle">True or False</h2>
+					
+					<div class="EH-comprehension-true-false-question" data-lesson="park">
+						<p class="EH-comprehension-true-false-statement" data-i18n-comprehension="parkLesson.tf1.statement">Ben preferred the swings more than the slide.</p>
+						<div class="EH-comprehension-true-false-options">
+							<button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="park" data-i18n-comprehension="common.false">False</button>
+							<button class="EH-comprehension-true-false-option" data-answer="true" data-i18n-comprehension="common.true">True</button>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="tf1-feedback"></div>
+					</div>
+					
+					<div class="EH-comprehension-true-false-question" data-lesson="park">
+						<p class="EH-comprehension-true-false-statement" data-i18n-comprehension="parkLesson.tf2.statement">Mrs. Johnson read a book while at the park.</p>
+						<div class="EH-comprehension-true-false-options">
+							<button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="park" data-i18n-comprehension="common.false">False</button>
+							<button class="EH-comprehension-true-false-option" data-answer="true" data-i18n-comprehension="common.true">True</button>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="tf2-feedback"></div>
+					</div>
+					
+					<div class="EH-comprehension-true-false-question" data-lesson="park">
+						<p class="EH-comprehension-true-false-statement" data-i18n-comprehension="parkLesson.tf3.statement">The family left their trash on the ground when they left.</p>
+						<div class="EH-comprehension-true-false-options">
+							<button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="park" data-i18n-comprehension="common.false">False</button>
+							<button class="EH-comprehension-true-false-option" data-answer="true" data-i18n-comprehension="common.true">True</button>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="tf3-feedback"></div>
+					</div>
+				</div>
+				
+				<!-- NEW: Fill in the Blanks Exercise -->
+				<div class="EH-comprehension-fill-blanks-container">
+					<h2 class="EH-comprehension-fill-blanks-title" data-i18n-comprehension="parkLesson.fillBlanksTitle">Fill in the Blanks</h2>
+					
+					<div class="EH-comprehension-fill-blanks-question">
+						<p class="EH-comprehension-fill-blanks-text" data-i18n-comprehension="parkLesson.fill1.text">
+							The Johnson family went to the park on a __________ morning. Mr. Johnson packed a picnic basket with sandwiches, apples, and __________. Mrs. Johnson brought a big __________ to sit on.
+						</p>
+						<div style="text-align: center; margin-top: 20px;">
+							<input type="text" class="EH-comprehension-blank-input" id="fill1-1" data-lesson="park" placeholder="Answer 1">
+							<input type="text" class="EH-comprehension-blank-input" id="fill1-2" data-lesson="park" placeholder="Answer 2">
+							<input type="text" class="EH-comprehension-blank-input" id="fill1-3" data-lesson="park" placeholder="Answer 3">
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="fill1-feedback"></div>
+					</div>
+					
+					<div class="EH-comprehension-fill-blanks-question">
+						<p class="EH-comprehension-fill-blanks-text" data-i18n-comprehension="parkLesson.fill2.text">
+							Lily loved the __________ while Ben preferred the __________. They saw an old man feeding __________ at the pond.
+						</p>
+						<div style="text-align: center; margin-top: 20px;">
+							<input type="text" class="EH-comprehension-blank-input" id="fill2-1" placeholder="Answer 1">
+							<input type="text" class="EH-comprehension-blank-input" id="fill2-2" placeholder="Answer 2">
+							<input type="text" class="EH-comprehension-blank-input" id="fill2-3" placeholder="Answer 3">
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="fill2-feedback"></div>
+					</div>
+				</div>
+				
+				<!-- NEW: Sentence Ordering Exercise -->
+				<div class="EH-comprehension-ordering-container">
+					<h2 class="EH-comprehension-ordering-title" data-i18n-comprehension="parkLesson.orderingTitle">Put the Sentences in Order</h2>
+					<p class="EH-comprehension-ordering-instructions" data-i18n-comprehension="parkLesson.orderingInstructions">Drag and drop the sentences to show the correct order of events:</p>
+					
+					<div class="EH-comprehension-ordering-list" id="ordering-list">
+						<div class="EH-comprehension-ordering-item" data-order="4" data-i18n-comprehension="parkLesson.order1">
+							<div class="EH-comprehension-ordering-number">1</div>
+							<div class="EH-comprehension-ordering-text">The family had a picnic under a large oak tree.</div>
+						</div>
+						<div class="EH-comprehension-ordering-item" data-order="1" data-i18n-comprehension="parkLesson.order2">
+							<div class="EH-comprehension-ordering-number">2</div>
+							<div class="EH-comprehension-ordering-text">The Johnson family arrived at the park on a Saturday morning.</div>
+						</div>
+						<div class="EH-comprehension-ordering-item" data-order="3" data-i18n-comprehension="parkLesson.order3">
+							<div class="EH-comprehension-ordering-number">3</div>
+							<div class="EH-comprehension-ordering-text">Lily played on the swings and Ben played on the slide.</div>
+						</div>
+						<div class="EH-comprehension-ordering-item" data-order="5" data-i18n-comprehension="parkLesson.order4">
+							<div class="EH-comprehension-ordering-number">4</div>
+							<div class="EH-comprehension-ordering-text">Mr. Johnson took the children for a walk around the park.</div>
+						</div>
+						<div class="EH-comprehension-ordering-item" data-order="2" data-i18n-comprehension="parkLesson.order5">
+							<div class="EH-comprehension-ordering-number">5</div>
+							<div class="EH-comprehension-ordering-text">The children immediately ran to the playground.</div>
+						</div>
+						<div class="EH-comprehension-ordering-item" data-order="6" data-i18n-comprehension="parkLesson.order6">
+							<div class="EH-comprehension-ordering-number">6</div>
+							<div class="EH-comprehension-ordering-text">The family cleaned up their area and went home.</div>
+						</div>
+					</div>
+					<div class="EH-comprehension-answer-feedback" id="ordering-feedback"></div>
+				</div>
+				
+				<!-- Check All Exercises Button -->
+				<button class="EH-comprehension-check-all-exercises" id="EH-park-check-all" data-i18n-comprehension="parkLesson.checkAllExercises">Check All Exercises</button>
+				
+				<!-- Score Display -->
+				<div class="EH-comprehension-score-display" id="EH-park-score-display">
+					<h3 class="EH-comprehension-score-title" data-i18n-comprehension="parkLesson.yourScore">Your Score</h3>
+					<div class="EH-comprehension-score-value" id="EH-park-score-value">0/20</div>
+					<p class="EH-comprehension-score-feedback" id="EH-park-score-feedback" data-i18n-comprehension="parkLesson.scoreFeedback.default">Check your answers to see your score!</p>
+				</div>
+				
+				<!-- Vocabulary Section -->
+				<div class="EH-comprehension-vocabulary-section">
+					<h2 class="EH-comprehension-vocabulary-section-title" data-i18n-comprehension="parkLesson.vocabularyTitle">Vocabulary Building</h2>
+					<div class="EH-comprehension-vocabulary-grid">
+						<!-- Vocabulary Card 1 -->
+						<div class="EH-comprehension-vocabulary-card">
+							<div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="parkLesson.vocab1.word">Picnic</div>
+							<div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="parkLesson.vocab1.pronunciation">/ˈpɪknɪk/</div>
+							<div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="parkLesson.vocab1.definition">A meal eaten outdoors, usually in a park or countryside</div>
+							<div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="parkLesson.vocab1.example">"We had a lovely picnic under the big oak tree."</div>
+						</div>
+						
+						<!-- Vocabulary Card 2 -->
+						<div class="EH-comprehension-vocabulary-card">
+							<div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="parkLesson.vocab2.word">Playground</div>
+							<div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="parkLesson.vocab2.pronunciation">/ˈpleɪɡraʊnd/</div>
+							<div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="parkLesson.vocab2.definition">An outdoor area where children can play, usually with equipment like swings and slides</div>
+							<div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="parkLesson.vocab2.example">"The children ran straight to the playground when they arrived at the park."</div>
+						</div>
+						
+						<!-- Vocabulary Card 3 -->
+						<div class="EH-comprehension-vocabulary-card">
+							<div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="parkLesson.vocab3.word">Pond</div>
+							<div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="parkLesson.vocab3.pronunciation">/pɒnd/</div>
+							<div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="parkLesson.vocab3.definition">A small area of still water, smaller than a lake</div>
+							<div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="parkLesson.vocab3.example">"They watched the ducks swimming in the pond."</div>
+						</div>
+						
+						<!-- Vocabulary Card 4 -->
+						<div class="EH-comprehension-vocabulary-card">
+							<div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="parkLesson.vocab4.word">Squirrel</div>
+							<div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="parkLesson.vocab4.pronunciation">/ˈskwɪrəl/</div>
+							<div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="parkLesson.vocab4.definition">A small animal with a bushy tail that lives in trees and eats nuts</div>
+							<div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="parkLesson.vocab4.example">"They saw a squirrel running up a tree with a nut in its mouth."</div>
+						</div>
+						
+						<!-- Vocabulary Card 5 -->
+						<div class="EH-comprehension-vocabulary-card">
+							<div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="parkLesson.vocab5.word">Atmosphere</div>
+							<div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="parkLesson.vocab5.pronunciation">/ˈætməsfɪə/</div>
+							<div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="parkLesson.vocab5.definition">The feeling or mood of a place</div>
+							<div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="parkLesson.vocab5.example">"She enjoyed the peaceful atmosphere of the park."</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Navigation Buttons -->
+				<div class="EH-comprehension-navigation">
+					<button class="EH-comprehension-nav-button back" onclick="window.location.href='Eh-general-comprehension-club.html'">
+						← <span data-i18n-comprehension="parkLesson.backToClub">Back to Comprehension Club</span>
+					</button>
+					<button class="EH-comprehension-nav-button" onclick="window.location.href='EH-comprehension-market.html'">
+						<span data-i18n-comprehension="parkLesson.nextLesson">Next Lesson: The Farmer's Market</span> →
+					</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Common Footer -->
+		<footer class="EH-common-footer">
+			<div class="EH-common-footer-content">
+				<div class="EH-common-footer-developer" data-i18n-comprehension="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-common-footer-links">
+					<a href="#" data-i18n-comprehension="footer.privacy">Privacy Policy</a>
+					<a href="#" data-i18n-comprehension="footer.terms">Terms of Service</a>
+					<a href="#" data-i18n-comprehension="footer.contact">Contact</a>
+				</div>
+			</div>
+		</footer>
+		
+		<!-- i18n translations -->
+		<script src="scripts/translation-comprehension.js"></script>
+		<script src="scripts/translations/i18n_comprehension_en.js"></script>
+		<script src="scripts/translations/i18n_comprehension_fr.js"></script>
+		<script src="scripts/translations/i18n_comprehension_ar.js"></script>
+		<script src="scripts/comprehension-exercises.js"></script>
+		
+		<script>
+			// Initialize when DOM is loaded
+			document.addEventListener('DOMContentLoaded', function() {
+				// Initialize translation system for comprehension pages
+				initTranslationSystem('comprehension', 'en', 'language-selector');
+				
+				// Register the park lesson configuration
+				ComprehensionExercises.registerLesson('park', {
+					mcQuestions: 7, // Number of multiple choice questions
+					audioPath: 'assets/audio/lessons/comprehension/park-story.mp3',
+					correctAnswers: {
+						// Multiple choice
+						'park-q1': 'b',
+						'park-q2': 'b',
+						'park-q3': 'b',
+						'park-q4': 'b',
+						'park-q5': 'c',
+						'park-q6': 'b',
+						'park-q7': 'b',
+						// True/False
+						'tf1': 'false',
+						'tf2': 'true',
+						'tf3': 'false',
+						// Sentence ordering
+						'ordering': ['2', '5', '3', '1', '4', '6']
+					},
+					fillBlanks: [
+					{
+						ids: ['fill1-1', 'fill1-2', 'fill1-3'],
+						answers: ['Saturday', 'lemonade', 'blanket'],
+						feedbackId: 'fill1-feedback'
+					},
+					{
+						ids: ['fill2-1', 'fill2-2', 'fill2-3'],
+						answers: ['swings', 'slide', 'ducks'],
+						feedbackId: 'fill2-feedback'
+					}
+					]
+				});
+				
+				// Initialize exercises for park lesson
+				ComprehensionExercises.initLesson('park');
+			});
+		</script>
+	</body>
+</html>

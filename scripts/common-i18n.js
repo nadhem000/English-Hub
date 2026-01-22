@@ -68,6 +68,21 @@ function updateTranslations(lang) {
         document.documentElement.dir = 'ltr';
         document.body.style.direction = 'ltr';
     }
+    
+    // Synchronize with new translation system if it exists
+    if (window.TranslationManager) {
+        // Save to a shared key that both systems will use
+        localStorage.setItem('english-hub-app-language', lang);
+        
+        // Update any registered systems in TranslationManager
+        Object.keys(window.TranslationManager.systems || {}).forEach(systemName => {
+            // Only update if the system supports this language
+            const system = window.TranslationManager.systems[systemName];
+            if (system && system.translations && system.translations[lang]) {
+                window.TranslationManager.updateSystem(systemName, lang);
+            }
+        });
+    }
 }
 
 // Initialize translations when DOM is loaded
@@ -79,8 +94,11 @@ function initTranslations() {
         return;
     }
     
+    // NEW: Try to get language from shared storage first, then legacy storage
+    const sharedLanguage = localStorage.getItem('english-hub-app-language');
+    const savedLanguage = sharedLanguage || localStorage.getItem('english-hub-preferred-language') || 'en';
+    
     // Set initial language
-    const savedLanguage = localStorage.getItem('preferred-language') || 'en';
     languageSelector.value = savedLanguage;
     
     // Update translations immediately
@@ -89,18 +107,41 @@ function initTranslations() {
     // Update translations when language changes
     languageSelector.addEventListener('change', function() {
         const selectedLang = this.value;
-        localStorage.setItem('preferred-language', selectedLang);
+        
+        // Save to both storage locations for compatibility
+        localStorage.setItem('english-hub-app-language', selectedLang);
+        localStorage.setItem('english-hub-preferred-language', selectedLang);
+        
         updateTranslations(selectedLang);
         
         // Dispatch custom event for pages that need to handle additional language changes
         window.dispatchEvent(new CustomEvent('languageChanged', { 
             detail: { language: selectedLang } 
         }));
+        
+        // Also dispatch a global language change event
+        window.dispatchEvent(new CustomEvent('globalLanguageChange', {
+            detail: { language: selectedLang }
+        }));
+    });
+    
+    // NEW: Listen for language changes from the new system
+    window.addEventListener('globalLanguageChange', function(event) {
+        const newLang = event.detail.language;
+        if (languageSelector.value !== newLang) {
+            languageSelector.value = newLang;
+            localStorage.setItem('english-hub-preferred-language', newLang);
+            updateTranslations(newLang);
+        }
     });
 }
 
 // Function to get current language
 function getCurrentLanguage() {
+    // Check shared storage first
+    const sharedLang = localStorage.getItem('english-hub-app-language');
+    if (sharedLang) return sharedLang;
+    
     const languageSelector = document.getElementById('language-selector');
     return languageSelector ? languageSelector.value : 'en';
 }
