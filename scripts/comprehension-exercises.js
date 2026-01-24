@@ -369,58 +369,58 @@ if (stopBtn) {
         });
     },
     
-    // Sentence ordering setup
-    setupSentenceOrdering: function(lessonId) {
-        const orderingList = document.getElementById('ordering-list');
-        if (!orderingList) return;
+    // Sentence ordering setup - FIXED VERSION
+setupSentenceOrdering: function(lessonId) {
+    const orderingList = document.getElementById('ordering-list');
+    if (!orderingList) return;
+    
+    // Make items draggable
+    const items = orderingList.querySelectorAll('.EH-comprehension-ordering-item');
+    let draggedItem = null;
+    
+    items.forEach(item => {
+        item.setAttribute('draggable', 'true');
         
-        let draggedItem = null;
-        
-        // Make items draggable
-        const items = orderingList.querySelectorAll('.EH-comprehension-ordering-item');
-        items.forEach(item => {
-            item.setAttribute('draggable', 'true');
-            
-            item.addEventListener('dragstart', function() {
-                draggedItem = this;
-                setTimeout(() => this.classList.add('dragging'), 0);
-            });
-            
-            item.addEventListener('dragend', function() {
-                this.classList.remove('dragging');
-                draggedItem = null;
-            });
+        item.addEventListener('dragstart', function(e) {
+            draggedItem = this;
+            setTimeout(() => this.classList.add('dragging'), 0);
+            e.dataTransfer.setData('text/plain', '');
         });
         
-        // Handle drag over
-        orderingList.addEventListener('dragover', function(e) {
-            e.preventDefault();
-            const afterElement = this.getDragAfterElement(e.clientY);
-            const draggable = document.querySelector('.dragging');
+        item.addEventListener('dragend', function() {
+            this.classList.remove('dragging');
+            draggedItem = null;
+        });
+    });
+    
+    // Handle drag over - FIXED
+    orderingList.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        const afterElement = getDragAfterElement(this, e.clientY);
+        
+        if (afterElement == null) {
+            this.appendChild(draggedItem);
+        } else {
+            this.insertBefore(draggedItem, afterElement);
+        }
+    });
+    
+    // Helper function - FIXED
+    function getDragAfterElement(container, y) {
+        const draggableElements = [...container.querySelectorAll('.EH-comprehension-ordering-item:not(.dragging)')];
+        
+        return draggableElements.reduce((closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = y - box.top - box.height / 2;
             
-            if (afterElement == null) {
-                this.appendChild(draggable);
+            if (offset < 0 && offset > closest.offset) {
+                return { offset: offset, element: child };
             } else {
-                this.insertBefore(draggable, afterElement);
+                return closest;
             }
-        }.bind({
-            getDragAfterElement: function(y) {
-                const container = orderingList;
-                const draggableElements = [...container.querySelectorAll('.EH-comprehension-ordering-item:not(.dragging)')];
-                
-                return draggableElements.reduce((closest, child) => {
-                    const box = child.getBoundingClientRect();
-                    const offset = y - box.top - box.height / 2;
-                    
-                    if (offset < 0 && offset > closest.offset) {
-                        return { offset: offset, element: child };
-                    } else {
-                        return closest;
-                    }
-                }, { offset: Number.NEGATIVE_INFINITY }).element;
-            }
-        }));
-    },
+        }, { offset: Number.NEGATIVE_INFINITY }).element;
+    }
+},
     
     // Check all exercises
     setupAllExercisesChecking: function(lessonId) {

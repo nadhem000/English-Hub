@@ -1202,9 +1202,9 @@ window.I18N['fr'] = {
                     title: "A Day at the Park (Une journée au parc)",
                     desc: "A simple narrative about a family spending time at the local park. Practice identifying main ideas and basic vocabulary. (Un récit simple sur une famille passant du temps au parc local. Pratiquez l'identification des idées principales et du vocabulaire de base.)"
                 },
-                market: {
-                    title: "The Farmer's Market (Le marché de producteurs)",
-                    desc: "Learn about different fruits and vegetables while practicing reading short descriptions and answering questions. (Apprenez sur différents fruits et légumes tout en pratiquant la lecture de descriptions courtes et en répondant aux questions.)"
+                perfumery: {
+                    title: "The Perfumery Shop (La Parfumerie)",
+                    desc: "A story about a girl who works in a perfumery shop selling scents and makeup. Learn vocabulary related to cosmetics and customer service. (Une histoire sur une fille qui travaille dans une parfumerie vendant des parfums et des produits de maquillage. Apprenez le vocabulaire lié aux cosmétiques et au service à la clientèle.)"
                 },
                 weather: {
                     title: "Understanding Weather (Comprendre la météo)",

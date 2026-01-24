@@ -1199,9 +1199,9 @@ window.I18N['en'] = {
                     title: "A Day at the Park",
                     desc: "A simple narrative about a family spending time at the local park. Practice identifying main ideas and basic vocabulary."
                 },
-                market: {
-                    title: "The Farmer's Market",
-                    desc: "Learn about different fruits and vegetables while practicing reading short descriptions and answering questions."
+                perfumery: {
+                    title: "The Perfumery Shop",
+                    desc: "A story about a girl who works in a perfumery shop selling scents and makeup. Learn vocabulary related to cosmetics and customer service."
                 },
                 weather: {
                     title: "Understanding Weather",

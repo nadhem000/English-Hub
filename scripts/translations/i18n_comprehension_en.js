@@ -149,7 +149,145 @@ TranslationManager.addTranslations('comprehension', 'en', {
         },
         
         backToClub: "Back to Comprehension Club",
-        nextLesson: "Next Lesson: The Farmer's Market"
+        nextLesson: "Next Lesson: The Perfumery Shop"
+    },
+    
+    perfumeryLesson: {
+        title: "The Perfumery Shop",
+        subtitle: "Elementary Level Reading Comprehension",
+        level: "Level: A1-A2 (Elementary)",
+        passageTitle: "Reading Passage",
+        readingTime: "Reading Time: 3-4 minutes",
+        
+        passage: {
+            p1: "Sofia loved working at the perfumery shop. Every morning, she arrived at 9 o'clock and opened the beautiful glass doors. The shop smelled wonderful - like flowers, fruits, and spices all mixed together. Sofia's job was to help customers find the perfect scent.",
+            p2: "The shop sold many different things. There were perfumes in pretty bottles, scented candles, body lotions, and makeup. Sofia liked arranging the products on the shelves. She made sure everything looked clean and attractive for the customers.",
+            p3: "One afternoon, a woman came into the shop. \"I need a gift for my sister,\" she said. Sofia smiled and asked, \"What kind of scents does your sister like? Floral, fruity, or maybe something fresh like the ocean?\" The woman thought for a moment and said, \"She loves roses and lavender.\"",
+            p4: "Sofia showed the woman three different perfumes with floral scents. She let the woman smell each one from special testing strips. \"This one has rose and jasmine,\" Sofia explained. \"This one is lavender with a little vanilla. And this one is a mix of different flowers.\"",
+            p5: "The woman chose the rose and jasmine perfume. Then she asked about makeup. Sofia showed her some lipsticks and eyeshadows. \"These colors would look nice with the perfume,\" Sofia suggested. The woman bought the perfume and a pink lipstick.",
+            p6: "Sofia carefully wrapped the gifts in pretty paper with a ribbon. She also gave the woman a free sample of a new lavender-scented hand cream. \"Thank you for your help,\" the woman said. \"My sister will love these!\"",
+            p7: "At the end of the day, Sofia cleaned the counter and restocked the shelves. She enjoyed helping people find beautiful scents and cosmetics. Working at the perfumery shop wasn't just a job for Sofia - it was something she truly loved doing."
+        },
+        
+        vocabularyPreview: "Vocabulary Preview",
+        vocab: {
+            perfumery: "perfumery",
+            scent: "scent",
+            cosmetics: "cosmetics",
+            floral: "floral",
+            customer: "customer"
+        },
+        
+        listenTitle: "Listen to the Story",
+        questionsTitle: "Comprehension Questions",
+        
+        question1: "What time does Sofia open the perfumery shop?",
+        q1a: "8 o'clock",
+        q1b: "9 o'clock",
+        q1c: "10 o'clock",
+        
+        question2: "What was the woman looking for in the shop?",
+        q2a: "Something for herself",
+        q2b: "A gift for her sister",
+        q2c: "A gift for her mother",
+        
+        question3: "What kind of scents did the woman's sister like?",
+        q3a: "Fruity scents",
+        q3b: "Floral scents",
+        q3c: "Ocean scents",
+        
+        question4: "What did Sofia let the woman smell the perfumes from?",
+        q4a: "Small bottles",
+        q4b: "Testing strips",
+        q4c: "Her own wrist",
+        
+        question5: "What did the woman buy besides perfume?",
+        q5a: "Eyeshadow",
+        q5b: "Lipstick",
+        q5c: "Body lotion",
+        
+        question6: "What free sample did Sofia give the woman?",
+        q6a: "A small perfume bottle",
+        q6b: "Lavender-scented hand cream",
+        q6c: "A scented candle",
+        
+        question7: "What does Sofia do at the end of the day?",
+        q7a: "Counts the money",
+        q7b: "Cleans the counter and restocks shelves",
+        q7c: "Locks the doors and goes home immediately",
+        
+        trueFalseTitle: "True or False",
+        tf1: {
+            statement: "The perfumery shop only sells perfumes."
+        },
+        tf2: {
+            statement: "Sofia enjoys helping customers find the perfect scent."
+        },
+        tf3: {
+            statement: "The woman chose a perfume with ocean scent."
+        },
+        
+        fillBlanksTitle: "Fill in the Blanks",
+        fill1: {
+            text: "Sofia works at a __________ shop. She helps __________ find perfect scents. The shop sells perfumes, scented __________, and makeup."
+        },
+        fill2: {
+            text: "The woman wanted a gift for her __________. She liked __________ scents with rose and __________. Sofia showed her three different perfumes."
+        },
+        
+        orderingTitle: "Put the Sentences in Order",
+        orderingInstructions: "Drag and drop the sentences to show the correct order of events:",
+        order1: "The woman bought perfume and lipstick.",
+        order2: "Sofia opened the perfumery shop at 9 o'clock.",
+        order3: "A woman came in looking for a gift for her sister.",
+        order4: "Sofia cleaned the counter and restocked shelves.",
+        order5: "Sofia showed the woman different floral perfumes.",
+        order6: "Sofia arranged products on the shelves.",
+        
+        checkAllExercises: "Check All Exercises",
+        yourScore: "Your Score",
+        scoreFeedback: {
+            default: "Check your answers to see your score!",
+            excellent: "Excellent! Perfect score! You understood the story very well.",
+            good: "Good job! You understood most of the story.",
+            average: "Not bad! You might want to read the story again.",
+            needsImprovement: "Try reading the story again and pay attention to the details."
+        },
+        
+        vocabularyTitle: "Vocabulary Building",
+        vocab1: {
+            word: "Perfumery",
+            pronunciation: "/pərˈfjuːməri/",
+            definition: "A shop where perfumes and scented products are sold",
+            example: "\"She works at the perfumery shop in the city center.\""
+        },
+        vocab2: {
+            word: "Scent",
+            pronunciation: "/sent/",
+            definition: "A pleasant smell, often used to describe perfumes",
+            example: "\"The shop was filled with beautiful floral scents.\""
+        },
+        vocab3: {
+            word: "Cosmetics",
+            pronunciation: "/kɒzˈmetɪks/",
+            definition: "Products used to improve appearance, like makeup",
+            example: "\"The shop sells both perfumes and cosmetics.\""
+        },
+        vocab4: {
+            word: "Floral",
+            pronunciation: "/ˈflɔːrəl/",
+            definition: "Having the smell of flowers",
+            example: "\"She prefers floral perfumes with rose and jasmine.\""
+        },
+        vocab5: {
+            word: "Customer",
+            pronunciation: "/ˈkʌstəmər/",
+            definition: "A person who buys goods or services from a shop",
+            example: "\"Sofia helps every customer find what they need.\""
+        },
+        
+        backToClub: "Previous: A Day at the Park",
+        nextLesson: "Back to Comprehension Club"
     },
     
     footer: {
