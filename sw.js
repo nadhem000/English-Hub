@@ -141,7 +141,7 @@ self.addEventListener('message', (event) => {
   }
   
   if (event.data && event.data.type === 'GET_VERSION') {
-    event.ports[0].postMessage({ version: '2.0.0', cacheName: CACHE_NAME });
+    event.ports[0].postMessage({ version: '2.0.7', cacheName: CACHE_NAME });
   }
 });
 
@@ -161,4 +161,5 @@ if ('periodicSync' in self.registration) {
       // Check for updates to content
     }
   });
+
 }
