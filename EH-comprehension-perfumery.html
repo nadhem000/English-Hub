@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>The Perfumery Shop - Comprehension Club</title>
+		<link rel="stylesheet" href="styles/comprehension.css">
+		<style>
+			:root {
+            /* Perfumery theme overrides */
+            --primary-color: #9c4a9c;
+            --primary-light: #f0d0f0;
+            --primary-dark: #7a3a7a;
+            --bg-body: linear-gradient(135deg, #f8f0ff, #fff0f8, #fff8ff);
+			}
+			
+			/* Add body class */
+			body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+			}
+		</style>
+	</head>
+	<body class="EH-comprehension-body">
+		<!-- Language Selector -->
+		<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+			<select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #9c4a9c; background: white; color: #333; font-weight: bold;">
+				<option value="en">English</option>
+				<option value="fr">Français</option>
+				<option value="ar">العربية</option>
+			</select>
+		</div>
+		
+		<div class="EH-site-header">
+			<a href="index.html" class="EH-site-logo-link" data-i18n-comprehension="common.mainPage" title="Main Page">
+				<img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+			</a>
+			<span class="EH-site-name" data-i18n-comprehension="common.siteName">English Hub</span>
+		</div>
+		
+		<div class="EH-comprehension-lesson-container">
+			<div class="EH-comprehension-lesson-content">
+				<!-- Lesson Header -->
+				<div class="EH-comprehension-lesson-header">
+					<h1 class="EH-comprehension-lesson-title" data-i18n-comprehension="perfumeryLesson.title">The Perfumery Shop</h1>
+					<p class="EH-comprehension-lesson-subtitle" data-i18n-comprehension="perfumeryLesson.subtitle">Elementary Level Reading Comprehension</p>
+					<div class="EH-comprehension-lesson-level" data-i18n-comprehension="perfumeryLesson.level">Level: A1-A2 (Elementary)</div>
+				</div>
+				
+				<!-- Reading Passage -->
+				<div class="EH-comprehension-passage-container">
+					<div class="EH-comprehension-passage-header">
+						<h2 class="EH-comprehension-passage-title" data-i18n-comprehension="perfumeryLesson.passageTitle">Reading Passage</h2>
+						<div class="EH-comprehension-reading-time" data-i18n-comprehension="perfumeryLesson.readingTime">Reading Time: 3-4 minutes</div>
+					</div>
+					
+					<div class="EH-comprehension-passage-text">
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="perfumeryLesson.passage.p1">
+							Sofia loved working at the perfumery shop. Every morning, she arrived at 9 o'clock and opened the beautiful glass doors. The shop smelled wonderful - like flowers, fruits, and spices all mixed together. Sofia's job was to help customers find the perfect scent.
+						</p>
+						
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="perfumeryLesson.passage.p2">
+							The shop sold many different things. There were perfumes in pretty bottles, scented candles, body lotions, and makeup. Sofia liked arranging the products on the shelves. She made sure everything looked clean and attractive for the customers.
+						</p>
+						
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="perfumeryLesson.passage.p3">
+							One afternoon, a woman came into the shop. "I need a gift for my sister," she said. Sofia smiled and asked, "What kind of scents does your sister like? Floral, fruity, or maybe something fresh like the ocean?" The woman thought for a moment and said, "She loves roses and lavender."
+						</p>
+						
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="perfumeryLesson.passage.p4">
+							Sofia showed the woman three different perfumes with floral scents. She let the woman smell each one from special testing strips. "This one has rose and jasmine," Sofia explained. "This one is lavender with a little vanilla. And this one is a mix of different flowers."
+						</p>
+						
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="perfumeryLesson.passage.p5">
+							The woman chose the rose and jasmine perfume. Then she asked about makeup. Sofia showed her some lipsticks and eyeshadows. "These colors would look nice with the perfume," Sofia suggested. The woman bought the perfume and a pink lipstick.
+						</p>
+						
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="perfumeryLesson.passage.p6">
+							Sofia carefully wrapped the gifts in pretty paper with a ribbon. She also gave the woman a free sample of a new lavender-scented hand cream. "Thank you for your help," the woman said. "My sister will love these!"
+						</p>
+						
+						<p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="perfumeryLesson.passage.p7">
+							At the end of the day, Sofia cleaned the counter and restocked the shelves. She enjoyed helping people find beautiful scents and cosmetics. Working at the perfumery shop wasn't just a job for Sofia - it was something she truly loved doing.
+						</p>
+					</div>
+					
+					<!-- Vocabulary Preview -->
+					<div class="EH-comprehension-vocabulary-preview">
+						<h3 class="EH-comprehension-vocabulary-title" data-i18n-comprehension="perfumeryLesson.vocabularyPreview">Vocabulary Preview</h3>
+						<div class="EH-comprehension-vocabulary-list">
+							<span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="perfumeryLesson.vocab.perfumery">perfumery</span>
+							<span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="perfumeryLesson.vocab.scent">scent</span>
+							<span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="perfumeryLesson.vocab.cosmetics">cosmetics</span>
+							<span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="perfumeryLesson.vocab.floral">floral</span>
+							<span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="perfumeryLesson.vocab.customer">customer</span>
+						</div>
+					</div>
+					
+					<!-- Audio Player -->
+					<div class="EH-comprehension-audio-player">
+    <h3 class="EH-comprehension-audio-title" data-i18n-comprehension="perfumeryLesson.listenTitle">Listen to the Story</h3>
+    
+    <div class="EH-comprehension-audio-controls">
+        <!-- Play button with icon and tooltip -->
+        <button class="EH-comprehension-audio-btn play" id="EH-perfumery-play-btn" title="Play">
+            <span class="EH-comprehension-audio-icon">▶</span>
+            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.play">Play</span>
+        </button>
+        
+        <!-- Pause button with icon and tooltip -->
+        <button class="EH-comprehension-audio-btn" id="EH-perfumery-pause-btn" title="Pause">
+            <span class="EH-comprehension-audio-icon">⏸</span>
+            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.pause">Pause</span>
+        </button>
+        
+        <!-- Stop button with icon and tooltip -->
+        <button class="EH-comprehension-audio-btn" id="EH-perfumery-stop-btn" title="Stop">
+            <span class="EH-comprehension-audio-icon">⏹</span>
+            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.stop">Stop</span>
+        </button>
+        
+        <!-- Volume Control -->
+        <div class="EH-audio-volume-control">
+            <button class="EH-comprehension-audio-btn volume" id="EH-perfumery-volume-btn" title="Volume">
+                <span class="EH-comprehension-audio-icon">🔊</span>
+                <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.volume">Volume</span>
+            </button>
+            <div class="EH-audio-volume-slider-container">
+                <input type="range" class="EH-audio-volume-slider" id="EH-perfumery-volume-slider" min="0" max="1" step="0.1" value="1">
+            </div>
+        </div>
+        
+        <!-- Speed Control -->
+        <div class="EH-audio-speed-control">
+            <button class="EH-comprehension-audio-btn speed" id="EH-perfumery-speed-btn" title="Playback Speed">
+                <span class="EH-comprehension-audio-icon">1x</span>
+                <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.speed">Speed</span>
+            </button>
+            <div class="EH-audio-speed-options" id="EH-perfumery-speed-options">
+                <button class="EH-audio-speed-option" data-speed="0.5" title="0.5x Speed">0.5x</button>
+                <button class="EH-audio-speed-option" data-speed="0.75" title="0.75x Speed">0.75x</button>
+                <button class="EH-audio-speed-option" data-speed="1" data-selected="true" title="Normal Speed">1x</button>
+                <button class="EH-audio-speed-option" data-speed="1.25" title="1.25x Speed">1.25x</button>
+                <button class="EH-audio-speed-option" data-speed="1.5" title="1.5x Speed">1.5x</button>
+                <button class="EH-audio-speed-option" data-speed="2" title="2x Speed">2x</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Enhanced Progress Bar -->
+    <div class="EH-comprehension-audio-progress">
+        <div class="EH-comprehension-audio-progress-background" id="EH-perfumery-progress-background">
+            <div class="EH-comprehension-audio-progress-bar" id="EH-perfumery-progress-bar"></div>
+            <div class="EH-comprehension-audio-progress-thumb" id="EH-perfumery-progress-thumb"></div>
+        </div>
+        <input type="range" class="EH-comprehension-audio-progress-slider" id="EH-perfumery-progress-slider" min="0" max="100" value="0" step="0.1">
+    </div>
+    
+    <div style="text-align: center; color: #666; font-size: 0.9rem;" id="EH-perfumery-time-display">0:00 / 0:00</div>
+</div>
+				</div>
+				
+				<!-- Comprehension Questions -->
+				<div class="EH-comprehension-questions-container">
+					<h2 class="EH-comprehension-questions-title" data-i18n-comprehension="perfumeryLesson.questionsTitle">Comprehension Questions</h2>
+					
+					<!-- Question 1 -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">1</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="perfumeryLesson.question1">What time does Sofia open the perfumery shop?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q1-a" name="perfumery-q1" value="a">
+								<label for="perfumery-q1-a" data-i18n-comprehension="perfumeryLesson.q1a">8 o'clock</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q1-b" name="perfumery-q1" value="b">
+								<label for="perfumery-q1-b" data-i18n-comprehension="perfumeryLesson.q1b">9 o'clock</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q1-c" name="perfumery-q1" value="c">
+								<label for="perfumery-q1-c" data-i18n-comprehension="perfumeryLesson.q1c">10 o'clock</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="perfumery-q1-feedback"></div>
+					</div>
+					
+					<!-- Question 2 -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">2</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="perfumeryLesson.question2">What was the woman looking for in the shop?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q2-a" name="perfumery-q2" value="a">
+								<label for="perfumery-q2-a" data-i18n-comprehension="perfumeryLesson.q2a">Something for herself</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q2-b" name="perfumery-q2" value="b">
+								<label for="perfumery-q2-b" data-i18n-comprehension="perfumeryLesson.q2b">A gift for her sister</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q2-c" name="perfumery-q2" value="c">
+								<label for="perfumery-q2-c" data-i18n-comprehension="perfumeryLesson.q2c">A gift for her mother</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="perfumery-q2-feedback"></div>
+					</div>
+					
+					<!-- Question 3 -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">3</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="perfumeryLesson.question3">What kind of scents did the woman's sister like?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q3-a" name="perfumery-q3" value="a">
+								<label for="perfumery-q3-a" data-i18n-comprehension="perfumeryLesson.q3a">Fruity scents</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q3-b" name="perfumery-q3" value="b">
+								<label for="perfumery-q3-b" data-i18n-comprehension="perfumeryLesson.q3b">Floral scents</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q3-c" name="perfumery-q3" value="c">
+								<label for="perfumery-q3-c" data-i18n-comprehension="perfumeryLesson.q3c">Ocean scents</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="perfumery-q3-feedback"></div>
+					</div>
+					
+					<!-- Question 4 -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">4</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="perfumeryLesson.question4">What did Sofia let the woman smell the perfumes from?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q4-a" name="perfumery-q4" value="a">
+								<label for="perfumery-q4-a" data-i18n-comprehension="perfumeryLesson.q4a">Small bottles</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q4-b" name="perfumery-q4" value="b">
+								<label for="perfumery-q4-b" data-i18n-comprehension="perfumeryLesson.q4b">Testing strips</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q4-c" name="perfumery-q4" value="c">
+								<label for="perfumery-q4-c" data-i18n-comprehension="perfumeryLesson.q4c">Her own wrist</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="perfumery-q4-feedback"></div>
+					</div>
+					
+					<!-- Question 5 -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">5</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="perfumeryLesson.question5">What did the woman buy besides perfume?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q5-a" name="perfumery-q5" value="a">
+								<label for="perfumery-q5-a" data-i18n-comprehension="perfumeryLesson.q5a">Eyeshadow</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q5-b" name="perfumery-q5" value="b">
+								<label for="perfumery-q5-b" data-i18n-comprehension="perfumeryLesson.q5b">Lipstick</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q5-c" name="perfumery-q5" value="c">
+								<label for="perfumery-q5-c" data-i18n-comprehension="perfumeryLesson.q5c">Body lotion</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="perfumery-q5-feedback"></div>
+					</div>
+					
+					
+					<!-- Question 6 -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">6</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="perfumeryLesson.question6">What free sample did Sofia give the woman?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q6-a" name="perfumery-q6" value="a">
+								<label for="perfumery-q6-a" data-i18n-comprehension="perfumeryLesson.q6a">A small perfume bottle</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q6-b" name="perfumery-q6" value="b">
+								<label for="perfumery-q6-b" data-i18n-comprehension="perfumeryLesson.q6b">Lavender-scented hand cream</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q6-c" name="perfumery-q6" value="c">
+								<label for="perfumery-q6-c" data-i18n-comprehension="perfumeryLesson.q6c">A scented candle</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="perfumery-q6-feedback"></div>
+					</div>
+					
+					<!-- Question 7 -->
+					<div class="EH-comprehension-question-card">
+						<div class="EH-comprehension-question-number">7</div>
+						<p class="EH-comprehension-question-text" data-i18n-comprehension="perfumeryLesson.question7">What does Sofia do at the end of the day?</p>
+						<div class="EH-comprehension-options">
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q7-a" name="perfumery-q7" value="a">
+								<label for="perfumery-q7-a" data-i18n-comprehension="perfumeryLesson.q7a">Counts the money</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q7-b" name="perfumery-q7" value="b">
+								<label for="perfumery-q7-b" data-i18n-comprehension="perfumeryLesson.q7b">Cleans the counter and restocks shelves</label>
+							</div>
+							<div class="EH-comprehension-option">
+								<input type="radio" id="perfumery-q7-c" name="perfumery-q7" value="c">
+								<label for="perfumery-q7-c" data-i18n-comprehension="perfumeryLesson.q7c">Locks the doors and goes home immediately</label>
+							</div>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="perfumery-q7-feedback"></div>
+					</div>
+				</div>
+				
+				<!-- True/False Exercise -->
+				<div class="EH-comprehension-true-false-container">
+					<h2 class="EH-comprehension-true-false-title" data-i18n-comprehension="perfumeryLesson.trueFalseTitle">True or False</h2>
+					
+					<div class="EH-comprehension-true-false-question" data-lesson="perfumery">
+						<p class="EH-comprehension-true-false-statement" data-i18n-comprehension="perfumeryLesson.tf1.statement">The perfumery shop only sells perfumes.</p>
+						<div class="EH-comprehension-true-false-options">
+							<button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="perfumery" data-i18n-comprehension="common.false">False</button>
+							<button class="EH-comprehension-true-false-option" data-answer="true" data-i18n-comprehension="common.true">True</button>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="tf1-feedback"></div>
+					</div>
+					
+					<div class="EH-comprehension-true-false-question" data-lesson="perfumery">
+						<p class="EH-comprehension-true-false-statement" data-i18n-comprehension="perfumeryLesson.tf2.statement">Sofia enjoys helping customers find the perfect scent.</p>
+						<div class="EH-comprehension-true-false-options">
+							<button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="perfumery" data-i18n-comprehension="common.false">False</button>
+							<button class="EH-comprehension-true-false-option" data-answer="true" data-i18n-comprehension="common.true">True</button>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="tf2-feedback"></div>
+					</div>
+					
+					<div class="EH-comprehension-true-false-question" data-lesson="perfumery">
+						<p class="EH-comprehension-true-false-statement" data-i18n-comprehension="perfumeryLesson.tf3.statement">The woman chose a perfume with ocean scent.</p>
+						<div class="EH-comprehension-true-false-options">
+							<button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="perfumery" data-i18n-comprehension="common.false">False</button>
+							<button class="EH-comprehension-true-false-option" data-answer="true" data-i18n-comprehension="common.true">True</button>
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="tf3-feedback"></div>
+					</div>
+				</div>
+				
+				<!-- Fill in the Blanks Exercise -->
+				<div class="EH-comprehension-fill-blanks-container">
+					<h2 class="EH-comprehension-fill-blanks-title" data-i18n-comprehension="perfumeryLesson.fillBlanksTitle">Fill in the Blanks</h2>
+					
+					<div class="EH-comprehension-fill-blanks-question">
+						<p class="EH-comprehension-fill-blanks-text" data-i18n-comprehension="perfumeryLesson.fill1.text">
+							Sofia works at a __________ shop. She helps __________ find perfect scents. The shop sells perfumes, scented __________, and makeup.
+						</p>
+						<div style="text-align: center; margin-top: 20px;">
+							<input type="text" class="EH-comprehension-blank-input" id="fill1-1" data-lesson="perfumery" placeholder="Answer 1">
+							<input type="text" class="EH-comprehension-blank-input" id="fill1-2" data-lesson="perfumery" placeholder="Answer 2">
+							<input type="text" class="EH-comprehension-blank-input" id="fill1-3" data-lesson="perfumery" placeholder="Answer 3">
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="fill1-feedback"></div>
+					</div>
+					
+					<div class="EH-comprehension-fill-blanks-question">
+						<p class="EH-comprehension-fill-blanks-text" data-i18n-comprehension="perfumeryLesson.fill2.text">
+							The woman wanted a gift for her __________. She liked __________ scents with rose and __________. Sofia showed her three different perfumes.
+						</p>
+						<div style="text-align: center; margin-top: 20px;">
+							<input type="text" class="EH-comprehension-blank-input" id="fill2-1" placeholder="Answer 1">
+							<input type="text" class="EH-comprehension-blank-input" id="fill2-2" placeholder="Answer 2">
+							<input type="text" class="EH-comprehension-blank-input" id="fill2-3" placeholder="Answer 3">
+						</div>
+						<div class="EH-comprehension-answer-feedback" id="fill2-feedback"></div>
+					</div>
+				</div>
+				
+				<!-- Sentence Ordering Exercise -->
+				<div class="EH-comprehension-ordering-container">
+					<h2 class="EH-comprehension-ordering-title" data-i18n-comprehension="perfumeryLesson.orderingTitle">Put the Sentences in Order</h2>
+					<p class="EH-comprehension-ordering-instructions" data-i18n-comprehension="perfumeryLesson.orderingInstructions">Drag and drop the sentences to show the correct order of events:</p>
+					
+					<div class="EH-comprehension-ordering-list" id="ordering-list">
+						<div class="EH-comprehension-ordering-item" data-order="5" data-i18n-comprehension="perfumeryLesson.order1">
+							<div class="EH-comprehension-ordering-number">1</div>
+							<div class="EH-comprehension-ordering-text">The woman bought perfume and lipstick.</div>
+						</div>
+						<div class="EH-comprehension-ordering-item" data-order="1" data-i18n-comprehension="perfumeryLesson.order2">
+							<div class="EH-comprehension-ordering-number">2</div>
+							<div class="EH-comprehension-ordering-text">Sofia opened the perfumery shop at 9 o'clock.</div>
+						</div>
+						<div class="EH-comprehension-ordering-item" data-order="3" data-i18n-comprehension="perfumeryLesson.order3">
+							<div class="EH-comprehension-ordering-number">3</div>
+							<div class="EH-comprehension-ordering-text">A woman came in looking for a gift for her sister.</div>
+						</div>
+						<div class="EH-comprehension-ordering-item" data-order="6" data-i18n-comprehension="perfumeryLesson.order4">
+							<div class="EH-comprehension-ordering-number">4</div>
+							<div class="EH-comprehension-ordering-text">Sofia cleaned the counter and restocked shelves.</div>
+						</div>
+						<div class="EH-comprehension-ordering-item" data-order="4" data-i18n-comprehension="perfumeryLesson.order5">
+							<div class="EH-comprehension-ordering-number">5</div>
+							<div class="EH-comprehension-ordering-text">Sofia showed the woman different floral perfumes.</div>
+						</div>
+						<div class="EH-comprehension-ordering-item" data-order="2" data-i18n-comprehension="perfumeryLesson.order6">
+							<div class="EH-comprehension-ordering-number">6</div>
+							<div class="EH-comprehension-ordering-text">Sofia arranged products on the shelves.</div>
+						</div>
+					</div>
+					<div class="EH-comprehension-answer-feedback" id="ordering-feedback"></div>
+				</div>
+				
+				<!-- Check All Exercises Button -->
+				<button class="EH-comprehension-check-all-exercises" id="EH-perfumery-check-all" data-i18n-comprehension="perfumeryLesson.checkAllExercises">Check All Exercises</button>
+				
+				<!-- Score Display -->
+				<div class="EH-comprehension-score-display" id="EH-perfumery-score-display">
+					<h3 class="EH-comprehension-score-title" data-i18n-comprehension="perfumeryLesson.yourScore">Your Score</h3>
+					<div class="EH-comprehension-score-value" id="EH-perfumery-score-value">0/20</div>
+					<p class="EH-comprehension-score-feedback" id="EH-perfumery-score-feedback" data-i18n-comprehension="perfumeryLesson.scoreFeedback.default">Check your answers to see your score!</p>
+				</div>
+				
+				<!-- Vocabulary Section -->
+				<div class="EH-comprehension-vocabulary-section">
+					<h2 class="EH-comprehension-vocabulary-section-title" data-i18n-comprehension="perfumeryLesson.vocabularyTitle">Vocabulary Building</h2>
+					<div class="EH-comprehension-vocabulary-grid">
+						<!-- Vocabulary Card 1 -->
+						<div class="EH-comprehension-vocabulary-card">
+							<div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="perfumeryLesson.vocab1.word">Perfumery</div>
+							<div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="perfumeryLesson.vocab1.pronunciation">/pərˈfjuːməri/</div>
+							<div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="perfumeryLesson.vocab1.definition">A shop where perfumes and scented products are sold</div>
+							<div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="perfumeryLesson.vocab1.example">"She works at the perfumery shop in the city center."</div>
+						</div>
+						
+						<!-- Vocabulary Card 2 -->
+						<div class="EH-comprehension-vocabulary-card">
+							<div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="perfumeryLesson.vocab2.word">Scent</div>
+							<div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="perfumeryLesson.vocab2.pronunciation">/sent/</div>
+							<div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="perfumeryLesson.vocab2.definition">A pleasant smell, often used to describe perfumes</div>
+							<div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="perfumeryLesson.vocab2.example">"The shop was filled with beautiful floral scents."</div>
+						</div>
+						
+						<!-- Vocabulary Card 3 -->
+						<div class="EH-comprehension-vocabulary-card">
+							<div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="perfumeryLesson.vocab3.word">Cosmetics</div>
+							<div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="perfumeryLesson.vocab3.pronunciation">/kɒzˈmetɪks/</div>
+							<div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="perfumeryLesson.vocab3.definition">Products used to improve appearance, like makeup</div>
+							<div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="perfumeryLesson.vocab3.example">"The shop sells both perfumes and cosmetics."</div>
+						</div>
+						
+						<!-- Vocabulary Card 4 -->
+						<div class="EH-comprehension-vocabulary-card">
+							<div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="perfumeryLesson.vocab4.word">Floral</div>
+							<div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="perfumeryLesson.vocab4.pronunciation">/ˈflɔːrəl/</div>
+							<div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="perfumeryLesson.vocab4.definition">Having the smell of flowers</div>
+							<div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="perfumeryLesson.vocab4.example">"She prefers floral perfumes with rose and jasmine."</div>
+						</div>
+						
+						<!-- Vocabulary Card 5 -->
+						<div class="EH-comprehension-vocabulary-card">
+							<div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="perfumeryLesson.vocab5.word">Customer</div>
+							<div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="perfumeryLesson.vocab5.pronunciation">/ˈkʌstəmər/</div>
+							<div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="perfumeryLesson.vocab5.definition">A person who buys goods or services from a shop</div>
+							<div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="perfumeryLesson.vocab5.example">"Sofia helps every customer find what they need."</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Navigation Buttons -->
+				<div class="EH-comprehension-navigation">
+					<button class="EH-comprehension-nav-button back" onclick="window.location.href='EH-comprehension-market.html'">
+						← <span data-i18n-comprehension="perfumeryLesson.backToClub">Previous: The Farmer's Market</span>
+					</button>
+					<button class="EH-comprehension-nav-button" onclick="window.location.href='EH-general-comprehension-club.html'">
+						<span data-i18n-comprehension="perfumeryLesson.nextLesson">Back to Comprehension Club</span> →
+					</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Common Footer -->
+		<footer class="EH-common-footer">
+			<div class="EH-common-footer-content">
+				<div class="EH-common-footer-developer" data-i18n-comprehension="footer.developer">Developer: Mejri Ziad</div>
+				<div class="EH-common-footer-links">
+					<a href="#" data-i18n-comprehension="footer.privacy">Privacy Policy</a>
+					<a href="#" data-i18n-comprehension="footer.terms">Terms of Service</a>
+					<a href="#" data-i18n-comprehension="footer.contact">Contact</a>
+				</div>
+			</div>
+		</footer>
+		
+		<!-- i18n translations -->
+		<script src="scripts/translation-comprehension.js"></script>
+		<script src="scripts/translations/i18n_comprehension_en.js"></script>
+		<script src="scripts/translations/i18n_comprehension_fr.js"></script>
+		<script src="scripts/translations/i18n_comprehension_ar.js"></script>
+		<script src="scripts/comprehension-exercises.js"></script>
+		
+		<script>
+			// Initialize when DOM is loaded
+			document.addEventListener('DOMContentLoaded', function() {
+				// Initialize translation system for comprehension pages
+				initTranslationSystem('comprehension', 'en', 'language-selector');
+				
+				// Register the perfumery lesson configuration
+				ComprehensionExercises.registerLesson('perfumery', {
+					mcQuestions: 7, // Number of multiple choice questions
+					audioPath: 'assets/audio/lessons/comprehension/perfumery-story.mp3',
+					correctAnswers: {
+						// Multiple choice
+						'perfumery-q1': 'b',
+						'perfumery-q2': 'b',
+						'perfumery-q3': 'b',
+						'perfumery-q4': 'b',
+						'perfumery-q5': 'b',
+						'perfumery-q6': 'b',
+						'perfumery-q7': 'b',
+						// True/False
+						'tf1': 'false',
+						'tf2': 'true',
+						'tf3': 'false',
+						// Sentence ordering
+						'ordering': ['2', '6', '3', '5', '1', '4']
+					},
+					fillBlanks: [
+					{
+						ids: ['fill1-1', 'fill1-2', 'fill1-3'],
+						answers: ['perfumery', 'customers', 'candles'],
+						feedbackId: 'fill1-feedback'
+					},
+					{
+						ids: ['fill2-1', 'fill2-2', 'fill2-3'],
+						answers: ['sister', 'floral', 'lavender'],
+						feedbackId: 'fill2-feedback'
+					}
+					]
+				});
+				
+				// Initialize exercises for perfumery lesson
+				ComprehensionExercises.initLesson('perfumery');
+			});
+		</script>
+	</body>
+</html>
