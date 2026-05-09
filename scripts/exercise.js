@@ -204,63 +204,68 @@ function ExerciseType1Possibilities3Reset(totalQuestions, prefix = 'EH-exercise-
 // TYPE 2: Fill in the blank exercises
 function ExerciseType2FillBlankCheckAnswers(correctAnswers, totalQuestions, prefix = 'EH-exercise-type2-fillblank') {
     let score = 0;
-    
-    // Reset all status indicators and styling
+
+    // Reset styling & status text
     for (let i = 1; i <= totalQuestions; i++) {
-        const statusElement = document.getElementById(`${prefix}-q${i}-status`);
-        const inputElement = document.getElementById(`${prefix}-q${i}-input`);
-        
-        if (statusElement) {
-            statusElement.textContent = '';
-            statusElement.className = `${prefix}-answer-status`;
+        const statusEl = document.getElementById(`${prefix}-q${i}-status`);
+        const inputEl = document.getElementById(`${prefix}-q${i}-input`);
+        if (statusEl) {
+            statusEl.textContent = '';
+            statusEl.className = `${prefix}-answer-status`;
         }
-        
-        if (inputElement) {
-            inputElement.className = `${prefix}-input`;
+        if (inputEl) {
+            inputEl.className = `${prefix}-input`;
         }
     }
-    
-    // Check each question
+
     for (const question in correctAnswers) {
-        const correctAnswer = correctAnswers[question].toLowerCase().trim();
-        const inputElement = document.getElementById(`${question}-input`);
-        const statusElement = document.getElementById(`${question}-status`);
-        
-        if (inputElement) {
-            const userAnswer = inputElement.value.toLowerCase().trim();
-            
+        const correctEntry = correctAnswers[question];
+        // Normalise to an array of possible correct answers (case‑insensitive)
+        const acceptedAnswers = Array.isArray(correctEntry)
+            ? correctEntry.map(a => a.toLowerCase().trim())
+            : [correctEntry.toLowerCase().trim()];
+
+        const inputEl = document.getElementById(`${question}-input`);
+        const statusEl = document.getElementById(`${question}-status`);
+
+        if (inputEl) {
+            const userAnswer = inputEl.value.toLowerCase().trim();
+
             if (userAnswer === '') {
-                if (statusElement) {
-                    statusElement.textContent = 'Not answered';
-                    statusElement.className = `${prefix}-answer-status`;
+                if (statusEl) {
+                    statusEl.textContent = 'Not answered';
+                    statusEl.className = `${prefix}-answer-status`;
                 }
-                inputElement.className = `${prefix}-input ${prefix}-input-empty`;
-            } else if (userAnswer === correctAnswer) {
+                inputEl.className = `${prefix}-input ${prefix}-input-empty`;
+            } else if (acceptedAnswers.includes(userAnswer)) {
                 score++;
-                if (statusElement) {
-                    statusElement.textContent = 'Correct!';
-                    statusElement.className = `${prefix}-answer-status ${prefix}-correct-answer`;
+                if (statusEl) {
+                    statusEl.textContent = 'Correct!';
+                    statusEl.className = `${prefix}-answer-status ${prefix}-correct-answer`;
                 }
-                inputElement.className = `${prefix}-input ${prefix}-input-correct`;
+                inputEl.className = `${prefix}-input ${prefix}-input-correct`;
             } else {
-                if (statusElement) {
-                    statusElement.textContent = `Incorrect. Correct answer: ${correctAnswers[question]}`;
-                    statusElement.className = `${prefix}-answer-status ${prefix}-incorrect-answer`;
+                // Show the first accepted answer as the correct one
+                const displayAnswer = Array.isArray(correctEntry)
+                    ? correctEntry[0]
+                    : correctEntry;
+                if (statusEl) {
+                    statusEl.textContent = `Incorrect. Correct answer: ${displayAnswer}`;
+                    statusEl.className = `${prefix}-answer-status ${prefix}-incorrect-answer`;
                 }
-                inputElement.className = `${prefix}-input ${prefix}-input-incorrect`;
+                inputEl.className = `${prefix}-input ${prefix}-input-incorrect`;
             }
         }
     }
-    
-    // Display score
+
+    // Update score display (if available)
     const scoreValue = document.getElementById(`${prefix}-score-value`);
     const scoreDisplay = document.getElementById(`${prefix}-score-display`);
     const scoreFeedback = document.getElementById(`${prefix}-score-feedback`);
-    
+
     if (scoreValue) scoreValue.textContent = `${score}/${totalQuestions}`;
     if (scoreDisplay) scoreDisplay.style.display = 'block';
-    
-    // Provide feedback based on score
+
     if (scoreFeedback) {
         if (score === totalQuestions) {
             scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
@@ -272,7 +277,6 @@ function ExerciseType2FillBlankCheckAnswers(correctAnswers, totalQuestions, pref
             scoreFeedback.textContent = 'You might want to review the material and try again.';
         }
     }
-    
     return score;
 }
 

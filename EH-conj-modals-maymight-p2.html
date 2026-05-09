@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May & Might: Nuance, Comparison, and Politeness - English Hub</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/common.css">
+
+    <style>
+        :root {
+            /* ---------- Theme: deep blue / indigo ---------- */
+            --bg-gradient: linear-gradient(135deg, #0d47a1, #1976d2, #42a5f5, #64b5f6);
+            --title-color: #0d47a1;
+            --primary: #1976d2;
+            --primary-hover: #0d47a1;
+            --primary-light: #64b5f6;
+            --accent: #42a5f5;
+            --rule-bg: #e3f2fd;
+            --rule-border: #64b5f6;
+            --example-bg: #bbdef5;
+            --example-border: #64b5f6;
+            --exercise-number-gradient: linear-gradient(135deg, #1976d2, #64b5f6);
+            --nav-btn-bg: #1976d2;
+            --nav-btn-hover: #0d47a1;
+            --nav-back-btn-bg: #64b5f6;
+            --nav-back-btn-color: white;
+            --nav-back-btn-hover: #1976d2;
+
+            /* ---------- Universal / Neutral ---------- */
+            --header-text: white;
+            --header-text-light: rgba(255, 255, 255, 0.9);
+            --content-bg: rgba(255, 255, 255, 0.95);
+            --text-color: #333;
+            --white: white;
+            --section-divider: #e0e0e0;
+            --card-bg: white;
+            --subsection-bg: white;
+            --card-border: #e0e0e0;
+            --input-border: #e0e0e0;
+            --dashed-border: #e0e0e0;
+            --table-border: #ddd;
+            --table-stripe: #f2f2f2;
+            --correct-bg: #d4edda;
+            --correct-color: #155724;
+            --correct-border: #c3e6cb;
+            --incorrect-bg: #f8d7da;
+            --incorrect-color: #721c24;
+            --incorrect-border: #f5c6cb;
+        }
+    </style>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
+</head>
+<body>
+    <!-- Language Selector -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+    </div>
+
+    <div class="EH-conjugation-container">
+        <header class="EH-conjugation-header">
+            <h1 class="EH-conjugation-title" data-i18n="modalsMayMight2.title">May & Might: Nuance, Comparison, and Politeness</h1>
+            <p class="EH-conjugation-subtitle" data-i18n="modalsMayMight2.subtitle">Explore subtle differences: certainty, politeness levels, past possibility, and unreal uses</p>
+        </header>
+
+        <div class="EH-conjugation-content">
+            <!-- Going Deeper: Nuance & Comparison -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.introduction.title">Going Deeper: Nuance & Comparison</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">⚖️</span>
+                        <span data-i18n="modalsMayMight2.introduction.whatAre">Choosing between may and might</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight2.introduction.definitionTitle">Why nuance matters:</div>
+                        <p data-i18n="modalsMayMight2.introduction.definition">While may and might are often interchangeable, the choice can signal different levels of certainty, formality, or time. This section explores those subtle distinctions.</p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight2.introduction.coreIdeas">Key ideas in part 2:</div>
+                        <ul>
+                            <li data-i18n="modalsMayMight2.introduction.core1">Comparing may, might, and may/might have (past possibility).</li>
+                            <li data-i18n="modalsMayMight2.introduction.core2">Degrees of politeness – from can to may to might.</li>
+                            <li data-i18n="modalsMayMight2.introduction.core3">Secondary uses: concessive may, unreal might, might as well.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nuance in Likelihood -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.likelihood.title">Nuance in Likelihood</h2>
+                <div class="EH-conjugation-subsection">
+                    <p data-i18n="modalsMayMight2.likelihood.text1">May expresses about 50% certainty; might expresses about 30% certainty.</p>
+                    <p data-i18n="modalsMayMight2.likelihood.text2">Might often sounds more hesitant or tentative, making it common in polite suggestions.</p>
+                    <p data-i18n="modalsMayMight2.likelihood.text3">In negative forms, may not and might not can both express uncertainty, but might not often implies a slightly stronger doubt.</p>
+                </div>
+            </div>
+
+            <!-- Time Reference -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.time.title">Time Reference</h2>
+                <div class="EH-conjugation-subsection">
+                    <p data-i18n="modalsMayMight2.time.text1">May and might are both used for present and future possibility.</p>
+                    <p data-i18n="modalsMayMight2.time.text2">For past possibility, we use may have or might have.</p>
+                    <p data-i18n="modalsMayMight2.time.text3">Might have can also indicate a missed opportunity (unreal past).</p>
+                </div>
+            </div>
+
+            <!-- Comparison Table: May, Might, Past Forms -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.comparison.title">Comparing May, Might, and Past Forms</h2>
+                <div class="EH-conjugation-subsection">
+                    <table class="EH-conjugation-table">
+                        <thead><tr><th data-i18n="common.modal">Modal</th><th data-i18n="common.usage">Usage</th><th data-i18n="common.example">Example</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>may</strong></td><td data-i18n="modalsMayMight2.comparison.mayUse">present/future possibility (≈50% certainty), formal permission</td><td data-i18n="modalsMayMight2.comparison.mayEx">It may rain. / May I leave?</td></tr>
+                            <tr><td><strong>might</strong></td><td data-i18n="modalsMayMight2.comparison.mightUse">less certain possibility (≈30%), tentative suggestion, unreal situations</td><td data-i18n="modalsMayMight2.comparison.mightEx">It might rain. / You might try this.</td></tr>
+                            <tr><td><strong>may have / might have</strong></td><td data-i18n="modalsMayMight2.comparison.pastUse">past possibility (may have = possible, might have = less certain / unreal)</td><td data-i18n="modalsMayMight2.comparison.pastEx">She may have left. / He might have missed the train.</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="EH-conjugation-rule"><div class="EH-conjugation-rule-title" data-i18n="modalsMayMight2.comparison.noteTitle">Key point:</div><p data-i18n="modalsMayMight2.comparison.note">In past possibility, might have can also express that something was possible but did not happen (unreal). He might have called, but he didn't.</p></div>
+                </div>
+            </div>
+
+            <!-- Additional Nuances -->
+            <div class="EH-conjugation-section"><h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.additional.title">Additional Nuances</h2><div class="EH-conjugation-subsection"><p data-i18n="modalsMayMight2.additional.text1">May have is used when the past possibility is considered fairly likely; might have suggests greater doubt or an unrealised outcome.</p><p data-i18n="modalsMayMight2.additional.text2">In questions about past possibility, we usually use might have rather than may have: Might she have forgotten?</p></div></div>
+
+            <!-- May vs Might in Questions -->
+            <div class="EH-conjugation-section"><h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.questions.title">May vs Might in Questions</h2><div class="EH-conjugation-subsection"><p data-i18n="modalsMayMight2.questions.text1">When asking about possibility, might is often preferred for politeness: Might it rain later?</p><p data-i18n="modalsMayMight2.questions.text2">May is rarely used in questions about possibility except in formal contexts.</p><p data-i18n="modalsMayMight2.questions.text3">For permission, may is the formal choice: May I come in?</p></div></div>
+
+            <!-- Degrees of Politeness -->
+            <div class="EH-conjugation-section"><h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.politeness.title">Degrees of Politeness & Formality</h2><div class="EH-conjugation-subsection"><table class="EH-conjugation-table"><thead><tr><th data-i18n="common.level">Level</th><th>Example (request/permission)</th><th data-i18n="common.context">Context</th></tr></thead><tbody><tr><td data-i18n="modalsMayMight2.politeness.level1">Informal</td><td>Can I borrow your pen?</td><td data-i18n="modalsMayMight2.politeness.context1">friends, family</td></tr><tr><td data-i18n="modalsMayMight2.politeness.level2">Neutral / polite</td><td>Could I borrow your pen?</td><td data-i18n="modalsMayMight2.politeness.context2">everyday polite</td></tr><tr><td data-i18n="modalsMayMight2.politeness.level3">Formal</td><td>May I borrow your pen?</td><td data-i18n="modalsMayMight2.politeness.context3">official, strangers</td></tr><tr><td data-i18n="modalsMayMight2.politeness.level4">Very formal / hesitant</td><td>Might I borrow your pen?</td><td data-i18n="modalsMayMight2.politeness.context4">extremely polite, old-fashioned</td></tr></tbody></table><div class="EH-conjugation-examples"><div class="EH-conjugation-example" data-i18n="modalsMayMight2.politeness.ex1">May I suggest a different approach? (formal suggestion)</div><div class="EH-conjugation-example" data-i18n="modalsMayMight2.politeness.ex2">Might I offer my opinion? (very tentative, formal)</div></div></div></div>
+
+            <!-- Permission vs Possibility -->
+            <div class="EH-conjugation-section"><h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.permission.title">Using May/Might for Permission vs Possibility</h2><div class="EH-conjugation-subsection"><p data-i18n="modalsMayMight2.permission.text1">May I…? is strictly a permission request.</p><p data-i18n="modalsMayMight2.permission.text2">It may rain is a possibility statement.</p><p data-i18n="modalsMayMight2.permission.text3">Might I…? can be used for very polite permission requests, but it is less common.</p></div></div>
+
+            <!-- Common Mistakes -->
+            <div class="EH-conjugation-section"><h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.mistakes.title">Common Mistakes with May/Might</h2><div class="EH-conjugation-subsection"><ul><li data-i18n="modalsMayMight2.mistakes.item1">Using may for past possibility without have: ❌ She may left. ✅ She may have left.</li><li data-i18n="modalsMayMight2.mistakes.item2">Using might to give permission: ❌ You might go now. ✅ You may go now. (Might expresses possibility, not permission.)</li><li data-i18n="modalsMayMight2.mistakes.item3">Overusing may in informal speech for permission – can or could are more natural in everyday contexts.</li></ul></div></div>
+
+            <!-- Secondary Uses -->
+            <div class="EH-conjugation-section"><h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.secondary.title">Secondary Uses: Concession, Unreal, and Idioms</h2><div class="EH-conjugation-subsection"><table class="EH-conjugation-table"><thead><tr><th data-i18n="common.usage">Usage</th><th data-i18n="common.example">Example</th><th data-i18n="common.explanation">Explanation</th></tr></thead><tbody><tr><td data-i18n="modalsMayMight2.secondary.concessive">Concessive (may...but)</td><td>He may be rich, but he isn't happy.</td><td data-i18n="modalsMayMight2.secondary.concessiveExp">admitting a fact before contrast</td></tr><tr><td data-i18n="modalsMayMight2.secondary.unreal">Unreal situation (might)</td><td>If you tried, you might succeed.</td><td data-i18n="modalsMayMight2.secondary.unrealExp">hypothetical, less direct</td></tr><tr><td data-i18n="modalsMayMight2.secondary.mightAsWell">Might as well</td><td>We might as well start.</td><td data-i18n="modalsMayMight2.secondary.mightAsWellExp">no reason not to, suggesting</td></tr></tbody></table><p data-i18n="modalsMayMight2.secondary.additional">May well / might well: expresses strong probability. Might just: slight but possible chance. May / might (just) as well: suggests alternative with same result.</p></div></div>
+
+            <!-- Conditionals & Wishes -->
+            <div class="EH-conjugation-section"><h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.conditionals.title">May and Might in Conditionals</h2><div class="EH-conjugation-subsection"><p data-i18n="modalsMayMight2.conditionals.text1">In real conditionals, may expresses possible result: If you study, you may pass.</p><p data-i18n="modalsMayMight2.conditionals.text2">In unreal conditionals, might is used: If you studied, you might pass.</p><p data-i18n="modalsMayMight2.conditionals.text3">May is rarely used in unreal conditionals.</p></div></div>
+            <div class="EH-conjugation-section"><h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.wishes.title">May and Might for Wishes and Hopes</h2><div class="EH-conjugation-subsection"><p data-i18n="modalsMayMight2.wishes.text1">May is used in formal expressions of hope: May you have a safe journey.</p><p data-i18n="modalsMayMight2.wishes.text2">Might can express a wish in more tentative or literary style: Might you find peace.</p></div></div>
+
+            <!-- Quick Reference Chart -->
+            <div class="EH-conjugation-section"><h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.reference.title">Quick Reference Chart: Nuances at a Glance</h2><div class="EH-conjugation-subsection"><table class="EH-conjugation-table"><thead><tr><th>Situation</th><th>May</th><th>Might</th></tr></thead><tbody><tr><td data-i18n="modalsMayMight2.reference.sit1">Present/future possibility</td><td data-i18n="modalsMayMight2.reference.may1">50% certainty</td><td data-i18n="modalsMayMight2.reference.might1">30% certainty, more tentative</td></tr><tr><td data-i18n="modalsMayMight2.reference.sit2">Past possibility</td><td data-i18n="modalsMayMight2.reference.may2">may have (possible)</td><td data-i18n="modalsMayMight2.reference.might2">might have (less certain / unreal)</td></tr><tr><td data-i18n="modalsMayMight2.reference.sit3">Permission request</td><td data-i18n="modalsMayMight2.reference.may3">formal</td><td data-i18n="modalsMayMight2.reference.might3">very formal, old‑fashioned</td></tr><tr><td data-i18n="modalsMayMight2.reference.sit4">Suggestion</td><td data-i18n="modalsMayMight2.reference.may4">may (formal)</td><td data-i18n="modalsMayMight2.reference.might4">might (tentative)</td></tr><tr><td data-i18n="modalsMayMight2.reference.sit5">Concessive</td><td data-i18n="modalsMayMight2.reference.may5">may...but</td><td data-i18n="modalsMayMight2.reference.might5">not typically used</td></tr><tr><td data-i18n="modalsMayMight2.reference.sit6">Unreal conditional</td><td data-i18n="modalsMayMight2.reference.may6">not used</td><td data-i18n="modalsMayMight2.reference.might6">might (hypothetical)</td></tr><tr><td data-i18n="modalsMayMight2.reference.sit7">Idiom</td><td data-i18n="modalsMayMight2.reference.may7">may as well</td><td data-i18n="modalsMayMight2.reference.might7">might as well</td></tr></tbody></table></div></div>
+
+            <!-- EXERCISES (12) – dynamic slots -->
+            <div class="EH-conjugation-section EH-exercise-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight2.exercises.title">Practice Exercises: Nuance & Politeness</h2>
+                <!-- 6 Multiple Choice -->
+                <h3 style="color: #0d47a1; margin-bottom: 20px;">Multiple Choice</h3>
+                <div class="EH-exercise-container" id="mc-exercises"></div>
+
+                <!-- 3 Fill in the Blank -->
+                <h3 style="color: #0d47a1; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <div class="EH-exercise-container" id="fill-exercises"></div>
+
+                <!-- 3 Sentence Ordering -->
+                <h3 style="color: #0d47a1; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <div class="EH-exercise-container" id="order-exercises"></div>
+
+                <div class="EH-exercise-type1-possibilities3-answers-control"><button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button><div class="EH-exercise-type1-possibilities3-score-display" id="score-display"><h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3><div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div><p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see how you did!</p></div></div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="EH-conjugation-navigation">
+                <button class="EH-conjugation-nav-button" onclick="window.location.href='EH-conj-modals-maymight-p3.html'">
+                    <span data-i18n="common.nextLesson">Next Lesson →</span>
+                </button>
+                <button class="EH-conjugation-nav-button back" onclick="window.location.href='conjugation.html'">
+                    <span data-i18n="common.previousLesson">← Previous Lesson</span>
+                </button>
+				<button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
+					<span data-i18n="common.returnToConjugation">Return to Conjugation</span>
+				</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="EH-common-footer"><div class="EH-common-footer-content"><div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div><div class="EH-common-footer-links"><a href="#" data-i18n="footer.privacy">Privacy Policy</a><a href="#" data-i18n="footer.terms">Terms of Service</a><a href="#" data-i18n="footer.contact">Contact</a></div></div></footer>
+
+    <script>
+        window.I18N = {
+            en: {
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "← Previous Lesson",
+                    returnToConjugation: "← Return to Conjugation",
+                    nextLesson: "Next Lesson →",
+                    backToConjugation: "Back to Verb Conjugation",
+                    modal: "Modal",
+                    usage: "Usage",
+                    example: "Example",
+                    level: "Politeness level",
+                    context: "Context",
+                    explanation: "Explanation"
+                },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                modalsMayMight2: {
+                    title: "May & Might: Nuance, Comparison, and Politeness",
+                    subtitle: "Explore subtle differences: certainty, politeness levels, past possibility, and unreal uses",
+                    introduction: { title: "Going Deeper: Nuance & Comparison", whatAre: "Choosing between may and might", definitionTitle: "Why nuance matters:", definition: "While may and might are often interchangeable, the choice can signal different levels of certainty, formality, or time. This section explores those subtle distinctions.", coreIdeas: "Key ideas in part 2:", core1: "Comparing may, might, and may/might have (past possibility).", core2: "Degrees of politeness – from can to may to might.", core3: "Secondary uses: concessive may, unreal might, might as well." },
+                    likelihood: { title: "Nuance in Likelihood", text1: "May expresses about 50% certainty; might expresses about 30% certainty.", text2: "Might often sounds more hesitant or tentative, making it common in polite suggestions.", text3: "In negative forms, may not and might not can both express uncertainty, but might not often implies a slightly stronger doubt." },
+                    time: { title: "Time Reference", text1: "May and might are both used for present and future possibility.", text2: "For past possibility, we use may have or might have.", text3: "Might have can also indicate a missed opportunity (unreal past)." },
+                    comparison: { title: "Comparing May, Might, and Past Forms", mayUse: "present/future possibility (≈50% certainty), formal permission", mayEx: "It may rain. / May I leave?", mightUse: "less certain possibility (≈30%), tentative suggestion, unreal situations", mightEx: "It might rain. / You might try this.", pastUse: "past possibility (may have = possible, might have = less certain / unreal)", pastEx: "She may have left. / He might have missed the train.", noteTitle: "Key point:", note: "In past possibility, might have can also express that something was possible but did not happen (unreal). He might have called, but he didn't." },
+                    additional: { title: "Additional Nuances", text1: "May have is used when the past possibility is considered fairly likely; might have suggests greater doubt or an unrealised outcome.", text2: "In questions about past possibility, we usually use might have rather than may have: Might she have forgotten?" },
+                    questions: { title: "May vs Might in Questions", text1: "When asking about possibility, might is often preferred for politeness: Might it rain later?", text2: "May is rarely used in questions about possibility except in formal contexts.", text3: "For permission, may is the formal choice: May I come in?" },
+                    politeness: { title: "Degrees of Politeness & Formality", level1: "Informal", level2: "Neutral / polite", level3: "Formal", level4: "Very formal / hesitant", context1: "friends, family", context2: "everyday polite", context3: "official, strangers", context4: "extremely polite, old-fashioned", ex1: "May I suggest a different approach? (formal suggestion)", ex2: "Might I offer my opinion? (very tentative, formal)" },
+                    permission: { title: "Using May/Might for Permission vs Possibility", text1: "May I…? is strictly a permission request.", text2: "It may rain is a possibility statement.", text3: "Might I…? can be used for very polite permission requests, but it is less common." },
+                    mistakes: { title: "Common Mistakes with May/Might", item1: "Using may for past possibility without have: ❌ She may left. ✅ She may have left.", item2: "Using might to give permission: ❌ You might go now. ✅ You may go now. (Might expresses possibility, not permission.)", item3: "Overusing may in informal speech for permission – can or could are more natural in everyday contexts." },
+                    secondary: { title: "Secondary Uses: Concession, Unreal, and Idioms", concessive: "Concessive (may...but)", concessiveExp: "admitting a fact before contrast", unreal: "Unreal situation (might)", unrealExp: "hypothetical, less direct", mightAsWell: "Might as well", mightAsWellExp: "no reason not to, suggesting", additional: "May well / might well: expresses strong probability. Might just: slight but possible chance. May / might (just) as well: suggests alternative with same result." },
+                    conditionals: { title: "May and Might in Conditionals", text1: "In real conditionals, may expresses possible result: If you study, you may pass.", text2: "In unreal conditionals, might is used: If you studied, you might pass.", text3: "May is rarely used in unreal conditionals." },
+                    wishes: { title: "May and Might for Wishes and Hopes", text1: "May is used in formal expressions of hope: May you have a safe journey.", text2: "Might can express a wish in more tentative or literary style: Might you find peace." },
+                    reference: { title: "Quick Reference Chart: Nuances at a Glance", sit1: "Present/future possibility", may1: "50% certainty", might1: "30% certainty, more tentative", sit2: "Past possibility", may2: "may have (possible)", might2: "might have (less certain / unreal)", sit3: "Permission request", may3: "formal", might3: "very formal, old‑fashioned", sit4: "Suggestion", may4: "may (formal)", might4: "might (tentative)", sit5: "Concessive", may5: "may...but", might5: "not typically used", sit6: "Unreal conditional", may6: "not used", might6: "might (hypothetical)", sit7: "Idiom", may7: "may as well", might7: "might as well" },
+                    exercises: {
+                        title: "Practice Exercises: Nuance & Politeness",
+                        q1: "Choose the most formal permission:\n______ I leave the room, please?",
+                        q1a: "Can", q1b: "Could", q1c: "May",
+                        q2: "Choose for a less certain (tentative) possibility:\nDon't call yet; she ______ still be sleeping.",
+                        q2a: "may", q2b: "might", q2c: "can",
+                        q3: "Choose for a past possibility that didn't happen:\nHe ______ called, but he was too busy.",
+                        q3a: "may have", q3b: "might have", q3c: "may",
+                        q4: "Choose for a concessive idea (may...but):\nShe ______ be young, but she is very wise.",
+                        q4a: "may", q4b: "might", q4c: "can",
+                        q5: "Choose the most tentative polite suggestion:\nYou ______ want to check the document again.",
+                        q5a: "may", q5b: "might", q5c: "can",
+                        q6: "Choose the idiom meaning 'no reason not to':\nWe ______ start the meeting; everyone is here.",
+                        q6a: "may", q6b: "might as well", q6c: "could",
+                        q7: "Complete with a formal permission modal:\n______ I have a glass of water, please?",
+                        q8: "Complete with a past possibility (less certain):\nShe looks tired; she ______ (may) worked late.",
+                        q9: "Complete with a modal for an unreal/hypothetical situation:\nIf we left now, we ______ arrive on time.",
+                        q10: "Arrange the formal request:",
+                        q11: "Arrange the past possibility sentence (less certain):",
+                        q12: "Arrange the idiom meaning 'no reason not to':"
+                    }
+                }
+            },
+            fr: {
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "← Leçon précédente",
+                    returnToConjugation: "← Retour à la conjugaison",
+                    nextLesson: "Leçon suivante →",
+                    backToConjugation: "Retour à la conjugaison",
+                    modal: "Modal (Modal)",
+                    usage: "Usage (Usage)",
+                    example: "Example (Exemple)",
+                    level: "Politeness level (Niveau de politesse)",
+                    context: "Context (Contexte)",
+                    explanation: "Explanation (Explication)"
+                },
+                footer: { developer: "Développeur : Mejri Ziad (Développeur : Mejri Ziad)", privacy: "Politique de confidentialité (Politique de confidentialité)", terms: "Conditions d'utilisation (Conditions d'utilisation)", contact: "Contact (Contact)" },
+                modalsMayMight2: {
+                    title: "May & Might: Nuance, Comparison, and Politeness (May & Might : nuance, comparaison et politesse)",
+                    subtitle: "Explore subtle differences: certainty, politeness levels, past possibility, and unreal uses (Explorez les nuances : certitude, niveaux de politesse, possibilité passée et usages irréels)",
+                    introduction: { title: "Going Deeper: Nuance & Comparison (Approfondir : nuance et comparaison)", whatAre: "Choosing between may and might (Choisir entre may et might)", definitionTitle: "Why nuance matters: (Pourquoi la nuance est importante :)", definition: "While may and might are often interchangeable, the choice can signal different levels of certainty, formality, or time. This section explores those subtle distinctions. (Bien que may et might soient souvent interchangeables, le choix peut indiquer différents niveaux de certitude, de formalité ou de temps. Cette section explore ces distinctions subtiles.)", coreIdeas: "Key ideas in part 2: (Idées clés de la partie 2 :)", core1: "Comparing may, might, and may/might have (past possibility). (Comparer may, might et may/might have – possibilité passée.)", core2: "Degrees of politeness – from can to may to might. (Degrés de politesse – de can à may à might.)", core3: "Secondary uses: concessive may, unreal might, might as well. (Usages secondaires : may concessif, might irréel, might as well.)" },
+                    likelihood: { title: "Nuance in Likelihood (Nuance dans la probabilité)", text1: "May expresses about 50% certainty; might expresses about 30% certainty. (May exprime une certitude d'environ 50 % ; might exprime une certitude d'environ 30 %.)", text2: "Might often sounds more hesitant or tentative, making it common in polite suggestions. (Might semble souvent plus hésitant ou plus réservé, ce qui le rend courant dans les suggestions polies.)", text3: "In negative forms, may not and might not can both express uncertainty, but might not often implies a slightly stronger doubt. (Dans les formes négatives, may not et might not peuvent tous deux exprimer l'incertitude, mais might not implique souvent un doute légèrement plus fort.)" },
+                    time: { title: "Time Reference (Référence temporelle)", text1: "May and might are both used for present and future possibility. (May et might sont tous deux utilisés pour la possibilité au présent et au futur.)", text2: "For past possibility, we use may have or might have. (Pour la possibilité passée, on utilise may have ou might have.)", text3: "Might have can also indicate a missed opportunity (unreal past). (Might have peut aussi indiquer une opportunité manquée – passé irréel.)" },
+                    comparison: { title: "Comparing May, Might, and Past Forms (Comparer May, Might et les formes passées)", mayUse: "present/future possibility (≈50% certainty), formal permission (possibilité présent/futur – ≈50 % de certitude, permission formelle)", mayEx: "It may rain. / May I leave? (Il peut pleuvoir. / Puis-je partir ?)", mightUse: "less certain possibility (≈30%), tentative suggestion, unreal situations (possibilité moins certaine – ≈30 %, suggestion timide, situations irréelles)", mightEx: "It might rain. / You might try this. (Il pourrait pleuvoir. / Tu pourrais essayer ceci.)", pastUse: "past possibility (may have = possible, might have = less certain / unreal) (possibilité passée : may have = possible, might have = moins certain / irréel)", pastEx: "She may have left. / He might have missed the train. (Elle est peut-être partie. / Il aurait pu rater le train.)", noteTitle: "Key point: (Point clé :)", note: "In past possibility, might have can also express that something was possible but did not happen (unreal). He might have called, but he didn't. (Dans la possibilité passée, might have peut aussi exprimer que quelque chose était possible mais n'a pas eu lieu – irréel. Il aurait pu appeler, mais il ne l'a pas fait.)" },
+                    additional: { title: "Additional Nuances (Nuances supplémentaires)", text1: "May have is used when the past possibility is considered fairly likely; might have suggests greater doubt or an unrealised outcome. (May have est utilisé lorsque la possibilité passée est considérée comme assez probable ; might have suggère un doute plus grand ou un résultat non réalisé.)", text2: "In questions about past possibility, we usually use might have rather than may have: Might she have forgotten? (Dans les questions sur la possibilité passée, on utilise généralement might have plutôt que may have : Might she have forgotten ? – Aurait-elle pu oublier ?)" },
+                    questions: { title: "May vs Might in Questions (May contre Might dans les questions)", text1: "When asking about possibility, might is often preferred for politeness: Might it rain later? (Lorsqu'on demande une possibilité, might est souvent préféré par politesse : Might it rain later ? – Pourrait-il pleuvoir plus tard ?)", text2: "May is rarely used in questions about possibility except in formal contexts. (May est rarement utilisé dans les questions sur la possibilité, sauf dans des contextes formels.)", text3: "For permission, may is the formal choice: May I come in? (Pour la permission, may est le choix formel : May I come in ? – Puis-je entrer ?)" },
+                    politeness: { title: "Degrees of Politeness & Formality (Degrés de politesse et formalité)", level1: "Informal (Informel)", level2: "Neutral / polite (Neutre / poli)", level3: "Formal (Formel)", level4: "Very formal / hesitant (Très formel / hésitant)", context1: "friends, family (amis, famille)", context2: "everyday polite (poli quotidien)", context3: "official, strangers (officiel, inconnus)", context4: "extremely polite, old-fashioned (extrêmement poli, vieux jeu)", ex1: "May I suggest a different approach? (formal suggestion) (Puis-je suggérer une approche différente ? – suggestion formelle)", ex2: "Might I offer my opinion? (very tentative, formal) (Pourrais-je donner mon avis ? – très hésitant, formel)" },
+                    permission: { title: "Using May/Might for Permission vs Possibility (Utiliser May/Might pour la permission vs la possibilité)", text1: "May I…? is strictly a permission request. (May I… ? est strictement une demande de permission.)", text2: "It may rain is a possibility statement. (It may rain est une déclaration de possibilité.)", text3: "Might I…? can be used for very polite permission requests, but it is less common. (Might I… ? peut être utilisé pour des demandes de permission très polies, mais c'est moins courant.)" },
+                    mistakes: { title: "Common Mistakes with May/Might (Erreurs courantes avec May/Might)", item1: "Using may for past possibility without have: ❌ She may left. ✅ She may have left. (Utiliser may pour la possibilité passée sans have : ❌ She may left. ✅ She may have left.)", item2: "Using might to give permission: ❌ You might go now. ✅ You may go now. (Might expresses possibility, not permission.) (Utiliser might pour donner la permission : ❌ You might go now. ✅ You may go now. (Might exprime une possibilité, pas une permission.))", item3: "Overusing may in informal speech for permission – can or could are more natural in everyday contexts. (Utiliser excessivement may dans un discours informel pour la permission – can ou could sont plus naturels dans les contextes quotidiens.)" },
+                    secondary: { title: "Secondary Uses: Concession, Unreal, and Idioms (Usages secondaires : concession, irréel et expressions idiomatiques)", concessive: "Concessive (may...but) (Concessif – may...but)", concessiveExp: "admitting a fact before contrast (reconnaître un fait avant un contraste)", unreal: "Unreal situation (might) (Situation irréelle – might)", unrealExp: "hypothetical, less direct (hypothétique, moins direct)", mightAsWell: "Might as well (Might as well)", mightAsWellExp: "no reason not to, suggesting (aucune raison de ne pas, suggérer)", additional: "May well / might well: expresses strong probability. Might just: slight but possible chance. May / might (just) as well: suggests alternative with same result. (May well / might well : exprime une forte probabilité. Might just : exprime une chance faible mais possible. May / might (just) as well : suggère une alternative avec le même résultat.)" },
+                    conditionals: { title: "May and Might in Conditionals (May et Might dans les conditionnelles)", text1: "In real conditionals, may expresses possible result: If you study, you may pass. (Dans les conditionnelles réelles, may exprime un résultat possible : If you study, you may pass. – Si tu étudies, tu peux réussir.)", text2: "In unreal conditionals, might is used: If you studied, you might pass. (Dans les conditionnelles irréelles, might est utilisé : If you studied, you might pass. – Si tu étudiais, tu pourrais réussir.)", text3: "May is rarely used in unreal conditionals. (May est rarement utilisé dans les conditionnelles irréelles.)" },
+                    wishes: { title: "May and Might for Wishes and Hopes (May et Might pour les souhaits et les espoirs)", text1: "May is used in formal expressions of hope: May you have a safe journey. (May est utilisé dans les expressions formelles de souhait : May you have a safe journey. – Que votre voyage soit sûr.)", text2: "Might can express a wish in more tentative or literary style: Might you find peace. (Might peut exprimer un souhait dans un style plus hésitant ou littéraire : Might you find peace. – Puissiez-vous trouver la paix.)" },
+                    reference: { title: "Quick Reference Chart: Nuances at a Glance (Tableau de référence rapide : les nuances en un coup d'œil)", sit1: "Present/future possibility (Possibilité présent/futur)", may1: "50% certainty (certitude 50 %)", might1: "30% certainty, more tentative (certitude 30 %, plus réservé)", sit2: "Past possibility (Possibilité passée)", may2: "may have (possible) (may have – possible)", might2: "might have (less certain / unreal) (might have – moins certain / irréel)", sit3: "Permission request (Demande de permission)", may3: "formal (formel)", might3: "very formal, old‑fashioned (très formel, vieux jeu)", sit4: "Suggestion (Suggestion)", may4: "may (formal) (may – formel)", might4: "might (tentative) (might – hésitant)", sit5: "Concessive (Concessif)", may5: "may...but (may...but)", might5: "not typically used (pas utilisé typiquement)", sit6: "Unreal conditional (Conditionnelle irréelle)", may6: "not used (pas utilisé)", might6: "might (hypothetical) (might – hypothétique)", sit7: "Idiom (Expression idiomatique)", may7: "may as well (may as well)", might7: "might as well (might as well)" },
+                    exercises: {
+                        title: "Practice Exercises: Nuance & Politeness (Exercices pratiques : nuance et politesse)",
+                        q1: "Choose the most formal permission: (Choisissez la permission la plus formelle :)\n______ I leave the room, please? (______ je quitter la salle, s'il vous plaît ?)",
+                        q1a: "Can (Can)", q1b: "Could (Could)", q1c: "May (May)",
+                        q2: "Choose for a less certain (tentative) possibility: (Choisissez pour une possibilité moins certaine / hésitante :)\nDon't call yet; she ______ still be sleeping. (N'appelle pas encore ; elle ______ encore dormir.)",
+                        q2a: "may (may)", q2b: "might (might)", q2c: "can (can)",
+                        q3: "Choose for a past possibility that didn't happen: (Choisissez pour une possibilité passée qui n'a pas eu lieu :)\nHe ______ called, but he was too busy. (Il ______ appelé, mais il était trop occupé.)",
+                        q3a: "may have (may have)", q3b: "might have (might have)", q3c: "may (may)",
+                        q4: "Choose for a concessive idea (may...but): (Choisissez pour une idée concessive – may...but :)\nShe ______ be young, but she is very wise. (Elle ______ jeune, mais elle est très sage.)",
+                        q4a: "may (may)", q4b: "might (might)", q4c: "can (can)",
+                        q5: "Choose the most tentative polite suggestion: (Choisissez la suggestion polie la plus hésitante :)\nYou ______ want to check the document again. (Tu ______ vouloir vérifier le document à nouveau.)",
+                        q5a: "may (may)", q5b: "might (might)", q5c: "can (can)",
+                        q6: "Choose the idiom meaning 'no reason not to': (Choisissez l'expression signifiant 'aucune raison de ne pas' :)\nWe ______ start the meeting; everyone is here. (Nous ______ commencer la réunion ; tout le monde est là.)",
+                        q6a: "may (may)", q6b: "might as well (might as well)", q6c: "could (could)",
+                        q7: "Complete with a formal permission modal: (Complétez avec un modal de permission formelle :)\n______ I have a glass of water, please? (______ je avoir un verre d'eau, s'il vous plaît ?)",
+                        q8: "Complete with a past possibility (less certain): (Complétez avec une possibilité passée – moins certaine :)\nShe looks tired; she ______ (may) worked late. (Elle a l'air fatiguée ; elle ______ travaillé tard.)",
+                        q9: "Complete with a modal for an unreal/hypothetical situation: (Complétez avec un modal pour une situation irréelle/hypothétique :)\nIf we left now, we ______ arrive on time. (Si nous partions maintenant, nous ______ arriver à l'heure.)",
+                        q10: "Arrange the formal request: (Remettez la demande formelle dans l'ordre :)",
+                        q11: "Arrange the past possibility sentence (less certain): (Remettez la phrase de possibilité passée – moins certaine :)",
+                        q12: "Arrange the idiom meaning 'no reason not to': (Remettez l'expression signifiant 'aucune raison de ne pas' :)"
+                    }
+                }
+            },
+            ar: {
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "الدرس السابق ←",
+                    returnToConjugation: "العودة إلى التصريف ←",
+                    nextLesson: "الدرس التالي →",
+                    backToConjugation: "العودة إلى تصريف الأفعال",
+                    modal: "Modal (فعل مساعد)",
+                    usage: "Usage (الاستخدام)",
+                    example: "Example (مثال)",
+                    level: "Politeness level (مستوى الأدب)",
+                    context: "Context (السياق)",
+                    explanation: "Explanation (شرح)"
+                },
+                footer: { developer: "المطور: Mejri Ziad (المطور: Mejri Ziad)", privacy: "سياسة الخصوصية (سياسة الخصوصية)", terms: "شروط الخدمة (شروط الخدمة)", contact: "اتصل بنا (اتصل بنا)" },
+                modalsMayMight2: {
+                    title: "May & Might: Nuance, Comparison, and Politeness (May & Might: الفروق الدقيقة، المقارنة، والأدب)",
+                    subtitle: "Explore subtle differences: certainty, politeness levels, past possibility, and unreal uses (استكشف الفروق الدقيقة: اليقين، مستويات الأدب، الإمكانية في الماضي، والاستخدامات غير الواقعية)",
+                    introduction: { title: "Going Deeper: Nuance & Comparison (التعمق: الفروق الدقيقة والمقارنة)", whatAre: "Choosing between may and might (الاختيار بين may و might)", definitionTitle: "Why nuance matters: (لماذا الفروق الدقيقة مهمة؟)", definition: "While may and might are often interchangeable, the choice can signal different levels of certainty, formality, or time. This section explores those subtle distinctions. (بينما may و might غالبًا ما يمكن استبدالهما، يمكن أن يشير الاختيار إلى مستويات مختلفة من اليقين أو الشكليات أو الزمن. يستكشف هذا القسم هذه الاختلافات الدقيقة.)", coreIdeas: "Key ideas in part 2: (الأفكار الرئيسية في الجزء الثاني:)", core1: "Comparing may, might, and may/might have (past possibility). (مقارنة may و might و may/might have – إمكانية في الماضي.)", core2: "Degrees of politeness – from can to may to might. (مستويات الأدب – من can إلى may إلى might.)", core3: "Secondary uses: concessive may, unreal might, might as well. (استخدامات ثانوية: may للتسليم، might غير الواقعي، might as well.)" },
+                    likelihood: { title: "Nuance in Likelihood (الفروق الدقيقة في الاحتمالية)", text1: "May expresses about 50% certainty; might expresses about 30% certainty. (تعبر may عن يقين بنسبة 50% تقريبًا؛ بينما تعبر might عن يقين بنسبة 30% تقريبًا.)", text2: "Might often sounds more hesitant or tentative, making it common in polite suggestions. (غالبًا ما تبدو might أكثر ترددًا أو تحفظًا، مما يجعلها شائعة في الاقتراحات المهذبة.)", text3: "In negative forms, may not and might not can both express uncertainty, but might not often implies a slightly stronger doubt. (في الصيغ المنفية، يمكن لكل من may not و might not التعبير عن عدم اليقين، لكن might not غالبًا ما توحي بشك أقوى قليلاً.)" },
+                    time: { title: "Time Reference (المرجع الزمني)", text1: "May and might are both used for present and future possibility. (يتم استخدام كل من may و might للإمكانية في الحاضر والمستقبل.)", text2: "For past possibility, we use may have or might have. (للتعبير عن الإمكانية في الماضي، نستخدم may have أو might have.)", text3: "Might have can also indicate a missed opportunity (unreal past). (يمكن أن تشير might have أيضًا إلى فرصة ضائعة – ماضي غير واقعي.)" },
+                    comparison: { title: "Comparing May, Might, and Past Forms (مقارنة May و Might وصيغ الماضي)", mayUse: "present/future possibility (≈50% certainty), formal permission (إمكانية في الحاضر/المستقبل – يقين ≈50%، إذن رسمي)", mayEx: "It may rain. / May I leave? (قد تمطر. / هل يمكنني المغادرة؟)", mightUse: "less certain possibility (≈30%), tentative suggestion, unreal situations (إمكانية أقل يقينًا ≈30%، اقتراح متردد، مواقف غير واقعية)", mightEx: "It might rain. / You might try this. (قد تمطر (احتمال أقل). / ربما تجرب هذا.)", pastUse: "past possibility (may have = possible, might have = less certain / unreal) (إمكانية في الماضي: may have = ممكن، might have = أقل يقينًا / غير واقعي)", pastEx: "She may have left. / He might have missed the train. (ربما غادرت. / قد يكون فاته القطار.)", noteTitle: "Key point: (نقطة رئيسية:)", note: "In past possibility, might have can also express that something was possible but did not happen (unreal). He might have called, but he didn't. (في إمكانية الماضي، يمكن أن يعبر might have أيضًا عن أن شيئًا كان ممكنًا لكنه لم يحدث – غير واقعي. كان يمكنه الاتصال، لكنه لم يفعل.)" },
+                    additional: { title: "Additional Nuances (فروق إضافية)", text1: "May have is used when the past possibility is considered fairly likely; might have suggests greater doubt or an unrealised outcome. (يتم استخدام may have عندما تعتبر الإمكانية في الماضي محتملة إلى حد ما؛ بينما تشير might have إلى شك أكبر أو نتيجة لم تتحقق.)", text2: "In questions about past possibility, we usually use might have rather than may have: Might she have forgotten? (في الأسئلة حول الإمكانية في الماضي، نستخدم عادة might have بدلاً من may have: هل يمكن أن تكون قد نسيت؟)" },
+                    questions: { title: "May vs Might in Questions (May مقابل Might في الأسئلة)", text1: "When asking about possibility, might is often preferred for politeness: Might it rain later? (عند السؤال عن الإمكانية، غالبًا ما يُفضل might من باب الأدب: هل قد تمطر لاحقًا؟)", text2: "May is rarely used in questions about possibility except in formal contexts. (نادرًا ما يتم استخدام may في الأسئلة حول الإمكانية إلا في السياقات الرسمية.)", text3: "For permission, may is the formal choice: May I come in? (للإذن، may هو الخيار الرسمي: هل يمكنني الدخول؟)" },
+                    politeness: { title: "Degrees of Politeness & Formality (مستويات الأدب والرسمية)", level1: "Informal (غير رسمي)", level2: "Neutral / polite (محايد / مهذب)", level3: "Formal (رسمي)", level4: "Very formal / hesitant (رسمي جدًا / متردد)", context1: "friends, family (أصدقاء، عائلة)", context2: "everyday polite (مهذب يومي)", context3: "official, strangers (رسمي، غرباء)", context4: "extremely polite, old-fashioned (مهذب للغاية، تقليدي)", ex1: "May I suggest a different approach? (formal suggestion) (هل لي اقتراح نهج مختلف؟ – اقتراح رسمي)", ex2: "Might I offer my opinion? (very tentative, formal) (هل لي أن أبدي رأيي؟ – متردد جدًا، رسمي)" },
+                    permission: { title: "Using May/Might for Permission vs Possibility (استخدام May/Might للإذن مقابل الإمكانية)", text1: "May I…? is strictly a permission request. (May I…؟ هو طلب إذن بحت.)", text2: "It may rain is a possibility statement. (It may rain هي عبارة عن إمكانية.)", text3: "Might I…? can be used for very polite permission requests, but it is less common. (يمكن استخدام Might I…؟ لطلبات الإذن المهذبة جدًا، لكنه أقل شيوعًا.)" },
+                    mistakes: { title: "Common Mistakes with May/Might (الأخطاء الشائعة مع May/Might)", item1: "Using may for past possibility without have: ❌ She may left. ✅ She may have left. (استخدام may للإمكانية في الماضي بدون have: ❌ هي قد غادرت. ✅ ربما تكون قد غادرت.)", item2: "Using might to give permission: ❌ You might go now. ✅ You may go now. (Might expresses possibility, not permission.) (استخدام might لمنح الإذن: ❌ يمكنك الذهاب الآن. ✅ يمكنك الذهاب الآن. (Might تعبر عن الإمكانية، وليس الإذن.))", item3: "Overusing may in informal speech for permission – can or could are more natural in everyday contexts. (الإفراط في استخدام may في الكلام غير الرسمي للإذن – can أو could أكثر طبيعية في السياقات اليومية.)" },
+                    secondary: { title: "Secondary Uses: Concession, Unreal, and Idioms (الاستخدامات الثانوية: التسليم، غير الواقعي، والتعابير الاصطلاحية)", concessive: "Concessive (may...but) (تسليم – may...but)", concessiveExp: "admitting a fact before contrast (الاعتراف بحقيقة قبل المقابلة)", unreal: "Unreal situation (might) (موقف غير واقعي – might)", unrealExp: "hypothetical, less direct (افتراضي، أقل مباشرة)", mightAsWell: "Might as well (Might as well)", mightAsWellExp: "no reason not to, suggesting (لا سبب لعدم، اقتراح)", additional: "May well / might well: expresses strong probability. Might just: slight but possible chance. May / might (just) as well: suggests alternative with same result. (قد / من المحتمل: يعبر عن احتمال قوي. ربما فقط: يعبر عن فرصة ضئيلة لكنها ممكنة. قد / من الأفضل (تمامًا): يشير إلى أن إجراء مختلف سيكون له نفس النتيجة.)" },
+                    conditionals: { title: "May and Might in Conditionals (May و Might في الجمل الشرطية)", text1: "In real conditionals, may expresses possible result: If you study, you may pass. (في الجمل الشرطية الواقعية، تعبر may عن نتيجة محتملة: إذا درست، قد تنجح.)", text2: "In unreal conditionals, might is used: If you studied, you might pass. (في الجمل الشرطية غير الواقعية، يتم استخدام might: إذا درست، قد تنجح – لكنك لم تدرس.)", text3: "May is rarely used in unreal conditionals. (نادرًا ما يتم استخدام may في الجمل الشرطية غير الواقعية.)" },
+                    wishes: { title: "May and Might for Wishes and Hopes (May و Might للتمنيات والأماني)", text1: "May is used in formal expressions of hope: May you have a safe journey. (يتم استخدام may في التعبيرات الرسمية للأمل: أتمنى لك رحلة آمنة.)", text2: "Might can express a wish in more tentative or literary style: Might you find peace. (يمكن أن تعبر might عن أمل بأسلوب أكثر تحفظًا أو أدبيًا: أتمنى أن تجد السلام.)" },
+                    reference: { title: "Quick Reference Chart: Nuances at a Glance (جدول مرجعي سريع: الفروق الدقيقة بنظرة واحدة)", sit1: "Present/future possibility (إمكانية الحاضر/المستقبل)", may1: "50% certainty (يقين 50%)", might1: "30% certainty, more tentative (يقين 30%، أكثر تحفظًا)", sit2: "Past possibility (إمكانية في الماضي)", may2: "may have (possible) (may have – ممكن)", might2: "might have (less certain / unreal) (might have – أقل يقينًا / غير واقعي)", sit3: "Permission request (طلب إذن)", may3: "formal (رسمي)", might3: "very formal, old‑fashioned (رسمي جدًا، تقليدي)", sit4: "Suggestion (اقتراح)", may4: "may (formal) (may – رسمي)", might4: "might (tentative) (might – متردد)", sit5: "Concessive (تسليم)", may5: "may...but (may...but)", might5: "not typically used (لا يستخدم عادة)", sit6: "Unreal conditional (شرط غير واقعي)", may6: "not used (لا يستخدم)", might6: "might (hypothetical) (might – افتراضي)", sit7: "Idiom (تعبير اصطلاحي)", may7: "may as well (may as well)", might7: "might as well (might as well)" },
+                    exercises: {
+                        title: "Practice Exercises: Nuance & Politeness (تمارين تطبيقية: الفروق الدقيقة والأدب)",
+                        q1: "Choose the most formal permission: (اختر الإذن الأكثر رسمية:)\n______ I leave the room, please? (______ المغادرة من الغرفة، من فضلك؟)",
+                        q1a: "Can (Can)", q1b: "Could (Could)", q1c: "May (May)",
+                        q2: "Choose for a less certain (tentative) possibility: (اختر لإمكانية أقل يقينًا / مترددة:)\nDon't call yet; she ______ still be sleeping. (لا تتصل بعد؛ هي ______ لا تزال نائمة.)",
+                        q2a: "may (may)", q2b: "might (might)", q2c: "can (can)",
+                        q3: "Choose for a past possibility that didn't happen: (اختر لإمكانية في الماضي لم تحدث:)\nHe ______ called, but he was too busy. (هو ______ اتصل، لكنه كان مشغولًا جدًا.)",
+                        q3a: "may have (may have)", q3b: "might have (might have)", q3c: "may (may)",
+                        q4: "Choose for a concessive idea (may...but): (اختر لفكرة التسليم – may...but:)\nShe ______ be young, but she is very wise. (هي ______ صغيرة، لكنها حكيمة جدًا.)",
+                        q4a: "may (may)", q4b: "might (might)", q4c: "can (can)",
+                        q5: "Choose the most tentative polite suggestion: (اختر الاقتراح المهذب الأكثر ترددًا:)\nYou ______ want to check the document again. (أنت ______ التحقق من المستند مرة أخرى.)",
+                        q5a: "may (may)", q5b: "might (might)", q5c: "can (can)",
+                        q6: "Choose the idiom meaning 'no reason not to': (اختر التعبير الذي يعني 'لا سبب لعدم':)\nWe ______ start the meeting; everyone is here. (نحن ______ بدء الاجتماع؛ الجميع هنا.)",
+                        q6a: "may (may)", q6b: "might as well (might as well)", q6c: "could (could)",
+                        q7: "Complete with a formal permission modal: (أكمل بفعل مساعد للإذن الرسمي:)\n______ I have a glass of water, please? (______ الحصول على كوب من الماء، من فضلك؟)",
+                        q8: "Complete with a past possibility (less certain): (أكمل بإمكانية في الماضي – أقل يقينًا:)\nShe looks tired; she ______ (may) worked late. (تبدو متعبة؛ هي ______ عملت متأخرًا.)",
+                        q9: "Complete with a modal for an unreal/hypothetical situation: (أكمل بفعل مساعد لموقف غير واقعي / افتراضي:)\nIf we left now, we ______ arrive on time. (إذا غادرنا الآن، نحن ______ نصل في الوقت المحدد.)",
+                        q10: "Arrange the formal request: (رتب الطلب الرسمي:)",
+                        q11: "Arrange the past possibility sentence (less certain): (رتب جملة الإمكانية في الماضي – الأقل يقينًا:)",
+                        q12: "Arrange the idiom meaning 'no reason not to': (رتب التعبير الذي يعني 'لا سبب لعدم':)"
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/exercise-conjugation.js"></script>
+
+    <script>
+        // ========== Build exercises with modular functions ==========
+        const correctAnswersType1 = buildMultipleChoiceExercise({
+            containerId: 'mc-exercises',
+            prefix: 'EH-exercise-type1-possibilities3',
+            questions: [
+                {
+                    questionTextKey: 'modalsMayMight2.exercises.q1',
+                    options: [
+                        { value: 'a', labelKey: 'modalsMayMight2.exercises.q1a' },
+                        { value: 'b', labelKey: 'modalsMayMight2.exercises.q1b' },
+                        { value: 'c', labelKey: 'modalsMayMight2.exercises.q1c' }
+                    ],
+                    correctAnswer: 'c'
+                },
+                {
+                    questionTextKey: 'modalsMayMight2.exercises.q2',
+                    options: [
+                        { value: 'a', labelKey: 'modalsMayMight2.exercises.q2a' },
+                        { value: 'b', labelKey: 'modalsMayMight2.exercises.q2b' },
+                        { value: 'c', labelKey: 'modalsMayMight2.exercises.q2c' }
+                    ],
+                    correctAnswer: 'b'
+                },
+                {
+                    questionTextKey: 'modalsMayMight2.exercises.q3',
+                    options: [
+                        { value: 'a', labelKey: 'modalsMayMight2.exercises.q3a' },
+                        { value: 'b', labelKey: 'modalsMayMight2.exercises.q3b' },
+                        { value: 'c', labelKey: 'modalsMayMight2.exercises.q3c' }
+                    ],
+                    correctAnswer: 'b'
+                },
+                {
+                    questionTextKey: 'modalsMayMight2.exercises.q4',
+                    options: [
+                        { value: 'a', labelKey: 'modalsMayMight2.exercises.q4a' },
+                        { value: 'b', labelKey: 'modalsMayMight2.exercises.q4b' },
+                        { value: 'c', labelKey: 'modalsMayMight2.exercises.q4c' }
+                    ],
+                    correctAnswer: 'a'
+                },
+                {
+                    questionTextKey: 'modalsMayMight2.exercises.q5',
+                    options: [
+                        { value: 'a', labelKey: 'modalsMayMight2.exercises.q5a' },
+                        { value: 'b', labelKey: 'modalsMayMight2.exercises.q5b' },
+                        { value: 'c', labelKey: 'modalsMayMight2.exercises.q5c' }
+                    ],
+                    correctAnswer: 'b'
+                },
+                {
+                    questionTextKey: 'modalsMayMight2.exercises.q6',
+                    options: [
+                        { value: 'a', labelKey: 'modalsMayMight2.exercises.q6a' },
+                        { value: 'b', labelKey: 'modalsMayMight2.exercises.q6b' },
+                        { value: 'c', labelKey: 'modalsMayMight2.exercises.q6c' }
+                    ],
+                    correctAnswer: 'b'
+                }
+            ]
+        });
+
+        const correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises',
+            prefix: 'fill',
+            questions: [
+                {
+                    questionTextKey: 'modalsMayMight2.exercises.q7',
+                    answers: ['May']
+                },
+                {
+                    questionTextKey: 'modalsMayMight2.exercises.q8',
+                    answers: ['might have']
+                },
+                {
+                    questionTextKey: 'modalsMayMight2.exercises.q9',
+                    answers: ['might']
+                }
+            ]
+        });
+
+        const correctAnswersType3 = buildSentenceOrderingExercise({
+            containerId: 'order-exercises',
+            prefix: 'order',
+            questions: [
+                {
+                    questionTextKey: 'modalsMayMight2.exercises.q10',
+                    words: ['May', 'I', 'borrow', 'your', 'pen', '?'],
+                    correctSentence: 'May I borrow your pen ?'
+                },
+                {
+                    questionTextKey: 'modalsMayMight2.exercises.q11',
+                    words: ['might', 'have', 'She', 'missed', 'the', 'bus', '.'],
+                    correctSentence: 'She might have missed the bus .'
+                },
+                {
+                    questionTextKey: 'modalsMayMight2.exercises.q12',
+                    words: ['might', 'as well', 'We', 'go', '.'],
+                    correctSentence: 'We might as well go .'
+                }
+            ]
+        });
+
+        function checkAllExercises() {
+            let total = 0;
+            total += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+            total += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+            total += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+            document.getElementById('score-value').textContent = `${total}/12`;
+            const fb = document.getElementById('score-feedback');
+            if (total === 12) fb.textContent = 'Excellent! All answers are correct!';
+            else if (total >= 9) fb.textContent = 'Good job! You did well.';
+            else if (total >= 6) fb.textContent = 'Not bad, but review some material.';
+            else fb.textContent = 'Review the lesson and try again.';
+            document.getElementById('score-display').style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+            document.getElementById('check-all').addEventListener('click', checkAllExercises);
+        });
+
+        // i18n rendering for elements that contain HTML tags
+        (function() {
+            function applyHtmlI18n() {
+                const lang = document.getElementById('language-selector').value;
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                    if (translation && /<[^>]*>/.test(translation)) el.innerHTML = translation;
+                    else if (translation) el.textContent = translation;
+                });
+            }
+            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,539 @@
+/* ===== Unified Conjugation Lesson Styles (100% variable-driven) ===== */
+
+:root {
+    /* Neutral feedback (unanswered) */
+    --neutral-bg: #f0f0f0;
+    --neutral-color: #666;
+    --neutral-border: #ccc;
+
+    /* Empty input (unanswered) */
+    --empty-input-border: #aaa;
+    --empty-input-bg: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.EH-conjugation-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.EH-conjugation-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.EH-conjugation-title {
+    color: var(--header-text);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.EH-conjugation-subtitle {
+    color: var(--header-text-light);
+    font-size: 1.2rem;
+}
+
+.EH-conjugation-content {
+    background: var(--content-bg);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.EH-conjugation-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--section-divider);
+}
+
+.EH-conjugation-section-title {
+    font-size: 1.8rem;
+    color: var(--title-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+}
+
+.EH-conjugation-subsection {
+    margin-bottom: 25px;
+    background: var(--subsection-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.EH-conjugation-subsection-title {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.EH-conjugation-subsection-icon {
+    font-size: 1.6rem;
+    margin-right: 10px;
+}
+
+/* Rule / Example Boxes */
+.EH-conjugation-rule {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--rule-bg);
+    border-radius: 10px;
+    border-left: 4px solid var(--rule-border);
+}
+
+.EH-conjugation-rule-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--title-color);
+}
+
+.EH-conjugation-examples {
+    background: var(--example-bg);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.EH-conjugation-example {
+    margin-bottom: 8px;
+    padding-left: 10px;
+    border-left: 2px solid var(--example-border);
+}
+
+/* Tables */
+.EH-conjugation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.EH-conjugation-table th,
+.EH-conjugation-table td {
+    border: 1px solid var(--table-border);
+    padding: 10px;
+    text-align: left;
+}
+
+.EH-conjugation-table th {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.EH-conjugation-table tr:nth-child(even) {
+    background-color: var(--table-stripe);
+}
+
+.EH-conjugation-table tr:hover {
+    background-color: var(--rule-bg);
+}
+
+/* Exercise Section */
+.EH-exercise-section {
+    margin-top: 40px;
+}
+
+.EH-exercise-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.EH-exercise-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--card-border);
+}
+
+.EH-exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.EH-exercise-number {
+    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    background: var(--exercise-number-gradient);
+    color: var(--white);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.EH-exercise-text {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* Multiple Choice */
+.EH-exercise-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.EH-exercise-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.EH-exercise-option input {
+    cursor: pointer;
+}
+
+.EH-exercise-option label {
+    cursor: pointer;
+}
+
+.EH-exercise-type1-possibilities3-option.correct {
+    background-color: var(--correct-bg);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--correct-border);
+}
+
+.EH-exercise-type1-possibilities3-option.incorrect {
+    background-color: var(--incorrect-bg);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--incorrect-border);
+}
+
+.EH-exercise-type1-possibilities3-answer-status {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.EH-exercise-type1-possibilities3-correct-answer {
+    background-color: var(--correct-bg);
+    color: var(--correct-color);
+    border: 1px solid var(--correct-border);
+}
+
+.EH-exercise-type1-possibilities3-incorrect-answer {
+    background-color: var(--incorrect-bg);
+    color: var(--incorrect-color);
+    border: 1px solid var(--incorrect-border);
+}
+
+/* Fill in the Blank */
+.EH-exercise-type2-fillblank-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--input-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.EH-exercise-type2-fillblank-input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.EH-exercise-type2-fillblank-input-correct {
+    border-color: var(--correct-border);
+    background-color: var(--correct-bg);
+}
+
+.EH-exercise-type2-fillblank-input-incorrect {
+    border-color: var(--incorrect-border);
+    background-color: var(--incorrect-bg);
+}
+
+.EH-exercise-type2-fillblank-answer-status {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.EH-exercise-type2-fillblank-correct-answer {
+    background-color: var(--correct-bg);
+    color: var(--correct-color);
+    border: 1px solid var(--correct-border);
+}
+
+.EH-exercise-type2-fillblank-incorrect-answer {
+    background-color: var(--incorrect-bg);
+    color: var(--incorrect-color);
+    border: 1px solid var(--incorrect-border);
+}
+
+/* Sentence Ordering */
+.EH-exercise-type3-sentenceorder-word-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 15px;
+    border: 2px dashed var(--dashed-border);
+    border-radius: 10px;
+    min-height: 60px;
+    margin-bottom: 15px;
+}
+
+.EH-exercise-type3-sentenceorder-word {
+    background: var(--example-bg);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--example-border);
+    cursor: move;
+    user-select: none;
+}
+
+.EH-exercise-type3-sentenceorder-word:hover {
+    background: var(--accent);
+}
+
+.EH-exercise-type3-sentenceorder-dragging {
+    opacity: 0.5;
+}
+
+.EH-exercise-type3-sentenceorder-correct {
+    border-color: var(--correct-border);
+    background-color: var(--correct-bg);
+}
+
+.EH-exercise-type3-sentenceorder-incorrect {
+    border-color: var(--incorrect-border);
+    background-color: var(--incorrect-bg);
+}
+
+.EH-exercise-type3-sentenceorder-answer-status {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.EH-exercise-type3-sentenceorder-correct-answer {
+    background-color: var(--correct-bg);
+    color: var(--correct-color);
+    border: 1px solid var(--correct-border);
+}
+
+.EH-exercise-type3-sentenceorder-incorrect-answer {
+    background-color: var(--incorrect-bg);
+    color: var(--incorrect-color);
+    border: 1px solid var(--incorrect-border);
+}
+
+/* ===== Short‑prefix additions for JavaScript (exercise‑conjugation.js) ===== */
+
+/* Fill‑in‑the‑Blank */
+.fill-input-empty {
+    border-color: var(--empty-input-border);
+    background-color: var(--empty-input-bg);
+}
+.fill-input-correct {
+    border-color: var(--correct-border);
+    background-color: var(--correct-bg);
+}
+.fill-input-incorrect {
+    border-color: var(--incorrect-border);
+    background-color: var(--incorrect-bg);
+}
+.fill-answer-status {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.fill-correct-answer {
+    background-color: var(--correct-bg);
+    color: var(--correct-color);
+    border: 1px solid var(--correct-border);
+}
+.fill-incorrect-answer {
+    background-color: var(--incorrect-bg);
+    color: var(--incorrect-color);
+    border: 1px solid var(--incorrect-border);
+}
+.fill-answer-status:not(.fill-correct-answer):not(.fill-incorrect-answer) {
+    background-color: var(--neutral-bg);
+    color: var(--neutral-color);
+    border: 1px solid var(--neutral-border);
+}
+
+/* Sentence Ordering */
+.order-correct {
+    border-color: var(--correct-border) !important;
+    background-color: var(--correct-bg) !important;
+}
+.order-incorrect {
+    border-color: var(--incorrect-border) !important;
+    background-color: var(--incorrect-bg) !important;
+}
+.order-answer-status {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.order-correct-answer {
+    background-color: var(--correct-bg);
+    color: var(--correct-color);
+    border: 1px solid var(--correct-border);
+}
+.order-incorrect-answer {
+    background-color: var(--incorrect-bg);
+    color: var(--incorrect-color);
+    border: 1px solid var(--incorrect-border);
+}
+.order-answer-status:not(.order-correct-answer):not(.order-incorrect-answer) {
+    background-color: var(--neutral-bg);
+    color: var(--neutral-color);
+    border: 1px solid var(--neutral-border);
+}
+
+/* Check Answers & Score */
+.EH-exercise-type1-possibilities3-answers-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.EH-exercise-type1-possibilities3-check-answers-btn {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+
+.EH-exercise-type1-possibilities3-check-answers-btn:hover {
+    background: var(--primary-hover);
+}
+
+.EH-exercise-type1-possibilities3-score-display {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none;
+    width: 100%;
+    max-width: 500px;
+}
+
+.EH-exercise-type1-possibilities3-score-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--title-color);
+}
+
+.EH-exercise-type1-possibilities3-score-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.EH-exercise-type1-possibilities3-score-feedback {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+/* Navigation */
+.EH-conjugation-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.EH-conjugation-nav-button {
+    background: var(--nav-btn-bg);
+    color: var(--white);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.EH-conjugation-nav-button:hover {
+    background: var(--nav-btn-hover);
+}
+
+.EH-conjugation-nav-button.back {
+    background: var(--nav-back-btn-bg);
+    color: var(--nav-back-btn-color);
+}
+
+.EH-conjugation-nav-button.back:hover {
+    background: var(--nav-back-btn-hover);
+}
+
+/* Footer styles remain in common.css */
+/* .EH-common-footer { ... } */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .EH-conjugation-title {
+        font-size: 2rem;
+    }
+    .EH-exercise-container {
+        grid-template-columns: 1fr;
+    }
+    .EH-conjugation-navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .EH-conjugation-nav-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .EH-conjugation-content {
+        padding: 20px;
+    }
+}

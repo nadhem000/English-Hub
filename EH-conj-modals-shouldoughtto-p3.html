@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Should & Ought to: Real-World Application & Common Pitfalls - English Hub</title>
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/common.css">
+    
+    <style>
+        :root {
+            /* ---------- Theme (amber/orange palette) ---------- */
+            --bg-gradient: linear-gradient(135deg, #e65100, #f57c00, #ff9800, #ffb74d);
+            --title-color: #e65100;
+            --primary: #f57c00;
+            --primary-hover: #e65100;
+            --primary-light: #ffb74d;
+            --accent: #ffb74d;
+            --rule-bg: #fff3e0;
+            --rule-border: #ffb74d;
+            --example-bg: #ffe0b2;
+            --example-border: #ffb74d;
+            --exercise-number-gradient: linear-gradient(135deg, #f57c00, #ffb74d);
+            --nav-btn-bg: #f57c00;
+            --nav-btn-hover: #e65100;
+            --nav-back-btn-bg: #ffb74d;
+            --nav-back-btn-color: white;
+            --nav-back-btn-hover: #f57c00;
+
+            /* ---------- Neutrals ---------- */
+            --header-text: white;
+            --header-text-light: rgba(255, 255, 255, 0.9);
+            --content-bg: rgba(255, 255, 255, 0.95);
+            --text-color: #333;
+            --white: white;
+            --section-divider: #e0e0e0;
+            --card-bg: white;
+            --subsection-bg: white;
+            --card-border: #e0e0e0;
+            --input-border: #e0e0e0;
+            --dashed-border: #e0e0e0;
+            --table-border: #ddd;
+            --table-stripe: #f2f2f2;
+            --correct-bg: #d4edda;
+            --correct-color: #155724;
+            --correct-border: #c3e6cb;
+            --incorrect-bg: #f8d7da;
+            --incorrect-color: #721c24;
+            --incorrect-border: #f5c6cb;
+        }
+    </style>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
+</head>
+<body>
+    <!-- Language Selector -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+    
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+    </div>
+    
+    <div class="EH-conjugation-container">
+        <header class="EH-conjugation-header">
+            <h1 class="EH-conjugation-title" data-i18n="modalsShouldOughtTo3.title">Should & Ought to: Real-World Application & Common Pitfalls</h1>
+            <p class="EH-conjugation-subtitle" data-i18n="modalsShouldOughtTo3.subtitle">Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts</p>
+        </header>
+        
+        <div class="EH-conjugation-content">
+            <!-- Section: Common Mistakes -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="modalsShouldOughtTo3.mistakes.title">Common Mistakes with Should & Ought to</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">⚠️</span>
+                        <span data-i18n="modalsShouldOughtTo3.mistakes.heading1">Frequent errors</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="modalsShouldOughtTo3.mistakes.error1Title">❌ Adding 'to' after should</div>
+                        <p data-i18n="modalsShouldOughtTo3.mistakes.error1Desc">Incorrect: <em>You should to study.</em> ✅ Correct: <em>You should study.</em> (should + base verb)</p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="modalsShouldOughtTo3.mistakes.error2Title">❌ Using 'should of' instead of 'should have'</div>
+                        <p data-i18n="modalsShouldOughtTo3.mistakes.error2Desc">Incorrect: <em>I should of called.</em> ✅ Correct: <em>I should have called.</em> (past regret requires 'have')</p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="modalsShouldOughtTo3.mistakes.error3Title">❌ Forgetting 'to' after ought</div>
+                        <p data-i18n="modalsShouldOughtTo3.mistakes.error3Desc">Incorrect: <em>She ought apologize.</em> ✅ Correct: <em>She ought to apologize.</em> (ought + to + base verb)</p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="modalsShouldOughtTo3.mistakes.error4Title">❌ Confusing should/must for obligation strength</div>
+                        <p data-i18n="modalsShouldOughtTo3.mistakes.error4Desc">"Should" is advice/weak obligation; "must" is strong obligation/necessity. <em>You must stop</em> (law) vs <em>You should stop</em> (advice).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section: Idiomatic Expressions -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="modalsShouldOughtTo3.idioms.title">Idiomatic Expressions with Should/Ought to</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">💬</span>
+                        <span data-i18n="modalsShouldOughtTo3.idioms.heading1">Common fixed phrases</span>
+                    </h3>
+                    <table class="EH-conjugation-table">
+                        <thead><tr><th data-i18n="common.expression">Expression</th><th data-i18n="common.meaning">Meaning</th><th data-i18n="common.example">Example</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>you should talk</strong></td><td data-i18n="modalsShouldOughtTo3.idioms.talkMeaning">used to say someone is being hypocritical</td><td data-i18n="modalsShouldOughtTo3.idioms.talkEx">"You're late!" "You should talk; you were late yesterday."</td></tr>
+                            <tr><td><strong>should see the light</strong></td><td data-i18n="modalsShouldOughtTo3.idioms.lightMeaning">finally understand or agree</td><td data-i18n="modalsShouldOughtTo3.idioms.lightEx">He should see the light and accept the offer.</td></tr>
+                            <tr><td><strong>ought to know better</strong></td><td data-i18n="modalsShouldOughtTo3.idioms.knowBetterMeaning">should act more wisely</td><td data-i18n="modalsShouldOughtTo3.idioms.knowBetterEx">She ought to know better than to trust him.</td></tr>
+                            <tr><td><strong>shouldn't have (done)</strong></td><td data-i18n="modalsShouldOughtTo3.idioms.shouldntHaveMeaning">regret about a past action</td><td data-i18n="modalsShouldOughtTo3.idioms.shouldntHaveEx">I shouldn't have said that.</td></tr>
+                            <tr><td><strong>ought to be a law</strong></td><td data-i18n="modalsShouldOughtTo3.idioms.lawMeaning">something that should be mandatory</td><td data-i18n="modalsShouldOughtTo3.idioms.lawEx">People ought to be polite; it ought to be a law!</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Section: Contextual Practice - At a Doctor's Office -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="modalsShouldOughtTo3.context.title">Contextual Practice: At a Doctor's Office</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🩺</span>
+                        <span data-i18n="modalsShouldOughtTo3.context.subtitle">Using modals for advice, recommendation & obligation</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="modalsShouldOughtTo3.context.dialogue">Sample dialogue:</div>
+                        <p><strong data-i18n="modalsShouldOughtTo3.context.doctor">Doctor:</strong> <span data-i18n="modalsShouldOughtTo3.context.line1">"You look exhausted. You should get more rest."</span><br>
+                        <strong data-i18n="modalsShouldOughtTo3.context.patient">Patient:</strong> <span data-i18n="modalsShouldOughtTo3.context.line2">"I know, but work is so demanding."</span><br>
+                        <strong>Doctor:</strong> <span data-i18n="modalsShouldOughtTo3.context.line3">"You ought to reduce your stress. Have you tried exercising?"</span><br>
+                        <strong>Patient:</strong> <span data-i18n="modalsShouldOughtTo3.context.line4">"I should have started months ago."</span><br>
+                        <strong>Doctor:</strong> <span data-i18n="modalsShouldOughtTo3.context.line5">"It's not too late. You ought to make a plan. And you shouldn't skip meals."</span><br>
+                        <strong>Patient:</strong> <span data-i18n="modalsShouldOughtTo3.context.line6">"You're right. I should listen to your advice."</span></p>
+                        <p data-i18n="modalsShouldOughtTo3.context.note"><em>Notice the use of should, ought to, should have for advice, regret, and recommendation.</em></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- EXERCISES (12) – modular builder containers -->
+            <div class="EH-conjugation-section EH-exercise-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="modalsShouldOughtTo3.exercises.title">Review & Production Exercises</h2>
+                
+                <!-- 6 Multiple Choice -->
+                <h3 style="color: #e65100; margin-bottom: 20px;">Multiple Choice</h3>
+                <div class="EH-exercise-container" id="mc-exercises"></div>
+                
+                <!-- 3 Fill in the Blank -->
+                <h3 style="color: #e65100; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <div class="EH-exercise-container" id="fill-exercises"></div>
+                
+                <!-- 3 Sentence Ordering -->
+                <h3 style="color: #e65100; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <div class="EH-exercise-container" id="order-exercises"></div>
+                
+                <!-- Score & check button -->
+                <div class="EH-exercise-type1-possibilities3-answers-control">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
+                        <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see how you did!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <div class="EH-conjugation-navigation">
+                <!-- <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-shouldoughtto-p2.html'">
+                    <span data-i18n="common.nextLesson">Next Lesson →</span>
+                </button> -->
+				<button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
+					<span data-i18n="common.previousLesson">Previous Lesson</span>
+				</button>
+                <button class="EH-conjugation-nav-button" style="pointer-events: none;">
+                    <span></span>
+                </button>
+                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
+                    <span data-i18n="common.returnToConjugation">← Return to Conjugation</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="EH-common-footer">
+        <div class="EH-common-footer-content">
+            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+            <div class="EH-common-footer-links">
+                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="#" data-i18n="footer.terms">Terms of Service</a>
+                <a href="#" data-i18n="footer.contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- i18n translations – all strings in "English (French/Arabic)" pattern -->
+    <script>
+        window.I18N = {
+            en: {
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "← Previous Lesson",
+                    returnToConjugation: "← Return to Conjugation",
+                    nextLesson: "Next Lesson →",
+                    expression: "Expression",
+                    meaning: "Meaning",
+                    example: "Example"
+                },
+                footer: {
+                    developer: "Developer: Mejri Ziad",
+                    privacy: "Privacy Policy",
+                    terms: "Terms of Service",
+                    contact: "Contact"
+                },
+                modalsShouldOughtTo3: {
+                    title: "Should & Ought to: Real-World Application & Common Pitfalls",
+                    subtitle: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts",
+                    mistakes: {
+                        title: "Common Mistakes with Should & Ought to",
+                        heading1: "Frequent errors",
+                        error1Title: "❌ Adding 'to' after should",
+                        error1Desc: "Incorrect: <em>You should to study.</em> ✅ Correct: <em>You should study.</em> (should + base verb)",
+                        error2Title: "❌ Using 'should of' instead of 'should have'",
+                        error2Desc: "Incorrect: <em>I should of called.</em> ✅ Correct: <em>I should have called.</em> (past regret requires 'have')",
+                        error3Title: "❌ Forgetting 'to' after ought",
+                        error3Desc: "Incorrect: <em>She ought apologize.</em> ✅ Correct: <em>She ought to apologize.</em> (ought + to + base verb)",
+                        error4Title: "❌ Confusing should/must for obligation strength",
+                        error4Desc: "\"Should\" is advice/weak obligation; \"must\" is strong obligation/necessity. <em>You must stop</em> (law) vs <em>You should stop</em> (advice)."
+                    },
+                    idioms: {
+                        title: "Idiomatic Expressions with Should/Ought to",
+                        heading1: "Common fixed phrases",
+                        talkMeaning: "used to say someone is being hypocritical",
+                        talkEx: "\"You're late!\" \"You should talk; you were late yesterday.\"",
+                        lightMeaning: "finally understand or agree",
+                        lightEx: "He should see the light and accept the offer.",
+                        knowBetterMeaning: "should act more wisely",
+                        knowBetterEx: "She ought to know better than to trust him.",
+                        shouldntHaveMeaning: "regret about a past action",
+                        shouldntHaveEx: "I shouldn't have said that.",
+                        lawMeaning: "something that should be mandatory",
+                        lawEx: "People ought to be polite; it ought to be a law!"
+                    },
+                    context: {
+                        title: "Contextual Practice: At a Doctor's Office",
+                        subtitle: "Using modals for advice, recommendation & obligation",
+                        dialogue: "Sample dialogue:",
+                        doctor: "Doctor:",
+                        patient: "Patient:",
+                        line1: "\"You look exhausted. You should get more rest.\"",
+                        line2: "\"I know, but work is so demanding.\"",
+                        line3: "\"You ought to reduce your stress. Have you tried exercising?\"",
+                        line4: "\"I should have started months ago.\"",
+                        line5: "\"It's not too late. You ought to make a plan. And you shouldn't skip meals.\"",
+                        line6: "\"You're right. I should listen to your advice.\"",
+                        note: "<em>Notice the use of should, ought to, should have for advice, regret, and recommendation.</em>"
+                    },
+                    exercises: {
+                        title: "Review & Production Exercises",
+                        q1: "Choose the correct sentence:",
+                        q1a: "You should to call her.",
+                        q1b: "You should call her.",
+                        q1c: "You should calling her.",
+                        q2: "Choose the correct past regret form:",
+                        q2Sentence: "I ______ earlier; now it's too late.",
+                        q2a: "should of left",
+                        q2b: "should have left",
+                        q2c: "should left",
+                        q3: "Identify the correct sentence:",
+                        q3a: "She ought apologize.",
+                        q3b: "She ought to apologize.",
+                        q3c: "She ought apologizing.",
+                        q4: "What does \"You should talk!\" mean?",
+                        q4a: "You need to speak louder.",
+                        q4b: "You are being hypocritical.",
+                        q4c: "You have permission to speak.",
+                        q5: "Which expresses a strong legal obligation?",
+                        q5a: "You should stop at a red light.",
+                        q5b: "You must stop at a red light.",
+                        q5c: "You might stop at a red light.",
+                        q6: "\"He ought to know better\" implies:",
+                        q6a: "He lacks knowledge.",
+                        q6b: "He should act more wisely.",
+                        q6c: "He is a genius.",
+                        q7: "Complete with the correct form: \"I'm sorry I'm late. I ______ (leave) earlier.\" (past regret)",
+                        q8: "Complete: \"We ______ (respect) our elders.\" (moral duty)",
+                        q9: "Correct the error: \"You should to drink water.\" → \"You ______ drink water.\"",
+                        q10: "Arrange: (have / should / called / you / .)",
+                        q11: "Arrange: (to / ought / we / help / .)",
+                        q12: "Arrange: (talk / you / should / .)"
+                    }
+                }
+            },
+            fr: {
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "← Leçon précédente",
+                    returnToConjugation: "← Retour à la conjugaison",
+                    nextLesson: "Leçon suivante →",
+                    expression: "Expression (Expression)",
+                    meaning: "Meaning (Signification)",
+                    example: "Example (Exemple)"
+                },
+                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+                modalsShouldOughtTo3: {
+                    title: "Should & Ought to: Real-World Application & Common Pitfalls (Should & Ought to : application concrète et erreurs courantes)",
+                    subtitle: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts (Évitez les erreurs fréquentes, utilisez les expressions idiomatiques naturellement et pratiquez dans des contextes réels)",
+                    mistakes: {
+                        title: "Common Mistakes with Should & Ought to (Erreurs courantes avec Should & Ought to)",
+                        heading1: "Frequent errors (Erreurs fréquentes)",
+                        error1Title: "❌ Adding 'to' after should (Ajouter 'to' après should)",
+                        error1Desc: "Incorrect: <em>You should to study.</em> ✅ Correct: <em>You should study.</em> (should + base verb)",
+                        error2Title: "❌ Using 'should of' instead of 'should have' (Utiliser 'should of' au lieu de 'should have')",
+                        error2Desc: "Incorrect: <em>I should of called.</em> ✅ Correct: <em>I should have called.</em> (le regret passé nécessite 'have')",
+                        error3Title: "❌ Forgetting 'to' after ought (Oublier 'to' après ought)",
+                        error3Desc: "Incorrect: <em>She ought apologize.</em> ✅ Correct: <em>She ought to apologize.</em> (ought + to + base verb)",
+                        error4Title: "❌ Confusing should/must for obligation strength (Confondre should/must pour l'intensité de l'obligation)",
+                        error4Desc: "\"Should\" is advice/weak obligation; \"must\" is strong obligation/necessity. <em>You must stop</em> (law) vs <em>You should stop</em> (advice)."
+                    },
+                    idioms: {
+                        title: "Idiomatic Expressions with Should/Ought to (Expressions idiomatiques avec Should/Ought to)",
+                        heading1: "Common fixed phrases (Expressions courantes)",
+                        talkMeaning: "used to say someone is being hypocritical (utilisé pour dire que quelqu'un est hypocrite)",
+                        talkEx: "\"You're late!\" \"You should talk; you were late yesterday.\" (\"Tu es en retard !\" \"Tu devrais parler ; tu étais en retard hier.\")",
+                        lightMeaning: "finally understand or agree (finalement comprendre ou accepter)",
+                        lightEx: "He should see the light and accept the offer. (Il devrait comprendre et accepter l'offre.)",
+                        knowBetterMeaning: "should act more wisely (devrait agir plus sagement)",
+                        knowBetterEx: "She ought to know better than to trust him. (Elle devrait avoir plus de bon sens que de lui faire confiance.)",
+                        shouldntHaveMeaning: "regret about a past action (regret à propos d'une action passée)",
+                        shouldntHaveEx: "I shouldn't have said that. (Je n'aurais pas dû dire ça.)",
+                        lawMeaning: "something that should be mandatory (quelque chose qui devrait être obligatoire)",
+                        lawEx: "People ought to be polite; it ought to be a law! (Les gens devraient être polis ; cela devrait être une loi !)"
+                    },
+                    context: {
+                        title: "Contextual Practice: At a Doctor's Office (Pratique contextuelle : Chez le médecin)",
+                        subtitle: "Using modals for advice, recommendation & obligation (Utiliser les modaux pour les conseils, recommandations et obligations)",
+                        dialogue: "Sample dialogue: (Dialogue exemple :)",
+                        doctor: "Doctor: (Médecin :)",
+                        patient: "Patient: (Patient :)",
+                        line1: "\"You look exhausted. You should get more rest.\" (\"Vous avez l'air épuisé. Vous devriez vous reposer davantage.\")",
+                        line2: "\"I know, but work is so demanding.\" (\"Je sais, mais le travail est très exigeant.\")",
+                        line3: "\"You ought to reduce your stress. Have you tried exercising?\" (\"Vous devriez réduire votre stress. Avez-vous essayé de faire de l'exercice ?\")",
+                        line4: "\"I should have started months ago.\" (\"J'aurais dû commencer il y a des mois.\")",
+                        line5: "\"It's not too late. You ought to make a plan. And you shouldn't skip meals.\" (\"Il n'est pas trop tard. Vous devriez faire un plan. Et vous ne devriez pas sauter de repas.\")",
+                        line6: "\"You're right. I should listen to your advice.\" (\"Vous avez raison. Je devrais écouter vos conseils.\")",
+                        note: "<em>Notice the use of should, ought to, should have for advice, regret, and recommendation. (Remarquez l'utilisation de should, ought to, should have pour les conseils, les regrets et les recommandations.)</em>"
+                    },
+                    exercises: {
+                        title: "Review & Production Exercises (Exercices de révision et production)",
+                        q1: "Choose the correct sentence: (Choisissez la phrase correcte :)",
+                        q1a: "You should to call her.",
+                        q1b: "You should call her.",
+                        q1c: "You should calling her.",
+                        q2: "Choose the correct past regret form: (Choisissez la forme correcte de regret passé :)",
+                        q2Sentence: "I ______ earlier; now it's too late.",
+                        q2a: "should of left",
+                        q2b: "should have left",
+                        q2c: "should left",
+                        q3: "Identify the correct sentence: (Identifiez la phrase correcte :)",
+                        q3a: "She ought apologize.",
+                        q3b: "She ought to apologize.",
+                        q3c: "She ought apologizing.",
+                        q4: "What does \"You should talk!\" mean? (Que signifie \"You should talk!\" ?)",
+                        q4a: "You need to speak louder. (Tu dois parler plus fort.)",
+                        q4b: "You are being hypocritical. (Tu es hypocrite.)",
+                        q4c: "You have permission to speak. (Tu as la permission de parler.)",
+                        q5: "Which expresses a strong legal obligation? (Laquelle exprime une obligation légale forte ?)",
+                        q5a: "You should stop at a red light.",
+                        q5b: "You must stop at a red light.",
+                        q5c: "You might stop at a red light.",
+                        q6: "\"He ought to know better\" implies: (\"He ought to know better\" implique :)",
+                        q6a: "He lacks knowledge. (Il manque de connaissances.)",
+                        q6b: "He should act more wisely. (Il devrait agir plus sagement.)",
+                        q6c: "He is a genius. (C'est un génie.)",
+                        q7: "Complete with the correct form: \"I'm sorry I'm late. I ______ (leave) earlier.\" (past regret) (Complétez avec la forme correcte : \"I'm sorry I'm late. I ______ (leave) earlier.\" – regret passé)",
+                        q8: "Complete: \"We ______ (respect) our elders.\" (moral duty) (Complétez : \"We ______ (respect) our elders.\" – devoir moral)",
+                        q9: "Correct the error: \"You should to drink water.\" → \"You ______ drink water.\" (Corrigez l'erreur : \"You should to drink water.\" → \"You ______ drink water.\")",
+                        q10: "Arrange: (have / should / called / you / .) (Remettez dans l'ordre :)",
+                        q11: "Arrange: (to / ought / we / help / .) (Remettez dans l'ordre :)",
+                        q12: "Arrange: (talk / you / should / .) (Remettez dans l'ordre :)"
+                    }
+                }
+            },
+            ar: {
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "← Previous Lesson (الدرس السابق)",
+                    returnToConjugation: "← Return to Conjugation (العودة إلى التصريف)",
+                    nextLesson: "Next Lesson → (الدرس التالي)",
+                    expression: "Expression (التعبير)",
+                    meaning: "Meaning (المعنى)",
+                    example: "Example (مثال)"
+                },
+                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+                modalsShouldOughtTo3: {
+                    title: "Should & Ought to: Real-World Application & Common Pitfalls (Should & Ought to: التطبيق الواقعي والأخطاء الشائعة)",
+                    subtitle: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts (تجنب الأخطاء المتكررة، واستخدم التعبيرات الاصطلاحية بشكل طبيعي، وتدرب في سياقات الحياة الواقعية)",
+                    mistakes: {
+                        title: "Common Mistakes with Should & Ought to (الأخطاء الشائعة مع Should & Ought to)",
+                        heading1: "Frequent errors (أخطاء متكررة)",
+                        error1Title: "❌ Adding 'to' after should (إضافة 'to' بعد should)",
+                        error1Desc: "Incorrect: <em>You should to study.</em> ✅ Correct: <em>You should study.</em> (should + base verb) (should + الفعل الأساسي)",
+                        error2Title: "❌ Using 'should of' instead of 'should have' (استخدام 'should of' بدلاً من 'should have')",
+                        error2Desc: "Incorrect: <em>I should of called.</em> ✅ Correct: <em>I should have called.</em> (الندم على الماضي يتطلب 'have')",
+                        error3Title: "❌ Forgetting 'to' after ought (نسيان 'to' بعد ought)",
+                        error3Desc: "Incorrect: <em>She ought apologize.</em> ✅ Correct: <em>She ought to apologize.</em> (ought + to + الفعل الأساسي)",
+                        error4Title: "❌ Confusing should/must for obligation strength (الخلط بين should/must لقوة الالتزام)",
+                        error4Desc: "\"Should\" is advice/weak obligation; \"must\" is strong obligation/necessity. <em>You must stop</em> (law) vs <em>You should stop</em> (advice). (\"Should\" نصيحة / التزام ضعيف؛ \"must\" التزام / ضرورة قوية.)"
+                    },
+                    idioms: {
+                        title: "Idiomatic Expressions with Should/Ought to (التعبيرات الاصطلاحية مع Should/Ought to)",
+                        heading1: "Common fixed phrases (عبارات ثابتة شائعة)",
+                        talkMeaning: "used to say someone is being hypocritical (تستخدم لقول أن شخصًا ما منافق)",
+                        talkEx: "\"You're late!\" \"You should talk; you were late yesterday.\" (\"أنت متأخر!\" \"أنت تتحدث؛ لقد تأخرت أمس.\")",
+                        lightMeaning: "finally understand or agree (يفهم أو يوافق أخيرًا)",
+                        lightEx: "He should see the light and accept the offer. (يجب أن يقتنع ويقبل العرض.)",
+                        knowBetterMeaning: "should act more wisely (يجب أن يتصرف بحكمة أكبر)",
+                        knowBetterEx: "She ought to know better than to trust him. (يجب أن تكون أكثر حكمة من أن تثق به.)",
+                        shouldntHaveMeaning: "regret about a past action (ندم على فعل في الماضي)",
+                        shouldntHaveEx: "I shouldn't have said that. (لم يكن يجب أن أقول ذلك.)",
+                        lawMeaning: "something that should be mandatory (شيء يجب أن يكون إلزاميًا)",
+                        lawEx: "People ought to be polite; it ought to be a law! (يجب أن يكون الناس مهذبين؛ يجب أن يكون ذلك قانونًا!)"
+                    },
+                    context: {
+                        title: "Contextual Practice: At a Doctor's Office (تدريب سياقي: في عيادة الطبيب)",
+                        subtitle: "Using modals for advice, recommendation & obligation (استخدام الأفعال المساعدة للنصيحة والتوصية والالتزام)",
+                        dialogue: "Sample dialogue: (حوار نموذجي :)",
+                        doctor: "Doctor: (الطبيب :)",
+                        patient: "Patient: (المريض :)",
+                        line1: "\"You look exhausted. You should get more rest.\" (\"تبدو منهكًا. يجب أن تحصل على مزيد من الراحة.\")",
+                        line2: "\"I know, but work is so demanding.\" (\"أعلم، لكن العمل متعب جدًا.\")",
+                        line3: "\"You ought to reduce your stress. Have you tried exercising?\" (\"يجب أن تقلل من التوتر. هل حاولت ممارسة الرياضة؟\")",
+                        line4: "\"I should have started months ago.\" (\"كان يجب أن أبدأ منذ أشهر.\")",
+                        line5: "\"It's not too late. You ought to make a plan. And you shouldn't skip meals.\" (\"لم يفت الأوان بعد. يجب أن تضع خطة. ولا يجب أن تتخطى الوجبات.\")",
+                        line6: "\"You're right. I should listen to your advice.\" (\"أنت على حق. يجب أن أستمع لنصيحتك.\")",
+                        note: "<em>Notice the use of should, ought to, should have for advice, regret, and recommendation. (لاحظ استخدام should و ought to و should have للنصيحة والندم والتوصية.)</em>"
+                    },
+                    exercises: {
+                        title: "Review & Production Exercises (تمارين المراجعة والإنتاج)",
+                        q1: "Choose the correct sentence: (اختر الجملة الصحيحة:)",
+                        q1a: "You should to call her.",
+                        q1b: "You should call her.",
+                        q1c: "You should calling her.",
+                        q2: "Choose the correct past regret form: (اختر صيغة الندم على الماضي الصحيحة:)",
+                        q2Sentence: "I ______ earlier; now it's too late.",
+                        q2a: "should of left",
+                        q2b: "should have left",
+                        q2c: "should left",
+                        q3: "Identify the correct sentence: (حدد الجملة الصحيحة:)",
+                        q3a: "She ought apologize.",
+                        q3b: "She ought to apologize.",
+                        q3c: "She ought apologizing.",
+                        q4: "What does \"You should talk!\" mean? (ماذا تعني \"You should talk!\"؟)",
+                        q4a: "You need to speak louder. (عليك التحدث بصوت أعلى.)",
+                        q4b: "You are being hypocritical. (أنت منافق.)",
+                        q4c: "You have permission to speak. (لديك إذن بالتحدث.)",
+                        q5: "Which expresses a strong legal obligation? (أي منها يعبر عن التزام قانوني قوي؟)",
+                        q5a: "You should stop at a red light.",
+                        q5b: "You must stop at a red light.",
+                        q5c: "You might stop at a red light.",
+                        q6: "\"He ought to know better\" implies: (\"He ought to know better\" تعني:)",
+                        q6a: "He lacks knowledge. (يفتقر إلى المعرفة.)",
+                        q6b: "He should act more wisely. (يجب أن يتصرف بحكمة أكبر.)",
+                        q6c: "He is a genius. (إنه عبقري.)",
+                        q7: "Complete with the correct form: \"I'm sorry I'm late. I ______ (leave) earlier.\" (past regret) (أكمل بالشكل الصحيح: \"I'm sorry I'm late. I ______ (leave) earlier.\" – ندم على الماضي)",
+                        q8: "Complete: \"We ______ (respect) our elders.\" (moral duty) (أكمل: \"We ______ (respect) our elders.\" – واجب أخلاقي)",
+                        q9: "Correct the error: \"You should to drink water.\" → \"You ______ drink water.\" (صحح الخطأ: \"You should to drink water.\" → \"You ______ drink water.\")",
+                        q10: "Arrange: (have / should / called / you / .) (رتب: (have / should / called / you / .))",
+                        q11: "Arrange: (to / ought / we / help / .) (رتب: (to / ought / we / help / .))",
+                        q12: "Arrange: (talk / you / should / .) (رتب: (talk / you / should / .))"
+                    }
+                }
+            }
+        };
+    </script>
+    
+    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/exercise-conjugation.js"></script>
+    
+    <script>
+        // Build multiple choice exercises
+        const correctAnswersType1 = buildMultipleChoiceExercise({
+            containerId: 'mc-exercises',
+            prefix: 'EH-exercise-type1-possibilities3',
+            questions: [
+                {
+                    questionTextKey: 'modalsShouldOughtTo3.exercises.q1',
+                    options: [
+                        { value: 'a', labelKey: 'modalsShouldOughtTo3.exercises.q1a' },
+                        { value: 'b', labelKey: 'modalsShouldOughtTo3.exercises.q1b' },
+                        { value: 'c', labelKey: 'modalsShouldOughtTo3.exercises.q1c' }
+                    ],
+                    correctAnswer: 'b'
+                },
+                {
+                    questionTextKey: 'modalsShouldOughtTo3.exercises.q2',
+                    options: [
+                        { value: 'a', labelKey: 'modalsShouldOughtTo3.exercises.q2a' },
+                        { value: 'b', labelKey: 'modalsShouldOughtTo3.exercises.q2b' },
+                        { value: 'c', labelKey: 'modalsShouldOughtTo3.exercises.q2c' }
+                    ],
+                    correctAnswer: 'b'
+                },
+                {
+                    questionTextKey: 'modalsShouldOughtTo3.exercises.q3',
+                    options: [
+                        { value: 'a', labelKey: 'modalsShouldOughtTo3.exercises.q3a' },
+                        { value: 'b', labelKey: 'modalsShouldOughtTo3.exercises.q3b' },
+                        { value: 'c', labelKey: 'modalsShouldOughtTo3.exercises.q3c' }
+                    ],
+                    correctAnswer: 'b'
+                },
+                {
+                    questionTextKey: 'modalsShouldOughtTo3.exercises.q4',
+                    options: [
+                        { value: 'a', labelKey: 'modalsShouldOughtTo3.exercises.q4a' },
+                        { value: 'b', labelKey: 'modalsShouldOughtTo3.exercises.q4b' },
+                        { value: 'c', labelKey: 'modalsShouldOughtTo3.exercises.q4c' }
+                    ],
+                    correctAnswer: 'b'
+                },
+                {
+                    questionTextKey: 'modalsShouldOughtTo3.exercises.q5',
+                    options: [
+                        { value: 'a', labelKey: 'modalsShouldOughtTo3.exercises.q5a' },
+                        { value: 'b', labelKey: 'modalsShouldOughtTo3.exercises.q5b' },
+                        { value: 'c', labelKey: 'modalsShouldOughtTo3.exercises.q5c' }
+                    ],
+                    correctAnswer: 'b'
+                },
+                {
+                    questionTextKey: 'modalsShouldOughtTo3.exercises.q6',
+                    options: [
+                        { value: 'a', labelKey: 'modalsShouldOughtTo3.exercises.q6a' },
+                        { value: 'b', labelKey: 'modalsShouldOughtTo3.exercises.q6b' },
+                        { value: 'c', labelKey: 'modalsShouldOughtTo3.exercises.q6c' }
+                    ],
+                    correctAnswer: 'b'
+                }
+            ]
+        });
+
+        // Build fill-in-the-blank exercises
+        const correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises',
+            prefix: 'fill',
+            questions: [
+                {
+                    questionTextKey: 'modalsShouldOughtTo3.exercises.q7',
+                    answers: ['should have left']
+                },
+                {
+                    questionTextKey: 'modalsShouldOughtTo3.exercises.q8',
+                    answers: ['ought to respect']
+                },
+                {
+                    questionTextKey: 'modalsShouldOughtTo3.exercises.q9',
+                    answers: ['should']
+                }
+            ]
+        });
+
+        // Build sentence ordering exercises
+        const correctAnswersType3 = buildSentenceOrderingExercise({
+            containerId: 'order-exercises',
+            prefix: 'order',
+            questions: [
+                {
+                    questionTextKey: 'modalsShouldOughtTo3.exercises.q10',
+                    words: ['have', 'should', 'called', 'you', '.'],
+                    correctSentence: 'You should have called .'
+                },
+                {
+                    questionTextKey: 'modalsShouldOughtTo3.exercises.q11',
+                    words: ['to', 'ought', 'we', 'help', '.'],
+                    correctSentence: 'We ought to help .'
+                },
+                {
+                    questionTextKey: 'modalsShouldOughtTo3.exercises.q12',
+                    words: ['talk', 'you', 'should', '.'],
+                    correctSentence: 'You should talk .'
+                }
+            ]
+        });
+
+        // Check all exercises
+        function checkAllExercises() {
+            let totalScore = 0;
+            let totalQuestions = 0;
+            
+            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+            totalQuestions += 6;
+            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+            totalQuestions += 3;
+            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+            totalQuestions += 3;
+            
+            const scoreEl = document.getElementById('score-value');
+            const fbEl = document.getElementById('score-feedback');
+            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+            if (fbEl) {
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                else fbEl.textContent = 'Review the lesson and try again.';
+            }
+            document.getElementById('score-display').style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+            document.getElementById('check-all').addEventListener('click', checkAllExercises);
+        });
+
+        // i18n rendering for HTML elements with innerHTML tags
+        (function() {
+            function applyHtmlI18n() {
+                const lang = document.getElementById('language-selector').value;
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                    if (translation && /<[^>]*>/.test(translation)) {
+                        el.innerHTML = translation;
+                    } else if (translation) {
+                        el.textContent = translation;
+                    }
+                });
+            }
+            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+        })();
+    </script>
+</body>
+</html>
