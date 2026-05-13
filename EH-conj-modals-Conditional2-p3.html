@@ -3,87 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Second Conditional: Common Mistakes & Comprehensive Practice - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>Second Conditional III: Common Mistakes & Practice - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-        /* ===== Theme variables only – all component styles come from style-conjugation.css ===== */
         :root {
-            --bg-gradient: linear-gradient(135deg, #4a148c, #6a1b9a, #8e24aa, #ab47bc);
-            --title-color: #6a1b9a;
-            --primary: #8e24aa;
-            --primary-hover: #6a1b9a;
-            --primary-light: #ce93d8;
-            --accent: #ce93d8;
-            --rule-bg: #f3e5f5;
-            --rule-border: #ce93d8;
-            --example-bg: #e1bee7;
-            --example-border: #ce93d8;
-            --exercise-number-gradient: linear-gradient(135deg, #8e24aa, #ab47bc);
-            --nav-btn-bg: #8e24aa;
-            --nav-btn-hover: #6a1b9a;
-            --nav-back-btn-bg: #ab47bc;
-            --nav-back-btn-color: white;
-            --nav-back-btn-hover: #8e24aa;
-
-            /* ---- Standard neutrals (same across themes) ---- */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
+            --bg-gradient: linear-gradient(135deg, #fef0e4, #fadcc8, #f0c4a0, #e8b088);
+            --content-bg: #fefaf7;
+            --card-bg: #ffffff;
+            --subsection-bg: #fef5ee;
+            --rule-bg: #fef0e5;
+            --example-bg: #fde8d8;
+            --table-stripe: #fef5ee;
+            --title-color: #4a1c08;
+            --text-color: #3d1e0e;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #d47244;
+            --primary-hover: #b85d35;
+            --primary-light: #e0885e;
+            --accent: #d47244;
+            --exercise-number-gradient: linear-gradient(135deg, #d47244, #a04a28);
+            --rule-border: #d47244;
+            --example-border: #d47244;
+            --nav-btn-bg: #d47244;
+            --nav-btn-hover: #a04a28;
+            --nav-back-btn-bg: #e0885e;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #d47244;
+            --refract-divider-color: #e8b898;
+            --refract-translation-bg: #fde8d8;
+            --refract-translation-border: #d47244;
+            --refract-english-color: #3d1e0e;
+            --section-divider: #f0d4be;
+            --card-border: #f0d4be;
+            --input-border: #d8b898;
+            --dashed-border: #d8b898;
+            --table-border: #e8ccb0;
             --correct-bg: #d4edda;
             --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
-            --neutral-bg: #f0f0f0;
-            --neutral-color: #666;
-            --neutral-border: #ccc;
-            --empty-input-border: #aaa;
-            --empty-input-bg: #f9f9f9;
+            --correct-border: #82c9a8;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #fef5ee;
+            --neutral-color: #6b4a30;
+            --neutral-border: #d8b898;
+            --empty-input-border: #c8a080;
+            --empty-input-bg: #fefaf7;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #d47244;
+            --language-selector-color: #3d1e0e;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #3d1a08, #4a220e, #5c2c12, #6d3818);
+            --content-bg: #2a1408;
+            --card-bg: #331a0c;
+            --subsection-bg: #331a0c;
+            --rule-bg: #2a1408;
+            --example-bg: #2a1408;
+            --table-stripe: #2e180a;
+            --title-color: #f0c4a0;
+            --text-color: #f8e4d4;
+            --header-text: #f8e4d4;
+            --header-text-light: #e0c8b0;
+            --primary: #e0885e;
+            --primary-hover: #f0a078;
+            --primary-light: #e0885e;
+            --accent: #e0885e;
+            --rule-border: #e0885e;
+            --example-border: #e0885e;
+            --exercise-number-gradient: linear-gradient(135deg, #e0885e, #d47244);
+            --nav-btn-bg: #e0885e;
+            --nav-btn-hover: #d47244;
+            --nav-back-btn-bg: #f0a078;
+            --nav-back-btn-color: #2a1408;
+            --nav-back-btn-hover: #e0885e;
+            --refract-divider-color: #d49868;
+            --refract-translation-bg: #4a2210;
+            --refract-translation-border: #d49868;
+            --refract-english-color: #fce8d8;
+            --section-divider: #3d1e0e;
+            --card-border: #3d1e0e;
+            --input-border: #5c3020;
+            --dashed-border: #5c3020;
+            --table-border: #4a2818;
+            --white: #f8e4d4;
+            --correct-bg: #1e4a2e;
+            --correct-color: #a3e6b5;
+            --correct-border: #5e9e70;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #3d2010;
+            --neutral-color: #d8b898;
+            --neutral-border: #5c3020;
+            --empty-input-border: #5c3020;
+            --empty-input-bg: #2a1408;
+            --language-selector-bg: #331a0c;
+            --language-selector-border: #e0885e;
+            --language-selector-color: #f8e4d4;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
-    <link rel="stylesheet" href="styles/style-conjugation.css">
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="secondConditional3.title">Second Conditional: Common Mistakes & Comprehensive Practice</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="secondConditional3.subtitle">Contrast with first conditional, avoid 'would' in the if‑clause, and write hypothetical scenarios.</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="secondConditional3.title.line1">Second Conditional III:</div>
+                <div class="EH-conjugation-title-line" data-i18n="secondConditional3.title.line2">Common Mistakes & Comprehensive Practice</div>
+                <div class="EH-conjugation-subtitle" data-i18n="secondConditional3.title.line3">Contrast with first conditional, avoid 'would' in the if-clause, and write hypothetical scenarios</div>
+                <div class="EH-conjugation-subtitle" data-i18n="secondConditional3.title.line4">lesson: 3/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Section 1: Contrast with First Conditional -->
+            <!-- Section 1: Second Conditional vs First Conditional -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional3.contrast.title">Second Conditional vs First Conditional</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional3.contrast.title">III. 1. Second Conditional vs First Conditional</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">⚖️</span>
@@ -91,31 +147,38 @@
                     </h3>
                     <table class="EH-conjugation-table">
                         <thead>
-                            <tr><th data-i18n="secondConditional3.contrast.type">Type</th><th data-i18n="secondConditional3.contrast.structure">Structure</th><th data-i18n="common.example">Example</th></tr>
+                            <tr><th data-i18n="secondConditional3.contrast.type">Type</th><th data-i18n="secondConditional3.contrast.structure">Structure</th><th data-i18n="secondConditional3.contrast.example">Example</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td data-i18n="secondConditional3.contrast.first">First Conditional</td><td>If + present simple, will + infinitive</td><td data-i18n="secondConditional3.contrast.firstEx">If it rains, we will cancel the picnic. (real future possibility)</td></tr>
-                            <tr><td data-i18n="secondConditional3.contrast.second">Second Conditional</td><td>If + past simple, would + infinitive</td><td data-i18n="secondConditional3.contrast.secondEx">If it rained, we would cancel the picnic. (imaginary / unlikely situation)</td></tr>
+                            <tr>
+                                <td data-i18n="secondConditional3.contrast.firstCond">First Conditional</td>
+                                <td data-i18n="secondConditional3.contrast.firstStruct">If + present simple, will + infinitive</td>
+                                <td data-i18n="secondConditional3.contrast.firstEx">If it rains, we will cancel the picnic. (real future possibility)</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="secondConditional3.contrast.secondCond">Second Conditional</td>
+                                <td data-i18n="secondConditional3.contrast.secondStruct">If + past simple, would + infinitive</td>
+                                <td data-i18n="secondConditional3.contrast.secondEx">If it rained, we would cancel the picnic. (imaginary / unlikely situation)</td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional3.contrast.key">Key difference</div>
-                        <p data-i18n="secondConditional3.contrast.desc">First conditional: real and possible future events. Second conditional: hypothetical, imaginary, or unlikely present/future events. The second conditional often expresses dreams, advice, or situations contrary to fact.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional3.contrast.keyDifference">💡 Key difference:</div>
+                        <p data-i18n="secondConditional3.contrast.keyDesc">First conditional: real and possible future events. Second conditional: hypothetical, imaginary, or unlikely present/future events. The second conditional often expresses dreams, advice, or situations contrary to fact.</p>
                     </div>
                 </div>
             </div>
-            
             <!-- Section 2: Common Mistakes -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional3.mistakes.title">Common Mistakes with Second Conditional</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional3.mistakes.title">III. 2. Common Mistakes with Second Conditional</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">⚠️</span>
                         <span data-i18n="secondConditional3.mistakes.heading">Frequent errors & how to fix them</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional3.mistakes.willTitle">❌ Using 'would' in the if‑clause</div>
-                        <p data-i18n="secondConditional3.mistakes.willDesc">Incorrect: <em>If I would win the lottery, I would travel.</em> ✅ Correct: <em>If I won the lottery, I would travel.</em> (Use past simple in the if‑clause, not 'would'.)</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional3.mistakes.wouldTitle">❌ Using 'would' in the if-clause</div>
+                        <p data-i18n="secondConditional3.mistakes.wouldDesc">Incorrect: <em>If I would win the lottery, I would travel.</em> ✅ Correct: <em>If I won the lottery, I would travel.</em> (Use past simple in the if-clause, not 'would'.)</p>
                     </div>
                     <div class="EH-conjugation-rule">
                         <div class="EH-conjugation-rule-title" data-i18n="secondConditional3.mistakes.wasTitle">❌ Using 'was' instead of 'were' in formal/hypothetical contexts</div>
@@ -127,409 +190,319 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Section 3: Writing Hypothetical Scenarios (with added dialogue) -->
+            <!-- Section 3: Writing Hypothetical Scenarios -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional3.hypothetical.title">Writing Hypothetical Scenarios</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional3.writing.title">III. 3. Writing Hypothetical Scenarios</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">✍️</span>
-                        <span data-i18n="secondConditional3.hypothetical.subtitle">Practice imagining unreal situations</span>
+                        <span data-i18n="secondConditional3.writing.subtitle">Practice imagining unreal situations</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional3.hypothetical.promptTitle">Prompts to create your own second conditional sentences:</div>
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li data-i18n="secondConditional3.hypothetical.prompt1">What would you do if you could speak every language in the world?</li>
-                            <li data-i18n="secondConditional3.hypothetical.prompt2">If you had a superpower, what would it be?</li>
-                            <li data-i18n="secondConditional3.hypothetical.prompt3">Where would you live if you could choose any city?</li>
-                        </ul>
-                        
-                        <div class="EH-conjugation-rule-title" style="margin-top: 20px;" data-i18n="secondConditional3.hypothetical.dialogTitle">🗣️ Real‑Life Dialogue: Dream Vacation</div>
-                        <div class="EH-conjugation-examples" data-i18n="secondConditional3.hypothetical.dialog">
-                            <div class="EH-conjugation-example"><strong>Alex:</strong> If you had a million dollars, what would you do?</div>
-                            <div class="EH-conjugation-example"><strong>Jamie:</strong> If I had that much money, I would travel the world for a year. I'd visit Japan, Italy, and Brazil.</div>
-                            <div class="EH-conjugation-example"><strong>Alex:</strong> That sounds amazing! If I could take a year off, I would learn to sail and explore the Mediterranean.</div>
-                            <div class="EH-conjugation-example"><strong>Jamie:</strong> And if we both had the chance, we could even go together!</div>
+                        <p data-i18n="secondConditional3.writing.prompt1">💭 What would you do if you could speak every language in the world?</p>
+                        <p data-i18n="secondConditional3.writing.prompt2">💭 If you had a superpower, what would it be?</p>
+                        <p data-i18n="secondConditional3.writing.prompt3">💭 Where would you live if you could choose any city?</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example">
+                            <strong data-i18n="secondConditional3.writing.dialogueHeading">🗣️ Real-Life Dialogue: Dream Vacation</strong>
                         </div>
-                        
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="secondConditional3.hypothetical.example1">If I could speak every language, I would travel the world and make friends everywhere.</div>
-                            <div class="EH-conjugation-example" data-i18n="secondConditional3.hypothetical.example2">If I had a superpower, I would choose invisibility to observe the world unnoticed.</div>
+                        <div class="EH-conjugation-example">
+                            <span data-i18n="secondConditional3.writing.dialogueLine1">Alex: If you had a million dollars, what would you do?</span>
+                        </div>
+                        <div class="EH-conjugation-example">
+                            <span data-i18n="secondConditional3.writing.dialogueLine2">Jamie: If I had that much money, I would travel the world for a year. I'd visit Japan, Italy, and Brazil.</span>
+                        </div>
+                        <div class="EH-conjugation-example">
+                            <span data-i18n="secondConditional3.writing.dialogueLine3">Alex: That sounds amazing! If I could take a year off, I would learn to sail and explore the Mediterranean.</span>
+                        </div>
+                        <div class="EH-conjugation-example">
+                            <span data-i18n="secondConditional3.writing.dialogueLine4">Jamie: And if we both had the chance, we could even go together!</span>
+                        </div>
+                        <div class="EH-conjugation-example">
+                            <strong data-i18n="secondConditional3.writing.exampleHeading">Example sentences:</strong>
+                        </div>
+                        <div class="EH-conjugation-example">
+                            <span data-i18n="secondConditional3.writing.ex1">If I could speak every language, I would travel the world and make friends everywhere.</span>
+                        </div>
+                        <div class="EH-conjugation-example">
+                            <span data-i18n="secondConditional3.writing.ex2">If I had a superpower, I would choose invisibility to observe the world unnoticed.</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- EXERCISES (12 total) – dynamic content -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
                 <h2 class="EH-conjugation-section-title" data-i18n="secondConditional3.exercises.title">Review & Production Exercises</h2>
-                
-                <!-- Multiple Choice -->
-                <h3 style="color: #6a1b9a; margin-bottom: 20px;">Multiple Choice</h3>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- Fill in the Blank -->
-                <h3 style="color: #6a1b9a; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- Sentence Ordering -->
-                <h3 style="color: #6a1b9a; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
                         <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
                         <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see how you did!</p>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-                    <span></span>
-                </button>
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-                    <span data-i18n="common.previousLesson">Previous Lesson</span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">Return to Conjugation</span>
-                </button>
-            </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations (full object) -->
     <script>
         window.I18N = {
             en: {
-                common: { siteName: "English Hub",
+                common: {
+                    siteName: "English Hub",
                     previousLesson: "← Previous Lesson",
                     returnToConjugation: "← Return to Conjugation",
-                    nextLesson: "Next Lesson →" },
+                    nextLesson: "Next Lesson →"
+                },
                 footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
                 secondConditional3: {
-                    title: "Second Conditional: Common Mistakes & Comprehensive Practice",
-                    subtitle: "Contrast with first conditional, avoid 'would' in the if‑clause, and write hypothetical scenarios.",
+                    title: {
+                        line1: "Second Conditional III:",
+                        line2: "Common Mistakes & Comprehensive Practice",
+                        line3: "Contrast with first conditional, avoid 'would' in the if-clause, and write hypothetical scenarios",
+                        line4: "lesson: 3/3"
+                    },
                     contrast: {
-                        title: "Second Conditional vs First Conditional",
+                        title: "III. 1. Second Conditional vs First Conditional",
                         heading: "Real possibility vs unreal / imaginary situations",
-                        type: "Type", structure: "Structure",
-                        first: "First Conditional", second: "Second Conditional",
+                        type: "Type",
+                        structure: "Structure",
+                        example: "Example",
+                        firstCond: "First Conditional",
+                        firstStruct: "If + present simple, will + infinitive",
                         firstEx: "If it rains, we will cancel the picnic. (real future possibility)",
+                        secondCond: "Second Conditional",
+                        secondStruct: "If + past simple, would + infinitive",
                         secondEx: "If it rained, we would cancel the picnic. (imaginary / unlikely situation)",
-                        key: "Key difference",
-                        desc: "First conditional: real and possible future events. Second conditional: hypothetical, imaginary, or unlikely present/future events. The second conditional often expresses dreams, advice, or situations contrary to fact."
+                        keyDifference: "💡 Key difference:",
+                        keyDesc: "First conditional: real and possible future events. Second conditional: hypothetical, imaginary, or unlikely present/future events. The second conditional often expresses dreams, advice, or situations contrary to fact."
                     },
                     mistakes: {
-                        title: "Common Mistakes with Second Conditional",
+                        title: "III. 2. Common Mistakes with Second Conditional",
                         heading: "Frequent errors & how to fix them",
-                        willTitle: "❌ Using 'would' in the if‑clause",
-                        willDesc: "Incorrect: <em>If I would win the lottery, I would travel.</em> ✅ Correct: <em>If I won the lottery, I would travel.</em> (Use past simple in the if‑clause, not 'would'.)",
+                        wouldTitle: "❌ Using 'would' in the if-clause",
+                        wouldDesc: "Incorrect: If I would win the lottery, I would travel. ✅ Correct: If I won the lottery, I would travel. (Use past simple in the if-clause, not 'would'.)",
                         wasTitle: "❌ Using 'was' instead of 'were' in formal/hypothetical contexts",
-                        wasDesc: "While 'was' is sometimes accepted in informal English, the subjunctive 'were' is preferred for all persons in formal writing and exams. Incorrect: <em>If I was rich...</em> → Correct: <em>If I were rich...</em>",
+                        wasDesc: "While 'was' is sometimes accepted in informal English, the subjunctive 'were' is preferred for all persons in formal writing and exams. Incorrect: If I was rich... → Correct: If I were rich...",
                         mixTitle: "❌ Mixing first and second conditional incorrectly",
-                        mixDesc: "Remember: first conditional = possible future (present simple + will). Second conditional = imaginary (past simple + would). Don't mix them: <em>If I have time, I would help</em> → ❌. ✅ <em>If I had time, I would help.</em>"
+                        mixDesc: "Remember: first conditional = possible future (present simple + will). Second conditional = imaginary (past simple + would). Don't mix them: If I have time, I would help → ❌. ✅ If I had time, I would help."
                     },
-                    hypothetical: {
-                        title: "Writing Hypothetical Scenarios",
+                    writing: {
+                        title: "III. 3. Writing Hypothetical Scenarios",
                         subtitle: "Practice imagining unreal situations",
-                        promptTitle: "Prompts to create your own second conditional sentences:",
-                        prompt1: "What would you do if you could speak every language in the world?",
-                        prompt2: "If you had a superpower, what would it be?",
-                        prompt3: "Where would you live if you could choose any city?",
-                        dialogTitle: "🗣️ Real‑Life Dialogue: Dream Vacation",
-                        dialog: `<div class="EH-conjugation-example"><strong>Alex:</strong> If you had a million dollars, what would you do?</div>
-                                 <div class="EH-conjugation-example"><strong>Jamie:</strong> If I had that much money, I would travel the world for a year. I'd visit Japan, Italy, and Brazil.</div>
-                                 <div class="EH-conjugation-example"><strong>Alex:</strong> That sounds amazing! If I could take a year off, I would learn to sail and explore the Mediterranean.</div>
-                                 <div class="EH-conjugation-example"><strong>Jamie:</strong> And if we both had the chance, we could even go together!</div>`,
-                        example1: "If I could speak every language, I would travel the world and make friends everywhere.",
-                        example2: "If I had a superpower, I would choose invisibility to observe the world unnoticed."
+                        prompt1: "💭 What would you do if you could speak every language in the world?",
+                        prompt2: "💭 If you had a superpower, what would it be?",
+                        prompt3: "💭 Where would you live if you could choose any city?",
+                        dialogueHeading: "🗣️ Real-Life Dialogue: Dream Vacation",
+                        dialogueLine1: "Alex: If you had a million dollars, what would you do?",
+                        dialogueLine2: "Jamie: If I had that much money, I would travel the world for a year. I'd visit Japan, Italy, and Brazil.",
+                        dialogueLine3: "Alex: That sounds amazing! If I could take a year off, I would learn to sail and explore the Mediterranean.",
+                        dialogueLine4: "Jamie: And if we both had the chance, we could even go together!",
+                        exampleHeading: "Example sentences:",
+                        ex1: "If I could speak every language, I would travel the world and make friends everywhere.",
+                        ex2: "If I had a superpower, I would choose invisibility to observe the world unnoticed."
                     },
                     exercises: {
                         title: "Review & Production Exercises",
                         q1: "Choose the correct second conditional sentence:",
-                        q1a: "If I would be you, I would study.", q1b: "If I were you, I would study.", q1c: "If I am you, I would study.",
+                        q1a: "If I would be you, I would study.",
+                        q1b: "If I were you, I would study.",
+                        q1c: "If I am you, I would study.",
                         q2: "Which sentence is a second conditional (imaginary)?",
-                        q2a: "If she studies, she will pass.", q2b: "If she studied, she would pass.", q2c: "If she will study, she passes.",
+                        q2a: "If she studies, she will pass.",
+                        q2b: "If she studied, she would pass.",
+                        q2c: "If she will study, she passes.",
                         q3: "Complete: If he ____ here, he would help us.",
-                        q3a: "was", q3b: "were", q3c: "is",
+                        q3a: "was",
+                        q3b: "were",
+                        q3c: "is",
                         q4: "What is the mistake? \"If I would have a car, I would drive.\"",
-                        q4a: "Using 'would' in the if-clause", q4b: "Missing comma", q4c: "Wrong modal in result",
+                        q4a: "Using 'would' in the if-clause",
+                        q4b: "Missing comma",
+                        q4c: "Wrong modal in result",
                         q5: "Choose the correct sentence (second conditional).",
-                        q5a: "If I knew the answer, I will tell you.", q5b: "If I knew the answer, I would tell you.", q5c: "If I know the answer, I would tell you.",
+                        q5a: "If I knew the answer, I will tell you.",
+                        q5b: "If I knew the answer, I would tell you.",
+                        q5c: "If I know the answer, I would tell you.",
                         q6: "Which sentence expresses a dream/unreal situation?",
-                        q6a: "If it snows, we will build a snowman.", q6b: "If I were invisible, I would explore everywhere.", q6c: "If you heat ice, it melts.",
+                        q6a: "If it snows, we will build a snowman.",
+                        q6b: "If I were invisible, I would explore everywhere.",
+                        q6c: "If you heat ice, it melts.",
                         q7: "Complete: If she ____ (have) more time, she ____ (travel) more.",
                         q8: "Complete (subjunctive): If I ____ (be) the president, I ____ (improve) education.",
                         q9: "Correct the mistake: \"If we would leave now, we would arrive early.\" → Write the correct version.",
                         q10: "Arrange: (would / I / if / were / I / you / study / harder)",
-                        q11: "Arrange: (if / she / could / she / would / any / sing / language)",
+                        q11: "Arrange: (if / she / could / she / would / sing / any / language)",
                         q12: "Arrange: (would / if / we / a / we / buy / house / had / money)"
                     }
                 }
             },
             fr: {
-                common: { siteName: "English Hub",
-                previousLesson: "← Previous Lesson (Leçon Précédente)",
-                returnToConjugation: "← Return to Conjugation (Retour au Conjugaison)",
-                    nextLesson: "Next Lesson (Leçon Suivante) →" },
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "← Leçon Précédente",
+                    returnToConjugation: "← Retour au Conjugaison",
+                    nextLesson: "Leçon Suivante →"
+                },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
                 secondConditional3: {
-                    title: "Second Conditional: Common Mistakes & Comprehensive Practice (Conditionnel de type 2 : Erreurs courantes et pratique complète)",
-                    subtitle: "Contrast with first conditional, avoid 'would' in the if‑clause, and write hypothetical scenarios. (Contraste avec le conditionnel de type 1, éviter 'would' dans la proposition avec if, et écrire des scénarios hypothétiques.)",
+                    title: {
+                        line1: "Conditionnel type 2 III :",
+                        line2: "Erreurs courantes et pratique complète",
+                        line3: "Contraste avec le conditionnel type 1, évitez 'would' dans la proposition if, et rédigez des scénarios hypothétiques",
+                        line4: "leçon : 3/3"
+                    },
                     contrast: {
-                        title: "Second Conditional vs First Conditional (Conditionnel type 2 vs type 1)",
-                        heading: "Real possibility vs unreal / imaginary situations (Possibilité réelle vs situations irréelles / imaginaires)",
-                        type: "Type (Type)", structure: "Structure",
-                        first: "First Conditional (Type 1)", second: "Second Conditional (Type 2)",
-                        firstEx: "If it rains, we will cancel the picnic. (real future possibility) (S'il pleut, nous annulerons le pique-nique.)",
-                        secondEx: "If it rained, we would cancel the picnic. (imaginary / unlikely situation) (S'il pleuvait, nous annulerions le pique-nique.)",
-                        key: "Key difference (Différence clé)",
-                        desc: "First conditional: real and possible future events. Second conditional: hypothetical, imaginary, or unlikely present/future events. (Type 1 : événements futurs réels et possibles. Type 2 : événements hypothétiques, imaginaires ou improbables au présent/futur.)"
+                        title: "III. 1. Conditionnel type 2 vs Conditionnel type 1",
+                        heading: "Possibilité réelle vs situations irréelles / imaginaires",
+                        type: "Type",
+                        structure: "Structure",
+                        example: "Exemple",
+                        firstCond: "Conditionnel type 1",
+                        firstStruct: "If + présent simple, will + infinitif",
+                        firstEx: "S'il pleut, nous annulerons le pique-nique. (possibilité future réelle)",
+                        secondCond: "Conditionnel type 2",
+                        secondStruct: "If + passé simple, would + infinitif",
+                        secondEx: "S'il pleuvait, nous annulerions le pique-nique. (situation imaginaire / improbable)",
+                        keyDifference: "💡 Différence clé :",
+                        keyDesc: "Conditionnel type 1 : événements futurs réels et possibles. Conditionnel type 2 : événements hypothétiques, imaginaires ou improbables au présent/futur. Le conditionnel type 2 exprime souvent des rêves, des conseils ou des situations contraires aux faits."
                     },
                     mistakes: {
-                        title: "Common Mistakes with Second Conditional (Erreurs courantes avec le conditionnel type 2)",
-                        heading: "Frequent errors & how to fix them (Erreurs fréquentes et corrections)",
-                        willTitle: "❌ Using 'would' in the if‑clause (Utiliser 'would' dans la proposition avec if)",
-                        willDesc: "Incorrect: <em>If I would win the lottery, I would travel.</em> ✅ Correct: <em>If I won the lottery, I would travel.</em> (Use past simple in the if‑clause, not 'would'.) (Utilisez le prétérit dans la proposition avec if, pas 'would'.)",
-                        wasTitle: "❌ Using 'was' instead of 'were' in formal/hypothetical contexts (Utiliser 'was' au lieu de 'were' dans des contextes formels/hypothétiques)",
-                        wasDesc: "While 'was' is sometimes accepted in informal English, the subjunctive 'were' is preferred for all persons in formal writing and exams. (Bien que 'was' soit parfois accepté en anglais informel, le subjonctif 'were' est préféré pour toutes les personnes à l'écrit formel et aux examens.) Incorrect: <em>If I was rich...</em> → Correct: <em>If I were rich...</em>",
-                        mixTitle: "❌ Mixing first and second conditional incorrectly (Mélanger incorrectement les conditionnels type 1 et type 2)",
-                        mixDesc: "Remember: first conditional = possible future (present simple + will). Second conditional = imaginary (past simple + would). Don't mix them: <em>If I have time, I would help</em> → ❌. ✅ <em>If I had time, I would help.</em> (Rappelez-vous : type 1 = futur possible (présent simple + will). Type 2 = imaginaire (prétérit + would). Ne les mélangez pas.)"
+                        title: "III. 2. Erreurs courantes avec le conditionnel type 2",
+                        heading: "Erreurs fréquentes et comment les corriger",
+                        wouldTitle: "❌ Utiliser 'would' dans la proposition if",
+                        wouldDesc: "Incorrect : If I would win the lottery, I would travel. ✅ Correct : If I won the lottery, I would travel. (Utilisez le passé simple dans la proposition if, pas 'would'.)",
+                        wasTitle: "❌ Utiliser 'was' au lieu de 'were' dans les contextes formels/hypothétiques",
+                        wasDesc: "Bien que 'was' soit parfois accepté en anglais informel, le subjonctif 'were' est préféré pour toutes les personnes dans les écrits formels et les examens. Incorrect : If I was rich... → Correct : If I were rich...",
+                        mixTitle: "❌ Mélanger incorrectement le conditionnel type 1 et type 2",
+                        mixDesc: "Rappelez-vous : type 1 = futur possible (présent simple + will). Type 2 = imaginaire (passé simple + would). Ne les mélangez pas : If I have time, I would help → ❌. ✅ If I had time, I would help."
                     },
-                    hypothetical: {
-                        title: "Writing Hypothetical Scenarios (Écrire des scénarios hypothétiques)",
-                        subtitle: "Practice imagining unreal situations (Pratiquez l'imagination de situations irréelles)",
-                        promptTitle: "Prompts to create your own second conditional sentences: (Idées pour créer vos propres phrases au conditionnel type 2 :)",
-                        prompt1: "What would you do if you could speak every language in the world? (Que feriez-vous si vous pouviez parler toutes les langues du monde ?)",
-                        prompt2: "If you had a superpower, what would it be? (Si vous aviez un superpouvoir, lequel serait-ce ?)",
-                        prompt3: "Where would you live if you could choose any city? (Où vivriez-vous si vous pouviez choisir n'importe quelle ville ?)",
-                        dialogTitle: "🗣️ Real‑Life Dialogue: Dream Vacation (Dialogue réel : Voyage de rêve)",
-                        dialog: `<div class="EH-conjugation-example"><strong>Alex :</strong> If you had a million dollars, what would you do? (Si tu avais un million de dollars, que ferais-tu ?)</div>
-                                 <div class="EH-conjugation-example"><strong>Jamie :</strong> If I had that much money, I would travel the world for a year. I'd visit Japan, Italy, and Brazil. (Si j'avais autant d'argent, je voyagerais autour du monde pendant un an. Je visiterais le Japon, l'Italie et le Brésil.)</div>
-                                 <div class="EH-conjugation-example"><strong>Alex :</strong> That sounds amazing! If I could take a year off, I would learn to sail and explore the Mediterranean. (Ça semble incroyable ! Si je pouvais prendre une année sabbatique, j'apprendrais à naviguer et j'explorerais la Méditerranée.)</div>
-                                 <div class="EH-conjugation-example"><strong>Jamie :</strong> And if we both had the chance, we could even go together! (Et si nous en avions tous les deux la chance, nous pourrions même y aller ensemble !)</div>`,
-                        example1: "If I could speak every language, I would travel the world and make friends everywhere. (Si je pouvais parler toutes les langues, je voyagerais dans le monde et je me ferais des amis partout.)",
-                        example2: "If I had a superpower, I would choose invisibility to observe the world unnoticed. (Si j'avais un superpouvoir, je choisirais l'invisibilité pour observer le monde sans être vu.)"
-                    },
-                    exercises: {
-                        title: "Review & Production Exercises (Exercices de révision et production)",
-                        q1: "Choose the correct second conditional sentence: (Choisissez la phrase correcte au conditionnel type 2 :)",
-                        q1a: "If I would be you, I would study. (If I would be you, I would study.)", q1b: "If I were you, I would study. (If I were you, I would study.)", q1c: "If I am you, I would study. (If I am you, I would study.)",
-                        q2: "Which sentence is a second conditional (imaginary)? (Quelle phrase est un conditionnel type 2 (imaginaire) ?)",
-                        q2a: "If she studies, she will pass. (If she studies, she will pass.)", q2b: "If she studied, she would pass. (If she studied, she would pass.)", q2c: "If she will study, she passes. (If she will study, she passes.)",
-                        q3: "Complete: If he ____ here, he would help us. (Complétez : If he ____ here, he would help us.)",
-                        q3a: "was (était)", q3b: "were (était)", q3c: "is (est)",
-                        q4: "What is the mistake? \"If I would have a car, I would drive.\" (Quelle est l'erreur ?)",
-                        q4a: "Using 'would' in the if-clause (Utiliser 'would' dans la proposition if)", q4b: "Missing comma (Virgule manquante)", q4c: "Wrong modal in result (Mauvais modal dans le résultat)",
-                        q5: "Choose the correct sentence (second conditional). (Choisissez la phrase correcte - type 2.)",
-                        q5a: "If I knew the answer, I will tell you. (If I knew the answer, I will tell you.)", q5b: "If I knew the answer, I would tell you. (If I knew the answer, I would tell you.)", q5c: "If I know the answer, I would tell you. (If I know the answer, I would tell you.)",
-                        q6: "Which sentence expresses a dream/unreal situation? (Quelle phrase exprime une situation de rêve / irréelle ?)",
-                        q6a: "If it snows, we will build a snowman. (S'il neige, nous construirons un bonhomme de neige.)", q6b: "If I were invisible, I would explore everywhere. (Si j'étais invisible, j'explorerais partout.)", q6c: "If you heat ice, it melts. (Si vous chauffez la glace, elle fond.)",
-                        q7: "Complete: If she ____ (have) more time, she ____ (travel) more. (Complétez : If she ____ (have) more time, she ____ (travel) more.)",
-                        q8: "Complete (subjunctive): If I ____ (be) the president, I ____ (improve) education. (Complétez (subjonctif) : If I ____ (be) the president, I ____ (improve) education.)",
-                        q9: "Correct the mistake: \"If we would leave now, we would arrive early.\" → Write the correct version. (Corrigez l'erreur : \"If we would leave now, we would arrive early.\" → Écrivez la version correcte.)",
-                        q10: "Arrange: (would / I / if / were / I / you / study / harder) (Remettez dans l'ordre :)",
-                        q11: "Arrange: (if / she / could / she / would / any / sing / language)",
-                        q12: "Arrange: (would / if / we / a / we / buy / house / had / money)"
+                    writing: {
+                        title: "III. 3. Rédiger des scénarios hypothétiques",
+                        subtitle: "Entraînez-vous à imaginer des situations irréelles",
+                        prompt1: "💭 Que feriez-vous si vous pouviez parler toutes les langues du monde ?",
+                        prompt2: "💭 Si vous aviez un super-pouvoir, lequel serait-ce ?",
+                        prompt3: "💭 Où habiteriez-vous si vous pouviez choisir n'importe quelle ville ?",
+                        dialogueHeading: "🗣️ Dialogue réaliste : Vacances de rêve",
+                        dialogueLine1: "Alex : Si tu avais un million de dollars, que ferais-tu ?",
+                        dialogueLine2: "Jamie : Si j'avais autant d'argent, je voyagerais autour du monde pendant un an. Je visiterais le Japon, l'Italie et le Brésil.",
+                        dialogueLine3: "Alex : Ça a l'air génial ! Si je pouvais prendre une année sabbatique, j'apprendrais à naviguer et j'explorerais la Méditerranée.",
+                        dialogueLine4: "Jamie : Et si nous en avions tous les deux l'occasion, nous pourrions même y aller ensemble !",
+                        exampleHeading: "Phrases d'exemple :",
+                        ex1: "Si je pouvais parler toutes les langues, je voyagerais dans le monde entier et me ferais des amis partout.",
+                        ex2: "Si j'avais un super-pouvoir, je choisirais l'invisibilité pour observer le monde sans être remarqué."
                     }
                 }
             },
             ar: {
-                common: { siteName: "English Hub",
-                    previousLesson: "Previous Lesson (الدرس السابق)← ",
-                    returnToConjugation: "Return to Conjugation (العودة إلى التصريف)← ",
-                    nextLesson: "Next Lesson (الدرس التالي) →" },
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "الدرس السابق← ",
+                    returnToConjugation: "العودة إلى التصريف← ",
+                    nextLesson: "الدرس التالي →"
+                },
                 footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
                 secondConditional3: {
-                    title: "Second Conditional: Common Mistakes & Comprehensive Practice (الشرط الثاني: الأخطاء الشائعة والتمرين الشامل)",
-                    subtitle: "Contrast with first conditional, avoid 'would' in the if‑clause, and write hypothetical scenarios. (المقارنة مع الشرط الأول، تجنب 'would' في جملة if، وكتابة سيناريوهات افتراضية.)",
+                    title: {
+                        line1: "الشرط الثاني: 3:",
+                        line2: "الأخطاء الشائعة والتمرين الشامل",
+                        line3: "قارن مع الشرط الأول، وتجنب 'would' في جملة if، واكتب سيناريوهات افتراضية",
+                        line4: "الدرس: 3/3"
+                    },
                     contrast: {
-                        title: "Second Conditional vs First Conditional (الشرط الثاني مقابل الشرط الأول)",
-                        heading: "Real possibility vs unreal / imaginary situations (احتمال حقيقي مقابل مواقف غير حقيقية / خيالية)",
-                        type: "Type (النوع)", structure: "Structure (البنية)",
-                        first: "First Conditional (الشرط الأول)", second: "Second Conditional (الشرط الثاني)",
-                        firstEx: "If it rains, we will cancel the picnic. (real future possibility) (إذا أمطرت، سنلغي النزهة.)",
-                        secondEx: "If it rained, we would cancel the picnic. (imaginary / unlikely situation) (إذا أمطرت، كنا سنلغي النزهة.)",
-                        key: "Key difference (الفرق الرئيسي)",
-                        desc: "First conditional: real and possible future events. Second conditional: hypothetical, imaginary, or unlikely present/future events. (الشرط الأول: أحداث مستقبلية حقيقية وممكنة. الشرط الثاني: أحداث افتراضية أو خيالية أو غير محتملة في الحاضر/المستقبل.)"
+                        title: "III. 1. الشرط الثاني مقابل الشرط الأول",
+                        heading: "الإمكانية الحقيقية مقابل المواقف غير الحقيقية / الخيالية",
+                        type: "النوع",
+                        structure: "البنية",
+                        example: "مثال",
+                        firstCond: "الشرط الأول",
+                        firstStruct: "If + مضارع بسيط، will + مصدر",
+                        firstEx: "إذا أمطرت، سنلغي النزهة. (إمكانية مستقبلية حقيقية)",
+                        secondCond: "الشرط الثاني",
+                        secondStruct: "If + ماضٍ بسيط، would + مصدر",
+                        secondEx: "إذا أمطرت، كنا لنلغي النزهة. (موقف خيالي / غير محتمل)",
+                        keyDifference: "💡 الفرق الرئيسي:",
+                        keyDesc: "الشرط الأول: أحداث مستقبلية حقيقية وممكنة. الشرط الثاني: أحداث افتراضية أو خيالية أو غير محتملة في الحاضر/المستقبل. غالبًا ما يعبر الشرط الثاني عن الأحلام أو النصائح أو المواقف المخالفة للواقع."
                     },
                     mistakes: {
-                        title: "Common Mistakes with Second Conditional (الأخطاء الشائعة مع الشرط الثاني)",
-                        heading: "Frequent errors & how to fix them (أخطاء متكررة وكيفية تصحيحها)",
-                        willTitle: "❌ Using 'would' in the if‑clause (استخدام 'would' في جملة if)",
-                        willDesc: "Incorrect: <em>If I would win the lottery, I would travel.</em> ✅ Correct: <em>If I won the lottery, I would travel.</em> (Use past simple in the if‑clause, not 'would'.) (استخدم الماضي البسيط في جملة if، وليس 'would'.)",
-                        wasTitle: "❌ Using 'was' instead of 'were' in formal/hypothetical contexts (استخدام 'was' بدلاً من 'were' في السياقات الرسمية/الافتراضية)",
-                        wasDesc: "While 'was' is sometimes accepted in informal English, the subjunctive 'were' is preferred for all persons in formal writing and exams. (على الرغم من أن 'was' مقبول أحيانًا في الإنجليزية غير الرسمية، إلا أن صيغة المبني للمجهول 'were' مفضلة لجميع الضمائر في الكتابة الرسمية والامتحانات.) Incorrect: <em>If I was rich...</em> → Correct: <em>If I were rich...</em>",
-                        mixTitle: "❌ Mixing first and second conditional incorrectly (الخلط بين الشرط الأول والثاني بشكل خاطئ)",
-                        mixDesc: "Remember: first conditional = possible future (present simple + will). Second conditional = imaginary (past simple + would). Don't mix them: <em>If I have time, I would help</em> → ❌. ✅ <em>If I had time, I would help.</em> (تذكر: الشرط الأول = مستقبل ممكن (مضارع بسيط + will). الشرط الثاني = خيالي (ماضي بسيط + would). لا تخلط بينهما.)"
+                        title: "III. 2. الأخطاء الشائعة مع الشرط الثاني",
+                        heading: "أخطاء متكررة وكيفية تصحيحها",
+                        wouldTitle: "❌ استخدام 'would' في جملة if",
+                        wouldDesc: "خطأ: If I would win the lottery, I would travel. ✅ الصواب: If I won the lottery, I would travel. (استخدم الماضي البسيط في جملة if، وليس 'would'.)",
+                        wasTitle: "❌ استخدام 'was' بدلاً من 'were' في السياقات الرسمية/الافتراضية",
+                        wasDesc: "رغم أن 'was' مقبولة أحيانًا في الإنجليزية غير الرسمية، إلا أن الصيغة الشرطية 'were' مفضلة لجميع الأشخاص في الكتابة الرسمية والامتحانات. خطأ: If I was rich... → الصواب: If I were rich...",
+                        mixTitle: "❌ الخلط بين الشرط الأول والثاني بشكل خاطئ",
+                        mixDesc: "تذكر: الشرط الأول = مستقبل ممكن (مضارع بسيط + will). الشرط الثاني = خيالي (ماضٍ بسيط + would). لا تخلط بينهما: If I have time, I would help → ❌. ✅ If I had time, I would help."
                     },
-                    hypothetical: {
-                        title: "Writing Hypothetical Scenarios (كتابة سيناريوهات افتراضية)",
-                        subtitle: "Practice imagining unreal situations (تدرب على تخيل مواقف غير حقيقية)",
-                        promptTitle: "Prompts to create your own second conditional sentences: (مطالبات لإنشاء جمل الشرط الثاني الخاصة بك:)",
-                        prompt1: "What would you do if you could speak every language in the world? (ماذا كنت ستفعل إذا كنت تستطيع التحدث بكل لغات العالم؟)",
-                        prompt2: "If you had a superpower, what would it be? (إذا كانت لديك قوة خارقة، ماذا ستكون؟)",
-                        prompt3: "Where would you live if you could choose any city? (أين كنت ستعيش إذا كان بإمكانك اختيار أي مدينة؟)",
-                        dialogTitle: "🗣️ Real‑Life Dialogue: Dream Vacation (حوار واقعي: إجازة الأحلام)",
-                        dialog: `<div class="EH-conjugation-example"><strong>Alex:</strong> If you had a million dollars, what would you do? (إذا كان لديك مليون دولار، ماذا كنت ستفعل؟)</div>
-                                 <div class="EH-conjugation-example"><strong>Jamie:</strong> If I had that much money, I would travel the world for a year. I'd visit Japan, Italy, and Brazil. (إذا كان لدي كل هذا المال، كنت سأسافر حول العالم لمدة عام. سأزور اليابان وإيطاليا والبرازيل.)</div>
-                                 <div class="EH-conjugation-example"><strong>Alex:</strong> That sounds amazing! If I could take a year off, I would learn to sail and explore the Mediterranean. (هذا يبدو رائعًا! إذا كان بإمكاني أخذ سنة إجازة، كنت سأتعلم الإبحار واستكشف البحر الأبيض المتوسط.)</div>
-                                 <div class="EH-conjugation-example"><strong>Jamie:</strong> And if we both had the chance, we could even go together! (وإذا كانت لدينا الفرصة معًا، يمكننا حتى الذهاب سويًا!)</div>`,
-                        example1: "If I could speak every language, I would travel the world and make friends everywhere. (إذا كنت أستطيع التحدث بكل اللغات، لكنت سافرت حول العالم وتكوين صداقات في كل مكان.)",
-                        example2: "If I had a superpower, I would choose invisibility to observe the world unnoticed. (إذا كانت لدي قوة خارقة، لكنت اخترت الاختفاء لمراقبة العالم دون أن يُرى.)"
-                    },
-                    exercises: {
-                        title: "Review & Production Exercises (تمارين المراجعة والإنتاج)",
-                        q1: "Choose the correct second conditional sentence: (اختر جملة الشرط الثاني الصحيحة:)",
-                        q1a: "If I would be you, I would study. (If I would be you, I would study.)", q1b: "If I were you, I would study. (If I were you, I would study.)", q1c: "If I am you, I would study. (If I am you, I would study.)",
-                        q2: "Which sentence is a second conditional (imaginary)? (أي جملة هي شرط ثانٍ (خيالي)؟)",
-                        q2a: "If she studies, she will pass. (If she studies, she will pass.)", q2b: "If she studied, she would pass. (If she studied, she would pass.)", q2c: "If she will study, she passes. (If she will study, she passes.)",
-                        q3: "Complete: If he ____ here, he would help us. (أكمل: If he ____ here, he would help us.)",
-                        q3a: "was (كان)", q3b: "were (كان)", q3c: "is (هو)",
-                        q4: "What is the mistake? \"If I would have a car, I would drive.\" (ما الخطأ؟)",
-                        q4a: "Using 'would' in the if-clause (استخدام 'would' في جملة if)", q4b: "Missing comma (فاصلة مفقودة)", q4c: "Wrong modal in result (فعل مساعد خاطئ في النتيجة)",
-                        q5: "Choose the correct sentence (second conditional). (اختر الجملة الصحيحة - الشرط الثاني.)",
-                        q5a: "If I knew the answer, I will tell you. (If I knew the answer, I will tell you.)", q5b: "If I knew the answer, I would tell you. (If I knew the answer, I would tell you.)", q5c: "If I know the answer, I would tell you. (If I know the answer, I would tell you.)",
-                        q6: "Which sentence expresses a dream/unreal situation? (أي جملة تعبر عن موقف حلم / غير حقيقي؟)",
-                        q6a: "If it snows, we will build a snowman. (إذا تساقط الثلج، سنبني رجل ثلج.)", q6b: "If I were invisible, I would explore everywhere. (إذا كنت غير مرئي، لكنت استكشفت كل مكان.)", q6c: "If you heat ice, it melts. (إذا سخنت الجليد، يذوب.)",
-                        q7: "Complete: If she ____ (have) more time, she ____ (travel) more. (أكمل: If she ____ (have) more time, she ____ (travel) more.)",
-                        q8: "Complete (subjunctive): If I ____ (be) the president, I ____ (improve) education. (أكمل (صيغة المبني للمجهول): If I ____ (be) the president, I ____ (improve) education.)",
-                        q9: "Correct the mistake: \"If we would leave now, we would arrive early.\" → Write the correct version. (صحح الخطأ: \"If we would leave now, we would arrive early.\" → اكتب النسخة الصحيحة.)",
-                        q10: "Arrange: (would / I / if / were / I / you / study / harder) (رتب:)",
-                        q11: "Arrange: (if / she / could / she / would / any / sing / language)",
-                        q12: "Arrange: (would / if / we / a / we / buy / house / had / money)"
+                    writing: {
+                        title: "III. 3. كتابة سيناريوهات افتراضية",
+                        subtitle: "تدرب على تخيل مواقف غير حقيقية",
+                        prompt1: "💭 ماذا كنت ستفعل لو استطعت التحدث بكل لغات العالم؟",
+                        prompt2: "💭 إذا كانت لديك قوة خارقة، ماذا ستكون؟",
+                        prompt3: "💭 أين كنت ستعيش لو استطعت اختيار أي مدينة؟",
+                        dialogueHeading: "🗣️ حوار واقعي: إجازة الأحلام",
+                        dialogueLine1: "أليكس: إذا كان لديك مليون دولار، ماذا كنت ستفعل؟",
+                        dialogueLine2: "جايمي: إذا كان لديّ كل هذا المال، لكنت سافرت حول العالم لمدة عام. كنت سأزور اليابان وإيطاليا والبرازيل.",
+                        dialogueLine3: "أليكس: يبدو رائعًا! إذا استطعت أخذ إجازة لمدة عام، كنت سأتعلم الإبحار وأستكشف البحر المتوسط.",
+                        dialogueLine4: "جايمي: وإذا أتيحت لنا الفرصة معًا، لاستطعنا حتى الذهاب معًا!",
+                        exampleHeading: "جمل مثال:",
+                        ex1: "إذا استطعت التحدث بكل اللغات، لكنت سافرت حول العالم وتكوين أصدقاء في كل مكان.",
+                        ex2: "إذا كانت لديّ قوة خارقة، لكنت اخترت الاختفاء لأراقب العالم دون أن يلاحظني أحد."
                     }
                 }
             }
         };
     </script>
-    <script src="scripts/common-i18n.js"></script>
-    <!-- Modular exercise engine (replaces the old exercise.js) -->
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
-
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ----- Multiple Choice -----
+        // Multiple choice exercises
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'secondConditional3.exercises.q1',
-                    options: [
-                        { value: 'a', labelKey: 'secondConditional3.exercises.q1a' },
-                        { value: 'b', labelKey: 'secondConditional3.exercises.q1b' },
-                        { value: 'c', labelKey: 'secondConditional3.exercises.q1c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'secondConditional3.exercises.q2',
-                    options: [
-                        { value: 'a', labelKey: 'secondConditional3.exercises.q2a' },
-                        { value: 'b', labelKey: 'secondConditional3.exercises.q2b' },
-                        { value: 'c', labelKey: 'secondConditional3.exercises.q2c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'secondConditional3.exercises.q3',
-                    options: [
-                        { value: 'a', labelKey: 'secondConditional3.exercises.q3a' },
-                        { value: 'b', labelKey: 'secondConditional3.exercises.q3b' },
-                        { value: 'c', labelKey: 'secondConditional3.exercises.q3c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'secondConditional3.exercises.q4',
-                    options: [
-                        { value: 'a', labelKey: 'secondConditional3.exercises.q4a' },
-                        { value: 'b', labelKey: 'secondConditional3.exercises.q4b' },
-                        { value: 'c', labelKey: 'secondConditional3.exercises.q4c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'secondConditional3.exercises.q5',
-                    options: [
-                        { value: 'a', labelKey: 'secondConditional3.exercises.q5a' },
-                        { value: 'b', labelKey: 'secondConditional3.exercises.q5b' },
-                        { value: 'c', labelKey: 'secondConditional3.exercises.q5c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'secondConditional3.exercises.q6',
-                    options: [
-                        { value: 'a', labelKey: 'secondConditional3.exercises.q6a' },
-                        { value: 'b', labelKey: 'secondConditional3.exercises.q6b' },
-                        { value: 'c', labelKey: 'secondConditional3.exercises.q6c' }
-                    ],
-                    correctAnswer: 'b'
-                }
+                { questionTextKey: 'secondConditional3.exercises.q1', options: [{ value: 'a', labelKey: 'secondConditional3.exercises.q1a' }, { value: 'b', labelKey: 'secondConditional3.exercises.q1b' }, { value: 'c', labelKey: 'secondConditional3.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'secondConditional3.exercises.q2', options: [{ value: 'a', labelKey: 'secondConditional3.exercises.q2a' }, { value: 'b', labelKey: 'secondConditional3.exercises.q2b' }, { value: 'c', labelKey: 'secondConditional3.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'secondConditional3.exercises.q3', options: [{ value: 'a', labelKey: 'secondConditional3.exercises.q3a' }, { value: 'b', labelKey: 'secondConditional3.exercises.q3b' }, { value: 'c', labelKey: 'secondConditional3.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'secondConditional3.exercises.q4', options: [{ value: 'a', labelKey: 'secondConditional3.exercises.q4a' }, { value: 'b', labelKey: 'secondConditional3.exercises.q4b' }, { value: 'c', labelKey: 'secondConditional3.exercises.q4c' }], correctAnswer: 'a' },
+                { questionTextKey: 'secondConditional3.exercises.q5', options: [{ value: 'a', labelKey: 'secondConditional3.exercises.q5a' }, { value: 'b', labelKey: 'secondConditional3.exercises.q5b' }, { value: 'c', labelKey: 'secondConditional3.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'secondConditional3.exercises.q6', options: [{ value: 'a', labelKey: 'secondConditional3.exercises.q6a' }, { value: 'b', labelKey: 'secondConditional3.exercises.q6b' }, { value: 'c', labelKey: 'secondConditional3.exercises.q6c' }], correctAnswer: 'b' }
             ]
         });
-
-        // ----- Fill in the Blank -----
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+    </script>
+    <script>
+        // Fill-in-the-blank exercises
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'secondConditional3.exercises.q7',
-                    answers: ['had would travel', 'had, would travel']
-                },
-                {
-                    questionTextKey: 'secondConditional3.exercises.q8',
-                    answers: ['were would improve', 'were, would improve']
-                },
-                {
-                    questionTextKey: 'secondConditional3.exercises.q9',
-                    answers: ['If we left now, we would arrive early.', 'If we left now we would arrive early.']
-                }
+                { questionTextKey: 'secondConditional3.exercises.q7', answers: ['had', 'would travel'] },
+                { questionTextKey: 'secondConditional3.exercises.q8', answers: ['were', 'would improve'] },
+                { questionTextKey: 'secondConditional3.exercises.q9', answers: ['If we left now, we would arrive early.', 'If we left now we would arrive early.'] }
             ]
         });
-
-        // ----- Sentence Ordering -----
+    </script>
+    <script>
+        // Sentence ordering exercises
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'secondConditional3.exercises.q10',
-                    words: ['would', 'I', 'if', 'were', 'I', 'you', 'study', 'harder', '.'],
-                    correctSentence: 'If I were you I would study harder .'
-                },
-                {
-                    questionTextKey: 'secondConditional3.exercises.q11',
-                    words: ['if', 'she', 'could', 'she', 'would', 'any', 'sing', 'language', '.'],
-                    correctSentence: 'If she could sing she would sing any language .'
-                },
-                {
-                    questionTextKey: 'secondConditional3.exercises.q12',
-                    words: ['would', 'if', 'we', 'a', 'we', 'buy', 'house', 'had', 'money', '.'],
-                    correctSentence: 'If we had money we would buy a house .'
-                }
+                { questionTextKey: 'secondConditional3.exercises.q10', words: ['would', 'I', 'if', 'were', 'I', 'you', 'study', 'harder', '.'], correctSentence: 'if i were you i would study harder .' },
+                { questionTextKey: 'secondConditional3.exercises.q11', words: ['if', 'she', 'could', 'she', 'would', 'sing', 'any', 'language', '.'], correctSentence: 'if she could she would sing any language .' },
+                { questionTextKey: 'secondConditional3.exercises.q12', words: ['would', 'if', 'we', 'a', 'we', 'buy', 'house', 'had', 'money', '.'], correctSentence: 'if we had money we would buy a house .' }
             ]
         });
-
-        // ----- Check all exercises -----
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
@@ -545,31 +518,30 @@
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered second conditional!';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered the second conditional!';
                 else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review common mistakes.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit common mistakes and the contrast with first conditional.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
-        }
 
+            // ---------- NEW: sound & visual effects ----------
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
         document.addEventListener('DOMContentLoaded', function() {
-            // Init drag-and-drop for ordering
-            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-
-        // ----- i18n rendering (handles innerHTML tags) -----
+        // i18n rendering – handles nested keys for title lines
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
-                document.querySelectorAll('[data-i18n]').forEach(el => {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
+                    if (translation) {
                         el.textContent = translation;
                     }
                 });

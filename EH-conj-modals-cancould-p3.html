@@ -1,271 +1,324 @@
+<!-- EH-conj-modals-cancould-p3.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can & Could: Real-World Application & Common Pitfalls - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>Can & Could III: Real-World Application & Common Pitfalls - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-        /* can/could part 3 palette – deep purple / lavender (modular variables) */
         :root {
-            --bg-gradient: linear-gradient(135deg, #4a148c, #6a1b9a, #8e24aa, #ab47bc);
-            --title-color: #6a1b9a;
-            --primary: #8e24aa;
-            --primary-hover: #6a1b9a;
-            --primary-light: #ce93d8;
-            --accent: #ce93d8;
-            --rule-bg: #f3e5f5;
-            --rule-border: #ba68c8;
-            --example-bg: #e1bee7;
-            --example-border: #ba68c8;
-            --exercise-number-gradient: linear-gradient(135deg, #8e24aa, #ba68c8);
-            --nav-btn-bg: #8e24aa;
-            --nav-btn-hover: #6a1b9a;
-            --nav-back-btn-bg: #ba68c8;
-            --nav-back-btn-color: white;
-            --nav-back-btn-hover: #8e24aa;
-
-            /* neutrals (shared across pages) */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
-            --correct-bg: #d4edda;
-            --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --bg-gradient: linear-gradient(135deg, #f0c8d8, #e8a8b8, #e07898, #d06080);
+            --content-bg: #fef6f8;
+            --card-bg: #ffffff;
+            --subsection-bg: #fdf2f4;
+            --rule-bg: #fce8ec;
+            --example-bg: #fae0e5;
+            --table-stripe: #fef0f2;
+            --title-color: #5c1e2e;
+            --text-color: #3d1a24;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #c44a5e;
+            --primary-hover: #ad3a4e;
+            --primary-light: #d4727a;
+            --accent: #c44a5e;
+            --exercise-number-gradient: linear-gradient(135deg, #c44a5e, #9a2e40);
+            --rule-border: #c44a5e;
+            --example-border: #c44a5e;
+            --nav-btn-bg: #c44a5e;
+            --nav-btn-hover: #9a2e40;
+            --nav-back-btn-bg: #d4727a;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #c44a5e;
+            --refract-divider-color: #d49098;
+            --refract-translation-bg: #f5d8de;
+            --refract-translation-border: #c44a5e;
+            --refract-english-color: #3d1a24;
+            --section-divider: #edd0d4;
+            --card-border: #edd0d4;
+            --input-border: #d4a8b0;
+            --dashed-border: #d4a8b0;
+            --table-border: #e0c0c4;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #f2e4e8;
+            --neutral-color: #6b4e5a;
+            --neutral-border: #d4b8bc;
+            --empty-input-border: #c8a0a8;
+            --empty-input-bg: #faf2f4;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #c44a5e;
+            --language-selector-color: #3d1a24;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #5c1e2e, #6b2838, #7a3240, #8a3c4a);
+            --content-bg: #3d1a24;
+            --card-bg: #4a252e;
+            --subsection-bg: #4a252e;
+            --rule-bg: #3d1a24;
+            --example-bg: #3d1a24;
+            --table-stripe: #45222c;
+            --title-color: #f0b8c4;
+            --text-color: #f0d8de;
+            --header-text: #f0d8de;
+            --header-text-light: #d4a8b0;
+            --primary: #d47886;
+            --primary-hover: #e08a98;
+            --primary-light: #d47886;
+            --accent: #d47886;
+            --rule-border: #d47886;
+            --example-border: #d47886;
+            --exercise-number-gradient: linear-gradient(135deg, #d47886, #c44a5e);
+            --nav-btn-bg: #d47886;
+            --nav-btn-hover: #c44a5e;
+            --nav-back-btn-bg: #e08a98;
+            --nav-back-btn-color: #2a1016;
+            --nav-back-btn-hover: #d47886;
+            --refract-divider-color: #c88a96;
+            --refract-translation-bg: #5c2e38;
+            --refract-translation-border: #c88a96;
+            --refract-english-color: #f4d8de;
+            --section-divider: #5c2e38;
+            --card-border: #5c2e38;
+            --input-border: #6b3d4a;
+            --dashed-border: #6b3d4a;
+            --table-border: #5a3038;
+            --white: #f0d8de;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #4a3038;
+            --neutral-color: #d4b0b8;
+            --neutral-border: #6b3d4a;
+            --empty-input-border: #6b3d4a;
+            --empty-input-bg: #3d1a24;
+            --language-selector-bg: #4a252e;
+            --language-selector-border: #d47886;
+            --language-selector-color: #f0d8de;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
-    <link rel="stylesheet" href="styles/style-conjugation.css">
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="modalsCanCould3.title">Can & Could: Real-World Application & Common Pitfalls</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="modalsCanCould3.subtitle">Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="canCould3.title.line1">Can & Could III:</div>
+                <div class="EH-conjugation-title-line" data-i18n="canCould3.title.line2">Real-World Application & Common Pitfalls</div>
+                <div class="EH-conjugation-subtitle" data-i18n="canCould3.title.line3">Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts.</div>
+                <div class="EH-conjugation-subtitle" data-i18n="canCould3.title.line4">lesson: 3/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Section: Common Mistakes -->
+            <!-- Section 1: Common Mistakes with Can & Could -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould3.mistakes.title">Common Mistakes with Can & Could</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould3.mistakes.title">III. 1. Common Mistakes with Can & Could</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">⚠️</span>
-                        <span data-i18n="modalsCanCould3.mistakes.heading1">Frequent errors</span>
+                        <span data-i18n="canCould3.mistakes.heading">Frequent errors</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsCanCould3.mistakes.error1Title">❌ Using 'to' after can/could</div>
-                        <p data-i18n="modalsCanCould3.mistakes.error1Desc">Incorrect: <em>I can to swim.</em> ✅ Correct: <em>I can swim.</em> (modal + base verb without 'to')</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould3.mistakes.toTitle">❌ Using 'to' after can/could</div>
+                        <p data-i18n="canCould3.mistakes.toDesc">Incorrect: <em>I can to swim.</em> ✅ Correct: <em>I can swim.</em> (modal + base verb without 'to')</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsCanCould3.mistakes.error2Title">❌ Using 'could' for present ability</div>
-                        <p data-i18n="modalsCanCould3.mistakes.error2Desc">Incorrect: <em>I could speak Spanish now.</em> (if you mean present ability) ✅ Correct: <em>I can speak Spanish now.</em> (Use 'can' for present, 'could' for past or hypothetical)</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould3.mistakes.presentTitle">❌ Using 'could' for present ability</div>
+                        <p data-i18n="canCould3.mistakes.presentDesc">Incorrect: <em>I could speak Spanish now.</em> (if you mean present ability) ✅ Correct: <em>I can speak Spanish now.</em> (Use 'can' for present, 'could' for past or hypothetical)</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsCanCould3.mistakes.error3Title">❌ Confusing 'can' and 'be able to' for past achievements</div>
-                        <p data-i18n="modalsCanCould3.mistakes.error3Desc">For a specific past achievement, use <strong>was/were able to</strong>, not 'could'. <br> ✅ <em>I was able to finish the race.</em> (not 'I could finish')</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould3.mistakes.achievementTitle">❌ Confusing 'can' and 'be able to' for past achievements</div>
+                        <p data-i18n="canCould3.mistakes.achievementDesc">For a specific past achievement, use <strong>was/were able to</strong>, not 'could'. ✅ <em>I was able to finish the race.</em> (not 'I could finish')</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsCanCould3.mistakes.error4Title">❌ Double modals</div>
-                        <p data-i18n="modalsCanCould3.mistakes.error4Desc">Incorrect: <em>I might can come.</em> ✅ Correct: <em>I might be able to come.</em> or <em>I can come.</em></p>
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould3.mistakes.doubleTitle">❌ Double modals</div>
+                        <p data-i18n="canCould3.mistakes.doubleDesc">Incorrect: <em>I might can come.</em> ✅ Correct: <em>I might be able to come.</em> or <em>I can come.</em></p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Section: Idiomatic Expressions -->
+            <!-- Section 2: Idiomatic Expressions with Can/Could -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould3.idioms.title">Idiomatic Expressions with Can/Could</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould3.idioms.title">III. 2. Idiomatic Expressions with Can/Could</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">💬</span>
-                        <span data-i18n="modalsCanCould3.idioms.heading1">Common fixed phrases</span>
+                        <span data-i18n="canCould3.idioms.heading">Common fixed phrases</span>
                     </h3>
                     <table class="EH-conjugation-table">
-                        <thead>  <tr><th data-i18n="common.expression">Expression</th><th data-i18n="common.meaning">Meaning</th><th data-i18n="common.example">Example</th> </tr> </thead>
+                        <thead>
+                            <tr>
+                                <th data-i18n="canCould3.idioms.expressionCol">Expression</th>
+                                <th data-i18n="canCould3.idioms.meaningCol">Meaning</th>
+                                <th data-i18n="canCould3.idioms.exampleCol">Example</th>
+                            </tr>
+                        </thead>
                         <tbody>
-                            <tr><td><strong>can't stand</strong></td><td data-i18n="modalsCanCould3.idioms.standMeaning">strongly dislike</td><td data-i18n="modalsCanCould3.idioms.standEx">I can't stand loud music.</td> </tr>
-                            <tr><td><strong>can't help</strong></td><td data-i18n="modalsCanCould3.idioms.helpMeaning">unable to avoid/stop</td><td data-i18n="modalsCanCould3.idioms.helpEx">I can't help laughing at his jokes.</td> </tr>
-                            <tr><td><strong>can't be bothered</strong></td><td data-i18n="modalsCanCould3.idioms.botheredMeaning">unwilling to make an effort</td><td data-i18n="modalsCanCould3.idioms.botheredEx">I can't be bothered to cook tonight.</td> </tr>
-                            <tr><td><strong>couldn't care less</strong></td><td data-i18n="modalsCanCould3.idioms.carelessMeaning">completely uninterested</td><td data-i18n="modalsCanCould3.idioms.carelessEx">He couldn't care less about the test.</td> </tr>
-                            <tr><td><strong>could give someone a hand</strong></td><td data-i18n="modalsCanCould3.idioms.handMeaning">help someone</td><td data-i18n="modalsCanCould3.idioms.handEx">Could you give me a hand with this box?</td> </tr>
+                            <tr>
+                                <td>can't stand</td>
+                                <td data-i18n="canCould3.idioms.standMeaning">strongly dislike</td>
+                                <td data-i18n="canCould3.idioms.standEx">I can't stand loud music.</td>
+                            </tr>
+                            <tr>
+                                <td>can't help</td>
+                                <td data-i18n="canCould3.idioms.helpMeaning">unable to avoid/stop</td>
+                                <td data-i18n="canCould3.idioms.helpEx">I can't help laughing at his jokes.</td>
+                            </tr>
+                            <tr>
+                                <td>can't be bothered</td>
+                                <td data-i18n="canCould3.idioms.botheredMeaning">unwilling to make an effort</td>
+                                <td data-i18n="canCould3.idioms.botheredEx">I can't be bothered to cook tonight.</td>
+                            </tr>
+                            <tr>
+                                <td>couldn't care less</td>
+                                <td data-i18n="canCould3.idioms.careMeaning">completely uninterested</td>
+                                <td data-i18n="canCould3.idioms.careEx">He couldn't care less about the test.</td>
+                            </tr>
+                            <tr>
+                                <td>could give someone a hand</td>
+                                <td data-i18n="canCould3.idioms.handMeaning">help someone</td>
+                                <td data-i18n="canCould3.idioms.handEx">Could you give me a hand with this box?</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            
-            <!-- Section: Contextual Practice - At a Restaurant -->
+            <!-- Section 3: Contextual Practice – At a Restaurant -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould3.context.title">Contextual Practice: At a Restaurant</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould3.restaurant.title">III. 3. Contextual Practice: At a Restaurant</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">🍽️</span>
-                        <span data-i18n="modalsCanCould3.context.subtitle">Using modals for ordering & requests</span>
+                        <span data-i18n="canCould3.restaurant.heading">Using modals for ordering & requests</span>
                     </h3>
+                    <div class="EH-conjugation-examples">
+                        <p><strong data-i18n="canCould3.restaurant.customer">Customer:</strong> <span data-i18n="canCould3.restaurant.line1">"Can I see the menu, please?"</span></p>
+                        <p><strong data-i18n="canCould3.restaurant.server">Server:</strong> <span data-i18n="canCould3.restaurant.line2">"Of course. Here you are. Could I get you any drinks to start?"</span></p>
+                        <p><strong data-i18n="canCould3.restaurant.customer">Customer:</strong> <span data-i18n="canCould3.restaurant.line3">"Yes, could I have a glass of water?"</span></p>
+                        <p><strong data-i18n="canCould3.restaurant.server">Server:</strong> <span data-i18n="canCould3.restaurant.line4">"Certainly. Would you like to order now?"</span></p>
+                        <p><strong data-i18n="canCould3.restaurant.customer">Customer:</strong> <span data-i18n="canCould3.restaurant.line5">"I think I'm ready. May I have the grilled salmon?"</span></p>
+                        <p><strong data-i18n="canCould3.restaurant.server">Server:</strong> <span data-i18n="canCould3.restaurant.line6">"Excellent choice. Can I bring you anything else?"</span></p>
+                        <p><strong data-i18n="canCould3.restaurant.customer">Customer:</strong> <span data-i18n="canCould3.restaurant.line7">"That's all, thanks. Could we have the bill when you get a chance?"</span></p>
+                    </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsCanCould3.context.dialogue">Sample dialogue:</div>
-                        <p><strong data-i18n="modalsCanCould3.context.customer">Customer:</strong> <span data-i18n="modalsCanCould3.context.line1">"Can I see the menu, please?"</span><br>
-                        <strong data-i18n="modalsCanCould3.context.server">Server:</strong> <span data-i18n="modalsCanCould3.context.line2">"Of course. Here you are. Could I get you any drinks to start?"</span><br>
-                        <strong>Customer:</strong> <span data-i18n="modalsCanCould3.context.line3">"Yes, could I have a glass of water?"</span><br>
-                        <strong>Server:</strong> <span data-i18n="modalsCanCould3.context.line4">"Certainly. Would you like to order now?"</span><br>
-                        <strong>Customer:</strong> <span data-i18n="modalsCanCould3.context.line5">"I think I'm ready. May I have the grilled salmon?"</span><br>
-                        <strong>Server:</strong> <span data-i18n="modalsCanCould3.context.line6">"Excellent choice. Can I bring you anything else?"</span><br>
-                        <strong>Customer:</strong> <span data-i18n="modalsCanCould3.context.line7">"That's all, thanks. Could we have the bill when you get a chance?"</span></p>
-                        <p data-i18n="modalsCanCould3.context.note"><em>Notice the use of can, could, and may for polite requests and permission.</em></p>
+                        <p data-i18n="canCould3.restaurant.note">💡 Notice the use of can, could, and may for polite requests and permission.</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- EXERCISES (12) – dynamic containers -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould3.exercises.title">Review & Production Exercises</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #6a1b9a; margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould3.exercises.title">Practice: Real-World Application & Pitfalls</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #6a1b9a; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #6a1b9a; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
                         <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
                         <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see how you did!</p>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-cancould-p2.html'">
-                    <span data-i18n="common.previousLesson">← Previous Lesson</span>
-                </button>
-                <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-                    <span></span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">← Return to Conjugation</span>
-                </button>
-            </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations (lesson content preserved, common section adapted) -->
     <script>
         window.I18N = {
             en: {
                 common: {
                     siteName: "English Hub",
-                    expression: "Expression", meaning: "Meaning", example: "Example",
                     previousLesson: "← Previous Lesson",
                     returnToConjugation: "← Return to Conjugation",
                     nextLesson: "Next Lesson →"
                 },
-                footer: {
-                    developer: "Developer: Mejri Ziad",
-                    privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact"
-                },
-                modalsCanCould3: {
-                    title: "Can & Could: Real-World Application & Common Pitfalls",
-                    subtitle: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts",
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                canCould3: {
+                    title: {
+                        line1: "Can & Could III:",
+                        line2: "Real-World Application & Common Pitfalls",
+                        line3: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts.",
+                        line4: "lesson: 3/3"
+                    },
                     mistakes: {
-                        title: "Common Mistakes with Can & Could",
-                        heading1: "Frequent errors",
-                        error1Title: "❌ Using 'to' after can/could",
-                        error1Desc: "Incorrect: <em>I can to swim.</em> ✅ Correct: <em>I can swim.</em> (modal + base verb without 'to')",
-                        error2Title: "❌ Using 'could' for present ability",
-                        error2Desc: "Incorrect: <em>I could speak Spanish now.</em> (if you mean present ability) ✅ Correct: <em>I can speak Spanish now.</em> (Use 'can' for present, 'could' for past or hypothetical)",
-                        error3Title: "❌ Confusing 'can' and 'be able to' for past achievements",
-                        error3Desc: "For a specific past achievement, use <strong>was/were able to</strong>, not 'could'. <br> ✅ <em>I was able to finish the race.</em> (not 'I could finish')",
-                        error4Title: "❌ Double modals",
-                        error4Desc: "Incorrect: <em>I might can come.</em> ✅ Correct: <em>I might be able to come.</em> or <em>I can come.</em>"
+                        title: "III. 1. Common Mistakes with Can & Could",
+                        heading: "Frequent errors",
+                        toTitle: "❌ Using 'to' after can/could",
+                        toDesc: "Incorrect: <em>I can to swim.</em> ✅ Correct: <em>I can swim.</em> (modal + base verb without 'to')",
+                        presentTitle: "❌ Using 'could' for present ability",
+                        presentDesc: "Incorrect: <em>I could speak Spanish now.</em> (if you mean present ability) ✅ Correct: <em>I can speak Spanish now.</em> (Use 'can' for present, 'could' for past or hypothetical)",
+                        achievementTitle: "❌ Confusing 'can' and 'be able to' for past achievements",
+                        achievementDesc: "For a specific past achievement, use <strong>was/were able to</strong>, not 'could'. ✅ <em>I was able to finish the race.</em> (not 'I could finish')",
+                        doubleTitle: "❌ Double modals",
+                        doubleDesc: "Incorrect: <em>I might can come.</em> ✅ Correct: <em>I might be able to come.</em> or <em>I can come.</em>"
                     },
                     idioms: {
-                        title: "Idiomatic Expressions with Can/Could",
-                        heading1: "Common fixed phrases",
+                        title: "III. 2. Idiomatic Expressions with Can/Could",
+                        heading: "Common fixed phrases",
+                        expressionCol: "Expression",
+                        meaningCol: "Meaning",
+                        exampleCol: "Example",
                         standMeaning: "strongly dislike",
                         standEx: "I can't stand loud music.",
                         helpMeaning: "unable to avoid/stop",
                         helpEx: "I can't help laughing at his jokes.",
                         botheredMeaning: "unwilling to make an effort",
                         botheredEx: "I can't be bothered to cook tonight.",
-                        carelessMeaning: "completely uninterested",
-                        carelessEx: "He couldn't care less about the test.",
+                        careMeaning: "completely uninterested",
+                        careEx: "He couldn't care less about the test.",
                         handMeaning: "help someone",
                         handEx: "Could you give me a hand with this box?"
                     },
-                    context: {
-                        title: "Contextual Practice: At a Restaurant",
-                        subtitle: "Using modals for ordering & requests",
-                        dialogue: "Sample dialogue:",
+                    restaurant: {
+                        title: "III. 3. Contextual Practice: At a Restaurant",
+                        heading: "Using modals for ordering & requests",
                         customer: "Customer:",
                         server: "Server:",
-                        line1: '"Can I see the menu, please?"',
-                        line2: '"Of course. Here you are. Could I get you any drinks to start?"',
-                        line3: '"Yes, could I have a glass of water?"',
-                        line4: '"Certainly. Would you like to order now?"',
-                        line5: '"I think I\'m ready. May I have the grilled salmon?"',
-                        line6: '"Excellent choice. Can I bring you anything else?"',
-                        line7: '"That\'s all, thanks. Could we have the bill when you get a chance?"',
-                        note: "<em>Notice the use of can, could, and may for polite requests and permission.</em>"
+                        line1: "\"Can I see the menu, please?\"",
+                        line2: "\"Of course. Here you are. Could I get you any drinks to start?\"",
+                        line3: "\"Yes, could I have a glass of water?\"",
+                        line4: "\"Certainly. Would you like to order now?\"",
+                        line5: "\"I think I'm ready. May I have the grilled salmon?\"",
+                        line6: "\"Excellent choice. Can I bring you anything else?\"",
+                        line7: "\"That's all, thanks. Could we have the bill when you get a chance?\"",
+                        note: "💡 Notice the use of can, could, and may for polite requests and permission."
                     },
                     exercises: {
-                        title: "Review & Production Exercises",
+                        title: "Practice: Real-World Application & Pitfalls",
                         q1: "Identify the correct sentence:",
                         q1a: "I can to swim very fast.",
                         q1b: "I can swim very fast.",
                         q1c: "I can to swimming fast.",
-                        q2: "Choose the best option for a specific past achievement:",
-                        q2Sentence: "Yesterday, after hours of work, I ______ fix the computer.",
+                        q2: "Choose the best option for a specific past achievement: Yesterday, after hours of work, I ______ fix the computer.",
                         q2a: "could",
                         q2b: "was able to",
                         q2c: "can",
@@ -287,333 +340,192 @@
                         q6c: "They don't care at all.",
                         q7: "Complete with an idiom: I know it's not funny, but I ______ (can / help) laughing.",
                         q8: "Correct the error: She can to speak three languages. → She ______ speak three languages.",
-                        q9: "Make this request more polite: \"Can I get a fork?\" → \"______ I get a fork, please?\" (polite)",
-                        q10: "Arrange: (I / can't / waiting / stand / for / buses / .)",
-                        q11: "Arrange: (I / able / was / to / the / finish / race / .)",
-                        q12: "Arrange: (the / Could / have / I / bill / , / please / ?)"
+                        q9: "Make this request more polite: \"Can I get a fork?\" → \"______ I get a fork, please?\" (polite)"
                     }
                 }
             },
             fr: {
                 common: {
                     siteName: "English Hub",
-                    expression: "Expression", meaning: "Signification", example: "Exemple",
-                    previousLesson: "← Leçon précédente",
-                    returnToConjugation: "← Retour à la conjugaison",
-                    nextLesson: "Leçon suivante →"
+                    previousLesson: "← Leçon Précédente",
+                    returnToConjugation: "← Retour au Conjugaison",
+                    nextLesson: "Leçon Suivante →"
                 },
-                footer: {
-                    developer: "Développeur : Mejri Ziad",
-                    privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact"
-                },
-                modalsCanCould3: {
-                    title: "Can & Could: Real-World Application & Common Pitfalls (Can & Could : application concrète et erreurs courantes)",
-                    subtitle: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts (Évitez les erreurs fréquentes, utilisez les expressions idiomatiques naturellement et pratiquez dans des contextes réels)",
+                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+                canCould3: {
+                    title: {
+                        line1: "Can & Could III :",
+                        line2: "Application réelle et pièges courants",
+                        line3: "Évitez les erreurs fréquentes, utilisez les expressions idiomatiques naturellement et pratiquez dans des contextes réels.",
+                        line4: "leçon : 3/3"
+                    },
                     mistakes: {
-                        title: "Common Mistakes with Can & Could (Erreurs courantes avec Can & Could)",
-                        heading1: "Frequent errors (Erreurs fréquentes)",
-                        error1Title: "❌ Using 'to' after can/could (Utiliser 'to' après can/could)",
-                        error1Desc: "Incorrect: <em>I can to swim.</em> ✅ Correct: <em>I can swim.</em> (modal + base verb without 'to') (modal + verbe de base sans 'to')",
-                        error2Title: "❌ Using 'could' for present ability (Utiliser 'could' pour une capacité présente)",
-                        error2Desc: "Incorrect: <em>I could speak Spanish now.</em> (if you mean present ability) ✅ Correct: <em>I can speak Spanish now.</em> (Use 'can' for present, 'could' for past or hypothetical) (Utilisez 'can' pour le présent, 'could' pour le passé ou l'hypothétique)",
-                        error3Title: "❌ Confusing 'can' and 'be able to' for past achievements (Confondre 'can' et 'be able to' pour des réalisations passées)",
-                        error3Desc: "For a specific past achievement, use <strong>was/were able to</strong>, not 'could'. <br> ✅ <em>I was able to finish the race.</em> (not 'I could finish') (Pour une réalisation passée spécifique, utilisez <strong>was/were able to</strong>, pas 'could'.)",
-                        error4Title: "❌ Double modals (Doubles modaux)",
-                        error4Desc: "Incorrect: <em>I might can come.</em> ✅ Correct: <em>I might be able to come.</em> or <em>I can come.</em>"
+                        title: "III. 1. Erreurs courantes avec Can & Could",
+                        heading: "Erreurs fréquentes",
+                        toTitle: "❌ Utiliser 'to' après can/could",
+                        toDesc: "Incorrect : <em>I can to swim.</em> ✅ Correct : <em>I can swim.</em> (modal + verbe de base sans 'to')",
+                        presentTitle: "❌ Utiliser 'could' pour une capacité présente",
+                        presentDesc: "Incorrect : <em>I could speak Spanish now.</em> (si vous voulez dire capacité présente) ✅ Correct : <em>I can speak Spanish now.</em> (Utilisez 'can' pour le présent, 'could' pour le passé ou l'hypothétique)",
+                        achievementTitle: "❌ Confondre 'can' et 'be able to' pour des réalisations passées",
+                        achievementDesc: "Pour une réalisation passée spécifique, utilisez <strong>was/were able to</strong>, pas 'could'. ✅ <em>I was able to finish the race.</em> (pas 'I could finish')",
+                        doubleTitle: "❌ Modaux doubles",
+                        doubleDesc: "Incorrect : <em>I might can come.</em> ✅ Correct : <em>I might be able to come.</em> ou <em>I can come.</em>"
                     },
                     idioms: {
-                        title: "Idiomatic Expressions with Can/Could (Expressions idiomatiques avec Can/Could)",
-                        heading1: "Common fixed phrases (Expressions courantes)",
-                        standMeaning: "strongly dislike (détester)",
-                        standEx: "I can't stand loud music. (Je ne supporte pas la musique forte.)",
-                        helpMeaning: "unable to avoid/stop (ne pas pouvoir s'empêcher)",
-                        helpEx: "I can't help laughing at his jokes. (Je ne peux pas m'empêcher de rire à ses blagues.)",
-                        botheredMeaning: "unwilling to make an effort (ne pas avoir envie de faire l'effort)",
-                        botheredEx: "I can't be bothered to cook tonight. (Je n'ai pas envie de cuisiner ce soir.)",
-                        carelessMeaning: "completely uninterested (s'en moquer complètement)",
-                        carelessEx: "He couldn't care less about the test. (Il se moque complètement du test.)",
-                        handMeaning: "help someone (aider quelqu'un)",
-                        handEx: "Could you give me a hand with this box? (Pourriez-vous m'aider avec cette boîte ?)"
+                        title: "III. 2. Expressions idiomatiques avec Can/Could",
+                        heading: "Phrases figées courantes",
+                        expressionCol: "Expression",
+                        meaningCol: "Signification",
+                        exampleCol: "Exemple",
+                        standMeaning: "détester fortement",
+                        standEx: "Je ne supporte pas la musique forte.",
+                        helpMeaning: "incapable d'éviter/arrêter",
+                        helpEx: "Je ne peux pas m'empêcher de rire de ses blagues.",
+                        botheredMeaning: "peu disposé à faire un effort",
+                        botheredEx: "Je n'ai pas envie de cuisiner ce soir.",
+                        careMeaning: "complètement indifférent",
+                        careEx: "Il s'en fiche complètement du test.",
+                        handMeaning: "aider quelqu'un",
+                        handEx: "Pourriez-vous me donner un coup de main avec cette boîte ?"
                     },
-                    context: {
-                        title: "Contextual Practice: At a Restaurant (Pratique contextuelle : Au restaurant)",
-                        subtitle: "Using modals for ordering & requests (Utiliser les modaux pour commander et faire des demandes)",
-                        dialogue: "Sample dialogue: (Dialogue exemple :)",
-                        customer: "Customer: (Client :)",
-                        server: "Server: (Serveur :)",
-                        line1: '"Can I see the menu, please?" ("Puis-je voir le menu, s\'il vous plaît ?")',
-                        line2: '"Of course. Here you are. Could I get you any drinks to start?" ("Bien sûr. Voici. Puis-je vous proposer des boissons pour commencer ?")',
-                        line3: '"Yes, could I have a glass of water?" ("Oui, pourrais-je avoir un verre d\'eau ?")',
-                        line4: '"Certainly. Would you like to order now?" ("Certainement. Souhaitez-vous commander maintenant ?")',
-                        line5: '"I think I\'m ready. May I have the grilled salmon?" ("Je pense que je suis prêt. Puis-je avoir le saumon grillé ?")',
-                        line6: '"Excellent choice. Can I bring you anything else?" ("Excellent choix. Puis-je vous apporter autre chose ?")',
-                        line7: '"That\'s all, thanks. Could we have the bill when you get a chance?" ("Ce sera tout, merci. Pourrions-nous avoir l\'addition quand vous aurez un moment ?")',
-                        note: "<em>Notice the use of can, could, and may for polite requests and permission. (Remarquez l'utilisation de can, could et may pour les demandes polies et la permission.)</em>"
-                    },
-                    exercises: {
-                        title: "Review & Production Exercises (Exercices de révision et production)",
-                        q1: "Identify the correct sentence: (Identifiez la phrase correcte :)",
-                        q1a: "I can to swim very fast. (I can to swim very fast.)",
-                        q1b: "I can swim very fast. (I can swim very fast.)",
-                        q1c: "I can to swimming fast. (I can to swimming fast.)",
-                        q2: "Choose the best option for a specific past achievement: (Choisissez la meilleure option pour une réalisation passée spécifique :)",
-                        q2Sentence: "Yesterday, after hours of work, I ______ fix the computer. (Hier, après des heures de travail, je ______ réparer l'ordinateur.)",
-                        q2a: "could (pouvais)", q2b: "was able to (ai pu)", q2c: "can (peux)",
-                        q3: "What does \"I can't stand waiting\" mean? (Que signifie \"I can't stand waiting\" ?)",
-                        q3a: "I am unable to wait. (Je suis incapable d'attendre.)",
-                        q3b: "I really dislike waiting. (Je déteste vraiment attendre.)",
-                        q3c: "I have to wait. (Je dois attendre.)",
-                        q4: "Which sentence is grammatically correct? (Quelle phrase est grammaticalement correcte ?)",
-                        q4a: "He might can come later. (He might can come later.)",
-                        q4b: "He might be able to come later. (He might be able to come later.)",
-                        q4c: "He might could come later. (He might could come later.)",
-                        q5: "At a restaurant, which is the most appropriate polite request? (Au restaurant, quelle est la demande polie la plus appropriée ?)",
-                        q5a: "Give me the bill. (Donne-moi l'addition.)",
-                        q5b: "Could I have the bill, please? (Pourrais-je avoir l'addition, s'il vous plaît ?)",
-                        q5c: "I want the bill now. (Je veux l'addition maintenant.)",
-                        q6: "If someone says \"I couldn't care less about football\", they mean: (Si quelqu'un dit \"I couldn't care less about football\", cela signifie :)",
-                        q6a: "They care a little. (Ils s'y intéressent un peu.)",
-                        q6b: "They are very interested. (Ils sont très intéressés.)",
-                        q6c: "They don't care at all. (Ils s'en moquent complètement.)",
-                        q7: "Complete with an idiom: I know it's not funny, but I ______ (can / help) laughing. (Complétez avec une expression idiomatique : I know it's not funny, but I ______ laughing.)",
-                        q8: "Correct the error: She can to speak three languages. → She ______ speak three languages. (Corrigez l'erreur : She can to speak three languages. → She ______ speak three languages.)",
-                        q9: "Make this request more polite: \"Can I get a fork?\" → \"______ I get a fork, please?\" (polite) (Rendez cette demande plus polie : \"Can I get a fork?\" → \"______ I get a fork, please?\" (poli))",
-                        q10: "Arrange: (I / can't / waiting / stand / for / buses / .) (Remettez dans l'ordre :)",
-                        q11: "Arrange: (I / able / was / to / the / finish / race / .) (Remettez dans l'ordre :)",
-                        q12: "Arrange: (the / Could / have / I / bill / , / please / ?) (Remettez dans l'ordre :)"
+                    restaurant: {
+                        title: "III. 3. Pratique contextuelle : Au restaurant",
+                        heading: "Utiliser les modaux pour commander et demander",
+                        customer: "Client :",
+                        server: "Serveur :",
+                        line1: "\"Puis-je voir le menu, s'il vous plaît ?\"",
+                        line2: "\"Bien sûr. Voici. Pourrais-je vous apporter des boissons pour commencer ?\"",
+                        line3: "\"Oui, pourrais-je avoir un verre d'eau ?\"",
+                        line4: "\"Certainement. Voulez-vous commander maintenant ?\"",
+                        line5: "\"Je pense être prêt. Puis-je avoir le saumon grillé ?\"",
+                        line6: "\"Excellent choix. Puis-je vous apporter autre chose ?\"",
+                        line7: "\"C'est tout, merci. Pourrions-nous avoir l'addition quand vous aurez un moment ?\"",
+                        note: "💡 Remarquez l'utilisation de can, could et may pour les demandes polies et la permission."
                     }
                 }
             },
             ar: {
                 common: {
                     siteName: "English Hub",
-                    expression: "التعبير", meaning: "المعنى", example: "مثال",
-                    previousLesson: "← الدرس السابق",
-                    returnToConjugation: "← العودة إلى التصريف",
+                    previousLesson: "الدرس السابق← ",
+                    returnToConjugation: "العودة إلى التصريف← ",
                     nextLesson: "الدرس التالي →"
                 },
-                footer: {
-                    developer: "المطور: Mejri Ziad",
-                    privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا"
-                },
-                modalsCanCould3: {
-                    title: "Can & Could: Real-World Application & Common Pitfalls (Can & Could: التطبيق الواقعي والأخطاء الشائعة)",
-                    subtitle: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts (تجنب الأخطاء المتكررة، واستخدم التعبيرات الاصطلاحية بشكل طبيعي، وتدرب في سياقات الحياة الواقعية)",
+                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+                canCould3: {
+                    title: {
+                        line1: "Can & Could :3",
+                        line2: "التطبيق الواقعي والمزالق الشائعة",
+                        line3: "تجنب الأخطاء المتكررة، استخدم التعابير الاصطلاحية بشكل طبيعي، وتدرب في سياقات من الحياة الواقعية.",
+                        line4: "الدرس: 3/3"
+                    },
                     mistakes: {
-                        title: "Common Mistakes with Can & Could (الأخطاء الشائعة مع Can & Could)",
-                        heading1: "Frequent errors (أخطاء متكررة)",
-                        error1Title: "❌ Using 'to' after can/could (استخدام 'to' بعد can/could)",
-                        error1Desc: "Incorrect: <em>I can to swim.</em> ✅ Correct: <em>I can swim.</em> (modal + base verb without 'to') (فعل مساعد + الفعل الأساسي بدون 'to')",
-                        error2Title: "❌ Using 'could' for present ability (استخدام 'could' للقدرة في الحاضر)",
-                        error2Desc: "Incorrect: <em>I could speak Spanish now.</em> (if you mean present ability) ✅ Correct: <em>I can speak Spanish now.</em> (Use 'can' for present, 'could' for past or hypothetical) (استخدم 'can' للحاضر، 'could' للماضي أو الافتراضي)",
-                        error3Title: "❌ Confusing 'can' and 'be able to' for past achievements (الخلط بين 'can' و 'be able to' للإنجازات الماضية)",
-                        error3Desc: "For a specific past achievement, use <strong>was/were able to</strong>, not 'could'. <br> ✅ <em>I was able to finish the race.</em> (not 'I could finish') (لإنجاز محدد في الماضي، استخدم <strong>was/were able to</strong>، وليس 'could'.)",
-                        error4Title: "❌ Double modals (استخدام فعلين مساعدين معًا)",
-                        error4Desc: "Incorrect: <em>I might can come.</em> ✅ Correct: <em>I might be able to come.</em> or <em>I can come.</em>"
+                        title: "III. 1. الأخطاء الشائعة مع Can & Could",
+                        heading: "أخطاء متكررة",
+                        toTitle: "❌ استخدام 'to' بعد can/could",
+                        toDesc: "خطأ: <em>I can to swim.</em> ✅ الصواب: <em>I can swim.</em> (الفعل الناقص + الفعل الأساسي بدون 'to')",
+                        presentTitle: "❌ استخدام 'could' للقدرة الحالية",
+                        presentDesc: "خطأ: <em>I could speak Spanish now.</em> (إذا كنت تقصد القدرة الحالية) ✅ الصواب: <em>I can speak Spanish now.</em> (استخدم 'can' للحاضر، 'could' للماضي أو الافتراضي)",
+                        achievementTitle: "❌ الخلط بين 'can' و 'be able to' للإنجازات الماضية",
+                        achievementDesc: "لإنجاز ماضٍ محدد، استخدم <strong>was/were able to</strong>، وليس 'could'. ✅ <em>I was able to finish the race.</em> (وليس 'I could finish')",
+                        doubleTitle: "❌ الأفعال الناقصة المزدوجة",
+                        doubleDesc: "خطأ: <em>I might can come.</em> ✅ الصواب: <em>I might be able to come.</em> أو <em>I can come.</em>"
                     },
                     idioms: {
-                        title: "Idiomatic Expressions with Can/Could (التعبيرات الاصطلاحية مع Can/Could)",
-                        heading1: "Common fixed phrases (عبارات ثابتة شائعة)",
-                        standMeaning: "strongly dislike (أكره بشدة)",
-                        standEx: "I can't stand loud music. (لا أستطيع تحمل الموسيقى الصاخبة.)",
-                        helpMeaning: "unable to avoid/stop (لا أستطيع منع نفسي)",
-                        helpEx: "I can't help laughing at his jokes. (لا أستطيع منع نفسي من الضحك على نكاته.)",
-                        botheredMeaning: "unwilling to make an effort (ليس لدي رغبة في بذل جهد)",
-                        botheredEx: "I can't be bothered to cook tonight. (ليس لدي رغبة في الطهي الليلة.)",
-                        carelessMeaning: "completely uninterested (لا يهتم مطلقًا)",
-                        carelessEx: "He couldn't care less about the test. (إنه لا يهتم مطلقًا بالاختبار.)",
-                        handMeaning: "help someone (مساعدة شخص)",
-                        handEx: "Could you give me a hand with this box? (هل يمكنك مساعدتي بهذا الصندوق؟)"
+                        title: "III. 2. التعابير الاصطلاحية مع Can/Could",
+                        heading: "عبارات ثابتة شائعة",
+                        expressionCol: "التعبير",
+                        meaningCol: "المعنى",
+                        exampleCol: "مثال",
+                        standMeaning: "يكره بشدة",
+                        standEx: "لا أطيق الموسيقى الصاخبة.",
+                        helpMeaning: "غير قادر على تجنب/إيقاف",
+                        helpEx: "لا أستطيع منع نفسي من الضحك على نكاته.",
+                        botheredMeaning: "غير راغب في بذل جهد",
+                        botheredEx: "لا أستطيع أن أزعج نفسي بالطبخ الليلة.",
+                        careMeaning: "غير مهتم تمامًا",
+                        careEx: "لا يهتم على الإطلاق بالاختبار.",
+                        handMeaning: "يساعد شخصًا",
+                        handEx: "هل يمكنك مساعدتي في هذه العلبة؟"
                     },
-                    context: {
-                        title: "Contextual Practice: At a Restaurant (تدريب سياقي: في مطعم)",
-                        subtitle: "Using modals for ordering & requests (استخدام الأفعال المساعدة للطلب والالتماسات)",
-                        dialogue: "Sample dialogue: (حوار نموذجي :)",
-                        customer: "Customer: (العميل :)",
-                        server: "Server: (النادل :)",
-                        line1: '"Can I see the menu, please?" ("هل يمكنني رؤية القائمة، من فضلك؟")',
-                        line2: '"Of course. Here you are. Could I get you any drinks to start?" ("بالطبع. تفضل. هل يمكنني إحضار أي مشروبات للبدء؟")',
-                        line3: '"Yes, could I have a glass of water?" ("نعم، هل يمكنني الحصول على كوب من الماء؟")',
-                        line4: '"Certainly. Would you like to order now?" ("بالتأكيد. هل ترغب في الطلب الآن؟")',
-                        line5: '"I think I\'m ready. May I have the grilled salmon?" ("أعتقد أنني مستعد. هل يمكنني الحصول على سمك السلمون المشوي؟")',
-                        line6: '"Excellent choice. Can I bring you anything else?" ("اختيار ممتاز. هل يمكنني إحضار أي شيء آخر؟")',
-                        line7: '"That\'s all, thanks. Could we have the bill when you get a chance?" ("هذا كل شيء، شكرًا. هل يمكننا الحصول على الفاتورة عندما تسنح لك الفرصة؟")',
-                        note: "<em>Notice the use of can, could, and may for polite requests and permission. (لاحظ استخدام can و could و may للطلبات المهذبة والإذن.)</em>"
-                    },
-                    exercises: {
-                        title: "Review & Production Exercises (تمارين المراجعة والإنتاج)",
-                        q1: "Identify the correct sentence: (حدد الجملة الصحيحة:)",
-                        q1a: "I can to swim very fast. (I can to swim very fast.)",
-                        q1b: "I can swim very fast. (I can swim very fast.)",
-                        q1c: "I can to swimming fast. (I can to swimming fast.)",
-                        q2: "Choose the best option for a specific past achievement: (اختر الخيار الأفضل لإنجاز محدد في الماضي:)",
-                        q2Sentence: "Yesterday, after hours of work, I ______ fix the computer. (أمس، بعد ساعات من العمل، ______ إصلاح الكمبيوتر.)",
-                        q2a: "could (كان بإمكاني)", q2b: "was able to (تمكنت من)", q2c: "can (أستطيع)",
-                        q3: "What does \"I can't stand waiting\" mean? (ماذا تعني \"I can't stand waiting\"؟)",
-                        q3a: "I am unable to wait. (أنا غير قادر على الانتظار.)",
-                        q3b: "I really dislike waiting. (أنا أكره الانتظار حقًا.)",
-                        q3c: "I have to wait. (يجب علي الانتظار.)",
-                        q4: "Which sentence is grammatically correct? (أي جملة صحيحة نحويًا؟)",
-                        q4a: "He might can come later. (He might can come later.)",
-                        q4b: "He might be able to come later. (He might be able to come later.)",
-                        q4c: "He might could come later. (He might could come later.)",
-                        q5: "At a restaurant, which is the most appropriate polite request? (في مطعم، ما هو الطلب المهذب الأكثر ملاءمة؟)",
-                        q5a: "Give me the bill. (أعطني الفاتورة.)",
-                        q5b: "Could I have the bill, please? (هل يمكنني الحصول على الفاتورة، من فضلك؟)",
-                        q5c: "I want the bill now. (أريد الفاتورة الآن.)",
-                        q6: "If someone says \"I couldn't care less about football\", they mean: (إذا قال شخص ما \"I couldn't care less about football\"، فهو يعني:)",
-                        q6a: "They care a little. (يهتم قليلاً.)",
-                        q6b: "They are very interested. (مهتم جدًا.)",
-                        q6c: "They don't care at all. (لا يهتم مطلقًا.)",
-                        q7: "Complete with an idiom: I know it's not funny, but I ______ (can / help) laughing. (أكمل بتعبير اصطلاحي: I know it's not funny, but I ______ laughing.)",
-                        q8: "Correct the error: She can to speak three languages. → She ______ speak three languages. (صحح الخطأ: She can to speak three languages. → She ______ speak three languages.)",
-                        q9: "Make this request more polite: \"Can I get a fork?\" → \"______ I get a fork, please?\" (polite) (اجعل هذا الطلب أكثر تهذيبًا: \"Can I get a fork?\" → \"______ I get a fork, please?\" (مهذب))",
-                        q10: "Arrange: (I / can't / waiting / stand / for / buses / .) (رتب: (I / can't / waiting / stand / for / buses / .))",
-                        q11: "Arrange: (I / able / was / to / the / finish / race / .) (رتب: (I / able / was / to / the / finish / race / .))",
-                        q12: "Arrange: (the / Could / have / I / bill / , / please / ?) (رتب: (the / Could / have / I / bill / , / please / ?))"
+                    restaurant: {
+                        title: "III. 3. تدريب سياقي: في المطعم",
+                        heading: "استخدام الأفعال الناقصة للطلب والأوامر",
+                        customer: "الزبون:",
+                        server: "النادل:",
+                        line1: "\"هل يمكنني رؤية القائمة، من فضلك؟\"",
+                        line2: "\"بالتأكيد. تفضل. هل يمكنني إحضار أي مشروبات للبدء؟\"",
+                        line3: "\"نعم، هل يمكنني الحصول على كوب من الماء؟\"",
+                        line4: "\"بالتأكيد. هل ترغب في الطلب الآن؟\"",
+                        line5: "\"أعتقد أنني مستعد. هل لي بالحصول على السلمون المشوي؟\"",
+                        line6: "\"اختيار ممتاز. هل يمكنني إحضار أي شيء آخر؟\"",
+                        line7: "\"هذا كل شيء، شكرًا. هل يمكننا الحصول على الفاتورة عندما تسنح لك الفرصة؟\"",
+                        note: "💡 لاحظ استخدام can و could و may للطلبات المهذبة والإذن."
                     }
                 }
             }
         };
     </script>
-    
-    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
-    
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ========== Build exercises dynamically ==========
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'modalsCanCould3.exercises.q1',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould3.exercises.q1a' },
-                        { value: 'b', labelKey: 'modalsCanCould3.exercises.q1b' },
-                        { value: 'c', labelKey: 'modalsCanCould3.exercises.q1c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsCanCould3.exercises.q2',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould3.exercises.q2a' },
-                        { value: 'b', labelKey: 'modalsCanCould3.exercises.q2b' },
-                        { value: 'c', labelKey: 'modalsCanCould3.exercises.q2c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsCanCould3.exercises.q3',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould3.exercises.q3a' },
-                        { value: 'b', labelKey: 'modalsCanCould3.exercises.q3b' },
-                        { value: 'c', labelKey: 'modalsCanCould3.exercises.q3c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsCanCould3.exercises.q4',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould3.exercises.q4a' },
-                        { value: 'b', labelKey: 'modalsCanCould3.exercises.q4b' },
-                        { value: 'c', labelKey: 'modalsCanCould3.exercises.q4c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsCanCould3.exercises.q5',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould3.exercises.q5a' },
-                        { value: 'b', labelKey: 'modalsCanCould3.exercises.q5b' },
-                        { value: 'c', labelKey: 'modalsCanCould3.exercises.q5c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsCanCould3.exercises.q6',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould3.exercises.q6a' },
-                        { value: 'b', labelKey: 'modalsCanCould3.exercises.q6b' },
-                        { value: 'c', labelKey: 'modalsCanCould3.exercises.q6c' }
-                    ],
-                    correctAnswer: 'c'
-                }
+                { questionTextKey: 'canCould3.exercises.q1', options: [{ value: 'a', labelKey: 'canCould3.exercises.q1a' }, { value: 'b', labelKey: 'canCould3.exercises.q1b' }, { value: 'c', labelKey: 'canCould3.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'canCould3.exercises.q2', options: [{ value: 'a', labelKey: 'canCould3.exercises.q2a' }, { value: 'b', labelKey: 'canCould3.exercises.q2b' }, { value: 'c', labelKey: 'canCould3.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'canCould3.exercises.q3', options: [{ value: 'a', labelKey: 'canCould3.exercises.q3a' }, { value: 'b', labelKey: 'canCould3.exercises.q3b' }, { value: 'c', labelKey: 'canCould3.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'canCould3.exercises.q4', options: [{ value: 'a', labelKey: 'canCould3.exercises.q4a' }, { value: 'b', labelKey: 'canCould3.exercises.q4b' }, { value: 'c', labelKey: 'canCould3.exercises.q4c' }], correctAnswer: 'b' },
+                { questionTextKey: 'canCould3.exercises.q5', options: [{ value: 'a', labelKey: 'canCould3.exercises.q5a' }, { value: 'b', labelKey: 'canCould3.exercises.q5b' }, { value: 'c', labelKey: 'canCould3.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'canCould3.exercises.q6', options: [{ value: 'a', labelKey: 'canCould3.exercises.q6a' }, { value: 'b', labelKey: 'canCould3.exercises.q6b' }, { value: 'c', labelKey: 'canCould3.exercises.q6c' }], correctAnswer: 'c' }
             ]
         });
-
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'modalsCanCould3.exercises.q7',
-                    answers: ["can't help"]
-                },
-                {
-                    questionTextKey: 'modalsCanCould3.exercises.q8',
-                    answers: ['can']
-                },
-                {
-                    questionTextKey: 'modalsCanCould3.exercises.q9',
-                    answers: ['could']
-                }
+                { questionTextKey: 'canCould3.exercises.q7', answers: ["can't help"] },
+                { questionTextKey: 'canCould3.exercises.q8', answers: ['can'] },
+                { questionTextKey: 'canCould3.exercises.q9', answers: ['Could','could'] }
             ]
         });
-
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'modalsCanCould3.exercises.q10',
-                    words: ['I', "can't", 'waiting', 'stand', 'for', 'buses', '.'],
-                    correctSentence: "I can't stand waiting for buses ."
-                },
-                {
-                    questionTextKey: 'modalsCanCould3.exercises.q11',
-                    words: ['I', 'able', 'was', 'to', 'the', 'finish', 'race', '.'],
-                    correctSentence: 'I was able to finish the race .'
-                },
-                {
-                    questionTextKey: 'modalsCanCould3.exercises.q12',
-                    words: ['the', 'Could', 'have', 'I', 'bill', ',', 'please', '?'],
-                    correctSentence: 'Could I have the bill , please ?'
-                }
+                { questionTextKey: 'canCould3.exercises.q10', words: ['I',"can't",'stand','waiting','for','buses','.'], correctSentence: "I can't stand waiting for buses ." },
+                { questionTextKey: 'canCould3.exercises.q11', words: ['I','was','able','to','finish','the','race','.'], correctSentence: 'I was able to finish the race .' },
+                { questionTextKey: 'canCould3.exercises.q12', words: ['Could','I','have','the','bill',',','please','?'], correctSentence: 'Could I have the bill , please ?' }
             ]
         });
-
-        // ========== Check all exercises ==========
         function checkAllExercises() {
-            let totalScore = 0;
-            let totalQuestions = 0;
-            
+            let totalScore = 0, totalQuestions = 0;
             totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
             totalQuestions += 6;
             totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
             totalQuestions += 3;
             totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
             totalQuestions += 3;
-            
             const scoreEl = document.getElementById('score-value');
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered real-world can/could use!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit common mistakes and idioms.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
+            EHScoreEffects.show(totalScore, totalQuestions);
         }
-        
         document.addEventListener('DOMContentLoaded', function() {
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-        
-        // i18n rendering for HTML elements with innerHTML tags
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
@@ -621,11 +533,7 @@
                 elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
-                        el.textContent = translation;
-                    }
+                    if (translation) el.textContent = translation;
                 });
             }
             window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });

@@ -1,0 +1,272 @@
+/* ===== Modular Legal Pages Styles =====
+   Every visual property is driven by CSS custom properties.
+   Override them per page by redefining the variables in a <style>
+   block before or after this stylesheet. */
+
+/* ---------- Global Defaults ---------- */
+:root {
+    --legal-body-gradient: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    --legal-container-bg: rgba(255, 255, 255, 0.95);
+    --legal-container-padding: 40px;
+    --legal-container-max-width: 900px;
+    --legal-heading-color: #1e6f5c;
+    --legal-subheading-color: #1e6f5c;
+    --legal-text-color: #333;
+    --legal-link-color: #4e54c8;
+    --legal-link-hover-color: #3f46c5;
+    --legal-social-bg: #4e54c8;
+    --legal-social-hover: #3f46c5;
+    --footer-bg: rgba(0, 0, 0, 0.7);
+    --footer-text: white;
+    --footer-border: rgba(255, 255, 255, 0.2);
+    --footer-link-hover: #fdbb2d;
+    --header-bg: rgba(255, 255, 255, 0.1);
+    --header-border: rgba(255, 255, 255, 0.2);
+    --header-text: white;
+    --header-logo-size: 50px;
+    --lang-select-bg: rgba(255, 255, 255, 0.9);
+    --lang-select-border: #fff;
+    --lang-select-text: #333;
+}
+
+/* ---------- Reset & Base ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--legal-body-gradient);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* ---------- Site Header ---------- */
+.EH-site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: var(--header-bg);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--header-border);
+}
+
+.EH-site-logo {
+    width: var(--header-logo-size);
+    height: var(--header-logo-size);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.EH-site-logo:hover {
+    transform: scale(1.05);
+}
+
+.EH-site-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--header-text);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.EH-site-logo-link {
+    position: relative;
+    display: inline-block;
+}
+
+.EH-site-logo-link::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.EH-site-logo-link:hover::after {
+    opacity: 1;
+}
+
+/* ---------- Footer ---------- */
+.EH-common-footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 2px solid var(--footer-border);
+}
+
+.EH-common-footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.EH-common-footer-developer {
+    font-weight: bold;
+}
+
+.EH-common-footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.EH-common-footer-links a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.EH-common-footer-links a:hover {
+    color: var(--footer-link-hover);
+}
+
+/* ---------- Language Selector ---------- */
+.legal-lang-select {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.legal-lang-dropdown {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid var(--lang-select-border);
+    background: var(--lang-select-bg);
+    color: var(--lang-select-text);
+    font-weight: bold;
+}
+
+/* ---------- Main Legal Container ---------- */
+.legal-container {
+    background: var(--legal-container-bg);
+    border-radius: 20px;
+    padding: var(--legal-container-padding);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    max-width: var(--legal-container-max-width);
+    margin: 100px auto 40px;
+    width: 100%;
+}
+
+.legal-container h1 {
+    color: var(--legal-heading-color);
+    margin-bottom: 20px;
+}
+
+.legal-container h2 {
+    color: var(--legal-subheading-color);
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.legal-container p,
+.legal-container li {
+    line-height: 1.6;
+    color: var(--legal-text-color);
+}
+
+.legal-container ul {
+    margin-left: 20px;
+}
+
+/* ---------- Contact Specific Components ---------- */
+.contact-info {
+    margin: 30px 0;
+}
+
+.contact-item {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+
+.contact-item a {
+    color: var(--legal-link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    color: var(--legal-link-hover-color);
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px 16px;
+    background: var(--legal-social-bg);
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--legal-social-hover);
+}
+
+.response-text {
+    margin-top: 40px;
+    font-style: italic;
+    color: var(--legal-text-color);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .EH-site-header {
+        padding: 12px 15px;
+        gap: 12px;
+    }
+    .EH-site-logo {
+        width: 40px;
+        height: 40px;
+    }
+    .EH-site-name {
+        font-size: 1.5rem;
+    }
+    .EH-common-footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .EH-site-header {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+    .EH-site-logo {
+        width: 35px;
+        height: 35px;
+    }
+    .EH-site-name {
+        font-size: 1.3rem;
+    }
+}

@@ -3,262 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can & Could: Core Concepts & Primary Uses - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>Can & Could I: Core Concepts & Primary Uses - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-    :root {
-        /* Theme – can/could teal/green palette */
-        --bg-gradient: linear-gradient(135deg, #00695c, #00897b, #4db6ac);
-        --title-color: #00695c;
-        --primary: #00897b;
-        --primary-hover: #00695c;
-        --primary-light: #4db6ac;
-        --accent: #4db6ac;
-        --rule-bg: #e0f2f1;
-        --rule-border: #4db6ac;
-        --example-bg: #e0f2f1;
-        --example-border: #4db6ac;
-        --exercise-number-gradient: linear-gradient(135deg, #00897b, #4db6ac);
-        --nav-btn-bg: #00897b;
-        --nav-btn-hover: #00695c;
-        --nav-back-btn-bg: #4db6ac;
-        --nav-back-btn-color: white;
-        --nav-back-btn-hover: #00897b;
-
-        /* Neutrals (same across all pages) */
-        --header-text: white;
-        --header-text-light: rgba(255, 255, 255, 0.9);
-        --content-bg: rgba(255, 255, 255, 0.95);
-        --text-color: #333;
-        --white: white;
-        --section-divider: #e0e0e0;
-        --card-bg: white;
-        --subsection-bg: white;
-        --card-border: #e0e0e0;
-        --input-border: #e0e0e0;
-        --dashed-border: #e0e0e0;
-        --table-border: #ddd;
-        --table-stripe: #f2f2f2;
-        --correct-bg: #d4edda;
-        --correct-color: #155724;
-        --correct-border: #c3e6cb;
-        --incorrect-bg: #f8d7da;
-        --incorrect-color: #721c24;
-        --incorrect-border: #f5c6cb;
-    }
-</style>
-<link rel="stylesheet" href="styles/style-conjugation.css">
+        :root {
+            --bg-gradient: linear-gradient(135deg, #f5e6c8, #f0d8a8, #e8c878, #e0bc60);
+            --content-bg: #fffcf6;
+            --card-bg: #ffffff;
+            --subsection-bg: #fdf8ee;
+            --rule-bg: #fcf3e0;
+            --example-bg: #faedd0;
+            --table-stripe: #fdf6ea;
+            --title-color: #5c3d0e;
+            --text-color: #3d2810;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #c8882c;
+            --primary-hover: #ad7020;
+            --primary-light: #d49a40;
+            --accent: #c89038;
+            --exercise-number-gradient: linear-gradient(135deg, #c8882c, #9a6820);
+            --rule-border: #c8882c;
+            --example-border: #c8882c;
+            --nav-btn-bg: #c8882c;
+            --nav-btn-hover: #9a6820;
+            --nav-back-btn-bg: #c89038;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #c8882c;
+            --refract-divider-color: #d4b878;
+            --refract-translation-bg: #f5e8d0;
+            --refract-translation-border: #c8882c;
+            --refract-english-color: #3d2810;
+            --section-divider: #eddcc0;
+            --card-border: #e8d8b8;
+            --input-border: #d4c098;
+            --dashed-border: #d4c098;
+            --table-border: #e0d0b0;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #f0ece0;
+            --neutral-color: #6b5e3d;
+            --neutral-border: #d4c8a8;
+            --empty-input-border: #c8b898;
+            --empty-input-bg: #faf6ef;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #c8882c;
+            --language-selector-color: #3d2810;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #5c3a0e, #6b4420, #7a4e28, #8a5830);
+            --content-bg: #3d2610;
+            --card-bg: #4a2e18;
+            --subsection-bg: #4a2e18;
+            --rule-bg: #3d2610;
+            --example-bg: #3d2610;
+            --table-stripe: #452a16;
+            --title-color: #f0d890;
+            --text-color: #f0e8d0;
+            --header-text: #f0e8d0;
+            --header-text-light: #d4c8a0;
+            --primary: #d49a3e;
+            --primary-hover: #e0ac52;
+            --primary-light: #d49a3e;
+            --accent: #d49a3e;
+            --rule-border: #d49a3e;
+            --example-border: #d49a3e;
+            --exercise-number-gradient: linear-gradient(135deg, #d49a3e, #c8882c);
+            --nav-btn-bg: #d49a3e;
+            --nav-btn-hover: #c8882c;
+            --nav-back-btn-bg: #e0ac52;
+            --nav-back-btn-color: #2a1808;
+            --nav-back-btn-hover: #d49a3e;
+            --refract-divider-color: #c8a060;
+            --refract-translation-bg: #5c3a18;
+            --refract-translation-border: #c8a060;
+            --refract-english-color: #f4e8cc;
+            --section-divider: #5c3a18;
+            --card-border: #5c3a18;
+            --input-border: #6b4a28;
+            --dashed-border: #6b4a28;
+            --table-border: #5a3a1e;
+            --white: #f0e8d0;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #4a3820;
+            --neutral-color: #d4c8a8;
+            --neutral-border: #6b4a28;
+            --empty-input-border: #6b4a28;
+            --empty-input-bg: #3d2610;
+            --language-selector-bg: #4a2e18;
+            --language-selector-border: #d49a3e;
+            --language-selector-color: #f0e8d0;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
+        }
+    </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="modalsCanCould1.title">Can & Could: Core Concepts & Primary Uses</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="modalsCanCould1.subtitle">Learn how to use can and could to express ability, possibility, and requests</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="canCould1.title.line1">Can & Could I:</div>
+                <div class="EH-conjugation-title-line" data-i18n="canCould1.title.line2">Core Concepts & Primary Uses</div>
+                <div class="EH-conjugation-subtitle" data-i18n="canCould1.title.line3">Use can and could to express ability, possibility, and requests.</div>
+                <div class="EH-conjugation-subtitle" data-i18n="canCould1.title.line4">lesson: 1/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Introduction Section -->
+            <!-- Section 1: Introduction to Can & Could -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould1.introduction.title">Introduction to Can & Could</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould1.intro.title">I. 1. Introduction to Can & Could</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔰</span>
-                        <span data-i18n="modalsCanCould1.introduction.whatAre">What are modals "can" and "could"?</span>
+                        <span class="EH-conjugation-subsection-icon">📘</span>
+                        <span data-i18n="canCould1.intro.heading">What are modals "can" and "could"?</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsCanCould1.introduction.definitionTitle">Definition:</div>
-                        <p data-i18n="modalsCanCould1.introduction.definition">"Can" and "could" are modal auxiliary verbs. They do not change form (no -s in third person) and are followed by the base form of the main verb.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould1.intro.desc1">📘 Definition:</div>
+                        <p data-i18n="canCould1.intro.desc2">"Can" and "could" are <strong>modal auxiliary verbs</strong>. They do not change form (no -s in third person) and are followed by the base form of the main verb.</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsCanCould1.introduction.coreIdeas">Core ideas:</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould1.intro.coreTitle">💡 Core ideas:</div>
                         <ul>
-                            <li data-i18n="modalsCanCould1.introduction.core1"><strong>Can</strong> – present ability, possibility, informal permission.</li>
-                            <li data-i18n="modalsCanCould1.introduction.core2"><strong>Could</strong> – past ability, polite requests, less certain possibility.</li>
+                            <li data-i18n="canCould1.intro.core1"><strong>Can</strong> – present ability, possibility, informal permission.</li>
+                            <li data-i18n="canCould1.intro.core2"><strong>Could</strong> – past ability, polite requests, less certain possibility.</li>
                         </ul>
                     </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.introduction.example1">I can swim. (ability)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.introduction.example2">It can be cold here. (possibility)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.introduction.example3">Could you help me? (polite request)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.introduction.example4">When I was young, I could run fast. (past ability)</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.intro.ex1">I can swim. (ability)</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.intro.ex2">It can be cold here. (possibility)</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.intro.ex3">Could you help me? (polite request)</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.intro.ex4">When I was young, I could run fast. (past ability)</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Basic Grammar Rules -->
+            <!-- Section 2: Basic Grammar Rules -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould1.grammar.title">Basic Grammar Rules</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould1.grammar.title">I. 2. Basic Grammar Rules</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⚙️</span>
-                        <span data-i18n="modalsCanCould1.grammar.structure">Structure</span>
+                        <span class="EH-conjugation-subsection-icon">🔧</span>
+                        <span data-i18n="canCould1.grammar.heading">Structure: Affirmative, Negative & Question Forms</span>
                     </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould1.grammar.desc1">📘 Rule:</div>
+                        <p data-i18n="canCould1.grammar.desc2">Modals never take -s, -ing, or -ed. They are always followed by the <strong>infinitive without 'to'</strong>.</p>
+                    </div>
                     <table class="EH-conjugation-table">
                         <thead>
-                            <tr><th data-i18n="common.form">Form</th>
-                                <th data-i18n="common.rule">Rule</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
+                            <tr><th data-i18n="canCould1.grammar.structureCol">Structure</th><th data-i18n="canCould1.grammar.exampleCol">Example</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td data-i18n="common.affirmative">Affirmative</td>
-                                <td data-i18n="modalsCanCould1.grammar.affirmativeRule">subject + can/could + base verb</td>
-                                <td data-i18n="modalsCanCould1.grammar.exampleAffirmative">She can sing.</td>
+                            <tr>
+                                <td data-i18n="canCould1.grammar.affirmative">Affirmative: subject + can/could + base verb</td>
+                                <td data-i18n="canCould1.grammar.exAffirmative">She can sing.</td>
                             </tr>
-                            <tr><td data-i18n="common.negative">Negative</td>
-                                <td data-i18n="modalsCanCould1.grammar.negativeRule">subject + cannot/can't / could not/couldn't + base verb</td>
-                                <td data-i18n="modalsCanCould1.grammar.exampleNegative">He can't drive.</td>
+                            <tr>
+                                <td data-i18n="canCould1.grammar.negative">Negative: subject + cannot/can't / could not/couldn't + base verb</td>
+                                <td data-i18n="canCould1.grammar.exNegative">He can't drive.</td>
                             </tr>
-                            <tr><td data-i18n="common.question">Question</td>
-                                <td data-i18n="modalsCanCould1.grammar.questionRule">Can/Could + subject + base verb?</td>
-                                <td data-i18n="modalsCanCould1.grammar.exampleQuestion">Can you help?</td>
+                            <tr>
+                                <td data-i18n="canCould1.grammar.question">Question: Can/Could + subject + base verb?</td>
+                                <td data-i18n="canCould1.grammar.exQuestion">Can you help?</td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsCanCould1.grammar.importantNote">Important:</div>
-                        <p data-i18n="modalsCanCould1.grammar.noteText">Modals never take -s, -ing, or -ed. They are always followed by the infinitive without 'to'.</p>
-                    </div>
                 </div>
             </div>
-            
-            <!-- Primary Functions of Can -->
+            <!-- Section 3: Primary Uses of Can -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould1.canFunctions.title">Primary Uses of "Can"</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould1.canUses.title">I. 3. Primary Uses of "Can"</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">✅</span>
-                        <span data-i18n="modalsCanCould1.canFunctions.ability">1. Ability (present)</span>
+                        <span data-i18n="canCould1.canUses.heading">Ability, Possibility & Permission</span>
                     </h3>
-                    <p data-i18n="modalsCanCould1.canFunctions.abilityText">We use can to say that someone knows how to do something, or that it is possible for them.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.canFunctions.abilityEx1">I can play the guitar.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.canFunctions.abilityEx2">She can speak three languages.</div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould1.canUses.abilityTitle">1. Ability (present)</div>
+                        <p data-i18n="canCould1.canUses.abilityDesc">We use <strong>can</strong> to say that someone knows how to do something, or that it is possible for them.</p>
                     </div>
-                </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🌦️</span>
-                        <span data-i18n="modalsCanCould1.canFunctions.possibility">2. Possibility / General truth</span>
-                    </h3>
-                    <p data-i18n="modalsCanCould1.canFunctions.possibilityText">Can is used to say that something is possible or sometimes happens.</p>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.canFunctions.possibilityEx1">It can rain a lot in April.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.canFunctions.possibilityEx2">Cars can be expensive.</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.canUses.abilityEx1">I can play the guitar.</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.canUses.abilityEx2">She can speak three languages.</div>
                     </div>
-                </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🙋</span>
-                        <span data-i18n="modalsCanCould1.canFunctions.permission">3. Permission / Requests (informal)</span>
-                    </h3>
-                    <p data-i18n="modalsCanCould1.canFunctions.permissionText">We use can to ask for or give permission in everyday situations.</p>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould1.canUses.possTitle">2. Possibility / General truth</div>
+                        <p data-i18n="canCould1.canUses.possDesc"><strong>Can</strong> is used to say that something is possible or sometimes happens.</p>
+                    </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.canFunctions.permissionEx1">Can I borrow your pen?</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.canFunctions.permissionEx2">You can go now.</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.canUses.possEx1">It can rain a lot in April.</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.canUses.possEx2">Cars can be expensive.</div>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould1.canUses.permTitle">3. Permission / Requests (informal)</div>
+                        <p data-i18n="canCould1.canUses.permDesc">We use <strong>can</strong> to ask for or give permission in everyday situations.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="canCould1.canUses.permEx1">Can I borrow your pen?</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.canUses.permEx2">You can go now.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Primary Functions of Could -->
+            <!-- Section 4: Primary Uses of Could -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould1.couldFunctions.title">Primary Uses of "Could"</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould1.couldUses.title">I. 4. Primary Uses of "Could"</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🕰️</span>
-                        <span data-i18n="modalsCanCould1.couldFunctions.pastAbility">1. Past ability</span>
+                        <span class="EH-conjugation-subsection-icon">🕐</span>
+                        <span data-i18n="canCould1.couldUses.heading">Past Ability, Polite Requests & Uncertain Possibility</span>
                     </h3>
-                    <p data-i18n="modalsCanCould1.couldFunctions.pastAbilityText">Could is the past tense of can to express general ability in the past.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.couldFunctions.pastAbilityEx1">When I was five, I could read.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.couldFunctions.pastAbilityEx2">She could run very fast.</div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould1.couldUses.pastTitle">1. Past ability</div>
+                        <p data-i18n="canCould1.couldUses.pastDesc"><strong>Could</strong> is the past tense of <strong>can</strong> to express general ability in the past.</p>
                     </div>
-                </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🤝</span>
-                        <span data-i18n="modalsCanCould1.couldFunctions.politeRequest">2. Polite requests & permission</span>
-                    </h3>
-                    <p data-i18n="modalsCanCould1.couldFunctions.politeRequestText">Could is more formal and polite than can for requests.</p>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.couldFunctions.politeRequestEx1">Could you open the door, please?</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.couldFunctions.politeRequestEx2">Could I have a glass of water?</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.couldUses.pastEx1">When I was five, I could read.</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.couldUses.pastEx2">She could run very fast.</div>
                     </div>
-                </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🤔</span>
-                        <span data-i18n="modalsCanCould1.couldFunctions.possibility">3. Possibility (less certain)</span>
-                    </h3>
-                    <p data-i18n="modalsCanCould1.couldFunctions.possibilityText">Could expresses that something is possible but not certain.</p>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould1.couldUses.politeTitle">2. Polite requests & permission</div>
+                        <p data-i18n="canCould1.couldUses.politeDesc"><strong>Could</strong> is more formal and polite than <strong>can</strong> for requests.</p>
+                    </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.couldFunctions.possibilityEx1">It could rain tomorrow.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould1.couldFunctions.possibilityEx2">This could be the answer.</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.couldUses.politeEx1">Could you open the door, please?</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.couldUses.politeEx2">Could I have a glass of water?</div>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould1.couldUses.possTitle">3. Possibility (less certain)</div>
+                        <p data-i18n="canCould1.couldUses.possDesc"><strong>Could</strong> expresses that something is possible but not certain.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="canCould1.couldUses.possEx1">It could rain tomorrow.</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould1.couldUses.possEx2">This could be the answer.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Comparison table -->
+            <!-- Section 5: Can vs Could – Quick Comparison -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould1.comparison.title">Can vs Could – Quick Comparison</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould1.comparison.title">I. 5. Can vs Could – Quick Comparison</h2>
                 <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">⚖️</span>
+                        <span data-i18n="canCould1.comparison.heading">Side-by-side comparison of uses</span>
+                    </h3>
                     <table class="EH-conjugation-table">
-                        <thead><tr><th data-i18n="common.usage">Usage</th><th>Can</th><th>Could</th></tr></thead>
+                        <thead>
+                            <tr><th data-i18n="canCould1.comparison.useCol">Use</th><th data-i18n="canCould1.comparison.canCol">Can</th><th data-i18n="canCould1.comparison.couldCol">Could</th></tr>
+                        </thead>
                         <tbody>
-                            <tr><td data-i18n="modalsCanCould1.comparison.ability">Ability</td>
-                                <td data-i18n="modalsCanCould1.comparison.canAbility">present: I can swim.</td>
-                                <td data-i18n="modalsCanCould1.comparison.couldAbility">past: I could swim.</td>
+                            <tr>
+                                <td data-i18n="canCould1.comparison.ability">Ability</td>
+                                <td data-i18n="canCould1.comparison.canAbility">I can swim. (present)</td>
+                                <td data-i18n="canCould1.comparison.couldAbility">I could swim. (past)</td>
                             </tr>
-                            <tr><td data-i18n="modalsCanCould1.comparison.request">Request</td>
-                                <td data-i18n="modalsCanCould1.comparison.canRequest">informal: Can you help?</td>
-                                <td data-i18n="modalsCanCould1.comparison.couldRequest">polite: Could you help?</td>
+                            <tr>
+                                <td data-i18n="canCould1.comparison.request">Request</td>
+                                <td data-i18n="canCould1.comparison.canRequest">Can you help? (informal)</td>
+                                <td data-i18n="canCould1.comparison.couldRequest">Could you help? (polite)</td>
                             </tr>
-                            <tr><td data-i18n="modalsCanCould1.comparison.possibility">Possibility</td>
-                                <td data-i18n="modalsCanCould1.comparison.canPossibility">general: It can be hot.</td>
-                                <td data-i18n="modalsCanCould1.comparison.couldPossibility">uncertain: It could be hot.</td>
+                            <tr>
+                                <td data-i18n="canCould1.comparison.possibility">Possibility</td>
+                                <td data-i18n="canCould1.comparison.canPoss">It can be hot. (general)</td>
+                                <td data-i18n="canCould1.comparison.couldPoss">It could be hot. (uncertain)</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            
-            <!-- EXERCISES (12) – dynamic slots -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould1.exercises.title">Practice Exercises</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #00695c; margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould1.exercises.title">Practice: Can & Could Basics</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #00695c; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #00695c; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
@@ -268,34 +315,8 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-cancould-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson</span>
-                </button>
-                <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-                    <span></span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">Return to Conjugation</span>
-                </button>
-            </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
     <script>
         window.I18N = {
             en: {
@@ -303,108 +324,117 @@
                     siteName: "English Hub",
                     previousLesson: "← Previous Lesson",
                     returnToConjugation: "← Return to Conjugation",
-                    nextLesson: "Next Lesson →",
-                    examples: "Examples:",
-                    structure: "Structure",
-                    example: "Example",
-                    form: "Form",
-                    rule: "Rule",
-                    affirmative: "Affirmative",
-                    negative: "Negative",
-                    question: "Question",
-                    usage: "Usage"
+                    nextLesson: "Next Lesson →"
                 },
                 footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
-                modalsCanCould1: {
-                    title: "Can & Could: Core Concepts & Primary Uses",
-                    subtitle: "Learn how to use can and could to express ability, possibility, and requests",
-                    introduction: {
-                        title: "Introduction to Can & Could",
-                        whatAre: "What are modals \"can\" and \"could\"?",
-                        definitionTitle: "Definition:",
-                        definition: "\"Can\" and \"could\" are modal auxiliary verbs. They do not change form (no -s in third person) and are followed by the base form of the main verb.",
-                        coreIdeas: "Core ideas:",
-                        core1: "<strong>Can</strong> – present ability, possibility, informal permission.",
-                        core2: "<strong>Could</strong> – past ability, polite requests, less certain possibility.",
-                        example1: "I can swim. (ability)",
-                        example2: "It can be cold here. (possibility)",
-                        example3: "Could you help me? (polite request)",
-                        example4: "When I was young, I could run fast. (past ability)"
+                canCould1: {
+                    title: {
+                        line1: "Can & Could I:",
+                        line2: "Core Concepts & Primary Uses",
+                        line3: "Use can and could to express ability, possibility, and requests.",
+                        line4: "lesson: 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. Introduction to Can & Could",
+                        heading: "What are modals \"can\" and \"could\"?",
+                        desc1: "📘 Definition:",
+                        desc2: "\"Can\" and \"could\" are modal auxiliary verbs. They do not change form (no -s in third person) and are followed by the base form of the main verb.",
+                        coreTitle: "💡 Core ideas:",
+                        core1: "Can – present ability, possibility, informal permission.",
+                        core2: "Could – past ability, polite requests, less certain possibility.",
+                        ex1: "I can swim. (ability)",
+                        ex2: "It can be cold here. (possibility)",
+                        ex3: "Could you help me? (polite request)",
+                        ex4: "When I was young, I could run fast. (past ability)"
                     },
                     grammar: {
-                        title: "Basic Grammar Rules",
-                        structure: "Structure",
-                        importantNote: "Important:",
-                        noteText: "Modals never take -s, -ing, or -ed. They are always followed by the infinitive without 'to'.",
-                        affirmativeRule: "subject + can/could + base verb",
-                        exampleAffirmative: "She can sing.",
-                        negativeRule: "subject + cannot/can't / could not/couldn't + base verb",
-                        exampleNegative: "He can't drive.",
-                        questionRule: "Can/Could + subject + base verb?",
-                        exampleQuestion: "Can you help?"
+                        title: "I. 2. Basic Grammar Rules",
+                        heading: "Structure: Affirmative, Negative & Question Forms",
+                        desc1: "📘 Rule:",
+                        desc2: "Modals never take -s, -ing, or -ed. They are always followed by the infinitive without 'to'.",
+                        structureCol: "Structure",
+                        exampleCol: "Example",
+                        affirmative: "Affirmative: subject + can/could + base verb",
+                        exAffirmative: "She can sing.",
+                        negative: "Negative: subject + cannot/can't / could not/couldn't + base verb",
+                        exNegative: "He can't drive.",
+                        question: "Question: Can/Could + subject + base verb?",
+                        exQuestion: "Can you help?"
                     },
-                    canFunctions: {
-                        title: "Primary Uses of \"Can\"",
-                        ability: "1. Ability (present)",
-                        abilityText: "We use can to say that someone knows how to do something, or that it is possible for them.",
+                    canUses: {
+                        title: "I. 3. Primary Uses of \"Can\"",
+                        heading: "Ability, Possibility & Permission",
+                        abilityTitle: "1. Ability (present)",
+                        abilityDesc: "We use can to say that someone knows how to do something, or that it is possible for them.",
                         abilityEx1: "I can play the guitar.",
                         abilityEx2: "She can speak three languages.",
-                        possibility: "2. Possibility / General truth",
-                        possibilityText: "Can is used to say that something is possible or sometimes happens.",
-                        possibilityEx1: "It can rain a lot in April.",
-                        possibilityEx2: "Cars can be expensive.",
-                        permission: "3. Permission / Requests (informal)",
-                        permissionText: "We use can to ask for or give permission in everyday situations.",
-                        permissionEx1: "Can I borrow your pen?",
-                        permissionEx2: "You can go now."
+                        possTitle: "2. Possibility / General truth",
+                        possDesc: "Can is used to say that something is possible or sometimes happens.",
+                        possEx1: "It can rain a lot in April.",
+                        possEx2: "Cars can be expensive.",
+                        permTitle: "3. Permission / Requests (informal)",
+                        permDesc: "We use can to ask for or give permission in everyday situations.",
+                        permEx1: "Can I borrow your pen?",
+                        permEx2: "You can go now."
                     },
-                    couldFunctions: {
-                        title: "Primary Uses of \"Could\"",
-                        pastAbility: "1. Past ability",
-                        pastAbilityText: "Could is the past tense of can to express general ability in the past.",
-                        pastAbilityEx1: "When I was five, I could read.",
-                        pastAbilityEx2: "She could run very fast.",
-                        politeRequest: "2. Polite requests & permission",
-                        politeRequestText: "Could is more formal and polite than can for requests.",
-                        politeRequestEx1: "Could you open the door, please?",
-                        politeRequestEx2: "Could I have a glass of water?",
-                        possibility: "3. Possibility (less certain)",
-                        possibilityText: "Could expresses that something is possible but not certain.",
-                        possibilityEx1: "It could rain tomorrow.",
-                        possibilityEx2: "This could be the answer."
+                    couldUses: {
+                        title: "I. 4. Primary Uses of \"Could\"",
+                        heading: "Past Ability, Polite Requests & Uncertain Possibility",
+                        pastTitle: "1. Past ability",
+                        pastDesc: "Could is the past tense of can to express general ability in the past.",
+                        pastEx1: "When I was five, I could read.",
+                        pastEx2: "She could run very fast.",
+                        politeTitle: "2. Polite requests & permission",
+                        politeDesc: "Could is more formal and polite than can for requests.",
+                        politeEx1: "Could you open the door, please?",
+                        politeEx2: "Could I have a glass of water?",
+                        possTitle: "3. Possibility (less certain)",
+                        possDesc: "Could expresses that something is possible but not certain.",
+                        possEx1: "It could rain tomorrow.",
+                        possEx2: "This could be the answer."
                     },
                     comparison: {
-                        title: "Can vs Could – Quick Comparison",
+                        title: "I. 5. Can vs Could – Quick Comparison",
+                        heading: "Side-by-side comparison of uses",
+                        useCol: "Use",
+                        canCol: "Can",
+                        couldCol: "Could",
                         ability: "Ability",
-                        canAbility: "present: I can swim.",
-                        couldAbility: "past: I could swim.",
+                        canAbility: "I can swim. (present)",
+                        couldAbility: "I could swim. (past)",
                         request: "Request",
-                        canRequest: "informal: Can you help?",
-                        couldRequest: "polite: Could you help?",
+                        canRequest: "Can you help? (informal)",
+                        couldRequest: "Could you help? (polite)",
                         possibility: "Possibility",
-                        canPossibility: "general: It can be hot.",
-                        couldPossibility: "uncertain: It could be hot."
+                        canPoss: "It can be hot. (general)",
+                        couldPoss: "It could be hot. (uncertain)"
                     },
                     exercises: {
-                        title: "Practice Exercises",
-                        q1: "Choose the correct modal:",
-                        q1Sentence: "I ______ swim very well.",
-                        q1a: "can", q1b: "could", q1c: "cans",
-                        q2: "Choose the correct modal:",
-                        q2Sentence: "When I was a child, I ______ climb trees.",
-                        q2a: "can", q2b: "could", q2c: "was able",
-                        q3: "Choose the most polite request:",
-                        q3Sentence: "______ you pass the salt, please?",
-                        q3a: "Can", q3b: "Could", q3c: "May",
-                        q4: "Choose the correct modal for a general possibility:",
-                        q4Sentence: "It ______ be very cold in winter here.",
-                        q4a: "can", q4b: "could", q4c: "is",
-                        q5: "Choose the correct negative:",
-                        q5Sentence: "He ______ come to the party last night.",
-                        q5a: "can't", q5b: "couldn't", q5c: "didn't can",
-                        q6: "Choose the correct request:",
-                        q6Sentence: "______ I leave early today?",
-                        q6a: "Can", q6b: "Could", q6c: "Am",
+                        title: "Practice: Can & Could Basics",
+                        q1: "Choose the correct modal: I ______ swim very well.",
+                        q1a: "can",
+                        q1b: "could",
+                        q1c: "cans",
+                        q2: "Choose the correct modal: When I was a child, I ______ climb trees.",
+                        q2a: "can",
+                        q2b: "could",
+                        q2c: "was able",
+                        q3: "Choose the most polite request: ______ you pass the salt, please?",
+                        q3a: "Can",
+                        q3b: "Could",
+                        q3c: "May",
+                        q4: "Choose the correct modal for a general possibility: It ______ be very cold in winter here.",
+                        q4a: "can",
+                        q4b: "could",
+                        q4c: "is",
+                        q5: "Choose the correct negative: He ______ come to the party last night.",
+                        q5a: "can't",
+                        q5b: "couldn't",
+                        q5c: "didn't can",
+                        q6: "Choose the correct request: ______ I leave early today?",
+                        q6a: "Can",
+                        q6b: "Could",
+                        q6c: "Am",
                         q7: "Complete: I ______ (can) swim when I was five.",
                         q8: "Complete: She ______ (not/can) hear you, please speak louder.",
                         q9: "Complete: ______ you open the window, please? (polite)",
@@ -417,382 +447,233 @@
             fr: {
                 common: {
                     siteName: "English Hub",
-                    previousLesson: "← Previous Lesson (Leçon Précédente)",
-                    returnToConjugation: "← Return to Conjugation (Retour au Conjugaison)",
-                    nextLesson: "Next Lesson (Leçon Suivante) →",
-                    examples: "Examples: (Exemples :)",
-                    structure: "Structure",
-                    example: "Example (Exemple)",
-                    form: "Form (Forme)",
-                    rule: "Rule (Règle)",
-                    affirmative: "Affirmative (Affirmatif)",
-                    negative: "Negative (Négatif)",
-                    question: "Question (Question)",
-                    usage: "Usage (Usage)"
+                    previousLesson: "← Leçon Précédente",
+                    returnToConjugation: "← Retour au Conjugaison",
+                    nextLesson: "Leçon Suivante →"
                 },
-                footer: {
-                    developer: "Développeur : Mejri Ziad",
-                    privacy: "Politique de confidentialité",
-                    terms: "Conditions d'utilisation",
-                    contact: "Contact"
-                },
-                modalsCanCould1: {
-                    title: "Can & Could: Core Concepts & Primary Uses (Can & Could : concepts de base et utilisations principales)",
-                    subtitle: "Learn how to use can and could to express ability, possibility, and requests (Apprenez à utiliser can et could pour exprimer la capacité, la possibilité et les demandes)",
-                    introduction: {
-                        title: "Introduction to Can & Could (Introduction à Can & Could)",
-                        whatAre: "What are modals \"can\" and \"could\"? (Que sont les modaux \"can\" et \"could\" ?)",
-                        definitionTitle: "Definition: (Définition :)",
-                        definition: "\"Can\" and \"could\" are modal auxiliary verbs. They do not change form (no -s in third person) and are followed by the base form of the main verb. (\"Can\" et \"could\" sont des verbes auxiliaires modaux. Ils ne changent pas de forme (pas de -s à la troisième personne) et sont suivis de la base verbale.)",
-                        coreIdeas: "Core ideas: (Idées principales :)",
-                        core1: "<strong>Can</strong> – present ability, possibility, informal permission. (<strong>Can</strong> – capacité présente, possibilité, permission informelle.)",
-                        core2: "<strong>Could</strong> – past ability, polite requests, less certain possibility. (<strong>Could</strong> – capacité passée, demandes polies, possibilité moins certaine.)",
-                        example1: "I can swim. (Je sais nager.)",
-                        example2: "It can be cold here. (Il peut faire froid ici.)",
-                        example3: "Could you help me? (Pourriez-vous m'aider ?)",
-                        example4: "When I was young, I could run fast. (Quand j'étais jeune, je pouvais courir vite.)"
+                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+                canCould1: {
+                    title: {
+                        line1: "Can & Could I :",
+                        line2: "Concepts de base et utilisations principales",
+                        line3: "Utilisez can et could pour exprimer la capacité, la possibilité et les demandes.",
+                        line4: "leçon : 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. Introduction à Can & Could",
+                        heading: "Que sont les modaux \"can\" et \"could\" ?",
+                        desc1: "📘 Définition :",
+                        desc2: "\"Can\" et \"could\" sont des verbes modaux auxiliaires. Ils ne changent pas de forme (pas de -s à la troisième personne) et sont suivis de la forme de base du verbe principal.",
+                        coreTitle: "💡 Idées clés :",
+                        core1: "Can – capacité présente, possibilité, permission informelle.",
+                        core2: "Could – capacité passée, demandes polies, possibilité moins certaine.",
+                        ex1: "Je peux nager. (capacité)",
+                        ex2: "Il peut faire froid ici. (possibilité)",
+                        ex3: "Pourriez-vous m'aider ? (demande polie)",
+                        ex4: "Quand j'étais jeune, je pouvais courir vite. (capacité passée)"
                     },
                     grammar: {
-                        title: "Basic Grammar Rules (Règles grammaticales de base)",
-                        structure: "Structure (Structure)",
-                        importantNote: "Important: (Important :)",
-                        noteText: "Modals never take -s, -ing, or -ed. They are always followed by the infinitive without 'to'. (Les modaux ne prennent jamais -s, -ing ou -ed. Ils sont toujours suivis de l'infinitif sans 'to'.)",
-                        affirmativeRule: "subject + can/could + base verb (sujet + can/could + verbe de base)",
-                        exampleAffirmative: "She can sing. (Elle sait chanter.)",
-                        negativeRule: "subject + cannot/can't / could not/couldn't + base verb (sujet + cannot/can't / could not/couldn't + verbe de base)",
-                        exampleNegative: "He can't drive. (Il ne sait pas conduire.)",
-                        questionRule: "Can/Could + subject + base verb? (Can/Could + sujet + verbe de base ?)",
-                        exampleQuestion: "Can you help? (Peux-tu aider ?)"
+                        title: "I. 2. Règles de grammaire de base",
+                        heading: "Structure : formes affirmative, négative et interrogative",
+                        desc1: "📘 Règle :",
+                        desc2: "Les modaux ne prennent jamais -s, -ing ou -ed. Ils sont toujours suivis de l'infinitif sans 'to'.",
+                        structureCol: "Structure",
+                        exampleCol: "Exemple",
+                        affirmative: "Affirmative : sujet + can/could + verbe de base",
+                        exAffirmative: "Elle peut chanter.",
+                        negative: "Négative : sujet + cannot/can't / could not/couldn't + verbe de base",
+                        exNegative: "Il ne peut pas conduire.",
+                        question: "Question : Can/Could + sujet + verbe de base ?",
+                        exQuestion: "Peux-tu aider ?"
                     },
-                    canFunctions: {
-                        title: "Primary Uses of \"Can\" (Utilisations principales de \"Can\")",
-                        ability: "1. Ability (present) (1. Capacité (présent))",
-                        abilityText: "We use can to say that someone knows how to do something, or that it is possible for them. (On utilise can pour dire que quelqu'un sait faire quelque chose, ou que c'est possible pour lui.)",
-                        abilityEx1: "I can play the guitar. (Je sais jouer de la guitare.)",
-                        abilityEx2: "She can speak three languages. (Elle parle trois langues.)",
-                        possibility: "2. Possibility / General truth (2. Possibilité / Vérité générale)",
-                        possibilityText: "Can is used to say that something is possible or sometimes happens. (Can est utilisé pour dire que quelque chose est possible ou arrive parfois.)",
-                        possibilityEx1: "It can rain a lot in April. (Il peut pleuvoir beaucoup en avril.)",
-                        possibilityEx2: "Cars can be expensive. (Les voitures peuvent être chères.)",
-                        permission: "3. Permission / Requests (informal) (3. Permission / Demandes (informel))",
-                        permissionText: "We use can to ask for or give permission in everyday situations. (On utilise can pour demander ou donner la permission dans des situations quotidiennes.)",
-                        permissionEx1: "Can I borrow your pen? (Puis-je emprunter ton stylo ?)",
-                        permissionEx2: "You can go now. (Tu peux y aller maintenant.)"
+                    canUses: {
+                        title: "I. 3. Utilisations principales de \"Can\"",
+                        heading: "Capacité, possibilité et permission",
+                        abilityTitle: "1. Capacité (présent)",
+                        abilityDesc: "On utilise can pour dire que quelqu'un sait faire quelque chose, ou que c'est possible pour lui.",
+                        abilityEx1: "Je peux jouer de la guitare.",
+                        abilityEx2: "Elle peut parler trois langues.",
+                        possTitle: "2. Possibilité / Vérité générale",
+                        possDesc: "Can est utilisé pour dire que quelque chose est possible ou arrive parfois.",
+                        possEx1: "Il peut beaucoup pleuvoir en avril.",
+                        possEx2: "Les voitures peuvent être chères.",
+                        permTitle: "3. Permission / Demandes (informelles)",
+                        permDesc: "On utilise can pour demander ou donner la permission dans des situations quotidiennes.",
+                        permEx1: "Puis-je emprunter ton stylo ?",
+                        permEx2: "Tu peux y aller maintenant."
                     },
-                    couldFunctions: {
-                        title: "Primary Uses of \"Could\" (Utilisations principales de \"Could\")",
-                        pastAbility: "1. Past ability (1. Capacité passée)",
-                        pastAbilityText: "Could is the past tense of can to express general ability in the past. (Could est le passé de can pour exprimer une capacité générale dans le passé.)",
-                        pastAbilityEx1: "When I was five, I could read. (Quand j'avais cinq ans, je savais lire.)",
-                        pastAbilityEx2: "She could run very fast. (Elle pouvait courir très vite.)",
-                        politeRequest: "2. Polite requests & permission (2. Demandes polies & permission)",
-                        politeRequestText: "Could is more formal and polite than can for requests. (Could est plus formel et poli que can pour les demandes.)",
-                        politeRequestEx1: "Could you open the door, please? (Pourriez-vous ouvrir la porte, s'il vous plaît ?)",
-                        politeRequestEx2: "Could I have a glass of water? (Puis-je avoir un verre d'eau ?)",
-                        possibility: "3. Possibility (less certain) (3. Possibilité (moins certaine))",
-                        possibilityText: "Could expresses that something is possible but not certain. (Could exprime que quelque chose est possible mais pas certain.)",
-                        possibilityEx1: "It could rain tomorrow. (Il pourrait pleuvoir demain.)",
-                        possibilityEx2: "This could be the answer. (Cela pourrait être la réponse.)"
+                    couldUses: {
+                        title: "I. 4. Utilisations principales de \"Could\"",
+                        heading: "Capacité passée, demandes polies et possibilité incertaine",
+                        pastTitle: "1. Capacité passée",
+                        pastDesc: "Could est le passé de can pour exprimer une capacité générale dans le passé.",
+                        pastEx1: "Quand j'avais cinq ans, je pouvais lire.",
+                        pastEx2: "Elle pouvait courir très vite.",
+                        politeTitle: "2. Demandes et permission polies",
+                        politeDesc: "Could est plus formel et poli que can pour les demandes.",
+                        politeEx1: "Pourriez-vous ouvrir la porte, s'il vous plaît ?",
+                        politeEx2: "Pourrais-je avoir un verre d'eau ?",
+                        possTitle: "3. Possibilité (moins certaine)",
+                        possDesc: "Could exprime que quelque chose est possible mais pas certain.",
+                        possEx1: "Il pourrait pleuvoir demain.",
+                        possEx2: "Cela pourrait être la réponse."
                     },
                     comparison: {
-                        title: "Can vs Could – Quick Comparison (Can vs Could – Comparaison rapide)",
-                        ability: "Ability (Capacité)",
-                        canAbility: "present: I can swim. (présent : Je sais nager.)",
-                        couldAbility: "past: I could swim. (passé : Je savais nager.)",
-                        request: "Request (Demande)",
-                        canRequest: "informal: Can you help? (informel : Peux-tu aider ?)",
-                        couldRequest: "polite: Could you help? (poli : Pourriez-vous aider ?)",
-                        possibility: "Possibility (Possibilité)",
-                        canPossibility: "general: It can be hot. (général : Il peut faire chaud.)",
-                        couldPossibility: "uncertain: It could be hot. (incertain : Il pourrait faire chaud.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (Exercices pratiques)",
-                        q1: "Choose the correct modal: (Choisissez le modal correct :)",
-                        q1Sentence: "I ______ swim very well. (Je ______ nager très bien.)",
-                        q1a: "can (can)",
-                        q1b: "could (could)",
-                        q1c: "cans (cans)",
-                        q2: "Choose the correct modal: (Choisissez le modal correct :)",
-                        q2Sentence: "When I was a child, I ______ climb trees. (Quand j'étais enfant, je ______ grimper aux arbres.)",
-                        q2a: "can (can)",
-                        q2b: "could (could)",
-                        q2c: "was able (was able)",
-                        q3: "Choose the most polite request: (Choisissez la demande la plus polie :)",
-                        q3Sentence: "______ you pass the salt, please? (______ vous passer le sel, s'il vous plaît ?)",
-                        q3a: "Can (Can)",
-                        q3b: "Could (Could)",
-                        q3c: "May (May)",
-                        q4: "Choose the correct modal for a general possibility: (Choisissez le modal correct pour une possibilité générale :)",
-                        q4Sentence: "It ______ be very cold in winter here. (Il ______ faire très froid ici en hiver.)",
-                        q4a: "can (can)",
-                        q4b: "could (could)",
-                        q4c: "is (is)",
-                        q5: "Choose the correct negative: (Choisissez la négation correcte :)",
-                        q5Sentence: "He ______ come to the party last night. (Il ______ venir à la fête hier soir.)",
-                        q5a: "can't (can't)",
-                        q5b: "couldn't (couldn't)",
-                        q5c: "didn't can (didn't can)",
-                        q6: "Choose the correct request: (Choisissez la demande correcte :)",
-                        q6Sentence: "______ I leave early today? (______ je pars tôt aujourd'hui ?)",
-                        q6a: "Can (Can)",
-                        q6b: "Could (Could)",
-                        q6c: "Am (Am)",
-                        q7: "Complete: I ______ (can) swim when I was five. (Complétez : Je ______ (can) nager quand j'avais cinq ans.)",
-                        q8: "Complete: She ______ (not/can) hear you, please speak louder. (Complétez : Elle ______ (not/can) vous entendre, parlez plus fort.)",
-                        q9: "Complete: ______ you open the window, please? (polite) (Complétez : ______ vous ouvrir la fenêtre, s'il vous plaît ? (poli))",
-                        q10: "Arrange: (you / help / me / can / ?) (Remettez en ordre : (you / help / me / can / ?))",
-                        q11: "Arrange: (I / could / when / run / I / fast / was / young / .) (Remettez en ordre : (I / could / when / run / I / fast / was / young / .))",
-                        q12: "Arrange: (it / be / could / rainy / .) (Remettez en ordre : (it / be / could / rainy / .))"
+                        title: "I. 5. Can vs Could – Comparaison rapide",
+                        heading: "Comparaison côte à côte des utilisations",
+                        useCol: "Usage",
+                        canCol: "Can",
+                        couldCol: "Could",
+                        ability: "Capacité",
+                        canAbility: "Je peux nager. (présent)",
+                        couldAbility: "Je pouvais nager. (passé)",
+                        request: "Demande",
+                        canRequest: "Peux-tu aider ? (informel)",
+                        couldRequest: "Pourriez-vous aider ? (poli)",
+                        possibility: "Possibilité",
+                        canPoss: "Il peut faire chaud. (général)",
+                        couldPoss: "Il pourrait faire chaud. (incertain)"
                     }
                 }
             },
             ar: {
                 common: {
                     siteName: "English Hub",
-                    previousLesson: "Previous Lesson (الدرس السابق)← ",
-                    returnToConjugation: "Return to Conjugation (العودة إلى التصريف)← ",
-                    nextLesson: "Next Lesson (الدرس التالي) →",
-                    examples: "Examples: (أمثلة:)",
-                    structure: "Structure (البنية)",
-                    example: "Example (مثال)",
-                    form: "Form (الصيغة)",
-                    rule: "Rule (القاعدة)",
-                    affirmative: "Affirmative (مثبت)",
-                    negative: "Negative (منفي)",
-                    question: "Question (سؤال)",
-                    usage: "Usage (الاستخدام)"
+                    previousLesson: "الدرس السابق← ",
+                    returnToConjugation: "العودة إلى التصريف← ",
+                    nextLesson: "الدرس التالي →"
                 },
-                footer: {
-                    developer: "المطور: Mejri Ziad",
-                    privacy: "سياسة الخصوصية",
-                    terms: "شروط الخدمة",
-                    contact: "اتصل بنا"
-                },
-                modalsCanCould1: {
-                    title: "Can & Could: Core Concepts & Primary Uses (Can & Could: المفاهيم الأساسية والاستخدامات الرئيسية)",
-                    subtitle: "Learn how to use can and could to express ability, possibility, and requests (تعلّم استخدام can و could للتعبير عن القدرة والإمكانية والطلبات)",
-                    introduction: {
-                        title: "Introduction to Can & Could (مقدمة إلى Can & Could)",
-                        whatAre: "What are modals \"can\" and \"could\"? (ما هما الفعلان المساعدان \"can\" و \"could\"؟)",
-                        definitionTitle: "Definition: (تعريف:)",
-                        definition: "\"Can\" and \"could\" are modal auxiliary verbs. They do not change form (no -s in third person) and are followed by the base form of the main verb. (\"Can\" و \"could\" هما أفعال مساعدة نموذجية. لا يتغير شكلهما (لا يُضاف -s للغائب) ويتبعهما الفعل الرئيسي في المصدر.)",
-                        coreIdeas: "Core ideas: (الأفكار الأساسية:)",
-                        core1: "<strong>Can</strong> – present ability, possibility, informal permission. (<strong>Can</strong> – قدرة في الحاضر، إمكانية، إذن غير رسمي.)",
-                        core2: "<strong>Could</strong> – past ability, polite requests, less certain possibility. (<strong>Could</strong> – قدرة في الماضي، طلبات مهذبة، إمكانية أقل يقينًا.)",
-                        example1: "I can swim. (أستطيع السباحة.)",
-                        example2: "It can be cold here. (يمكن أن يكون الجو باردًا هنا.)",
-                        example3: "Could you help me? (هل يمكنك مساعدتي؟)",
-                        example4: "When I was young, I could run fast. (عندما كنت صغيرًا، كنت أستطيع الركض بسرعة.)"
+                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+                canCould1: {
+                    title: {
+                        line1: "Can & Could :1",
+                        line2: "المفاهيم الأساسية والاستخدامات الرئيسية",
+                        line3: "استخدم can و could للتعبير عن القدرة والإمكانية والطلبات.",
+                        line4: "الدرس: 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. مقدمة عن Can & Could",
+                        heading: "ما هما الفعلان الناقصان \"can\" و \"could\"؟",
+                        desc1: "📘 التعريف:",
+                        desc2: "\"Can\" و \"could\" هما فعلان ناقصان مساعدان. لا يتغير شكلهما (لا تضاف -s للغائب) ويتبعهما الفعل الأساسي في المصدر.",
+                        coreTitle: "💡 أفكار أساسية:",
+                        core1: "Can – القدرة الحالية، الإمكانية، الإذن غير الرسمي.",
+                        core2: "Could – القدرة الماضية، الطلبات المهذبة، الإمكانية الأقل تأكيدًا.",
+                        ex1: "أستطيع السباحة. (قدرة)",
+                        ex2: "يمكن أن يكون الجو باردًا هنا. (إمكانية)",
+                        ex3: "هل يمكنك مساعدتي؟ (طلب مهذب)",
+                        ex4: "عندما كنت صغيرًا، كنت أستطيع الركض بسرعة. (قدرة ماضية)"
                     },
                     grammar: {
-                        title: "Basic Grammar Rules (القواعد النحوية الأساسية)",
-                        structure: "Structure (البنية)",
-                        importantNote: "Important: (ملاحظة مهمة:)",
-                        noteText: "Modals never take -s, -ing, or -ed. They are always followed by the infinitive without 'to'. (الأفعال النموذجية لا تأخذ أبدًا -s أو -ing أو -ed. وهي تتبع دائمًا بصيغة المصدر بدون 'to'.)",
-                        affirmativeRule: "subject + can/could + base verb (الفاعل + can/could + الفعل المجرد)",
-                        exampleAffirmative: "She can sing. (هي تستطيع الغناء.)",
-                        negativeRule: "subject + cannot/can't / could not/couldn't + base verb (الفاعل + cannot/can't / could not/couldn't + الفعل المجرد)",
-                        exampleNegative: "He can't drive. (هو لا يستطيع القيادة.)",
-                        questionRule: "Can/Could + subject + base verb? (Can/Could + الفاعل + الفعل المجرد؟)",
-                        exampleQuestion: "Can you help? (هل تستطيع المساعدة؟)"
+                        title: "I. 2. قواعد النحو الأساسية",
+                        heading: "البنية: الصيغ المثبتة والمنفية والاستفهامية",
+                        desc1: "📘 القاعدة:",
+                        desc2: "الأفعال الناقصة لا تأخذ -s أو -ing أو -ed أبدًا. ويتبعها دائمًا المصدر بدون 'to'.",
+                        structureCol: "البنية",
+                        exampleCol: "مثال",
+                        affirmative: "مثبت: فاعل + can/could + فعل أساسي",
+                        exAffirmative: "هي تستطيع الغناء.",
+                        negative: "منفي: فاعل + cannot/can't / could not/couldn't + فعل أساسي",
+                        exNegative: "هو لا يستطيع القيادة.",
+                        question: "سؤال: Can/Could + فاعل + فعل أساسي؟",
+                        exQuestion: "هل تستطيع المساعدة؟"
                     },
-                    canFunctions: {
-                        title: "Primary Uses of \"Can\" (الاستخدامات الرئيسية لـ \"Can\")",
-                        ability: "1. Ability (present) (1. القدرة (في الحاضر))",
-                        abilityText: "We use can to say that someone knows how to do something, or that it is possible for them. (نستخدم can لنقول إن شخصًا ما يعرف كيف يفعل شيئًا، أو أنه ممكن له.)",
-                        abilityEx1: "I can play the guitar. (أستطيع العزف على الجيتار.)",
-                        abilityEx2: "She can speak three languages. (تستطيع التحدث بثلاث لغات.)",
-                        possibility: "2. Possibility / General truth (2. الإمكانية / حقيقة عامة)",
-                        possibilityText: "Can is used to say that something is possible or sometimes happens. (يستخدم can للقول إن شيئًا ما ممكن أو يحدث أحيانًا.)",
-                        possibilityEx1: "It can rain a lot in April. (يمكن أن تمطر كثيرًا في أبريل.)",
-                        possibilityEx2: "Cars can be expensive. (يمكن أن تكون السيارات باهظة الثمن.)",
-                        permission: "3. Permission / Requests (informal) (3. الإذن / الطلبات (غير رسمي))",
-                        permissionText: "We use can to ask for or give permission in everyday situations. (نستخدم can لطلب أو منح الإذن في المواقف اليومية.)",
-                        permissionEx1: "Can I borrow your pen? (هل يمكنني استعارة قلمك؟)",
-                        permissionEx2: "You can go now. (يمكنك الذهاب الآن.)"
+                    canUses: {
+                        title: "I. 3. الاستخدامات الرئيسية لـ \"Can\"",
+                        heading: "القدرة والإمكانية والإذن",
+                        abilityTitle: "1. القدرة (الحاضر)",
+                        abilityDesc: "نستخدم can للقول بأن شخصًا ما يعرف كيف يفعل شيئًا، أو أنه من الممكن له.",
+                        abilityEx1: "أستطيع العزف على الجيتار.",
+                        abilityEx2: "هي تستطيع التحدث بثلاث لغات.",
+                        possTitle: "2. الإمكانية / الحقيقة العامة",
+                        possDesc: "يُستخدم can للقول بأن شيئًا ما ممكن أو يحدث أحيانًا.",
+                        possEx1: "يمكن أن تمطر كثيرًا في أبريل.",
+                        possEx2: "يمكن أن تكون السيارات باهظة الثمن.",
+                        permTitle: "3. الإذن / الطلبات (غير الرسمية)",
+                        permDesc: "نستخدم can لطلب أو منح الإذن في المواقف اليومية.",
+                        permEx1: "هل يمكنني استعارة قلمك؟",
+                        permEx2: "يمكنك الذهاب الآن."
                     },
-                    couldFunctions: {
-                        title: "Primary Uses of \"Could\" (الاستخدامات الرئيسية لـ \"Could\")",
-                        pastAbility: "1. Past ability (1. القدرة في الماضي)",
-                        pastAbilityText: "Could is the past tense of can to express general ability in the past. (Could هو الماضي من can للتعبير عن قدرة عامة في الماضي.)",
-                        pastAbilityEx1: "When I was five, I could read. (عندما كنت في الخامسة، كنت أستطيع القراءة.)",
-                        pastAbilityEx2: "She could run very fast. (كانت تستطيع الركض بسرعة كبيرة.)",
-                        politeRequest: "2. Polite requests & permission (2. الطلبات المهذبة والإذن)",
-                        politeRequestText: "Could is more formal and polite than can for requests. (Could أكثر رسمية وأدبًا من can في الطلبات.)",
-                        politeRequestEx1: "Could you open the door, please? (هل يمكنك فتح الباب، من فضلك؟)",
-                        politeRequestEx2: "Could I have a glass of water? (هل يمكنني الحصول على كوب من الماء؟)",
-                        possibility: "3. Possibility (less certain) (3. الإمكانية (أقل يقينًا))",
-                        possibilityText: "Could expresses that something is possible but not certain. (يعبر could عن أن شيئًا ما ممكن لكنه غير مؤكد.)",
-                        possibilityEx1: "It could rain tomorrow. (قد تمطر غدًا.)",
-                        possibilityEx2: "This could be the answer. (قد يكون هذا هو الجواب.)"
+                    couldUses: {
+                        title: "I. 4. الاستخدامات الرئيسية لـ \"Could\"",
+                        heading: "القدرة الماضية والطلبات المهذبة والإمكانية غير المؤكدة",
+                        pastTitle: "1. القدرة الماضية",
+                        pastDesc: "Could هو الزمن الماضي من can للتعبير عن القدرة العامة في الماضي.",
+                        pastEx1: "عندما كنت في الخامسة، كنت أستطيع القراءة.",
+                        pastEx2: "كانت تستطيع الركض بسرعة كبيرة.",
+                        politeTitle: "2. الطلبات المهذبة والإذن",
+                        politeDesc: "Could أكثر رسمية وتهذيبًا من can للطلبات.",
+                        politeEx1: "هل يمكنك فتح الباب، من فضلك؟",
+                        politeEx2: "هل يمكنني الحصول على كوب من الماء؟",
+                        possTitle: "3. الإمكانية (أقل تأكيدًا)",
+                        possDesc: "يعبر could عن أن شيئًا ما ممكن لكنه غير مؤكد.",
+                        possEx1: "يمكن أن تمطر غدًا.",
+                        possEx2: "هذا يمكن أن يكون الجواب."
                     },
                     comparison: {
-                        title: "Can vs Could – Quick Comparison (Can مقابل Could – مقارنة سريعة)",
-                        ability: "Ability (القدرة)",
-                        canAbility: "present: I can swim. (الحاضر: أستطيع السباحة.)",
-                        couldAbility: "past: I could swim. (الماضي: كنت أستطيع السباحة.)",
-                        request: "Request (الطلب)",
-                        canRequest: "informal: Can you help? (غير رسمي: هل تستطيع المساعدة؟)",
-                        couldRequest: "polite: Could you help? (مهذب: هل يمكنك المساعدة؟)",
-                        possibility: "Possibility (الإمكانية)",
-                        canPossibility: "general: It can be hot. (عام: يمكن أن يكون الجو حارًا.)",
-                        couldPossibility: "uncertain: It could be hot. (غير مؤكد: قد يكون الجو حارًا.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (تمارين تطبيقية)",
-                        q1: "Choose the correct modal: (اختر الفعل النموذجي الصحيح:)",
-                        q1Sentence: "I ______ swim very well. (أنا ______ السباحة جيدًا.)",
-                        q1a: "can (can)",
-                        q1b: "could (could)",
-                        q1c: "cans (cans)",
-                        q2: "Choose the correct modal: (اختر الفعل النموذجي الصحيح:)",
-                        q2Sentence: "When I was a child, I ______ climb trees. (عندما كنت طفلاً، ______ تسلق الأشجار.)",
-                        q2a: "can (can)",
-                        q2b: "could (could)",
-                        q2c: "was able (was able)",
-                        q3: "Choose the most polite request: (اختر الطلب الأكثر تهذيبًا:)",
-                        q3Sentence: "______ you pass the salt, please? (______ تمرر لي الملح، من فضلك؟)",
-                        q3a: "Can (Can)",
-                        q3b: "Could (Could)",
-                        q3c: "May (May)",
-                        q4: "Choose the correct modal for a general possibility: (اختر الفعل النموذجي الصحيح لإمكانية عامة:)",
-                        q4Sentence: "It ______ be very cold in winter here. (______ يكون الجو باردًا جدًا هنا في الشتاء.)",
-                        q4a: "can (can)",
-                        q4b: "could (could)",
-                        q4c: "is (is)",
-                        q5: "Choose the correct negative: (اختر النفي الصحيح:)",
-                        q5Sentence: "He ______ come to the party last night. (هو ______ يأتي إلى الحفلة الليلة الماضية.)",
-                        q5a: "can't (can't)",
-                        q5b: "couldn't (couldn't)",
-                        q5c: "didn't can (didn't can)",
-                        q6: "Choose the correct request: (اختر الطلب الصحيح:)",
-                        q6Sentence: "______ I leave early today? (______ أغادر مبكرًا اليوم؟)",
-                        q6a: "Can (Can)",
-                        q6b: "Could (Could)",
-                        q6c: "Am (Am)",
-                        q7: "Complete: I ______ (can) swim when I was five. (أكمل: أنا ______ (can) السباحة عندما كان عمري خمس سنوات.)",
-                        q8: "Complete: She ______ (not/can) hear you, please speak louder. (أكمل: هي ______ (not/can) تسمعك، من فضلك تحدث بصوت أعلى.)",
-                        q9: "Complete: ______ you open the window, please? (polite) (أكمل: ______ تفتح النافذة، من فضلك؟ (مهذب))",
-                        q10: "Arrange: (you / help / me / can / ?) (رتب: (you / help / me / can / ?))",
-                        q11: "Arrange: (I / could / when / run / I / fast / was / young / .) (رتب: (I / could / when / run / I / fast / was / young / .))",
-                        q12: "Arrange: (it / be / could / rainy / .) (رتب: (it / be / could / rainy / .))"
+                        title: "I. 5. Can vs Could – مقارنة سريعة",
+                        heading: "مقارنة جنبًا إلى جنب للاستخدامات",
+                        useCol: "الاستخدام",
+                        canCol: "Can",
+                        couldCol: "Could",
+                        ability: "القدرة",
+                        canAbility: "أستطيع السباحة. (حاضر)",
+                        couldAbility: "كنت أستطيع السباحة. (ماضٍ)",
+                        request: "الطلب",
+                        canRequest: "هل تستطيع المساعدة؟ (غير رسمي)",
+                        couldRequest: "هل يمكنك المساعدة؟ (مهذب)",
+                        possibility: "الإمكانية",
+                        canPoss: "يمكن أن يكون حارًا. (عام)",
+                        couldPoss: "يمكن أن يكون حارًا. (غير مؤكد)"
                     }
                 }
             }
         };
     </script>
-
-    <!-- Scripts -->
-    <script src="scripts/common-i18n.js"></script>
-    <!-- Modular exercise engine (replaces exercise.js) -->
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
-
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ========== 1. Build exercises and get answer keys ==========
+        // Multiple choice exercises
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'modalsCanCould1.exercises.q1',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould1.exercises.q1a' },
-                        { value: 'b', labelKey: 'modalsCanCould1.exercises.q1b' },
-                        { value: 'c', labelKey: 'modalsCanCould1.exercises.q1c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'modalsCanCould1.exercises.q2',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould1.exercises.q2a' },
-                        { value: 'b', labelKey: 'modalsCanCould1.exercises.q2b' },
-                        { value: 'c', labelKey: 'modalsCanCould1.exercises.q2c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsCanCould1.exercises.q3',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould1.exercises.q3a' },
-                        { value: 'b', labelKey: 'modalsCanCould1.exercises.q3b' },
-                        { value: 'c', labelKey: 'modalsCanCould1.exercises.q3c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsCanCould1.exercises.q4',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould1.exercises.q4a' },
-                        { value: 'b', labelKey: 'modalsCanCould1.exercises.q4b' },
-                        { value: 'c', labelKey: 'modalsCanCould1.exercises.q4c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'modalsCanCould1.exercises.q5',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould1.exercises.q5a' },
-                        { value: 'b', labelKey: 'modalsCanCould1.exercises.q5b' },
-                        { value: 'c', labelKey: 'modalsCanCould1.exercises.q5c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsCanCould1.exercises.q6',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould1.exercises.q6a' },
-                        { value: 'b', labelKey: 'modalsCanCould1.exercises.q6b' },
-                        { value: 'c', labelKey: 'modalsCanCould1.exercises.q6c' }
-                    ],
-                    correctAnswer: 'a'
-                }
+                { questionTextKey: 'canCould1.exercises.q1', options: [{ value: 'a', labelKey: 'canCould1.exercises.q1a' }, { value: 'b', labelKey: 'canCould1.exercises.q1b' }, { value: 'c', labelKey: 'canCould1.exercises.q1c' }], correctAnswer: 'a' },
+                { questionTextKey: 'canCould1.exercises.q2', options: [{ value: 'a', labelKey: 'canCould1.exercises.q2a' }, { value: 'b', labelKey: 'canCould1.exercises.q2b' }, { value: 'c', labelKey: 'canCould1.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'canCould1.exercises.q3', options: [{ value: 'a', labelKey: 'canCould1.exercises.q3a' }, { value: 'b', labelKey: 'canCould1.exercises.q3b' }, { value: 'c', labelKey: 'canCould1.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'canCould1.exercises.q4', options: [{ value: 'a', labelKey: 'canCould1.exercises.q4a' }, { value: 'b', labelKey: 'canCould1.exercises.q4b' }, { value: 'c', labelKey: 'canCould1.exercises.q4c' }], correctAnswer: 'a' },
+                { questionTextKey: 'canCould1.exercises.q5', options: [{ value: 'a', labelKey: 'canCould1.exercises.q5a' }, { value: 'b', labelKey: 'canCould1.exercises.q5b' }, { value: 'c', labelKey: 'canCould1.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'canCould1.exercises.q6', options: [{ value: 'a', labelKey: 'canCould1.exercises.q6a' }, { value: 'b', labelKey: 'canCould1.exercises.q6b' }, { value: 'c', labelKey: 'canCould1.exercises.q6c' }], correctAnswer: 'a' }
             ]
         });
-
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+    </script>
+    <script>
+        // Fill-in-the-blank exercises
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'modalsCanCould1.exercises.q7',
-                    answers: ['could']
-                },
-                {
-                    questionTextKey: 'modalsCanCould1.exercises.q8',
-                    answers: ["can't", "cannot"]
-                },
-                {
-                    questionTextKey: 'modalsCanCould1.exercises.q9',
-                    answers: ['Could']
-                }
+                { questionTextKey: 'canCould1.exercises.q7', answers: ['could'] },
+                { questionTextKey: 'canCould1.exercises.q8', answers: ['can\'t', 'cannot'] },
+                { questionTextKey: 'canCould1.exercises.q9', answers: ['Could', 'could'] }
             ]
         });
-
+    </script>
+    <script>
+        // Sentence ordering exercises
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'modalsCanCould1.exercises.q10',
-                    words: ['you', 'help', 'me', 'can', '?'],
-                    correctSentence: 'can you help me ?'
-                },
-                {
-                    questionTextKey: 'modalsCanCould1.exercises.q11',
-                    words: ['I', 'could', 'when', 'run', 'I', 'fast', 'was', 'young', '.'],
-                    correctSentence: 'I could run fast when I was young .'
-                },
-                {
-                    questionTextKey: 'modalsCanCould1.exercises.q12',
-                    words: ['it', 'be', 'could', 'rainy', '.'],
-                    correctSentence: 'it could be rainy .'
-                }
+                { questionTextKey: 'canCould1.exercises.q10', words: ['you', 'help', 'me', 'can', '?'], correctSentence: 'can you help me ?' },
+                { questionTextKey: 'canCould1.exercises.q11', words: ['I', 'could', 'when', 'run', 'I', 'fast', 'was', 'young', '.'], correctSentence: 'I could run fast when I was young .' },
+                { questionTextKey: 'canCould1.exercises.q12', words: ['it', 'be', 'could', 'rainy', '.'], correctSentence: 'it could be rainy .' }
             ]
         });
-
-        // ========== 2. Check & init functions ==========
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
@@ -808,30 +689,30 @@
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered can and could basics!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit can/could uses.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
-        }
 
+            // ---------- sound & visual effects ----------
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
         document.addEventListener('DOMContentLoaded', function() {
-            // Init drag-and-drop for ordering (builder only creates the HTML)
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-
-        // ========== 3. i18n rendering (for HTML tags inside translations) ==========
+        // i18n rendering – handles nested keys for title lines
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
-                document.querySelectorAll('[data-i18n]').forEach(el => {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
+                    if (translation) {
                         el.textContent = translation;
                     }
                 });

@@ -3,207 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zero Conditional: Introduction & Basic Form - English Hub</title>
-    
-    <!-- Common & Conjugation styles -->
-    <link rel="stylesheet" href="styles/common.css">
+    <title>Zero Conditional I: Introduction & Basic Form - English Hub</title>
     <link rel="stylesheet" href="styles/style-conjugation.css">
-    
     <style>
         :root {
-            /* Theme – Zero Conditional green palette */
-            --bg-gradient: linear-gradient(135deg, #1b5e2f, #2e7d32, #43a047);
-            --title-color: #1b5e2f;
-            --primary: #2e7d32;
-            --primary-hover: #1b5e2f;
-            --primary-light: #81c784;
-            --accent: #81c784;
-            --rule-bg: #e8f5e9;
-            --rule-border: #81c784;
-            --example-bg: #c8e6c9;
-            --example-border: #81c784;
-            --exercise-number-gradient: linear-gradient(135deg, #2e7d32, #81c784);
-            --nav-btn-bg: #2e7d32;
-            --nav-btn-hover: #1b5e2f;
-            --nav-back-btn-bg: #81c784;
-            --nav-back-btn-color: white;
-            --nav-back-btn-hover: #2e7d32;
-
-            /* Neutrals (identical to all other lessons) */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
-            --correct-bg: #d4edda;
-            --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --bg-gradient: linear-gradient(135deg, #f5e6d0, #eed8b8, #e6c9a0, #dbb888);
+            --content-bg: #fdf9f4;
+            --card-bg: #ffffff;
+            --subsection-bg: #faf5ed;
+            --rule-bg: #f7efe0;
+            --example-bg: #f4e8d4;
+            --table-stripe: #f9f2e8;
+            --title-color: #5c3a0c;
+            --text-color: #3b2a1a;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #c47f2a;
+            --primary-hover: #a66820;
+            --primary-light: #d4953a;
+            --accent: #c8802e;
+            --exercise-number-gradient: linear-gradient(135deg, #c47f2a, #9e5f1f);
+            --rule-border: #c47f2a;
+            --example-border: #c47f2a;
+            --nav-btn-bg: #c47f2a;
+            --nav-btn-hover: #9e5f1f;
+            --nav-back-btn-bg: #c8802e;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #c47f2a;
+            --refract-divider-color: #d4a868;
+            --refract-translation-bg: #f4e8d6;
+            --refract-translation-border: #c47f2a;
+            --refract-english-color: #3b2a1a;
+            --section-divider: #eedcc8;
+            --card-border: #e8d4b8;
+            --input-border: #d4bfa0;
+            --dashed-border: #d4bfa0;
+            --table-border: #dcc8a8;
+            --correct-bg: #e8f0d4;
+            --correct-color: #3a5e0e;
+            --correct-border: #a0c982;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #f0ebe0;
+            --neutral-color: #6b5a3e;
+            --neutral-border: #d4c4a8;
+            --empty-input-border: #c4b898;
+            --empty-input-bg: #f8f4ed;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #c47f2a;
+            --language-selector-color: #3b2a1a;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #3d2a14, #4a3420, #583e2c, #664838);
+            --content-bg: #2e2018;
+            --card-bg: #3d2a1c;
+            --subsection-bg: #3d2a1c;
+            --rule-bg: #2e2018;
+            --example-bg: #2e2018;
+            --table-stripe: #35241a;
+            --title-color: #e8c888;
+            --text-color: #f0e0d0;
+            --header-text: #f0e0d0;
+            --header-text-light: #d0b898;
+            --primary: #d4a040;
+            --primary-hover: #e0b058;
+            --primary-light: #d4a040;
+            --accent: #d4a040;
+            --rule-border: #d4a040;
+            --example-border: #d4a040;
+            --exercise-number-gradient: linear-gradient(135deg, #d4a040, #c47f2a);
+            --nav-btn-bg: #d4a040;
+            --nav-btn-hover: #c47f2a;
+            --nav-back-btn-bg: #e0b058;
+            --nav-back-btn-color: #1a0f08;
+            --nav-back-btn-hover: #d4a040;
+            --refract-divider-color: #c89850;
+            --refract-translation-bg: #4a3020;
+            --refract-translation-border: #c89850;
+            --refract-english-color: #f0dcc0;
+            --section-divider: #4a3020;
+            --card-border: #4a3020;
+            --input-border: #6b4830;
+            --dashed-border: #6b4830;
+            --table-border: #583828;
+            --white: #f4e8d8;
+            --correct-bg: #2e4a1e;
+            --correct-color: #c0e8a0;
+            --correct-border: #6b9840;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #3d2e20;
+            --neutral-color: #d0b898;
+            --neutral-border: #6b5040;
+            --empty-input-border: #6b4830;
+            --empty-input-bg: #2e1e14;
+            --language-selector-bg: #3d2a1c;
+            --language-selector-border: #d4a040;
+            --language-selector-color: #f0e0d0;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="zeroConditional1.title">Zero Conditional: Introduction & Basic Form</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="zeroConditional1.subtitle">Learn how to express general truths, scientific facts, and habitual actions using the zero conditional.</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="zeroConditional1.title.line1">Zero Conditional I:</div>
+                <div class="EH-conjugation-title-line" data-i18n="zeroConditional1.title.line2">Introduction & Basic Form</div>
+                <div class="EH-conjugation-subtitle" data-i18n="zeroConditional1.title.line3">Express general truths, scientific facts, and habitual actions.</div>
+                <div class="EH-conjugation-subtitle" data-i18n="zeroConditional1.title.line4">lesson: 1/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Introduction Section -->
+            <!-- Section 1: Introduction to Zero Conditional -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional1.introduction.title">Introduction to Zero Conditional</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional1.intro.title">I. 1. Introduction to Zero Conditional</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔰</span>
-                        <span data-i18n="zeroConditional1.introduction.whatIs">What is the Zero Conditional?</span>
+                        <span class="EH-conjugation-subsection-icon">📘</span>
+                        <span data-i18n="zeroConditional1.intro.heading">What is the Zero Conditional?</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional1.introduction.definitionTitle">Definition:</div>
-                        <p data-i18n="zeroConditional1.introduction.definition">The zero conditional is used to talk about things that are always true: general truths, scientific facts, and habitual actions. The result is certain and automatic.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional1.intro.definition">📘 Definition:</div>
+                        <p data-i18n="zeroConditional1.intro.desc">The zero conditional is used to talk about things that are always true: general truths, scientific facts, and habitual actions. The result is certain and automatic.</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional1.introduction.coreIdeas">Core ideas:</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional1.intro.coreIdeas">💡 Core ideas:</div>
                         <ul>
-                            <li data-i18n="zeroConditional1.introduction.core1">General truths: <em>If you heat ice, it melts.</em></li>
-                            <li data-i18n="zeroConditional1.introduction.core2">Scientific facts: <em>If water reaches 100°C, it boils.</em></li>
-                            <li data-i18n="zeroConditional1.introduction.core3">Habitual actions: <em>If I am tired, I drink coffee.</em></li>
-                            <li data-i18n="zeroConditional1.introduction.core4">"When" can replace "if" with no change in meaning: <em>When you heat ice, it melts.</em></li>
+                            <li data-i18n="zeroConditional1.intro.truths">General truths: If you heat ice, it melts.</li>
+                            <li data-i18n="zeroConditional1.intro.facts">Scientific facts: If water reaches 100°C, it boils.</li>
+                            <li data-i18n="zeroConditional1.intro.habits">Habitual actions: If I am tired, I drink coffee.</li>
+                            <li data-i18n="zeroConditional1.intro.whenNote">"When" can replace "if" with no change in meaning: When you heat ice, it melts.</li>
                         </ul>
                     </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.introduction.example1">If you freeze water, it becomes ice.</div>
-                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.introduction.example2">If it rains, the ground gets wet.</div>
-                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.introduction.example3">When I am late, my boss gets angry.</div>
-                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.introduction.example4">If people eat too much, they gain weight.</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.intro.ex1">If you freeze water, it becomes ice.</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.intro.ex2">If it rains, the ground gets wet.</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.intro.ex3">When I am late, my boss gets angry.</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.intro.ex4">If people eat too much, they gain weight.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Basic Structure -->
+
+            <!-- Section 2: Basic Structure -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional1.structure.title">Basic Structure</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional1.structure.title">I. 2. Basic Structure</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📐</span>
-                        <span data-i18n="zeroConditional1.structure.formula">Form: If + Present Simple, Present Simple</span>
+                        <span class="EH-conjugation-subsection-icon">🔧</span>
+                        <span data-i18n="zeroConditional1.structure.heading">Form: If + Present Simple, Present Simple</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional1.structure.ruleTitle">Rule:</div>
-                        <p data-i18n="zeroConditional1.structure.rule">Both clauses use the present simple tense. The order can be reversed with no change in meaning. A comma is used when the if-clause comes first.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional1.structure.rule">📘 Rule:</div>
+                        <p data-i18n="zeroConditional1.structure.desc">Both clauses use the present simple tense. The order can be reversed with no change in meaning. A comma is used when the if-clause comes first.</p>
                     </div>
                     <table class="EH-conjugation-table">
                         <thead>
-                            <tr>
-                                <th>Structure</th>
-                                <th>Example</th>
-                            </tr>
+                            <tr><th data-i18n="zeroConditional1.structure.tableStruct">Structure</th><th data-i18n="zeroConditional1.structure.tableExample">Example</th></tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="zeroConditional1.structure.ifFirst">If + present simple, + present simple</td>
-                                <td data-i18n="zeroConditional1.structure.exampleIfFirst">If you heat ice, it melts.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="zeroConditional1.structure.resultFirst">Present simple + if + present simple</td>
-                                <td data-i18n="zeroConditional1.structure.exampleResultFirst">Ice melts if you heat it.</td>
-                            </tr>
+                            <tr><td data-i18n="zeroConditional1.structure.row1struct">If + present simple, + present simple</td><td data-i18n="zeroConditional1.structure.row1ex">If you heat ice, it melts.</td></tr>
+                            <tr><td data-i18n="zeroConditional1.structure.row2struct">Present simple + if + present simple</td><td data-i18n="zeroConditional1.structure.row2ex">Ice melts if you heat it.</td></tr>
                         </tbody>
                     </table>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional1.structure.conjunctionNote">Using "when":</div>
-                        <p data-i18n="zeroConditional1.structure.whenNote">In zero conditional, "when" is often interchangeable with "if" because the result is always true.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional1.structure.whenExample1">When you heat ice, it melts.</div>
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional1.structure.whenExample2">When it rains, the grass grows.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional1.structure.whenTitle">🔄 Using "when":</div>
+                        <p data-i18n="zeroConditional1.structure.whenDesc">In zero conditional, "when" is often interchangeable with "if" because the result is always true.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.structure.whenEx1">When you heat ice, it melts.</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.structure.whenEx2">When it rains, the grass grows.</div>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional1.structure.negativeTitle">Negative Form:</div>
-                        <p data-i18n="zeroConditional1.structure.negativeRule">Use "don't" or "doesn't" in the verb phrase.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional1.structure.negativeExample1">If you don't water plants, they die.</div>
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional1.structure.negativeExample2">Water doesn't freeze if it's above 0°C.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional1.structure.negativeTitle">❌ Negative Form:</div>
+                        <p data-i18n="zeroConditional1.structure.negativeDesc">Use "don't" or "doesn't" in the verb phrase.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.structure.negativeEx1">If you don't water plants, they die.</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.structure.negativeEx2">Water doesn't freeze if it's above 0°C.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Additional Notes -->
+
+            <!-- Section 3: Common Uses -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional1.uses.title">Common Uses: General Truths & Habits</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional1.uses.title">I. 3. Common Uses: General Truths & Habits</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">🌍</span>
-                        <span data-i18n="zeroConditional1.uses.generalTruths">General Truths & Scientific Facts</span>
+                        <span data-i18n="zeroConditional1.uses.heading">General Truths & Scientific Facts</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <p data-i18n="zeroConditional1.uses.generalTruthsText">Zero conditional is used for universal truths that are always valid.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional1.uses.generalExample1">If you drop an object, it falls to the ground.</div>
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional1.uses.generalExample2">If you mix red and blue, you get purple.</div>
-                        </div>
+                        <p data-i18n="zeroConditional1.uses.truthsDesc">Zero conditional is used for universal truths that are always valid.</p>
                     </div>
-                </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.uses.truthsEx1">If you drop an object, it falls to the ground.</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.uses.truthsEx2">If you mix red and blue, you get purple.</div>
+                    </div>
+                    <h3 class="EH-conjugation-subsection-title" style="margin-top:1.4em;">
                         <span class="EH-conjugation-subsection-icon">🔄</span>
-                        <span data-i18n="zeroConditional1.uses.habits">Habitual Actions</span>
+                        <span data-i18n="zeroConditional1.uses.habitsHeading">Habitual Actions</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <p data-i18n="zeroConditional1.uses.habitsText">It also describes routines or habits that happen regularly.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional1.uses.habitExample1">If I feel stressed, I listen to music.</div>
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional1.uses.habitExample2">When he has a day off, he goes hiking.</div>
-                        </div>
+                        <p data-i18n="zeroConditional1.uses.habitsDesc">It also describes routines or habits that happen regularly.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.uses.habitsEx1">If I feel stressed, I listen to music.</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional1.uses.habitsEx2">When he has a day off, he goes hiking.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- EXERCISES (12) – dynamic slots -->
+
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional1.exercises.title">Practice Exercises</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #1b5e2f; margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional1.exercises.title">Practice: Zero Conditional</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #1b5e2f; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #1b5e2f; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
@@ -213,34 +254,8 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional0-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson →</span>
-                </button>
-                <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-                    <span></span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">← Return to Conjugation</span>
-                </button>
-            </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations (NOW WITH MERGED FILL‑IN‑THE‑BLANK SENTENCES) -->
     <script>
         window.I18N = {
             en: {
@@ -252,364 +267,213 @@
                 },
                 footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
                 zeroConditional1: {
-                    title: "Zero Conditional: Introduction & Basic Form",
-                    subtitle: "Learn how to express general truths, scientific facts, and habitual actions using the zero conditional.",
-                    introduction: {
-                        title: "Introduction to Zero Conditional",
-                        whatIs: "What is the Zero Conditional?",
-                        definitionTitle: "Definition:",
-                        definition: "The zero conditional is used to talk about things that are always true: general truths, scientific facts, and habitual actions. The result is certain and automatic.",
-                        coreIdeas: "Core ideas:",
-                        core1: "General truths: <em>If you heat ice, it melts.</em>",
-                        core2: "Scientific facts: <em>If water reaches 100°C, it boils.</em>",
-                        core3: "Habitual actions: <em>If I am tired, I drink coffee.</em>",
-                        core4: "\"When\" can replace \"if\" with no change in meaning: <em>When you heat ice, it melts.</em>",
-                        example1: "If you freeze water, it becomes ice.",
-                        example2: "If it rains, the ground gets wet.",
-                        example3: "When I am late, my boss gets angry.",
-                        example4: "If people eat too much, they gain weight."
-                    },
-                    structure: {
-                        title: "Basic Structure",
-                        formula: "Form: If + Present Simple, Present Simple",
-                        ruleTitle: "Rule:",
-                        rule: "Both clauses use the present simple tense. The order can be reversed with no change in meaning. A comma is used when the if-clause comes first.",
-                        ifFirst: "If + present simple, + present simple",
-                        exampleIfFirst: "If you heat ice, it melts.",
-                        resultFirst: "Present simple + if + present simple",
-                        exampleResultFirst: "Ice melts if you heat it.",
-                        conjunctionNote: "Using \"when\":",
-                        whenNote: "In zero conditional, \"when\" is often interchangeable with \"if\" because the result is always true.",
-                        whenExample1: "When you heat ice, it melts.",
-                        whenExample2: "When it rains, the grass grows.",
-                        negativeTitle: "Negative Form:",
-                        negativeRule: "Use \"don't\" or \"doesn't\" in the verb phrase.",
-                        negativeExample1: "If you don't water plants, they die.",
-                        negativeExample2: "Water doesn't freeze if it's above 0°C."
-                    },
-                    uses: {
-                        title: "Common Uses: General Truths & Habits",
-                        generalTruths: "General Truths & Scientific Facts",
-                        generalTruthsText: "Zero conditional is used for universal truths that are always valid.",
-                        generalExample1: "If you drop an object, it falls to the ground.",
-                        generalExample2: "If you mix red and blue, you get purple.",
-                        habits: "Habitual Actions",
-                        habitsText: "It also describes routines or habits that happen regularly.",
-                        habitExample1: "If I feel stressed, I listen to music.",
-                        habitExample2: "When he has a day off, he goes hiking."
-                    },
                     exercises: {
-                        title: "Practice Exercises",
-                        q1: "Choose the correct form:",
-                        q1Sentence: "If you heat water, it ______.",
-                        q1a: "boil", q1b: "boils", q1c: "boiling",
-                        q2: "Choose the correct form:",
-                        q2Sentence: "If it rains, the ground ______ wet.",
-                        q2a: "get", q2b: "gets", q2c: "got",
-                        q3: "Choose the correct form:",
-                        q3Sentence: "If people ______ too much, they gain weight.",
-                        q3a: "eat", q3b: "eats", q3c: "are eating",
-                        q4: "Choose the correct form:",
-                        q4Sentence: "When you mix blue and yellow, you ______ green.",
-                        q4a: "get", q4b: "gets", q4c: "got",
-                        q5: "Choose the correct negative form:",
-                        q5Sentence: "If you ______ water plants, they die.",
-                        q5a: "don't", q5b: "doesn't", q5c: "not",
-                        q6: "Choose the correct conjunction (both correct):",
-                        q6Sentence: "______ you heat ice, it melts.",
-                        q6a: "If", q6b: "When", q6c: "Both are correct",
-                        // Fill‑in‑the‑blank keys now contain the full sentence with blanks
+                        title: "Practice: Zero Conditional",
+                        q1: "Choose the correct form: If you heat water, it ______.",
+                        q1a: "boil",
+                        q1b: "boils",
+                        q1c: "boiling",
+                        q2: "Choose the correct form: If it rains, the ground ______ wet.",
+                        q2a: "get",
+                        q2b: "gets",
+                        q2c: "got",
+                        q3: "Choose the correct form: If people ______ too much, they gain weight.",
+                        q3a: "eat",
+                        q3b: "eats",
+                        q3c: "are eating",
+                        q4: "Choose the correct form: When you mix blue and yellow, you ______ green.",
+                        q4a: "get",
+                        q4b: "gets",
+                        q4c: "got",
+                        q5: "Choose the correct negative form: If you ______ water plants, they die.",
+                        q5a: "don't",
+                        q5b: "doesn't",
+                        q5c: "not",
+                        q6: "Choose the correct conjunction (both correct): ______ you heat ice, it melts.",
+                        q6a: "If",
+                        q6b: "When",
+                        q6c: "Both are correct",
                         q7: "Complete with the correct verb: If you freeze water, it ______ (become) ice.",
                         q8: "Complete with the correct verb: When I am late, my boss ______ (get) angry.",
                         q9: "Complete with negative: If you ______ (not exercise), you feel tired.",
-                        q10: "Arrange the words to form a correct sentence:",
-                        q11: "Arrange the words to form a correct sentence:",
-                        q12: "Arrange the words to form a correct sentence:"
+                        q10: "Arrange the words: (if / you / heat / ice / it / melts / .)",
+                        q11: "Arrange the words: (when / it / rains / the / ground / gets / wet / .)",
+                        q12: "Arrange the words: (if / you / don't / water / them / plants / die / .)"
                     }
                 }
             },
             fr: {
                 common: {
                     siteName: "English Hub",
-                    previousLesson: "← Previous Lesson (Leçon Précédente)",
-                    returnToConjugation: "← Return to Conjugation (Retour au Conjugaison)",
-                    nextLesson: "Next Lesson (Leçon Suivante) →"
+                    previousLesson: "← Leçon Précédente",
+                    returnToConjugation: "← Retour au Conjugaison",
+                    nextLesson: "Leçon Suivante →"
                 },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
                 zeroConditional1: {
-                    title: "Zero Conditional: Introduction & Basic Form (Conditionnel zéro : introduction et forme de base)",
-                    subtitle: "Learn how to express general truths, scientific facts, and habitual actions using the zero conditional. (Apprenez à exprimer des vérités générales, des faits scientifiques et des actions habituelles avec le conditionnel zéro.)",
-                    introduction: {
-                        title: "Introduction to Zero Conditional (Introduction au conditionnel zéro)",
-                        whatIs: "What is the Zero Conditional? (Qu'est-ce que le conditionnel zéro ?)",
-                        definitionTitle: "Definition: (Définition :)",
-                        definition: "The zero conditional is used to talk about things that are always true: general truths, scientific facts, and habitual actions. The result is certain and automatic. (Le conditionnel zéro est utilisé pour parler de choses toujours vraies : vérités générales, faits scientifiques et actions habituelles. Le résultat est certain et automatique.)",
-                        coreIdeas: "Core ideas: (Idées principales :)",
-                        core1: "General truths: <em>If you heat ice, it melts.</em> (Vérités générales : <em>Si on chauffe de la glace, elle fond.</em>)",
-                        core2: "Scientific facts: <em>If water reaches 100°C, it boils.</em> (Faits scientifiques : <em>Si l'eau atteint 100°C, elle bout.</em>)",
-                        core3: "Habitual actions: <em>If I am tired, I drink coffee.</em> (Actions habituelles : <em>Si je suis fatigué, je bois du café.</em>)",
-                        core4: "\"When\" can replace \"if\" with no change in meaning: <em>When you heat ice, it melts.</em> (\"Quand\" peut remplacer \"si\" sans changement de sens : <em>Quand on chauffe de la glace, elle fond.</em>)",
-                        example1: "If you freeze water, it becomes ice. (Si on gèle de l'eau, elle devient de la glace.)",
-                        example2: "If it rains, the ground gets wet. (S'il pleut, le sol devient humide.)",
-                        example3: "When I am late, my boss gets angry. (Quand je suis en retard, mon patron se fâche.)",
-                        example4: "If people eat too much, they gain weight. (Si les gens mangent trop, ils prennent du poids.)"
+                    title: {
+                        line1: "Conditionnel Zéro I :",
+                        line2: "Introduction et Forme de Base",
+                        line3: "Exprimez des vérités générales, des faits scientifiques et des actions habituelles.",
+                        line4: "leçon : 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. Introduction au Conditionnel Zéro",
+                        heading: "Qu'est-ce que le conditionnel zéro ?",
+                        definition: "📘 Définition :",
+                        desc: "Le conditionnel zéro est utilisé pour parler de choses qui sont toujours vraies : vérités générales, faits scientifiques et actions habituelles. Le résultat est certain et automatique.",
+                        coreIdeas: "💡 Idées clés :",
+                        truths: "Vérités générales : Si vous chauffez de la glace, elle fond.",
+                        facts: "Faits scientifiques : Si l'eau atteint 100°C, elle bout.",
+                        habits: "Actions habituelles : Si je suis fatigué, je bois du café.",
+                        whenNote: "\"When\" peut remplacer \"if\" sans changement de sens : When you heat ice, it melts.",
+                        ex1: "Si vous congelez de l'eau, elle devient de la glace.",
+                        ex2: "S'il pleut, le sol devient mouillé.",
+                        ex3: "Quand je suis en retard, mon patron se fâche.",
+                        ex4: "Si les gens mangent trop, ils prennent du poids."
                     },
                     structure: {
-                        title: "Basic Structure (Structure de base)",
-                        formula: "Form: If + Present Simple, Present Simple (Forme : If + présent simple, présent simple)",
-                        ruleTitle: "Rule: (Règle :)",
-                        rule: "Both clauses use the present simple tense. The order can be reversed with no change in meaning. A comma is used when the if-clause comes first. (Les deux propositions utilisent le présent simple. L'ordre peut être inversé sans changement de sens. Une virgule est utilisée lorsque la proposition avec if vient en premier.)",
-                        ifFirst: "If + present simple, + present simple (If + présent simple, + présent simple)",
-                        exampleIfFirst: "If you heat ice, it melts. (Si on chauffe de la glace, elle fond.)",
-                        resultFirst: "Present simple + if + present simple (Présent simple + if + présent simple)",
-                        exampleResultFirst: "Ice melts if you heat it. (La glace fond si on la chauffe.)",
-                        conjunctionNote: "Using \"when\": (Utilisation de \"when\" :)",
-                        whenNote: "In zero conditional, \"when\" is often interchangeable with \"if\" because the result is always true. (Dans le conditionnel zéro, \"when\" est souvent interchangeable avec \"if\" car le résultat est toujours vrai.)",
-                        whenExample1: "When you heat ice, it melts. (Quand on chauffe de la glace, elle fond.)",
-                        whenExample2: "When it rains, the grass grows. (Quand il pleut, l'herbe pousse.)",
-                        negativeTitle: "Negative Form: (Forme négative :)",
-                        negativeRule: "Use \"don't\" or \"doesn't\" in the verb phrase. (Utilisez \"don't\" ou \"doesn't\" dans le groupe verbal.)",
-                        negativeExample1: "If you don't water plants, they die. (Si vous n'arrosez pas les plantes, elles meurent.)",
-                        negativeExample2: "Water doesn't freeze if it's above 0°C. (L'eau ne gèle pas si elle est au-dessus de 0°C.)"
+                        title: "I. 2. Structure de Base",
+                        heading: "Forme : If + Présent Simple, Présent Simple",
+                        rule: "📘 Règle :",
+                        desc: "Les deux propositions utilisent le présent simple. L'ordre peut être inversé sans changement de sens. Une virgule est utilisée lorsque la proposition avec if vient en premier.",
+                        tableStruct: "Structure",
+                        tableExample: "Exemple",
+                        row1struct: "If + présent simple, + présent simple",
+                        row1ex: "Si vous chauffez de la glace, elle fond.",
+                        row2struct: "Présent simple + if + présent simple",
+                        row2ex: "La glace fond si vous la chauffez.",
+                        whenTitle: "🔄 Utiliser \"when\" :",
+                        whenDesc: "Dans le conditionnel zéro, \"when\" est souvent interchangeable avec \"if\" car le résultat est toujours vrai.",
+                        whenEx1: "Quand vous chauffez de la glace, elle fond.",
+                        whenEx2: "Quand il pleut, l'herbe pousse.",
+                        negativeTitle: "❌ Forme Négative :",
+                        negativeDesc: "Utilisez \"don't\" ou \"doesn't\" dans la forme verbale.",
+                        negativeEx1: "Si vous n'arrosez pas les plantes, elles meurent.",
+                        negativeEx2: "L'eau ne gèle pas si elle est au-dessus de 0°C."
                     },
                     uses: {
-                        title: "Common Uses: General Truths & Habits (Utilisations courantes : vérités générales et habitudes)",
-                        generalTruths: "General Truths & Scientific Facts (Vérités générales & faits scientifiques)",
-                        generalTruthsText: "Zero conditional is used for universal truths that are always valid. (Le conditionnel zéro est utilisé pour les vérités universelles toujours valables.)",
-                        generalExample1: "If you drop an object, it falls to the ground. (Si vous lâchez un objet, il tombe par terre.)",
-                        generalExample2: "If you mix red and blue, you get purple. (Si vous mélangez du rouge et du bleu, vous obtenez du violet.)",
-                        habits: "Habitual Actions (Actions habituelles)",
-                        habitsText: "It also describes routines or habits that happen regularly. (Il décrit aussi des routines ou des habitudes qui se produisent régulièrement.)",
-                        habitExample1: "If I feel stressed, I listen to music. (Si je me sens stressé, j'écoute de la musique.)",
-                        habitExample2: "When he has a day off, he goes hiking. (Quand il a un jour de congé, il part en randonnée.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (Exercices pratiques)",
-                        q1: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q1Sentence: "If you heat water, it ______. (Si vous chauffez de l'eau, elle ______.)",
-                        q1a: "boil (bouillir)", q1b: "boils (bout)", q1c: "boiling (bouillant)",
-                        q2: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q2Sentence: "If it rains, the ground ______ wet. (S'il pleut, le sol ______ humide.)",
-                        q2a: "get (devient)", q2b: "gets (devient)", q2c: "got (devenait)",
-                        q3: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q3Sentence: "If people ______ too much, they gain weight. (Si les gens ______ trop, ils prennent du poids.)",
-                        q3a: "eat (mangent)", q3b: "eats (mange)", q3c: "are eating (sont en train de manger)",
-                        q4: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q4Sentence: "When you mix blue and yellow, you ______ green. (Quand on mélange du bleu et du jaune, on ______ du vert.)",
-                        q4a: "get (obtient)", q4b: "gets (obtient)", q4c: "got (obtenait)",
-                        q5: "Choose the correct negative form: (Choisissez la forme négative correcte :)",
-                        q5Sentence: "If you ______ water plants, they die. (Si vous ______ arroser les plantes, elles meurent.)",
-                        q5a: "don't (ne ... pas)", q5b: "doesn't (ne ... pas)", q5c: "not (pas)",
-                        q6: "Choose the correct conjunction (both correct): (Choisissez la conjonction correcte – les deux sont correctes :)",
-                        q6Sentence: "______ you heat ice, it melts. (______ on chauffe de la glace, elle fond.)",
-                        q6a: "If (Si)", q6b: "When (Quand)", q6c: "Both are correct (Les deux sont correctes)",
-                        // Fill‑in‑the‑blank : merged instruction + sentence
-                        q7: "Complete with the correct verb: If you freeze water, it ______ (become) ice. (Complétez avec le verbe correct : Si on gèle de l'eau, elle ______ (devenir) de la glace.)",
-                        q8: "Complete with the correct verb: When I am late, my boss ______ (get) angry. (Complétez avec le verbe correct : Quand je suis en retard, mon patron ______ (se fâcher).)",
-                        q9: "Complete with negative: If you ______ (not exercise), you feel tired. (Complétez avec la négation : Si vous ______ (ne pas faire d'exercice), vous vous sentez fatigué.)",
-                        q10: "Arrange the words to form a correct sentence: (Remettez les mots dans l'ordre pour former une phrase correcte :)",
-                        q11: "Arrange the words to form a correct sentence: (Remettez les mots dans l'ordre pour former une phrase correcte :)",
-                        q12: "Arrange the words to form a correct sentence: (Remettez les mots dans l'ordre pour former une phrase correcte :)"
+                        title: "I. 3. Usages Courants : Vérités Générales et Habitudes",
+                        heading: "Vérités Générales et Faits Scientifiques",
+                        truthsDesc: "Le conditionnel zéro est utilisé pour des vérités universelles toujours valables.",
+                        truthsEx1: "Si vous lâchez un objet, il tombe au sol.",
+                        truthsEx2: "Si vous mélangez du rouge et du bleu, vous obtenez du violet.",
+                        habitsHeading: "Actions Habituelles",
+                        habitsDesc: "Il décrit également des routines ou des habitudes qui se produisent régulièrement.",
+                        habitsEx1: "Si je me sens stressé, j'écoute de la musique.",
+                        habitsEx2: "Quand il a un jour de congé, il fait de la randonnée."
                     }
                 }
             },
             ar: {
                 common: {
                     siteName: "English Hub",
-                    previousLesson: "Previous Lesson (الدرس السابق)← ",
-                    returnToConjugation: "Return to Conjugation (العودة إلى التصريف)← ",
-                    nextLesson: "Next Lesson (الدرس التالي) →"
+                    previousLesson: "الدرس السابق← ",
+                    returnToConjugation: "العودة إلى التصريف← ",
+                    nextLesson: "الدرس التالي →"
                 },
                 footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
                 zeroConditional1: {
-                    title: "Zero Conditional: Introduction & Basic Form (الشرط الصفري: مقدمة وصيغة أساسية)",
-                    subtitle: "Learn how to express general truths, scientific facts, and habitual actions using the zero conditional. (تعلّم كيفية التعبير عن حقائق عامة، وقائع علمية، وأفعال معتادة باستخدام الشرط الصفري.)",
-                    introduction: {
-                        title: "Introduction to Zero Conditional (مقدمة إلى الشرط الصفري)",
-                        whatIs: "What is the Zero Conditional? (ما هو الشرط الصفري؟)",
-                        definitionTitle: "Definition: (تعريف:)",
-                        definition: "The zero conditional is used to talk about things that are always true: general truths, scientific facts, and habitual actions. The result is certain and automatic. (يستخدم الشرط الصفري للحديث عن أشياء صحيحة دائمًا: حقائق عامة، وقائع علمية، وأفعال معتادة. النتيجة مؤكدة وتلقائية.)",
-                        coreIdeas: "Core ideas: (الأفكار الأساسية:)",
-                        core1: "General truths: <em>If you heat ice, it melts.</em> (حقائق عامة: <em>إذا سخنت الجليد، يذوب.</em>)",
-                        core2: "Scientific facts: <em>If water reaches 100°C, it boils.</em> (وقائع علمية: <em>إذا وصلت الماء إلى 100°م، يغلي.</em>)",
-                        core3: "Habitual actions: <em>If I am tired, I drink coffee.</em> (أفعال معتادة: <em>إذا كنت متعبًا، أشرب القهوة.</em>)",
-                        core4: "\"When\" can replace \"if\" with no change in meaning: <em>When you heat ice, it melts.</em> (يمكن استبدال \"if\" بـ \"when\" دون تغيير المعنى: <em>عندما تسخن الجليد، يذوب.</em>)",
-                        example1: "If you freeze water, it becomes ice. (إذا جمدت الماء، يصبح ثلجًا.)",
-                        example2: "If it rains, the ground gets wet. (إذا هطل المطر، تصبح الأرض مبتلة.)",
-                        example3: "When I am late, my boss gets angry. (عندما أتأخر، يغضب مديري.)",
-                        example4: "If people eat too much, they gain weight. (إذا أكل الناس كثيرًا، يزداد وزنهم.)"
+                    title: {
+                        line1: "الشرط الصفري: 1:",
+                        line2: "مقدمة والشكل الأساسي",
+                        line3: "عبّر عن الحقائق العامة والحقائق العلمية والأفعال المعتادة.",
+                        line4: "الدرس: 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. مقدمة في الشرط الصفري",
+                        heading: "ما هو الشرط الصفري؟",
+                        definition: "📘 التعريف:",
+                        desc: "يُستخدم الشرط الصفري للتحدث عن أشياء صحيحة دائمًا: الحقائق العامة والحقائق العلمية والأفعال المعتادة. النتيجة مؤكدة وتلقائية.",
+                        coreIdeas: "💡 أفكار أساسية:",
+                        truths: "حقائق عامة: إذا سخنت الثلج، فإنه يذوب.",
+                        facts: "حقائق علمية: إذا وصل الماء إلى 100 درجة مئوية، فإنه يغلي.",
+                        habits: "أفعال معتادة: إذا كنت متعبًا، أشرب القهوة.",
+                        whenNote: "\"When\" يمكن أن تحل محل \"if\" دون تغيير في المعنى: عندما تسخن الثلج، يذوب.",
+                        ex1: "إذا جمدت الماء، يصبح ثلجًا.",
+                        ex2: "إذا أمطرت، تبتل الأرض.",
+                        ex3: "عندما أتأخر، يغضب مديري.",
+                        ex4: "إذا أكل الناس كثيرًا، يزداد وزنهم."
                     },
                     structure: {
-                        title: "Basic Structure (البنية الأساسية)",
-                        formula: "Form: If + Present Simple, Present Simple (الصيغة: If + مضارع بسيط، مضارع بسيط)",
-                        ruleTitle: "Rule: (القاعدة:)",
-                        rule: "Both clauses use the present simple tense. The order can be reversed with no change in meaning. A comma is used when the if-clause comes first. (كلا الجملتين تستخدمان زمن المضارع البسيط. يمكن عكس الترتيب دون تغيير المعنى. تستخدم فاصلة عندما تأتي جملة if أولاً.)",
-                        ifFirst: "If + present simple, + present simple (If + مضارع بسيط، + مضارع بسيط)",
-                        exampleIfFirst: "If you heat ice, it melts. (إذا سخنت الجليد، يذوب.)",
-                        resultFirst: "Present simple + if + present simple (مضارع بسيط + if + مضارع بسيط)",
-                        exampleResultFirst: "Ice melts if you heat it. (يذوب الجليد إذا سخنته.)",
-                        conjunctionNote: "Using \"when\": (استخدام \"when\")",
-                        whenNote: "In zero conditional, \"when\" is often interchangeable with \"if\" because the result is always true. (في الشرط الصفري، يمكن استبدال \"if\" بـ \"when\" غالبًا لأن النتيجة دائمًا صحيحة.)",
-                        whenExample1: "When you heat ice, it melts. (عندما تسخن الجليد، يذوب.)",
-                        whenExample2: "When it rains, the grass grows. (عندما تمطر، ينمو العشب.)",
-                        negativeTitle: "Negative Form: (صيغة النفي:)",
-                        negativeRule: "Use \"don't\" or \"doesn't\" in the verb phrase. (استخدم \"don't\" أو \"doesn't\" مع الفعل.)",
-                        negativeExample1: "If you don't water plants, they die. (إذا لم تسقِ النباتات، تموت.)",
-                        negativeExample2: "Water doesn't freeze if it's above 0°C. (لا يتجمد الماء إذا كانت درجة حرارته أعلى من 0°م.)"
+                        title: "I. 2. البنية الأساسية",
+                        heading: "الشكل: If + مضارع بسيط، مضارع بسيط",
+                        rule: "📘 القاعدة:",
+                        desc: "تستخدم كلا الجملتين زمن المضارع البسيط. يمكن عكس الترتيب دون تغيير في المعنى. تُستخدم الفاصلة عندما تأتي جملة if أولاً.",
+                        tableStruct: "البنية",
+                        tableExample: "مثال",
+                        row1struct: "If + مضارع بسيط، + مضارع بسيط",
+                        row1ex: "إذا سخنت الثلج، فإنه يذوب.",
+                        row2struct: "مضارع بسيط + if + مضارع بسيط",
+                        row2ex: "الثلج يذوب إذا سخنته.",
+                        whenTitle: "🔄 استخدام \"when\":",
+                        whenDesc: "في الشرط الصفري، غالبًا ما تكون \"when\" قابلة للتبديل مع \"if\" لأن النتيجة صحيحة دائمًا.",
+                        whenEx1: "عندما تسخن الثلج، يذوب.",
+                        whenEx2: "عندما تمطر، ينمو العشب.",
+                        negativeTitle: "❌ صيغة النفي:",
+                        negativeDesc: "استخدم \"don't\" أو \"doesn't\" في العبارة الفعلية.",
+                        negativeEx1: "إذا لم تسقِ النباتات، تموت.",
+                        negativeEx2: "الماء لا يتجمد إذا كان فوق 0 درجة مئوية."
                     },
                     uses: {
-                        title: "Common Uses: General Truths & Habits (الاستخدامات الشائعة: حقائق عامة وعادات)",
-                        generalTruths: "General Truths & Scientific Facts (حقائق عامة ووقائع علمية)",
-                        generalTruthsText: "Zero conditional is used for universal truths that are always valid. (يستخدم الشرط الصفري للحقائق الكونية الصالحة دائمًا.)",
-                        generalExample1: "If you drop an object, it falls to the ground. (إذا أسقطت شيئًا، يسقط على الأرض.)",
-                        generalExample2: "If you mix red and blue, you get purple. (إذا خلطت الأحمر والأزرق، تحصل على البنفسجي.)",
-                        habits: "Habitual Actions (أفعال معتادة)",
-                        habitsText: "It also describes routines or habits that happen regularly. (كما يصف روتينًا أو عادات تحدث بانتظام.)",
-                        habitExample1: "If I feel stressed, I listen to music. (إذا شعرت بالتوتر، أستمع إلى الموسيقى.)",
-                        habitExample2: "When he has a day off, he goes hiking. (عندما يكون لديه يوم عطلة، يذهب للمشي في الطبيعة.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (تمارين تطبيقية)",
-                        q1: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q1Sentence: "If you heat water, it ______. (إذا سخنت الماء، فإنه ______.)",
-                        q1a: "boil (يغلي)", q1b: "boils (يغلي)", q1c: "boiling (يغلي – اسم فاعل)",
-                        q2: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q2Sentence: "If it rains, the ground ______ wet. (إذا هطل المطر، الأرض ______ مبتلة.)",
-                        q2a: "get (تصبح)", q2b: "gets (تصبح)", q2c: "got (أصبحت)",
-                        q3: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q3Sentence: "If people ______ too much, they gain weight. (إذا ______ الناس كثيرًا، يزداد وزنهم.)",
-                        q3a: "eat (يأكلون)", q3b: "eats (يأكل)", q3c: "are eating (يأكلون حاليًا)",
-                        q4: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q4Sentence: "When you mix blue and yellow, you ______ green. (عندما تمزج الأزرق والأصفر، ______ الأخضر.)",
-                        q4a: "get (تحصل)", q4b: "gets (يحصل)", q4c: "got (حصلت)",
-                        q5: "Choose the correct negative form: (اختر صيغة النفي الصحيحة:)",
-                        q5Sentence: "If you ______ water plants, they die. (إذا ______ سقي النباتات، تموت.)",
-                        q5a: "don't (لا)", q5b: "doesn't (لا)", q5c: "not (ليس)",
-                        q6: "Choose the correct conjunction (both correct): (اختر أداة الربط الصحيحة – كلاهما صحيح:)",
-                        q6Sentence: "______ you heat ice, it melts. (______ تسخن الجليد، يذوب.)",
-                        q6a: "If (إذا)", q6b: "When (عندما)", q6c: "Both are correct (كلاهما صحيح)",
-                        // Fill‑in‑the‑blank merged
-                        q7: "Complete with the correct verb: If you freeze water, it ______ (become) ice. (أكمل بالفعل الصحيح: إذا جمدت الماء، ______ (يصبح) ثلجًا.)",
-                        q8: "Complete with the correct verb: When I am late, my boss ______ (get) angry. (أكمل بالفعل الصحيح: عندما أتأخر، مديري ______ (يغضب).)",
-                        q9: "Complete with negative: If you ______ (not exercise), you feel tired. (أكمل بالنفي: إذا ______ (لا تمارس الرياضة)، تشعر بالتعب.)",
-                        q10: "Arrange the words to form a correct sentence: (رتب الكلمات لتكوين جملة صحيحة:)",
-                        q11: "Arrange the words to form a correct sentence: (رتب الكلمات لتكوين جملة صحيحة:)",
-                        q12: "Arrange the words to form a correct sentence: (رتب الكلمات لتكوين جملة صحيحة:)"
+                        title: "I. 3. الاستخدامات الشائعة: الحقائق العامة والعادات",
+                        heading: "الحقائق العامة والحقائق العلمية",
+                        truthsDesc: "يُستخدم الشرط الصفري للحقائق الكونية الصالحة دائمًا.",
+                        truthsEx1: "إذا أسقطت شيئًا، يسقط على الأرض.",
+                        truthsEx2: "إذا خلطت الأحمر والأزرق، تحصل على البنفسجي.",
+                        habitsHeading: "الأفعال المعتادة",
+                        habitsDesc: "يصف أيضًا الروتين أو العادات التي تحدث بانتظام.",
+                        habitsEx1: "إذا شعرت بالتوتر، أستمع إلى الموسيقى.",
+                        habitsEx2: "عندما يكون لديه يوم عطلة، يذهب للتنزه."
                     }
                 }
             }
         };
     </script>
-
-    <!-- Scripts -->
-    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
-
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ========== 1. Build exercises and get answer keys ==========
+        // Multiple choice exercises
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'zeroConditional1.exercises.q1',
-                    options: [
-                        { value: 'a', labelKey: 'zeroConditional1.exercises.q1a' },
-                        { value: 'b', labelKey: 'zeroConditional1.exercises.q1b' },
-                        { value: 'c', labelKey: 'zeroConditional1.exercises.q1c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'zeroConditional1.exercises.q2',
-                    options: [
-                        { value: 'a', labelKey: 'zeroConditional1.exercises.q2a' },
-                        { value: 'b', labelKey: 'zeroConditional1.exercises.q2b' },
-                        { value: 'c', labelKey: 'zeroConditional1.exercises.q2c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'zeroConditional1.exercises.q3',
-                    options: [
-                        { value: 'a', labelKey: 'zeroConditional1.exercises.q3a' },
-                        { value: 'b', labelKey: 'zeroConditional1.exercises.q3b' },
-                        { value: 'c', labelKey: 'zeroConditional1.exercises.q3c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'zeroConditional1.exercises.q4',
-                    options: [
-                        { value: 'a', labelKey: 'zeroConditional1.exercises.q4a' },
-                        { value: 'b', labelKey: 'zeroConditional1.exercises.q4b' },
-                        { value: 'c', labelKey: 'zeroConditional1.exercises.q4c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'zeroConditional1.exercises.q5',
-                    options: [
-                        { value: 'a', labelKey: 'zeroConditional1.exercises.q5a' },
-                        { value: 'b', labelKey: 'zeroConditional1.exercises.q5b' },
-                        { value: 'c', labelKey: 'zeroConditional1.exercises.q5c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'zeroConditional1.exercises.q6',
-                    options: [
-                        { value: 'a', labelKey: 'zeroConditional1.exercises.q6a' },
-                        { value: 'b', labelKey: 'zeroConditional1.exercises.q6b' },
-                        { value: 'c', labelKey: 'zeroConditional1.exercises.q6c' }
-                    ],
-                    correctAnswer: 'c'
-                }
+                { questionTextKey: 'zeroConditional1.exercises.q1', options: [{ value: 'a', labelKey: 'zeroConditional1.exercises.q1a' }, { value: 'b', labelKey: 'zeroConditional1.exercises.q1b' }, { value: 'c', labelKey: 'zeroConditional1.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'zeroConditional1.exercises.q2', options: [{ value: 'a', labelKey: 'zeroConditional1.exercises.q2a' }, { value: 'b', labelKey: 'zeroConditional1.exercises.q2b' }, { value: 'c', labelKey: 'zeroConditional1.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'zeroConditional1.exercises.q3', options: [{ value: 'a', labelKey: 'zeroConditional1.exercises.q3a' }, { value: 'b', labelKey: 'zeroConditional1.exercises.q3b' }, { value: 'c', labelKey: 'zeroConditional1.exercises.q3c' }], correctAnswer: 'a' },
+                { questionTextKey: 'zeroConditional1.exercises.q4', options: [{ value: 'a', labelKey: 'zeroConditional1.exercises.q4a' }, { value: 'b', labelKey: 'zeroConditional1.exercises.q4b' }, { value: 'c', labelKey: 'zeroConditional1.exercises.q4c' }], correctAnswer: 'a' },
+                { questionTextKey: 'zeroConditional1.exercises.q5', options: [{ value: 'a', labelKey: 'zeroConditional1.exercises.q5a' }, { value: 'b', labelKey: 'zeroConditional1.exercises.q5b' }, { value: 'c', labelKey: 'zeroConditional1.exercises.q5c' }], correctAnswer: 'a' },
+                { questionTextKey: 'zeroConditional1.exercises.q6', options: [{ value: 'a', labelKey: 'zeroConditional1.exercises.q6a' }, { value: 'b', labelKey: 'zeroConditional1.exercises.q6b' }, { value: 'c', labelKey: 'zeroConditional1.exercises.q6c' }], correctAnswer: 'c' }
             ]
         });
-
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+    </script>
+    <script>
+        // Fill-in-the-blank exercises
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'zeroConditional1.exercises.q7',
-                    answers: ['becomes']
-                },
-                {
-                    questionTextKey: 'zeroConditional1.exercises.q8',
-                    answers: ['gets']
-                },
-                {
-                    questionTextKey: 'zeroConditional1.exercises.q9',
-                    answers: ["don't exercise", "do not exercise"]
-                }
+                { questionTextKey: 'zeroConditional1.exercises.q7', answers: ['becomes'] },
+                { questionTextKey: 'zeroConditional1.exercises.q8', answers: ['gets'] },
+                { questionTextKey: 'zeroConditional1.exercises.q9', answers: ["don't exercise", 'do not exercise'] }
             ]
         });
-
+    </script>
+    <script>
+        // Sentence ordering exercises
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'zeroConditional1.exercises.q10',
-                    words: ['if', 'you', 'heat', 'ice', 'it', 'melts', '.'],
-                    correctSentence: 'if you heat ice it melts .'
-                },
-                {
-                    questionTextKey: 'zeroConditional1.exercises.q11',
-                    words: ['when', 'it', 'rains', 'the', 'ground', 'gets', 'wet', '.'],
-                    correctSentence: 'when it rains the ground gets wet .'
-                },
-                {
-                    questionTextKey: 'zeroConditional1.exercises.q12',
-                    words: ['if', 'you', "don't", 'water', 'them', 'plants', 'die', '.'],
-                    correctSentence: "if you don't water them plants die ."
-                }
+                { questionTextKey: 'zeroConditional1.exercises.q10', words: ['if', 'you', 'heat', 'ice', 'it', 'melts', '.'], correctSentence: 'if you heat ice it melts .' },
+                { questionTextKey: 'zeroConditional1.exercises.q11', words: ['when', 'it', 'rains', 'the', 'ground', 'gets', 'wet', '.'], correctSentence: 'when it rains the ground gets wet .' },
+                { questionTextKey: 'zeroConditional1.exercises.q12', words: ['if', 'you', "don't", 'water', 'them', 'plants', 'die', '.'], correctSentence: "if you don't water them plants die ." }
             ]
         });
-
-        // ========== 2. Check & init functions ==========
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
@@ -625,31 +489,30 @@
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered zero conditional!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit the zero conditional rules.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
-        }
 
+            // Sound & visual effects
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize drag-and-drop and fill-in-the-blank
-            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-
-        // ========== 3. i18n rendering ==========
+        // i18n rendering – handles nested keys for title lines
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
-                document.querySelectorAll('[data-i18n]').forEach(el => {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
+                    if (translation) {
                         el.textContent = translation;
                     }
                 });

@@ -3,116 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Conditional: Common Mistakes & Comprehensive Practice - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>First Conditional III: Common Mistakes & Practice - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-        /* Theme (teal/green palette matching the original first‑conditional colours) */
         :root {
-            --bg-gradient: linear-gradient(135deg, #0b3b5f, #1e6f5c, #289672, #43b3a0);
-            --title-color: #1e6f5c;
-            --primary: #289672;
-            --primary-hover: #1e6f5c;
-            --primary-light: #43b3a0;
-            --accent: #43b3a0;
-            --rule-bg: #eef7f5;
-            --rule-border: #43b3a0;
-            --example-bg: #e0f2f1;
-            --example-border: #43b3a0;
-            --exercise-number-gradient: linear-gradient(135deg, #289672, #43b3a0);
-            --nav-btn-bg: #289672;
-            --nav-btn-hover: #1e6f5c;
-            --nav-back-btn-bg: #43b3a0;
-            --nav-back-btn-color: white;
-            --nav-back-btn-hover: #289672;
-
-            /* Neutral same as other lessons */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
-            --correct-bg: #d4edda;
-            --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --bg-gradient: linear-gradient(135deg, #fef3c7, #fde68a, #fcd34d, #fbbf24);
+            --content-bg: #fffdf5;
+            --card-bg: #ffffff;
+            --subsection-bg: #fefce8;
+            --rule-bg: #fef9e0;
+            --example-bg: #fef6d5;
+            --table-stripe: #fefced;
+            --title-color: #78350f;
+            --text-color: #451a03;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #d97706;
+            --primary-hover: #b45309;
+            --primary-light: #e5982b;
+            --accent: #d97706;
+            --exercise-number-gradient: linear-gradient(135deg, #d97706, #92400e);
+            --rule-border: #d97706;
+            --example-border: #d97706;
+            --nav-btn-bg: #d97706;
+            --nav-btn-hover: #92400e;
+            --nav-back-btn-bg: #e5982b;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #d97706;
+            --refract-divider-color: #f0c060;
+            --refract-translation-bg: #fef3d5;
+            --refract-translation-border: #d97706;
+            --refract-english-color: #451a03;
+            --section-divider: #f5e8c0;
+            --card-border: #f5e8c0;
+            --input-border: #e0c890;
+            --dashed-border: #e0c890;
+            --table-border: #ead8a8;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #f7f0e0;
+            --neutral-color: #785a28;
+            --neutral-border: #e0c890;
+            --empty-input-border: #d4c080;
+            --empty-input-bg: #fefdf5;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #d97706;
+            --language-selector-color: #451a03;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #451a03, #5c2808, #78350f, #92400e);
+            --content-bg: #2d1a05;
+            --card-bg: #3d2408;
+            --subsection-bg: #3d2408;
+            --rule-bg: #2d1a05;
+            --example-bg: #2d1a05;
+            --table-stripe: #352008;
+            --title-color: #fcd34d;
+            --text-color: #fef3c7;
+            --header-text: #fef3c7;
+            --header-text-light: #d4b878;
+            --primary: #f59e0b;
+            --primary-hover: #fbbf24;
+            --primary-light: #f59e0b;
+            --accent: #f59e0b;
+            --rule-border: #f59e0b;
+            --example-border: #f59e0b;
+            --exercise-number-gradient: linear-gradient(135deg, #f59e0b, #d97706);
+            --nav-btn-bg: #f59e0b;
+            --nav-btn-hover: #d97706;
+            --nav-back-btn-bg: #fbbf24;
+            --nav-back-btn-color: #1a0a00;
+            --nav-back-btn-hover: #f59e0b;
+            --refract-divider-color: #e8b840;
+            --refract-translation-bg: #5c3808;
+            --refract-translation-border: #e8b840;
+            --refract-english-color: #fef5d0;
+            --section-divider: #5c3808;
+            --card-border: #5c3808;
+            --input-border: #785a18;
+            --dashed-border: #785a18;
+            --table-border: #654a10;
+            --white: #fef7e0;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #4a3008;
+            --neutral-color: #e0c878;
+            --neutral-border: #785a18;
+            --empty-input-border: #785a18;
+            --empty-input-bg: #2d1805;
+            --language-selector-bg: #3d2408;
+            --language-selector-border: #f59e0b;
+            --language-selector-color: #fef3c7;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
-    <link rel="stylesheet" href="styles/style-conjugation.css">
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="firstConditional3.title">First Conditional: Common Mistakes & Comprehensive Practice</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="firstConditional3.subtitle">Contrast with zero conditional, avoid 'will' in the if‑clause, real‑life dialogues & role‑play</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="firstConditional3.title.line1">First Conditional III:</div>
+                <div class="EH-conjugation-title-line" data-i18n="firstConditional3.title.line2">Common Mistakes & Comprehensive Practice</div>
+                <div class="EH-conjugation-subtitle" data-i18n="firstConditional3.title.line3">Avoid 'will' in the if-clause, real-life dialogues & role-play.</div>
+                <div class="EH-conjugation-subtitle" data-i18n="firstConditional3.title.line4">lesson: 3/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Section 1: Contrast with Zero Conditional -->
+            <!-- Section 1: Zero Conditional vs First Conditional -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional3.contrast.title">Zero Conditional vs First Conditional</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional3.differences.title">III. 1. Zero Conditional vs First Conditional</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">⚖️</span>
-                        <span data-i18n="firstConditional3.contrast.heading">Key differences</span>
+                        <span data-i18n="firstConditional3.differences.heading">Key differences</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional3.contrast.zeroTitle">📘 Zero Conditional (general truths)</div>
-                        <p data-i18n="firstConditional3.contrast.zeroDesc">Structure: <strong>If + present simple, present simple</strong>. Used for facts, habits, and things that are always true.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="firstConditional3.contrast.zeroEx1">If you heat ice, it melts.</div>
-                            <div class="EH-conjugation-example" data-i18n="firstConditional3.contrast.zeroEx2">If I am tired, I go to bed early.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional3.differences.zeroTitle">📘 Zero Conditional (general truths)</div>
+                        <p data-i18n="firstConditional3.differences.zeroDesc">Structure: <em>If + present simple, present simple</em>. Used for facts, habits, and things that are always true.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="firstConditional3.differences.zeroEx1">If you heat ice, it melts.</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional3.differences.zeroEx2">If I am tired, I go to bed early.</div>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional3.contrast.firstTitle">🔮 First Conditional (real possibility)</div>
-                        <p data-i18n="firstConditional3.contrast.firstDesc">Structure: <strong>If + present simple, will + infinitive</strong>. Used for possible future events and their likely results.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="firstConditional3.contrast.firstEx1">If it rains tomorrow, we will stay home.</div>
-                            <div class="EH-conjugation-example" data-i18n="firstConditional3.contrast.firstEx2">If she studies, she will pass the exam.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional3.differences.firstTitle">🔮 First Conditional (real possibility)</div>
+                        <p data-i18n="firstConditional3.differences.firstDesc">Structure: <em>If + present simple, will + infinitive</em>. Used for possible future events and their likely results.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="firstConditional3.differences.firstEx1">If it rains tomorrow, we will stay home.</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional3.differences.firstEx2">If she studies, she will pass the exam.</div>
                     </div>
                 </div>
             </div>
-            
             <!-- Section 2: Common Mistakes -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional3.mistakes.title">Common Mistakes with First Conditional</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional3.mistakes.title">III. 2. Common Mistakes with First Conditional</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">⚠️</span>
                         <span data-i18n="firstConditional3.mistakes.heading">Frequent errors & how to fix them</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional3.mistakes.willTitle">❌ Using 'will' in the if‑clause</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional3.mistakes.willTitle">❌ Using 'will' in the if-clause</div>
                         <p data-i18n="firstConditional3.mistakes.willDesc">Incorrect: <em>If it will rain, we will cancel the picnic.</em> ✅ Correct: <em>If it rains, we will cancel the picnic.</em> (Use present simple after 'if'.)</p>
                     </div>
                     <div class="EH-conjugation-rule">
@@ -125,44 +185,37 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Section 3: Role-Play & Contextual Practice -->
+            <!-- Section 3: Real-Life Context -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional3.roleplay.title">Real‑Life Context: Travel Agency Role‑Play</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional3.roleplay.title">III. 3. Real-Life Context: Travel Agency Role-Play</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">🎭</span>
-                        <span data-i18n="firstConditional3.roleplay.subtitle">Using First Conditional in a travel dialogue</span>
+                        <span data-i18n="firstConditional3.roleplay.heading">Conversation: Booking a trip</span>
                     </h3>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="firstConditional3.roleplay.line1"><strong>Travel agent:</strong> "If you book before Friday, you will get a 20% discount."</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional3.roleplay.line2"><strong>Customer:</strong> "Great! If I pay now, can I reserve the seats?"</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional3.roleplay.line3"><strong>Agent:</strong> "Yes, if you provide your details, I will confirm immediately."</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional3.roleplay.line4"><strong>Customer:</strong> "What if I need to change the date?"</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional3.roleplay.line5"><strong>Agent:</strong> "If you change the date more than 7 days ahead, there is no extra fee."</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional3.roleplay.line6"><strong>Customer:</strong> "Perfect. I'll book now."</div>
+                    </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional3.roleplay.dialogueTitle">Conversation: Booking a trip</div>
-                        <p><strong data-i18n="firstConditional3.roleplay.agent">Travel agent:</strong> <span data-i18n="firstConditional3.roleplay.line1">"If you book before Friday, you will get a 20% discount."</span><br>
-                        <strong data-i18n="firstConditional3.roleplay.customer">Customer:</strong> <span data-i18n="firstConditional3.roleplay.line2">"Great! If I pay now, can I reserve the seats?"</span><br>
-                        <strong>Agent:</strong> <span data-i18n="firstConditional3.roleplay.line3">"Yes, if you provide your details, I will confirm immediately."</span><br>
-                        <strong>Customer:</strong> <span data-i18n="firstConditional3.roleplay.line4">"What if I need to change the date?"</span><br>
-                        <strong>Agent:</strong> <span data-i18n="firstConditional3.roleplay.line5">"If you change the date more than 7 days ahead, there is no extra fee."</span><br>
-                        <strong>Customer:</strong> <span data-i18n="firstConditional3.roleplay.line6">"Perfect. I'll book now."</span></p>
-                        <p data-i18n="firstConditional3.roleplay.note"><em>Notice: present simple after if, will/can in the main clause. No 'will' inside the if‑part.</em></p>
+                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional3.roleplay.noteTitle">💡 Notice:</div>
+                        <p data-i18n="firstConditional3.roleplay.noteDesc">Present simple after <em>if</em>, <em>will/can</em> in the main clause. <strong>No 'will' inside the if-part.</strong></p>
                     </div>
                 </div>
             </div>
-            
-            <!-- EXERCISES (12 total) – dynamic slots -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional3.exercises.title">Review & Production Exercises</h2>
-                
-                <!-- 6 Multiple Choice -->
+                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional3.exercises.title">Practice: First Conditional – Mistakes & Mastery</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #1e6f5c; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #1e6f5c; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
@@ -172,86 +225,61 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation (original links preserved) -->
-			<div class="EH-conjugation-navigation">
-				<button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-					<span data-i18n="common.nextLesson">Next Lesson</span>
-				</button>
-				<button class="EH-conjugation-nav-button" style="pointer-events: none;">
-					<span></span>
-				</button>
-				<!-- <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-					<span data-i18n="common.previousLesson">Previous Lesson</span>
-				</button> -->
-				<button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-					<span data-i18n="common.returnToConjugation">Return to Conjugation</span>
-				</button>
-			</div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations (full object, unmodified) -->
     <script>
         window.I18N = {
             en: {
-                common: { siteName: "English Hub",
-					previousLesson: "← Previous Lesson",
-					returnToConjugation: "← Return to Conjugation",
-					nextLesson: "Next Lesson →" },
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "← Previous Lesson",
+                    returnToConjugation: "← Return to Conjugation",
+                    nextLesson: "Next Lesson →"
+                },
                 footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
                 firstConditional3: {
-                    title: "First Conditional: Common Mistakes & Comprehensive Practice",
-                    subtitle: "Contrast with zero conditional, avoid 'will' in the if‑clause, real‑life dialogues & role‑play",
-                    contrast: {
-                        title: "Zero Conditional vs First Conditional",
+                    title: {
+                        line1: "First Conditional III:",
+                        line2: "Common Mistakes & Comprehensive Practice",
+                        line3: "Avoid 'will' in the if-clause, real-life dialogues & role-play.",
+                        line4: "lesson: 3/3"
+                    },
+                    differences: {
+                        title: "III. 1. Zero Conditional vs First Conditional",
                         heading: "Key differences",
                         zeroTitle: "📘 Zero Conditional (general truths)",
-                        zeroDesc: "Structure: <strong>If + present simple, present simple</strong>. Used for facts, habits, and things that are always true.",
+                        zeroDesc: "Structure: If + present simple, present simple. Used for facts, habits, and things that are always true.",
                         zeroEx1: "If you heat ice, it melts.",
                         zeroEx2: "If I am tired, I go to bed early.",
                         firstTitle: "🔮 First Conditional (real possibility)",
-                        firstDesc: "Structure: <strong>If + present simple, will + infinitive</strong>. Used for possible future events and their likely results.",
+                        firstDesc: "Structure: If + present simple, will + infinitive. Used for possible future events and their likely results.",
                         firstEx1: "If it rains tomorrow, we will stay home.",
                         firstEx2: "If she studies, she will pass the exam."
                     },
                     mistakes: {
-                        title: "Common Mistakes with First Conditional",
+                        title: "III. 2. Common Mistakes with First Conditional",
                         heading: "Frequent errors & how to fix them",
-                        willTitle: "❌ Using 'will' in the if‑clause",
-                        willDesc: "Incorrect: <em>If it will rain, we will cancel the picnic.</em> ✅ Correct: <em>If it rains, we will cancel the picnic.</em> (Use present simple after 'if'.)",
+                        willTitle: "❌ Using 'will' in the if-clause",
+                        willDesc: "Incorrect: If it will rain, we will cancel the picnic. ✅ Correct: If it rains, we will cancel the picnic. (Use present simple after 'if'.)",
                         mixTitle: "❌ Mixing zero & first conditional wrongly",
-                        mixDesc: "Zero = always true; First = specific future. Compare: <em>If you freeze water, it becomes ice</em> (zero) vs <em>If you freeze this bottle, it will crack</em> (first).",
+                        mixDesc: "Zero = always true; First = specific future. Compare: If you freeze water, it becomes ice (zero) vs If you freeze this bottle, it will crack (first).",
                         modalTitle: "❌ Using modals incorrectly in result clause",
-                        modalDesc: "In first conditional we often use 'will', but can also use 'can', 'may', 'should' for possibility/advice. Example: <em>If you finish early, you can leave.</em>"
+                        modalDesc: "In first conditional we often use 'will', but can also use 'can', 'may', 'should' for possibility/advice. Example: If you finish early, you can leave."
                     },
                     roleplay: {
-                        title: "Real‑Life Context: Travel Agency Role‑Play",
-                        subtitle: "Using First Conditional in a travel dialogue",
-                        dialogueTitle: "Conversation: Booking a trip",
-                        agent: "Travel agent:",
-                        customer: "Customer:",
-                        line1: "\"If you book before Friday, you will get a 20% discount.\"",
-                        line2: "\"Great! If I pay now, can I reserve the seats?\"",
-                        line3: "\"Yes, if you provide your details, I will confirm immediately.\"",
-                        line4: "\"What if I need to change the date?\"",
-                        line5: "\"If you change the date more than 7 days ahead, there is no extra fee.\"",
-                        line6: "\"Perfect. I'll book now.\"",
-                        note: "<em>Notice: present simple after if, will/can in the main clause. No 'will' inside the if‑part.</em>"
+                        title: "III. 3. Real-Life Context: Travel Agency Role-Play",
+                        heading: "Conversation: Booking a trip",
+                        line1: "Travel agent: \"If you book before Friday, you will get a 20% discount.\"",
+                        line2: "Customer: \"Great! If I pay now, can I reserve the seats?\"",
+                        line3: "Agent: \"Yes, if you provide your details, I will confirm immediately.\"",
+                        line4: "Customer: \"What if I need to change the date?\"",
+                        line5: "Agent: \"If you change the date more than 7 days ahead, there is no extra fee.\"",
+                        line6: "Customer: \"Perfect. I'll book now.\"",
+                        noteTitle: "💡 Notice:",
+                        noteDesc: "Present simple after if, will/can in the main clause. No 'will' inside the if-part."
                     },
                     exercises: {
-                        title: "Review & Production Exercises",
+                        title: "Practice: First Conditional – Mistakes & Mastery",
                         q1: "Choose the correct first conditional sentence:",
                         q1a: "If it will rain, we stay inside.",
                         q1b: "If it rains, we will stay inside.",
@@ -286,279 +314,153 @@
                 }
             },
             fr: {
-                common: { siteName: "English Hub",
-				previousLesson: "← Previous Lesson (Leçon Précédente)",
-				returnToConjugation: "← Return to Conjugation (Retour au Conjugaison)",
-					nextLesson: "Next Lesson (Leçon Suivante) →" },
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "← Leçon Précédente",
+                    returnToConjugation: "← Retour au Conjugaison",
+                    nextLesson: "Leçon Suivante →"
+                },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
                 firstConditional3: {
-                    title: "First Conditional: Common Mistakes & Comprehensive Practice (Conditionnel de type 1 : Erreurs courantes et pratique complète)",
-                    subtitle: "Contrast with zero conditional, avoid 'will' in the if‑clause, real‑life dialogues & role‑play (Contraste avec le conditionnel zéro, éviter 'will' dans la proposition en if, dialogues réalistes et jeu de rôle)",
-                    contrast: {
-                        title: "Zero Conditional vs First Conditional (Conditionnel zéro vs type 1)",
-                        heading: "Key differences (Différences clés)",
-                        zeroTitle: "📘 Zero Conditional (vérités générales)",
-                        zeroDesc: "Structure: <strong>If + present simple, present simple</strong>. Used for facts, habits, and things that are always true. (Structure: if + présent simple, présent simple. Utilisé pour les faits, habitudes, vérités générales.)",
-                        zeroEx1: "If you heat ice, it melts. (Si tu chauffes de la glace, elle fond.)",
-                        zeroEx2: "If I am tired, I go to bed early. (Si je suis fatigué, je me couche tôt.)",
-                        firstTitle: "🔮 First Conditional (possibilité réelle)",
-                        firstDesc: "Structure: <strong>If + present simple, will + infinitive</strong>. Used for possible future events and their likely results. (If + présent simple, will + infinitif. Événements futurs possibles et leurs conséquences.)",
-                        firstEx1: "If it rains tomorrow, we will stay home. (S'il pleut demain, nous resterons à la maison.)",
-                        firstEx2: "If she studies, she will pass the exam. (Si elle étudie, elle réussira l'examen.)"
+                    title: {
+                        line1: "Conditionnel type 1 III :",
+                        line2: "Erreurs courantes et pratique complète",
+                        line3: "Évitez 'will' dans la proposition if, dialogues réels et jeux de rôle.",
+                        line4: "leçon : 3/3"
+                    },
+                    differences: {
+                        title: "III. 1. Conditionnel zéro vs Conditionnel type 1",
+                        heading: "Différences clés",
+                        zeroTitle: "📘 Conditionnel zéro (vérités générales)",
+                        zeroDesc: "Structure : If + présent simple, présent simple. Utilisé pour les faits, les habitudes et les choses toujours vraies.",
+                        zeroEx1: "Si vous chauffez la glace, elle fond.",
+                        zeroEx2: "Si je suis fatigué, je vais au lit tôt.",
+                        firstTitle: "🔮 Conditionnel type 1 (possibilité réelle)",
+                        firstDesc: "Structure : If + présent simple, will + infinitif. Utilisé pour des événements futurs possibles et leurs résultats probables.",
+                        firstEx1: "S'il pleut demain, nous resterons à la maison.",
+                        firstEx2: "Si elle étudie, elle réussira l'examen."
                     },
                     mistakes: {
-                        title: "Common Mistakes with First Conditional (Erreurs courantes avec le conditionnel type 1)",
-                        heading: "Frequent errors & how to fix them (Erreurs fréquentes et corrections)",
-                        willTitle: "❌ Using 'will' in the if‑clause (Utiliser 'will' dans la proposition avec if)",
-                        willDesc: "Incorrect: <em>If it will rain, we will cancel the picnic.</em> ✅ Correct: <em>If it rains, we will cancel the picnic.</em> (Use present simple after 'if'.) (Utilisez le présent simple après if.)",
-                        mixTitle: "❌ Mixing zero & first conditional wrongly (Mélanger conditionnel zéro et type 1)",
-                        mixDesc: "Zero = always true; First = specific future. (Zéro = toujours vrai ; Type 1 = futur spécifique.) Compare: <em>If you freeze water, it becomes ice</em> (zero) vs <em>If you freeze this bottle, it will crack</em> (first).",
-                        modalTitle: "❌ Using modals incorrectly in result clause (Utiliser mal les modaux dans la proposition principale)",
-                        modalDesc: "In first conditional we often use 'will', but can also use 'can', 'may', 'should' for possibility/advice. Example: <em>If you finish early, you can leave.</em> (Si tu finis tôt, tu peux partir.)"
+                        title: "III. 2. Erreurs courantes avec le conditionnel type 1",
+                        heading: "Erreurs fréquentes et comment les corriger",
+                        willTitle: "❌ Utiliser 'will' dans la proposition if",
+                        willDesc: "Incorrect : If it will rain, we will cancel the picnic. ✅ Correct : If it rains, we will cancel the picnic. (Utilisez le présent simple après 'if'.)",
+                        mixTitle: "❌ Mélanger incorrectement le zéro et le type 1",
+                        mixDesc: "Zéro = toujours vrai ; Type 1 = futur spécifique. Comparez : If you freeze water, it becomes ice (zéro) vs If you freeze this bottle, it will crack (type 1).",
+                        modalTitle: "❌ Utiliser incorrectement les modaux dans la proposition résultat",
+                        modalDesc: "Dans le conditionnel type 1, on utilise souvent 'will', mais on peut aussi utiliser 'can', 'may', 'should' pour la possibilité/le conseil. Exemple : If you finish early, you can leave."
                     },
                     roleplay: {
-                        title: "Real‑Life Context: Travel Agency Role‑Play (Contexte réel : Jeu de rôle à l'agence de voyage)",
-                        subtitle: "Using First Conditional in a travel dialogue (Utiliser le conditionnel type 1 dans un dialogue de voyage)",
-                        dialogueTitle: "Conversation: Booking a trip (Conversation : Réserver un voyage)",
-                        agent: "Travel agent:",
-                        customer: "Customer:",
-                        line1: "\"If you book before Friday, you will get a 20% discount.\" (\"Si vous réservez avant vendredi, vous obtiendrez 20% de réduction.\")",
-                        line2: "\"Great! If I pay now, can I reserve the seats?\" (\"Super ! Si je paie maintenant, puis-je réserver les sièges ?\")",
-                        line3: "\"Yes, if you provide your details, I will confirm immediately.\" (\"Oui, si vous fournissez vos coordonnées, je confirme immédiatement.\")",
-                        line4: "\"What if I need to change the date?\" (\"Et si j'ai besoin de changer la date ?\")",
-                        line5: "\"If you change the date more than 7 days ahead, there is no extra fee.\" (\"Si vous changez la date plus de 7 jours à l'avance, il n'y a pas de frais supplémentaires.\")",
-                        line6: "\"Perfect. I'll book now.\" (\"Parfait. Je réserve maintenant.\")",
-                        note: "<em>Notice: present simple after if, will/can in the main clause. No 'will' inside the if‑part. (Remarque : présent simple après if, will/can dans la principale. Pas de 'will' dans la partie if.)</em>"
-                    },
-                    exercises: {
-                        title: "Review & Production Exercises (Exercices de révision et production)",
-                        q1: "Choose the correct first conditional sentence: (Choisissez la phrase correcte au conditionnel type 1 :)",
-                        q1a: "If it will rain, we stay inside.",
-                        q1b: "If it rains, we will stay inside.",
-                        q1c: "If it will rain, we will stay inside.",
-                        q2: "Which sentence expresses a general truth? (Quelle phrase exprime une vérité générale ?)",
-                        q2a: "If you heat water, it boils.",
-                        q2b: "If you heat water, it will boil.",
-                        q2c: "If you will heat water, it boils.",
-                        q3: "Complete: If she ____ hard, she ____ the test. (Complétez : If she ____ hard, she ____ the test.)",
-                        q3a: "studies / will pass",
-                        q3b: "will study / passes",
-                        q3c: "studies / passes",
-                        q4: "Choose the correct (advice) first conditional: (Choisissez le conditionnel type 1 correct (conseil) :)",
-                        q4a: "If you feel sick, you should see a doctor.",
-                        q4b: "If you will feel sick, you see a doctor.",
-                        q4c: "If you feel sick, you see a doctor.",
-                        q5: "What is the mistake? \"If you will come early, we will have time.\" (Quelle est l'erreur ?)",
-                        q5a: "\"will\" in if-clause (\"will\" dans la proposition if)",
-                        q5b: "Missing \"to\" (Il manque \"to\")",
-                        q5c: "Wrong tense in result (Mauvais temps dans la proposition principale)",
-                        q6: "Choose the best first conditional for a future plan: (Choisissez le meilleur conditionnel type 1 pour un projet futur :)",
-                        q6a: "If you add sugar, the cake is sweet.",
-                        q6b: "If you come to the party, you will meet my friends.",
-                        q6c: "If you will come, you meet them.",
-                        q7: "Complete: If they ____ (arrive) late, we ____ (start) without them.",
-                        q8: "Complete (first conditional): If you ____ (not/hurry), you ____ (miss) the bus.",
-                        q9: "Correct the mistake: \"If she will call me, I will be happy.\" → Write the correct version.",
-                        q10: "Arrange: (will / you / if / exercise / you / fit / stay)",
-                        q11: "Arrange: (not / if / we / rain / will / go / it / does / out)",
-                        q12: "Arrange: (study / will / you / if / you / succeed)"
+                        title: "III. 3. Contexte réel : Jeu de rôle en agence de voyage",
+                        heading: "Conversation : Réservation d'un voyage",
+                        line1: "Agent de voyage : \"Si vous réservez avant vendredi, vous obtiendrez une réduction de 20 %.\"",
+                        line2: "Client : \"Super ! Si je paie maintenant, puis-je réserver les places ?\"",
+                        line3: "Agent : \"Oui, si vous fournissez vos coordonnées, je confirmerai immédiatement.\"",
+                        line4: "Client : \"Et si je dois changer la date ?\"",
+                        line5: "Agent : \"Si vous changez la date plus de 7 jours à l'avance, il n'y a pas de frais supplémentaires.\"",
+                        line6: "Client : \"Parfait. Je réserve maintenant.\"",
+                        noteTitle: "💡 Remarque :",
+                        noteDesc: "Présent simple après if, will/can dans la proposition principale. Pas de 'will' dans la partie avec if."
                     }
                 }
             },
             ar: {
-                common: { siteName: "English Hub",
-					previousLesson: "Previous Lesson (الدرس السابق)← ",
-					returnToConjugation: "Return to Conjugation (العودة إلى التصريف)← ",
-					nextLesson: "Next Lesson (الدرس التالي) →" },
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "الدرس السابق← ",
+                    returnToConjugation: "العودة إلى التصريف← ",
+                    nextLesson: "الدرس التالي →"
+                },
                 footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
                 firstConditional3: {
-                    title: "First Conditional: Common Mistakes & Comprehensive Practice (الجمل الشرطية من النوع الأول: الأخطاء الشائعة وتمارين شاملة)",
-                    subtitle: "Contrast with zero conditional, avoid 'will' in the if‑clause, real‑life dialogues & role‑play (مقارنة مع النوع الصفري، تجنب 'will' في جملة if، حوارات واقعية ولعب أدوار)",
-                    contrast: {
-                        title: "Zero Conditional vs First Conditional (النوع الصفري مقابل النوع الأول)",
-                        heading: "Key differences (الاختلافات الرئيسية)",
-                        zeroTitle: "📘 Zero Conditional (حقائق عامة)",
-                        zeroDesc: "Structure: <strong>If + present simple, present simple</strong>. Used for facts, habits, and things that are always true. (التركيب: if + مضارع بسيط، مضارع بسيط. يُستخدم للحقائق والعادات والأشياء الصحيحة دائمًا.)",
-                        zeroEx1: "If you heat ice, it melts. (إذا سخنت الجليد، فإنه يذوب.)",
-                        zeroEx2: "If I am tired, I go to bed early. (إذا كنت متعبًا، أذهب إلى الفراش مبكرًا.)",
-                        firstTitle: "🔮 First Conditional (احتمال حقيقي)",
-                        firstDesc: "Structure: <strong>If + present simple, will + infinitive</strong>. Used for possible future events and their likely results. (التركيب: if + مضارع بسيط، will + مصدر. يُستخدم للأحداث المستقبلية المحتملة ونتائجها.)",
-                        firstEx1: "If it rains tomorrow, we will stay home. (إذا أمطرت غدًا، سوف نبقى في المنزل.)",
-                        firstEx2: "If she studies, she will pass the exam. (إذا درست، سوف تنجح في الامتحان.)"
+                    title: {
+                        line1: "الشرط الأول: 3:",
+                        line2: "الأخطاء الشائعة والتمرين الشامل",
+                        line3: "تجنب 'will' في جملة if، وحوارات واقعية وتمثيل الأدوار.",
+                        line4: "الدرس: 3/3"
+                    },
+                    differences: {
+                        title: "III. 1. الشرط الصفري مقابل الشرط الأول",
+                        heading: "الفروق الرئيسية",
+                        zeroTitle: "📘 الشرط الصفري (حقائق عامة)",
+                        zeroDesc: "البنية: If + مضارع بسيط، مضارع بسيط. يُستخدم للحقائق والعادات والأشياء الصحيحة دائمًا.",
+                        zeroEx1: "إذا سخنت الثلج، يذوب.",
+                        zeroEx2: "إذا كنت متعبًا، أذهب إلى الفراش مبكرًا.",
+                        firstTitle: "🔮 الشرط الأول (إمكانية حقيقية)",
+                        firstDesc: "البنية: If + مضارع بسيط، will + مصدر. يُستخدم للأحداث المستقبلية المحتملة ونتائجها المرجحة.",
+                        firstEx1: "إذا أمطرت غدًا، سنبقى في المنزل.",
+                        firstEx2: "إذا درست، ستنجح في الامتحان."
                     },
                     mistakes: {
-                        title: "Common Mistakes with First Conditional (الأخطاء الشائعة مع النوع الأول)",
-                        heading: "Frequent errors & how to fix them (أخطاء متكررة وكيفية تصحيحها)",
-                        willTitle: "❌ Using 'will' in the if‑clause (استخدام 'will' في جملة if)",
-                        willDesc: "Incorrect: <em>If it will rain, we will cancel the picnic.</em> ✅ Correct: <em>If it rains, we will cancel the picnic.</em> (Use present simple after 'if'.)",
-                        mixTitle: "❌ Mixing zero & first conditional wrongly (الخلط بين النوع الصفري والنوع الأول)",
-                        mixDesc: "Zero = always true; First = specific future. (الصفري = صحيح دائمًا؛ الأول = مستقبل محدد.) Compare: <em>If you freeze water, it becomes ice</em> (zero) vs <em>If you freeze this bottle, it will crack</em> (first).",
-                        modalTitle: "❌ Using modals incorrectly in result clause (استخدام الأفعال المساعدة بشكل خاطئ في جملة النتيجة)",
-                        modalDesc: "In first conditional we often use 'will', but can also use 'can', 'may', 'should' for possibility/advice. Example: <em>If you finish early, you can leave.</em> (إذا أنهيت مبكرًا، يمكنك المغادرة.)"
+                        title: "III. 2. الأخطاء الشائعة مع الشرط الأول",
+                        heading: "أخطاء متكررة وكيفية تصحيحها",
+                        willTitle: "❌ استخدام 'will' في جملة if",
+                        willDesc: "خطأ: If it will rain, we will cancel the picnic. ✅ الصواب: If it rains, we will cancel the picnic. (استخدم المضارع البسيط بعد 'if'.)",
+                        mixTitle: "❌ الخلط بين الشرط الصفري والشرط الأول",
+                        mixDesc: "الصفري = دائم الصحة؛ الأول = مستقبل محدد. قارن: If you freeze water, it becomes ice (صفري) مقابل If you freeze this bottle, it will crack (أول).",
+                        modalTitle: "❌ استخدام الأفعال الناقصة بشكل خاطئ في جملة النتيجة",
+                        modalDesc: "في الشرط الأول، غالبًا ما نستخدم 'will'، لكن يمكن أيضًا استخدام 'can' و 'may' و 'should' للإمكانية/النصيحة. مثال: If you finish early, you can leave."
                     },
                     roleplay: {
-                        title: "Real‑Life Context: Travel Agency Role‑Play (سياق واقعي: لعب أدوار في وكالة سفر)",
-                        subtitle: "Using First Conditional in a travel dialogue (استخدام النوع الأول في حوار سفر)",
-                        dialogueTitle: "Conversation: Booking a trip (محادثة: حجز رحلة)",
-                        agent: "Travel agent: (وكيل السفر :)",
-                        customer: "Customer: (العميل :)",
-                        line1: "\"If you book before Friday, you will get a 20% discount.\" (\"إذا حجزت قبل الجمعة، ستحصل على خصم 20%.\")",
-                        line2: "\"Great! If I pay now, can I reserve the seats?\" (\"رائع! إذا دفعت الآن، هل يمكنني حجز المقاعد؟\")",
-                        line3: "\"Yes, if you provide your details, I will confirm immediately.\" (\"نعم، إذا قدمت تفاصيلك، سأؤكد فورًا.\")",
-                        line4: "\"What if I need to change the date?\" (\"ماذا لو احتجت تغيير التاريخ؟\")",
-                        line5: "\"If you change the date more than 7 days ahead, there is no extra fee.\" (\"إذا غيرت التاريخ قبل أكثر من 7 أيام، لا توجد رسوم إضافية.\")",
-                        line6: "\"Perfect. I'll book now.\" (\"ممتاز. سأحجز الآن.\")",
-                        note: "<em>Notice: present simple after if, will/can in the main clause. No 'will' inside the if‑part. (لاحظ: المضارع البسيط بعد if، will/can في الجملة الرئيسية. لا نستخدم 'will' داخل جزء if.)</em>"
-                    },
-                    exercises: {
-                        title: "Review & Production Exercises (تمارين المراجعة والإنتاج)",
-                        q1: "Choose the correct first conditional sentence: (اختر الجملة الشرطية الصحيحة من النوع الأول:)",
-                        q1a: "If it will rain, we stay inside.",
-                        q1b: "If it rains, we will stay inside.",
-                        q1c: "If it will rain, we will stay inside.",
-                        q2: "Which sentence expresses a general truth? (أي جملة تعبر عن حقيقة عامة؟)",
-                        q2a: "If you heat water, it boils.",
-                        q2b: "If you heat water, it will boil.",
-                        q2c: "If you will heat water, it boils.",
-                        q3: "Complete: If she ____ hard, she ____ the test. (أكمل: If she ____ hard, she ____ the test.)",
-                        q3a: "studies / will pass",
-                        q3b: "will study / passes",
-                        q3c: "studies / passes",
-                        q4: "Choose the correct (advice) first conditional: (اختر الجملة الشرطية الصحيحة (نصيحة) من النوع الأول:)",
-                        q4a: "If you feel sick, you should see a doctor.",
-                        q4b: "If you will feel sick, you see a doctor.",
-                        q4c: "If you feel sick, you see a doctor.",
-                        q5: "What is the mistake? \"If you will come early, we will have time.\" (ما الخطأ؟)",
-                        q5a: "\"will\" in if-clause (will في جملة if)",
-                        q5b: "Missing \"to\" (ينقص \"to\")",
-                        q5c: "Wrong tense in result (زمن خاطئ في جملة النتيجة)",
-                        q6: "Choose the best first conditional for a future plan: (اختر أفضل جملة شرطية من النوع الأول لخطة مستقبلية:)",
-                        q6a: "If you add sugar, the cake is sweet.",
-                        q6b: "If you come to the party, you will meet my friends.",
-                        q6c: "If you will come, you meet them.",
-                        q7: "Complete: If they ____ (arrive) late, we ____ (start) without them.",
-                        q8: "Complete (first conditional): If you ____ (not/hurry), you ____ (miss) the bus.",
-                        q9: "Correct the mistake: \"If she will call me, I will be happy.\" → Write the correct version.",
-                        q10: "Arrange: (will / you / if / exercise / you / fit / stay)",
-                        q11: "Arrange: (not / if / we / rain / will / go / it / does / out)",
-                        q12: "Arrange: (study / will / you / if / you / succeed)"
+                        title: "III. 3. سياق واقعي: تمثيل دور وكالة سفر",
+                        heading: "محادثة: حجز رحلة",
+                        line1: "وكيل السفر: \"إذا حجزت قبل الجمعة، ستحصل على خصم 20%.\"",
+                        line2: "الزبون: \"رائع! إذا دفعت الآن، هل يمكنني حجز المقاعد؟\"",
+                        line3: "الوكيل: \"نعم، إذا قدمت بياناتك، سأؤكد فورًا.\"",
+                        line4: "الزبون: \"ماذا لو احتجت تغيير التاريخ؟\"",
+                        line5: "الوكيل: \"إذا غيرت التاريخ قبل أكثر من 7 أيام، لا توجد رسوم إضافية.\"",
+                        line6: "الزبون: \"ممتاز. سأحجز الآن.\"",
+                        noteTitle: "💡 ملاحظة:",
+                        noteDesc: "المضارع البسيط بعد if، و will/can في الجملة الرئيسية. لا تستخدم 'will' داخل جزء if."
                     }
                 }
             }
         };
     </script>
-
-    <!-- Scripts (modular approach) -->
-    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
-
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // Build multiple‑choice exercises dynamically
+        // Multiple choice exercises
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'firstConditional3.exercises.q1',
-                    options: [
-                        { value: 'a', labelKey: 'firstConditional3.exercises.q1a' },
-                        { value: 'b', labelKey: 'firstConditional3.exercises.q1b' },
-                        { value: 'c', labelKey: 'firstConditional3.exercises.q1c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'firstConditional3.exercises.q2',
-                    options: [
-                        { value: 'a', labelKey: 'firstConditional3.exercises.q2a' },
-                        { value: 'b', labelKey: 'firstConditional3.exercises.q2b' },
-                        { value: 'c', labelKey: 'firstConditional3.exercises.q2c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'firstConditional3.exercises.q3',
-                    options: [
-                        { value: 'a', labelKey: 'firstConditional3.exercises.q3a' },
-                        { value: 'b', labelKey: 'firstConditional3.exercises.q3b' },
-                        { value: 'c', labelKey: 'firstConditional3.exercises.q3c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'firstConditional3.exercises.q4',
-                    options: [
-                        { value: 'a', labelKey: 'firstConditional3.exercises.q4a' },
-                        { value: 'b', labelKey: 'firstConditional3.exercises.q4b' },
-                        { value: 'c', labelKey: 'firstConditional3.exercises.q4c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'firstConditional3.exercises.q5',
-                    options: [
-                        { value: 'a', labelKey: 'firstConditional3.exercises.q5a' },
-                        { value: 'b', labelKey: 'firstConditional3.exercises.q5b' },
-                        { value: 'c', labelKey: 'firstConditional3.exercises.q5c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'firstConditional3.exercises.q6',
-                    options: [
-                        { value: 'a', labelKey: 'firstConditional3.exercises.q6a' },
-                        { value: 'b', labelKey: 'firstConditional3.exercises.q6b' },
-                        { value: 'c', labelKey: 'firstConditional3.exercises.q6c' }
-                    ],
-                    correctAnswer: 'b'
-                }
+                { questionTextKey: 'firstConditional3.exercises.q1', options: [{ value: 'a', labelKey: 'firstConditional3.exercises.q1a' }, { value: 'b', labelKey: 'firstConditional3.exercises.q1b' }, { value: 'c', labelKey: 'firstConditional3.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'firstConditional3.exercises.q2', options: [{ value: 'a', labelKey: 'firstConditional3.exercises.q2a' }, { value: 'b', labelKey: 'firstConditional3.exercises.q2b' }, { value: 'c', labelKey: 'firstConditional3.exercises.q2c' }], correctAnswer: 'a' },
+                { questionTextKey: 'firstConditional3.exercises.q3', options: [{ value: 'a', labelKey: 'firstConditional3.exercises.q3a' }, { value: 'b', labelKey: 'firstConditional3.exercises.q3b' }, { value: 'c', labelKey: 'firstConditional3.exercises.q3c' }], correctAnswer: 'a' },
+                { questionTextKey: 'firstConditional3.exercises.q4', options: [{ value: 'a', labelKey: 'firstConditional3.exercises.q4a' }, { value: 'b', labelKey: 'firstConditional3.exercises.q4b' }, { value: 'c', labelKey: 'firstConditional3.exercises.q4c' }], correctAnswer: 'a' },
+                { questionTextKey: 'firstConditional3.exercises.q5', options: [{ value: 'a', labelKey: 'firstConditional3.exercises.q5a' }, { value: 'b', labelKey: 'firstConditional3.exercises.q5b' }, { value: 'c', labelKey: 'firstConditional3.exercises.q5c' }], correctAnswer: 'a' },
+                { questionTextKey: 'firstConditional3.exercises.q6', options: [{ value: 'a', labelKey: 'firstConditional3.exercises.q6a' }, { value: 'b', labelKey: 'firstConditional3.exercises.q6b' }, { value: 'c', labelKey: 'firstConditional3.exercises.q6c' }], correctAnswer: 'b' }
             ]
         });
-
-        // Build fill‑in‑the‑blank exercises
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+    </script>
+    <script>
+        // Fill-in-the-blank exercises
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'firstConditional3.exercises.q7',
-                    answers: ['arrive will start']   // expected input: "arrive will start"
-                },
-                {
-                    questionTextKey: 'firstConditional3.exercises.q8',
-                    answers: ["do not hurry will miss", "don't hurry will miss"]
-                },
-                {
-                    questionTextKey: 'firstConditional3.exercises.q9',
-                    answers: ["If she calls me, I will be happy.", "If she calls me I will be happy."]
-                }
+                { questionTextKey: 'firstConditional3.exercises.q7', answers: ['arrive', 'will start'] },
+                { questionTextKey: 'firstConditional3.exercises.q8', answers: ["don't hurry", 'do not hurry', 'will miss'] },
+                { questionTextKey: 'firstConditional3.exercises.q9', answers: ['If she calls me, I will be happy.', 'If she calls me I will be happy.'] }
             ]
         });
-
-        // Build sentence‑ordering exercises
+    </script>
+    <script>
+        // Sentence ordering exercises
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'firstConditional3.exercises.q10',
-                    words: ['will', 'you', 'if', 'exercise', 'you', 'fit', 'stay', '.'],
-                    correctSentence: 'If you exercise you will stay fit .'
-                },
-                {
-                    questionTextKey: 'firstConditional3.exercises.q11',
-                    words: ['not', 'if', 'we', 'rain', 'will', 'go', 'it', 'does', 'out', '.'],
-                    correctSentence: 'If it does not rain we will go out .'
-                },
-                {
-                    questionTextKey: 'firstConditional3.exercises.q12',
-                    words: ['study', 'will', 'you', 'if', 'you', 'succeed', '.'],
-                    correctSentence: 'If you study you will succeed .'
-                }
+                { questionTextKey: 'firstConditional3.exercises.q10', words: ['will', 'you', 'if', 'exercise', 'you', 'fit', 'stay', '.'], correctSentence: 'If you exercise you will stay fit .' },
+                { questionTextKey: 'firstConditional3.exercises.q11', words: ['not', 'if', 'we', 'rain', 'will', 'go', 'it', 'does', 'out', '.'], correctSentence: 'If it does not rain we will go out .' },
+                { questionTextKey: 'firstConditional3.exercises.q12', words: ['study', 'will', 'you', 'if', 'you', 'succeed', '.'], correctSentence: 'If you study you will succeed .' }
             ]
         });
-
-        // Check‑all function (same structure as Conditional 3 lessons)
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
@@ -574,24 +476,22 @@
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered first conditional mistakes & usage!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit zero vs first conditional and the if-clause rules.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
-        }
 
+            // sound & visual effects
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
         document.addEventListener('DOMContentLoaded', function() {
-            // Only init the exercise types that need event listeners (drag‑and‑drop, fill)
-            // The multiple‑choice builder already creates the HTML.
-            // ExerciseType1Possibilities3Init(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');  // not needed
             ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-
-        // i18n rendering for HTML tags inside translations
+        // i18n rendering – handles nested keys for title lines
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
@@ -599,9 +499,7 @@
                 elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
+                    if (translation) {
                         el.textContent = translation;
                     }
                 });

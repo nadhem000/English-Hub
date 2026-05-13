@@ -3,157 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Second Conditional: Variations & Extended Uses - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    <!-- Unified conjugation lesson styles (variable‑driven) -->
+    <title>Second Conditional II: Variations & Extended Uses - English Hub</title>
     <link rel="stylesheet" href="styles/style-conjugation.css">
-    
     <style>
-        /* ===== Theme‑specific colours (amber/warm copper) ===== */
         :root {
-            --bg-gradient: linear-gradient(135deg, #bf360c, #e65100, #ff9800);
-            --title-color: #bf360c;
-            --primary: #e65100;
-            --primary-hover: #bf360c;
-            --primary-light: #ff9800;
-            --accent: #ffb74d;
-            --rule-bg: #fff3e0;
-            --rule-border: #ffb74d;
-            --example-bg: #ffe0b2;
-            --example-border: #ffb74d;
-            --exercise-number-gradient: linear-gradient(135deg, #e65100, #ff9800);
-            --nav-btn-bg: #e65100;
-            --nav-btn-hover: #bf360c;
-            --nav-back-btn-bg: #ffb74d;
-            --nav-back-btn-color: #333;
-            --nav-back-btn-hover: #ff9800;
-
-            /* Neutrals – already defined in style-conjugation.css, but we keep them here for clarity */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
-            --correct-bg: #d4edda;
-            --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --bg-gradient: linear-gradient(135deg, #e0d4e8, #d0c0dc, #b8a0cc, #a080bc);
+            --content-bg: #faf8fc;
+            --card-bg: #ffffff;
+            --subsection-bg: #f3f0f8;
+            --rule-bg: #ece4f4;
+            --example-bg: #e4d8f0;
+            --table-stripe: #f0ecf6;
+            --title-color: #3d1e5e;
+            --text-color: #2d1840;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #8b5ea8;
+            --primary-hover: #734a8e;
+            --primary-light: #9e70b8;
+            --accent: #8b5ea8;
+            --exercise-number-gradient: linear-gradient(135deg, #8b5ea8, #5e3d78);
+            --rule-border: #8b5ea8;
+            --example-border: #8b5ea8;
+            --nav-btn-bg: #8b5ea8;
+            --nav-btn-hover: #5e3d78;
+            --nav-back-btn-bg: #9e70b8;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #8b5ea8;
+            --refract-divider-color: #c0a8d4;
+            --refract-translation-bg: #e8dcf2;
+            --refract-translation-border: #8b5ea8;
+            --refract-english-color: #2d1840;
+            --section-divider: #d8cce4;
+            --card-border: #d8cce4;
+            --input-border: #c0b0d4;
+            --dashed-border: #c0b0d4;
+            --table-border: #ccbcd8;
+            --correct-bg: #e4f0e8;
+            --correct-color: #1e4a2e;
+            --correct-border: #82c9a8;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #f0ecf6;
+            --neutral-color: #5e4a78;
+            --neutral-border: #c8b8dc;
+            --empty-input-border: #b8a8cc;
+            --empty-input-bg: #f6f2fa;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #8b5ea8;
+            --language-selector-color: #2d1840;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #2d1845, #3d1e5e, #4a2870, #5e3d78);
+            --content-bg: #1a1030;
+            --card-bg: #221838;
+            --subsection-bg: #221838;
+            --rule-bg: #1a1030;
+            --example-bg: #1a1030;
+            --table-stripe: #1e1435;
+            --title-color: #c8a8e0;
+            --text-color: #e8d8f4;
+            --header-text: #e8d8f4;
+            --header-text-light: #c8b8dc;
+            --primary: #a070c8;
+            --primary-hover: #b080d8;
+            --primary-light: #a070c8;
+            --accent: #a070c8;
+            --rule-border: #a070c8;
+            --example-border: #a070c8;
+            --exercise-number-gradient: linear-gradient(135deg, #a070c8, #8b5ea8);
+            --nav-btn-bg: #a070c8;
+            --nav-btn-hover: #8b5ea8;
+            --nav-back-btn-bg: #b080d8;
+            --nav-back-btn-color: #1a1030;
+            --nav-back-btn-hover: #a070c8;
+            --refract-divider-color: #b890d8;
+            --refract-translation-bg: #2e1e50;
+            --refract-translation-border: #b890d8;
+            --refract-english-color: #e4d4f4;
+            --section-divider: #2e1e50;
+            --card-border: #2e1e50;
+            --input-border: #483060;
+            --dashed-border: #483060;
+            --table-border: #352550;
+            --white: #e8d8f4;
+            --correct-bg: #1e3d2e;
+            --correct-color: #a3e6b5;
+            --correct-border: #5e9e70;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #261e3a;
+            --neutral-color: #c8b8dc;
+            --neutral-border: #5e4a78;
+            --empty-input-border: #483060;
+            --empty-input-bg: #1a1030;
+            --language-selector-bg: #221838;
+            --language-selector-border: #a070c8;
+            --language-selector-color: #e8d8f4;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="secondConditional2.title">Second Conditional: Variations & Extended Uses</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="secondConditional2.subtitle">Master the subjunctive 'were', modals 'could' and 'might', and advanced advice structures.</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="secondConditional2.title.line1">Second Conditional: II:</div>
+                <div class="EH-conjugation-title-line" data-i18n="secondConditional2.title.line2">Variations & Extended Uses</div>
+                <div class="EH-conjugation-subtitle" data-i18n="secondConditional2.title.line3">the subjunctive, modals, and advanced advice structures</div>
+                <div class="EH-conjugation-subtitle" data-i18n="secondConditional2.title.line4">lesson: 2/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Section 1: Using 'were' for all persons (subjunctive) -->
+            <!-- Section 1: The Subjunctive 'Were' for All Persons -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional2.subjunctive.title">The Subjunctive 'Were' for All Persons</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional2.subjunctive.title">II. 1. The Subjunctive 'Were' for All Persons</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">✨</span>
-                        <span data-i18n="secondConditional2.subjunctive.subtitle">Formal & hypothetical 'were'</span>
+                        <span class="EH-conjugation-subsection-icon">🎩</span>
+                        <span data-i18n="secondConditional2.subjunctive.heading">Formal & hypothetical 'were'</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional2.subjunctive.ruleTitle">Using 'were' instead of 'was':</div>
-                        <p data-i18n="secondConditional2.subjunctive.ruleText">In formal English and in hypothetical or unreal situations, <strong>were</strong> is used for all subjects (I, he, she, it, we, they) in the if-clause. This is called the subjunctive mood and adds formality or emphasis to the unreal condition.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="secondConditional2.subjunctive.ex1">If I <strong>were</strong> rich, I would buy a yacht. (not 'was')</div>
-                            <div class="EH-conjugation-example" data-i18n="secondConditional2.subjunctive.ex2">If she <strong>were</strong> here, she would help us.</div>
-                            <div class="EH-conjugation-example" data-i18n="secondConditional2.subjunctive.ex3">If they <strong>were</strong> younger, they would travel more.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional2.subjunctive.desc1">📘 Using 'were' instead of 'was':</div>
+                        <p data-i18n="secondConditional2.subjunctive.desc2">In formal English and in hypothetical or unreal situations, <strong>were</strong> is used for all subjects (I, he, she, it, we, they) in the if-clause. This is called the <strong>subjunctive mood</strong> and adds formality or emphasis to the unreal condition.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="secondConditional2.subjunctive.ex1">If I were rich, I would buy a yacht. (not 'was')</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional2.subjunctive.ex2">If she were here, she would help us.</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional2.subjunctive.ex3">If they were younger, they would travel more.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Section 2: Variations with 'could' and 'might' -->
+            <!-- Section 2: Modals in the Result Clause: Could & Might -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional2.modals.title">Modals in the Result Clause: Could & Might</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional2.modals.title">II. 2. Modals in the Result Clause: Could & Might</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⚡</span>
-                        <span data-i18n="secondConditional2.modals.subtitle">Expressing ability or possibility</span>
+                        <span class="EH-conjugation-subsection-icon">💪</span>
+                        <span data-i18n="secondConditional2.modals.heading">Expressing ability or possibility</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional2.modals.ruleTitle">Using could and might:</div>
-                        <p data-i18n="secondConditional2.modals.ruleText">Instead of 'would', we can use <strong>could</strong> (ability or possibility) or <strong>might</strong> (weaker possibility) in the result clause. The if-clause still uses past simple.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="secondConditional2.modals.ex1">If I spoke French, I <strong>could</strong> work in Paris. (ability)</div>
-                            <div class="EH-conjugation-example" data-i18n="secondConditional2.modals.ex2">If we left now, we <strong>might</strong> arrive on time. (possibility)</div>
-                            <div class="EH-conjugation-example" data-i18n="secondConditional2.modals.ex3">If he had a car, he <strong>could</strong> drive us to the station.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional2.modals.desc1">📘 Using could and might:</div>
+                        <p data-i18n="secondConditional2.modals.desc2">Instead of 'would', we can use <strong>could</strong> (ability or possibility) or <strong>might</strong> (weaker possibility) in the result clause. The if-clause still uses <strong>past simple</strong>.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="secondConditional2.modals.ex1">If I spoke French, I could work in Paris. (ability)</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional2.modals.ex2">If we left now, we might arrive on time. (possibility)</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional2.modals.ex3">If he had a car, he could drive us to the station.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Section 3: Expressing advice (If I were you...) -->
+            <!-- Section 3: Expressing Advice: If I Were You... -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional2.advice.title">Expressing Advice: If I Were You...</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional2.advice.title">II. 3. Expressing Advice: If I Were You...</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">💡</span>
-                        <span data-i18n="secondConditional2.advice.subtitle">Giving hypothetical recommendations</span>
+                        <span class="EH-conjugation-subsection-icon">💬</span>
+                        <span data-i18n="secondConditional2.advice.heading">Giving hypothetical recommendations</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional2.advice.ruleTitle">Classic structure for advice:</div>
-                        <p data-i18n="secondConditional2.advice.ruleText">The structure <strong>If I were you, I would...</strong> is a common way to give advice. It uses the subjunctive 'were' and 'would' in the result. This structure is always hypothetical and polite.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="secondConditional2.advice.ex1">If I were you, I <strong>would</strong> accept the job offer.</div>
-                            <div class="EH-conjugation-example" data-i18n="secondConditional2.advice.ex2">If I were him, I <strong>wouldn't</strong> say that.</div>
-                            <div class="EH-conjugation-example" data-i18n="secondConditional2.advice.ex3">If I were her, I <strong>might</strong> study abroad.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional2.advice.desc1">📘 Classic structure for advice:</div>
+                        <p data-i18n="secondConditional2.advice.desc2">The structure <strong>If I were you, I would...</strong> is a common way to give advice. It uses the subjunctive 'were' and 'would' in the result. This structure is always hypothetical and polite.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="secondConditional2.advice.ex1">If I were you, I would accept the job offer.</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional2.advice.ex2">If I were him, I wouldn't say that.</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional2.advice.ex3">If I were her, I might study abroad.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- EXERCISES (12) – dynamic slots -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional2.exercises.title">Practice Exercises: Variations & Extended Uses</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #bf360c; margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional2.exercises.title">Practice: Variations & Extended Uses</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #bf360c; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #bf360c; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
@@ -163,34 +212,8 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson</span>
-                </button>
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-                    <span data-i18n="common.previousLesson">Previous Lesson</span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">Return to Conjugation</span>
-                </button>
-            </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations (unchanged from original) -->
     <script>
         window.I18N = {
             en: {
@@ -202,320 +225,208 @@
                 },
                 footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
                 secondConditional2: {
-                    title: "Second Conditional: Variations & Extended Uses",
-                    subtitle: "Master the subjunctive 'were', modals 'could' and 'might', and advanced advice structures.",
+                    title: {
+                        line1: "Second Conditional: II:",
+                        line2: "Variations & Extended Uses",
+                        line3: "the subjunctive, modals, and advanced advice structures",
+                        line4: "lesson: 2/3"
+                    },
                     subjunctive: {
-                        title: "The Subjunctive 'Were' for All Persons",
-                        subtitle: "Formal & hypothetical 'were'",
-                        ruleTitle: "Using 'were' instead of 'was':",
-                        ruleText: "In formal English and in hypothetical or unreal situations, were is used for all subjects (I, he, she, it, we, they) in the if-clause. This is called the subjunctive mood and adds formality or emphasis to the unreal condition.",
+                        title: "II. 1. The Subjunctive 'Were' for All Persons",
+                        heading: "Formal & hypothetical 'were'",
+                        desc1: "📘 Using 'were' instead of 'was':",
+                        desc2: "In formal English and in hypothetical or unreal situations, were is used for all subjects (I, he, she, it, we, they) in the if-clause. This is called the subjunctive mood and adds formality or emphasis to the unreal condition.",
                         ex1: "If I were rich, I would buy a yacht. (not 'was')",
                         ex2: "If she were here, she would help us.",
                         ex3: "If they were younger, they would travel more."
                     },
                     modals: {
-                        title: "Modals in the Result Clause: Could & Might",
-                        subtitle: "Expressing ability or possibility",
-                        ruleTitle: "Using could and might:",
-                        ruleText: "Instead of 'would', we can use could (ability or possibility) or might (weaker possibility) in the result clause. The if-clause still uses past simple.",
+                        title: "II. 2. Modals in the Result Clause: Could & Might",
+                        heading: "Expressing ability or possibility",
+                        desc1: "📘 Using could and might:",
+                        desc2: "Instead of 'would', we can use could (ability or possibility) or might (weaker possibility) in the result clause. The if-clause still uses past simple.",
                         ex1: "If I spoke French, I could work in Paris. (ability)",
                         ex2: "If we left now, we might arrive on time. (possibility)",
                         ex3: "If he had a car, he could drive us to the station."
                     },
                     advice: {
-                        title: "Expressing Advice: If I Were You...",
-                        subtitle: "Giving hypothetical recommendations",
-                        ruleTitle: "Classic structure for advice:",
-                        ruleText: "The structure If I were you, I would... is a common way to give advice. It uses the subjunctive 'were' and 'would' in the result. This structure is always hypothetical and polite.",
+                        title: "II. 3. Expressing Advice: If I Were You...",
+                        heading: "Giving hypothetical recommendations",
+                        desc1: "📘 Classic structure for advice:",
+                        desc2: "The structure If I were you, I would... is a common way to give advice. It uses the subjunctive 'were' and 'would' in the result. This structure is always hypothetical and polite.",
                         ex1: "If I were you, I would accept the job offer.",
                         ex2: "If I were him, I wouldn't say that.",
                         ex3: "If I were her, I might study abroad."
                     },
                     exercises: {
-                        title: "Practice Exercises: Variations & Extended Uses",
-                        q1: "Choose the correct form (subjunctive):",
-                        q1Sentence: "If I _____ rich, I would travel the world.",
-                        q1a: "was", q1b: "were", q1c: "am",
-                        q2: "Choose the modal that expresses ability:",
-                        q2Sentence: "If I spoke Italian, I _____ get a job in Rome.",
-                        q2a: "would", q2b: "could", q2c: "must",
-                        q3: "Choose the modal for weak possibility:",
-                        q3Sentence: "If she studied harder, she _____ pass the exam.",
-                        q3a: "might", q3b: "will", q3c: "can",
-                        q4: "Choose the correct advice form:",
-                        q4Sentence: "If I _____ you, I would take the course.",
-                        q4a: "was", q4b: "were", q4c: "am",
-                        q5: "Choose the correct form:",
-                        q5Sentence: "If he _____ here, he could fix the computer.",
-                        q5a: "were", q5b: "was", q5c: "is",
-                        q6: "Choose the best modal for possibility (uncertain):",
-                        q6Sentence: "If we left now, we _____ arrive before dark.",
-                        q6a: "would", q6b: "might", q6c: "must",
-                        q7: "Complete with the correct form (subjunctive):",
-                        q7Sentence: "If I ______ (be) you, I'd say sorry.",
-                        q8: "Complete with a suitable modal (could / might):",
-                        q8Sentence: "If I had more time, I ______ help you with the project.",
-                        q9: "Complete with the correct modal (might / would):",
-                        q9Sentence: "If you asked nicely, she ______ agree.",
-                        q10: "Arrange the words (advice with were):",
-                        q11: "Arrange the words (could for ability):",
-                        q12: "Arrange the words (might for possibility):"
+                        title: "Practice: Variations & Extended Uses",
+                        q1: "Choose the correct form (subjunctive): If I _____ rich, I would travel the world.",
+                        q1a: "was",
+                        q1b: "were",
+                        q1c: "am",
+                        q2: "Choose the modal that expresses ability: If I spoke Italian, I _____ get a job in Rome.",
+                        q2a: "would",
+                        q2b: "could",
+                        q2c: "must",
+                        q3: "Choose the modal for weak possibility: If she studied harder, she _____ pass the exam.",
+                        q3a: "might",
+                        q3b: "will",
+                        q3c: "can",
+                        q4: "Choose the correct advice form: If I _____ you, I would take the course.",
+                        q4a: "was",
+                        q4b: "were",
+                        q4c: "am",
+                        q5: "Choose the correct form: If he _____ here, he could fix the computer.",
+                        q5a: "were",
+                        q5b: "was",
+                        q5c: "is",
+                        q6: "Choose the best modal for possibility (uncertain): If we left now, we _____ arrive before dark.",
+                        q6a: "would",
+                        q6b: "might",
+                        q6c: "must",
+                        q7: "Complete with the correct form (subjunctive): If I ______ (be) you, I'd say sorry.",
+                        q8: "Complete with a suitable modal (could / might): If I had more time, I ______ help you with the project.",
+                        q9: "Complete with the correct modal (might / would): If you asked nicely, she ______ agree.",
+                        q10: "Arrange the words (advice with were): (If / I / were / you / I / would / study / more / .)",
+                        q11: "Arrange the words (could for ability): (If / he / had / a / car / he / could / drive / us / .)",
+                        q12: "Arrange the words (might for possibility): (If / we / left / early / we / might / catch / the / train / .)"
                     }
                 }
             },
             fr: {
                 common: {
                     siteName: "English Hub",
-                    previousLesson: "← Previous Lesson (Leçon Précédente)",
-                    returnToConjugation: "← Return to Conjugation (Retour au Conjugaison)",
-                    nextLesson: "Next Lesson (Leçon Suivante) →"
+                    previousLesson: "← Leçon Précédente",
+                    returnToConjugation: "← Retour au Conjugaison",
+                    nextLesson: "Leçon Suivante →"
                 },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
                 secondConditional2: {
-                    title: "Second Conditional: Variations & Extended Uses (Conditionnel de type 2 : variations et usages étendus)",
-                    subtitle: "Master the subjunctive 'were', modals 'could' and 'might', and advanced advice structures. (Maîtrisez le subjonctif 'were', les modaux 'could' et 'might', et les structures de conseil avancées.)",
+                    title: {
+                        line1: "Conditionnel type 2 : II :",
+                        line2: "Variations et utilisations avancées",
+                        line3: "le subjonctif, les modaux et les structures de conseil avancées",
+                        line4: "leçon : 2/3"
+                    },
                     subjunctive: {
-                        title: "The Subjunctive 'Were' for All Persons (Le subjonctif 'Were' pour toutes les personnes)",
-                        subtitle: "Formal & hypothetical 'were' ('Were' formel et hypothétique)",
-                        ruleTitle: "Using 'were' instead of 'was': (Utiliser 'were' au lieu de 'was' :)",
-                        ruleText: "In formal English and in hypothetical or unreal situations, were is used for all subjects (I, he, she, it, we, they) in the if-clause. This is called the subjunctive mood and adds formality or emphasis to the unreal condition. (En anglais formel et dans les situations hypothétiques ou irréelles, on utilise were pour tous les sujets dans la proposition avec if. Cela s'appelle le mode subjonctif et ajoute de la formalité ou de l'emphase à la condition irréelle.)",
-                        ex1: "If I were rich, I would buy a yacht. (not 'was') (Si j'étais riche, j'achèterais un yacht.)",
-                        ex2: "If she were here, she would help us. (Si elle était là, elle nous aiderait.)",
-                        ex3: "If they were younger, they would travel more. (S'ils étaient plus jeunes, ils voyageraient plus.)"
+                        title: "II. 1. Le subjonctif 'Were' pour toutes les personnes",
+                        heading: "'Were' formel et hypothétique",
+                        desc1: "📘 Utiliser 'were' au lieu de 'was' :",
+                        desc2: "En anglais formel et dans les situations hypothétiques ou irréelles, were est utilisé pour tous les sujets (I, he, she, it, we, they) dans la proposition if. C'est ce qu'on appelle le mode subjonctif et cela ajoute de la formalité ou de l'emphase à la condition irréelle.",
+                        ex1: "Si j'étais riche, j'achèterais un yacht. (pas 'was')",
+                        ex2: "Si elle était ici, elle nous aiderait.",
+                        ex3: "S'ils étaient plus jeunes, ils voyageraient plus."
                     },
                     modals: {
-                        title: "Modals in the Result Clause: Could & Might (Modaux dans la proposition de résultat : Could & Might)",
-                        subtitle: "Expressing ability or possibility (Exprimer la capacité ou la possibilité)",
-                        ruleTitle: "Using could and might: (Utiliser could et might :)",
-                        ruleText: "Instead of 'would', we can use could (ability or possibility) or might (weaker possibility) in the result clause. The if-clause still uses past simple. (Au lieu de 'would', on peut utiliser could (capacité ou possibilité) ou might (possibilité plus faible) dans la proposition de résultat. La proposition avec if reste au prétérit.)",
-                        ex1: "If I spoke French, I could work in Paris. (ability) (Si je parlais français, je pourrais travailler à Paris.)",
-                        ex2: "If we left now, we might arrive on time. (possibility) (Si nous partions maintenant, nous arriverions peut-être à l'heure.)",
-                        ex3: "If he had a car, he could drive us to the station. (S'il avait une voiture, il pourrait nous conduire à la gare.)"
+                        title: "II. 2. Modaux dans la proposition résultat : Could & Might",
+                        heading: "Exprimer la capacité ou la possibilité",
+                        desc1: "📘 Utiliser could et might :",
+                        desc2: "Au lieu de 'would', on peut utiliser could (capacité ou possibilité) ou might (possibilité plus faible) dans la proposition résultat. La proposition if reste au passé simple.",
+                        ex1: "Si je parlais français, je pourrais travailler à Paris. (capacité)",
+                        ex2: "Si nous partions maintenant, nous pourrions arriver à l'heure. (possibilité)",
+                        ex3: "S'il avait une voiture, il pourrait nous conduire à la gare."
                     },
                     advice: {
-                        title: "Expressing Advice: If I Were You... (Exprimer un conseil : If I Were You...)",
-                        subtitle: "Giving hypothetical recommendations (Donner des recommandations hypothétiques)",
-                        ruleTitle: "Classic structure for advice: (Structure classique pour un conseil :)",
-                        ruleText: "The structure If I were you, I would... is a common way to give advice. It uses the subjunctive 'were' and 'would' in the result. This structure is always hypothetical and polite. (La structure If I were you, I would... est une manière courante de donner un conseil. Elle utilise le subjonctif 'were' et 'would' dans le résultat. Cette structure est toujours hypothétique et polie.)",
-                        ex1: "If I were you, I would accept the job offer. (Si j'étais toi, j'accepterais l'offre d'emploi.)",
-                        ex2: "If I were him, I wouldn't say that. (Si j'étais lui, je ne dirais pas ça.)",
-                        ex3: "If I were her, I might study abroad. (Si j'étais elle, je pourrais étudier à l'étranger.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises: Variations & Extended Uses (Exercices pratiques : variations et usages étendus)",
-                        q1: "Choose the correct form (subjunctive): (Choisissez la forme correcte - subjonctif :)",
-                        q1Sentence: "If I _____ rich, I would travel the world. (Si je _____ riche, je voyagerais autour du monde.)",
-                        q1a: "was (était)", q1b: "were (étais)", q1c: "am (suis)",
-                        q2: "Choose the modal that expresses ability: (Choisissez le modal qui exprime la capacité :)",
-                        q2Sentence: "If I spoke Italian, I _____ get a job in Rome. (Si je parlais italien, je _____ trouver un emploi à Rome.)",
-                        q2a: "would (voudrais)", q2b: "could (pourrais)", q2c: "must (dois)",
-                        q3: "Choose the modal for weak possibility: (Choisissez le modal pour une faible possibilité :)",
-                        q3Sentence: "If she studied harder, she _____ pass the exam. (Si elle étudiait plus, elle _____ réussir l'examen.)",
-                        q3a: "might (pourrait)", q3b: "will (va)", q3c: "can (peut)",
-                        q4: "Choose the correct advice form: (Choisissez la forme de conseil correcte :)",
-                        q4Sentence: "If I _____ you, I would take the course. (Si je _____ toi, je suivrais le cours.)",
-                        q4a: "was (étais)", q4b: "were (étais)", q4c: "am (suis)",
-                        q5: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q5Sentence: "If he _____ here, he could fix the computer. (S'il _____ ici, il pourrait réparer l'ordinateur.)",
-                        q5a: "were (était)", q5b: "was (était)", q5c: "is (est)",
-                        q6: "Choose the best modal for possibility (uncertain): (Choisissez le meilleur modal pour la possibilité incertaine :)",
-                        q6Sentence: "If we left now, we _____ arrive before dark. (Si nous partions maintenant, nous _____ arriver avant la nuit.)",
-                        q6a: "would (arriverions)", q6b: "might (pourrions arriver)", q6c: "must (devons)",
-                        q7: "Complete with the correct form (subjunctive): (Complétez avec la forme correcte - subjonctif :)",
-                        q7Sentence: "If I ______ (be) you, I'd say sorry. (Si je ______ toi, je dirais désolé.)",
-                        q8: "Complete with a suitable modal (could / might): (Complétez avec un modal approprié - could / might :)",
-                        q8Sentence: "If I had more time, I ______ help you with the project. (Si j'avais plus de temps, je ______ t'aider avec le projet.)",
-                        q9: "Complete with the correct modal (might / would): (Complétez avec le modal correct - might / would :)",
-                        q9Sentence: "If you asked nicely, she ______ agree. (Si tu demandais gentiment, elle ______ accepter.)",
-                        q10: "Arrange the words (advice with were): (Remettez les mots dans l'ordre - conseil avec were :)",
-                        q11: "Arrange the words (could for ability): (Remettez les mots dans l'ordre - could pour la capacité :)",
-                        q12: "Arrange the words (might for possibility): (Remettez les mots dans l'ordre - might pour la possibilité :)"
+                        title: "II. 3. Exprimer un conseil : Si j'étais vous...",
+                        heading: "Donner des recommandations hypothétiques",
+                        desc1: "📘 Structure classique du conseil :",
+                        desc2: "La structure If I were you, I would... est une façon courante de donner un conseil. Elle utilise le subjonctif 'were' et 'would' dans le résultat. Cette structure est toujours hypothétique et polie.",
+                        ex1: "Si j'étais vous, j'accepterais l'offre d'emploi.",
+                        ex2: "Si j'étais lui, je ne dirais pas cela.",
+                        ex3: "Si j'étais elle, j'étudierais peut-être à l'étranger."
                     }
                 }
             },
             ar: {
                 common: {
                     siteName: "English Hub",
-                    previousLesson: "Previous Lesson (الدرس السابق)← ",
-                    returnToConjugation: "Return to Conjugation (العودة إلى التصريف)← ",
-                    nextLesson: "Next Lesson (الدرس التالي) →"
+                    previousLesson: "الدرس السابق← ",
+                    returnToConjugation: "العودة إلى التصريف← ",
+                    nextLesson: "الدرس التالي →"
                 },
                 footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
                 secondConditional2: {
-                    title: "Second Conditional: Variations & Extended Uses (الشرط الثاني: تنويعات واستخدامات موسعة)",
-                    subtitle: "Master the subjunctive 'were', modals 'could' and 'might', and advanced advice structures. (إتقان صيغة المبني للمجهول 'were'، والأفعال المساعدة 'could' و 'might'، وتراكيب النصيحة المتقدمة.)",
+                    title: {
+                        line1: "الشرط الثاني: 2:",
+                        line2: "الاختلافات والاستخدامات المتقدمة",
+                        line3: "الصيغة الشرطية، والأفعال الناقصة، وهياكل النصيحة المتقدمة",
+                        line4: "الدرس: 2/3"
+                    },
                     subjunctive: {
-                        title: "The Subjunctive 'Were' for All Persons (صيغة المبني للمجهول 'Were' لجميع الضمائر)",
-                        subtitle: "Formal & hypothetical 'were' ('Were' رسمي وافتراضي)",
-                        ruleTitle: "Using 'were' instead of 'was': (استخدام 'were' بدلاً من 'was':)",
-                        ruleText: "In formal English and in hypothetical or unreal situations, were is used for all subjects (I, he, she, it, we, they) in the if-clause. This is called the subjunctive mood and adds formality or emphasis to the unreal condition. (في الإنجليزية الرسمية والمواقف الافتراضية أو غير الحقيقية، يُستخدم 'were' لجميع الفاعلين في جملة if. يُسمى هذا صيغة المبني للمجهول ويُضفي رونقًا رسميًا أو تأكيدًا على الحالة غير الحقيقية.)",
-                        ex1: "If I were rich, I would buy a yacht. (not 'was') (إذا كنت غنيًا، كنت سأشتري يختًا.)",
-                        ex2: "If she were here, she would help us. (إذا كانت هنا، لساعدتنا.)",
-                        ex3: "If they were younger, they would travel more. (إذا كانوا أصغر سنًا، لسافروا أكثر.)"
+                        title: "II. 1. الصيغة الشرطية 'Were' لجميع الأشخاص",
+                        heading: "'Were' الرسمية والافتراضية",
+                        desc1: "📘 استخدام 'were' بدلاً من 'was':",
+                        desc2: "في الإنجليزية الرسمية وفي المواقف الافتراضية أو غير الحقيقية، تُستخدم were لجميع الفاعلين (I, he, she, it, we, they) في جملة if. يُسمى هذا الصيغة الشرطية ويضيف رسمية أو تأكيدًا على الشرط غير الحقيقي.",
+                        ex1: "إذا كنت غنيًا، لاشتريت يختًا. (وليس 'was')",
+                        ex2: "إذا كانت هنا، لساعدتنا.",
+                        ex3: "إذا كانوا أصغر سنًا، لسافروا أكثر."
                     },
                     modals: {
-                        title: "Modals in the Result Clause: Could & Might (الأفعال المساعدة في جملة النتيجة: Could & Might)",
-                        subtitle: "Expressing ability or possibility (التعبير عن القدرة أو الاحتمال)",
-                        ruleTitle: "Using could and might: (استخدام could و might:)",
-                        ruleText: "Instead of 'would', we can use could (ability or possibility) or might (weaker possibility) in the result clause. The if-clause still uses past simple. (بدلاً من 'would'، يمكننا استخدام could (قدرة أو إمكانية) أو might (احتمال أضعف) في جملة النتيجة. تبقى جملة if في الماضي البسيط.)",
-                        ex1: "If I spoke French, I could work in Paris. (ability) (إذا كنت أتحدث الفرنسية، يمكنني العمل في باريس.)",
-                        ex2: "If we left now, we might arrive on time. (possibility) (إذا غادرنا الآن، قد نصل في الوقت المحدد.)",
-                        ex3: "If he had a car, he could drive us to the station. (إذا كانت لديه سيارة، يمكنه أن يوصلنا إلى المحطة.)"
+                        title: "II. 2. الأفعال الناقصة في جملة النتيجة: Could & Might",
+                        heading: "التعبير عن القدرة أو الإمكانية",
+                        desc1: "📘 استخدام could و might:",
+                        desc2: "بدلاً من 'would'، يمكننا استخدام could (للقدرة أو الإمكانية) أو might (لإمكانية أضعف) في جملة النتيجة. تبقى جملة if في الماضي البسيط.",
+                        ex1: "إذا تحدثت الفرنسية، لاستطعت العمل في باريس. (قدرة)",
+                        ex2: "إذا غادرنا الآن، لربما وصلنا في الوقت المحدد. (إمكانية)",
+                        ex3: "إذا كانت لديه سيارة، لاستطاع توصيلنا إلى المحطة."
                     },
                     advice: {
-                        title: "Expressing Advice: If I Were You... (التعبير عن النصيحة: If I Were You...)",
-                        subtitle: "Giving hypothetical recommendations (تقديم توصيات افتراضية)",
-                        ruleTitle: "Classic structure for advice: (التركيب الكلاسيكي للنصيحة:)",
-                        ruleText: "The structure If I were you, I would... is a common way to give advice. It uses the subjunctive 'were' and 'would' in the result. This structure is always hypothetical and polite. (التركيب If I were you, I would... هو طريقة شائعة لتقديم النصيحة. يستخدم صيغة المبني للمجهول 'were' و 'would' في النتيجة. هذا التركيب دائمًا افتراضي ومهذب.)",
-                        ex1: "If I were you, I would accept the job offer. (إذا كنت مكانك، كنت سأقبل عرض العمل.)",
-                        ex2: "If I were him, I wouldn't say that. (إذا كنت مكانه، لن أقول ذلك.)",
-                        ex3: "If I were her, I might study abroad. (إذا كنت مكانها، قد أدرس بالخارج.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises: Variations & Extended Uses (تمارين تطبيقية: تنويعات واستخدامات موسعة)",
-                        q1: "Choose the correct form (subjunctive): (اختر الصيغة الصحيحة - المبني للمجهول:)",
-                        q1Sentence: "If I _____ rich, I would travel the world. (إذا _____ غنيًا، كنت سأسافر حول العالم.)",
-                        q1a: "was (كان)", q1b: "were (كنت)", q1c: "am (أنا)",
-                        q2: "Choose the modal that expresses ability: (اختر الفعل المساعد الذي يعبر عن القدرة:)",
-                        q2Sentence: "If I spoke Italian, I _____ get a job in Rome. (إذا كنت أتحدث الإيطالية، _____ الحصول على وظيفة في روما.)",
-                        q2a: "would (سوف)", q2b: "could (يمكنني)", q2c: "must (يجب)",
-                        q3: "Choose the modal for weak possibility: (اختر الفعل المساعد للاحتمال الضعيف:)",
-                        q3Sentence: "If she studied harder, she _____ pass the exam. (إذا درست بجد أكبر، _____ تنجح في الامتحان.)",
-                        q3a: "might (ربما)", q3b: "will (سوف)", q3c: "can (يمكنها)",
-                        q4: "Choose the correct advice form: (اختر صيغة النصيحة الصحيحة:)",
-                        q4Sentence: "If I _____ you, I would take the course. (إذا _____ أنا مكانك، كنت سألتحق بالدورة.)",
-                        q4a: "was (كنت)", q4b: "were (كنت)", q4c: "am (أنا)",
-                        q5: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q5Sentence: "If he _____ here, he could fix the computer. (إذا _____ هنا، يمكنه إصلاح الكمبيوتر.)",
-                        q5a: "were (كان)", q5b: "was (كان)", q5c: "is (هو)",
-                        q6: "Choose the best modal for possibility (uncertain): (اختر أفضل فعل مساعد للاحتمال (غير مؤكد):)",
-                        q6Sentence: "If we left now, we _____ arrive before dark. (إذا غادرنا الآن، _____ نصل قبل حلول الظلام.)",
-                        q6a: "would (سوف)", q6b: "might (قد)", q6c: "must (يجب)",
-                        q7: "Complete with the correct form (subjunctive): (أكمل بالصيغة الصحيحة - المبني للمجهول:)",
-                        q7Sentence: "If I ______ (be) you, I'd say sorry. (إذا ______ أنا مكانك، كنت سأعتذر.)",
-                        q8: "Complete with a suitable modal (could / might): (أكمل بفعل مساعد مناسب - could / might:)",
-                        q8Sentence: "If I had more time, I ______ help you with the project. (إذا كان لدي وقت أكثر، ______ مساعدتك في المشروع.)",
-                        q9: "Complete with the correct modal (might / would): (أكمل بالفعل المساعد الصحيح - might / would:)",
-                        q9Sentence: "If you asked nicely, she ______ agree. (إذا طلبت بلطف، ______ توافق.)",
-                        q10: "Arrange the words (advice with were): (رتب الكلمات - نصيحة مع were:)",
-                        q11: "Arrange the words (could for ability): (رتب الكلمات - could للقدرة:)",
-                        q12: "Arrange the words (might for possibility): (رتب الكلمات - might للاحتمال:)"
+                        title: "II. 3. التعبير عن النصيحة: إذا كنت مكانك...",
+                        heading: "تقديم توصيات افتراضية",
+                        desc1: "📘 الهيكل الكلاسيكي للنصيحة:",
+                        desc2: "هيكل If I were you, I would... هو طريقة شائعة لتقديم النصيحة. يستخدم الصيغة الشرطية 'were' و 'would' في النتيجة. هذا الهيكل دائمًا افتراضي ومهذب.",
+                        ex1: "إذا كنت مكانك، لقبلت عرض العمل.",
+                        ex2: "إذا كنت مكانه، لما قلت ذلك.",
+                        ex3: "إذا كنت مكانها، لربما درست في الخارج."
                     }
                 }
             }
         };
     </script>
-
-    <!-- i18n rendering script -->
-    <script src="scripts/common-i18n.js"></script>
-    <!-- Modular exercise engine (replaces exercise.js) -->
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
-
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ========== 1. Build exercises and get answer keys ==========
+        // Multiple choice exercises
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'secondConditional2.exercises.q1',
-                    options: [
-                        { value: 'a', labelKey: 'secondConditional2.exercises.q1a' },
-                        { value: 'b', labelKey: 'secondConditional2.exercises.q1b' },
-                        { value: 'c', labelKey: 'secondConditional2.exercises.q1c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'secondConditional2.exercises.q2',
-                    options: [
-                        { value: 'a', labelKey: 'secondConditional2.exercises.q2a' },
-                        { value: 'b', labelKey: 'secondConditional2.exercises.q2b' },
-                        { value: 'c', labelKey: 'secondConditional2.exercises.q2c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'secondConditional2.exercises.q3',
-                    options: [
-                        { value: 'a', labelKey: 'secondConditional2.exercises.q3a' },
-                        { value: 'b', labelKey: 'secondConditional2.exercises.q3b' },
-                        { value: 'c', labelKey: 'secondConditional2.exercises.q3c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'secondConditional2.exercises.q4',
-                    options: [
-                        { value: 'a', labelKey: 'secondConditional2.exercises.q4a' },
-                        { value: 'b', labelKey: 'secondConditional2.exercises.q4b' },
-                        { value: 'c', labelKey: 'secondConditional2.exercises.q4c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'secondConditional2.exercises.q5',
-                    options: [
-                        { value: 'a', labelKey: 'secondConditional2.exercises.q5a' },
-                        { value: 'b', labelKey: 'secondConditional2.exercises.q5b' },
-                        { value: 'c', labelKey: 'secondConditional2.exercises.q5c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'secondConditional2.exercises.q6',
-                    options: [
-                        { value: 'a', labelKey: 'secondConditional2.exercises.q6a' },
-                        { value: 'b', labelKey: 'secondConditional2.exercises.q6b' },
-                        { value: 'c', labelKey: 'secondConditional2.exercises.q6c' }
-                    ],
-                    correctAnswer: 'b'
-                }
+                { questionTextKey: 'secondConditional2.exercises.q1', options: [{ value: 'a', labelKey: 'secondConditional2.exercises.q1a' }, { value: 'b', labelKey: 'secondConditional2.exercises.q1b' }, { value: 'c', labelKey: 'secondConditional2.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'secondConditional2.exercises.q2', options: [{ value: 'a', labelKey: 'secondConditional2.exercises.q2a' }, { value: 'b', labelKey: 'secondConditional2.exercises.q2b' }, { value: 'c', labelKey: 'secondConditional2.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'secondConditional2.exercises.q3', options: [{ value: 'a', labelKey: 'secondConditional2.exercises.q3a' }, { value: 'b', labelKey: 'secondConditional2.exercises.q3b' }, { value: 'c', labelKey: 'secondConditional2.exercises.q3c' }], correctAnswer: 'a' },
+                { questionTextKey: 'secondConditional2.exercises.q4', options: [{ value: 'a', labelKey: 'secondConditional2.exercises.q4a' }, { value: 'b', labelKey: 'secondConditional2.exercises.q4b' }, { value: 'c', labelKey: 'secondConditional2.exercises.q4c' }], correctAnswer: 'b' },
+                { questionTextKey: 'secondConditional2.exercises.q5', options: [{ value: 'a', labelKey: 'secondConditional2.exercises.q5a' }, { value: 'b', labelKey: 'secondConditional2.exercises.q5b' }, { value: 'c', labelKey: 'secondConditional2.exercises.q5c' }], correctAnswer: 'a' },
+                { questionTextKey: 'secondConditional2.exercises.q6', options: [{ value: 'a', labelKey: 'secondConditional2.exercises.q6a' }, { value: 'b', labelKey: 'secondConditional2.exercises.q6b' }, { value: 'c', labelKey: 'secondConditional2.exercises.q6c' }], correctAnswer: 'b' }
             ]
         });
-
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+    </script>
+    <script>
+        // Fill-in-the-blank exercises
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'secondConditional2.exercises.q7',
-                    answers: ['were']
-                },
-                {
-                    questionTextKey: 'secondConditional2.exercises.q8',
-                    answers: ['could', 'might']
-                },
-                {
-                    questionTextKey: 'secondConditional2.exercises.q9',
-                    answers: ['might', 'would']
-                }
+                { questionTextKey: 'secondConditional2.exercises.q7', answers: ['were'] },
+                { questionTextKey: 'secondConditional2.exercises.q8', answers: ['could', 'might'] },
+                { questionTextKey: 'secondConditional2.exercises.q9', answers: ['might', 'would'] }
             ]
         });
-
+    </script>
+    <script>
+        // Sentence ordering exercises
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'secondConditional2.exercises.q10',
-                    words: ['If', 'I', 'were', 'you', 'I', 'would', 'study', 'more', '.'],
-                    correctSentence: 'If I were you I would study more .'
-                },
-                {
-                    questionTextKey: 'secondConditional2.exercises.q11',
-                    words: ['If', 'he', 'had', 'a', 'car', 'he', 'could', 'drive', 'us', '.'],
-                    correctSentence: 'If he had a car he could drive us .'
-                },
-                {
-                    questionTextKey: 'secondConditional2.exercises.q12',
-                    words: ['If', 'we', 'left', 'early', 'we', 'might', 'catch', 'the', 'train', '.'],
-                    correctSentence: 'If we left early we might catch the train .'
-                }
+                { questionTextKey: 'secondConditional2.exercises.q10', words: ['If', 'I', 'were', 'you', 'I', 'would', 'study', 'more', '.'], correctSentence: 'If I were you I would study more .' },
+                { questionTextKey: 'secondConditional2.exercises.q11', words: ['If', 'he', 'had', 'a', 'car', 'he', 'could', 'drive', 'us', '.'], correctSentence: 'If he had a car he could drive us .' },
+                { questionTextKey: 'secondConditional2.exercises.q12', words: ['If', 'we', 'left', 'early', 'we', 'might', 'catch', 'the', 'train', '.'], correctSentence: 'If we left early we might catch the train .' }
             ]
         });
-
-        // ========== 2. Check & init functions ==========
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
@@ -531,30 +442,30 @@
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered second conditional variations!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit subjunctive were, could and might.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
-        }
 
+            // ---------- NEW: sound & visual effects ----------
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
         document.addEventListener('DOMContentLoaded', function() {
-            // Init drag-and-drop for ordering (the builder only creates the HTML)
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-
-        // ========== 3. i18n rendering (unchanged logic) ==========
+        // i18n rendering – handles nested keys for title lines
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
-                document.querySelectorAll('[data-i18n]').forEach(el => {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
+                    if (translation) {
                         el.textContent = translation;
                     }
                 });

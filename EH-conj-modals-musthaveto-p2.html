@@ -3,642 +3,483 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Must & Have to: Nuance, Comparison, and Politeness - English Hub</title>
-
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-
+    <title>Must & Have to II: Nuance, Comparison & Politeness - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
         :root {
-            /* ---------- Theme: earthy browns & warm neutrals ---------- */
-            --bg-gradient: linear-gradient(135deg, #3e2723, #5d4037, #8d6e63, #a1887f);
-            --title-color: #3e2723;
-            --primary: #8d6e63;
-            --primary-hover: #5d4037;
-            --primary-light: #a1887f;
-            --accent: #a1887f;
-            --rule-bg: #efebe9;
-            --rule-border: #a1887f;
-            --example-bg: #d7ccc8;
-            --example-border: #a1887f;
-            --exercise-number-gradient: linear-gradient(135deg, #8d6e63, #a1887f);
-            --nav-btn-bg: #8d6e63;
-            --nav-btn-hover: #5d4037;
-            --nav-back-btn-bg: #a1887f;
-            --nav-back-btn-color: white;
-            --nav-back-btn-hover: #8d6e63;
-
-            /* ---------- Universal / Neutral ---------- */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
-            --correct-bg: #d4edda;
-            --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --bg-gradient: linear-gradient(135deg, #f3e6f7, #e9d4f5, #ddc2f0, #d0b0ea);
+            --content-bg: #fefcff;
+            --card-bg: #ffffff;
+            --subsection-bg: #faf5ff;
+            --rule-bg: #f5edff;
+            --example-bg: #f0e6fc;
+            --table-stripe: #f9f2ff;
+            --title-color: #4a2c6d;
+            --text-color: #2e1b44;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #9b6b9e;
+            --primary-hover: #7b4f7d;
+            --primary-light: #b07db3;
+            --accent: #a575b0;
+            --exercise-number-gradient: linear-gradient(135deg, #9b6b9e, #6b4b6d);
+            --rule-border: #9b6b9e;
+            --example-border: #9b6b9e;
+            --nav-btn-bg: #9b6b9e;
+            --nav-btn-hover: #7b4f7d;
+            --nav-back-btn-bg: #a575b0;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #9b6b9e;
+            --refract-divider-color: #c9a6d4;
+            --refract-translation-bg: #f3e9fc;
+            --refract-translation-border: #9b6b9e;
+            --refract-english-color: #2e1b44;
+            --section-divider: #e6d5f0;
+            --card-border: #e2d0ed;
+            --input-border: #d0bce0;
+            --dashed-border: #d0bce0;
+            --table-border: #dac5e8;
+            --correct-bg: #e0f0e8;
+            --correct-color: #1b5e4a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #f2ecf5;
+            --neutral-color: #5a4a6e;
+            --neutral-border: #d0bce0;
+            --empty-input-border: #c0aad8;
+            --empty-input-bg: #fdfaff;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #9b6b9e;
+            --language-selector-color: #2e1b44;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #2a1a44, #331f52, #3d2660, #472d6e);
+            --content-bg: #1f1835;
+            --card-bg: #2a1f45;
+            --subsection-bg: #2a1f45;
+            --rule-bg: #1f1835;
+            --example-bg: #1f1835;
+            --table-stripe: #241d3a;
+            --title-color: #d4b5f0;
+            --text-color: #e6d4ff;
+            --header-text: #e6d4ff;
+            --header-text-light: #c4acdc;
+            --primary: #b285c4;
+            --primary-hover: #c99bdd;
+            --primary-light: #b285c4;
+            --accent: #b285c4;
+            --rule-border: #b285c4;
+            --example-border: #b285c4;
+            --exercise-number-gradient: linear-gradient(135deg, #b285c4, #9b6b9e);
+            --nav-btn-bg: #b285c4;
+            --nav-btn-hover: #9b6b9e;
+            --nav-back-btn-bg: #c99bdd;
+            --nav-back-btn-color: #1a0f2a;
+            --nav-back-btn-hover: #b285c4;
+            --refract-divider-color: #c09bd4;
+            --refract-translation-bg: #372a5a;
+            --refract-translation-border: #c09bd4;
+            --refract-english-color: #eddbfc;
+            --section-divider: #3e2c5e;
+            --card-border: #3e2c5e;
+            --input-border: #5c4280;
+            --dashed-border: #5c4280;
+            --table-border: #4a3668;
+            --white: #f0e8fc;
+            --correct-bg: #2a4d3e;
+            --correct-color: #b5e6d0;
+            --correct-border: #6bb598;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #392d50;
+            --neutral-color: #d0c0e0;
+            --neutral-border: #5a4480;
+            --empty-input-border: #5a4480;
+            --empty-input-bg: #1f1835;
+            --language-selector-bg: #2a1f45;
+            --language-selector-border: #b285c4;
+            --language-selector-color: #e6d4ff;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
-    <link rel="stylesheet" href="styles/style-conjugation.css">
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="modalsMustHaveTo2.title">Must & Have to: Nuance, Comparison, and Politeness</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="modalsMustHaveTo2.subtitle">Explore subtle differences: internal vs external obligation, past forms, politeness levels, and secondary meanings</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="mustHaveTo2.title.line1">Must & Have to: II:</div>
+                <div class="EH-conjugation-title-line" data-i18n="mustHaveTo2.title.line2">Nuance, Comparison, and Politeness</div>
+                <div class="EH-conjugation-subtitle" data-i18n="mustHaveTo2.title.line3">internal vs external obligation, past forms, politeness levels, and secondary meanings</div>
+                <div class="EH-conjugation-subtitle" data-i18n="mustHaveTo2.title.line4">lesson: 2/3</div>
+            </div>
         </header>
-
         <div class="EH-conjugation-content">
-            <!-- Introduction to Nuance -->
+            <!-- Section 1: Nuance & Comparison -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo2.introduction.title">Going Deeper: Nuance & Comparison</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo2.nuance.title">II. 1. Nuance & Comparison</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🎯</span>
-                        <span data-i18n="modalsMustHaveTo2.introduction.whatAre">Choosing between must and have to</span>
+                        <span class="EH-conjugation-subsection-icon">⚖️</span>
+                        <span data-i18n="mustHaveTo2.nuance.heading">Choosing between must and have to</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMustHaveTo2.introduction.definitionTitle">Why nuance matters:</div>
-                        <p data-i18n="modalsMustHaveTo2.introduction.definition">Although must and have to often overlap, the choice can reflect the source of obligation (internal vs external), formality, or the speaker's attitude. This part explores those subtle distinctions.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo2.nuance.desc1">📘 Why nuance matters:</div>
+                        <p data-i18n="mustHaveTo2.nuance.desc2">Although must and have to often overlap, the choice can reflect the source of obligation (internal vs external), formality, or the speaker's attitude.</p>
                     </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMustHaveTo2.introduction.coreIdeas">Key ideas in part 2:</div>
-                        <ul>
-                            <li data-i18n="modalsMustHaveTo2.introduction.core1">Comparing must and have to in questions, negatives, and past contexts.</li>
-                            <li data-i18n="modalsMustHaveTo2.introduction.core2">Politeness and formality – must in rules vs have to in everyday speech.</li>
-                            <li data-i18n="modalsMustHaveTo2.introduction.core3">Secondary uses: must for deduction (past & present), have got to, and future necessity.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Comparison: Must vs Have to (forms, time, nuance) -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo2.comparison.title">Comparing Must and Have to Across Contexts</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔁</span>
-                        <span data-i18n="modalsMustHaveTo2.comparison.subtitle">Forms, time, and speaker's perspective</span>
-                    </h3>
                     <table class="EH-conjugation-table">
-                        <thead><tr><th data-i18n="common.form">Form</th><th>Must</th><th>Have to</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th data-i18n="mustHaveTo2.nuance.context">Context</th>
+                                <th data-i18n="mustHaveTo2.nuance.must">Must</th>
+                                <th data-i18n="mustHaveTo2.nuance.haveto">Have to</th>
+                            </tr>
+                        </thead>
                         <tbody>
-                            <tr><td data-i18n="common.present">Present</td><td>must + V (I must go)</td><td>have/has to + V (I have to go)</td></tr>
-                            <tr><td data-i18n="common.past">Past</td><td>had to (must has no past)</td><td>had to (He had to work)</td></tr>
-                            <tr><td data-i18n="common.future">Future</td><td>will have to (no must future)</td><td>will have to (We will have to wait)</td></tr>
-                            <tr><td data-i18n="common.negative">Negative</td><td>must not / mustn't (prohibition)</td><td>don't/doesn't have to (no necessity)</td></tr>
-                            <tr><td data-i18n="common.question">Question</td><td>Must I...? (rare, formal)</td><td>Do/Does ... have to...? (common)</td></tr>
+                            <tr>
+                                <td data-i18n="mustHaveTo2.nuance.present">Present</td>
+                                <td data-i18n="mustHaveTo2.nuance.presentMust">must + V (I must go)</td>
+                                <td data-i18n="mustHaveTo2.nuance.presentHaveTo">have/has to + V (I have to go)</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="mustHaveTo2.nuance.past">Past</td>
+                                <td data-i18n="mustHaveTo2.nuance.pastMust">had to (must has no past)</td>
+                                <td data-i18n="mustHaveTo2.nuance.pastHaveTo">had to (He had to work)</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="mustHaveTo2.nuance.future">Future</td>
+                                <td data-i18n="mustHaveTo2.nuance.futureMust">will have to (no must future)</td>
+                                <td data-i18n="mustHaveTo2.nuance.futureHaveTo">will have to (We will have to wait)</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="mustHaveTo2.nuance.negative">Negative</td>
+                                <td data-i18n="mustHaveTo2.nuance.negativeMust">must not / mustn't (prohibition)</td>
+                                <td data-i18n="mustHaveTo2.nuance.negativeHaveTo">don't/doesn't have to (no necessity)</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="mustHaveTo2.nuance.question">Question</td>
+                                <td data-i18n="mustHaveTo2.nuance.questionMust">Must I...? (rare, formal)</td>
+                                <td data-i18n="mustHaveTo2.nuance.questionHaveTo">Do/Does ... have to...? (common)</td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMustHaveTo2.comparison.noteTitle">Nuance note:</div>
-                        <p data-i18n="modalsMustHaveTo2.comparison.note">In questions, "Must I?" often sounds strict or impatient; "Do I have to?" is neutral. For past obligation, only <strong>had to</strong> exists.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo2.nuance.noteTitle">📝 Nuance note:</div>
+                        <p data-i18n="mustHaveTo2.nuance.noteText">In questions, "Must I?" often sounds strict or impatient; "Do I have to?" is neutral. For past obligation, only had to exists.</p>
                     </div>
-                </div>
-            </div>
-
-            <!-- Degrees of Politeness & Formality -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo2.politeness.title">Politeness, Formality & Register</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🤵</span>
-                        <span data-i18n="modalsMustHaveTo2.politeness.subtitle">How tone changes with the modal</span>
-                    </h3>
-                    <table class="EH-conjugation-table">
-                        <thead><tr><th data-i18n="common.level">Register</th><th>Example (obligation/advice)</th><th data-i18n="common.context">Context</th></tr></thead>
-                        <tbody>
-                            <tr><td data-i18n="modalsMustHaveTo2.politeness.level1">Informal / spoken</td><td><em>You have to try this cake!</em> / <em>I've got to go.</em></td><td data-i18n="modalsMustHaveTo2.politeness.context1">everyday conversation</td></tr>
-                            <tr><td data-i18n="modalsMustHaveTo2.politeness.level2">Neutral</td><td><em>You have to show your ID.</em></td><td data-i18n="modalsMustHaveTo2.politeness.context2">general rules, instructions</td></tr>
-                            <tr><td data-i18n="modalsMustHaveTo2.politeness.level3">Formal / written</td><td><em>All visitors must present identification.</em></td><td data-i18n="modalsMustHaveTo2.politeness.context3">official signs, policies</td></tr>
-                            <tr><td data-i18n="modalsMustHaveTo2.politeness.level4">Emphatic / moral</td><td><em>We must fight injustice.</em></td><td data-i18n="modalsMustHaveTo2.politeness.context4">speeches, strong beliefs</td></tr>
-                        </tbody>
-                    </table>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo2.politeness.ex1">I have to finish this report by 5. (neutral necessity)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo2.politeness.ex2">You must read this book – it's life‑changing! (strong advice)</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo2.nuance.ex1">I must finish this project – it's my passion. (internal)</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo2.nuance.ex2">I have to submit the report by 5 PM. (external)</div>
                     </div>
                 </div>
             </div>
-
-            <!-- Secondary Uses: Deduction, Have got to, etc. -->
+            <!-- Section 2: Politeness, Formality & Register -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo2.secondary.title">Secondary Uses & Fixed Expressions</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo2.politeness.title">II. 2. Politeness, Formality & Register</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🧩</span>
-                        <span data-i18n="modalsMustHaveTo2.secondary.subtitle">Beyond simple obligation</span>
+                        <span class="EH-conjugation-subsection-icon">🎩</span>
+                        <span data-i18n="mustHaveTo2.politeness.heading">How tone changes with the modal</span>
                     </h3>
-                    <table class="EH-conjugation-table">
-                        <thead><tr><th data-i18n="common.usage">Usage</th><th>Example</th><th>Explanation</th></tr></thead>
-                        <tbody>
-                            <tr><td data-i18n="modalsMustHaveTo2.secondary.deductionPresent">Deduction (present)</td><td><em>She must be at work now.</em></td><td data-i18n="modalsMustHaveTo2.secondary.deductionPresentExpl">logical conclusion based on evidence</td></tr>
-                            <tr><td data-i18n="modalsMustHaveTo2.secondary.deductionPast">Deduction (past)</td><td><em>He must have left early.</em></td><td data-i18n="modalsMustHaveTo2.secondary.deductionPastExpl">certainty about a past event</td></tr>
-                            <tr><td data-i18n="modalsMustHaveTo2.secondary.haveGotTo">Have got to (informal)</td><td><em>I've got to call my mom.</em></td><td data-i18n="modalsMustHaveTo2.secondary.haveGotToExpl">strong necessity, very common in speech</td></tr>
-                            <tr><td data-i18n="modalsMustHaveTo2.secondary.willHaveTo">Will have to (future)</td><td><em>You will have to renew your licence.</em></td><td data-i18n="modalsMustHaveTo2.secondary.willHaveToExpl">future obligation (instead of must)</td></tr>
-                        </tbody>
-                    </table>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo2.politeness.tableTitle">📊 Register comparison:</div>
+                        <table class="EH-conjugation-table">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="mustHaveTo2.politeness.register">Register</th>
+                                    <th data-i18n="mustHaveTo2.politeness.example">Example</th>
+                                    <th data-i18n="mustHaveTo2.politeness.context">Context</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-i18n="mustHaveTo2.politeness.informal">Informal / spoken</td>
+                                    <td data-i18n="mustHaveTo2.politeness.informalEx">You have to try this cake! / I've got to go.</td>
+                                    <td data-i18n="mustHaveTo2.politeness.informalContext">everyday conversation</td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="mustHaveTo2.politeness.neutral">Neutral</td>
+                                    <td data-i18n="mustHaveTo2.politeness.neutralEx">You have to show your ID.</td>
+                                    <td data-i18n="mustHaveTo2.politeness.neutralContext">general rules, instructions</td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="mustHaveTo2.politeness.formal">Formal / written</td>
+                                    <td data-i18n="mustHaveTo2.politeness.formalEx">All visitors must present identification.</td>
+                                    <td data-i18n="mustHaveTo2.politeness.formalContext">official signs, policies</td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="mustHaveTo2.politeness.emphatic">Emphatic / moral</td>
+                                    <td data-i18n="mustHaveTo2.politeness.emphaticEx">We must fight injustice.</td>
+                                    <td data-i18n="mustHaveTo2.politeness.emphaticContext">speeches, strong beliefs</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo2.politeness.ex1">I have to finish this report by 5. (neutral necessity)</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo2.politeness.ex2">You must read this book – it's life‑changing! (strong advice)</div>
+                    </div>
                 </div>
             </div>
-
-            <!-- EXERCISES (12) -->
+            <!-- Section 3: Secondary Uses & Fixed Expressions -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo2.secondary.title">II. 3. Secondary Uses & Fixed Expressions</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🔍</span>
+                        <span data-i18n="mustHaveTo2.secondary.heading">Beyond simple obligation</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo2.secondary.deductionPres">📘 Deduction (present):</div>
+                        <p data-i18n="mustHaveTo2.secondary.deductionPresDesc">She must be at work now. – logical conclusion based on evidence</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo2.secondary.deductionPast">📘 Deduction (past):</div>
+                        <p data-i18n="mustHaveTo2.secondary.deductionPastDesc">He must have left early. – certainty about a past event</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo2.secondary.haveGot">📘 Have got to (informal):</div>
+                        <p data-i18n="mustHaveTo2.secondary.haveGotDesc">I've got to call my mom. – strong necessity, very common in speech</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo2.secondary.willHave">📘 Will have to (future):</div>
+                        <p data-i18n="mustHaveTo2.secondary.willHaveDesc">You will have to renew your licence. – future obligation (instead of must)</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo2.secondary.ex1">The ground is wet; it must have rained last night.</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo2.secondary.ex2">I've got to finish this essay tonight.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo2.exercises.title">Practice Exercises: Nuance & Politeness</h2>
-
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #3e2723; margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo2.exercises.title">Practice: Nuance, Politeness & Deduction</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #3e2723; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #3e2723; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
                         <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
                         <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see how you did!</p>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-shouldoughtto-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson →</span>
-                </button>
-				<button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-					<span data-i18n="common.previousLesson">Previous Lesson</span>
-				</button>
-                <!-- <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-                    <span></span>
-                </button> -->
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">← Return to Conjugation</span>
-                </button>
-            </div>
         </div>
     </div>
-
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- i18n translations (full object) -->
     <script>
         window.I18N = {
             en: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject", conjugation: "Conjugation", example: "Example", examples: "Examples:",
-                    i: "I", you: "You", he: "He", she: "She", we: "We", they: "They", verb: "Verb",
-                    modal: "Modal", usage: "Usage", level: "Register", context: "Context",
-                    present: "Present", past: "Past", future: "Future", negative: "Negative", question: "Question",
-                    form: "Form", 
-                    previousLesson: "← Previous Lesson",
-                    returnToConjugation: "← Return to Conjugation",
-                    nextLesson: "Next Lesson →"
-                },
-                footer: {
-                    developer: "Developer: Mejri Ziad",
-                    privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact"
-                },
-                modalsMustHaveTo2: {
-                    title: "Must & Have to: Nuance, Comparison, and Politeness",
-                    subtitle: "Explore subtle differences: internal vs external obligation, past forms, politeness levels, and secondary meanings",
-                    introduction: {
-                        title: "Going Deeper: Nuance & Comparison",
-                        whatAre: "Choosing between must and have to",
-                        definitionTitle: "Why nuance matters:",
-                        definition: "Although must and have to often overlap, the choice can reflect the source of obligation (internal vs external), formality, or the speaker's attitude. This part explores those subtle distinctions.",
-                        coreIdeas: "Key ideas in part 2:",
-                        core1: "Comparing must and have to in questions, negatives, and past contexts.",
-                        core2: "Politeness and formality – must in rules vs have to in everyday speech.",
-                        core3: "Secondary uses: must for deduction (past & present), have got to, and future necessity."
-                    },
-                    comparison: {
-                        title: "Comparing Must and Have to Across Contexts",
-                        subtitle: "Forms, time, and speaker's perspective",
-                        noteTitle: "Nuance note:",
-                        note: "In questions, \"Must I?\" often sounds strict or impatient; \"Do I have to?\" is neutral. For past obligation, only <strong>had to</strong> exists."
+                common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                mustHaveTo2: {
+                    title: { line1: "Must & Have to: II:", line2: "Nuance, Comparison, and Politeness", line3: "internal vs external obligation, past forms, politeness levels, and secondary meanings", line4: "lesson: 2/3" },
+                    nuance: {
+                        title: "II. 1. Nuance & Comparison", heading: "Choosing between must and have to", desc1: "📘 Why nuance matters:", desc2: "Although must and have to often overlap, the choice can reflect the source of obligation (internal vs external), formality, or the speaker's attitude.",
+                        context: "Context", must: "Must", haveto: "Have to",
+                        present: "Present", presentMust: "must + V (I must go)", presentHaveTo: "have/has to + V (I have to go)",
+                        past: "Past", pastMust: "had to (must has no past)", pastHaveTo: "had to (He had to work)",
+                        future: "Future", futureMust: "will have to (no must future)", futureHaveTo: "will have to (We will have to wait)",
+                        negative: "Negative", negativeMust: "must not / mustn't (prohibition)", negativeHaveTo: "don't/doesn't have to (no necessity)",
+                        question: "Question", questionMust: "Must I...? (rare, formal)", questionHaveTo: "Do/Does ... have to...? (common)",
+                        noteTitle: "📝 Nuance note:", noteText: "In questions, 'Must I?' often sounds strict or impatient; 'Do I have to?' is neutral. For past obligation, only had to exists.",
+                        ex1: "I must finish this project – it's my passion. (internal)", ex2: "I have to submit the report by 5 PM. (external)"
                     },
                     politeness: {
-                        title: "Politeness, Formality & Register",
-                        subtitle: "How tone changes with the modal",
-                        level1: "Informal / spoken",
-                        context1: "everyday conversation",
-                        level2: "Neutral",
-                        context2: "general rules, instructions",
-                        level3: "Formal / written",
-                        context3: "official signs, policies",
-                        level4: "Emphatic / moral",
-                        context4: "speeches, strong beliefs",
-                        ex1: "I have to finish this report by 5. (neutral necessity)",
-                        ex2: "You must read this book – it's life‑changing! (strong advice)"
+                        title: "II. 2. Politeness, Formality & Register", heading: "How tone changes with the modal", tableTitle: "📊 Register comparison:",
+                        register: "Register", example: "Example", context: "Context",
+                        informal: "Informal / spoken", informalEx: "You have to try this cake! / I've got to go.", informalContext: "everyday conversation",
+                        neutral: "Neutral", neutralEx: "You have to show your ID.", neutralContext: "general rules, instructions",
+                        formal: "Formal / written", formalEx: "All visitors must present identification.", formalContext: "official signs, policies",
+                        emphatic: "Emphatic / moral", emphaticEx: "We must fight injustice.", emphaticContext: "speeches, strong beliefs",
+                        ex1: "I have to finish this report by 5. (neutral necessity)", ex2: "You must read this book – it's life‑changing! (strong advice)"
                     },
                     secondary: {
-                        title: "Secondary Uses & Fixed Expressions",
-                        subtitle: "Beyond simple obligation",
-                        deductionPresent: "Deduction (present)",
-                        deductionPresentExpl: "logical conclusion based on evidence",
-                        deductionPast: "Deduction (past)",
-                        deductionPastExpl: "certainty about a past event",
-                        haveGotTo: "Have got to (informal)",
-                        haveGotToExpl: "strong necessity, very common in speech",
-                        willHaveTo: "Will have to (future)",
-                        willHaveToExpl: "future obligation (instead of must)"
+                        title: "II. 3. Secondary Uses & Fixed Expressions", heading: "Beyond simple obligation",
+                        deductionPres: "📘 Deduction (present):", deductionPresDesc: "She must be at work now. – logical conclusion based on evidence",
+                        deductionPast: "📘 Deduction (past):", deductionPastDesc: "He must have left early. – certainty about a past event",
+                        haveGot: "📘 Have got to (informal):", haveGotDesc: "I've got to call my mom. – strong necessity, very common in speech",
+                        willHave: "📘 Will have to (future):", willHaveDesc: "You will have to renew your licence. – future obligation (instead of must)",
+                        ex1: "The ground is wet; it must have rained last night.", ex2: "I've got to finish this essay tonight."
                     },
                     exercises: {
-                        title: "Practice Exercises: Nuance & Politeness",
-                        q1: "Choose the modal that best fits a personal conviction:",
-                        q1Sentence: "I ______ exercise more – it's my New Year's resolution.",
+                        title: "Practice: Nuance, Politeness & Deduction",
+                        q1: "Choose the modal that best fits a personal conviction: I ______ exercise more – it's my New Year's resolution.",
                         q1a: "must", q1b: "have to", q1c: "had to",
-                        q2: "Choose the correct past form:",
-                        q2Sentence: "Yesterday I ______ wake up at 5 a.m.",
+                        q2: "Choose the correct past form: Yesterday I ______ wake up at 5 a.m.",
                         q2a: "must", q2b: "have to", q2c: "had to",
-                        q3: "Choose the modal typical for a formal written rule:",
-                        q3Sentence: "All employees ______ wash their hands before returning to work.",
+                        q3: "Choose the modal typical for a formal written rule: All employees ______ wash their hands before returning to work.",
                         q3a: "have to", q3b: "must", q3c: "don't have to",
-                        q4: "Choose for logical deduction about the present:",
-                        q4Sentence: "The lights are off. They ______ be out.",
+                        q4: "Choose for logical deduction about the present: The lights are off. They ______ be out.",
                         q4a: "have to", q4b: "must", q4c: "had to",
-                        q5: "Choose the modal that means 'not necessary':",
-                        q5Sentence: "You ______ bring a gift – just come and enjoy.",
+                        q5: "Choose the modal that means 'not necessary': You ______ bring a gift – just come and enjoy.",
                         q5a: "mustn't", q5b: "don't have to", q5c: "hadn't to",
-                        q6: "Choose for past deduction:",
-                        q6Sentence: "She looks happy; she ______ heard the good news.",
+                        q6: "Choose for past deduction: She looks happy; she ______ heard the good news.",
                         q6a: "must have", q6b: "had to", q6c: "has to",
-                        q7Full: "Complete with a future form (obligation): If you want to pass, you ______ (must) study harder.",
-                        q8Full: "Complete with an informal equivalent of 'must': I'm sorry, I ______ (have got to) leave now.",
-                        q9Full: "Complete the neutral question: ______ we have to pay now?",
-                        q10: "Arrange the past deduction sentence:",
-                        q11: "Arrange the question with 'have to':",
-                        q12: "Arrange the prohibition sentence:"
+                        q7: "Complete with a future form (obligation): If you want to pass, you ______ (must) study harder.",
+                        q8: "Complete with an informal equivalent of 'must': I'm sorry, I ______ (have got to) leave now.",
+                        q9: "Complete the neutral question: ______ we have to pay now?",
+                        q10: "Arrange the past deduction sentence: (He / must / have / forgotten / .)",
+                        q11: "Arrange the question with 'have to': (Do / we / have to / reserve / ?)",
+                        q12: "Arrange the prohibition sentence: (You / mustn't / park / here / .)"
                     }
                 }
             },
             fr: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject (Sujet)", conjugation: "Conjugation (Conjugaison)", example: "Example (Exemple)", examples: "Examples: (Exemples :)",
-                    i: "I (Je)", you: "You (Vous)", he: "He (Il)", she: "She (Elle)", we: "We (Nous)", they: "They (Ils/Elles)", verb: "Verb (Verbe)",
-                    modal: "Modal (Modal)", usage: "Usage (Usage)", level: "Register (Registre)", context: "Context (Contexte)",
-                    present: "Present (Présent)", past: "Past (Passé)", future: "Future (Futur)", negative: "Negative (Négatif)", question: "Question (Question)",
-                    form: "Form (Forme)",
-                    previousLesson: "← Previous Lesson (Leçon Précédente)",
-                    returnToConjugation: "← Return to Conjugation (Retour au Conjugaison)",
-                    nextLesson: "Next Lesson (Leçon Suivante) →"
-                },
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
-                modalsMustHaveTo2: {
-                    title: "Must & Have to: Nuance, Comparison, and Politeness (Must & Have to : nuance, comparaison et politesse)",
-                    subtitle: "Explore subtle differences: internal vs external obligation, past forms, politeness levels, and secondary meanings (Explorez les nuances : obligation interne vs externe, formes passées, niveaux de politesse et significations secondaires)",
-                    introduction: {
-                        title: "Going Deeper: Nuance & Comparison (Approfondir : nuance et comparaison)",
-                        whatAre: "Choosing between must and have to (Choisir entre must et have to)",
-                        definitionTitle: "Why nuance matters: (Pourquoi la nuance est importante :)",
-                        definition: "Although must and have to often overlap, the choice can reflect the source of obligation (internal vs external), formality, or the speaker's attitude. This part explores those subtle distinctions. (Bien que must et have to se chevauchent souvent, le choix peut refléter la source de l'obligation (interne vs externe), le formalisme ou l'attitude du locuteur. Cette partie explore ces distinctions subtiles.)",
-                        coreIdeas: "Key ideas in part 2: (Idées clés de la partie 2 :)",
-                        core1: "Comparing must and have to in questions, negatives, and past contexts. (Comparer must et have to dans les questions, les négations et les contextes passés.)",
-                        core2: "Politeness and formality – must in rules vs have to in everyday speech. (Politesse et formalisme – must dans les règles vs have to dans le langage courant.)",
-                        core3: "Secondary uses: must for deduction (past & present), have got to, and future necessity. (Usages secondaires : must pour la déduction (passé et présent), have got to, et nécessité future.)"
-                    },
-                    comparison: {
-                        title: "Comparing Must and Have to Across Contexts (Comparer Must et Have to dans différents contextes)",
-                        subtitle: "Forms, time, and speaker's perspective (Formes, temps et perspective du locuteur)",
-                        noteTitle: "Nuance note: (Note de nuance :)",
-                        note: "In questions, \"Must I?\" often sounds strict or impatient; \"Do I have to?\" is neutral. For past obligation, only <strong>had to</strong> exists. (Dans les questions, \"Must I ?\" semble souvent strict ou impatient ; \"Do I have to ?\" est neutre. Pour l'obligation passée, seul <strong>had to</strong> existe.)"
+                mustHaveTo2: {
+                    title: { line1: "Must & Have to : II :", line2: "Nuance, comparaison et politesse", line3: "obligation interne vs externe, formes passées, niveaux de politesse et sens secondaires", line4: "leçon : 2/3" },
+                    nuance: {
+                        title: "II. 1. Nuance et comparaison", heading: "Choisir entre must et have to", desc1: "📘 Pourquoi la nuance est importante :", desc2: "Bien que must et have to se chevauchent souvent, le choix peut refléter la source de l'obligation (interne vs externe), le niveau de formalité ou l'attitude du locuteur.",
+                        context: "Contexte", must: "Must", haveto: "Have to",
+                        present: "Présent", presentMust: "must + V (I must go)", presentHaveTo: "have/has to + V (I have to go)",
+                        past: "Passé", pastMust: "had to (must n'a pas de passé)", pastHaveTo: "had to (He had to work)",
+                        future: "Futur", futureMust: "will have to (pas de must futur)", futureHaveTo: "will have to (We will have to wait)",
+                        negative: "Négatif", negativeMust: "must not / mustn't (interdiction)", negativeHaveTo: "don't/doesn't have to (pas nécessaire)",
+                        question: "Question", questionMust: "Must I...? (rare, formel)", questionHaveTo: "Do/Does ... have to...? (courant)",
+                        noteTitle: "📝 Note de nuance :", noteText: "Dans les questions, 'Must I?' sonne souvent strict ou impatient ; 'Do I have to?' est neutre. Pour l'obligation passée, seul 'had to' existe.",
+                        ex1: "Je dois finir ce projet – c'est ma passion. (interne)", ex2: "Je dois rendre le rapport à 17h. (externe)"
                     },
                     politeness: {
-                        title: "Politeness, Formality & Register (Politesse, formalisme et registre)",
-                        subtitle: "How tone changes with the modal (Comment le ton change avec le modal)",
-                        level1: "Informal / spoken (Informel / parlé)",
-                        context1: "everyday conversation (conversation quotidienne)",
-                        level2: "Neutral (Neutre)",
-                        context2: "general rules, instructions (règles générales, instructions)",
-                        level3: "Formal / written (Formel / écrit)",
-                        context3: "official signs, policies (panneaux officiels, règlements)",
-                        level4: "Emphatic / moral (Emphatique / moral)",
-                        context4: "speeches, strong beliefs (discours, convictions fortes)",
-                        ex1: "I have to finish this report by 5. (neutral necessity) (Je dois finir ce rapport pour 17h – nécessité neutre)",
-                        ex2: "You must read this book – it's life‑changing! (strong advice) (Tu dois lire ce livre – il change la vie ! – conseil fort)"
+                        title: "II. 2. Politesse, formalité et registre", heading: "Comment le ton change avec le modal", tableTitle: "📊 Comparaison des registres :",
+                        register: "Registre", example: "Exemple", context: "Contexte",
+                        informal: "Informel / parlé", informalEx: "Tu dois goûter ce gâteau ! / Je dois y aller.", informalContext: "conversation quotidienne",
+                        neutral: "Neutre", neutralEx: "Vous devez présenter votre pièce d'identité.", neutralContext: "règles générales, instructions",
+                        formal: "Formel / écrit", formalEx: "Tous les visiteurs doivent présenter une pièce d'identité.", formalContext: "panneaux officiels, politiques",
+                        emphatic: "Emphatique / moral", emphaticEx: "Nous devons combattre l'injustice.", emphaticContext: "discours, croyances fortes",
+                        ex1: "Je dois finir ce rapport pour 17h. (nécessité neutre)", ex2: "Tu dois lire ce livre – il change la vie ! (conseil fort)"
                     },
                     secondary: {
-                        title: "Secondary Uses & Fixed Expressions (Usages secondaires et expressions figées)",
-                        subtitle: "Beyond simple obligation (Au-delà de la simple obligation)",
-                        deductionPresent: "Deduction (present) (Déduction – présent)",
-                        deductionPresentExpl: "logical conclusion based on evidence (conclusion logique basée sur des preuves)",
-                        deductionPast: "Deduction (past) (Déduction – passé)",
-                        deductionPastExpl: "certainty about a past event (certitude sur un événement passé)",
-                        haveGotTo: "Have got to (informal) (Have got to – informel)",
-                        haveGotToExpl: "strong necessity, very common in speech (nécessité forte, très courant à l'oral)",
-                        willHaveTo: "Will have to (future) (Will have to – futur)",
-                        willHaveToExpl: "future obligation (instead of must) (obligation future – à la place de must)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises: Nuance & Politeness (Exercices pratiques : nuance et politesse)",
-                        q1: "Choose the modal that best fits a personal conviction: (Choisissez le modal qui correspond le mieux à une conviction personnelle :)",
-                        q1Sentence: "I ______ exercise more – it's my New Year's resolution. (Je ______ faire plus d'exercice – c'est ma résolution du Nouvel An.)",
-                        q1a: "must (must)", q1b: "have to (have to)", q1c: "had to (had to)",
-                        q2: "Choose the correct past form: (Choisissez la forme passée correcte :)",
-                        q2Sentence: "Yesterday I ______ wake up at 5 a.m. (Hier, je ______ me réveiller à 5 heures.)",
-                        q2a: "must (must)", q2b: "have to (have to)", q2c: "had to (had to)",
-                        q3: "Choose the modal typical for a formal written rule: (Choisissez le modal typique d'une règle formelle écrite :)",
-                        q3Sentence: "All employees ______ wash their hands before returning to work. (Tous les employés ______ se laver les mains avant de reprendre le travail.)",
-                        q3a: "have to (have to)", q3b: "must (must)", q3c: "don't have to (don't have to)",
-                        q4: "Choose for logical deduction about the present: (Choisissez pour une déduction logique sur le présent :)",
-                        q4Sentence: "The lights are off. They ______ be out. (Les lumières sont éteintes. Ils ______ être sortis.)",
-                        q4a: "have to (have to)", q4b: "must (must)", q4c: "had to (had to)",
-                        q5: "Choose the modal that means 'not necessary': (Choisissez le modal qui signifie 'pas nécessaire' :)",
-                        q5Sentence: "You ______ bring a gift – just come and enjoy. (Tu ______ apporter un cadeau – viens et profite.)",
-                        q5a: "mustn't (mustn't)", q5b: "don't have to (don't have to)", q5c: "hadn't to (hadn't to)",
-                        q6: "Choose for past deduction: (Choisissez pour la déduction passée :)",
-                        q6Sentence: "She looks happy; she ______ heard the good news. (Elle a l'air contente ; elle ______ entendu la bonne nouvelle.)",
-                        q6a: "must have (must have)", q6b: "had to (had to)", q6c: "has to (has to)",
-                        q7Full: "Complete with a future form (obligation): If you want to pass, you ______ (must) study harder. (Complétez avec une forme future – obligation :) Si tu veux réussir, tu ______ (must) étudier plus.",
-                        q8Full: "Complete with an informal equivalent of 'must': I'm sorry, I ______ (have got to) leave now. (Complétez avec un équivalent informel de 'must' :) Désolé, je ______ (have got to) partir maintenant.",
-                        q9Full: "Complete the neutral question: ______ we have to pay now? (Complétez la question neutre :) ______ nous devons payer maintenant ?",
-                        q10: "Arrange the past deduction sentence: (Remettez la phrase de déduction passée dans l'ordre :)",
-                        q11: "Arrange the question with 'have to': (Remettez la question avec 'have to' dans l'ordre :)",
-                        q12: "Arrange the prohibition sentence: (Remettez la phrase d'interdiction dans l'ordre :)"
+                        title: "II. 3. Usages secondaires et expressions figées", heading: "Au-delà de l'obligation simple",
+                        deductionPres: "📘 Déduction (présent) :", deductionPresDesc: "Elle doit être au travail maintenant. – conclusion logique basée sur des preuves",
+                        deductionPast: "📘 Déduction (passé) :", deductionPastDesc: "Il a dû partir tôt. – certitude sur un événement passé",
+                        haveGot: "📘 Have got to (informel) :", haveGotDesc: "Je dois appeler ma mère. – nécessité forte, très courant à l'oral",
+                        willHave: "📘 Will have to (futur) :", willHaveDesc: "Vous devrez renouveler votre permis. – obligation future (au lieu de must)",
+                        ex1: "Le sol est mouillé ; il a dû pleuvoir cette nuit.", ex2: "Je dois finir cette dissertation ce soir."
                     }
                 }
             },
             ar: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject (الفاعل)", conjugation: "Conjugation (التصريف)", example: "Example (مثال)", examples: "Examples: (أمثلة:)",
-                    i: "I (أنا)", you: "You (أنت)", he: "He (هو)", she: "She (هي)", we: "We (نحن)", they: "They (هم)", verb: "Verb (الفعل)",
-                    modal: "Modal (فعل مساعد)", usage: "Usage (الاستخدام)", level: "Register (المستوى اللغوي)", context: "Context (السياق)",
-                    present: "Present (الحاضر)", past: "Past (الماضي)", future: "Future (المستقبل)", negative: "Negative (النفي)", question: "Question (السؤال)",
-                    form: "Form (الصيغة)", previousLesson: "← Previous Lesson (الدرس السابق)",
-                    returnToConjugation: "← Return to Conjugation (العودة إلى التصريف)",
-                    nextLesson: "Next Lesson → (الدرس التالي)"
-                },
+                common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
                 footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
-                modalsMustHaveTo2: {
-                    title: "Must & Have to: Nuance, Comparison, and Politeness (Must & Have to: الفروق الدقيقة والمقارنة والأدب)",
-                    subtitle: "Explore subtle differences: internal vs external obligation, past forms, politeness levels, and secondary meanings (استكشف الفروق الدقيقة: الالتزام الداخلي مقابل الخارجي، صيغ الماضي، مستويات الأدب، والمعاني الثانوية)",
-                    introduction: {
-                        title: "Going Deeper: Nuance & Comparison (التعمق: الفروق الدقيقة والمقارنة)",
-                        whatAre: "Choosing between must and have to (الاختيار بين must و have to)",
-                        definitionTitle: "Why nuance matters: (لماذا الفروق الدقيقة مهمة؟)",
-                        definition: "Although must and have to often overlap, the choice can reflect the source of obligation (internal vs external), formality, or the speaker's attitude. This part explores those subtle distinctions. (على الرغم من أن must و have to غالبًا ما يتداخلان، إلا أن الاختيار يمكن أن يعكس مصدر الالتزام (داخلي مقابل خارجي)، أو الشكلية، أو موقف المتحدث. يستكشف هذا الجزء هذه الاختلافات الدقيقة.)",
-                        coreIdeas: "Key ideas in part 2: (الأفكار الرئيسية في الجزء الثاني:)",
-                        core1: "Comparing must and have to in questions, negatives, and past contexts. (مقارنة must و have to في الأسئلة والنفي وسياقات الماضي.)",
-                        core2: "Politeness and formality – must in rules vs have to in everyday speech. (الأدب والشكلية – must في القواعد مقابل have to في الكلام اليومي.)",
-                        core3: "Secondary uses: must for deduction (past & present), have got to, and future necessity. (استخدامات ثانوية: must للاستنتاج (الماضي والحاضر)، have got to، والضرورة المستقبلية.)"
-                    },
-                    comparison: {
-                        title: "Comparing Must and Have to Across Contexts (مقارنة Must و Have to عبر السياقات)",
-                        subtitle: "Forms, time, and speaker's perspective (الصيغ والزمن ومنظور المتحدث)",
-                        noteTitle: "Nuance note: (ملاحظة دقيقة:)",
-                        note: "In questions, \"Must I?\" often sounds strict or impatient; \"Do I have to?\" is neutral. For past obligation, only <strong>had to</strong> exists. (في الأسئلة، غالبًا ما تبدو \"Must I؟\" صارمة أو غير صبورة؛ \"Do I have to؟\" محايدة. للالتزام في الماضي، يوجد <strong>had to</strong> فقط.)"
+                mustHaveTo2: {
+                    title: { line1: "Must & Have to: 2:", line2: "الفروق الدقيقة، المقارنة والمجاملة", line3: "الالتزام الداخلي مقابل الخارجي، صيغ الماضي، مستويات المجاملة، والمعاني الثانوية", line4: "الدرس: 2/3" },
+                    nuance: {
+                        title: "II. 1. الفروق الدقيقة والمقارنة", heading: "الاختيار بين must و have to", desc1: "📘 لماذا الفروق الدقيقة مهمة:", desc2: "على الرغم من أن must و have to غالبًا ما يتداخلان، إلا أن الاختيار يمكن أن يعكس مصدر الالتزام (داخلي مقابل خارجي)، أو الشكلية، أو موقف المتحدث.",
+                        context: "السياق", must: "Must", haveto: "Have to",
+                        present: "الحاضر", presentMust: "must + فعل (I must go)", presentHaveTo: "have/has to + فعل (I have to go)",
+                        past: "الماضي", pastMust: "had to (must ليس له ماضٍ)", pastHaveTo: "had to (He had to work)",
+                        future: "المستقبل", futureMust: "will have to (لا يوجد must للمستقبل)", futureHaveTo: "will have to (We will have to wait)",
+                        negative: "النفي", negativeMust: "must not / mustn't (منع)", negativeHaveTo: "don't/doesn't have to (ليس ضروريًا)",
+                        question: "السؤال", questionMust: "Must I...? (نادر، رسمي)", questionHaveTo: "Do/Does ... have to...? (شائع)",
+                        noteTitle: "📝 ملاحظة دقيقة:", noteText: "في الأسئلة، 'Must I؟' يبدو صارمًا أو غير صبور؛ 'Do I have to؟' محايد. بالنسبة للالتزام الماضي، يوجد 'had to' فقط.",
+                        ex1: "يجب أن أنهي هذا المشروع – إنه شغفي. (داخلي)", ex2: "عليّ تسليم التقرير بحلول الساعة 5 مساءً. (خارجي)"
                     },
                     politeness: {
-                        title: "Politeness, Formality & Register (الأدب والشكلية والمستوى اللغوي)",
-                        subtitle: "How tone changes with the modal (كيف يتغير النبر مع الفعل المساعد)",
-                        level1: "Informal / spoken (غير رسمي / منطوق)",
-                        context1: "everyday conversation (محادثة يومية)",
-                        level2: "Neutral (محايد)",
-                        context2: "general rules, instructions (قواعد عامة، تعليمات)",
-                        level3: "Formal / written (رسمي / مكتوب)",
-                        context3: "official signs, policies (لافتات رسمية، سياسات)",
-                        level4: "Emphatic / moral (تأكيدي / أخلاقي)",
-                        context4: "speeches, strong beliefs (خطابات، معتقدات قوية)",
-                        ex1: "I have to finish this report by 5. (neutral necessity) (يجب علي إنهاء هذا التقرير بحلول الخامسة – ضرورة محايدة)",
-                        ex2: "You must read this book – it's life‑changing! (strong advice) (يجب أن تقرأ هذا الكتاب – إنه يغير الحياة! – نصيحة قوية)"
+                        title: "II. 2. المجاملة، الشكلية والمستوى", heading: "كيف يتغير النبرة مع الفعل الناقص", tableTitle: "📊 مقارنة المستويات:",
+                        register: "المستوى", example: "مثال", context: "السياق",
+                        informal: "غير رسمي / منطوق", informalEx: "يجب أن تجرب هذه الكعكة! / يجب أن أذهب.", informalContext: "محادثة يومية",
+                        neutral: "محايد", neutralEx: "يجب عليك إظهار بطاقة هويتك.", neutralContext: "قواعد عامة، تعليمات",
+                        formal: "رسمي / مكتوب", formalEx: "يجب على جميع الزوار إظهار هويتهم.", formalContext: "لافتات رسمية، سياسات",
+                        emphatic: "توكيدي / أخلاقي", emphaticEx: "يجب أن نحارب الظلم.", emphaticContext: "خطابات، معتقدات قوية",
+                        ex1: "عليّ إنهاء هذا التقرير بحلول الساعة 5. (ضرورة محايدة)", ex2: "يجب أن تقرأ هذا الكتاب – إنه يغير الحياة! (نصيحة قوية)"
                     },
                     secondary: {
-                        title: "Secondary Uses & Fixed Expressions (استخدامات ثانوية وتعبيرات ثابتة)",
-                        subtitle: "Beyond simple obligation (ما وراء الالتزام البسيط)",
-                        deductionPresent: "Deduction (present) (استنتاج – حاضر)",
-                        deductionPresentExpl: "logical conclusion based on evidence (استنتاج منطقي بناءً على الأدلة)",
-                        deductionPast: "Deduction (past) (استنتاج – ماض)",
-                        deductionPastExpl: "certainty about a past event (اليقين بشأن حدث ماض)",
-                        haveGotTo: "Have got to (informal) (Have got to – غير رسمي)",
-                        haveGotToExpl: "strong necessity, very common in speech (ضرورة قوية، شائعة جدًا في الكلام)",
-                        willHaveTo: "Will have to (future) (Will have to – مستقبل)",
-                        willHaveToExpl: "future obligation (instead of must) (التزام مستقبلي – بدلاً من must)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises: Nuance & Politeness (تمارين تطبيقية: الفروق الدقيقة والأدب)",
-                        q1: "Choose the modal that best fits a personal conviction: (اختر الفعل المساعد الذي يناسب الاقتناع الشخصي:)",
-                        q1Sentence: "I ______ exercise more – it's my New Year's resolution. (أنا ______ ممارسة الرياضة أكثر – هذا قراري للسنة الجديدة.)",
-                        q1a: "must (must)", q1b: "have to (have to)", q1c: "had to (had to)",
-                        q2: "Choose the correct past form: (اختر صيغة الماضي الصحيحة:)",
-                        q2Sentence: "Yesterday I ______ wake up at 5 a.m. (بالأمس أنا ______ الاستيقاظ في الساعة 5 صباحًا.)",
-                        q2a: "must (must)", q2b: "have to (have to)", q2c: "had to (had to)",
-                        q3: "Choose the modal typical for a formal written rule: (اختر الفعل المساعد النموذجي لقاعدة مكتوبة رسمية:)",
-                        q3Sentence: "All employees ______ wash their hands before returning to work. (جميع الموظفين ______ غسل أيديهم قبل العودة إلى العمل.)",
-                        q3a: "have to (have to)", q3b: "must (must)", q3c: "don't have to (don't have to)",
-                        q4: "Choose for logical deduction about the present: (اختر للاستنتاج المنطقي حول الحاضر:)",
-                        q4Sentence: "The lights are off. They ______ be out. (الأضواء مطفأة. هم ______ يكونون بالخارج.)",
-                        q4a: "have to (have to)", q4b: "must (must)", q4c: "had to (had to)",
-                        q5: "Choose the modal that means 'not necessary': (اختر الفعل المساعد الذي يعني 'ليس ضروريًا':)",
-                        q5Sentence: "You ______ bring a gift – just come and enjoy. (أنت ______ إحضار هدية – فقط تعال واستمتع.)",
-                        q5a: "mustn't (mustn't)", q5b: "don't have to (don't have to)", q5c: "hadn't to (hadn't to)",
-                        q6: "Choose for past deduction: (اختر للاستنتاج في الماضي:)",
-                        q6Sentence: "She looks happy; she ______ heard the good news. (تبدو سعيدة؛ هي ______ سمعت الأخبار السارة.)",
-                        q6a: "must have (must have)", q6b: "had to (had to)", q6c: "has to (has to)",
-                        q7Full: "Complete with a future form (obligation): If you want to pass, you ______ (must) study harder. (أكمل بصيغة المستقبل (الالتزام):) إذا أردت النجاح، أنت ______ (must) الدراسة بجدية أكبر.",
-                        q8Full: "Complete with an informal equivalent of 'must': I'm sorry, I ______ (have got to) leave now. (أكمل بمرادف غير رسمي لـ 'must':) أنا آسف، أنا ______ (have got to) المغادرة الآن.",
-                        q9Full: "Complete the neutral question: ______ we have to pay now? (أكمل السؤال المحايد:) ______ نحن must ندفع الآن؟",
-                        q10: "Arrange the past deduction sentence: (رتب جملة الاستنتاج في الماضي:)",
-                        q11: "Arrange the question with 'have to': (رتب السؤال مع 'have to':)",
-                        q12: "Arrange the prohibition sentence: (رتب جملة المنع:)"
+                        title: "II. 3. الاستخدامات الثانوية والتعبيرات الثابتة", heading: "ما وراء الالتزام البسيط",
+                        deductionPres: "📘 الاستنتاج (الحاضر):", deductionPresDesc: "لابد أنها في العمل الآن. – استنتاج منطقي بناءً على دليل",
+                        deductionPast: "📘 الاستنتاج (الماضي):", deductionPastDesc: "لابد أنه غادر مبكرًا. – يقين بشأن حدث ماضٍ",
+                        haveGot: "📘 Have got to (غير رسمي):", haveGotDesc: "يجب أن أتصل بأمي. – ضرورة قوية، شائعة جدًا في الكلام",
+                        willHave: "📘 Will have to (المستقبل):", willHaveDesc: "سيكون عليك تجديد رخصتك. – التزام مستقبلي (بدلاً من must)",
+                        ex1: "الأرض مبللة؛ لابد أنها أمطرت الليلة الماضية.", ex2: "يجب أن أنهي هذا المقال الليلة."
                     }
                 }
             }
         };
     </script>
-    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ========== 1. Build exercises and get answer keys ==========
         const correctAnswersType1 = buildMultipleChoiceExercise({
-            containerId: 'mc-exercises',
-            prefix: 'EH-exercise-type1-possibilities3',
+            containerId: 'mc-exercises', prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'modalsMustHaveTo2.exercises.q1Sentence',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo2.exercises.q1a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo2.exercises.q1b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo2.exercises.q1c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo2.exercises.q2Sentence',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo2.exercises.q2a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo2.exercises.q2b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo2.exercises.q2c' }
-                    ],
-                    correctAnswer: 'c'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo2.exercises.q3Sentence',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo2.exercises.q3a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo2.exercises.q3b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo2.exercises.q3c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo2.exercises.q4Sentence',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo2.exercises.q4a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo2.exercises.q4b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo2.exercises.q4c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo2.exercises.q5Sentence',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo2.exercises.q5a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo2.exercises.q5b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo2.exercises.q5c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo2.exercises.q6Sentence',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo2.exercises.q6a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo2.exercises.q6b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo2.exercises.q6c' }
-                    ],
-                    correctAnswer: 'a'
-                }
+                { questionTextKey: 'mustHaveTo2.exercises.q1', options: [{ value: 'a', labelKey: 'mustHaveTo2.exercises.q1a' }, { value: 'b', labelKey: 'mustHaveTo2.exercises.q1b' }, { value: 'c', labelKey: 'mustHaveTo2.exercises.q1c' }], correctAnswer: 'a' },
+                { questionTextKey: 'mustHaveTo2.exercises.q2', options: [{ value: 'a', labelKey: 'mustHaveTo2.exercises.q2a' }, { value: 'b', labelKey: 'mustHaveTo2.exercises.q2b' }, { value: 'c', labelKey: 'mustHaveTo2.exercises.q2c' }], correctAnswer: 'c' },
+                { questionTextKey: 'mustHaveTo2.exercises.q3', options: [{ value: 'a', labelKey: 'mustHaveTo2.exercises.q3a' }, { value: 'b', labelKey: 'mustHaveTo2.exercises.q3b' }, { value: 'c', labelKey: 'mustHaveTo2.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'mustHaveTo2.exercises.q4', options: [{ value: 'a', labelKey: 'mustHaveTo2.exercises.q4a' }, { value: 'b', labelKey: 'mustHaveTo2.exercises.q4b' }, { value: 'c', labelKey: 'mustHaveTo2.exercises.q4c' }], correctAnswer: 'b' },
+                { questionTextKey: 'mustHaveTo2.exercises.q5', options: [{ value: 'a', labelKey: 'mustHaveTo2.exercises.q5a' }, { value: 'b', labelKey: 'mustHaveTo2.exercises.q5b' }, { value: 'c', labelKey: 'mustHaveTo2.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'mustHaveTo2.exercises.q6', options: [{ value: 'a', labelKey: 'mustHaveTo2.exercises.q6a' }, { value: 'b', labelKey: 'mustHaveTo2.exercises.q6b' }, { value: 'c', labelKey: 'mustHaveTo2.exercises.q6c' }], correctAnswer: 'a' }
             ]
         });
-
-        const correctAnswersType2 = buildFillInTheBlankExercise({
-            containerId: 'fill-exercises',
-            prefix: 'fill',
+    </script>
+    <script>
+        correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises', prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'modalsMustHaveTo2.exercises.q7Full',
-                    answers: ['will have to']
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo2.exercises.q8Full',
-                    answers: ['have got to', "'ve got to"]
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo2.exercises.q9Full',
-                    answers: ['Do', 'DO']
-                }
+                { questionTextKey: 'mustHaveTo2.exercises.q7', answers: ['will have to'] },
+                { questionTextKey: 'mustHaveTo2.exercises.q8', answers: ['have got to', "'ve got to"] },
+                { questionTextKey: 'mustHaveTo2.exercises.q9', answers: ['Do', 'DO'] }
             ]
         });
-
+    </script>
+    <script>
         const correctAnswersType3 = buildSentenceOrderingExercise({
-            containerId: 'order-exercises',
-            prefix: 'order',
+            containerId: 'order-exercises', prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'modalsMustHaveTo2.exercises.q10',
-                    words: ['He', 'must', 'have', 'forgotten', '.'],
-                    correctSentence: 'He must have forgotten .'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo2.exercises.q11',
-                    words: ['Do', 'we', 'have to', 'reserve', '?'],
-                    correctSentence: 'Do we have to reserve ?'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo2.exercises.q12',
-                    words: ['You', "mustn't", 'park', 'here', '.'],
-                    correctSentence: "You mustn't park here ."
-                }
+                { questionTextKey: 'mustHaveTo2.exercises.q10', words: ['He', 'must', 'have', 'forgotten', '.'], correctSentence: 'He must have forgotten .' },
+                { questionTextKey: 'mustHaveTo2.exercises.q11', words: ['Do', 'we', 'have to', 'reserve', '?'], correctSentence: 'Do we have to reserve ?' },
+                { questionTextKey: 'mustHaveTo2.exercises.q12', words: ['You', 'mustn\'t', 'park', 'here', '.'], correctSentence: 'You mustn\'t park here .' }
             ]
         });
-
-        // ========== 2. Check & init functions ==========
+    </script>
+    <script>
         function checkAllExercises() {
-            let totalScore = 0;
-            let totalQuestions = 0;
-
+            let totalScore = 0, totalQuestions = 0;
             totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
             totalQuestions += 6;
             totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
             totalQuestions += 3;
             totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
             totalQuestions += 3;
-
-            const scoreValue = document.getElementById('score-value');
-            const scoreFeedback = document.getElementById('score-feedback');
-            if (scoreValue) scoreValue.textContent = `${totalScore}/${totalQuestions}`;
-
-            if (scoreFeedback) {
-                if (totalScore === totalQuestions) {
-                    scoreFeedback.textContent = 'Excellent! All answers are correct!';
-                } else if (totalScore >= 9) {
-                    scoreFeedback.textContent = 'Good job! You did well.';
-                } else if (totalScore >= 6) {
-                    scoreFeedback.textContent = 'Not bad, but review some material.';
-                } else {
-                    scoreFeedback.textContent = 'Review the lesson and try again.';
-                }
+            const scoreEl = document.getElementById('score-value');
+            const fbEl = document.getElementById('score-feedback');
+            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+            if (fbEl) {
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered must/have to nuances!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit politeness and deduction.';
+                else fbEl.textContent = 'Review the lesson and try again.';
             }
-
             document.getElementById('score-display').style.display = 'block';
+            EHScoreEffects.show(totalScore, totalQuestions);
         }
-
         document.addEventListener('DOMContentLoaded', function() {
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
-            const checkButton = document.getElementById('check-all');
-            if (checkButton) {
-                checkButton.addEventListener('click', checkAllExercises);
-            }
+            document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-
-        // ========== 3. i18n rendering for HTML elements with innerHTML tags ==========
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
@@ -646,17 +487,11 @@
                 elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    }
+                    if (translation) el.textContent = translation;
                 });
             }
-            window.addEventListener('load', function() {
-                setTimeout(applyHtmlI18n, 100);
-            });
-            document.getElementById('language-selector').addEventListener('change', function() {
-                setTimeout(applyHtmlI18n, 50);
-            });
+            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
         })();
     </script>
 </body>

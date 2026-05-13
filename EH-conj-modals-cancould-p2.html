@@ -1,194 +1,294 @@
+<!-- EH-conj-modals-cancould-p2.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can & Could: Nuance, Comparison, and Politeness - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    <!-- Modular conjugation styling (replaces all previous exercise/container styles) -->
+    <title>Can & Could II: Nuance, Comparison, and Politeness - English Hub</title>
     <link rel="stylesheet" href="styles/style-conjugation.css">
-    
     <style>
         :root {
-            /* ---------- Can/Could Part 2 palette: warm orange/amber ---------- */
-            --bg-gradient: linear-gradient(135deg, #d35400, #e67e22, #f5b041);
-            --title-color: #d35400;
-            --primary: #e67e22;
-            --primary-hover: #d35400;
-            --primary-light: #f5b041;
-            --accent: #f5b041;
-            --rule-bg: #fef5e7;
-            --rule-border: #f5b041;
-            --example-bg: #feefd5;
-            --example-border: #f5b041;
-            --exercise-number-gradient: linear-gradient(135deg, #e67e22, #f5b041);
-            --nav-btn-bg: #e67e22;
-            --nav-btn-hover: #d35400;
-            --nav-back-btn-bg: #f5b041;
-            --nav-back-btn-color: white;
-            --nav-back-btn-hover: #e67e22;
-
-            /* ---------- Universal / Neutral (same for all pages) ---------- */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
-            --correct-bg: #d4edda;
-            --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --bg-gradient: linear-gradient(135deg, #c8f0e6, #a8e8d8, #78e0c8, #60d0bc);
+            --content-bg: #f6fcfc;
+            --card-bg: #ffffff;
+            --subsection-bg: #eefaf7;
+            --rule-bg: #e0f7f0;
+            --example-bg: #d4f2e8;
+            --table-stripe: #f0faf7;
+            --title-color: #0e4a3e;
+            --text-color: #1a3b30;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #2ca890;
+            --primary-hover: #1e8a74;
+            --primary-light: #3eb8a0;
+            --accent: #2ca890;
+            --exercise-number-gradient: linear-gradient(135deg, #2ca890, #1e7a62);
+            --rule-border: #2ca890;
+            --example-border: #2ca890;
+            --nav-btn-bg: #2ca890;
+            --nav-btn-hover: #1e7a62;
+            --nav-back-btn-bg: #3eb8a0;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #2ca890;
+            --refract-divider-color: #82d4c0;
+            --refract-translation-bg: #d0f0e8;
+            --refract-translation-border: #2ca890;
+            --refract-english-color: #1a3b30;
+            --section-divider: #cde8e0;
+            --card-border: #d0e8de;
+            --input-border: #b0d6c4;
+            --dashed-border: #b0d6c4;
+            --table-border: #c2ddd0;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #e6f3ee;
+            --neutral-color: #527a6b;
+            --neutral-border: #b4d8c9;
+            --empty-input-border: #9ec5b4;
+            --empty-input-bg: #f2faf7;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #2ca890;
+            --language-selector-color: #1a3b30;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #1a4a3e, #1e5e4e, #226e5e, #267a6a);
+            --content-bg: #1a3a32;
+            --card-bg: #224d3c;
+            --subsection-bg: #224d3c;
+            --rule-bg: #1a3a32;
+            --example-bg: #1a3a32;
+            --table-stripe: #1e4236;
+            --title-color: #7edbb0;
+            --text-color: #e0f0e8;
+            --header-text: #e0f0e8;
+            --header-text-light: #b0d0c0;
+            --primary: #38b889;
+            --primary-hover: #4dca9c;
+            --primary-light: #38b889;
+            --accent: #38b889;
+            --rule-border: #38b889;
+            --example-border: #38b889;
+            --exercise-number-gradient: linear-gradient(135deg, #38b889, #2ca890);
+            --nav-btn-bg: #38b889;
+            --nav-btn-hover: #2ca890;
+            --nav-back-btn-bg: #4dca9c;
+            --nav-back-btn-color: #0a2e1f;
+            --nav-back-btn-hover: #38b889;
+            --refract-divider-color: #6ad4a0;
+            --refract-translation-bg: #2b6e52;
+            --refract-translation-border: #6ad4a0;
+            --refract-english-color: #d4f3e0;
+            --section-divider: #265c45;
+            --card-border: #265c45;
+            --input-border: #3d7a63;
+            --dashed-border: #3d7a63;
+            --table-border: #325e4a;
+            --white: #f0f8f4;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #264a3a;
+            --neutral-color: #b0d0c0;
+            --neutral-border: #3d6e5a;
+            --empty-input-border: #3d6e5a;
+            --empty-input-bg: #1e3a2f;
+            --language-selector-bg: #224d3c;
+            --language-selector-border: #38b889;
+            --language-selector-color: #e0f0e8;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="modalsCanCould2.title">Can & Could: Nuance, Comparison, and Politeness</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="modalsCanCould2.subtitle">Master subtle differences between can, could, and be able to; polite requests; and secondary uses</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="canCould2.title.line1">Can & Could II:</div>
+                <div class="EH-conjugation-title-line" data-i18n="canCould2.title.line2">Nuance, Comparison, and Politeness</div>
+                <div class="EH-conjugation-subtitle" data-i18n="canCould2.title.line3">Subtle differences between can, could, and be able to; polite requests; and secondary uses.</div>
+                <div class="EH-conjugation-subtitle" data-i18n="canCould2.title.line4">lesson: 2/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Introduction to Nuance -->
+            <!-- Section 1: Choosing the Right Modal -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould2.introduction.title">Going Deeper: Nuance & Comparison</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould2.choice.title">II. 1. Choosing the Right Modal</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⚖️</span>
-                        <span data-i18n="modalsCanCould2.introduction.whatAre">Choosing the right modal</span>
+                        <span class="EH-conjugation-subsection-icon">🤔</span>
+                        <span data-i18n="canCould2.choice.heading">Why nuance matters</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsCanCould2.introduction.definitionTitle">Why nuance matters:</div>
-                        <p data-i18n="modalsCanCould2.introduction.definition">The choice between can, could, and be able to can change the meaning, tone, or time reference of a sentence. This section explores those subtle differences.</p>
+                        <p data-i18n="canCould2.choice.desc">The choice between can, could, and be able to can change the meaning, tone, or time reference of a sentence. This section explores those subtle differences.</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsCanCould2.introduction.coreIdeas">Key ideas in part 2:</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="canCould2.choice.keyIdeasTitle">Key ideas in part 2:</div>
                         <ul>
-                            <li data-i18n="modalsCanCould2.introduction.core1">Comparing can, could, and be able to (ability, time, specificity).</li>
-                            <li data-i18n="modalsCanCould2.introduction.core2">Degrees of politeness – from standard to very formal.</li>
-                            <li data-i18n="modalsCanCould2.introduction.core3">Secondary uses: possibility with can, could, might.</li>
+                            <li data-i18n="canCould2.choice.key1">Comparing can, could, and be able to (ability, time, specificity).</li>
+                            <li data-i18n="canCould2.choice.key2">Degrees of politeness – from standard to very formal.</li>
+                            <li data-i18n="canCould2.choice.key3">Secondary uses: possibility with can, could, might.</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            
-            <!-- Comparison: can vs could vs be able to -->
+            <!-- Section 2: Comparing Can, Could, and Be Able To -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould2.comparison.title">Comparing Can, Could, and Be Able To</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould2.compare.title">II. 2. Comparing Can, Could, and Be Able To</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">🔍</span>
-                        <span data-i18n="modalsCanCould2.comparison.subtitle">How are they different?</span>
+                        <span data-i18n="canCould2.compare.heading">How are they different?</span>
                     </h3>
                     <table class="EH-conjugation-table">
-                        <thead><tr><th data-i18n="common.modal">Modal</th><th data-i18n="common.usage">Usage</th><th data-i18n="common.example">Example</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th data-i18n="canCould2.compare.modalCol">Modal</th>
+                                <th data-i18n="canCould2.compare.usageCol">Usage</th>
+                                <th data-i18n="canCould2.compare.exampleCol">Example</th>
+                            </tr>
+                        </thead>
                         <tbody>
-                            <tr><td><strong>can</strong></td><td data-i18n="modalsCanCould2.comparison.canUse">present ability, general possibility, informal permission</td><td data-i18n="modalsCanCould2.comparison.canEx">I can swim. / It can rain here.</td></tr>
-                            <tr><td><strong>could</strong></td><td data-i18n="modalsCanCould2.comparison.couldUse">past ability, polite request, less certain possibility</td><td data-i18n="modalsCanCould2.comparison.couldEx">I could run fast as a child. / Could you help?</td></tr>
-                            <tr><td><strong>be able to</strong></td><td data-i18n="modalsCanCould2.comparison.beAbleToUse">specific ability (especially past/future), after other modals, infinitive</td><td data-i18n="modalsCanCould2.comparison.beAbleToEx">I was able to finish on time. / You will be able to drive.</td></tr>
+                            <tr>
+                                <td><strong>can</strong></td>
+                                <td data-i18n="canCould2.compare.canUsage">present ability, general possibility, informal permission</td>
+                                <td data-i18n="canCould2.compare.canExample">I can swim. / It can rain here.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>could</strong></td>
+                                <td data-i18n="canCould2.compare.couldUsage">past ability, polite request, less certain possibility</td>
+                                <td data-i18n="canCould2.compare.couldExample">I could run fast as a child. / Could you help?</td>
+                            </tr>
+                            <tr>
+                                <td><strong>be able to</strong></td>
+                                <td data-i18n="canCould2.compare.beabletoUsage">specific ability (especially past/future), after other modals, infinitive</td>
+                                <td data-i18n="canCould2.compare.beabletoExample">I was able to finish on time. / You will be able to drive.</td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsCanCould2.comparison.noteTitle">Key point:</div>
-                        <p data-i18n="modalsCanCould2.comparison.note">Use <strong>was/were able to</strong> for specific past achievements (not general ability). For general past ability, both <em>could</em> and <em>was/were able to</em> are possible.</p>
+                        <p data-i18n="canCould2.compare.note">💡 Key point: Use was/were able to for specific past achievements (not general ability). For general past ability, both could and was/were able to are possible.</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Degrees of Politeness -->
+            <!-- Section 3: Degrees of Politeness & Formality -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould2.politeness.title">Degrees of Politeness & Formality</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould2.politeness.title">II. 3. Degrees of Politeness & Formality</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🤝</span>
-                        <span data-i18n="modalsCanCould2.politeness.subtitle">How tone changes with modals</span>
+                        <span class="EH-conjugation-subsection-icon">🎩</span>
+                        <span data-i18n="canCould2.politeness.heading">How tone changes with modals</span>
                     </h3>
                     <table class="EH-conjugation-table">
-                        <thead><tr><th data-i18n="common.level">Level</th><th>Example (request/permission)</th><th data-i18n="common.context">Context</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th data-i18n="canCould2.politeness.levelCol">Level</th>
+                                <th data-i18n="canCould2.politeness.exampleCol">Example (request/permission)</th>
+                                <th data-i18n="canCould2.politeness.contextCol">Context</th>
+                            </tr>
+                        </thead>
                         <tbody>
-                            <tr><td data-i18n="modalsCanCould2.politeness.level1">Standard</td><td><em>Can you open the window?</em></td><td data-i18n="modalsCanCould2.politeness.context1">everyday, neutral</td></tr>
-                            <tr><td data-i18n="modalsCanCould2.politeness.level2">Polite</td><td><em>Could you open the window?</em></td><td data-i18n="modalsCanCould2.politeness.context2">more polite, common</td></tr>
-                            <tr><td data-i18n="modalsCanCould2.politeness.level3">Very polite / formal</td><td><em>Would you mind opening the window?</em> / <em>May I open the window?</em></td><td data-i18n="modalsCanCould2.politeness.context3">formal situations</td></tr>
+                            <tr>
+                                <td data-i18n="canCould2.politeness.standardLevel">Standard</td>
+                                <td data-i18n="canCould2.politeness.standardEx">Can you open the window?</td>
+                                <td data-i18n="canCould2.politeness.standardContext">everyday, neutral</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="canCould2.politeness.politeLevel">Polite</td>
+                                <td data-i18n="canCould2.politeness.politeEx">Could you open the window?</td>
+                                <td data-i18n="canCould2.politeness.politeContext">more polite, common</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="canCould2.politeness.veryPoliteLevel">Very polite/formal</td>
+                                <td data-i18n="canCould2.politeness.veryPoliteEx">Would you mind opening the window? / May I open the window?</td>
+                                <td data-i18n="canCould2.politeness.veryPoliteContext">formal situations</td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould2.politeness.ex1">Can I borrow your pen? (informal)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould2.politeness.ex2">Could I borrow your pen? (more polite)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould2.politeness.ex3">May I borrow your pen? (very formal)</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould2.politeness.ex1">Can I borrow your pen? (informal)</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould2.politeness.ex2">Could I borrow your pen? (more polite)</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould2.politeness.ex3">May I borrow your pen? (very formal)</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Secondary Use: Possibility (can vs could vs might) -->
+            <!-- Section 4: Expressing Possibility: Can, Could, Might -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould2.possibility.title">Expressing Possibility: Can, Could, Might</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould2.possibility.title">II. 4. Expressing Possibility: Can, Could, Might</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🌤️</span>
-                        <span data-i18n="modalsCanCould2.possibility.subtitle">Degrees of certainty</span>
+                        <span class="EH-conjugation-subsection-icon">🌦️</span>
+                        <span data-i18n="canCould2.possibility.heading">Degrees of certainty</span>
                     </h3>
                     <table class="EH-conjugation-table">
-                        <thead><tr><th data-i18n="common.modal">Modal</th><th data-i18n="common.certainty">Certainty</th><th data-i18n="common.example">Example</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th data-i18n="canCould2.possibility.modalCol">Modal</th>
+                                <th data-i18n="canCould2.possibility.certaintyCol">Certainty</th>
+                                <th data-i18n="canCould2.possibility.exampleCol">Example</th>
+                            </tr>
+                        </thead>
                         <tbody>
-                            <tr><td><strong>can</strong></td><td data-i18n="modalsCanCould2.possibility.canCertainty">general / theoretical</td><td data-i18n="modalsCanCould2.possibility.canEx">It can be very cold in winter. (general truth)</td></tr>
-                            <tr><td><strong>could</strong></td><td data-i18n="modalsCanCould2.possibility.couldCertainty">specific but not certain (50%?)</td><td data-i18n="modalsCanCould2.possibility.couldEx">It could rain later. (possible)</td></tr>
-                            <tr><td><strong>might</strong></td><td data-i18n="modalsCanCould2.possibility.mightCertainty">less certain (30%?)</td><td data-i18n="modalsCanCould2.possibility.mightEx">It might rain, but I doubt it. (uncertain)</td></tr>
+                            <tr>
+                                <td>can</td>
+                                <td data-i18n="canCould2.possibility.canCertainty">general / theoretical</td>
+                                <td data-i18n="canCould2.possibility.canEx">It can be very cold in winter. (general truth)</td>
+                            </tr>
+                            <tr>
+                                <td>could</td>
+                                <td data-i18n="canCould2.possibility.couldCertainty">specific but not certain (50%?)</td>
+                                <td data-i18n="canCould2.possibility.couldEx">It could rain later. (possible)</td>
+                            </tr>
+                            <tr>
+                                <td>might</td>
+                                <td data-i18n="canCould2.possibility.mightCertainty">less certain (30%?)</td>
+                                <td data-i18n="canCould2.possibility.mightEx">It might rain, but I doubt it. (uncertain)</td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould2.possibility.compEx1">The weather can be unpredictable here. (general)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould2.possibility.compEx2">This could be the solution. (specific possibility)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsCanCould2.possibility.compEx3">She might be at home. (less sure)</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould2.possibility.genEx1">The weather can be unpredictable here. (general)</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould2.possibility.genEx2">This could be the solution. (specific possibility)</div>
+                        <div class="EH-conjugation-example" data-i18n="canCould2.possibility.genEx3">She might be at home. (less sure)</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- EXERCISES -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsCanCould2.exercises.title">Practice Exercises: Nuance & Politeness</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #d35400; margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="canCould2.exercises.title">Practice: Nuance & Politeness</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #d35400; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #d35400; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
@@ -198,462 +298,335 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-				<button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-					<span data-i18n="common.previousLesson">Previous Lesson</span>
-				</button>
-                <!-- <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-                    <span></span>
-                </button> -->
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-shouldoughtto-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson →</span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">← Return to Conjugation</span>
-                </button>
-            </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations (updated with combined exercise keys) -->
     <script>
         window.I18N = {
             en: {
                 common: {
                     siteName: "English Hub",
-                    modal: "Modal",
-                    usage: "Usage",
-                    example: "Example",
-                    examples: "Examples:",
-                    level: "Level",
-                    context: "Context",
-                    certainty: "Degree of certainty",
+                    previousLesson: "← Previous Lesson",
                     returnToConjugation: "← Return to Conjugation",
-					previousLesson: "← Previous Lesson",
                     nextLesson: "Next Lesson →"
                 },
                 footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
-                modalsCanCould2: {
-                    title: "Can & Could: Nuance, Comparison, and Politeness",
-                    subtitle: "Master subtle differences between can, could, and be able to; polite requests; and secondary uses",
-                    introduction: {
-                        title: "Going Deeper: Nuance & Comparison",
-                        whatAre: "Choosing the right modal",
-                        definitionTitle: "Why nuance matters:",
-                        definition: "The choice between can, could, and be able to can change the meaning, tone, or time reference of a sentence. This section explores those subtle differences.",
-                        coreIdeas: "Key ideas in part 2:",
-                        core1: "Comparing can, could, and be able to (ability, time, specificity).",
-                        core2: "Degrees of politeness – from standard to very formal.",
-                        core3: "Secondary uses: possibility with can, could, might."
+                canCould2: {
+                    title: {
+                        line1: "Can & Could II:",
+                        line2: "Nuance, Comparison, and Politeness",
+                        line3: "Subtle differences between can, could, and be able to; polite requests; and secondary uses.",
+                        line4: "lesson: 2/3"
                     },
-                    comparison: {
-                        title: "Comparing Can, Could, and Be Able To",
-                        subtitle: "How are they different?",
-                        canUse: "present ability, general possibility, informal permission",
-                        canEx: "I can swim. / It can rain here.",
-                        couldUse: "past ability, polite request, less certain possibility",
-                        couldEx: "I could run fast as a child. / Could you help?",
-                        beAbleToUse: "specific ability (especially past/future), after other modals, infinitive",
-                        beAbleToEx: "I was able to finish on time. / You will be able to drive.",
-                        noteTitle: "Key point:",
-                        note: "Use <strong>was/were able to</strong> for specific past achievements (not general ability). For general past ability, both <em>could</em> and <em>was/were able to</em> are possible."
+                    choice: {
+                        title: "II. 1. Choosing the Right Modal",
+                        heading: "Why nuance matters",
+                        desc: "The choice between can, could, and be able to can change the meaning, tone, or time reference of a sentence. This section explores those subtle differences.",
+                        keyIdeasTitle: "Key ideas in part 2:",
+                        key1: "Comparing can, could, and be able to (ability, time, specificity).",
+                        key2: "Degrees of politeness – from standard to very formal.",
+                        key3: "Secondary uses: possibility with can, could, might."
+                    },
+                    compare: {
+                        title: "II. 2. Comparing Can, Could, and Be Able To",
+                        heading: "How are they different?",
+                        modalCol: "Modal",
+                        usageCol: "Usage",
+                        exampleCol: "Example",
+                        canUsage: "present ability, general possibility, informal permission",
+                        canExample: "I can swim. / It can rain here.",
+                        couldUsage: "past ability, polite request, less certain possibility",
+                        couldExample: "I could run fast as a child. / Could you help?",
+                        beabletoUsage: "specific ability (especially past/future), after other modals, infinitive",
+                        beabletoExample: "I was able to finish on time. / You will be able to drive.",
+                        note: "💡 Key point: Use was/were able to for specific past achievements (not general ability). For general past ability, both could and was/were able to are possible."
                     },
                     politeness: {
-                        title: "Degrees of Politeness & Formality",
-                        subtitle: "How tone changes with modals",
-                        level1: "Standard",
-                        level2: "Polite",
-                        level3: "Very polite / formal",
-                        context1: "everyday, neutral",
-                        context2: "more polite, common",
-                        context3: "formal situations",
+                        title: "II. 3. Degrees of Politeness & Formality",
+                        heading: "How tone changes with modals",
+                        levelCol: "Level",
+                        exampleCol: "Example (request/permission)",
+                        contextCol: "Context",
+                        standardLevel: "Standard",
+                        standardEx: "Can you open the window?",
+                        standardContext: "everyday, neutral",
+                        politeLevel: "Polite",
+                        politeEx: "Could you open the window?",
+                        politeContext: "more polite, common",
+                        veryPoliteLevel: "Very polite/formal",
+                        veryPoliteEx: "Would you mind opening the window? / May I open the window?",
+                        veryPoliteContext: "formal situations",
                         ex1: "Can I borrow your pen? (informal)",
                         ex2: "Could I borrow your pen? (more polite)",
                         ex3: "May I borrow your pen? (very formal)"
                     },
                     possibility: {
-                        title: "Expressing Possibility: Can, Could, Might",
-                        subtitle: "Degrees of certainty",
+                        title: "II. 4. Expressing Possibility: Can, Could, Might",
+                        heading: "Degrees of certainty",
+                        modalCol: "Modal",
+                        certaintyCol: "Certainty",
+                        exampleCol: "Example",
                         canCertainty: "general / theoretical",
                         canEx: "It can be very cold in winter. (general truth)",
                         couldCertainty: "specific but not certain (50%?)",
                         couldEx: "It could rain later. (possible)",
                         mightCertainty: "less certain (30%?)",
                         mightEx: "It might rain, but I doubt it. (uncertain)",
-                        compEx1: "The weather can be unpredictable here. (general)",
-                        compEx2: "This could be the solution. (specific possibility)",
-                        compEx3: "She might be at home. (less sure)"
+                        genEx1: "The weather can be unpredictable here. (general)",
+                        genEx2: "This could be the solution. (specific possibility)",
+                        genEx3: "She might be at home. (less sure)"
                     },
                     exercises: {
-                        title: "Practice Exercises: Nuance & Politeness",
-                        // Combined keys for multiple choice (instruction + sentence)
-                        q1full: "Choose the best option for future ability:\nI ______ speak French fluently after this course.",
-                        q1a: "will be able to", q1b: "can", q1c: "could",
-                        q2full: "Choose for a specific past achievement:\nHe ______ finish the marathon despite the injury.",
-                        q2a: "could", q2b: "was able to", q2c: "can",
-                        q3full: "Choose the most polite request:\n______ you possibly help me with this box?",
-                        q3a: "Can", q3b: "Could", q3c: "Would",
-                        q4full: "Choose for a general truth:\nIt ______ be very windy on the coast.",
-                        q4a: "can", q4b: "could", q4c: "might",
-                        q5full: "Choose for a less certain possibility:\nDon't call yet; she ______ still be sleeping.",
-                        q5a: "can", q5b: "could", q5c: "must",
-                        q6full: "Choose the most formal permission:\n______ I leave early today?",
-                        q6a: "Can", q6b: "Could", q6c: "May",
-                        // Combined keys for fill-in-the-blank
-                        q7full: "Complete with a future form: We ______ (can) travel next year if we save money.",
-                        q8full: "Complete with a past specific form: I ______ (can) fix the leak yesterday. (specific achievement)",
-                        q9full: "Complete with a polite request modal: ______ you pass me the salt, please? (more polite than can)",
-                        // Sentence ordering instructions (already had)
-                        q10: "Arrange the polite question:",
-                        q11: "Arrange the future ability statement:",
-                        q12: "Arrange the possibility sentence (less certain):"
+                        title: "Practice: Nuance & Politeness",
+                        q1: "Choose the best option for future ability: I ______ speak French fluently after this course.",
+                        q1a: "will be able to",
+                        q1b: "can",
+                        q1c: "could",
+                        q2: "Choose for a specific past achievement: He ______ finish the marathon despite the injury.",
+                        q2a: "could",
+                        q2b: "was able to",
+                        q2c: "can",
+                        q3: "Choose the most polite request: ______ you possibly help me with this box?",
+                        q3a: "Can",
+                        q3b: "Could",
+                        q3c: "Would",
+                        q4: "Choose for a general truth: It ______ be very windy on the coast.",
+                        q4a: "can",
+                        q4b: "could",
+                        q4c: "might",
+                        q5: "Choose for a less certain possibility: Don't call yet; she ______ still be sleeping.",
+                        q5a: "can",
+                        q5b: "could",
+                        q5c: "must",
+                        q6: "Choose the most formal permission: ______ I leave early today?",
+                        q6a: "Can",
+                        q6b: "Could",
+                        q6c: "May",
+                        q7: "Complete with a future form: We ______ (can) travel next year if we save money.",
+                        q8: "Complete with a past specific form: I ______ (can) fix the leak yesterday. (specific achievement)",
+                        q9: "Complete with a polite request modal: ______ you pass me the salt, please? (more polite than can)"
                     }
                 }
             },
             fr: {
                 common: {
                     siteName: "English Hub",
-                    modal: "Modal",
-                    usage: "Usage",
-                    example: "Exemple",
-                    examples: "Exemples :",
-                    level: "Niveau",
-                    context: "Contexte",
-                    certainty: "Degré de certitude",
+                    previousLesson: "← Leçon Précédente",
                     returnToConjugation: "← Retour au Conjugaison",
-                    nextLesson: "Leçon suivante →",
-				previousLesson: "← Previous Lesson (Leçon Précédente)"
+                    nextLesson: "Leçon Suivante →"
                 },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
-                modalsCanCould2: {
-                    title: "Can & Could: Nuance, Comparison, and Politeness (Can & Could : nuance, comparaison et politesse)",
-                    subtitle: "Master subtle differences between can, could, and be able to; polite requests; and secondary uses (Maîtrisez les nuances entre can, could et be able to ; les demandes polies ; et les usages secondaires)",
-                    introduction: {
-                        title: "Going Deeper: Nuance & Comparison (Approfondir : nuance et comparaison)",
-                        whatAre: "Choosing the right modal (Choisir le bon modal)",
-                        definitionTitle: "Why nuance matters: (Pourquoi la nuance est importante :)",
-                        definition: "The choice between can, could, and be able to can change the meaning, tone, or time reference of a sentence. This section explores those subtle differences. (Le choix entre can, could et be able to peut changer le sens, le ton ou le temps de la phrase. Cette section explore ces différences subtiles.)",
-                        coreIdeas: "Key ideas in part 2: (Idées clés de la partie 2 :)",
-                        core1: "Comparing can, could, and be able to (ability, time, specificity). (Comparer can, could et be able to (capacité, temps, spécificité).)",
-                        core2: "Degrees of politeness – from standard to very formal. (Degrés de politesse – du standard au très formel.)",
-                        core3: "Secondary uses: possibility with can, could, might. (Usages secondaires : possibilité avec can, could, might.)"
+                canCould2: {
+                    title: {
+                        line1: "Can & Could II :",
+                        line2: "Nuance, comparaison et politesse",
+                        line3: "Différences subtiles entre can, could et be able to ; requêtes polies ; usages secondaires.",
+                        line4: "leçon : 2/3"
                     },
-                    comparison: {
-                        title: "Comparing Can, Could, and Be Able To (Comparer Can, Could et Be Able To)",
-                        subtitle: "How are they different? (En quoi sont-ils différents ?)",
-                        canUse: "present ability, general possibility, informal permission (capacité présente, possibilité générale, permission informelle)",
-                        canEx: "I can swim. / It can rain here. (Je sais nager. / Il peut pleuvoir ici.)",
-                        couldUse: "past ability, polite request, less certain possibility (capacité passée, demande polie, possibilité moins certaine)",
-                        couldEx: "I could run fast as a child. / Could you help? (Je pouvais courir vite enfant. / Pourriez-vous m'aider ?)",
-                        beAbleToUse: "specific ability (especially past/future), after other modals, infinitive (capacité spécifique – surtout passé/futur, après d'autres modaux, infinitif)",
-                        beAbleToEx: "I was able to finish on time. / You will be able to drive. (J'ai pu finir à temps. / Vous pourrez conduire.)",
-                        noteTitle: "Key point: (Point clé :)",
-                        note: "Use <strong>was/were able to</strong> for specific past achievements (not general ability). For general past ability, both <em>could</em> and <em>was/were able to</em> are possible. (Utilisez <strong>was/were able to</strong> pour des réalisations passées spécifiques (pas une capacité générale). Pour une capacité générale passée, <em>could</em> et <em>was/were able to</em> sont possibles.)"
+                    choice: {
+                        title: "II. 1. Choisir le bon modal",
+                        heading: "Pourquoi la nuance compte",
+                        desc: "Le choix entre can, could et be able to peut changer le sens, le ton ou la référence temporelle d'une phrase. Cette section explore ces différences subtiles.",
+                        keyIdeasTitle: "Idées clés de la partie 2 :",
+                        key1: "Comparer can, could et be able to (capacité, temps, spécificité).",
+                        key2: "Degrés de politesse – du courant au très formel.",
+                        key3: "Usages secondaires : possibilité avec can, could, might."
+                    },
+                    compare: {
+                        title: "II. 2. Comparer Can, Could et Be Able To",
+                        heading: "Quelles sont les différences ?",
+                        modalCol: "Modal",
+                        usageCol: "Usage",
+                        exampleCol: "Exemple",
+                        canUsage: "capacité présente, possibilité générale, permission informelle",
+                        canExample: "Je peux nager. / Il peut pleuvoir ici.",
+                        couldUsage: "capacité passée, demande polie, possibilité moins certaine",
+                        couldExample: "Je pouvais courir vite enfant. / Pourriez-vous aider ?",
+                        beabletoUsage: "capacité spécifique (surtout passée/future), après d'autres modaux, infinitif",
+                        beabletoExample: "J'ai pu finir à temps. / Vous pourrez conduire.",
+                        note: "💡 Point clé : Utilisez was/were able to pour des réalisations passées spécifiques (pas une capacité générale). Pour une capacité passée générale, could et was/were able to sont tous deux possibles."
                     },
                     politeness: {
-                        title: "Degrees of Politeness & Formality (Degrés de politesse et formalité)",
-                        subtitle: "How tone changes with modals (Comment le ton change avec les modaux)",
-                        level1: "Standard",
-                        level2: "Polite",
-                        level3: "Very polite / formal",
-                        context1: "everyday, neutral (quotidien, neutre)",
-                        context2: "more polite, common (plus poli, courant)",
-                        context3: "formal situations (situations formelles)",
-                        ex1: "Can I borrow your pen? (informal) (Puis-je emprunter ton stylo ? – informel)",
-                        ex2: "Could I borrow your pen? (more polite) (Pourrais-je emprunter ton stylo ? – plus poli)",
-                        ex3: "May I borrow your pen? (very formal) (Puis-je emprunter votre stylo ? – très formel)"
+                        title: "II. 3. Degrés de politesse et de formalité",
+                        heading: "Comment le ton change avec les modaux",
+                        levelCol: "Niveau",
+                        exampleCol: "Exemple (demande/permission)",
+                        contextCol: "Contexte",
+                        standardLevel: "Courant",
+                        standardEx: "Peux-tu ouvrir la fenêtre ?",
+                        standardContext: "quotidien, neutre",
+                        politeLevel: "Poli",
+                        politeEx: "Pourriez-vous ouvrir la fenêtre ?",
+                        politeContext: "plus poli, courant",
+                        veryPoliteLevel: "Très poli/formel",
+                        veryPoliteEx: "Cela vous dérangerait-il d'ouvrir la fenêtre ? / Puis-je ouvrir la fenêtre ?",
+                        veryPoliteContext: "situations formelles",
+                        ex1: "Puis-je emprunter ton stylo ? (informel)",
+                        ex2: "Pourrais-je emprunter votre stylo ? (plus poli)",
+                        ex3: "Puis-je emprunter votre stylo ? (très formel)"
                     },
                     possibility: {
-                        title: "Expressing Possibility: Can, Could, Might (Exprimer la possibilité : Can, Could, Might)",
-                        subtitle: "Degrees of certainty (Degrés de certitude)",
-                        canCertainty: "general / theoretical (général / théorique)",
-                        canEx: "It can be very cold in winter. (general truth) (Il peut faire très froid en hiver – vérité générale)",
-                        couldCertainty: "specific but not certain (50%?) (spécifique mais pas certain – 50 % ?)",
-                        couldEx: "It could rain later. (possible) (Il pourrait pleuvoir plus tard – possible)",
-                        mightCertainty: "less certain (30%?) (moins certain – 30 % ?)",
-                        mightEx: "It might rain, but I doubt it. (uncertain) (Il se pourrait qu'il pleuve, mais j'en doute – incertain)",
-                        compEx1: "The weather can be unpredictable here. (general) (Le temps peut être imprévisible ici – général)",
-                        compEx2: "This could be the solution. (specific possibility) (Cela pourrait être la solution – possibilité spécifique)",
-                        compEx3: "She might be at home. (less sure) (Elle est peut-être chez elle – moins sûr)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises: Nuance & Politeness (Exercices pratiques : nuance et politesse)",
-                        q1full: "Choose the best option for future ability:\nI ______ speak French fluently after this course. (Choisissez la meilleure option pour une capacité future : Je ______ parler français couramment après ce cours.)",
-                        q1a: "will be able to (pourrai)", q1b: "can (peux)", q1c: "could (pourrais)",
-                        q2full: "Choose for a specific past achievement:\nHe ______ finish the marathon despite the injury. (Choisissez pour un accomplissement passé spécifique : Il ______ finir le marathon malgré sa blessure.)",
-                        q2a: "could (pouvait)", q2b: "was able to (a pu)", q2c: "can (peut)",
-                        q3full: "Choose the most polite request:\n______ you possibly help me with this box? (Choisissez la demande la plus polie : ______ vous, par hasard, m'aider avec cette boîte ?)",
-                        q3a: "Can (Peux)", q3b: "Could (Pourriez)", q3c: "Would (Voudriez)",
-                        q4full: "Choose for a general truth:\nIt ______ be very windy on the coast. (Choisissez pour une vérité générale : Il ______ y avoir beaucoup de vent sur la côte.)",
-                        q4a: "can (peut)", q4b: "could (pourrait)", q4c: "might (se pourrait)",
-                        q5full: "Choose for a less certain possibility:\nDon't call yet; she ______ still be sleeping. (Choisissez pour une possibilité moins certaine : N'appelle pas encore ; elle ______ encore dormir.)",
-                        q5a: "can (peut)", q5b: "could (pourrait)", q5c: "must (doit)",
-                        q6full: "Choose the most formal permission:\n______ I leave early today? (Choisissez la permission la plus formelle : ______ je partir tôt aujourd'hui ?)",
-                        q6a: "Can (Puis)", q6b: "Could (Pourrais)", q6c: "May (Puis-je – formel)",
-                        q7full: "Complete with a future form: We ______ (can) travel next year if we save money. (Complétez avec une forme future : Nous ______ voyager l'année prochaine si nous économisons.)",
-                        q8full: "Complete with a past specific form: I ______ (can) fix the leak yesterday. (specific achievement) (Complétez avec une forme spécifique passée : J' ______ réparer la fuite hier. – accomplissement spécifique)",
-                        q9full: "Complete with a polite request modal: ______ you pass me the salt, please? (more polite than can) (______ vous me passer le sel, s'il vous plaît ? – plus poli que can)",
-                        q10: "Arrange the polite question: (Remettez la question polie dans l'ordre :)",
-                        q11: "Arrange the future ability statement: (Remettez la phrase de capacité future :)",
-                        q12: "Arrange the possibility sentence (less certain): (Remettez la phrase de possibilité (moins certaine) :)"
+                        title: "II. 4. Exprimer la possibilité : Can, Could, Might",
+                        heading: "Degrés de certitude",
+                        modalCol: "Modal",
+                        certaintyCol: "Certitude",
+                        exampleCol: "Exemple",
+                        canCertainty: "général / théorique",
+                        canEx: "Il peut faire très froid en hiver. (vérité générale)",
+                        couldCertainty: "spécifique mais pas certain (50 % ?)",
+                        couldEx: "Il pourrait pleuvoir plus tard. (possible)",
+                        mightCertainty: "moins certain (30 % ?)",
+                        mightEx: "Il se peut qu'il pleuve, mais j'en doute. (incertain)",
+                        genEx1: "Le temps peut être imprévisible ici. (général)",
+                        genEx2: "Cela pourrait être la solution. (possibilité spécifique)",
+                        genEx3: "Elle est peut-être chez elle. (moins sûr)"
                     }
                 }
             },
             ar: {
                 common: {
                     siteName: "English Hub",
-                    modal: "Modal",
-                    usage: "الاستخدام",
-                    example: "مثال",
-                    examples: "أمثلة:",
-                    level: "مستوى",
-                    context: "السياق",
-                    certainty: "درجة اليقين",
-                    returnToConjugation: "← العودة إلى التصريف",
-                    nextLesson: "الدرس التالي →",
-					previousLesson: "الدرس السابق ← "
+                    previousLesson: "الدرس السابق← ",
+                    returnToConjugation: "العودة إلى التصريف← ",
+                    nextLesson: "الدرس التالي →"
                 },
                 footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
-                modalsCanCould2: {
-                    title: "Can & Could: Nuance, Comparison, and Politeness (Can & Could: الفروق الدقيقة والمقارنة والأدب)",
-                    subtitle: "Master subtle differences between can, could, and be able to; polite requests; and secondary uses (أتقن الفروق الدقيقة بين can و could و be able to؛ والطلبات المهذبة؛ والاستخدامات الثانوية)",
-                    introduction: {
-                        title: "Going Deeper: Nuance & Comparison (التعمق: الفروق الدقيقة والمقارنة)",
-                        whatAre: "Choosing the right modal (اختيار الفعل المساعد المناسب)",
-                        definitionTitle: "Why nuance matters: (لماذا الفروق الدقيقة مهمة؟)",
-                        definition: "The choice between can, could, and be able to can change the meaning, tone, or time reference of a sentence. This section explores those subtle differences. (الاختيار بين can و could و be able to يمكن أن يغير المعنى أو النبرة أو الزمن المرجعي للجملة. يستكشف هذا القسم هذه الاختلافات الدقيقة.)",
-                        coreIdeas: "Key ideas in part 2: (الأفكار الرئيسية في الجزء الثاني:)",
-                        core1: "Comparing can, could, and be able to (ability, time, specificity). (مقارنة can و could و be able to (القدرة، الزمن، الخصوصية).)",
-                        core2: "Degrees of politeness – from standard to very formal. (مستويات الأدب – من المعياري إلى الرسمي جدًا.)",
-                        core3: "Secondary uses: possibility with can, could, might. (الاستخدامات الثانوية: الإمكانية مع can و could و might.)"
+                canCould2: {
+                    title: {
+                        line1: "Can & Could :2",
+                        line2: "الفروق الدقيقة والمقارنة والتهذيب",
+                        line3: "الفروق الدقيقة بين can و could و be able to؛ الطلبات المهذبة؛ والاستخدامات الثانوية.",
+                        line4: "الدرس: 2/3"
                     },
-                    comparison: {
-                        title: "Comparing Can, Could, and Be Able To (مقارنة Can و Could و Be Able To)",
-                        subtitle: "How are they different? (كيف تختلف؟)",
-                        canUse: "present ability, general possibility, informal permission (قدرة في الحاضر، إمكانية عامة، إذن غير رسمي)",
-                        canEx: "I can swim. / It can rain here. (أستطيع السباحة. / يمكن أن تمطر هنا.)",
-                        couldUse: "past ability, polite request, less certain possibility (قدرة في الماضي، طلب مهذب، إمكانية أقل يقينًا)",
-                        couldEx: "I could run fast as a child. / Could you help? (كنت أستطيع الركض بسرعة عندما كنت طفلاً. / هل يمكنك المساعدة؟)",
-                        beAbleToUse: "specific ability (especially past/future), after other modals, infinitive (قدرة محددة (خاصة في الماضي/المستقبل)، بعد أفعال مساعدة أخرى، المصدر)",
-                        beAbleToEx: "I was able to finish on time. / You will be able to drive. (تمكنت من إنهاء العمل في الوقت المحدد. / سوف تكون قادرًا على القيادة.)",
-                        noteTitle: "Key point: (نقطة رئيسية:)",
-                        note: "Use <strong>was/were able to</strong> for specific past achievements (not general ability). For general past ability, both <em>could</em> and <em>was/were able to</em> are possible. (استخدم <strong>was/were able to</strong> للإنجازات المحددة في الماضي (وليس القدرة العامة). للقدرة العامة في الماضي، يمكن استخدام كل من <em>could</em> و <em>was/were able to</em>.)"
+                    choice: {
+                        title: "II. 1. اختيار الفعل الناقص المناسب",
+                        heading: "لماذا الفروق الدقيقة مهمة",
+                        desc: "يمكن أن يغير الاختيار بين can و could و be able to المعنى أو النبرة أو المرجع الزمني للجملة. يستكشف هذا القسم تلك الفروق الدقيقة.",
+                        keyIdeasTitle: "الأفكار الرئيسية في الجزء الثاني:",
+                        key1: "مقارنة can و could و be able to (القدرة، الزمن، التحديد).",
+                        key2: "درجات التهذيب – من العادي إلى الرسمي جدًا.",
+                        key3: "الاستخدامات الثانوية: الإمكانية مع can و could و might."
+                    },
+                    compare: {
+                        title: "II. 2. مقارنة Can و Could و Be Able To",
+                        heading: "كيف تختلف؟",
+                        modalCol: "الفعل الناقص",
+                        usageCol: "الاستخدام",
+                        exampleCol: "مثال",
+                        canUsage: "قدرة حالية، إمكانية عامة، إذن غير رسمي",
+                        canExample: "أستطيع السباحة. / يمكن أن تمطر هنا.",
+                        couldUsage: "قدرة ماضية، طلب مهذب، إمكانية أقل تأكيدًا",
+                        couldExample: "كنت أستطيع الركض بسرعة وأنا طفل. / هل يمكنك المساعدة؟",
+                        beabletoUsage: "قدرة محددة (خاصة الماضية/المستقبلية)، بعد الأفعال الناقصة الأخرى، المصدر",
+                        beabletoExample: "تمكنت من الانتهاء في الوقت المحدد. / ستتمكن من القيادة.",
+                        note: "💡 نقطة أساسية: استخدم was/were able to للإنجازات الماضية المحددة (وليس القدرة العامة). للقدرة الماضية العامة، يمكن استخدام كل من could و was/were able to."
                     },
                     politeness: {
-                        title: "Degrees of Politeness & Formality (مستويات الأدب والرسمية)",
-                        subtitle: "How tone changes with modals (كيف يتغير النبر مع الأفعال المساعدة)",
-                        level1: "Standard",
-                        level2: "Polite",
-                        level3: "Very polite / formal",
-                        context1: "everyday, neutral (يومي، محايد)",
-                        context2: "more polite, common (أكثر تهذيبًا، شائع)",
-                        context3: "formal situations (مواقف رسمية)",
-                        ex1: "Can I borrow your pen? (informal) (هل يمكنني استعارة قلمك؟ – غير رسمي)",
-                        ex2: "Could I borrow your pen? (more polite) (هل لي استعارة قلمك؟ – أكثر تهذيبًا)",
-                        ex3: "May I borrow your pen? (very formal) (هل يُسمح لي باستعارة قلمك؟ – رسمي جدًا)"
+                        title: "II. 3. درجات التهذيب والرسمية",
+                        heading: "كيف تتغير النبرة مع الأفعال الناقصة",
+                        levelCol: "المستوى",
+                        exampleCol: "مثال (طلب/إذن)",
+                        contextCol: "السياق",
+                        standardLevel: "عادي",
+                        standardEx: "هل يمكنك فتح النافذة؟",
+                        standardContext: "يومي، محايد",
+                        politeLevel: "مهذب",
+                        politeEx: "هل يمكنك فتح النافذة؟",
+                        politeContext: "أكثر تهذيبًا، شائع",
+                        veryPoliteLevel: "مهذب جدًا/رسمي",
+                        veryPoliteEx: "هل تمانع فتح النافذة؟ / هل لي بفتح النافذة؟",
+                        veryPoliteContext: "مواقف رسمية",
+                        ex1: "هل يمكنني استعارة قلمك؟ (غير رسمي)",
+                        ex2: "هل يمكنني استعارة قلمك؟ (أكثر تهذيبًا)",
+                        ex3: "هل لي باستعارة قلمك؟ (رسمي جدًا)"
                     },
                     possibility: {
-                        title: "Expressing Possibility: Can, Could, Might (التعبير عن الإمكانية: Can, Could, Might)",
-                        subtitle: "Degrees of certainty (درجات اليقين)",
-                        canCertainty: "general / theoretical (عام / نظري)",
-                        canEx: "It can be very cold in winter. (general truth) (يمكن أن يكون الجو باردًا جدًا في الشتاء – حقيقة عامة)",
-                        couldCertainty: "specific but not certain (50%?) (محدد لكن غير مؤكد – 50٪؟)",
-                        couldEx: "It could rain later. (possible) (قد تمطر لاحقًا – محتمل)",
-                        mightCertainty: "less certain (30%?) (أقل يقينًا – 30٪؟)",
-                        mightEx: "It might rain, but I doubt it. (uncertain) (ربما تمطر، لكنني أشك في ذلك – غير مؤكد)",
-                        compEx1: "The weather can be unpredictable here. (general) (الطقس يمكن أن لا يمكن التنبؤ به هنا – عام)",
-                        compEx2: "This could be the solution. (specific possibility) (قد يكون هذا هو الحل – إمكانية محددة)",
-                        compEx3: "She might be at home. (less sure) (قد تكون في المنزل – أقل يقينًا)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises: Nuance & Politeness (تمارين تطبيقية: الفروق الدقيقة والأدب)",
-                        q1full: "Choose the best option for future ability:\nI ______ speak French fluently after this course. (اختر الخيار الأفضل للقدرة في المستقبل: أنا ______ التحدث بالفرنسية بطلاقة بعد هذه الدورة.)",
-                        q1a: "will be able to (سأكون قادرًا على)", q1b: "can (أستطيع)", q1c: "could (يمكنني)",
-                        q2full: "Choose for a specific past achievement:\nHe ______ finish the marathon despite the injury. (اختر للإنجاز المحدد في الماضي: هو ______ إنهاء الماراثون على الرغم من الإصابة.)",
-                        q2a: "could (كان بإمكانه)", q2b: "was able to (تمكن من)", q2c: "can (يستطيع)",
-                        q3full: "Choose the most polite request:\n______ you possibly help me with this box? (اختر الطلب الأكثر تهذيبًا: ______ مساعدتي بهذا الصندوق؟)",
-                        q3a: "Can (هل يمكنك)", q3b: "Could (هل لك)", q3c: "Would (هل تود)",
-                        q4full: "Choose for a general truth:\nIt ______ be very windy on the coast. (اختر لحقيقة عامة: ______ يكون الجو عاصفًا جدًا على الساحل.)",
-                        q4a: "can (يمكن أن)", q4b: "could (قد)", q4c: "might (ربما)",
-                        q5full: "Choose for a less certain possibility:\nDon't call yet; she ______ still be sleeping. (اختر لإمكانية أقل يقينًا: لا تتصل بعد؛ هي ______ لا تزال نائمة.)",
-                        q5a: "can (يمكن أن)", q5b: "could (قد)", q5c: "must (لابد أن)",
-                        q6full: "Choose the most formal permission:\n______ I leave early today? (اختر الإذن الأكثر رسمية: ______ المغادرة مبكرًا اليوم؟)",
-                        q6a: "Can (هل يمكنني)", q6b: "Could (هل لي)", q6c: "May (هل يُسمح لي)",
-                        q7full: "Complete with a future form: We ______ (can) travel next year if we save money. (أكمل بصيغة المستقبل: نحن ______ السفر العام المقبل إذا ادخرنا المال.)",
-                        q8full: "Complete with a past specific form: I ______ (can) fix the leak yesterday. (specific achievement) (أكمل بصيغة محددة للماضي: أنا ______ إصلاح التسرب أمس. (إنجاز محدد))",
-                        q9full: "Complete with a polite request modal: ______ you pass me the salt, please? (more polite than can) (______ تمرر لي الملح، من فضلك؟ (أكثر تهذيبًا من can))",
-                        q10: "Arrange the polite question: (رتب السؤال المهذب:)",
-                        q11: "Arrange the future ability statement: (رتب جملة القدرة المستقبلية:)",
-                        q12: "Arrange the possibility sentence (less certain): (رتب جملة الإمكانية (الأقل يقينًا):)"
+                        title: "II. 4. التعبير عن الإمكانية: Can، Could، Might",
+                        heading: "درجات اليقين",
+                        modalCol: "الفعل الناقص",
+                        certaintyCol: "اليقين",
+                        exampleCol: "مثال",
+                        canCertainty: "عام / نظري",
+                        canEx: "يمكن أن يكون الجو باردًا جدًا في الشتاء. (حقيقة عامة)",
+                        couldCertainty: "محدد لكن غير مؤكد (50%؟)",
+                        couldEx: "يمكن أن تمطر لاحقًا. (محتمل)",
+                        mightCertainty: "أقل تأكيدًا (30%؟)",
+                        mightEx: "قد تمطر، لكنني أشك في ذلك. (غير مؤكد)",
+                        genEx1: "يمكن أن يكون الطقس غير متوقع هنا. (عام)",
+                        genEx2: "هذا يمكن أن يكون الحل. (إمكانية محددة)",
+                        genEx3: "قد تكون في المنزل. (أقل تأكيدًا)"
                     }
                 }
             }
         };
     </script>
-    
-    <script src="scripts/common-i18n.js"></script>
-    <!-- Modular exercise engine (replaces exercise.js) -->
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
-    
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ---------- Build exercises & get answer keys ----------
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'modalsCanCould2.exercises.q1full',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould2.exercises.q1a' },
-                        { value: 'b', labelKey: 'modalsCanCould2.exercises.q1b' },
-                        { value: 'c', labelKey: 'modalsCanCould2.exercises.q1c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'modalsCanCould2.exercises.q2full',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould2.exercises.q2a' },
-                        { value: 'b', labelKey: 'modalsCanCould2.exercises.q2b' },
-                        { value: 'c', labelKey: 'modalsCanCould2.exercises.q2c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsCanCould2.exercises.q3full',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould2.exercises.q3a' },
-                        { value: 'b', labelKey: 'modalsCanCould2.exercises.q3b' },
-                        { value: 'c', labelKey: 'modalsCanCould2.exercises.q3c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsCanCould2.exercises.q4full',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould2.exercises.q4a' },
-                        { value: 'b', labelKey: 'modalsCanCould2.exercises.q4b' },
-                        { value: 'c', labelKey: 'modalsCanCould2.exercises.q4c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'modalsCanCould2.exercises.q5full',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould2.exercises.q5a' },
-                        { value: 'b', labelKey: 'modalsCanCould2.exercises.q5b' },
-                        { value: 'c', labelKey: 'modalsCanCould2.exercises.q5c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsCanCould2.exercises.q6full',
-                    options: [
-                        { value: 'a', labelKey: 'modalsCanCould2.exercises.q6a' },
-                        { value: 'b', labelKey: 'modalsCanCould2.exercises.q6b' },
-                        { value: 'c', labelKey: 'modalsCanCould2.exercises.q6c' }
-                    ],
-                    correctAnswer: 'c'
-                }
+                { questionTextKey: 'canCould2.exercises.q1', options: [{ value: 'a', labelKey: 'canCould2.exercises.q1a' }, { value: 'b', labelKey: 'canCould2.exercises.q1b' }, { value: 'c', labelKey: 'canCould2.exercises.q1c' }], correctAnswer: 'a' },
+                { questionTextKey: 'canCould2.exercises.q2', options: [{ value: 'a', labelKey: 'canCould2.exercises.q2a' }, { value: 'b', labelKey: 'canCould2.exercises.q2b' }, { value: 'c', labelKey: 'canCould2.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'canCould2.exercises.q3', options: [{ value: 'a', labelKey: 'canCould2.exercises.q3a' }, { value: 'b', labelKey: 'canCould2.exercises.q3b' }, { value: 'c', labelKey: 'canCould2.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'canCould2.exercises.q4', options: [{ value: 'a', labelKey: 'canCould2.exercises.q4a' }, { value: 'b', labelKey: 'canCould2.exercises.q4b' }, { value: 'c', labelKey: 'canCould2.exercises.q4c' }], correctAnswer: 'a' },
+                { questionTextKey: 'canCould2.exercises.q5', options: [{ value: 'a', labelKey: 'canCould2.exercises.q5a' }, { value: 'b', labelKey: 'canCould2.exercises.q5b' }, { value: 'c', labelKey: 'canCould2.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'canCould2.exercises.q6', options: [{ value: 'a', labelKey: 'canCould2.exercises.q6a' }, { value: 'b', labelKey: 'canCould2.exercises.q6b' }, { value: 'c', labelKey: 'canCould2.exercises.q6c' }], correctAnswer: 'c' }
             ]
         });
-        
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'modalsCanCould2.exercises.q7full',
-                    answers: ['will be able to']
-                },
-                {
-                    questionTextKey: 'modalsCanCould2.exercises.q8full',
-                    answers: ['was able to']
-                },
-                {
-                    questionTextKey: 'modalsCanCould2.exercises.q9full',
-                    answers: ['could']
-                }
+                { questionTextKey: 'canCould2.exercises.q7', answers: ['will be able to'] },
+                { questionTextKey: 'canCould2.exercises.q8', answers: ['was able to'] },
+                { questionTextKey: 'canCould2.exercises.q9', answers: ['could','Could'] }
             ]
         });
-        
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'modalsCanCould2.exercises.q10',
-                    words: ['Could', 'you', 'help', 'me', '?'],
-                    correctSentence: 'Could you help me ?'
-                },
-                {
-                    questionTextKey: 'modalsCanCould2.exercises.q11',
-                    words: ['I', 'will', 'be able to', 'drive', '.'],
-                    correctSentence: 'I will be able to drive .'
-                },
-                {
-                    questionTextKey: 'modalsCanCould2.exercises.q12',
-                    words: ['It', 'might', 'rain', '.'],
-                    correctSentence: 'It might rain .'
-                }
+                { questionTextKey: 'canCould2.exercises.q10', words: ['Could','you','help','me','?'], correctSentence: 'Could you help me ?' },
+                { questionTextKey: 'canCould2.exercises.q11', words: ['I','will','be','able','to','drive','.'], correctSentence: 'I will be able to drive .' },
+                { questionTextKey: 'canCould2.exercises.q12', words: ['It','might','rain','.'], correctSentence: 'It might rain .' }
             ]
         });
-        
-        // ---------- Check & init functions ----------
         function checkAllExercises() {
-            let totalScore = 0;
-            let totalQuestions = 0;
-            
+            let totalScore = 0, totalQuestions = 0;
             totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
             totalQuestions += 6;
             totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
             totalQuestions += 3;
             totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
             totalQuestions += 3;
-            
             const scoreEl = document.getElementById('score-value');
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered nuance and politeness!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit can/could nuances.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
+            EHScoreEffects.show(totalScore, totalQuestions);
         }
-        
         document.addEventListener('DOMContentLoaded', function() {
-            // Init drag-and-drop for ordering (the builder only creates the HTML)
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-        
-        // ---------- i18n rendering (handles keys with HTML tags) ----------
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
-                document.querySelectorAll('[data-i18n]').forEach(el => {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
-                        el.textContent = translation;
-                    }
+                    if (translation) el.textContent = translation;
                 });
             }
             window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });

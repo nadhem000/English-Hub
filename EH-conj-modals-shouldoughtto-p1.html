@@ -3,777 +3,662 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Should & Ought to: Core Concepts & Primary Uses - English Hub</title>
-    
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>Should & Ought to I: Core Concepts & Primary Uses - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
+        /* Fresh sage & lavender palette – distinct from previous lesson files */
         :root {
-            --bg-gradient: linear-gradient(135deg, #4a148c, #6a1b9a, #8e24aa);
-            --title-color: #4a148c;
-            --primary: #6a1b9a;
-            --primary-hover: #4a148c;
-            --primary-light: #ce93d8;
-            --accent: #ba68c8;
-            --rule-bg: #f3e5f5;
-            --rule-border: #ce93d8;
-            --example-bg: #e1bee7;
-            --example-border: #ce93d8;
-            --exercise-number-gradient: linear-gradient(135deg, #6a1b9a, #ce93d8);
-            --nav-btn-bg: #6a1b9a;
-            --nav-btn-hover: #4a148c;
-            --nav-back-btn-bg: #ba68c8;
-            --nav-back-btn-color: white;
-            --nav-back-btn-hover: #6a1b9a;
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
-            --correct-bg: #d4edda;
-            --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --bg-gradient: linear-gradient(135deg, #e9eef5, #dfe6f0, #cddae8, #becde0);
+            --content-bg: #fcfcfd;
+            --card-bg: #ffffff;
+            --subsection-bg: #f8fafc;
+            --rule-bg: #f1f4f9;
+            --example-bg: #ecf1f7;
+            --table-stripe: #f4f7fb;
+            --title-color: #3e3b6b;
+            --text-color: #2c3e4e;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #6c63a4;
+            --primary-hover: #5a5290;
+            --primary-light: #847bc2;
+            --accent: #7f77b5;
+            --exercise-number-gradient: linear-gradient(135deg, #6c63a4, #4e4880);
+            --rule-border: #6c63a4;
+            --example-border: #6c63a4;
+            --nav-btn-bg: #6c63a4;
+            --nav-btn-hover: #4e4880;
+            --nav-back-btn-bg: #7f77b5;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #6c63a4;
+            --refract-divider-color: #b2abd6;
+            --refract-translation-bg: #f0eff9;
+            --refract-translation-border: #6c63a4;
+            --refract-english-color: #2c3e4e;
+            --section-divider: #dce3ec;
+            --card-border: #dce3ec;
+            --input-border: #c2cbdc;
+            --dashed-border: #c2cbdc;
+            --table-border: #cdd6e4;
+            --correct-bg: #e1f7e8;
+            --correct-color: #1f6e43;
+            --correct-border: #a3d6b0;
+            --incorrect-bg: #fee9e7;
+            --incorrect-color: #b13e3e;
+            --incorrect-border: #fcc2bc;
+            --neutral-bg: #f4f2fc;
+            --neutral-color: #5d577a;
+            --neutral-border: #cdc6e4;
+            --empty-input-border: #cdc6e4;
+            --empty-input-bg: #ffffff;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #6c63a4;
+            --language-selector-color: #2c3e4e;
+            --score-flash-high-bg: #c8e6d9;
+            --score-flash-mid-bg: #fff3ce;
+            --score-flash-low-bg: #ffe0db;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #1e1b3a, #2a2652, #35306a, #3f3a7a);
+            --content-bg: #1e1b2e;
+            --card-bg: #2a2648;
+            --subsection-bg: #2a2648;
+            --rule-bg: #1e1b2e;
+            --example-bg: #1e1b2e;
+            --table-stripe: #252242;
+            --title-color: #cfcaf0;
+            --text-color: #e2e0f0;
+            --header-text: #e2e0f0;
+            --header-text-light: #bcb8dc;
+            --primary: #8f86d4;
+            --primary-hover: #a399e8;
+            --primary-light: #8f86d4;
+            --accent: #8f86d4;
+            --rule-border: #8f86d4;
+            --example-border: #8f86d4;
+            --exercise-number-gradient: linear-gradient(135deg, #8f86d4, #6c63a4);
+            --nav-btn-bg: #8f86d4;
+            --nav-btn-hover: #6c63a4;
+            --nav-back-btn-bg: #a399e8;
+            --nav-back-btn-color: #15122e;
+            --nav-back-btn-hover: #8f86d4;
+            --refract-divider-color: #a89fdf;
+            --refract-translation-bg: #353066;
+            --refract-translation-border: #a89fdf;
+            --refract-english-color: #eae6fc;
+            --section-divider: #39347a;
+            --card-border: #39347a;
+            --input-border: #5852a0;
+            --dashed-border: #5852a0;
+            --table-border: #45407a;
+            --white: #eceafc;
+            --correct-bg: #2a5e44;
+            --correct-color: #b5e6c5;
+            --correct-border: #3b9e6e;
+            --incorrect-bg: #632c2c;
+            --incorrect-color: #f7bfbf;
+            --incorrect-border: #b45a5a;
+            --neutral-bg: #2f2c5a;
+            --neutral-color: #d4cff0;
+            --neutral-border: #625baa;
+            --empty-input-border: #625baa;
+            --empty-input-bg: #1e1b2e;
+            --language-selector-bg: #2a2648;
+            --language-selector-border: #8f86d4;
+            --language-selector-color: #e2e0f0;
+            --score-flash-high-bg: #2c6e4a;
+            --score-flash-mid-bg: #bd882a;
+            --score-flash-low-bg: #aa4a3a;
         }
     </style>
-    <link rel="stylesheet" href="styles/style-conjugation.css">
 </head>
 <body>
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="ar">العربية</option>
-        </select>
-    </div>
-    
-    <div class="EH-site-header">
-        <a href="index.html" class="EH-site-logo-link" title="Main Page">
-            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
-        </a>
-        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
-    </div>
-    
-    <div class="EH-conjugation-container">
-        <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="modalsShouldOughtTo1.title">Should & Ought to: Core Concepts & Primary Uses</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="modalsShouldOughtTo1.subtitle">Learn how to use should and ought to to express advice, obligation, and expectation</p>
-        </header>
-        
-        <div class="EH-conjugation-content">
-            <!-- Introduction -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsShouldOughtTo1.introduction.title">Introduction to Should & Ought to</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔰</span>
-                        <span data-i18n="modalsShouldOughtTo1.introduction.whatAre">What are modals "should" and "ought to"?</span>
-                    </h3>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsShouldOughtTo1.introduction.definitionTitle">Definition:</div>
-                        <p data-i18n="modalsShouldOughtTo1.introduction.definition">"Should" and "ought to" are modal verbs used to give advice, express weak obligation, or talk about expectations. "Should" is the most common; "ought to" is slightly more formal and often implies moral duty.</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsShouldOughtTo1.introduction.coreIdeas">Core ideas:</div>
-                        <ul>
-                            <li data-i18n="modalsShouldOughtTo1.introduction.core1"><strong>Should</strong> – advice, recommendation, expectation, weak obligation.</li>
-                            <li data-i18n="modalsShouldOughtTo1.introduction.core2"><strong>Ought to</strong> – moral obligation, advice (more formal), expectation.</li>
-                        </ul>
-                    </div>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.introduction.example1">You should see a doctor. (advice)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.introduction.example2">We ought to help the poor. (moral obligation)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.introduction.example3">The train should arrive soon. (expectation)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.introduction.example4">You ought to try this dish. (recommendation)</div>
-                    </div>
+<div class="EH-language-selector-wrapper">
+    <select id="language-selector" class="EH-language-selector">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية</option>
+    </select>
+    <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+</div>
+<div class="EH-site-header">
+    <a href="index.html" class="EH-site-logo-link" title="Main Page">
+        <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+    </a>
+    <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+</div>
+<div class="EH-conjugation-container">
+    <header class="EH-conjugation-header">
+        <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+            <div class="EH-conjugation-title-line" data-i18n="shouldOughtTo1.title.line1">Should & Ought to: I:</div>
+            <div class="EH-conjugation-title-line" data-i18n="shouldOughtTo1.title.line2">Core Concepts & Primary Uses</div>
+            <div class="EH-conjugation-subtitle" data-i18n="shouldOughtTo1.title.line3">express advice, obligation, and expectation</div>
+            <div class="EH-conjugation-subtitle" data-i18n="shouldOughtTo1.title.line4">lesson: 1/3</div>
+        </div>
+    </header>
+    <div class="EH-conjugation-content">
+        <!-- I. 1. Introduction to Should & Ought To -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="shouldOughtTo1.section1.title">I. 1. Introduction to Should & Ought To</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">📘</span>
+                    <span data-i18n="shouldOughtTo1.section1.heading">What are modals "should" and "ought to"?</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="shouldOughtTo1.section1.desc1">📘 Definition:</div>
+                    <p data-i18n="shouldOughtTo1.section1.desc2">"Should" and "ought to" are modal verbs used to give advice, express weak obligation, or talk about expectations. "Should" is the most common; "ought to" is slightly more formal and often implies moral duty.</p>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="shouldOughtTo1.section1.coreTitle">💡 Core ideas:</div>
+                    <ul>
+                        <li data-i18n="shouldOughtTo1.section1.core1"><strong>Should</strong> – advice, recommendation, expectation, weak obligation.</li>
+                        <li data-i18n="shouldOughtTo1.section1.core2"><strong>Ought to</strong> – moral obligation, advice (more formal), expectation.</li>
+                    </ul>
+                </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section1.ex1">You should see a doctor. (advice)</div>
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section1.ex2">We ought to help the poor. (moral obligation)</div>
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section1.ex3">The train should arrive soon. (expectation)</div>
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section1.ex4">You ought to try this dish. (recommendation)</div>
                 </div>
             </div>
-            
-            <!-- Basic Grammar Rules -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsShouldOughtTo1.grammar.title">Basic Grammar Rules</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⚙️</span>
-                        <span data-i18n="modalsShouldOughtTo1.grammar.structure">Structure</span>
-                    </h3>
-                    <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="modalsShouldOughtTo1.grammar.colForm">Form</th>
-                                <th data-i18n="modalsShouldOughtTo1.grammar.colRule">Rule</th>
-                                <th data-i18n="modalsShouldOughtTo1.grammar.colExample">Example</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-i18n="modalsShouldOughtTo1.grammar.rowAffirmative">Affirmative</td>
-                                <td data-i18n="modalsShouldOughtTo1.grammar.affirmativeRule">subject + should / ought to + base verb</td>
-                                <td data-i18n="modalsShouldOughtTo1.grammar.affirmativeExample">She should study. / They ought to wait.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="modalsShouldOughtTo1.grammar.rowNegative">Negative</td>
-                                <td data-i18n="modalsShouldOughtTo1.grammar.negativeRule">subject + should not/shouldn't / ought not to/oughtn't to + base verb</td>
-                                <td data-i18n="modalsShouldOughtTo1.grammar.negativeExample">He shouldn't smoke. / You ought not to worry.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="modalsShouldOughtTo1.grammar.rowQuestion">Question</td>
-                                <td data-i18n="modalsShouldOughtTo1.grammar.questionRule">Should + subject + base verb? / Ought + subject + to + base verb? (rare)</td>
-                                <td data-i18n="modalsShouldOughtTo1.grammar.questionExample">Should I go? / Ought we to stay?</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsShouldOughtTo1.grammar.importantNote">Important:</div>
-                        <p data-i18n="modalsShouldOughtTo1.grammar.noteText">Modals never take -s, -ing, or -ed. "Ought to" is always followed by "to" + infinitive. Negative contractions: shouldn't, oughtn't to (rare).</p>
-                    </div>
+        </div>
+
+        <!-- I. 2. Basic Grammar Rules -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="shouldOughtTo1.section2.title">I. 2. Basic Grammar Rules</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">🔧</span>
+                    <span data-i18n="shouldOughtTo1.section2.heading">Structure & key rules</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="shouldOughtTo1.section2.structTitle">📐 Structure:</div>
+                    <p data-i18n="shouldOughtTo1.section2.structDesc">Affirmative: subject + should / ought to + base verb → She should study. / They ought to wait.<br>Negative: subject + should not/shouldn't / ought not to/oughtn't to + base verb → He shouldn't smoke. / You ought not to worry.<br>Question: Should + subject + base verb? (Ought + subject + to + base verb? is rare) → Should I go?</p>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="shouldOughtTo1.section2.importantTitle">⚠️ Important:</div>
+                    <p data-i18n="shouldOughtTo1.section2.importantDesc">Modals never take -s, -ing, or -ed. "Ought to" is always followed by "to" + infinitive. Negative contractions: shouldn't, oughtn't to (rare).</p>
                 </div>
             </div>
-            
-            <!-- Primary Functions of Should -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsShouldOughtTo1.shouldFunctions.title">Primary Uses of "Should"</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">💡</span>
-                        <span data-i18n="modalsShouldOughtTo1.shouldFunctions.advice">1. Advice / Recommendation</span>
-                    </h3>
-                    <p data-i18n="modalsShouldOughtTo1.shouldFunctions.adviceText">We use should to give or ask for advice or recommendations.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.shouldFunctions.adviceEx1">You should eat more vegetables.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.shouldFunctions.adviceEx2">Should I call her?</div>
-                    </div>
+        </div>
+
+        <!-- I. 3. Primary Uses of "Should" -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="shouldOughtTo1.section3.title">I. 3. Primary Uses of "Should"</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">💬</span>
+                    <span data-i18n="shouldOughtTo1.section3.heading">Advice, expectation & weak obligation</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="shouldOughtTo1.section3.adviceTitle">1️⃣ Advice / Recommendation</div>
+                    <p data-i18n="shouldOughtTo1.section3.adviceDesc">We use should to give or ask for advice or recommendations.</p>
                 </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔮</span>
-                        <span data-i18n="modalsShouldOughtTo1.shouldFunctions.expectation">2. Expectation / Probability</span>
-                    </h3>
-                    <p data-i18n="modalsShouldOughtTo1.shouldFunctions.expectationText">Should can express that something is likely to happen or is expected.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.shouldFunctions.expectationEx1">The package should arrive tomorrow.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.shouldFunctions.expectationEx2">He should be home by now.</div>
-                    </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section3.adviceEx1">You should eat more vegetables.</div>
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section3.adviceEx2">Should I call her?</div>
                 </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⚖️</span>
-                        <span data-i18n="modalsShouldOughtTo1.shouldFunctions.weakObligation">3. Weak obligation / Correctness</span>
-                    </h3>
-                    <p data-i18n="modalsShouldOughtTo1.shouldFunctions.weakObligationText">Should expresses what is right or a good idea, but not as strong as must.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.shouldFunctions.weakObligationEx1">We should respect our parents.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.shouldFunctions.weakObligationEx2">I should go now.</div>
-                    </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="shouldOughtTo1.section3.expectTitle">2️⃣ Expectation / Probability</div>
+                    <p data-i18n="shouldOughtTo1.section3.expectDesc">Should can express that something is likely to happen or is expected.</p>
+                </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section3.expectEx1">The package should arrive tomorrow.</div>
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section3.expectEx2">He should be home by now.</div>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="shouldOughtTo1.section3.weakTitle">3️⃣ Weak obligation / Correctness</div>
+                    <p data-i18n="shouldOughtTo1.section3.weakDesc">Should expresses what is right or a good idea, but not as strong as must.</p>
+                </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section3.weakEx1">We should respect our parents.</div>
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section3.weakEx2">I should go now.</div>
                 </div>
             </div>
-            
-            <!-- Primary Functions of Ought to -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsShouldOughtTo1.oughtToFunctions.title">Primary Uses of "Ought to"</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🕊️</span>
-                        <span data-i18n="modalsShouldOughtTo1.oughtToFunctions.moral">1. Moral obligation / Duty</span>
-                    </h3>
-                    <p data-i18n="modalsShouldOughtTo1.oughtToFunctions.moralText">Ought to often implies a moral duty or what is ethically right.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.oughtToFunctions.moralEx1">We ought to protect the environment.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.oughtToFunctions.moralEx2">They ought to tell the truth.</div>
-                    </div>
+        </div>
+
+        <!-- I. 4. Primary Uses of "Ought To" -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="shouldOughtTo1.section4.title">I. 4. Primary Uses of "Ought To"</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">⚖️</span>
+                    <span data-i18n="shouldOughtTo1.section4.heading">Moral duty, formal advice & expectation</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="shouldOughtTo1.section4.moralTitle">1️⃣ Moral obligation / Duty</div>
+                    <p data-i18n="shouldOughtTo1.section4.moralDesc">Ought to often implies a moral duty or what is ethically right.</p>
                 </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🗣️</span>
-                        <span data-i18n="modalsShouldOughtTo1.oughtToFunctions.advice">2. Advice (more formal)</span>
-                    </h3>
-                    <p data-i18n="modalsShouldOughtTo1.oughtToFunctions.adviceText">Ought to can be used for advice, similar to should but slightly more formal.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.oughtToFunctions.adviceEx1">You ought to see that film; it's excellent.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.oughtToFunctions.adviceEx2">She ought to apologize.</div>
-                    </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section4.moralEx1">We ought to protect the environment.</div>
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section4.moralEx2">They ought to tell the truth.</div>
                 </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📅</span>
-                        <span data-i18n="modalsShouldOughtTo1.oughtToFunctions.expectation">3. Expectation (less common)</span>
-                    </h3>
-                    <p data-i18n="modalsShouldOughtTo1.oughtToFunctions.expectationText">Like should, ought to can express that something is likely.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.oughtToFunctions.expectationEx1">The train ought to be here soon.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsShouldOughtTo1.oughtToFunctions.expectationEx2">This ought to be enough.</div>
-                    </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="shouldOughtTo1.section4.formalTitle">2️⃣ Advice (more formal)</div>
+                    <p data-i18n="shouldOughtTo1.section4.formalDesc">Ought to can be used for advice, similar to should but slightly more formal.</p>
+                </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section4.formalEx1">You ought to see that film; it's excellent.</div>
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section4.formalEx2">She ought to apologize.</div>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="shouldOughtTo1.section4.expectTitle2">3️⃣ Expectation (less common)</div>
+                    <p data-i18n="shouldOughtTo1.section4.expectDesc2">Like should, ought to can express that something is likely.</p>
+                </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section4.expectEx3">The train ought to be here soon.</div>
+                    <div class="EH-conjugation-example" data-i18n="shouldOughtTo1.section4.expectEx4">This ought to be enough.</div>
                 </div>
             </div>
-            
-            <!-- Comparison table -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsShouldOughtTo1.comparison.title">Should vs Ought to – Quick Comparison</h2>
-                <div class="EH-conjugation-subsection">
-                    <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="modalsShouldOughtTo1.comparison.colUsage">Usage</th>
-                                <th data-i18n="modalsShouldOughtTo1.comparison.colShould">Should</th>
-                                <th data-i18n="modalsShouldOughtTo1.comparison.colOughtTo">Ought to</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-i18n="modalsShouldOughtTo1.comparison.advice">Advice</td>
-                                <td data-i18n="modalsShouldOughtTo1.comparison.adviceShould">common, neutral</td>
-                                <td data-i18n="modalsShouldOughtTo1.comparison.adviceOughtTo">more formal, moral tone</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="modalsShouldOughtTo1.comparison.obligation">Obligation</td>
-                                <td data-i18n="modalsShouldOughtTo1.comparison.obligationShould">weak, personal</td>
-                                <td data-i18n="modalsShouldOughtTo1.comparison.obligationOughtTo">moral duty</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="modalsShouldOughtTo1.comparison.expectation">Expectation</td>
-                                <td data-i18n="modalsShouldOughtTo1.comparison.expectationShould">very common</td>
-                                <td data-i18n="modalsShouldOughtTo1.comparison.expectationOughtTo">possible, less frequent</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        </div>
+
+        <!-- I. 5. Should vs Ought To – Quick Comparison -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="shouldOughtTo1.section5.title">I. 5. Should vs Ought To – Quick Comparison</h2>
+            <div class="EH-conjugation-subsection">
+                <table class="EH-conjugation-table">
+                    <thead>
+                        <tr><th data-i18n="shouldOughtTo1.section5.use">Usage</th><th data-i18n="shouldOughtTo1.section5.should">Should</th><th data-i18n="shouldOughtTo1.section5.oughtTo">Ought to</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td data-i18n="shouldOughtTo1.section5.advice">Advice</td><td data-i18n="shouldOughtTo1.section5.adviceShould">common, neutral</td><td data-i18n="shouldOughtTo1.section5.adviceOught">more formal, moral tone</td></tr>
+                        <tr><td data-i18n="shouldOughtTo1.section5.obligation">Obligation</td><td data-i18n="shouldOughtTo1.section5.obligationShould">weak, personal</td><td data-i18n="shouldOughtTo1.section5.obligationOught">moral duty</td></tr>
+                        <tr><td data-i18n="shouldOughtTo1.section5.expectation">Expectation</td><td data-i18n="shouldOughtTo1.section5.expectationShould">very common</td><td data-i18n="shouldOughtTo1.section5.expectationOught">possible, less frequent</td></tr>
+                    </tbody>
+                </table>
             </div>
-            
-            <!-- EXERCISES -->
-            <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsShouldOughtTo1.exercises.title">Practice Exercises</h2>
-                
-                <h3 style="color: #4a148c; margin-bottom: 20px;" data-i18n="modalsShouldOughtTo1.exercises.mcHeading">Multiple Choice</h3>
-                <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <h3 style="color: #4a148c; margin: 40px 0 20px 0;" data-i18n="modalsShouldOughtTo1.exercises.fillHeading">Fill in the Blank</h3>
-                <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <h3 style="color: #4a148c; margin: 40px 0 20px 0;" data-i18n="modalsShouldOughtTo1.exercises.orderHeading">Sentence Ordering</h3>
-                <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <div class="EH-exercise-type1-possibilities3-answers-control">
-                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
-                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
-                        <h3 class="EH-exercise-type1-possibilities3-score-title" data-i18n="modalsShouldOughtTo1.exercises.scoreTitle">Your Score</h3>
-                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback" data-i18n="modalsShouldOughtTo1.exercises.scoreFeedback">Check your answers to see your progress!</p>
-                    </div>
+        </div>
+
+        <!-- Exercises -->
+        <div class="EH-conjugation-section EH-exercise-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="shouldOughtTo1.exercises.title">Practice: Should & Ought To Core Uses</h2>
+            <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+            <div class="EH-exercise-container" id="mc-exercises"></div>
+            <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+            <div class="EH-exercise-container" id="fill-exercises"></div>
+            <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+            <div class="EH-exercise-container" id="order-exercises"></div>
+            <div class="EH-exercise-type1-possibilities3-answers-control">
+                <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
+                    <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
+                    <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                    <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                 </div>
-            </div>
-            
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-shouldoughtto-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson →</span>
-                </button>
-				<!-- <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-					<span data-i18n="common.previousLesson">Previous Lesson</span>
-				</button> -->
-                <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-                    <span></span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">← Return to Conjugation</span>
-                </button>
             </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
-    <script>
-        window.I18N = {
-            en: {
-                common: {
-                    siteName: "English Hub",
-                    previousLesson: "← Previous Lesson",
-                    returnToConjugation: "← Return to Conjugation",
-                    nextLesson: "Next Lesson →",
-                    examples: "Examples:",
-                    structure: "Structure"
-                },
-                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
-                modalsShouldOughtTo1: {
-                    title: "Should & Ought to: Core Concepts & Primary Uses",
-                    subtitle: "Learn how to use should and ought to to express advice, obligation, and expectation",
-                    introduction: {
-                        title: "Introduction to Should & Ought to",
-                        whatAre: "What are modals \"should\" and \"ought to\"?",
-                        definitionTitle: "Definition:",
-                        definition: "\"Should\" and \"ought to\" are modal verbs used to give advice, express weak obligation, or talk about expectations. \"Should\" is the most common; \"ought to\" is slightly more formal and often implies moral duty.",
-                        coreIdeas: "Core ideas:",
-                        core1: "<strong>Should</strong> – advice, recommendation, expectation, weak obligation.",
-                        core2: "<strong>Ought to</strong> – moral obligation, advice (more formal), expectation.",
-                        example1: "You should see a doctor. (advice)",
-                        example2: "We ought to help the poor. (moral obligation)",
-                        example3: "The train should arrive soon. (expectation)",
-                        example4: "You ought to try this dish. (recommendation)"
-                    },
-                    grammar: {
-                        title: "Basic Grammar Rules",
-                        structure: "Structure",
-                        colForm: "Form",
-                        colRule: "Rule",
-                        colExample: "Example",
-                        rowAffirmative: "Affirmative",
-                        rowNegative: "Negative",
-                        rowQuestion: "Question",
-                        affirmativeRule: "subject + should / ought to + base verb",
-                        affirmativeExample: "She should study. / They ought to wait.",
-                        negativeRule: "subject + should not/shouldn't / ought not to/oughtn't to + base verb",
-                        negativeExample: "He shouldn't smoke. / You ought not to worry.",
-                        questionRule: "Should + subject + base verb? / Ought + subject + to + base verb? (rare)",
-                        questionExample: "Should I go? / Ought we to stay?",
-                        importantNote: "Important:",
-                        noteText: "Modals never take -s, -ing, or -ed. \"Ought to\" is always followed by \"to\" + infinitive. Negative contractions: shouldn't, oughtn't to (rare)."
-                    },
-                    shouldFunctions: {
-                        title: "Primary Uses of \"Should\"",
-                        advice: "1. Advice / Recommendation",
-                        adviceText: "We use should to give or ask for advice or recommendations.",
-                        adviceEx1: "You should eat more vegetables.",
-                        adviceEx2: "Should I call her?",
-                        expectation: "2. Expectation / Probability",
-                        expectationText: "Should can express that something is likely to happen or is expected.",
-                        expectationEx1: "The package should arrive tomorrow.",
-                        expectationEx2: "He should be home by now.",
-                        weakObligation: "3. Weak obligation / Correctness",
-                        weakObligationText: "Should expresses what is right or a good idea, but not as strong as must.",
-                        weakObligationEx1: "We should respect our parents.",
-                        weakObligationEx2: "I should go now."
-                    },
-                    oughtToFunctions: {
-                        title: "Primary Uses of \"Ought to\"",
-                        moral: "1. Moral obligation / Duty",
-                        moralText: "Ought to often implies a moral duty or what is ethically right.",
-                        moralEx1: "We ought to protect the environment.",
-                        moralEx2: "They ought to tell the truth.",
-                        advice: "2. Advice (more formal)",
-                        adviceText: "Ought to can be used for advice, similar to should but slightly more formal.",
-                        adviceEx1: "You ought to see that film; it's excellent.",
-                        adviceEx2: "She ought to apologize.",
-                        expectation: "3. Expectation (less common)",
-                        expectationText: "Like should, ought to can express that something is likely.",
-                        expectationEx1: "The train ought to be here soon.",
-                        expectationEx2: "This ought to be enough."
-                    },
-                    comparison: {
-                        title: "Should vs Ought to – Quick Comparison",
-                        colUsage: "Usage",
-                        colShould: "Should",
-                        colOughtTo: "Ought to",
-                        advice: "Advice",
-                        adviceShould: "common, neutral",
-                        adviceOughtTo: "more formal, moral tone",
-                        obligation: "Obligation",
-                        obligationShould: "weak, personal",
-                        obligationOughtTo: "moral duty",
-                        expectation: "Expectation",
-                        expectationShould: "very common",
-                        expectationOughtTo: "possible, less frequent"
-                    },
-                    exercises: {
-                        title: "Practice Exercises",
-                        mcHeading: "Multiple Choice",
-                        fillHeading: "Fill in the Blank",
-                        orderHeading: "Sentence Ordering",
-                        scoreTitle: "Your Score",
-                        scoreFeedback: "Check your answers to see your progress!",
-                        q1: "Choose the correct modal for advice: You ______ eat more vegetables.",
-                        q1a: "should",
-                        q1b: "ought to",
-                        q1c: "must",
-                        q2: "Choose for expectation: The train ______ arrive soon.",
-                        q2a: "should",
-                        q2b: "ought to",
-                        q2c: "might",
-                        q3: "Choose the correct negative advice: You ______ smoke; it's bad for health.",
-                        q3a: "shouldn't",
-                        q3b: "ought not to",
-                        q3c: "don't have to",
-                        q4: "Choose for moral obligation: We ______ help those in need.",
-                        q4a: "should",
-                        q4b: "ought to",
-                        q4c: "can",
-                        q5: "Choose for weak obligation: I ______ go to the party, but I don't feel like it.",
-                        q5a: "should",
-                        q5b: "ought to",
-                        q5c: "must",
-                        q6: "Choose the correct question form: ______ I tell her the truth?",
-                        q6a: "Should",
-                        q6b: "Ought",
-                        q6c: "Do",
-                        q7: "Complete (advice): You look tired. You ______ take a break.",
-                        q8: "Complete (negative): She ______ (not / should) eat so much sugar.",
-                        q9: "Complete (question): ______ (should) we arrive early?",
-                        q10: "Arrange: (you / should / see / a / doctor / .)",
-                        q11: "Arrange: (they / ought to / arrive / soon / .)",
-                        q12: "Arrange: (we / shouldn't / be / late / .)"
-                    }
-                }
+</div>
+
+<script>
+    window.I18N = {
+        en: {
+            common: {
+                siteName: "English Hub",
+                previousLesson: "← Previous Lesson",
+                returnToConjugation: "← Return to Conjugation",
+                nextLesson: "Next Lesson →"
             },
-            fr: {
-                common: {
-                    siteName: "English Hub",
-                    previousLesson: "← Leçon précédente",
-                    returnToConjugation: "← Retour à la conjugaison",
-                    nextLesson: "Leçon suivante →",
-                    examples: "Examples: (Exemples :)",
-                    structure: "Structure"
+            footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+            shouldOughtTo1: {
+                title: { line1: "Should & Ought to: I:", line2: "Core Concepts & Primary Uses", line3: "express advice, obligation, and expectation", line4: "lesson: 1/3" },
+                section1: {
+                    title: "I. 1. Introduction to Should & Ought To",
+                    heading: "What are modals \"should\" and \"ought to\"?",
+                    desc1: "📘 Definition:",
+                    desc2: "\"Should\" and \"ought to\" are modal verbs used to give advice, express weak obligation, or talk about expectations. \"Should\" is the most common; \"ought to\" is slightly more formal and often implies moral duty.",
+                    coreTitle: "💡 Core ideas:",
+                    core1: "Should – advice, recommendation, expectation, weak obligation.",
+                    core2: "Ought to – moral obligation, advice (more formal), expectation.",
+                    ex1: "You should see a doctor. (advice)",
+                    ex2: "We ought to help the poor. (moral obligation)",
+                    ex3: "The train should arrive soon. (expectation)",
+                    ex4: "You ought to try this dish. (recommendation)"
                 },
-                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
-                modalsShouldOughtTo1: {
-                    title: "Should & Ought to: Core Concepts & Primary Uses (Should & Ought to : concepts de base et utilisations principales)",
-                    subtitle: "Learn how to use should and ought to to express advice, obligation, and expectation (Apprenez à utiliser should et ought to pour exprimer le conseil, l'obligation et l'attente)",
-                    introduction: {
-                        title: "Introduction to Should & Ought to (Introduction à Should & Ought to)",
-                        whatAre: "What are modals \"should\" and \"ought to\"? (Que sont les modaux \"should\" et \"ought to\" ?)",
-                        definitionTitle: "Definition: (Définition :)",
-                        definition: "\"Should\" and \"ought to\" are modal verbs used to give advice, express weak obligation, or talk about expectations. \"Should\" is the most common; \"ought to\" is slightly more formal and often implies moral duty. (\"Should\" et \"ought to\" sont des verbes modaux utilisés pour donner des conseils, exprimer une obligation faible ou parler d'attentes. \"Should\" est le plus courant ; \"ought to\" est légèrement plus formel et implique souvent un devoir moral.)",
-                        coreIdeas: "Core ideas: (Idées principales :)",
-                        core1: "<strong>Should</strong> – advice, recommendation, expectation, weak obligation. (<strong>Should</strong> – conseil, recommandation, attente, obligation faible.)",
-                        core2: "<strong>Ought to</strong> – moral obligation, advice (more formal), expectation. (<strong>Ought to</strong> – obligation morale, conseil (plus formel), attente.)",
-                        example1: "You should see a doctor. (advice) (Tu devrais voir un médecin.)",
-                        example2: "We ought to help the poor. (moral obligation) (Nous devrions aider les pauvres.)",
-                        example3: "The train should arrive soon. (expectation) (Le train devrait arriver bientôt.)",
-                        example4: "You ought to try this dish. (recommendation) (Tu devrais essayer ce plat.)"
-                    },
-                    grammar: {
-                        title: "Basic Grammar Rules (Règles de grammaire de base)",
-                        structure: "Structure",
-                        colForm: "Form (Forme)",
-                        colRule: "Rule (Règle)",
-                        colExample: "Example (Exemple)",
-                        rowAffirmative: "Affirmative (Affirmatif)",
-                        rowNegative: "Negative (Négatif)",
-                        rowQuestion: "Question (Question)",
-                        affirmativeRule: "subject + should / ought to + base verb (sujet + should / ought to + verbe à l'infinitif)",
-                        affirmativeExample: "She should study. / They ought to wait. (Elle devrait étudier. / Ils devraient attendre.)",
-                        negativeRule: "subject + should not/shouldn't / ought not to/oughtn't to + base verb (sujet + should not/shouldn't / ought not to/oughtn't to + verbe à l'infinitif)",
-                        negativeExample: "He shouldn't smoke. / You ought not to worry. (Il ne devrait pas fumer. / Tu ne devrais pas t'inquiéter.)",
-                        questionRule: "Should + subject + base verb? / Ought + subject + to + base verb? (rare) (Should + sujet + verbe ? / Ought + sujet + to + verbe ? (rare))",
-                        questionExample: "Should I go? / Ought we to stay? (Devrais-je y aller ? / Devrions-nous rester ?)",
-                        importantNote: "Important: (Important :)",
-                        noteText: "Modals never take -s, -ing, or -ed. \"Ought to\" is always followed by \"to\" + infinitive. Negative contractions: shouldn't, oughtn't to (rare). (Les modaux ne prennent jamais -s, -ing ou -ed. \"Ought to\" est toujours suivi de \"to\" + infinitif. Contractions négatives : shouldn't, oughtn't to (rare).)"
-                    },
-                    shouldFunctions: {
-                        title: "Primary Uses of \"Should\" (Utilisations principales de \"Should\")",
-                        advice: "1. Advice / Recommendation (1. Conseil / Recommandation)",
-                        adviceText: "We use should to give or ask for advice or recommendations. (On utilise should pour donner ou demander un conseil ou une recommandation.)",
-                        adviceEx1: "You should eat more vegetables. (Tu devrais manger plus de légumes.)",
-                        adviceEx2: "Should I call her? (Devrais-je l'appeler ?)",
-                        expectation: "2. Expectation / Probability (2. Attente / Probabilité)",
-                        expectationText: "Should can express that something is likely to happen or is expected. (Should peut exprimer que quelque chose est susceptible de se produire ou est attendu.)",
-                        expectationEx1: "The package should arrive tomorrow. (Le colis devrait arriver demain.)",
-                        expectationEx2: "He should be home by now. (Il devrait être à la maison maintenant.)",
-                        weakObligation: "3. Weak obligation / Correctness (3. Obligation faible / Ce qui est correct)",
-                        weakObligationText: "Should expresses what is right or a good idea, but not as strong as must. (Should exprime ce qui est juste ou une bonne idée, mais pas aussi fort que must.)",
-                        weakObligationEx1: "We should respect our parents. (Nous devrions respecter nos parents.)",
-                        weakObligationEx2: "I should go now. (Je devrais y aller maintenant.)"
-                    },
-                    oughtToFunctions: {
-                        title: "Primary Uses of \"Ought to\" (Utilisations principales de \"Ought to\")",
-                        moral: "1. Moral obligation / Duty (1. Obligation morale / Devoir)",
-                        moralText: "Ought to often implies a moral duty or what is ethically right. (Ought to implique souvent un devoir moral ou ce qui est éthiquement juste.)",
-                        moralEx1: "We ought to protect the environment. (Nous devrions protéger l'environnement.)",
-                        moralEx2: "They ought to tell the truth. (Ils devraient dire la vérité.)",
-                        advice: "2. Advice (more formal) (2. Conseil (plus formel))",
-                        adviceText: "Ought to can be used for advice, similar to should but slightly more formal. (Ought to peut être utilisé pour des conseils, similaire à should mais légèrement plus formel.)",
-                        adviceEx1: "You ought to see that film; it's excellent. (Tu devrais voir ce film ; il est excellent.)",
-                        adviceEx2: "She ought to apologize. (Elle devrait s'excuser.)",
-                        expectation: "3. Expectation (less common) (3. Attente (moins courante))",
-                        expectationText: "Like should, ought to can express that something is likely. (Comme should, ought to peut exprimer que quelque chose est probable.)",
-                        expectationEx1: "The train ought to be here soon. (Le train devrait être là bientôt.)",
-                        expectationEx2: "This ought to be enough. (Cela devrait suffire.)"
-                    },
-                    comparison: {
-                        title: "Should vs Ought to – Quick Comparison (Should vs Ought to – Comparaison rapide)",
-                        colUsage: "Usage (Usage)",
-                        colShould: "Should (Should)",
-                        colOughtTo: "Ought to (Ought to)",
-                        advice: "Advice (Conseil)",
-                        adviceShould: "common, neutral (courant, neutre)",
-                        adviceOughtTo: "more formal, moral tone (plus formel, ton moral)",
-                        obligation: "Obligation (Obligation)",
-                        obligationShould: "weak, personal (faible, personnel)",
-                        obligationOughtTo: "moral duty (devoir moral)",
-                        expectation: "Expectation (Attente)",
-                        expectationShould: "very common (très courant)",
-                        expectationOughtTo: "possible, less frequent (possible, moins fréquent)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (Exercices pratiques)",
-                        mcHeading: "Multiple Choice (Choix multiple)",
-                        fillHeading: "Fill in the Blank (Texte à trous)",
-                        orderHeading: "Sentence Ordering (Remise en ordre)",
-                        scoreTitle: "Your Score (Votre score)",
-                        scoreFeedback: "Check your answers to see your progress! (Vérifiez vos réponses pour voir votre progression !)",
-                        q1: "Choose the correct modal for advice: You ______ eat more vegetables. (Choisissez le modal correct pour le conseil : You ______ eat more vegetables.)",
-                        q1a: "should",
-                        q1b: "ought to",
-                        q1c: "must",
-                        q2: "Choose for expectation: The train ______ arrive soon. (Choisissez pour l'attente : The train ______ arrive soon.)",
-                        q2a: "should",
-                        q2b: "ought to",
-                        q2c: "might",
-                        q3: "Choose the correct negative advice: You ______ smoke; it's bad for health. (Choisissez le conseil négatif correct : You ______ smoke; it's bad for health.)",
-                        q3a: "shouldn't",
-                        q3b: "ought not to",
-                        q3c: "don't have to",
-                        q4: "Choose for moral obligation: We ______ help those in need. (Choisissez pour l'obligation morale : We ______ help those in need.)",
-                        q4a: "should",
-                        q4b: "ought to",
-                        q4c: "can",
-                        q5: "Choose for weak obligation: I ______ go to the party, but I don't feel like it. (Choisissez pour l'obligation faible : I ______ go to the party, but I don't feel like it.)",
-                        q5a: "should",
-                        q5b: "ought to",
-                        q5c: "must",
-                        q6: "Choose the correct question form: ______ I tell her the truth? (Choisissez la forme interrogative correcte : ______ I tell her the truth?)",
-                        q6a: "Should",
-                        q6b: "Ought",
-                        q6c: "Do",
-                        q7: "Complete (advice): You look tired. You ______ take a break. (Complétez (conseil) : You look tired. You ______ take a break.)",
-                        q8: "Complete (negative): She ______ (not / should) eat so much sugar. (Complétez (négatif) : She ______ (not / should) eat so much sugar.)",
-                        q9: "Complete (question): ______ (should) we arrive early? (Complétez (question) : ______ (should) we arrive early?)",
-                        q10: "Arrange: (you / should / see / a / doctor / .) (Remettez dans l'ordre : (you / should / see / a / doctor / .))",
-                        q11: "Arrange: (they / ought to / arrive / soon / .) (Remettez dans l'ordre : (they / ought to / arrive / soon / .))",
-                        q12: "Arrange: (we / shouldn't / be / late / .) (Remettez dans l'ordre : (we / shouldn't / be / late / .))"
-                    }
-                }
-            },
-            ar: {
-                common: {
-                    siteName: "English Hub",
-                    previousLesson: "← Previous Lesson (الدرس السابق)",
-                    returnToConjugation: "← Return to Conjugation (العودة إلى التصريف)",
-                    nextLesson: "Next Lesson → (الدرس التالي)",
-                    examples: "Examples: (أمثلة:)",
-                    structure: "Structure (البنية)"
+                section2: {
+                    title: "I. 2. Basic Grammar Rules",
+                    heading: "Structure & key rules",
+                    structTitle: "📐 Structure:",
+                    structDesc: "Affirmative: subject + should / ought to + base verb → She should study. / They ought to wait.\nNegative: subject + should not/shouldn't / ought not to/oughtn't to + base verb → He shouldn't smoke. / You ought not to worry.\nQuestion: Should + subject + base verb? (Ought + subject + to + base verb? is rare) → Should I go?",
+                    importantTitle: "⚠️ Important:",
+                    importantDesc: "Modals never take -s, -ing, or -ed. \"Ought to\" is always followed by \"to\" + infinitive. Negative contractions: shouldn't, oughtn't to (rare)."
                 },
-                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
-                modalsShouldOughtTo1: {
-                    title: "Should & Ought to: Core Concepts & Primary Uses (Should & Ought to: المفاهيم الأساسية والاستخدامات الرئيسية)",
-                    subtitle: "Learn how to use should and ought to to express advice, obligation, and expectation (تعلّم استخدام should و ought to للتعبير عن النصيحة والالتزام والتوقع)",
-                    introduction: {
-                        title: "Introduction to Should & Ought to (مقدمة إلى Should & Ought to)",
-                        whatAre: "What are modals \"should\" and \"ought to\"? (ما هما الفعلان المساعدان \"should\" و \"ought to\"؟)",
-                        definitionTitle: "Definition: (تعريف:)",
-                        definition: "\"Should\" and \"ought to\" are modal verbs used to give advice, express weak obligation, or talk about expectations. \"Should\" is the most common; \"ought to\" is slightly more formal and often implies moral duty. (يستخدم \"should\" و \"ought to\" للتعبير عن النصيحة أو الالتزام الضعيف أو التوقعات. \"should\" هو الأكثر شيوعًا؛ \"ought to\" رسمي قليلاً وغالبًا ما يشير إلى واجب أخلاقي.)",
-                        coreIdeas: "Core ideas: (الأفكار الأساسية:)",
-                        core1: "<strong>Should</strong> – advice, recommendation, expectation, weak obligation. (<strong>Should</strong> – نصيحة، توصية، توقع، التزام ضعيف.)",
-                        core2: "<strong>Ought to</strong> – moral obligation, advice (more formal), expectation. (<strong>Ought to</strong> – التزام أخلاقي، نصيحة (أكثر رسمية)، توقع.)",
-                        example1: "You should see a doctor. (advice) (يجب أن ترى طبيبًا.)",
-                        example2: "We ought to help the poor. (moral obligation) (يجب علينا مساعدة الفقراء.)",
-                        example3: "The train should arrive soon. (expectation) (من المفترض أن يصل القطار قريبًا.)",
-                        example4: "You ought to try this dish. (recommendation) (ينبغي أن تجرب هذا الطبق.)"
-                    },
-                    grammar: {
-                        title: "Basic Grammar Rules (القواعد النحوية الأساسية)",
-                        structure: "Structure (البنية)",
-                        colForm: "Form (الصيغة)",
-                        colRule: "Rule (القاعدة)",
-                        colExample: "Example (مثال)",
-                        rowAffirmative: "Affirmative (مثبت)",
-                        rowNegative: "Negative (منفي)",
-                        rowQuestion: "Question (سؤال)",
-                        affirmativeRule: "subject + should / ought to + base verb (الفاعل + should / ought to + المصدر)",
-                        affirmativeExample: "She should study. / They ought to wait. (يجب أن تدرس. / ينبغي أن ينتظروا.)",
-                        negativeRule: "subject + should not/shouldn't / ought not to/oughtn't to + base verb (الفاعل + should not/shouldn't / ought not to/oughtn't to + المصدر)",
-                        negativeExample: "He shouldn't smoke. / You ought not to worry. (لا ينبغي أن يدخن. / لا ينبغي أن تقلق.)",
-                        questionRule: "Should + subject + base verb? / Ought + subject + to + base verb? (rare) (Should + الفاعل + المصدر؟ / Ought + الفاعل + to + المصدر؟ (نادر))",
-                        questionExample: "Should I go? / Ought we to stay? (هل يجب أن أذهب؟ / هل ينبغي أن نبقى؟)",
-                        importantNote: "Important: (ملاحظة مهمة:)",
-                        noteText: "Modals never take -s, -ing, or -ed. \"Ought to\" is always followed by \"to\" + infinitive. Negative contractions: shouldn't, oughtn't to (rare). (الأفعال النموذجية لا تأخذ -s أو -ing أو -ed. \"Ought to\" يتبعه دائمًا \"to\" + المصدر. الاختصارات المنفية: shouldn't، oughtn't to (نادرة).)"
-                    },
-                    shouldFunctions: {
-                        title: "Primary Uses of \"Should\" (الاستخدامات الرئيسية لـ \"Should\")",
-                        advice: "1. Advice / Recommendation (1. نصيحة / توصية)",
-                        adviceText: "We use should to give or ask for advice or recommendations. (نستخدم should لإعطاء أو طلب النصيحة أو التوصيات.)",
-                        adviceEx1: "You should eat more vegetables. (يجب أن تأكل المزيد من الخضروات.)",
-                        adviceEx2: "Should I call her? (هل يجب أن أتصل بها؟)",
-                        expectation: "2. Expectation / Probability (2. توقع / احتمال)",
-                        expectationText: "Should can express that something is likely to happen or is expected. (يمكن أن يعبر should عن أن شيئًا ما مرجح الحدوث أو متوقع.)",
-                        expectationEx1: "The package should arrive tomorrow. (من المفترض أن تصل الطرد غدًا.)",
-                        expectationEx2: "He should be home by now. (يفترض أن يكون في المنزل الآن.)",
-                        weakObligation: "3. Weak obligation / Correctness (3. التزام ضعيف / صحة)",
-                        weakObligationText: "Should expresses what is right or a good idea, but not as strong as must. (يعبر should عما هو صحيح أو فكرة جيدة، لكنه ليس بقوة must.)",
-                        weakObligationEx1: "We should respect our parents. (يجب أن نحترم والدينا.)",
-                        weakObligationEx2: "I should go now. (يجب أن أذهب الآن.)"
-                    },
-                    oughtToFunctions: {
-                        title: "Primary Uses of \"Ought to\" (الاستخدامات الرئيسية لـ \"Ought to\")",
-                        moral: "1. Moral obligation / Duty (1. التزام أخلاقي / واجب)",
-                        moralText: "Ought to often implies a moral duty or what is ethically right. (غالبًا ما يشير ought to إلى واجب أخلاقي أو ما هو صحيح أخلاقيًا.)",
-                        moralEx1: "We ought to protect the environment. (يجب علينا حماية البيئة.)",
-                        moralEx2: "They ought to tell the truth. (يجب عليهم قول الحقيقة.)",
-                        advice: "2. Advice (more formal) (2. نصيحة (أكثر رسمية))",
-                        adviceText: "Ought to can be used for advice, similar to should but slightly more formal. (يمكن استخدام ought to للنصيحة، مشابهًا لـ should لكنه أكثر رسمية قليلاً.)",
-                        adviceEx1: "You ought to see that film; it's excellent. (ينبغي أن ترى هذا الفيلم؛ إنه ممتاز.)",
-                        adviceEx2: "She ought to apologize. (ينبغي أن تعتذر.)",
-                        expectation: "3. Expectation (less common) (3. توقع (أقل شيوعًا))",
-                        expectationText: "Like should, ought to can express that something is likely. (مثل should، يمكن أن يعبر ought to عن أن شيئًا ما مرجح.)",
-                        expectationEx1: "The train ought to be here soon. (من المفترض أن يكون القطار هنا قريبًا.)",
-                        expectationEx2: "This ought to be enough. (يفترض أن يكون هذا كافيًا.)"
-                    },
-                    comparison: {
-                        title: "Should vs Ought to – Quick Comparison (Should مقابل Ought to – مقارنة سريعة)",
-                        colUsage: "Usage (الاستخدام)",
-                        colShould: "Should (Should)",
-                        colOughtTo: "Ought to (Ought to)",
-                        advice: "Advice (النصيحة)",
-                        adviceShould: "common, neutral (شائع، محايد)",
-                        adviceOughtTo: "more formal, moral tone (أكثر رسمية، طابع أخلاقي)",
-                        obligation: "Obligation (الالتزام)",
-                        obligationShould: "weak, personal (ضعيف، شخصي)",
-                        obligationOughtTo: "moral duty (واجب أخلاقي)",
-                        expectation: "Expectation (التوقع)",
-                        expectationShould: "very common (شائع جدًا)",
-                        expectationOughtTo: "possible, less frequent (ممكن، أقل تكرارًا)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (تمارين تطبيقية)",
-                        mcHeading: "Multiple Choice (اختيار من متعدد)",
-                        fillHeading: "Fill in the Blank (املأ الفراغ)",
-                        orderHeading: "Sentence Ordering (ترتيب الجمل)",
-                        scoreTitle: "Your Score (نتيجتك)",
-                        scoreFeedback: "Check your answers to see your progress! (تحقق من إجاباتك لترى تقدمك!)",
-                        q1: "Choose the correct modal for advice: You ______ eat more vegetables. (اختر الفعل النموذجي الصحيح للنصيحة: You ______ eat more vegetables.)",
-                        q1a: "should",
-                        q1b: "ought to",
-                        q1c: "must",
-                        q2: "Choose for expectation: The train ______ arrive soon. (اختر للتوقع: The train ______ arrive soon.)",
-                        q2a: "should",
-                        q2b: "ought to",
-                        q2c: "might",
-                        q3: "Choose the correct negative advice: You ______ smoke; it's bad for health. (اختر النصيحة السلبية الصحيحة: You ______ smoke; it's bad for health.)",
-                        q3a: "shouldn't",
-                        q3b: "ought not to",
-                        q3c: "don't have to",
-                        q4: "Choose for moral obligation: We ______ help those in need. (اختر للالتزام الأخلاقي: We ______ help those in need.)",
-                        q4a: "should",
-                        q4b: "ought to",
-                        q4c: "can",
-                        q5: "Choose for weak obligation: I ______ go to the party, but I don't feel like it. (اختر للالتزام الضعيف: I ______ go to the party, but I don't feel like it.)",
-                        q5a: "should",
-                        q5b: "ought to",
-                        q5c: "must",
-                        q6: "Choose the correct question form: ______ I tell her the truth? (اختر صيغة السؤال الصحيحة: ______ I tell her the truth?)",
-                        q6a: "Should",
-                        q6b: "Ought",
-                        q6c: "Do",
-                        q7: "Complete (advice): You look tired. You ______ take a break. (أكمل (نصيحة): You look tired. You ______ take a break.)",
-                        q8: "Complete (negative): She ______ (not / should) eat so much sugar. (أكمل (نفي): She ______ (not / should) eat so much sugar.)",
-                        q9: "Complete (question): ______ (should) we arrive early? (أكمل (سؤال): ______ (should) we arrive early?)",
-                        q10: "Arrange: (you / should / see / a / doctor / .) (رتب: (you / should / see / a / doctor / .))",
-                        q11: "Arrange: (they / ought to / arrive / soon / .) (رتب: (they / ought to / arrive / soon / .))",
-                        q12: "Arrange: (we / shouldn't / be / late / .) (رتب: (we / shouldn't / be / late / .))"
-                    }
+                section3: {
+                    title: "I. 3. Primary Uses of \"Should\"",
+                    heading: "Advice, expectation & weak obligation",
+                    adviceTitle: "1️⃣ Advice / Recommendation",
+                    adviceDesc: "We use should to give or ask for advice or recommendations.",
+                    adviceEx1: "You should eat more vegetables.",
+                    adviceEx2: "Should I call her?",
+                    expectTitle: "2️⃣ Expectation / Probability",
+                    expectDesc: "Should can express that something is likely to happen or is expected.",
+                    expectEx1: "The package should arrive tomorrow.",
+                    expectEx2: "He should be home by now.",
+                    weakTitle: "3️⃣ Weak obligation / Correctness",
+                    weakDesc: "Should expresses what is right or a good idea, but not as strong as must.",
+                    weakEx1: "We should respect our parents.",
+                    weakEx2: "I should go now."
+                },
+                section4: {
+                    title: "I. 4. Primary Uses of \"Ought To\"",
+                    heading: "Moral duty, formal advice & expectation",
+                    moralTitle: "1️⃣ Moral obligation / Duty",
+                    moralDesc: "Ought to often implies a moral duty or what is ethically right.",
+                    moralEx1: "We ought to protect the environment.",
+                    moralEx2: "They ought to tell the truth.",
+                    formalTitle: "2️⃣ Advice (more formal)",
+                    formalDesc: "Ought to can be used for advice, similar to should but slightly more formal.",
+                    formalEx1: "You ought to see that film; it's excellent.",
+                    formalEx2: "She ought to apologize.",
+                    expectTitle2: "3️⃣ Expectation (less common)",
+                    expectDesc2: "Like should, ought to can express that something is likely.",
+                    expectEx3: "The train ought to be here soon.",
+                    expectEx4: "This ought to be enough."
+                },
+                section5: {
+                    title: "I. 5. Should vs Ought To – Quick Comparison",
+                    use: "Usage",
+                    should: "Should",
+                    oughtTo: "Ought to",
+                    advice: "Advice",
+                    adviceShould: "common, neutral",
+                    adviceOught: "more formal, moral tone",
+                    obligation: "Obligation",
+                    obligationShould: "weak, personal",
+                    obligationOught: "moral duty",
+                    expectation: "Expectation",
+                    expectationShould: "very common",
+                    expectationOught: "possible, less frequent"
+                },
+                exercises: {
+                    title: "Practice: Should & Ought To Core Uses",
+                    q1: "Choose the correct modal for advice: You ______ eat more vegetables.",
+                    q1a: "should",
+                    q1b: "ought to",
+                    q1c: "must",
+                    q2: "Choose for expectation: The train ______ arrive soon.",
+                    q2a: "should",
+                    q2b: "ought to",
+                    q2c: "might",
+                    q3: "Choose the correct negative advice: You ______ smoke; it's bad for health.",
+                    q3a: "shouldn't",
+                    q3b: "ought not to",
+                    q3c: "don't have to",
+                    q4: "Choose for moral obligation: We ______ help those in need.",
+                    q4a: "should",
+                    q4b: "ought to",
+                    q4c: "can",
+                    q5: "Choose for weak obligation: I ______ go to the party, but I don't feel like it.",
+                    q5a: "should",
+                    q5b: "ought to",
+                    q5c: "must",
+                    q6: "Choose the correct question form: ______ I tell her the truth?",
+                    q6a: "Should",
+                    q6b: "Ought",
+                    q6c: "Do",
+                    q7: "Complete (advice): You look tired. You ______ take a break.",
+                    q8: "Complete (negative): She ______ (not / should) eat so much sugar.",
+                    q9: "Complete (question): ______ (should) we arrive early?",
+                    q10: "Arrange (advice): (you / should / see / a / doctor / .)",
+                    q11: "Arrange (expectation): (they / ought to / arrive / soon / .)",
+                    q12: "Arrange (negative advice): (we / shouldn't / be / late / .)"
                 }
             }
-        };
-    </script>
-    
-    <script src="scripts/common-i18n.js"></script>
-    <script src="scripts/exercise-conjugation.js"></script>
-    <script>
-        var correctAnswersType1 = buildMultipleChoiceExercise({
-            containerId: 'mc-exercises',
-            prefix: 'EH-exercise-type1-possibilities3',
-            questions: [
-                { questionTextKey: 'modalsShouldOughtTo1.exercises.q1', options: [{ value: 'a', labelKey: 'modalsShouldOughtTo1.exercises.q1a' }, { value: 'b', labelKey: 'modalsShouldOughtTo1.exercises.q1b' }, { value: 'c', labelKey: 'modalsShouldOughtTo1.exercises.q1c' }], correctAnswer: 'a' },
-                { questionTextKey: 'modalsShouldOughtTo1.exercises.q2', options: [{ value: 'a', labelKey: 'modalsShouldOughtTo1.exercises.q2a' }, { value: 'b', labelKey: 'modalsShouldOughtTo1.exercises.q2b' }, { value: 'c', labelKey: 'modalsShouldOughtTo1.exercises.q2c' }], correctAnswer: 'a' },
-                { questionTextKey: 'modalsShouldOughtTo1.exercises.q3', options: [{ value: 'a', labelKey: 'modalsShouldOughtTo1.exercises.q3a' }, { value: 'b', labelKey: 'modalsShouldOughtTo1.exercises.q3b' }, { value: 'c', labelKey: 'modalsShouldOughtTo1.exercises.q3c' }], correctAnswer: 'a' },
-                { questionTextKey: 'modalsShouldOughtTo1.exercises.q4', options: [{ value: 'a', labelKey: 'modalsShouldOughtTo1.exercises.q4a' }, { value: 'b', labelKey: 'modalsShouldOughtTo1.exercises.q4b' }, { value: 'c', labelKey: 'modalsShouldOughtTo1.exercises.q4c' }], correctAnswer: 'b' },
-                { questionTextKey: 'modalsShouldOughtTo1.exercises.q5', options: [{ value: 'a', labelKey: 'modalsShouldOughtTo1.exercises.q5a' }, { value: 'b', labelKey: 'modalsShouldOughtTo1.exercises.q5b' }, { value: 'c', labelKey: 'modalsShouldOughtTo1.exercises.q5c' }], correctAnswer: 'a' },
-                { questionTextKey: 'modalsShouldOughtTo1.exercises.q6', options: [{ value: 'a', labelKey: 'modalsShouldOughtTo1.exercises.q6a' }, { value: 'b', labelKey: 'modalsShouldOughtTo1.exercises.q6b' }, { value: 'c', labelKey: 'modalsShouldOughtTo1.exercises.q6c' }], correctAnswer: 'a' }
-            ]
-        });
-
-        var correctAnswersType2 = buildFillInTheBlankExercise({
-            containerId: 'fill-exercises',
-            prefix: 'fill',
-            questions: [
-                { questionTextKey: 'modalsShouldOughtTo1.exercises.q7', answers: ['should', 'ought to'] },
-                { questionTextKey: 'modalsShouldOughtTo1.exercises.q8', answers: ['shouldn\'t', 'should not'] },
-                { questionTextKey: 'modalsShouldOughtTo1.exercises.q9', answers: ['Should', 'should'] }
-            ]
-        });
-
-        var correctAnswersType3 = buildSentenceOrderingExercise({
-            containerId: 'order-exercises',
-            prefix: 'order',
-            questions: [
-                { questionTextKey: 'modalsShouldOughtTo1.exercises.q10', words: ['you', 'should', 'see', 'a', 'doctor', '.'], correctSentence: 'You should see a doctor .' },
-                { questionTextKey: 'modalsShouldOughtTo1.exercises.q11', words: ['they', 'ought to', 'arrive', 'soon', '.'], correctSentence: 'They ought to arrive soon .' },
-                { questionTextKey: 'modalsShouldOughtTo1.exercises.q12', words: ['we', 'shouldn\'t', 'be', 'late', '.'], correctSentence: 'We shouldn\'t be late .' }
-            ]
-        });
-
-        function checkAllExercises() {
-            let totalScore = 0;
-            let totalQuestions = 0;
-            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
-            totalQuestions += 6;
-            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
-            totalQuestions += 3;
-            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
-            totalQuestions += 3;
-
-            const scoreEl = document.getElementById('score-value');
-            const fbEl = document.getElementById('score-feedback');
-            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
-            if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
-                else fbEl.textContent = 'Review the lesson and try again.';
+        },
+        fr: {
+            common: {
+                siteName: "English Hub",
+                previousLesson: "← Leçon Précédente",
+                returnToConjugation: "← Retour au Conjugaison",
+                nextLesson: "Leçon Suivante →"
+            },
+            footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+            shouldOughtTo1: {
+                title: { line1: "Should & Ought to : I", line2: "Concepts de base et utilisations principales", line3: "exprimer un conseil, une obligation et une attente", line4: "leçon : 1/3" },
+                section1: {
+                    title: "I. 1. Introduction à Should & Ought To",
+                    heading: "Que sont les modaux « should » et « ought to » ?",
+                    desc1: "📘 Définition :",
+                    desc2: "« Should » et « ought to » sont des verbes modaux utilisés pour donner des conseils, exprimer une obligation faible ou parler d'attentes. « Should » est le plus courant ; « ought to » est légèrement plus formel et implique souvent un devoir moral.",
+                    coreTitle: "💡 Idées clés :",
+                    core1: "Should – conseil, recommandation, attente, obligation faible.",
+                    core2: "Ought to – obligation morale, conseil (plus formel), attente.",
+                    ex1: "Tu devrais consulter un médecin. (conseil)",
+                    ex2: "Nous devons aider les pauvres. (obligation morale)",
+                    ex3: "Le train devrait arriver bientôt. (attente)",
+                    ex4: "Tu devrais essayer ce plat. (recommandation)"
+                },
+                section2: {
+                    title: "I. 2. Règles grammaticales de base",
+                    heading: "Structure et règles clés",
+                    structTitle: "📐 Structure :",
+                    structDesc: "Affirmatif : sujet + should / ought to + verbe base → She should study. / They ought to wait.\nNégatif : sujet + should not/shouldn't / ought not to/oughtn't to + verbe base → He shouldn't smoke. / You ought not to worry.\nInterrogatif : Should + sujet + verbe base ? (Ought + sujet + to + verbe base ? est rare) → Should I go ?",
+                    importantTitle: "⚠️ Important :",
+                    importantDesc: "Les modaux ne prennent jamais -s, -ing ou -ed. « Ought to » est toujours suivi de « to » + infinitif. Contractions négatives : shouldn't, oughtn't to (rare)."
+                },
+                section3: {
+                    title: "I. 3. Utilisations principales de « Should »",
+                    heading: "Conseil, attente et obligation faible",
+                    adviceTitle: "1️⃣ Conseil / Recommandation",
+                    adviceDesc: "Nous utilisons should pour donner ou demander un conseil ou une recommandation.",
+                    adviceEx1: "Tu devrais manger plus de légumes.",
+                    adviceEx2: "Dois-je l'appeler ?",
+                    expectTitle: "2️⃣ Attente / Probabilité",
+                    expectDesc: "Should peut exprimer qu'il est probable que quelque chose se produise.",
+                    expectEx1: "Le colis devrait arriver demain.",
+                    expectEx2: "Il devrait être à la maison maintenant.",
+                    weakTitle: "3️⃣ Obligation faible / Justesse",
+                    weakDesc: "Should exprime ce qui est juste ou une bonne idée, mais pas aussi fort que must.",
+                    weakEx1: "Nous devons respecter nos parents.",
+                    weakEx2: "Je devrais y aller maintenant."
+                },
+                section4: {
+                    title: "I. 4. Utilisations principales de « Ought To »",
+                    heading: "Devoir moral, conseil formel et attente",
+                    moralTitle: "1️⃣ Obligation morale / Devoir",
+                    moralDesc: "Ought to implique souvent un devoir moral ou ce qui est éthiquement juste.",
+                    moralEx1: "Nous devons protéger l'environnement.",
+                    moralEx2: "Ils devraient dire la vérité.",
+                    formalTitle: "2️⃣ Conseil (plus formel)",
+                    formalDesc: "Ought to peut être utilisé pour un conseil, similaire à should mais légèrement plus formel.",
+                    formalEx1: "Tu devrais voir ce film ; il est excellent.",
+                    formalEx2: "Elle devrait s'excuser.",
+                    expectTitle2: "3️⃣ Attente (moins courant)",
+                    expectDesc2: "Comme should, ought to peut exprimer qu'une chose est probable.",
+                    expectEx3: "Le train devrait être là bientôt.",
+                    expectEx4: "Cela devrait suffire."
+                },
+                section5: {
+                    title: "I. 5. Should vs Ought To – Comparaison rapide",
+                    use: "Usage",
+                    should: "Should",
+                    oughtTo: "Ought to",
+                    advice: "Conseil",
+                    adviceShould: "courant, neutre",
+                    adviceOught: "plus formel, tonalité morale",
+                    obligation: "Obligation",
+                    obligationShould: "faible, personnelle",
+                    obligationOught: "devoir moral",
+                    expectation: "Attente",
+                    expectationShould: "très courant",
+                    expectationOught: "possible, moins fréquent"
+                }
             }
-            document.getElementById('score-display').style.display = 'block';
+        },
+        ar: {
+            common: {
+                siteName: "English Hub",
+                previousLesson: "الدرس السابق← ",
+                returnToConjugation: "العودة إلى التصريف← ",
+                nextLesson: "الدرس التالي →"
+            },
+            footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+            shouldOughtTo1: {
+                title: { line1: "Should & Ought to: 1", line2: "المفاهيم الأساسية والاستخدامات الأولية", line3: "التعبير عن النصيحة، الوجوب، والتوقع", line4: "الدرس: 1/3" },
+                section1: {
+                    title: "I. 1. مقدمة إلى Should & Ought To",
+                    heading: "ما هما الفعلان الناقصان should و ought to؟",
+                    desc1: "📘 تعريف:",
+                    desc2: "should و ought to أفعال ناقصة تستخدم لإعطاء النصيحة، التعبير عن وجوب ضعيف، أو التحدث عن التوقعات. should هو الأكثر شيوعًا؛ ought to أكثر رسمية وغالبًا ما يشير إلى واجب أخلاقي.",
+                    coreTitle: "💡 أفكار أساسية:",
+                    core1: "Should – نصيحة، توصية، توقع، وجوب ضعيف.",
+                    core2: "Ought to – واجب أخلاقي، نصيحة (أكثر رسمية)، توقع.",
+                    ex1: "يجب أن ترى طبيبًا. (نصيحة)",
+                    ex2: "يجب علينا مساعدة الفقراء. (واجب أخلاقي)",
+                    ex3: "من المفترض أن يصل القطار قريبًا. (توقع)",
+                    ex4: "يجب أن تجرب هذا الطبق. (توصية)"
+                },
+                section2: {
+                    title: "I. 2. القواعد الأساسية",
+                    heading: "البنية والقواعد الرئيسية",
+                    structTitle: "📐 البنية:",
+                    structDesc: "إثبات: فاعل + should / ought to + فعل مجرد → She should study. / They ought to wait.\nنفي: فاعل + should not/shouldn't / ought not to/oughtn't to + فعل مجرد → He shouldn't smoke. / You ought not to worry.\nسؤال: Should + فاعل + فعل مجرد؟ (Ought + فاعل + to + فعل مجرد؟ نادر) → Should I go?",
+                    importantTitle: "⚠️ مهم:",
+                    importantDesc: "الأفعال الناقصة لا تأخذ -s أو -ing أو -ed. يتبع ought to دائمًا 'to' + المصدر. الاختصارات السالبة: shouldn't، oughtn't to (نادر)."
+                },
+                section3: {
+                    title: "I. 3. الاستخدامات الرئيسية لـ Should",
+                    heading: "النصيحة، التوقع والوجوب الضعيف",
+                    adviceTitle: "1️⃣ نصيحة / توصية",
+                    adviceDesc: "نستخدم should لإعطاء أو طلب النصيحة أو التوصيات.",
+                    adviceEx1: "يجب أن تأكل المزيد من الخضروات.",
+                    adviceEx2: "هل يجب أن أتصل بها؟",
+                    expectTitle: "2️⃣ توقع / احتمال",
+                    expectDesc: "يمكن أن يعبر should عن أن شيئًا ما مرجح الحدوث أو متوقع.",
+                    expectEx1: "من المتوقع أن تصل الحزمة غدًا.",
+                    expectEx2: "يفترض أنه في المنزل الآن.",
+                    weakTitle: "3️⃣ وجوب ضعيف / صواب",
+                    weakDesc: "يعبر should عن ما هو صحيح أو فكرة جيدة، لكن ليس بقوة must.",
+                    weakEx1: "يجب أن نحترم آباءنا.",
+                    weakEx2: "يجب أن أذهب الآن."
+                },
+                section4: {
+                    title: "I. 4. الاستخدامات الرئيسية لـ Ought To",
+                    heading: "واجب أخلاقي، نصيحة رسمية وتوقع",
+                    moralTitle: "1️⃣ واجب أخلاقي / واجب",
+                    moralDesc: "غالبًا ما يشير ought to إلى واجب أخلاقي أو ما هو صحيح أخلاقيًا.",
+                    moralEx1: "يجب علينا حماية البيئة.",
+                    moralEx2: "يجب عليهم قول الحقيقة.",
+                    formalTitle: "2️⃣ نصيحة (أكثر رسمية)",
+                    formalDesc: "يمكن استخدام ought to للنصيحة، مشابهًا لـ should لكنه أكثر رسمية قليلاً.",
+                    formalEx1: "يجب أن تشاهد هذا الفيلم؛ إنه ممتاز.",
+                    formalEx2: "يجب عليها أن تعتذر.",
+                    expectTitle2: "3️⃣ توقع (أقل شيوعًا)",
+                    expectDesc2: "مثل should، يمكن أن يعبر ought to عن أن شيئًا ما مرجح.",
+                    expectEx3: "من المفترض أن يكون القطار هنا قريبًا.",
+                    expectEx4: "هذا ينبغي أن يكون كافيًا."
+                },
+                section5: {
+                    title: "I. 5. Should vs Ought To – مقارنة سريعة",
+                    use: "الاستخدام",
+                    should: "Should",
+                    oughtTo: "Ought to",
+                    advice: "النصيحة",
+                    adviceShould: "شائع، محايد",
+                    adviceOught: "أكثر رسمية، نغمة أخلاقية",
+                    obligation: "الوجوب",
+                    obligationShould: "ضعيف، شخصي",
+                    obligationOught: "واجب أخلاقي",
+                    expectation: "التوقع",
+                    expectationShould: "شائع جدًا",
+                    expectationOught: "ممكن، أقل تواترًا"
+                }
+            }
         }
+    };
+</script>
+<script src="scripts/translation-refraction.js"></script>
+<script src="scripts/exercise-conjugation.js"></script>
+<script src="scripts/special-effects.js"></script>
+<script src="scripts/common-sections.js"></script>
+<script>
+    // Multiple choice exercises
+    const correctAnswersType1 = buildMultipleChoiceExercise({
+        containerId: 'mc-exercises',
+        prefix: 'EH-exercise-type1-possibilities3',
+        questions: [
+            { questionTextKey: 'shouldOughtTo1.exercises.q1', options: [{ value: 'a', labelKey: 'shouldOughtTo1.exercises.q1a' }, { value: 'b', labelKey: 'shouldOughtTo1.exercises.q1b' }, { value: 'c', labelKey: 'shouldOughtTo1.exercises.q1c' }], correctAnswer: 'a' },
+            { questionTextKey: 'shouldOughtTo1.exercises.q2', options: [{ value: 'a', labelKey: 'shouldOughtTo1.exercises.q2a' }, { value: 'b', labelKey: 'shouldOughtTo1.exercises.q2b' }, { value: 'c', labelKey: 'shouldOughtTo1.exercises.q2c' }], correctAnswer: 'a' },
+            { questionTextKey: 'shouldOughtTo1.exercises.q3', options: [{ value: 'a', labelKey: 'shouldOughtTo1.exercises.q3a' }, { value: 'b', labelKey: 'shouldOughtTo1.exercises.q3b' }, { value: 'c', labelKey: 'shouldOughtTo1.exercises.q3c' }], correctAnswer: 'a' },
+            { questionTextKey: 'shouldOughtTo1.exercises.q4', options: [{ value: 'a', labelKey: 'shouldOughtTo1.exercises.q4a' }, { value: 'b', labelKey: 'shouldOughtTo1.exercises.q4b' }, { value: 'c', labelKey: 'shouldOughtTo1.exercises.q4c' }], correctAnswer: 'b' },
+            { questionTextKey: 'shouldOughtTo1.exercises.q5', options: [{ value: 'a', labelKey: 'shouldOughtTo1.exercises.q5a' }, { value: 'b', labelKey: 'shouldOughtTo1.exercises.q5b' }, { value: 'c', labelKey: 'shouldOughtTo1.exercises.q5c' }], correctAnswer: 'a' },
+            { questionTextKey: 'shouldOughtTo1.exercises.q6', options: [{ value: 'a', labelKey: 'shouldOughtTo1.exercises.q6a' }, { value: 'b', labelKey: 'shouldOughtTo1.exercises.q6b' }, { value: 'c', labelKey: 'shouldOughtTo1.exercises.q6c' }], correctAnswer: 'a' }
+        ]
+    });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
-            document.getElementById('check-all').addEventListener('click', checkAllExercises);
-        });
+    // Fill-in-the-blank exercises (accept both should and ought to where appropriate)
+    correctAnswersType2 = buildFillInTheBlankExercise({
+        containerId: 'fill-exercises',
+        prefix: 'fill',
+        questions: [
+            { questionTextKey: 'shouldOughtTo1.exercises.q7', answers: ['should', 'ought to'] },
+            { questionTextKey: 'shouldOughtTo1.exercises.q8', answers: ['shouldn\'t', 'should not'] },
+            { questionTextKey: 'shouldOughtTo1.exercises.q9', answers: ['Should', 'should'] }
+        ]
+    });
 
-        (function() {
-            function applyHtmlI18n() {
-                const lang = document.getElementById('language-selector').value;
-                document.querySelectorAll('[data-i18n]').forEach(el => {
-                    const key = el.getAttribute('data-i18n');
-                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
-                        el.textContent = translation;
-                    }
-                });
-            }
-            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
-            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
-        })();
-    </script>
+    // Sentence ordering exercises
+    const correctAnswersType3 = buildSentenceOrderingExercise({
+        containerId: 'order-exercises',
+        prefix: 'order',
+        questions: [
+            { questionTextKey: 'shouldOughtTo1.exercises.q10', words: ['you', 'should', 'see', 'a', 'doctor', '.'], correctSentence: 'you should see a doctor .' },
+            { questionTextKey: 'shouldOughtTo1.exercises.q11', words: ['they', 'ought to', 'arrive', 'soon', '.'], correctSentence: 'they ought to arrive soon .' },
+            { questionTextKey: 'shouldOughtTo1.exercises.q12', words: ['we', 'shouldn\'t', 'be', 'late', '.'], correctSentence: 'we shouldn\'t be late .' }
+        ]
+    });
+
+    function checkAllExercises() {
+        let totalScore = 0;
+        let totalQuestions = 0;
+
+        totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+        totalQuestions += 6;
+        totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+        totalQuestions += 3;
+        totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+        totalQuestions += 3;
+
+        const scoreEl = document.getElementById('score-value');
+        const fbEl = document.getElementById('score-feedback');
+        if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+        if (fbEl) {
+            if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered the core uses of should & ought to!';
+            else if (totalScore >= 9) fbEl.textContent = 'Good job! Review the differences between should and ought to.';
+            else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit advice, obligation, and expectation.';
+            else fbEl.textContent = 'Review the lesson and try again.';
+        }
+        document.getElementById('score-display').style.display = 'block';
+        if (window.EHScoreEffects && EHScoreEffects.show) {
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+        ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+        document.getElementById('check-all').addEventListener('click', checkAllExercises);
+    });
+
+    // i18n rendering for data-i18n attributes
+    (function() {
+        function applyHtmlI18n() {
+            const lang = document.getElementById('language-selector').value;
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                if (translation) {
+                    el.textContent = translation;
+                }
+            });
+        }
+        window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+        document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+    })();
+</script>
 </body>
 </html>

@@ -3,491 +3,443 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>May & Might: Real-World Application & Common Pitfalls - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
+    <title>May & Might III: Real-World Application & Common Pitfalls - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-        /* === Theme Variables (May/Might Part 3 – calm ocean / slate blue) === */
+        /* Sage / Emerald palette – distinct from p1 amber and p2 lavender */
         :root {
-            --bg-gradient: linear-gradient(135deg, #1e3799, #2c3e50, #4a69bd, #6c5ce7);
-            --title-color: #1e3799;
-            --primary: #4a69bd;
-            --primary-hover: #1e3799;
-            --primary-light: #6c5ce7;
-            --accent: #6c5ce7;
-            --rule-bg: #f0f3ff;
-            --rule-border: #6c5ce7;
-            --example-bg: #e6e9ff;
-            --example-border: #6c5ce7;
-            --exercise-number-gradient: linear-gradient(135deg, #4a69bd, #6c5ce7);
-            --nav-btn-bg: #4a69bd;
-            --nav-btn-hover: #1e3799;
-            --nav-back-btn-bg: #6c5ce7;
-            --nav-back-btn-color: white;
-            --nav-back-btn-hover: #4a69bd;
-
-            /* ---------- Universal / Neutral ---------- */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
-            --correct-bg: #d4edda;
-            --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --bg-gradient: linear-gradient(135deg, #e0f2e9, #cde8df, #b8decd, #a8d4bd);
+            --content-bg: #f7fcf9;
+            --card-bg: #ffffff;
+            --subsection-bg: #f0f9f3;
+            --rule-bg: #e8f5ef;
+            --example-bg: #e0f2e9;
+            --table-stripe: #f2faf6;
+            --title-color: #1e6f4c;
+            --text-color: #1a4a36;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #3b9e6e;
+            --primary-hover: #2d7a55;
+            --primary-light: #52b380;
+            --accent: #3b9e6e;
+            --exercise-number-gradient: linear-gradient(135deg, #3b9e6e, #2d7a55);
+            --rule-border: #3b9e6e;
+            --example-border: #3b9e6e;
+            --nav-btn-bg: #3b9e6e;
+            --nav-btn-hover: #2d7a55;
+            --nav-back-btn-bg: #52b380;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #3b9e6e;
+            --refract-divider-color: #9ad4b5;
+            --refract-translation-bg: #edf9f2;
+            --refract-translation-border: #3b9e6e;
+            --refract-english-color: #1a4a36;
+            --section-divider: #d0ecd9;
+            --card-border: #d0ecd9;
+            --input-border: #bce0cb;
+            --dashed-border: #bce0cb;
+            --table-border: #c2e2cf;
+            --correct-bg: #dff0e8;
+            --correct-color: #1b6b43;
+            --correct-border: #9bdcb5;
+            --incorrect-bg: #ffe6e5;
+            --incorrect-color: #b13e3e;
+            --incorrect-border: #fcc2bc;
+            --neutral-bg: #eef7f0;
+            --neutral-color: #4c7b64;
+            --neutral-border: #c2e0d0;
+            --empty-input-border: #bce0cb;
+            --empty-input-bg: #fefefe;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #3b9e6e;
+            --language-selector-color: #1a4a36;
+            --score-flash-high-bg: #c8e6d9;
+            --score-flash-mid-bg: #fff3ce;
+            --score-flash-low-bg: #ffe0db;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #1a4a3a, #236e4a, #2d8a5a, #37a86a);
+            --content-bg: #1a3a2e;
+            --card-bg: #224e3a;
+            --subsection-bg: #224e3a;
+            --rule-bg: #1a3a2e;
+            --example-bg: #1a3a2e;
+            --table-stripe: #1f4535;
+            --title-color: #b0e6cc;
+            --text-color: #daf5e8;
+            --header-text: #daf5e8;
+            --header-text-light: #b8d9c6;
+            --primary: #52b380;
+            --primary-hover: #6acd96;
+            --primary-light: #52b380;
+            --accent: #52b380;
+            --rule-border: #52b380;
+            --example-border: #52b380;
+            --exercise-number-gradient: linear-gradient(135deg, #52b380, #3b9e6e);
+            --nav-btn-bg: #52b380;
+            --nav-btn-hover: #3b9e6e;
+            --nav-back-btn-bg: #6acd96;
+            --nav-back-btn-color: #0a2e1f;
+            --nav-back-btn-hover: #52b380;
+            --refract-divider-color: #8acfa8;
+            --refract-translation-bg: #2a6e52;
+            --refract-translation-border: #8acfa8;
+            --refract-english-color: #c0f0da;
+            --section-divider: #2a5a44;
+            --card-border: #2a5a44;
+            --input-border: #4a8a6a;
+            --dashed-border: #4a8a6a;
+            --table-border: #3a725a;
+            --white: #e0f5ea;
+            --correct-bg: #2a6a4a;
+            --correct-color: #bcf0d0;
+            --correct-border: #5cbf8c;
+            --incorrect-bg: #632c2c;
+            --incorrect-color: #f7bfbf;
+            --incorrect-border: #b45a5a;
+            --neutral-bg: #2a4a3a;
+            --neutral-color: #c0e0d0;
+            --neutral-border: #5a8a70;
+            --empty-input-border: #5a8a70;
+            --empty-input-bg: #1a3a2e;
+            --language-selector-bg: #224e3a;
+            --language-selector-border: #52b380;
+            --language-selector-color: #daf5e8;
+            --score-flash-high-bg: #2c6e4a;
+            --score-flash-mid-bg: #bd882a;
+            --score-flash-low-bg: #aa4a3a;
         }
     </style>
-    <link rel="stylesheet" href="styles/style-conjugation.css">
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="ar">العربية</option>
-        </select>
-    </div>
-    
-    <div class="EH-site-header">
-        <a href="index.html" class="EH-site-logo-link" title="Main Page">
-            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
-        </a>
-        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
-    </div>
-    
-    <div class="EH-conjugation-container">
-        <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="modalsMayMight3.title">May & Might: Real-World Application & Common Pitfalls</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="modalsMayMight3.subtitle">Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts</p>
-        </header>
-        
-        <div class="EH-conjugation-content">
-            <!-- Common Mistakes section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight3.mistakes.title">Common Mistakes with May & Might</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⚠️</span>
-                        <span data-i18n="modalsMayMight3.mistakes.heading1">Frequent errors</span>
-                    </h3>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight3.mistakes.error1Title">❌ Using 'may' for past possibility without 'have'</div>
-                        <p data-i18n="modalsMayMight3.mistakes.error1Desc">Incorrect: <em>He may left early.</em> ✅ Correct: <em>He may have left early.</em> (past possibility requires "have + past participle")</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight3.mistakes.error2Title">❌ Confusing 'may' and 'might' in reported speech</div>
-                        <p data-i18n="modalsMayMight3.mistakes.error2Desc">Incorrect: <em>She said she may come.</em> (if reporting a past statement) ✅ Correct: <em>She said she might come.</em> (shift back in reported speech)</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight3.mistakes.error3Title">❌ Using double modals</div>
-                        <p data-i18n="modalsMayMight3.mistakes.error3Desc">Incorrect: <em>He might can help.</em> ✅ Correct: <em>He might be able to help.</em> or <em>He can help.</em></p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight3.mistakes.error4Title">❌ Overusing 'may' for permission in informal contexts</div>
-                        <p data-i18n="modalsMayMight3.mistakes.error4Desc">While "May I?" is correct, in casual speech it can sound too formal. <em>Can I get a coffee?</em> is more natural among friends.</p>
-                    </div>
+<div class="EH-language-selector-wrapper">
+    <select id="language-selector" class="EH-language-selector">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية</option>
+    </select>
+    <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+</div>
+<div class="EH-site-header">
+    <a href="index.html" class="EH-site-logo-link" title="Main Page">
+        <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+    </a>
+    <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+</div>
+<div class="EH-conjugation-container">
+    <header class="EH-conjugation-header">
+        <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+            <div class="EH-conjugation-title-line" data-i18n="mayMight3.title.line1">May &amp; Might: III:</div>
+            <div class="EH-conjugation-title-line" data-i18n="mayMight3.title.line2">Real-World Application &amp; Common Pitfalls</div>
+            <div class="EH-conjugation-subtitle" data-i18n="mayMight3.title.line3">frequent mistakes, idioms, and real-life contexts</div>
+            <div class="EH-conjugation-subtitle" data-i18n="mayMight3.title.line4">lesson: 3/3</div>
+        </div>
+    </header>
+    <div class="EH-conjugation-content">
+        <!-- Section III.1: Common Mistakes -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="mayMight3.section1.title">III. 1. Common Mistakes with May &amp; Might</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">⚠️</span>
+                    <span data-i18n="mayMight3.section1.heading">Frequent errors</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight3.section1.error1Title">❌ Using 'may' for past possibility without 'have'</div>
+                    <p data-i18n="mayMight3.section1.error1Desc">Incorrect: He may left early. ✅ Correct: He may have left early. (past possibility requires "have + past participle")</p>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight3.section1.error2Title">❌ Confusing 'may' and 'might' in reported speech</div>
+                    <p data-i18n="mayMight3.section1.error2Desc">Incorrect: She said she may come. (if reporting a past statement) ✅ Correct: She said she might come. (shift back in reported speech)</p>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight3.section1.error3Title">❌ Using double modals</div>
+                    <p data-i18n="mayMight3.section1.error3Desc">Incorrect: He might can help. ✅ Correct: He might be able to help. or He can help.</p>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight3.section1.error4Title">❌ Overusing 'may' for permission in informal contexts</div>
+                    <p data-i18n="mayMight3.section1.error4Desc">While "May I?" is correct, in casual speech it can sound too formal. Can I get a coffee? is more natural among friends.</p>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight3.section1.error5Title">Additional Common Pitfalls</div>
+                    <ul>
+                        <li data-i18n="mayMight3.section1.pitfall1">Using 'may' and 'might' interchangeably in probability: 'might' often suggests a lower probability.</li>
+                        <li data-i18n="mayMight3.section1.pitfall2">Forgetting to backshift in reported speech with past tense reporting verbs: She thought she may be late. ❌ → She thought she might be late. ✅</li>
+                        <li data-i18n="mayMight3.section1.pitfall3">Confusing 'maybe' (adverb) with 'may be' (modal + verb): Maybe he is late. (adverb = perhaps) vs He may be late. (modal verb expressing possibility).</li>
+                    </ul>
                 </div>
             </div>
-            
-            <!-- Additional Common Pitfalls -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight3.pitfalls.title">Additional Common Pitfalls</h2>
-                <div class="EH-conjugation-subsection">
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight3.pitfalls.item1Title">❌ Using 'may' and 'might' interchangeably in probability</div>
-                        <p data-i18n="modalsMayMight3.pitfalls.item1Desc">Although often interchangeable, 'might' often suggests a lower probability. <em>It may rain later.</em> (fairly possible) vs <em>It might rain later.</em> (less certain).</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight3.pitfalls.item2Title">❌ Forgetting to backshift in reported speech with past tense reporting verbs</div>
-                        <p data-i18n="modalsMayMight3.pitfalls.item2Desc">When the reporting verb is past (e.g., <em>said</em>), 'may' usually changes to 'might'. <em>She thought she may be late.</em> ❌ → <em>She thought she might be late.</em> ✅</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight3.pitfalls.item3Title">❌ Confusing 'maybe' (adverb) with 'may be' (modal + verb)</div>
-                        <p data-i18n="modalsMayMight3.pitfalls.item3Desc"><em>Maybe he is late.</em> (adverb = perhaps) vs <em>He may be late.</em> (modal verb expressing possibility).</p>
-                    </div>
+        </div>
+        <!-- Section III.2: Idiomatic Expressions -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="mayMight3.section2.title">III. 2. Idiomatic Expressions with May/Might</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">📚</span>
+                    <span data-i18n="mayMight3.section2.heading">Common fixed phrases</span>
+                </h3>
+                <table class="EH-conjugation-table">
+                    <thead><tr><th data-i18n="mayMight3.section2.expression">Expression</th><th data-i18n="mayMight3.section2.meaning">Meaning</th><th data-i18n="mayMight3.section2.example">Example</th></tr></thead>
+                    <tbody>
+                        <tr><td data-i18n="mayMight3.section2.expr1">may/might as well</td><td data-i18n="mayMight3.section2.meaning1">no reason not to; it's equally good</td><td data-i18n="mayMight3.section2.example1">We may as well start now.</td></tr>
+                        <tr><td data-i18n="mayMight3.section2.expr2">if I may</td><td data-i18n="mayMight3.section2.meaning2">polite way to interject or ask permission</td><td data-i18n="mayMight3.section2.example2">If I may, I'd like to add something.</td></tr>
+                        <tr><td data-i18n="mayMight3.section2.expr3">be that as it may</td><td data-i18n="mayMight3.section2.meaning3">nevertheless; despite that</td><td data-i18n="mayMight3.section2.example3">Be that as it may, we must continue.</td></tr>
+                        <tr><td data-i18n="mayMight3.section2.expr4">might I say</td><td data-i18n="mayMight3.section2.meaning4">hesitant or polite introduction</td><td data-i18n="mayMight3.section2.example4">Might I say you look lovely tonight?</td></tr>
+                        <tr><td data-i18n="mayMight3.section2.expr5">may well</td><td data-i18n="mayMight3.section2.meaning5">quite possibly</td><td data-i18n="mayMight3.section2.example5">She may well be the best candidate.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Section III.3: Contextual Practice -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="mayMight3.section3.title">III. 3. Contextual Practice: At a Business Meeting</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">💼</span>
+                    <span data-i18n="mayMight3.section3.heading">Using modals for polite suggestions &amp; formal requests</span>
+                </h3>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="mayMight3.section3.dialogue1">Chair: "Shall we begin? If I may, I'd like to call the meeting to order."</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight3.section3.dialogue2">Anna: "Certainly. Might I suggest we review the budget first?"</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight3.section3.dialogue3">Chair: "That's a good idea. May I ask everyone to turn to page 3?"</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight3.section3.dialogue4">Ben: "If I may interject, I think there may be an error in the projections."</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight3.section3.dialogue5">Chair: "Thank you, Ben. Be that as it may, we need to move forward. Could we vote?"</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight3.section3.dialogue6">Anna: "We might as well decide today."</div>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <p data-i18n="mayMight3.section3.note">Note: Notice the use of may, might, and idioms for polite interaction.</p>
                 </div>
             </div>
-            
-            <!-- Idiomatic Expressions -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight3.idioms.title">Idiomatic Expressions with May/Might</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">💬</span>
-                        <span data-i18n="modalsMayMight3.idioms.heading1">Common fixed phrases</span>
-                    </h3>
-                    <table class="EH-conjugation-table">
-                        <thead><tr><th data-i18n="common.expression">Expression</th><th data-i18n="common.meaning">Meaning</th><th data-i18n="common.example">Example</th></tr></thead>
-                        <tbody>
-                            <tr><td><strong>may/might as well</strong></td><td data-i18n="modalsMayMight3.idioms.aswellMeaning">no reason not to; it's equally good</td><td data-i18n="modalsMayMight3.idioms.aswellEx">We may as well start now.</td></tr>
-                            <tr><td><strong>if I may</strong></td><td data-i18n="modalsMayMight3.idioms.ifIMayMeaning">polite way to interject or ask permission</td><td data-i18n="modalsMayMight3.idioms.ifIMayEx">If I may, I'd like to add something.</td></tr>
-                            <tr><td><strong>be that as it may</strong></td><td data-i18n="modalsMayMight3.idioms.beThatMeaning">nevertheless; despite that</td><td data-i18n="modalsMayMight3.idioms.beThatEx">Be that as it may, we must continue.</td></tr>
-                            <tr><td><strong>might I say</strong></td><td data-i18n="modalsMayMight3.idioms.mightSayMeaning">hesitant or polite introduction</td><td data-i18n="modalsMayMight3.idioms.mightSayEx">Might I say you look lovely tonight?</td></tr>
-                            <tr><td><strong>may well</strong></td><td data-i18n="modalsMayMight3.idioms.mayWellMeaning">quite possibly</td><td data-i18n="modalsMayMight3.idioms.mayWellEx">She may well be the best candidate.</td></tr>
-                        </tbody>
-                    </table>
+        </div>
+        <!-- Exercises -->
+        <div class="EH-conjugation-section EH-exercise-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="mayMight3.exercises.title">Practice: Common Mistakes, Idioms &amp; Real-World Use</h2>
+            <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+            <div class="EH-exercise-container" id="mc-exercises"></div>
+            <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+            <div class="EH-exercise-container" id="fill-exercises"></div>
+            <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+            <div class="EH-exercise-container" id="order-exercises"></div>
+            <div class="EH-exercise-type1-possibilities3-answers-control">
+                <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
+                    <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
+                    <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                    <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                 </div>
-            </div>
-            
-            <!-- Contextual Practice: Business Meeting -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight3.context.title">Contextual Practice: At a Business Meeting</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🏢</span>
-                        <span data-i18n="modalsMayMight3.context.subtitle">Using modals for polite suggestions & formal requests</span>
-                    </h3>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight3.context.dialogue">Sample dialogue:</div>
-                        <p><strong data-i18n="modalsMayMight3.context.chair">Chair:</strong> <span data-i18n="modalsMayMight3.context.line1">"Shall we begin? If I may, I'd like to call the meeting to order."</span><br>
-                        <strong data-i18n="modalsMayMight3.context.anna">Anna:</strong> <span data-i18n="modalsMayMight3.context.line2">"Certainly. Might I suggest we review the budget first?"</span><br>
-                        <strong>Chair:</strong> <span data-i18n="modalsMayMight3.context.line3">"That's a good idea. May I ask everyone to turn to page 3?"</span><br>
-                        <strong data-i18n="modalsMayMight3.context.ben">Ben:</strong> <span data-i18n="modalsMayMight3.context.line4">"If I may interject, I think there may be an error in the projections."</span><br>
-                        <strong>Chair:</strong> <span data-i18n="modalsMayMight3.context.line5">"Thank you, Ben. Be that as it may, we need to move forward. Could we vote?"</span><br>
-                        <strong>Anna:</strong> <span data-i18n="modalsMayMight3.context.line6">"We might as well decide today."</span></p>
-                        <p data-i18n="modalsMayMight3.context.note"><em>Note: Notice the use of may, might, and idioms for polite interaction.</em></p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- EXERCISES (12) – dynamic slots -->
-            <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight3.exercises.title">Review & Production Exercises</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #1e3799; margin-bottom: 20px;">Multiple Choice</h3>
-                <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #1e3799; margin: 40px 0 20px 0;">Fill in the Blank</h3>
-                <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #1e3799; margin: 40px 0 20px 0;">Sentence Ordering</h3>
-                <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
-                <div class="EH-exercise-type1-possibilities3-answers-control">
-                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
-                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
-                        <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
-                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-                <!-- <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-shouldoughtto-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson →</span>
-                </button> -->
-				<button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-					<span data-i18n="common.previousLesson">Previous Lesson</span>
-				</button>
-                <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-                    <span></span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">← Return to Conjugation</span>
-                </button>
             </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
-    <script>
-        window.I18N = {
-            en: {
-                common: {
-                    siteName: "English Hub",
-                    previousLesson: "← Previous Lesson",
-                    returnToConjugation: "← Return to Conjugation",
-                    nextLesson: "Next Lesson →",
-                    expression: "Expression",
-                    meaning: "Meaning",
-                    example: "Example"
+</div>
+
+<script>
+    window.I18N = {
+        en: {
+            common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+            footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+            mayMight3: {
+                title: { line1: "May & Might: III:", line2: "Real-World Application & Common Pitfalls", line3: "frequent mistakes, idioms, and real-life contexts", line4: "lesson: 3/3" },
+                section1: {
+                    title: "III. 1. Common Mistakes with May & Might", heading: "Frequent errors",
+                    error1Title: "❌ Using 'may' for past possibility without 'have'", error1Desc: "Incorrect: He may left early. ✅ Correct: He may have left early. (past possibility requires \"have + past participle\")",
+                    error2Title: "❌ Confusing 'may' and 'might' in reported speech", error2Desc: "Incorrect: She said she may come. (if reporting a past statement) ✅ Correct: She said she might come. (shift back in reported speech)",
+                    error3Title: "❌ Using double modals", error3Desc: "Incorrect: He might can help. ✅ Correct: He might be able to help. or He can help.",
+                    error4Title: "❌ Overusing 'may' for permission in informal contexts", error4Desc: "While \"May I?\" is correct, in casual speech it can sound too formal. Can I get a coffee? is more natural among friends.",
+                    error5Title: "Additional Common Pitfalls", pitfall1: "Using 'may' and 'might' interchangeably in probability: 'might' often suggests a lower probability.", pitfall2: "Forgetting to backshift in reported speech with past tense reporting verbs: She thought she may be late. ❌ → She thought she might be late. ✅", pitfall3: "Confusing 'maybe' (adverb) with 'may be' (modal + verb): Maybe he is late. (adverb = perhaps) vs He may be late. (modal verb expressing possibility)."
                 },
-                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
-                modalsMayMight3: {
-                    title: "May & Might: Real-World Application & Common Pitfalls",
-                    subtitle: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts",
-                    mistakes: { title: "Common Mistakes with May & Might", heading1: "Frequent errors", error1Title: "❌ Using 'may' for past possibility without 'have'", error1Desc: "Incorrect: <em>He may left early.</em> ✅ Correct: <em>He may have left early.</em> (past possibility requires \"have + past participle\")", error2Title: "❌ Confusing 'may' and 'might' in reported speech", error2Desc: "Incorrect: <em>She said she may come.</em> (if reporting a past statement) ✅ Correct: <em>She said she might come.</em> (shift back in reported speech)", error3Title: "❌ Using double modals", error3Desc: "Incorrect: <em>He might can help.</em> ✅ Correct: <em>He might be able to help.</em> or <em>He can help.</em>", error4Title: "❌ Overusing 'may' for permission in informal contexts", error4Desc: "While \"May I?\" is correct, in casual speech it can sound too formal. <em>Can I get a coffee?</em> is more natural among friends." },
-                    pitfalls: { title: "Additional Common Pitfalls", item1Title: "❌ Using 'may' and 'might' interchangeably in probability", item1Desc: "Although often interchangeable, 'might' often suggests a lower probability. <em>It may rain later.</em> (fairly possible) vs <em>It might rain later.</em> (less certain).", item2Title: "❌ Forgetting to backshift in reported speech with past tense reporting verbs", item2Desc: "When the reporting verb is past (e.g., <em>said</em>), 'may' usually changes to 'might'. <em>She thought she may be late.</em> ❌ → <em>She thought she might be late.</em> ✅", item3Title: "❌ Confusing 'maybe' (adverb) with 'may be' (modal + verb)", item3Desc: "<em>Maybe he is late.</em> (adverb = perhaps) vs <em>He may be late.</em> (modal verb expressing possibility)." },
-                    idioms: { title: "Idiomatic Expressions with May/Might", heading1: "Common fixed phrases", aswellMeaning: "no reason not to; it's equally good", aswellEx: "We may as well start now.", ifIMayMeaning: "polite way to interject or ask permission", ifIMayEx: "If I may, I'd like to add something.", beThatMeaning: "nevertheless; despite that", beThatEx: "Be that as it may, we must continue.", mightSayMeaning: "hesitant or polite introduction", mightSayEx: "Might I say you look lovely tonight?", mayWellMeaning: "quite possibly", mayWellEx: "She may well be the best candidate." },
-                    context: { title: "Contextual Practice: At a Business Meeting", subtitle: "Using modals for polite suggestions & formal requests", dialogue: "Sample dialogue:", chair: "Chair:", anna: "Anna:", ben: "Ben:", line1: "\"Shall we begin? If I may, I'd like to call the meeting to order.\"", line2: "\"Certainly. Might I suggest we review the budget first?\"", line3: "\"That's a good idea. May I ask everyone to turn to page 3?\"", line4: "\"If I may interject, I think there may be an error in the projections.\"", line5: "\"Thank you, Ben. Be that as it may, we need to move forward. Could we vote?\"", line6: "\"We might as well decide today.\"", note: "<em>Note: Notice the use of may, might, and idioms for polite interaction.</em>" },
-                    exercises: {
-                        title: "Review & Production Exercises",
-                        q1: "Choose the correct sentence for past possibility:", q1a: "He may left his keys.", q1b: "He may have left his keys.", q1c: "He may to leave his keys.",
-                        q2: "Complete the reported speech: She said, \"I may be late.\" → She said she ______ be late.", q2a: "may", q2b: "might", q2c: "can",
-                        q3: "Which sentence is grammatically correct?", q3a: "He might can arrive early.", q3b: "He might be able to arrive early.", q3c: "He might arrives early.",
-                        q4: "What does \"If I may\" express?", q4a: "a casual order", q4b: "a polite way to interrupt or ask permission", q4c: "a strong command",
-                        q5: "Choose the best meaning for \"We may as well go\":", q5a: "We definitely should go.", q5b: "There's no reason not to go.", q5c: "We might go later.",
-                        q6: "Which sentence uses \"may well\" correctly?", q6a: "She may well be the winner.", q6b: "She may well to be the winner.", q6c: "She may well is the winner.",
-                        q7: "Complete with the correct form: \"He looks tired; he ______ (may) worked all night.\" (past possibility)",
-                        q8: "Complete with the idiom: \"______ I may, I'd like to suggest a break.\"",
-                        q9: "Correct the double modal: \"She might can join us.\" → \"She might ______ join us.\"",
-                        q10: "Arrange: (as / well / might / We / go / .)",
-                        q11: "Arrange: (have / might / missed / She / the / train / .)",
-                        q12: "Arrange a polite request: (ask / I / May / a / question / ?)"
-                    }
-                }
-            },
-            fr: {
-                common: {
-                    siteName: "English Hub",
-                    previousLesson: "← Previous Lesson (Leçon Précédente)",
-                    returnToConjugation: "← Return to Conjugation (Retour au Conjugaison)",
-                    nextLesson: "Next Lesson (Leçon Suivante) →",
-                    expression: "Expression (Expression)",
-                    meaning: "Signification (Signification)",
-                    example: "Exemple (Exemple)"
+                section2: {
+                    title: "III. 2. Idiomatic Expressions with May/Might", heading: "Common fixed phrases", expression: "Expression", meaning: "Meaning", example: "Example",
+                    expr1: "may/might as well", meaning1: "no reason not to; it's equally good", example1: "We may as well start now.",
+                    expr2: "if I may", meaning2: "polite way to interject or ask permission", example2: "If I may, I'd like to add something.",
+                    expr3: "be that as it may", meaning3: "nevertheless; despite that", example3: "Be that as it may, we must continue.",
+                    expr4: "might I say", meaning4: "hesitant or polite introduction", example4: "Might I say you look lovely tonight?",
+                    expr5: "may well", meaning5: "quite possibly", example5: "She may well be the best candidate."
                 },
-                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
-                modalsMayMight3: {
-                    title: "May & Might: Real-World Application & Common Pitfalls (May & Might : application concrète et erreurs courantes)",
-                    subtitle: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts (Évitez les erreurs fréquentes, utilisez les expressions idiomatiques naturellement et pratiquez dans des contextes réels)",
-                    mistakes: { title: "Common Mistakes with May & Might (Erreurs courantes avec May & Might)", heading1: "Frequent errors (Erreurs fréquentes)", error1Title: "❌ Using 'may' for past possibility without 'have' (Utiliser 'may' pour une possibilité passée sans 'have')", error1Desc: "Incorrect: <em>He may left early.</em> ✅ Correct: <em>He may have left early.</em> (past possibility requires \"have + past participle\") (Incorrect : <em>He may left early.</em> ✅ Correct : <em>He may have left early.</em> – la possibilité passée nécessite \"have + participe passé\")", error2Title: "❌ Confusing 'may' and 'might' in reported speech (Confondre 'may' et 'might' dans le discours rapporté)", error2Desc: "Incorrect: <em>She said she may come.</em> (if reporting a past statement) ✅ Correct: <em>She said she might come.</em> (shift back in reported speech) (Incorrect : <em>She said she may come.</em> (si on rapporte une déclaration passée) ✅ Correct : <em>She said she might come.</em> – décalage dans le discours rapporté)", error3Title: "❌ Using double modals (Utiliser deux modaux ensemble)", error3Desc: "Incorrect: <em>He might can help.</em> ✅ Correct: <em>He might be able to help.</em> or <em>He can help.</em> (Incorrect : <em>He might can help.</em> ✅ Correct : <em>He might be able to help.</em> ou <em>He can help.</em>)", error4Title: "❌ Overusing 'may' for permission in informal contexts (Utiliser trop 'may' pour la permission en contexte informel)", error4Desc: "While \"May I?\" is correct, in casual speech it can sound too formal. <em>Can I get a coffee?</em> is more natural among friends. (Bien que \"May I?\" soit correct, dans le langage courant, il peut sembler trop formel. <em>Can I get a coffee?</em> est plus naturel entre amis.)" },
-                    pitfalls: { title: "Additional Common Pitfalls (Pièges courants supplémentaires)", item1Title: "❌ Using 'may' and 'might' interchangeably in probability (Utiliser 'may' et 'might' de manière interchangeable pour la probabilité)", item1Desc: "Although often interchangeable, 'might' often suggests a lower probability. <em>It may rain later.</em> (fairly possible) vs <em>It might rain later.</em> (less certain). (Bien que souvent interchangeables, 'might' suggère souvent une probabilité plus faible. <em>It may rain later.</em> (assez possible) vs <em>It might rain later.</em> (moins certain).)", item2Title: "❌ Forgetting to backshift in reported speech with past tense reporting verbs (Oublier le décalage dans le discours rapporté avec des verbes introducteurs au passé)", item2Desc: "When the reporting verb is past (e.g., <em>said</em>), 'may' usually changes to 'might'. <em>She thought she may be late.</em> ❌ → <em>She thought she might be late.</em> ✅ (Lorsque le verbe introducteur est au passé (par ex. <em>said</em>), 'may' change généralement en 'might'. <em>She thought she may be late.</em> ❌ → <em>She thought she might be late.</em> ✅)", item3Title: "❌ Confusing 'maybe' (adverb) with 'may be' (modal + verb) (Confondre 'maybe' (adverbe) avec 'may be' (modal + verbe))", item3Desc: "<em>Maybe he is late.</em> (adverb = perhaps) vs <em>He may be late.</em> (modal verb expressing possibility). (<em>Maybe he is late.</em> (adverbe = peut-être) vs <em>He may be late.</em> (verbe modal exprimant une possibilité).)" },
-                    idioms: { title: "Idiomatic Expressions with May/Might (Expressions idiomatiques avec May/Might)", heading1: "Common fixed phrases (Expressions figées courantes)", aswellMeaning: "no reason not to; it's equally good (aucune raison de ne pas ; c'est aussi bien)", aswellEx: "We may as well start now. (Nous pouvons aussi bien commencer maintenant.)", ifIMayMeaning: "polite way to interject or ask permission (façon polie d'intervenir ou de demander la permission)", ifIMayEx: "If I may, I'd like to add something. (Si je peux me permettre, j'aimerais ajouter quelque chose.)", beThatMeaning: "nevertheless; despite that (néanmoins, malgré cela)", beThatEx: "Be that as it may, we must continue. (Quoi qu'il en soit, nous devons continuer.)", mightSayMeaning: "hesitant or polite introduction (introduction hésitante ou polie)", mightSayEx: "Might I say you look lovely tonight? (Puis-je dire que tu es ravissante ce soir ?)", mayWellMeaning: "quite possibly (tout à fait possible)", mayWellEx: "She may well be the best candidate. (Elle est probablement la meilleure candidate.)" },
-                    context: { title: "Contextual Practice: At a Business Meeting (Pratique contextuelle : lors d’une réunion d’affaires)", subtitle: "Using modals for polite suggestions & formal requests (Utiliser les modaux pour des suggestions polies et des demandes formelles)", dialogue: "Sample dialogue: (Dialogue exemple :)", chair: "Chair: (Président :)", anna: "Anna:", ben: "Ben:", line1: "\"Shall we begin? If I may, I'd like to call the meeting to order.\" (\"Commençons-nous ? Si je peux me permettre, j'aimerais ouvrir la séance.\")", line2: "\"Certainly. Might I suggest we review the budget first?\" (\"Certainement. Puis-je suggérer que nous examinions d’abord le budget ?\")", line3: "\"That's a good idea. May I ask everyone to turn to page 3?\" (\"Bonne idée. Puis-je demander à tout le monde de se rendre à la page 3 ?\")", line4: "\"If I may interject, I think there may be an error in the projections.\" (\"Si je peux me permettre d’intervenir, je pense qu’il y a peut-être une erreur dans les prévisions.\")", line5: "\"Thank you, Ben. Be that as it may, we need to move forward. Could we vote?\" (\"Merci, Ben. Quoi qu’il en soit, nous devons avancer. Pourrions-nous voter ?\")", line6: "\"We might as well decide today.\" (\"Nous pourrions aussi bien décider aujourd’hui.\")", note: "<em>Note: Notice the use of may, might, and idioms for polite interaction. (Remarque : remarquez l’utilisation de may, might et des expressions idiomatiques pour une interaction polie.)</em>" },
-                    exercises: {
-                        title: "Review & Production Exercises (Exercices de révision et production)",
-                        q1: "Choose the correct sentence for past possibility: (Choisissez la phrase correcte pour une possibilité passée :)", q1a: "He may left his keys. (He may left his keys.)", q1b: "He may have left his keys. (He may have left his keys.)", q1c: "He may to leave his keys. (He may to leave his keys.)",
-                        q2: "Complete the reported speech: She said, \"I may be late.\" → She said she ______ be late. (Complétez le discours rapporté : Elle a dit : \"Je peux être en retard.\" → Elle a dit qu'elle ______ être en retard.)", q2a: "may (may)", q2b: "might (might)", q2c: "can (can)",
-                        q3: "Which sentence is grammatically correct? (Quelle phrase est grammaticalement correcte ?)", q3a: "He might can arrive early. (He might can arrive early.)", q3b: "He might be able to arrive early. (He might be able to arrive early.)", q3c: "He might arrives early. (He might arrives early.)",
-                        q4: "What does \"If I may\" express? (Qu'exprime \"If I may\" ?)", q4a: "a casual order (un ordre informel)", q4b: "a polite way to interrupt or ask permission (une façon polie d'interrompre ou de demander la permission)", q4c: "a strong command (un ordre fort)",
-                        q5: "Choose the best meaning for \"We may as well go\": (Choisissez la meilleure signification pour \"We may as well go\" :)", q5a: "We definitely should go. (Nous devons absolument y aller.)", q5b: "There's no reason not to go. (Il n'y a aucune raison de ne pas y aller.)", q5c: "We might go later. (Nous pourrions y aller plus tard.)",
-                        q6: "Which sentence uses \"may well\" correctly? (Quelle phrase utilise \"may well\" correctement ?)", q6a: "She may well be the winner. (She may well be the winner.)", q6b: "She may well to be the winner. (She may well to be the winner.)", q6c: "She may well is the winner. (She may well is the winner.)",
-                        q7: "Complete with the correct form: \"He looks tired; he ______ (may) worked all night.\" (past possibility) (Complétez avec la forme correcte : \"Il a l'air fatigué ; il ______ (may) travaillé toute la nuit.\" – possibilité passée)",
-                        q8: "Complete with the idiom: \"______ I may, I'd like to suggest a break.\" (Complétez avec l'expression idiomatique : \"______ I may, I'd like to suggest a break.\")",
-                        q9: "Correct the double modal: \"She might can join us.\" → \"She might ______ join us.\" (Corrigez le double modal : \"She might can join us.\" → \"She might ______ join us.\")",
-                        q10: "Arrange: (as / well / might / We / go / .) (Remettez dans l'ordre : (as / well / might / We / go / .))",
-                        q11: "Arrange: (have / might / missed / She / the / train / .) (Remettez dans l'ordre : (have / might / missed / She / the / train / .))",
-                        q12: "Arrange a polite request: (ask / I / May / a / question / ?) (Remettez une demande polie dans l'ordre : (ask / I / May / a / question / ?))"
-                    }
-                }
-            },
-            ar: {
-                common: {
-                    siteName: "English Hub",
-                    previousLesson: "Previous Lesson (الدرس السابق)← ",
-                    returnToConjugation: "Return to Conjugation (العودة إلى التصريف)← ",
-                    nextLesson: "Next Lesson (الدرس التالي) →",
-                    expression: "Expression (التعبير)",
-                    meaning: "Meaning (المعنى)",
-                    example: "Example (مثال)"
+                section3: {
+                    title: "III. 3. Contextual Practice: At a Business Meeting", heading: "Using modals for polite suggestions & formal requests",
+                    dialogue1: "Chair: \"Shall we begin? If I may, I'd like to call the meeting to order.\"",
+                    dialogue2: "Anna: \"Certainly. Might I suggest we review the budget first?\"",
+                    dialogue3: "Chair: \"That's a good idea. May I ask everyone to turn to page 3?\"",
+                    dialogue4: "Ben: \"If I may interject, I think there may be an error in the projections.\"",
+                    dialogue5: "Chair: \"Thank you, Ben. Be that as it may, we need to move forward. Could we vote?\"",
+                    dialogue6: "Anna: \"We might as well decide today.\"",
+                    note: "Note: Notice the use of may, might, and idioms for polite interaction."
                 },
-                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
-                modalsMayMight3: {
-                    title: "May & Might: Real-World Application & Common Pitfalls (May & Might: التطبيق الواقعي والأخطاء الشائعة)",
-                    subtitle: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts (تجنب الأخطاء المتكررة، واستخدم التعبيرات الاصطلاحية بشكل طبيعي، وتدرب في سياقات الحياة الواقعية)",
-                    mistakes: { title: "Common Mistakes with May & Might (الأخطاء الشائعة مع May & Might)", heading1: "Frequent errors (أخطاء متكررة)", error1Title: "❌ Using 'may' for past possibility without 'have' (استخدام 'may' للإمكانية في الماضي بدون 'have')", error1Desc: "Incorrect: <em>He may left early.</em> ✅ Correct: <em>He may have left early.</em> (past possibility requires \"have + past participle\") (خطأ: <em>He may left early.</em> ✅ صحيح: <em>He may have left early.</em> – الإمكانية في الماضي تتطلب \"have + التصريف الثالث\")", error2Title: "❌ Confusing 'may' and 'might' in reported speech (الخلط بين 'may' و 'might' في الكلام المنقول)", error2Desc: "Incorrect: <em>She said she may come.</em> (if reporting a past statement) ✅ Correct: <em>She said she might come.</em> (shift back in reported speech) (خطأ: <em>She said she may come.</em> – إذا كان الإبلاغ عن عبارة سابقة ✅ صحيح: <em>She said she might come.</em> – تحويل الزمن إلى الماضي في الكلام المنقول)", error3Title: "❌ Using double modals (استخدام فعلين مساعدين معًا)", error3Desc: "Incorrect: <em>He might can help.</em> ✅ Correct: <em>He might be able to help.</em> or <em>He can help.</em> (خطأ: <em>He might can help.</em> ✅ صحيح: <em>He might be able to help.</em> أو <em>He can help.</em>)", error4Title: "❌ Overusing 'may' for permission in informal contexts (الإفراط في استخدام 'may' للإذن في السياقات غير الرسمية)", error4Desc: "While \"May I?\" is correct, in casual speech it can sound too formal. <em>Can I get a coffee?</em> is more natural among friends. (بينما \"May I?\" صحيحة، في الحديث العادي قد تبدو رسمية جدًا. <em>Can I get a coffee?</em> أكثر طبيعية بين الأصدقاء.)" },
-                    pitfalls: { title: "Additional Common Pitfalls (أخطاء شائعة إضافية)", item1Title: "❌ Using 'may' and 'might' interchangeably in probability (استخدام 'may' و 'might' بالتبادل في الاحتمال)", item1Desc: "Although often interchangeable, 'might' often suggests a lower probability. <em>It may rain later.</em> (fairly possible) vs <em>It might rain later.</em> (less certain). (على الرغم من أنهما غالبًا قابلان للتبادل، إلا أن 'might' يشير غالبًا إلى احتمال أقل. <em>It may rain later.</em> (محتمل إلى حد ما) مقابل <em>It might rain later.</em> (أقل يقينًا).)", item2Title: "❌ Forgetting to backshift in reported speech with past tense reporting verbs (نسيان تحويل الزمن إلى الماضي في الكلام المنقول مع أفعال الإبلاغ في الماضي)", item2Desc: "When the reporting verb is past (e.g., <em>said</em>), 'may' usually changes to 'might'. <em>She thought she may be late.</em> ❌ → <em>She thought she might be late.</em> ✅ (عندما يكون فعل الإبلاغ في الماضي (مثل <em>said</em>)، فإن 'may' تتحول عادة إلى 'might'. <em>She thought she may be late.</em> ❌ → <em>She thought she might be late.</em> ✅)", item3Title: "❌ Confusing 'maybe' (adverb) with 'may be' (modal + verb) (الخلط بين 'maybe' (ظرف) و 'may be' (فعل مساعد + فعل))", item3Desc: "<em>Maybe he is late.</em> (adverb = perhaps) vs <em>He may be late.</em> (modal verb expressing possibility). (<em>Maybe he is late.</em> (ظرف = ربما) مقابل <em>He may be late.</em> (فعل مساعد يعبر عن الاحتمال).)" },
-                    idioms: { title: "Idiomatic Expressions with May/Might (التعبيرات الاصطلاحية مع May/Might)", heading1: "Common fixed phrases (عبارات ثابتة شائعة)", aswellMeaning: "no reason not to; it's equally good (لا سبب لعدم؛ إنه جيد بنفس القدر)", aswellEx: "We may as well start now. (يمكننا البدء الآن أيضًا.)", ifIMayMeaning: "polite way to interject or ask permission (طريقة مهذبة للمقاطعة أو طلب الإذن)", ifIMayEx: "If I may, I'd like to add something. (إذا سمحت لي، أود إضافة شيء.)", beThatMeaning: "nevertheless; despite that (مع ذلك، على الرغم من ذلك)", beThatEx: "Be that as it may, we must continue. (مهما يكن، يجب أن نواصل.)", mightSayMeaning: "hesitant or polite introduction (مقدمة مترددة أو مهذبة)", mightSayEx: "Might I say you look lovely tonight? (هل لي أن أقول أنك تبدو جميلة الليلة؟)", mayWellMeaning: "quite possibly (من المحتمل جدًا)", mayWellEx: "She may well be the best candidate. (قد تكون هي أفضل مرشحة.)" },
-                    context: { title: "Contextual Practice: At a Business Meeting (تدريب سياقي: في اجتماع عمل)", subtitle: "Using modals for polite suggestions & formal requests (استخدام الأفعال المساعدة للاقتراحات المهذبة والطلبات الرسمية)", dialogue: "Sample dialogue: (حوار نموذجي :)", chair: "Chair: (رئيس الاجتماع :)", anna: "Anna:", ben: "Ben:", line1: "\"Shall we begin? If I may, I'd like to call the meeting to order.\" (\"هل نبدأ؟ إذا سمحت لي، أود أن أفتتح الاجتماع.\")", line2: "\"Certainly. Might I suggest we review the budget first?\" (\"بالتأكيد. هل لي أن أقترح أن نراجع الميزانية أولاً؟\")", line3: "\"That's a good idea. May I ask everyone to turn to page 3?\" (\"هذه فكرة جيدة. هل يمكنني أن أطلب من الجميع الانتقال إلى الصفحة ٣؟\")", line4: "\"If I may interject, I think there may be an error in the projections.\" (\"إذا سمحت لي بالمقاطعة، أعتقد أنه قد يكون هناك خطأ في التوقعات.\")", line5: "\"Thank you, Ben. Be that as it may, we need to move forward. Could we vote?\" (\"شكرًا، بن. مهما يكن، نحتاج إلى المضي قدمًا. هل يمكننا التصويت؟\")", line6: "\"We might as well decide today.\" (\"قد نقرر اليوم أيضًا.\")", note: "<em>Note: Notice the use of may, might, and idioms for polite interaction. (ملاحظة: لاحظ استخدام may و might والتعبيرات الاصطلاحية للتفاعل المهذب.)</em>" },
-                    exercises: {
-                        title: "Review & Production Exercises (تمارين المراجعة والإنتاج)",
-                        q1: "Choose the correct sentence for past possibility: (اختر الجملة الصحيحة للإمكانية في الماضي:)", q1a: "He may left his keys. (He may left his keys.)", q1b: "He may have left his keys. (He may have left his keys.)", q1c: "He may to leave his keys. (He may to leave his keys.)",
-                        q2: "Complete the reported speech: She said, \"I may be late.\" → She said she ______ be late. (أكمل الكلام المنقول: قالت: \"قد أتأخر.\" → قالت إنها ______ تتأخر.)", q2a: "may (may)", q2b: "might (might)", q2c: "can (can)",
-                        q3: "Which sentence is grammatically correct? (أي جملة صحيحة نحويًا؟)", q3a: "He might can arrive early. (He might can arrive early.)", q3b: "He might be able to arrive early. (He might be able to arrive early.)", q3c: "He might arrives early. (He might arrives early.)",
-                        q4: "What does \"If I may\" express? (ماذا يعبر \"If I may\"؟)", q4a: "a casual order (أمر عادي)", q4b: "a polite way to interrupt or ask permission (طريقة مهذبة للمقاطعة أو طلب الإذن)", q4c: "a strong command (أمر قوي)",
-                        q5: "Choose the best meaning for \"We may as well go\": (اختر أفضل معنى لـ \"We may as well go\":)", q5a: "We definitely should go. (يجب أن نذهب بالتأكيد.)", q5b: "There's no reason not to go. (لا يوجد سبب لعدم الذهاب.)", q5c: "We might go later. (قد نذهب لاحقًا.)",
-                        q6: "Which sentence uses \"may well\" correctly? (أي جملة تستخدم \"may well\" بشكل صحيح؟)", q6a: "She may well be the winner. (She may well be the winner.)", q6b: "She may well to be the winner. (She may well to be the winner.)", q6c: "She may well is the winner. (She may well is the winner.)",
-                        q7: "Complete with the correct form: \"He looks tired; he ______ (may) worked all night.\" (past possibility) (أكمل بالشكل الصحيح: \"يبدو متعبًا؛ ______ (may) عمل طوال الليل.\" – إمكانية في الماضي)",
-                        q8: "Complete with the idiom: \"______ I may, I'd like to suggest a break.\" (أكمل بالتعبير الاصطلاحي: \"______ I may, I'd like to suggest a break.\")",
-                        q9: "Correct the double modal: \"She might can join us.\" → \"She might ______ join us.\" (صحح استخدام الفعلين المساعدين: \"She might can join us.\" → \"She might ______ join us.\")",
-                        q10: "Arrange: (as / well / might / We / go / .) (رتب: (as / well / might / We / go / .))",
-                        q11: "Arrange: (have / might / missed / She / the / train / .) (رتب: (have / might / missed / She / the / train / .))",
-                        q12: "Arrange a polite request: (ask / I / May / a / question / ?) (رتب طلبًا مهذبًا: (ask / I / May / a / question / ?))"
-                    }
+                exercises: {
+                    title: "Practice: Common Mistakes, Idioms & Real-World Use",
+                    q1: "Choose the correct sentence for past possibility:",
+                    q1a: "He may left his keys.", q1b: "He may have left his keys.", q1c: "He may to leave his keys.",
+                    q2: "Complete the reported speech: She said, 'I may be late.' → She said she ______ be late.",
+                    q2a: "may", q2b: "might", q2c: "can",
+                    q3: "Which sentence is grammatically correct?",
+                    q3a: "He might can arrive early.", q3b: "He might be able to arrive early.", q3c: "He might arrives early.",
+                    q4: "What does 'If I may' express?",
+                    q4a: "a casual order", q4b: "a polite way to interrupt or ask permission", q4c: "a strong command",
+                    q5: "Choose the best meaning for 'We may as well go':",
+                    q5a: "We definitely should go.", q5b: "There's no reason not to go.", q5c: "We might go later.",
+                    q6: "Which sentence uses 'may well' correctly?",
+                    q6a: "She may well be the winner.", q6b: "She may well to be the winner.", q6c: "She may well is the winner.",
+                    q7: "Complete with the correct form: 'He looks tired; he ______ (may) worked all night.' (past possibility)",
+                    q8: "Complete with the idiom: '______ I may, I'd like to suggest a break.'",
+                    q9: "Correct the double modal: 'She might can join us.' → 'She might ______ join us.'",
+                    q10: "Arrange: (as / well / might / We / go / .)",
+                    q11: "Arrange: (have / might / missed / She / the / train / .)",
+                    q12: "Arrange a polite request: (ask / I / May / a / question / ?)"
                 }
             }
-        };
-    </script>
-
-    <script src="scripts/common-i18n.js"></script>
-    <!-- Modular exercise engine -->
-    <script src="scripts/exercise-conjugation.js"></script>
-
-    <script>
-        // Build multiple choice exercises
-        const correctAnswersType1 = buildMultipleChoiceExercise({
-            containerId: 'mc-exercises',
-            prefix: 'EH-exercise-type1-possibilities3',
-            questions: [
-                {
-                    questionTextKey: 'modalsMayMight3.exercises.q1',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMayMight3.exercises.q1a' },
-                        { value: 'b', labelKey: 'modalsMayMight3.exercises.q1b' },
-                        { value: 'c', labelKey: 'modalsMayMight3.exercises.q1c' }
-                    ],
-                    correctAnswer: 'b'
+        },
+        fr: {
+            common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
+            footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+            mayMight3: {
+                title: { line1: "May & Might : III", line2: "Application réelle et pièges courants", line3: "erreurs fréquentes, expressions et contextes réels", line4: "leçon : 3/3" },
+                section1: {
+                    title: "III. 1. Erreurs courantes avec May & Might", heading: "Erreurs fréquentes",
+                    error1Title: "❌ Utiliser 'may' pour la possibilité passée sans 'have'", error1Desc: "Incorrect : He may left early. ✅ Correct : He may have left early. (la possibilité passée nécessite 'have + participe passé')",
+                    error2Title: "❌ Confondre 'may' et 'might' dans le discours rapporté", error2Desc: "Incorrect : She said she may come. (si on rapporte une déclaration passée) ✅ Correct : She said she might come. (changement de temps)",
+                    error3Title: "❌ Utiliser des doubles modaux", error3Desc: "Incorrect : He might can help. ✅ Correct : He might be able to help. ou He can help.",
+                    error4Title: "❌ Utiliser trop 'may' pour la permission en contexte informel", error4Desc: "Bien que 'May I?' soit correct, dans un discours familier cela peut sembler trop formel. 'Can I get a coffee?' est plus naturel entre amis.",
+                    error5Title: "Pièges courants supplémentaires", pitfall1: "Utiliser 'may' et 'might' de manière interchangeable pour la probabilité : 'might' suggère souvent une probabilité plus faible.", pitfall2: "Oublier le changement de temps dans le discours rapporté avec un verbe de rapport au passé : She thought she may be late. ❌ → She thought she might be late. ✅", pitfall3: "Confondre 'maybe' (adverbe) avec 'may be' (modal + verbe) : Maybe he is late. (adverbe = peut-être) vs He may be late. (verbe modal exprimant une possibilité)."
                 },
-                {
-                    questionTextKey: 'modalsMayMight3.exercises.q2',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMayMight3.exercises.q2a' },
-                        { value: 'b', labelKey: 'modalsMayMight3.exercises.q2b' },
-                        { value: 'c', labelKey: 'modalsMayMight3.exercises.q2c' }
-                    ],
-                    correctAnswer: 'b'
+                section2: {
+                    title: "III. 2. Expressions idiomatiques avec May/Might", heading: "Expressions figées courantes", expression: "Expression", meaning: "Signification", example: "Exemple",
+                    expr1: "may/might as well", meaning1: "aucune raison de ne pas ; aussi bien", example1: "Nous pouvons aussi bien commencer maintenant.",
+                    expr2: "if I may", meaning2: "manière polie d'interjeter ou de demander la permission", example2: "Si vous le permettez, j'aimerais ajouter quelque chose.",
+                    expr3: "be that as it may", meaning3: "néanmoins ; quoi qu'il en soit", example3: "Quoi qu'il en soit, nous devons continuer.",
+                    expr4: "might I say", meaning4: "introduction hésitante ou polie", example4: "Puis-je dire que vous êtes ravissante ce soir ?",
+                    expr5: "may well", meaning5: "tout à fait possible", example5: "Elle pourrait bien être la meilleure candidate."
                 },
-                {
-                    questionTextKey: 'modalsMayMight3.exercises.q3',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMayMight3.exercises.q3a' },
-                        { value: 'b', labelKey: 'modalsMayMight3.exercises.q3b' },
-                        { value: 'c', labelKey: 'modalsMayMight3.exercises.q3c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMayMight3.exercises.q4',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMayMight3.exercises.q4a' },
-                        { value: 'b', labelKey: 'modalsMayMight3.exercises.q4b' },
-                        { value: 'c', labelKey: 'modalsMayMight3.exercises.q4c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMayMight3.exercises.q5',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMayMight3.exercises.q5a' },
-                        { value: 'b', labelKey: 'modalsMayMight3.exercises.q5b' },
-                        { value: 'c', labelKey: 'modalsMayMight3.exercises.q5c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMayMight3.exercises.q6',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMayMight3.exercises.q6a' },
-                        { value: 'b', labelKey: 'modalsMayMight3.exercises.q6b' },
-                        { value: 'c', labelKey: 'modalsMayMight3.exercises.q6c' }
-                    ],
-                    correctAnswer: 'a'
+                section3: {
+                    title: "III. 3. Mise en contexte : lors d'une réunion d'affaires", heading: "Utiliser les modaux pour des suggestions polies et des demandes formelles",
+                    dialogue1: "Président : 'Commençons ? Si vous me permettez, j'aimerais ouvrir la séance.'",
+                    dialogue2: "Anna : 'Bien sûr. Puis-je suggérer que nous examinions d'abord le budget ?'",
+                    dialogue3: "Président : 'Bonne idée. Puis-je demander à tout le monde de se tourner vers la page 3 ?'",
+                    dialogue4: "Ben : 'Si vous me permettez, je pense qu'il pourrait y avoir une erreur dans les projections.'",
+                    dialogue5: "Président : 'Merci, Ben. Quoi qu'il en soit, nous devons avancer. Pouvons-nous voter ?'",
+                    dialogue6: "Anna : 'Nous pouvons aussi bien décider aujourd'hui.'",
+                    note: "Remarque : Observez l'utilisation de may, might et des expressions pour une interaction polie."
                 }
-            ]
-        });
-
-        // Build fill-in-the-blank exercises
-        const correctAnswersType2 = buildFillInTheBlankExercise({
-            containerId: 'fill-exercises',
-            prefix: 'fill',
-            questions: [
-                {
-                    questionTextKey: 'modalsMayMight3.exercises.q7',
-                    answers: ['may have']
-                },
-                {
-                    questionTextKey: 'modalsMayMight3.exercises.q8',
-                    answers: ['If', 'if']
-                },
-                {
-                    questionTextKey: 'modalsMayMight3.exercises.q9',
-                    answers: ['be able to']
-                }
-            ]
-        });
-
-        // Build sentence ordering exercises
-        const correctAnswersType3 = buildSentenceOrderingExercise({
-            containerId: 'order-exercises',
-            prefix: 'order',
-            questions: [
-                {
-                    questionTextKey: 'modalsMayMight3.exercises.q10',
-                    words: ['We', 'might', 'as', 'well', 'go', '.'],
-                    correctSentence: 'We might as well go .'
-                },
-                {
-                    questionTextKey: 'modalsMayMight3.exercises.q11',
-                    words: ['She', 'might', 'have', 'missed', 'the', 'train', '.'],
-                    correctSentence: 'She might have missed the train .'
-                },
-                {
-                    questionTextKey: 'modalsMayMight3.exercises.q12',
-                    words: ['May', 'I', 'ask', 'a', 'question', '?'],
-                    correctSentence: 'May I ask a question ?'
-                }
-            ]
-        });
-
-        // Check all exercises
-        function checkAllExercises() {
-            let totalScore = 0;
-            let totalQuestions = 0;
-            
-            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
-            totalQuestions += 6;
-            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
-            totalQuestions += 3;
-            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
-            totalQuestions += 3;
-            
-            const scoreEl = document.getElementById('score-value');
-            const fbEl = document.getElementById('score-feedback');
-            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
-            if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
-                else fbEl.textContent = 'Review the lesson and try again.';
             }
-            document.getElementById('score-display').style.display = 'block';
+        },
+        ar: {
+            common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+            footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+            mayMight3: {
+                title: { line1: "may & might: 3", line2: "التطبيق الواقعي والمزالق الشائعة", line3: "الأخطاء المتكررة، التعابير الاصطلاحية، والسياقات الحياتية", line4: "الدرس: 3/3" },
+                section1: {
+                    title: "III. 1. الأخطاء الشائعة مع may & might", heading: "أخطاء متكررة",
+                    error1Title: "❌ استخدام 'may' للاحتمال الماضي بدون 'have'", error1Desc: "خطأ: He may left early. ✅ صواب: He may have left early. (الاحتمال الماضي يتطلب 'have + past participle')",
+                    error2Title: "❌ الخلط بين 'may' و 'might' في الكلام المنقول", error2Desc: "خطأ: She said she may come. (إذا نقلنا عبارة ماضية) ✅ صواب: She said she might come. (التحويل إلى الخلف في الكلام المنقول)",
+                    error3Title: "❌ استخدام أفعال ناقصة مزدوجة", error3Desc: "خطأ: He might can help. ✅ صواب: He might be able to help. أو He can help.",
+                    error4Title: "❌ الإفراط في استخدام 'may' للإذن في السياقات غير الرسمية", error4Desc: "بينما 'May I?' صحيح، إلا أنه في الحديث العادي قد يبدو رسميًا جدًا. 'Can I get a coffee?' أكثر طبيعية بين الأصدقاء.",
+                    error5Title: "مزالق شائعة إضافية", pitfall1: "استخدام 'may' و 'might' بالتبادل في الاحتمالية: 'might' غالبًا ما يشير إلى احتمال أقل.", pitfall2: "نسخ التحويل إلى الخلف في الكلام المنقول مع أفعال النقل في الماضي: She thought she may be late. ❌ → She thought she might be late. ✅", pitfall3: "الخلط بين 'maybe' (ظرف) و 'may be' (فعل ناقص + فعل): Maybe he is late. (ظرف = ربما) vs He may be late. (فعل ناقص يعبر عن احتمال)."
+                },
+                section2: {
+                    title: "III. 2. تعابير اصطلاحية مع may/might", heading: "عبارات ثابتة شائعة", expression: "التعبير", meaning: "المعنى", example: "مثال",
+                    expr1: "may/might as well", meaning1: "لا سبب لعدم القيام به؛ جيد بنفس القدر", example1: "يمكننا أن نبدأ الآن.",
+                    expr2: "if I may", meaning2: "طريقة مهذبة للمقاطعة أو طلب الإذن", example2: "إذا سمحت لي، أود إضافة شيء.",
+                    expr3: "be that as it may", meaning3: "مع ذلك؛ رغم ذلك", example3: "مهما يكن، يجب أن نواصل.",
+                    expr4: "might I say", meaning4: "مقدمة مترددة أو مهذبة", example4: "هل لي أن أقول أنك تبدو جميلاً الليلة؟",
+                    expr5: "may well", meaning5: "من المحتمل جدًا", example5: "قد تكون أفضل مرشحة."
+                },
+                section3: {
+                    title: "III. 3. ممارسة سياقية: في اجتماع عمل", heading: "استخدام الأفعال الناقصة للاقتراحات المهذبة والطلبات الرسمية",
+                    dialogue1: "الرئيس: 'هل نبدأ؟ إذا سمحتم، أود أن أفتتح الاجتماع.'",
+                    dialogue2: "آنا: 'بالتأكيد. هل لي أن أقترح مراجعة الميزانية أولاً؟'",
+                    dialogue3: "الرئيس: 'فكرة جيدة. هل لي أن أطلب من الجميع الانتقال إلى الصفحة 3؟'",
+                    dialogue4: "بن: 'إذا سمحت لي بالمقاطعة، أعتقد أنه قد يكون هناك خطأ في التوقعات.'",
+                    dialogue5: "الرئيس: 'شكرًا بن. مهما يكن، نحن بحاجة إلى المضي قدمًا. هل يمكننا التصويت؟'",
+                    dialogue6: "آنا: 'يمكننا أن نقرر اليوم.'",
+                    note: "ملاحظة: لاحظ استخدام may و might والتعابير الاصطلاحية للتفاعل المهذب."
+                }
+            }
         }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Init drag-and-drop for ordering
-            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
-            document.getElementById('check-all').addEventListener('click', checkAllExercises);
-        });
-        
-        // i18n rendering
-        (function() {
-            function applyHtmlI18n() {
-                const lang = document.getElementById('language-selector').value;
-                const elements = document.querySelectorAll('[data-i18n]');
-                elements.forEach(el => {
-                    const key = el.getAttribute('data-i18n');
-                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
-                        el.textContent = translation;
-                    }
-                });
-            }
-            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
-            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
-        })();
-    </script>
+    };
+</script>
+<script src="scripts/translation-refraction.js"></script>
+<script src="scripts/exercise-conjugation.js"></script>
+<script src="scripts/special-effects.js"></script>
+<script src="scripts/common-sections.js"></script>
+<script>
+    // Multiple choice exercises
+    const correctAnswersType1 = buildMultipleChoiceExercise({
+        containerId: 'mc-exercises',
+        prefix: 'EH-exercise-type1-possibilities3',
+        questions: [
+            { questionTextKey: 'mayMight3.exercises.q1', options: [{ value: 'a', labelKey: 'mayMight3.exercises.q1a' }, { value: 'b', labelKey: 'mayMight3.exercises.q1b' }, { value: 'c', labelKey: 'mayMight3.exercises.q1c' }], correctAnswer: 'b' },
+            { questionTextKey: 'mayMight3.exercises.q2', options: [{ value: 'a', labelKey: 'mayMight3.exercises.q2a' }, { value: 'b', labelKey: 'mayMight3.exercises.q2b' }, { value: 'c', labelKey: 'mayMight3.exercises.q2c' }], correctAnswer: 'b' },
+            { questionTextKey: 'mayMight3.exercises.q3', options: [{ value: 'a', labelKey: 'mayMight3.exercises.q3a' }, { value: 'b', labelKey: 'mayMight3.exercises.q3b' }, { value: 'c', labelKey: 'mayMight3.exercises.q3c' }], correctAnswer: 'b' },
+            { questionTextKey: 'mayMight3.exercises.q4', options: [{ value: 'a', labelKey: 'mayMight3.exercises.q4a' }, { value: 'b', labelKey: 'mayMight3.exercises.q4b' }, { value: 'c', labelKey: 'mayMight3.exercises.q4c' }], correctAnswer: 'b' },
+            { questionTextKey: 'mayMight3.exercises.q5', options: [{ value: 'a', labelKey: 'mayMight3.exercises.q5a' }, { value: 'b', labelKey: 'mayMight3.exercises.q5b' }, { value: 'c', labelKey: 'mayMight3.exercises.q5c' }], correctAnswer: 'b' },
+            { questionTextKey: 'mayMight3.exercises.q6', options: [{ value: 'a', labelKey: 'mayMight3.exercises.q6a' }, { value: 'b', labelKey: 'mayMight3.exercises.q6b' }, { value: 'c', labelKey: 'mayMight3.exercises.q6c' }], correctAnswer: 'a' }
+        ]
+    });
+
+    // Fill-in-the-blank exercises
+    correctAnswersType2 = buildFillInTheBlankExercise({
+        containerId: 'fill-exercises',
+        prefix: 'fill',
+        questions: [
+            { questionTextKey: 'mayMight3.exercises.q7', answers: ['may have'] },
+            { questionTextKey: 'mayMight3.exercises.q8', answers: ['If'] },
+            { questionTextKey: 'mayMight3.exercises.q9', answers: ['be able to'] }
+        ]
+    });
+
+    // Sentence ordering exercises
+    const correctAnswersType3 = buildSentenceOrderingExercise({
+        containerId: 'order-exercises',
+        prefix: 'order',
+        questions: [
+            { questionTextKey: 'mayMight3.exercises.q10', words: ['We', 'might', 'as', 'well', 'go', '.'], correctSentence: 'We might as well go .' },
+            { questionTextKey: 'mayMight3.exercises.q11', words: ['She', 'might', 'have', 'missed', 'the', 'train', '.'], correctSentence: 'She might have missed the train .' },
+            { questionTextKey: 'mayMight3.exercises.q12', words: ['May', 'I', 'ask', 'a', 'question', '?'], correctSentence: 'May I ask a question ?' }
+        ]
+    });
+
+    function checkAllExercises() {
+        let totalScore = 0;
+        let totalQuestions = 0;
+        totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+        totalQuestions += 6;
+        totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+        totalQuestions += 3;
+        totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+        totalQuestions += 3;
+        const scoreEl = document.getElementById('score-value');
+        const fbEl = document.getElementById('score-feedback');
+        if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+        if (fbEl) {
+            if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered real-world may & might!';
+            else if (totalScore >= 9) fbEl.textContent = 'Good job! Review idioms and reported speech.';
+            else if (totalScore >= 6) fbEl.textContent = 'Not bad, but study the common mistakes again.';
+            else fbEl.textContent = 'Review the lesson and try again.';
+        }
+        document.getElementById('score-display').style.display = 'block';
+        if (window.EHScoreEffects && EHScoreEffects.show) EHScoreEffects.show(totalScore, totalQuestions);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+        ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+        document.getElementById('check-all').addEventListener('click', checkAllExercises);
+    });
+
+    (function() {
+        function applyHtmlI18n() {
+            const lang = document.getElementById('language-selector').value;
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                if (translation) el.textContent = translation;
+            });
+        }
+        window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+        document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+    })();
+</script>
 </body>
 </html>

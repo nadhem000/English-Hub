@@ -3,300 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Must & Have to: Real-World Application & Common Pitfalls - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>Must & Have to III: Common Mistakes & Practice - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
         :root {
-            /* ===== Must/Have to part 3 palette (cool blue) ===== */
-            --bg-gradient: linear-gradient(135deg, #0d47a1, #1565c0, #1e88e5, #42a5f5);
-            --title-color: #0d47a1;
-            --primary: #1e88e5;
-            --primary-hover: #0d47a1;
-            --primary-light: #90caf9;
-            --accent: #90caf9;
-            --rule-bg: #e3f2fd;
-            --rule-border: #90caf9;
-            --example-bg: #bbdefb;
-            --example-border: #90caf9;
-            --exercise-number-gradient: linear-gradient(135deg, #1e88e5, #90caf9);
-            --nav-btn-bg: #1e88e5;
-            --nav-btn-hover: #0d47a1;
-            --nav-back-btn-bg: #90caf9;
-            --nav-back-btn-color: #0d47a1;
-            --nav-back-btn-hover: #1e88e5;
-
-            /* Neutrals (same for all pages) */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
-            --correct-bg: #d4edda;
-            --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --bg-gradient: linear-gradient(135deg, #c8e8e8, #b0dbdb, #98cece, #80c1c1);
+            --content-bg: #f2fbfb;
+            --card-bg: #ffffff;
+            --subsection-bg: #eef8f8;
+            --rule-bg: #e4f3f3;
+            --example-bg: #d9eeee;
+            --table-stripe: #e9f7f7;
+            --title-color: #1e5a5a;
+            --text-color: #1b4a4a;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #3f8f8f;
+            --primary-hover: #2f6f6f;
+            --primary-light: #5ba8a8;
+            --accent: #4b9c9c;
+            --exercise-number-gradient: linear-gradient(135deg, #3f8f8f, #2a6b6b);
+            --rule-border: #3f8f8f;
+            --example-border: #3f8f8f;
+            --nav-btn-bg: #3f8f8f;
+            --nav-btn-hover: #2a6b6b;
+            --nav-back-btn-bg: #5ba8a8;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #3f8f8f;
+            --refract-divider-color: #8fbfbf;
+            --refract-translation-bg: #ddf1f1;
+            --refract-translation-border: #3f8f8f;
+            --refract-english-color: #1b4a4a;
+            --section-divider: #cce6e6;
+            --card-border: #cce0e0;
+            --input-border: #a6c9c9;
+            --dashed-border: #a6c9c9;
+            --table-border: #b9d8d8;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #e4f0f0;
+            --neutral-color: #4d6e6e;
+            --neutral-border: #b0cfcf;
+            --empty-input-border: #9bc5c5;
+            --empty-input-bg: #f5fcfc;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #3f8f8f;
+            --language-selector-color: #1b4a4a;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #1a4d4d, #236060, #2c7373, #358686);
+            --content-bg: #1a3a3a;
+            --card-bg: #244d4d;
+            --subsection-bg: #244d4d;
+            --rule-bg: #1a3a3a;
+            --example-bg: #1a3a3a;
+            --table-stripe: #1e4242;
+            --title-color: #9adcdc;
+            --text-color: #d4f0f0;
+            --header-text: #d4f0f0;
+            --header-text-light: #b0d0d0;
+            --primary: #5fb5b5;
+            --primary-hover: #75c9c9;
+            --primary-light: #5fb5b5;
+            --accent: #5fb5b5;
+            --rule-border: #5fb5b5;
+            --example-border: #5fb5b5;
+            --exercise-number-gradient: linear-gradient(135deg, #5fb5b5, #3f8f8f);
+            --nav-btn-bg: #5fb5b5;
+            --nav-btn-hover: #3f8f8f;
+            --nav-back-btn-bg: #75c9c9;
+            --nav-back-btn-color: #0d2e2e;
+            --nav-back-btn-hover: #5fb5b5;
+            --refract-divider-color: #7fcbcb;
+            --refract-translation-bg: #2a5c5c;
+            --refract-translation-border: #7fcbcb;
+            --refract-english-color: #e0f5f5;
+            --section-divider: #2a5c5c;
+            --card-border: #2a5c5c;
+            --input-border: #3d7a7a;
+            --dashed-border: #3d7a7a;
+            --table-border: #336666;
+            --white: #e0f0f0;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #2a4d4d;
+            --neutral-color: #c0e0e0;
+            --neutral-border: #4d8080;
+            --empty-input-border: #4d8080;
+            --empty-input-bg: #1a3a3a;
+            --language-selector-bg: #244d4d;
+            --language-selector-border: #5fb5b5;
+            --language-selector-color: #d4f0f0;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
-    <link rel="stylesheet" href="styles/style-conjugation.css">
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="modalsMustHaveTo3.title">Must & Have to: Real-World Application & Common Pitfalls</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="modalsMustHaveTo3.subtitle">Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="mustHaveTo3.title.line1">Must & Have to: III:</div>
+                <div class="EH-conjugation-title-line" data-i18n="mustHaveTo3.title.line2">Common Mistakes with Must & Have to</div>
+                <div class="EH-conjugation-subtitle" data-i18n="mustHaveTo3.title.line3">frequent mistakes, idioms, real-life contexts</div>
+                <div class="EH-conjugation-subtitle" data-i18n="mustHaveTo3.title.line4">lesson: 3/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Section: Common Mistakes -->
+            <!-- Section 1: Frequent Errors -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo3.mistakes.title">Common Mistakes with Must & Have to</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo3.mistakes.title">III. 1. Frequent Errors</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">⚠️</span>
-                        <span data-i18n="modalsMustHaveTo3.mistakes.heading1">Frequent errors</span>
+                        <span data-i18n="mustHaveTo3.mistakes.heading">Common pitfalls & corrections</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMustHaveTo3.mistakes.error1Title">❌ Using 'must' for past obligation</div>
-                        <p data-i18n="modalsMustHaveTo3.mistakes.error1Desc">Incorrect: <em>He must go yesterday.</em> ✅ Correct: <em>He had to go yesterday.</em> (Must has no past form; use "had to")</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMustHaveTo3.mistakes.error2Title">❌ Confusing 'mustn't' and 'don't have to'</div>
-                        <p data-i18n="modalsMustHaveTo3.mistakes.error2Desc">Incorrect: <em>You don't have to smoke here.</em> (if you mean prohibition) ✅ Correct: <em>You mustn't smoke here.</em> (mustn't = prohibition; don't have to = not necessary)</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMustHaveTo3.mistakes.error3Title">❌ Incorrect question form with 'have to'</div>
-                        <p data-i18n="modalsMustHaveTo3.mistakes.error3Desc">Incorrect: <em>Have you to leave?</em> ✅ Correct: <em>Do you have to leave?</em> (Use do/does for questions)</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMustHaveTo3.mistakes.error4Title">❌ Overusing 'must' in informal contexts</div>
-                        <p data-i18n="modalsMustHaveTo3.mistakes.error4Desc">In casual conversation, 'must' can sound very strong or formal. <em>You have to try this cake!</em> is more natural than <em>You must try this cake!</em></p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMustHaveTo3.mistakes.error5Title">❌ Double modals with must/have to</div>
-                        <p data-i18n="modalsMustHaveTo3.mistakes.error5Desc">Incorrect: <em>He must can do it.</em> ✅ Correct: <em>He must be able to do it.</em> or <em>He can do it.</em></p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo3.mistakes.pastTitle">❌ Using 'must' for past obligation</div>
+                        <p data-i18n="mustHaveTo3.mistakes.pastDesc">Incorrect: He must go yesterday. ✅ Correct: He had to go yesterday. (Must has no past form; use "had to")</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo3.mistakes.confuseTitle">❌ Confusing 'mustn't' and 'don't have to'</div>
+                        <p data-i18n="mustHaveTo3.mistakes.confuseDesc">Incorrect: You don't have to smoke here. (if you mean prohibition) ✅ Correct: You mustn't smoke here. (mustn't = prohibition; don't have to = not necessary)</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo3.mistakes.questionTitle">❌ Incorrect question form with 'have to'</div>
+                        <p data-i18n="mustHaveTo3.mistakes.questionDesc">Incorrect: Have you to leave? ✅ Correct: Do you have to leave? (Use do/does for questions)</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo3.mistakes.overuseTitle">❌ Overusing 'must' in informal contexts</div>
+                        <p data-i18n="mustHaveTo3.mistakes.overuseDesc">In casual conversation, 'must' can sound very strong or formal. "You have to try this cake!" is more natural than "You must try this cake!"</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo3.mistakes.doubleTitle">❌ Double modals with must/have to</div>
+                        <p data-i18n="mustHaveTo3.mistakes.doubleDesc">Incorrect: He must can do it. ✅ Correct: He must be able to do it. or He can do it.</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Section: Idiomatic Expressions -->
+            <!-- Section 2: Idiomatic Expressions -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo3.idioms.title">Idiomatic Expressions with Must/Have to</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo3.idioms.title">III. 2. Idiomatic Expressions with Must/Have to</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">💬</span>
-                        <span data-i18n="modalsMustHaveTo3.idioms.heading1">Common fixed phrases</span>
-                    </h3>
-                    <table class="EH-conjugation-table">
-                        <thead><tr><th data-i18n="common.expression">Expression</th><th data-i18n="common.meaning">Meaning</th><th data-i18n="common.example">Example</th></tr></thead>
-                        <tbody>
-                            <tr><td><strong>must-have</strong></td><td data-i18n="modalsMustHaveTo3.idioms.mustHaveMeaning">essential item</td><td data-i18n="modalsMustHaveTo3.idioms.mustHaveEx">A good dictionary is a must-have for learners.</td></tr>
-                            <tr><td><strong>have to hand it to someone</strong></td><td data-i18n="modalsMustHaveTo3.idioms.handItMeaning">give credit or praise</td><td data-i18n="modalsMustHaveTo3.idioms.handItEx">I have to hand it to you – you did a great job.</td></tr>
-                            <tr><td><strong>if you must</strong></td><td data-i18n="modalsMustHaveTo3.idioms.ifYouMustMeaning">if you insist (often reluctant)</td><td data-i18n="modalsMustHaveTo3.idioms.ifYouMustEx">If you must know, I'm seeing someone.</td></tr>
-                            <tr><td><strong>must-see / must-read</strong></td><td data-i18n="modalsMustHaveTo3.idioms.mustSeeMeaning">highly recommended</td><td data-i18n="modalsMustHaveTo3.idioms.mustSeeEx">This film is a must-see.</td></tr>
-                            <tr><td><strong>have got to</strong></td><td data-i18n="modalsMustHaveTo3.idioms.haveGotToMeaning">informal necessity</td><td data-i18n="modalsMustHaveTo3.idioms.haveGotToEx">I've got to go now.</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-            <!-- Section: Contextual Practice - At the Office -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo3.context.title">Contextual Practice: At the Office</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">💼</span>
-                        <span data-i18n="modalsMustHaveTo3.context.subtitle">Using modals for rules and polite obligations</span>
+                        <span class="EH-conjugation-subsection-icon">📌</span>
+                        <span data-i18n="mustHaveTo3.idioms.heading">Common fixed phrases</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMustHaveTo3.context.dialogue">Sample dialogue:</div>
-                        <p><strong data-i18n="modalsMustHaveTo3.context.manager">Manager:</strong> <span data-i18n="modalsMustHaveTo3.context.line1">"All employees must complete the safety training by Friday."</span><br>
-                        <strong data-i18n="modalsMustHaveTo3.context.employee">Employee:</strong> <span data-i18n="modalsMustHaveTo3.context.line2">"Do we have to do it during work hours?"</span><br>
-                        <strong>Manager:</strong> <span data-i18n="modalsMustHaveTo3.context.line3">"Yes, you have to finish it by the deadline. Also, you mustn't share your login details."</span><br>
-                        <strong>Employee:</strong> <span data-i18n="modalsMustHaveTo3.context.line4">"Understood. I have to say, the new software is a must-have for our team."</span><br>
-                        <strong>Manager:</strong> <span data-i18n="modalsMustHaveTo3.context.line5">"I have to hand it to the IT department – they did a great job."</span><br>
-                        <strong>Employee:</strong> <span data-i18n="modalsMustHaveTo3.context.line6">"If you must assign extra work, I hope it's interesting!"</span></p>
-                        <p data-i18n="modalsMustHaveTo3.context.note"><em>Notice the use of must, have to, mustn't, and idioms in a workplace setting.</em></p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo3.idioms.mustHave">📘 must-have:</div>
+                        <p data-i18n="mustHaveTo3.idioms.mustHaveDesc">essential item – A good dictionary is a must-have for learners.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo3.idioms.handIt">📘 have to hand it to someone:</div>
+                        <p data-i18n="mustHaveTo3.idioms.handItDesc">give credit or praise – I have to hand it to you – you did a great job.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo3.idioms.ifYouMust">📘 if you must:</div>
+                        <p data-i18n="mustHaveTo3.idioms.ifYouMustDesc">if you insist (often reluctant) – If you must know, I'm seeing someone.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo3.idioms.mustSee">📘 must-see / must-read:</div>
+                        <p data-i18n="mustHaveTo3.idioms.mustSeeDesc">highly recommended – This film is a must-see.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo3.idioms.gotTo">📘 have got to:</div>
+                        <p data-i18n="mustHaveTo3.idioms.gotToDesc">informal necessity – I've got to go now.</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- EXERCISES (12) -->
+            <!-- Section 3: Contextual Practice: At the Office -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo3.context.title">III. 3. Contextual Practice: At the Office</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🏢</span>
+                        <span data-i18n="mustHaveTo3.context.heading">Using modals for rules and polite obligations</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo3.context.dialogTitle">💬 Sample dialogue:</div>
+                        <div class="EH-conjugation-examples" style="background: var(--example-bg); padding: 1rem;">
+                            <div><strong>Manager:</strong> <span data-i18n="mustHaveTo3.context.dialog1">"All employees must complete the safety training by Friday."</span></div>
+                            <div><strong>Employee:</strong> <span data-i18n="mustHaveTo3.context.dialog2">"Do we have to do it during work hours?"</span></div>
+                            <div><strong>Manager:</strong> <span data-i18n="mustHaveTo3.context.dialog3">"Yes, you have to finish it by the deadline. Also, you mustn't share your login details."</span></div>
+                            <div><strong>Employee:</strong> <span data-i18n="mustHaveTo3.context.dialog4">"Understood. I have to say, the new software is a must-have for our team."</span></div>
+                            <div><strong>Manager:</strong> <span data-i18n="mustHaveTo3.context.dialog5">"I have to hand it to the IT department – they did a great job."</span></div>
+                            <div><strong>Employee:</strong> <span data-i18n="mustHaveTo3.context.dialog6">"If you must assign extra work, I hope it's interesting!"</span></div>
+                            <div class="EH-conjugation-example" data-i18n="mustHaveTo3.context.note">Notice the use of must, have to, mustn't, and idioms in a workplace setting.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo3.exercises.title">Review & Production Exercises</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #0d47a1; margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo3.exercises.title">Review & Production Exercises</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #0d47a1; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #0d47a1; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
                         <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
                         <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see how you did!</p>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-                    <span></span>
-                </button>
-                <!-- <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-shouldoughtto-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson →</span>
-                </button> -->
-				<button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-					<span data-i18n="common.previousLesson">Previous Lesson</span>
-				</button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">← Return to Conjugation</span>
-                </button>
-            </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations (updated exercise strings) -->
     <script>
         window.I18N = {
             en: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject", conjugation: "Conjugation", example: "Example", examples: "Examples:",
-                    i: "I", you: "You", he: "He", she: "She", we: "We", they: "They", verb: "Verb",
-                    modal: "Modal", usage: "Usage", level: "Politeness level", context: "Context", certainty: "Degree of certainty",
-                    expression: "Expression", meaning: "Meaning",
-                    previousLesson: "← Previous Lesson",
-                    returnToConjugation: "← Return to Conjugation",
-                    nextLesson: "Next Lesson →"
-                },
-                footer: {
-                    developer: "Developer: Mejri Ziad",
-                    privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact"
-                },
-                modalsMustHaveTo3: {
-                    title: "Must & Have to: Real-World Application & Common Pitfalls",
-                    subtitle: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts",
-                    mistakes: {
-                        title: "Common Mistakes with Must & Have to",
-                        heading1: "Frequent errors",
-                        error1Title: "❌ Using 'must' for past obligation",
-                        error1Desc: "Incorrect: <em>He must go yesterday.</em> ✅ Correct: <em>He had to go yesterday.</em> (Must has no past form; use \"had to\")",
-                        error2Title: "❌ Confusing 'mustn't' and 'don't have to'",
-                        error2Desc: "Incorrect: <em>You don't have to smoke here.</em> (if you mean prohibition) ✅ Correct: <em>You mustn't smoke here.</em> (mustn't = prohibition; don't have to = not necessary)",
-                        error3Title: "❌ Incorrect question form with 'have to'",
-                        error3Desc: "Incorrect: <em>Have you to leave?</em> ✅ Correct: <em>Do you have to leave?</em> (Use do/does for questions)",
-                        error4Title: "❌ Overusing 'must' in informal contexts",
-                        error4Desc: "In casual conversation, 'must' can sound very strong or formal. <em>You have to try this cake!</em> is more natural than <em>You must try this cake!</em>",
-                        error5Title: "❌ Double modals with must/have to",
-                        error5Desc: "Incorrect: <em>He must can do it.</em> ✅ Correct: <em>He must be able to do it.</em> or <em>He can do it.</em>"
-                    },
-                    idioms: {
-                        title: "Idiomatic Expressions with Must/Have to",
-                        heading1: "Common fixed phrases",
-                        mustHaveMeaning: "essential item",
-                        mustHaveEx: "A good dictionary is a must-have for learners.",
-                        handItMeaning: "give credit or praise",
-                        handItEx: "I have to hand it to you – you did a great job.",
-                        ifYouMustMeaning: "if you insist (often reluctant)",
-                        ifYouMustEx: "If you must know, I'm seeing someone.",
-                        mustSeeMeaning: "highly recommended",
-                        mustSeeEx: "This film is a must-see.",
-                        haveGotToMeaning: "informal necessity",
-                        haveGotToEx: "I've got to go now."
-                    },
-                    context: {
-                        title: "Contextual Practice: At the Office",
-                        subtitle: "Using modals for rules and polite obligations",
-                        dialogue: "Sample dialogue:",
-                        manager: "Manager:",
-                        employee: "Employee:",
-                        line1: "\"All employees must complete the safety training by Friday.\"",
-                        line2: "\"Do we have to do it during work hours?\"",
-                        line3: "\"Yes, you have to finish it by the deadline. Also, you mustn't share your login details.\"",
-                        line4: "\"Understood. I have to say, the new software is a must-have for our team.\"",
-                        line5: "\"I have to hand it to the IT department – they did a great job.\"",
-                        line6: "\"If you must assign extra work, I hope it's interesting!\"",
-                        note: "<em>Notice the use of must, have to, mustn't, and idioms in a workplace setting.</em>"
-                    },
+                common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                mustHaveTo3: {
+                    title: { line1: "Must & Have to: III:", line2: "Common Mistakes with Must & Have to", line3: "frequent mistakes, idioms, real-life contexts", line4: "lesson: 3/3" },
+                    mistakes: { title: "III. 1. Frequent Errors", heading: "Common pitfalls & corrections", pastTitle: "❌ Using 'must' for past obligation", pastDesc: "Incorrect: He must go yesterday. ✅ Correct: He had to go yesterday. (Must has no past form; use 'had to')", confuseTitle: "❌ Confusing 'mustn't' and 'don't have to'", confuseDesc: "Incorrect: You don't have to smoke here. (if you mean prohibition) ✅ Correct: You mustn't smoke here. (mustn't = prohibition; don't have to = not necessary)", questionTitle: "❌ Incorrect question form with 'have to'", questionDesc: "Incorrect: Have you to leave? ✅ Correct: Do you have to leave? (Use do/does for questions)", overuseTitle: "❌ Overusing 'must' in informal contexts", overuseDesc: "In casual conversation, 'must' can sound very strong or formal. 'You have to try this cake!' is more natural than 'You must try this cake!'", doubleTitle: "❌ Double modals with must/have to", doubleDesc: "Incorrect: He must can do it. ✅ Correct: He must be able to do it. or He can do it." },
+                    idioms: { title: "III. 2. Idiomatic Expressions with Must/Have to", heading: "Common fixed phrases", mustHave: "📘 must-have:", mustHaveDesc: "essential item – A good dictionary is a must-have for learners.", handIt: "📘 have to hand it to someone:", handItDesc: "give credit or praise – I have to hand it to you – you did a great job.", ifYouMust: "📘 if you must:", ifYouMustDesc: "if you insist (often reluctant) – If you must know, I'm seeing someone.", mustSee: "📘 must-see / must-read:", mustSeeDesc: "highly recommended – This film is a must-see.", gotTo: "📘 have got to:", gotToDesc: "informal necessity – I've got to go now." },
+                    context: { title: "III. 3. Contextual Practice: At the Office", heading: "Using modals for rules and polite obligations", dialogTitle: "💬 Sample dialogue:", dialog1: "\"All employees must complete the safety training by Friday.\"", dialog2: "\"Do we have to do it during work hours?\"", dialog3: "\"Yes, you have to finish it by the deadline. Also, you mustn't share your login details.\"", dialog4: "\"Understood. I have to say, the new software is a must-have for our team.\"", dialog5: "\"I have to hand it to the IT department – they did a great job.\"", dialog6: "\"If you must assign extra work, I hope it's interesting!\"", note: "Notice the use of must, have to, mustn't, and idioms in a workplace setting." },
                     exercises: {
                         title: "Review & Production Exercises",
                         q1: "Choose the correct past form: Yesterday, I ______ finish the report before 5 p.m.",
-                        q1a: "must",
-                        q1b: "had to",
-                        q1c: "have to",
+                        q1a: "must", q1b: "had to", q1c: "have to",
                         q2: "Choose the correct modal for prohibition: You ______ park here – it's reserved for staff.",
-                        q2a: "don't have to",
-                        q2b: "mustn't",
-                        q2c: "have to",
+                        q2a: "don't have to", q2b: "mustn't", q2c: "have to",
                         q3: "Choose the correct question form: ______ we have to reserve a table?",
-                        q3a: "Have",
-                        q3b: "Do",
-                        q3c: "Must",
-                        q4: "What does \"a must-have\" mean?",
-                        q4a: "something you have to avoid",
-                        q4b: "an essential item",
-                        q4c: "a possible option",
+                        q3a: "Have", q3b: "Do", q3c: "Must",
+                        q4: "What does 'a must-have' mean?",
+                        q4a: "something you have to avoid", q4b: "an essential item", q4c: "a possible option",
                         q5: "Which sentence is correct?",
-                        q5a: "He must can finish it.",
-                        q5b: "He must be able to finish it.",
-                        q5c: "He must to finish it.",
-                        q6: "If someone says \"I have to hand it to you\", they mean:",
-                        q6a: "I must give you something.",
-                        q6b: "I admire/praise you.",
-                        q6c: "I need your help.",
-                        q7: "Complete with the correct past form: \"I ______ (must) leave early yesterday.\"",
-                        q8: "Complete with the idiom: \"A: Can I ask a personal question? B: ______ you must, but I might not answer.\"",
-                        q9: "Correct the question: \"Have we to pay now?\" → \"______ we have to pay now?\"",
+                        q5a: "He must can finish it.", q5b: "He must be able to finish it.", q5c: "He must to finish it.",
+                        q6: "If someone says 'I have to hand it to you', they mean:",
+                        q6a: "I must give you something.", q6b: "I admire/praise you.", q6c: "I need your help.",
+                        q7: "Complete with the correct past form: I ______ (must) leave early yesterday.",
+                        q8: "Complete with the idiom: 'A: Can I ask a personal question? B: ______ you must, but I might not answer.'",
+                        q9: "Correct the question: 'Have we to pay now?' → '______ we have to pay now?'",
                         q10: "Arrange: (mustn't / You / your / phone / use / here / .)",
                         q11: "Arrange: (have to / Do / uniforms / wear / we / ?)",
                         q12: "Arrange: (a / This / is / must-have / for / app / students / .)"
@@ -304,304 +257,90 @@
                 }
             },
             fr: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject (Sujet)", conjugation: "Conjugation (Conjugaison)", example: "Example (Exemple)", examples: "Examples: (Exemples :)",
-                    i: "I (Je)", you: "You (Vous)", he: "He (Il)", she: "She (Elle)", we: "We (Nous)", they: "They (Ils/Elles)", verb: "Verb (Verbe)",
-                    modal: "Modal (Modal)", usage: "Usage (Usage)", level: "Politeness level (Niveau de politesse)", context: "Context (Contexte)", certainty: "Degree of certainty (Degré de certitude)",
-                    expression: "Expression (Expression)", meaning: "Meaning (Signification)",
-                    previousLesson: "← Leçon précédente",
-                    returnToConjugation: "← Retour à la conjugaison",
-                    nextLesson: "Leçon suivante →"
-                },
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
-                modalsMustHaveTo3: {
-                    title: "Must & Have to: Real-World Application & Common Pitfalls (Must & Have to : application concrète et erreurs courantes)",
-                    subtitle: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts (Évitez les erreurs fréquentes, utilisez les expressions idiomatiques naturellement et pratiquez dans des contextes réels)",
-                    mistakes: {
-                        title: "Common Mistakes with Must & Have to (Erreurs courantes avec Must & Have to)",
-                        heading1: "Frequent errors (Erreurs fréquentes)",
-                        error1Title: "❌ Using 'must' for past obligation (Utiliser 'must' pour une obligation passée)",
-                        error1Desc: "Incorrect: <em>He must go yesterday.</em> ✅ Correct: <em>He had to go yesterday.</em> (Must has no past form; use \"had to\") (Must n'a pas de forme passée ; utilisez \"had to\")",
-                        error2Title: "❌ Confusing 'mustn't' and 'don't have to' (Confondre 'mustn't' et 'don't have to')",
-                        error2Desc: "Incorrect: <em>You don't have to smoke here.</em> (if you mean prohibition) ✅ Correct: <em>You mustn't smoke here.</em> (mustn't = prohibition; don't have to = not necessary) (mustn't = interdiction ; don't have to = pas nécessaire)",
-                        error3Title: "❌ Incorrect question form with 'have to' (Forme interrogative incorrecte avec 'have to')",
-                        error3Desc: "Incorrect: <em>Have you to leave?</em> ✅ Correct: <em>Do you have to leave?</em> (Use do/does for questions) (Utilisez do/does pour les questions)",
-                        error4Title: "❌ Overusing 'must' in informal contexts (Utiliser trop 'must' dans des contextes informels)",
-                        error4Desc: "In casual conversation, 'must' can sound very strong or formal. <em>You have to try this cake!</em> is more natural than <em>You must try this cake!</em> (Dans une conversation informelle, 'must' peut sembler très fort ou formel. <em>You have to try this cake!</em> est plus naturel que <em>You must try this cake!</em>)",
-                        error5Title: "❌ Double modals with must/have to (Doubles modaux avec must/have to)",
-                        error5Desc: "Incorrect: <em>He must can do it.</em> ✅ Correct: <em>He must be able to do it.</em> or <em>He can do it.</em>"
-                    },
-                    idioms: {
-                        title: "Idiomatic Expressions with Must/Have to (Expressions idiomatiques avec Must/Have to)",
-                        heading1: "Common fixed phrases (Expressions courantes)",
-                        mustHaveMeaning: "essential item (article essentiel)",
-                        mustHaveEx: "A good dictionary is a must-have for learners. (Un bon dictionnaire est un must-have pour les apprenants.)",
-                        handItMeaning: "give credit or praise (rendre hommage)",
-                        handItEx: "I have to hand it to you – you did a great job. (Je dois reconnaître que vous avez fait un excellent travail.)",
-                        ifYouMustMeaning: "if you insist (often reluctant) (si tu insistes)",
-                        ifYouMustEx: "If you must know, I'm seeing someone. (Si tu veux absolument savoir, je vois quelqu'un.)",
-                        mustSeeMeaning: "highly recommended (à voir absolument)",
-                        mustSeeEx: "This film is a must-see. (Ce film est à voir absolument.)",
-                        haveGotToMeaning: "informal necessity (nécessité informelle)",
-                        haveGotToEx: "I've got to go now. (Je dois y aller maintenant.)"
-                    },
-                    context: {
-                        title: "Contextual Practice: At the Office (Pratique contextuelle : Au bureau)",
-                        subtitle: "Using modals for rules and polite obligations (Utiliser les modaux pour les règles et les obligations polies)",
-                        dialogue: "Sample dialogue: (Dialogue exemple :)",
-                        manager: "Manager: (Responsable :)",
-                        employee: "Employee: (Employé :)",
-                        line1: "\"All employees must complete the safety training by Friday.\" (\"Tous les employés doivent suivre la formation à la sécurité d'ici vendredi.\")",
-                        line2: "\"Do we have to do it during work hours?\" (\"Devons-nous le faire pendant les heures de travail ?\")",
-                        line3: "\"Yes, you have to finish it by the deadline. Also, you mustn't share your login details.\" (\"Oui, vous devez le faire avant la date limite. De plus, vous ne devez pas partager vos identifiants.\")",
-                        line4: "\"Understood. I have to say, the new software is a must-have for our team.\" (\"Compris. Je dois dire que le nouveau logiciel est un must-have pour notre équipe.\")",
-                        line5: "\"I have to hand it to the IT department – they did a great job.\" (\"Je dois rendre hommage au service informatique – ils ont fait un excellent travail.\")",
-                        line6: "\"If you must assign extra work, I hope it's interesting!\" (\"Si vous devez absolument attribuer du travail supplémentaire, j'espère que ce sera intéressant !\")",
-                        note: "<em>Notice the use of must, have to, mustn't, and idioms in a workplace setting. (Remarquez l'utilisation de must, have to, mustn't et des expressions idiomatiques dans un contexte professionnel.)</em>"
-                    },
-                    exercises: {
-                        title: "Review & Production Exercises (Exercices de révision et production)",
-                        q1: "Choose the correct past form: Yesterday, I ______ finish the report before 5 p.m. (Choisissez la forme passée correcte : Hier, je ______ terminer le rapport avant 17h.)",
-                        q1a: "must", q1b: "had to", q1c: "have to",
-                        q2: "Choose the correct modal for prohibition: You ______ park here – it's reserved for staff. (Choisissez le modal correct pour l'interdiction : Vous ______ stationner ici – c'est réservé au personnel.)",
-                        q2a: "don't have to", q2b: "mustn't", q2c: "have to",
-                        q3: "Choose the correct question form: ______ we have to reserve a table? (Choisissez la forme interrogative correcte : ______ nous devons réserver une table ?)",
-                        q3a: "Have", q3b: "Do", q3c: "Must",
-                        q4: "What does \"a must-have\" mean? (Que signifie \"a must-have\" ?)",
-                        q4a: "something you have to avoid", q4b: "an essential item", q4c: "a possible option",
-                        q5: "Which sentence is correct? (Quelle phrase est correcte ?)",
-                        q5a: "He must can finish it.", q5b: "He must be able to finish it.", q5c: "He must to finish it.",
-                        q6: "If someone says \"I have to hand it to you\", they mean: (Si quelqu'un dit \"I have to hand it to you\", cela signifie :)",
-                        q6a: "I must give you something.", q6b: "I admire/praise you.", q6c: "I need your help.",
-                        q7: "Complete with the correct past form: \"I ______ (must) leave early yesterday.\" (Complétez avec la forme passée correcte : \"I ______ (must) leave early yesterday.\")",
-                        q8: "Complete with the idiom: \"A: Can I ask a personal question? B: ______ you must, but I might not answer.\" (Complétez avec l'expression idiomatique : \"A: Can I ask a personal question? B: ______ you must, but I might not answer.\")",
-                        q9: "Correct the question: \"Have we to pay now?\" → \"______ we have to pay now?\" (Corrigez la question : \"Have we to pay now?\" → \"______ we have to pay now?\")",
-                        q10: "Arrange: (mustn't / You / your / phone / use / here / .) (Remettez dans l'ordre :)",
-                        q11: "Arrange: (have to / Do / uniforms / wear / we / ?) (Remettez dans l'ordre :)",
-                        q12: "Arrange: (a / This / is / must-have / for / app / students / .) (Remettez dans l'ordre :)"
-                    }
+                mustHaveTo3: {
+                    title: { line1: "Must & Have to : III :", line2: "Erreurs courantes avec Must & Have to", line3: "erreurs fréquentes, expressions idiomatiques, contextes réels", line4: "leçon : 3/3" },
+                    mistakes: { title: "III. 1. Erreurs fréquentes", heading: "Pièges courants et corrections", pastTitle: "❌ Utiliser 'must' pour l'obligation passée", pastDesc: "Incorrect : He must go yesterday. ✅ Correct : He had to go yesterday. (Must n'a pas de forme passée ; utilisez 'had to')", confuseTitle: "❌ Confondre 'mustn't' et 'don't have to'", confuseDesc: "Incorrect : You don't have to smoke here. ✅ Correct : You mustn't smoke here. (mustn't = interdiction ; don't have to = pas nécessaire)", questionTitle: "❌ Forme interrogative incorrecte avec 'have to'", questionDesc: "Incorrect : Have you to leave? ✅ Correct : Do you have to leave? (Utilisez do/does pour les questions)", overuseTitle: "❌ Utilisation excessive de 'must' en contexte informel", overuseDesc: "Dans une conversation familière, 'must' peut sembler très fort ou formel. 'You have to try this cake!' est plus naturel que 'You must try this cake!'", doubleTitle: "❌ Doubles modaux avec must/have to", doubleDesc: "Incorrect : He must can do it. ✅ Correct : He must be able to do it. ou He can do it." },
+                    idioms: { title: "III. 2. Expressions idiomatiques avec Must/Have to", heading: "Expressions figées courantes", mustHave: "📘 must-have :", mustHaveDesc: "article essentiel – Un bon dictionnaire est un must-have pour les apprenants.", handIt: "📘 have to hand it to someone :", handItDesc: "rendre hommage – Je dois te rendre hommage – tu as fait un excellent travail.", ifYouMust: "📘 if you must :", ifYouMustDesc: "si tu insistes (souvent à contrecœur) – Si tu veux absolument savoir, je vois quelqu'un.", mustSee: "📘 must-see / must-read :", mustSeeDesc: "hautement recommandé – Ce film est un must-see.", gotTo: "📘 have got to :", gotToDesc: "nécessité informelle – Je dois y aller maintenant." },
+                    context: { title: "III. 3. Pratique contextuelle : Au bureau", heading: "Utiliser les modaux pour les règles et les obligations polies", dialogTitle: "💬 Dialogue exemple :", dialog1: "« Tous les employés doivent terminer la formation de sécurité avant vendredi. »", dialog2: "« Devons-nous le faire pendant les heures de travail ? »", dialog3: "« Oui, vous devez le faire avant la date limite. De plus, vous ne devez pas partager vos identifiants. »", dialog4: "« Compris. Je dois dire que le nouveau logiciel est un must-have pour notre équipe. »", dialog5: "« Je dois tirer mon chapeau au service informatique – ils ont fait un excellent travail. »", dialog6: "« Si vous devez absolument attribuer du travail supplémentaire, j'espère que ce sera intéressant ! »", note: "Remarquez l'utilisation de must, have to, mustn't et des expressions idiomatiques dans un cadre professionnel." }
                 }
             },
             ar: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject (الفاعل)", conjugation: "Conjugation (التصريف)", example: "Example (مثال)", examples: "Examples: (أمثلة:)",
-                    i: "I (أنا)", you: "You (أنت)", he: "He (هو)", she: "She (هي)", we: "We (نحن)", they: "They (هم)", verb: "Verb (الفعل)",
-                    modal: "Modal (فعل مساعد)", usage: "Usage (الاستخدام)", level: "Politeness level (مستوى الأدب)", context: "Context (السياق)", certainty: "Degree of certainty (درجة اليقين)",
-                    expression: "Expression (التعبير)", meaning: "Meaning (المعنى)",
-                    previousLesson: "← Previous Lesson (الدرس السابق)",
-                    returnToConjugation: "← Return to Conjugation (العودة إلى التصريف)",
-                    nextLesson: "Next Lesson → (الدرس التالي)"
-                },
+                common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
                 footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
-                modalsMustHaveTo3: {
-                    title: "Must & Have to: Real-World Application & Common Pitfalls (Must & Have to: التطبيق الواقعي والأخطاء الشائعة)",
-                    subtitle: "Avoid frequent mistakes, use idioms naturally, and practice in real-life contexts (تجنب الأخطاء المتكررة، واستخدم التعبيرات الاصطلاحية بشكل طبيعي، وتدرب في سياقات الحياة الواقعية)",
-                    mistakes: {
-                        title: "Common Mistakes with Must & Have to (الأخطاء الشائعة مع Must & Have to)",
-                        heading1: "Frequent errors (أخطاء متكررة)",
-                        error1Title: "❌ Using 'must' for past obligation (استخدام 'must' للالتزام في الماضي)",
-                        error1Desc: "Incorrect: <em>He must go yesterday.</em> ✅ Correct: <em>He had to go yesterday.</em> (Must has no past form; use \"had to\") (ليس لـ Must صيغة ماضية؛ استخدم \"had to\")",
-                        error2Title: "❌ Confusing 'mustn't' and 'don't have to' (الخلط بين 'mustn't' و 'don't have to')",
-                        error2Desc: "Incorrect: <em>You don't have to smoke here.</em> (if you mean prohibition) ✅ Correct: <em>You mustn't smoke here.</em> (mustn't = prohibition; don't have to = not necessary) (mustn't = منع؛ don't have to = ليس ضروريًا)",
-                        error3Title: "❌ Incorrect question form with 'have to' (صيغة سؤال غير صحيحة مع 'have to')",
-                        error3Desc: "Incorrect: <em>Have you to leave?</em> ✅ Correct: <em>Do you have to leave?</em> (Use do/does for questions) (استخدم do/does للأسئلة)",
-                        error4Title: "❌ Overusing 'must' in informal contexts (الإفراط في استخدام 'must' في السياقات غير الرسمية)",
-                        error4Desc: "In casual conversation, 'must' can sound very strong or formal. <em>You have to try this cake!</em> is more natural than <em>You must try this cake!</em> (في المحادثة غير الرسمية، قد يبدو 'must' قويًا أو رسميًا جدًا. <em>You have to try this cake!</em> أكثر طبيعية من <em>You must try this cake!</em>)",
-                        error5Title: "❌ Double modals with must/have to (استخدام فعلين مساعدين مع must/have to)",
-                        error5Desc: "Incorrect: <em>He must can do it.</em> ✅ Correct: <em>He must be able to do it.</em> or <em>He can do it.</em> (خطأ: <em>He must can do it.</em> ✅ صحيح: <em>He must be able to do it.</em> أو <em>He can do it.</em>)"
-                    },
-                    idioms: {
-                        title: "Idiomatic Expressions with Must/Have to (التعبيرات الاصطلاحية مع Must/Have to)",
-                        heading1: "Common fixed phrases (عبارات ثابتة شائعة)",
-                        mustHaveMeaning: "essential item (عنصر أساسي)",
-                        mustHaveEx: "A good dictionary is a must-have for learners. (القاموس الجيد هو عنصر أساسي للمتعلمين.)",
-                        handItMeaning: "give credit or praise (الإشادة أو الثناء)",
-                        handItEx: "I have to hand it to you – you did a great job. (يجب أن أشيد بك – لقد قمت بعمل رائع.)",
-                        ifYouMustMeaning: "if you insist (often reluctant) (إذا أصررت)",
-                        ifYouMustEx: "If you must know, I'm seeing someone. (إذا أردت أن تعرف، أنا على علاقة بشخص ما.)",
-                        mustSeeMeaning: "highly recommended (يجب مشاهدته)",
-                        mustSeeEx: "This film is a must-see. (هذا الفيلم يجب مشاهدته.)",
-                        haveGotToMeaning: "informal necessity (ضرورة غير رسمية)",
-                        haveGotToEx: "I've got to go now. (يجب أن أذهب الآن.)"
-                    },
-                    context: {
-                        title: "Contextual Practice: At the Office (تدريب سياقي: في المكتب)",
-                        subtitle: "Using modals for rules and polite obligations (استخدام الأفعال المساعدة للقواعد والالتزامات المهذبة)",
-                        dialogue: "Sample dialogue: (حوار نموذجي :)",
-                        manager: "Manager: (المدير :)",
-                        employee: "Employee: (الموظف :)",
-                        line1: "\"All employees must complete the safety training by Friday.\" (\"يجب على جميع الموظفين إكمال التدريب على السلامة بحلول يوم الجمعة.\")",
-                        line2: "\"Do we have to do it during work hours?\" (\"هل يجب علينا القيام بذلك خلال ساعات العمل؟\")",
-                        line3: "\"Yes, you have to finish it by the deadline. Also, you mustn't share your login details.\" (\"نعم، يجب عليك إنهاؤه قبل الموعد النهائي. أيضًا، لا يجب عليك مشاركة بيانات تسجيل الدخول الخاصة بك.\")",
-                        line4: "\"Understood. I have to say, the new software is a must-have for our team.\" (\"مفهوم. يجب أن أقول، البرنامج الجديد هو عنصر أساسي لفريقنا.\")",
-                        line5: "\"I have to hand it to the IT department – they did a great job.\" (\"يجب أن أشيد بقسم تكنولوجيا المعلومات – لقد قاموا بعمل رائع.\")",
-                        line6: "\"If you must assign extra work, I hope it's interesting!\" (\"إذا كان يجب عليك تعيين عمل إضافي، آمل أن يكون مثيرًا للاهتمام!\")",
-                        note: "<em>Notice the use of must, have to, mustn't, and idioms in a workplace setting. (لاحظ استخدام must و have to و mustn't والتعابير الاصطلاحية في بيئة العمل.)</em>"
-                    },
-                    exercises: {
-                        title: "Review & Production Exercises (تمارين المراجعة والإنتاج)",
-                        q1: "Choose the correct past form: Yesterday, I ______ finish the report before 5 p.m. (اختر صيغة الماضي الصحيحة: أمس، أنا ______ إنهاء التقرير قبل الساعة 5 مساءً.)",
-                        q1a: "must", q1b: "had to", q1c: "have to",
-                        q2: "Choose the correct modal for prohibition: You ______ park here – it's reserved for staff. (اختر الفعل المساعد الصحيح للمنع: أنت ______ الوقوف هنا – إنه مخصص للموظفين.)",
-                        q2a: "don't have to", q2b: "mustn't", q2c: "have to",
-                        q3: "Choose the correct question form: ______ we have to reserve a table? (اختر صيغة السؤال الصحيحة: ______ نحن يجب أن نحجز طاولة؟)",
-                        q3a: "Have", q3b: "Do", q3c: "Must",
-                        q4: "What does \"a must-have\" mean? (ماذا تعني \"a must-have\"؟)",
-                        q4a: "something you have to avoid", q4b: "an essential item", q4c: "a possible option",
-                        q5: "Which sentence is correct? (أي جملة صحيحة؟)",
-                        q5a: "He must can finish it.", q5b: "He must be able to finish it.", q5c: "He must to finish it.",
-                        q6: "If someone says \"I have to hand it to you\", they mean: (إذا قال شخص ما \"I have to hand it to you\"، فهو يعني:)",
-                        q6a: "I must give you something.", q6b: "I admire/praise you.", q6c: "I need your help.",
-                        q7: "Complete with the correct past form: \"I ______ (must) leave early yesterday.\" (أكمل بالصيغة الماضية الصحيحة: \"I ______ (must) leave early yesterday.\")",
-                        q8: "Complete with the idiom: \"A: Can I ask a personal question? B: ______ you must, but I might not answer.\" (أكمل بالتعبير الاصطلاحي: \"A: Can I ask a personal question? B: ______ you must, but I might not answer.\")",
-                        q9: "Correct the question: \"Have we to pay now?\" → \"______ we have to pay now?\" (صحح السؤال: \"Have we to pay now?\" → \"______ we have to pay now?\")",
-                        q10: "Arrange: (mustn't / You / your / phone / use / here / .) (رتب: (mustn't / You / your / phone / use / here / .))",
-                        q11: "Arrange: (have to / Do / uniforms / wear / we / ?) (رتب: (have to / Do / uniforms / wear / we / ?))",
-                        q12: "Arrange: (a / This / is / must-have / for / app / students / .) (رتب: (a / This / is / must-have / for / app / students / .))"
-                    }
+                mustHaveTo3: {
+                    title: { line1: "Must & Have to: 3:", line2: "الأخطاء الشائعة مع Must & Have to", line3: "أخطاء متكررة، تعبيرات اصطلاحية، سياقات واقعية", line4: "الدرس: 3/3" },
+                    mistakes: { title: "III. 1. الأخطاء المتكررة", heading: "الأخطاء الشائعة وتصويباتها", pastTitle: "❌ استخدام 'must' للتعبير عن الالتزام في الماضي", pastDesc: "خطأ: He must go yesterday. ✅ الصواب: He had to go yesterday. (Must ليس له صيغة ماضية؛ استخدم 'had to')", confuseTitle: "❌ الخلط بين 'mustn't' و 'don't have to'", confuseDesc: "خطأ: You don't have to smoke here. ✅ الصواب: You mustn't smoke here. (mustn't = منع؛ don't have to = ليس ضروريًا)", questionTitle: "❌ صيغة سؤال خاطئة مع 'have to'", questionDesc: "خطأ: Have you to leave? ✅ الصواب: Do you have to leave? (استخدم do/does للأسئلة)", overuseTitle: "❌ الإفراط في استخدام 'must' في السياقات غير الرسمية", overuseDesc: "في المحادثات العادية، قد تبدو 'must' قوية جدًا أو رسمية. 'You have to try this cake!' أكثر طبيعية من 'You must try this cake!'", doubleTitle: "❌ أفعال ناقصة مزدوجة مع must/have to", doubleDesc: "خطأ: He must can do it. ✅ الصواب: He must be able to do it. أو He can do it." },
+                    idioms: { title: "III. 2. التعبيرات الاصطلاحية مع Must/Have to", heading: "عبارات ثابتة شائعة", mustHave: "📘 must-have:", mustHaveDesc: "عنصر أساسي – القاموس الجيد هو must-have للمتعلمين.", handIt: "📘 have to hand it to someone:", handItDesc: "تقدير أو مدح – يجب أن أشيد بك – لقد قمت بعمل رائع.", ifYouMust: "📘 if you must:", ifYouMustDesc: "إذا أصررت (غالبًا على مضض) – إذا كنت تريد أن تعرف، فأنا أرتبط بشخص ما.", mustSee: "📘 must-see / must-read:", mustSeeDesc: "موصى به بشدة – هذا الفيلم هو must-see.", gotTo: "📘 have got to:", gotToDesc: "ضرورة غير رسمية – يجب أن أذهب الآن." },
+                    context: { title: "III. 3. ممارسة سياقية: في المكتب", heading: "استخدام الأفعال الناقصة للقواعد والالتزامات المهذبة", dialogTitle: "💬 حوار نموذجي:", dialog1: "«يجب على جميع الموظفين إكمال التدريب على السلامة بحلول يوم الجمعة.»", dialog2: "«هل يجب علينا القيام بذلك خلال ساعات العمل؟»", dialog3: "«نعم، يجب عليك إكماله قبل الموعد النهائي. أيضًا، لا يجب عليك مشاركة تفاصيل تسجيل الدخول الخاصة بك.»", dialog4: "«مفهوم. يجب أن أقول، البرنامج الجديد هو must-have لفريقنا.»", dialog5: "«يجب أن أشيد بقسم تكنولوجيا المعلومات – لقد قاموا بعمل رائع.»", dialog6: "«إذا كنت مضطرًا لتكليفنا بعمل إضافي، آمل أن يكون مثيرًا للاهتمام!»", note: "لاحظ استخدام must، have to، mustn't، والتعبيرات الاصطلاحية في بيئة العمل." }
                 }
             }
         };
     </script>
-    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ========== Build exercises dynamically and get answer keys ==========
         const correctAnswersType1 = buildMultipleChoiceExercise({
-            containerId: 'mc-exercises',
-            prefix: 'EH-exercise-type1-possibilities3',
+            containerId: 'mc-exercises', prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'modalsMustHaveTo3.exercises.q1',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo3.exercises.q1a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo3.exercises.q1b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo3.exercises.q1c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo3.exercises.q2',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo3.exercises.q2a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo3.exercises.q2b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo3.exercises.q2c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo3.exercises.q3',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo3.exercises.q3a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo3.exercises.q3b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo3.exercises.q3c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo3.exercises.q4',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo3.exercises.q4a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo3.exercises.q4b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo3.exercises.q4c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo3.exercises.q5',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo3.exercises.q5a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo3.exercises.q5b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo3.exercises.q5c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo3.exercises.q6',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo3.exercises.q6a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo3.exercises.q6b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo3.exercises.q6c' }
-                    ],
-                    correctAnswer: 'b'
-                }
+                { questionTextKey: 'mustHaveTo3.exercises.q1', options: [{ value: 'a', labelKey: 'mustHaveTo3.exercises.q1a' }, { value: 'b', labelKey: 'mustHaveTo3.exercises.q1b' }, { value: 'c', labelKey: 'mustHaveTo3.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'mustHaveTo3.exercises.q2', options: [{ value: 'a', labelKey: 'mustHaveTo3.exercises.q2a' }, { value: 'b', labelKey: 'mustHaveTo3.exercises.q2b' }, { value: 'c', labelKey: 'mustHaveTo3.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'mustHaveTo3.exercises.q3', options: [{ value: 'a', labelKey: 'mustHaveTo3.exercises.q3a' }, { value: 'b', labelKey: 'mustHaveTo3.exercises.q3b' }, { value: 'c', labelKey: 'mustHaveTo3.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'mustHaveTo3.exercises.q4', options: [{ value: 'a', labelKey: 'mustHaveTo3.exercises.q4a' }, { value: 'b', labelKey: 'mustHaveTo3.exercises.q4b' }, { value: 'c', labelKey: 'mustHaveTo3.exercises.q4c' }], correctAnswer: 'b' },
+                { questionTextKey: 'mustHaveTo3.exercises.q5', options: [{ value: 'a', labelKey: 'mustHaveTo3.exercises.q5a' }, { value: 'b', labelKey: 'mustHaveTo3.exercises.q5b' }, { value: 'c', labelKey: 'mustHaveTo3.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'mustHaveTo3.exercises.q6', options: [{ value: 'a', labelKey: 'mustHaveTo3.exercises.q6a' }, { value: 'b', labelKey: 'mustHaveTo3.exercises.q6b' }, { value: 'c', labelKey: 'mustHaveTo3.exercises.q6c' }], correctAnswer: 'b' }
             ]
         });
-
-        const correctAnswersType2 = buildFillInTheBlankExercise({
-            containerId: 'fill-exercises',
-            prefix: 'fill',
+    </script>
+    <script>
+        correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises', prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'modalsMustHaveTo3.exercises.q7',
-                    answers: ['had to', 'HAD TO']
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo3.exercises.q8',
-                    answers: ['If', 'IF']
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo3.exercises.q9',
-                    answers: ['Do', 'DO']
-                }
+                { questionTextKey: 'mustHaveTo3.exercises.q7', answers: ['had to'] },
+                { questionTextKey: 'mustHaveTo3.exercises.q8', answers: ['If'] },
+                { questionTextKey: 'mustHaveTo3.exercises.q9', answers: ['Do'] }
             ]
         });
-
+    </script>
+    <script>
         const correctAnswersType3 = buildSentenceOrderingExercise({
-            containerId: 'order-exercises',
-            prefix: 'order',
+            containerId: 'order-exercises', prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'modalsMustHaveTo3.exercises.q10',
-                    words: ['mustn\'t', 'You', 'your', 'phone', 'use', 'here', '.'],
-                    correctSentence: 'You mustn\'t use your phone here .'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo3.exercises.q11',
-                    words: ['have to', 'Do', 'uniforms', 'wear', 'we', '?'],
-                    correctSentence: 'Do we have to wear uniforms ?'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo3.exercises.q12',
-                    words: ['a', 'This', 'is', 'must-have', 'for', 'app', 'students', '.'],
-                    correctSentence: 'This app is a must-have for students .'
-                }
+                { questionTextKey: 'mustHaveTo3.exercises.q10', words: ['mustn\'t', 'You', 'your', 'phone', 'use', 'here', '.'], correctSentence: 'You mustn\'t use your phone here .' },
+                { questionTextKey: 'mustHaveTo3.exercises.q11', words: ['have to', 'Do', 'uniforms', 'wear', 'we', '?'], correctSentence: 'Do we have to wear uniforms ?' },
+                { questionTextKey: 'mustHaveTo3.exercises.q12', words: ['a', 'This', 'is', 'must-have', 'for', 'app', 'students', '.'], correctSentence: 'This app is a must-have for students .' }
             ]
         });
-
-        // ========== Check & init functions ==========
+    </script>
+    <script>
         function checkAllExercises() {
-            let totalScore = 0;
-            let totalQuestions = 0;
-            
+            let totalScore = 0, totalQuestions = 0;
             totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
             totalQuestions += 6;
             totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
             totalQuestions += 3;
             totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
             totalQuestions += 3;
-            
             const scoreEl = document.getElementById('score-value');
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered must/have to!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review idioms and past forms.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit common mistakes.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
+            EHScoreEffects.show(totalScore, totalQuestions);
         }
-
         document.addEventListener('DOMContentLoaded', function() {
-            // Init drag-and-drop for ordering
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-
-        // ========== i18n rendering for HTML elements with innerHTML tags ==========
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
@@ -609,11 +348,7 @@
                 elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
-                        el.textContent = translation;
-                    }
+                    if (translation) el.textContent = translation;
                 });
             }
             window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });

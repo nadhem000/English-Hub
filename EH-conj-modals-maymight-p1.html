@@ -3,744 +3,652 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>May & Might: Core Concepts & Primary Uses - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>May & Might I: Core Concepts & Primary Uses - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-    :root {
-        /* ---------- may / might palette (fresh blue) ---------- */
-        --bg-gradient: linear-gradient(135deg, #0d47a1, #1976d2, #42a5f5);
-        --title-color: #0d47a1;
-        --primary: #1976d2;
-        --primary-hover: #0d47a1;
-        --primary-light: #42a5f5;
-        --accent: #42a5f5;
-        --rule-bg: #e3f2fd;
-        --rule-border: #42a5f5;
-        --example-bg: #bbdefb;
-        --example-border: #42a5f5;
-        --exercise-number-gradient: linear-gradient(135deg, #1976d2, #42a5f5);
-        --nav-btn-bg: #1976d2;
-        --nav-btn-hover: #0d47a1;
-        --nav-back-btn-bg: #42a5f5;
-        --nav-back-btn-color: white;
-        --nav-back-btn-hover: #1976d2;
-
-        /* ---------- Universal / Neutral ---------- */
-        --header-text: white;
-        --header-text-light: rgba(255, 255, 255, 0.9);
-        --content-bg: rgba(255, 255, 255, 0.95);
-        --text-color: #333;
-        --white: white;
-        --section-divider: #e0e0e0;
-        --card-bg: white;
-        --subsection-bg: white;
-        --card-border: #e0e0e0;
-        --input-border: #e0e0e0;
-        --dashed-border: #e0e0e0;
-        --table-border: #ddd;
-        --table-stripe: #f2f2f2;
-        --correct-bg: #d4edda;
-        --correct-color: #155724;
-        --correct-border: #c3e6cb;
-        --incorrect-bg: #f8d7da;
-        --incorrect-color: #721c24;
-        --incorrect-border: #f5c6cb;
-    }
-</style>
-<link rel="stylesheet" href="styles/style-conjugation.css">
+        /* Warm amber / honey palette – distinct from previous lesson files */
+        :root {
+            --bg-gradient: linear-gradient(135deg, #fff5e6, #ffefdb, #ffe4bc, #ffd9a5);
+            --content-bg: #fffcf7;
+            --card-bg: #ffffff;
+            --subsection-bg: #fff7ed;
+            --rule-bg: #fff2e2;
+            --example-bg: #ffefdf;
+            --table-stripe: #fff9f0;
+            --title-color: #b65f00;
+            --text-color: #4a3a28;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #f1a23d;
+            --primary-hover: #da8a28;
+            --primary-light: #f4b45c;
+            --accent: #e5932e;
+            --exercise-number-gradient: linear-gradient(135deg, #f1a23d, #d47c1a);
+            --rule-border: #f1a23d;
+            --example-border: #f1a23d;
+            --nav-btn-bg: #f1a23d;
+            --nav-btn-hover: #d47c1a;
+            --nav-back-btn-bg: #e5932e;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #f1a23d;
+            --refract-divider-color: #f7ca8a;
+            --refract-translation-bg: #fff2e0;
+            --refract-translation-border: #f1a23d;
+            --refract-english-color: #4a3a28;
+            --section-divider: #fee5c4;
+            --card-border: #fee5c4;
+            --input-border: #f7cf9e;
+            --dashed-border: #f7cf9e;
+            --table-border: #f7dec0;
+            --correct-bg: #e1f7e8;
+            --correct-color: #1f6e43;
+            --correct-border: #a3d6b0;
+            --incorrect-bg: #fee9e7;
+            --incorrect-color: #b13e3e;
+            --incorrect-border: #fcc2bc;
+            --neutral-bg: #faf0e3;
+            --neutral-color: #8b6946;
+            --neutral-border: #eedbbc;
+            --empty-input-border: #e9cfaa;
+            --empty-input-bg: #fffaf4;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #f1a23d;
+            --language-selector-color: #4a3a28;
+            --score-flash-high-bg: #c8e6d9;
+            --score-flash-mid-bg: #fff3ce;
+            --score-flash-low-bg: #ffe0db;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #5e3a1a, #7a4e22, #9b642c, #b87a34);
+            --content-bg: #2d2418;
+            --card-bg: #3e2e1e;
+            --subsection-bg: #3e2e1e;
+            --rule-bg: #2d2418;
+            --example-bg: #2d2418;
+            --table-stripe: #34281b;
+            --title-color: #fbc580;
+            --text-color: #f2e2cf;
+            --header-text: #f2e2cf;
+            --header-text-light: #dead7a;
+            --primary: #f3b155;
+            --primary-hover: #ffc67a;
+            --primary-light: #f3b155;
+            --accent: #f3b155;
+            --rule-border: #f3b155;
+            --example-border: #f3b155;
+            --exercise-number-gradient: linear-gradient(135deg, #f3b155, #f1a23d);
+            --nav-btn-bg: #f3b155;
+            --nav-btn-hover: #f1a23d;
+            --nav-back-btn-bg: #ffc47a;
+            --nav-back-btn-color: #2a1a0a;
+            --nav-back-btn-hover: #f3b155;
+            --refract-divider-color: #e5a456;
+            --refract-translation-bg: #4f3820;
+            --refract-translation-border: #e5a456;
+            --refract-english-color: #fbebd4;
+            --section-divider: #5c401f;
+            --card-border: #5c401f;
+            --input-border: #7a562e;
+            --dashed-border: #7a562e;
+            --table-border: #634a28;
+            --white: #f2e2cf;
+            --correct-bg: #2a5e44;
+            --correct-color: #b5e6c5;
+            --correct-border: #3b9e6e;
+            --incorrect-bg: #632c2c;
+            --incorrect-color: #f7bfbf;
+            --incorrect-border: #b45a5a;
+            --neutral-bg: #3f2d1b;
+            --neutral-color: #dabf9a;
+            --neutral-border: #765c38;
+            --empty-input-border: #765c38;
+            --empty-input-bg: #2d2418;
+            --language-selector-bg: #3e2e1e;
+            --language-selector-border: #f3b155;
+            --language-selector-color: #f2e2cf;
+            --score-flash-high-bg: #2c6e4a;
+            --score-flash-mid-bg: #bd882a;
+            --score-flash-low-bg: #aa4a3a;
+        }
+    </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="ar">العربية</option>
-        </select>
-    </div>
-    
-    <div class="EH-site-header">
-        <a href="index.html" class="EH-site-logo-link" title="Main Page">
-            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
-        </a>
-        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
-    </div>
-    
-    <div class="EH-conjugation-container">
-        <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="modalsMayMight1.title">May & Might: Core Concepts & Primary Uses</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="modalsMayMight1.subtitle">Learn how to use may and might to express permission, possibility, and polite requests</p>
-        </header>
-        
-        <div class="EH-conjugation-content">
-            <!-- Introduction -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight1.introduction.title">Introduction to May & Might</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔰</span>
-                        <span data-i18n="modalsMayMight1.introduction.whatAre">What are modals "may" and "might"?</span>
-                    </h3>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight1.introduction.definitionTitle">Definition:</div>
-                        <p data-i18n="modalsMayMight1.introduction.definition">"May" and "might" are modal auxiliary verbs. They do not change form (no -s in third person) and are followed by the base form of the main verb.</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight1.introduction.coreIdeas">Core ideas:</div>
-                        <ul>
-                            <li data-i18n="modalsMayMight1.introduction.core1"><strong>May</strong> – formal permission, possibility (present/future), polite requests.</li>
-                            <li data-i18n="modalsMayMight1.introduction.core2"><strong>Might</strong> – past of may (reported speech), less certain possibility, polite suggestions.</li>
-                        </ul>
-                    </div>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.introduction.example1">May I come in? (permission)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.introduction.example2">It may rain later. (possibility)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.introduction.example3">He said he might be late. (reported speech)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.introduction.example4">You might want to try this. (polite suggestion)</div>
-                    </div>
+<div class="EH-language-selector-wrapper">
+    <select id="language-selector" class="EH-language-selector">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية</option>
+    </select>
+    <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+</div>
+<div class="EH-site-header">
+    <a href="index.html" class="EH-site-logo-link" title="Main Page">
+        <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+    </a>
+    <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+</div>
+<div class="EH-conjugation-container">
+    <header class="EH-conjugation-header">
+        <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+            <div class="EH-conjugation-title-line" data-i18n="mayMight1.title.line1">May & Might: I:</div>
+            <div class="EH-conjugation-title-line" data-i18n="mayMight1.title.line2">Core Concepts & Primary Uses</div>
+            <div class="EH-conjugation-subtitle" data-i18n="mayMight1.title.line3">express permission, possibility, and polite requests</div>
+            <div class="EH-conjugation-subtitle" data-i18n="mayMight1.title.line4">lesson: 1/3</div>
+        </div>
+    </header>
+    <div class="EH-conjugation-content">
+        <!-- I. 1. Introduction to May & Might -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="mayMight1.section1.title">I. 1. Introduction to May & Might</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">📘</span>
+                    <span data-i18n="mayMight1.section1.heading">What are modals "may" and "might"?</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight1.section1.desc1">📘 Definition:</div>
+                    <p data-i18n="mayMight1.section1.desc2">"May" and "might" are modal auxiliary verbs. They do not change form (no -s in third person) and are followed by the base form of the main verb.</p>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight1.section1.coreTitle">💡 Core ideas:</div>
+                    <ul>
+                        <li data-i18n="mayMight1.section1.core1"><strong>May</strong> – formal permission, possibility (present/future), polite requests.</li>
+                        <li data-i18n="mayMight1.section1.core2"><strong>Might</strong> – past of may (reported speech), less certain possibility, polite suggestions.</li>
+                    </ul>
+                </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section1.ex1">May I come in? (permission)</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section1.ex2">It may rain later. (possibility)</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section1.ex3">He said he might be late. (reported speech)</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section1.ex4">You might want to try this. (polite suggestion)</div>
                 </div>
             </div>
-            
-            <!-- Basic Grammar Rules -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight1.grammar.title">Basic Grammar Rules</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⚙️</span>
-                        <span data-i18n="modalsMayMight1.grammar.structure">Structure</span>
-                    </h3>
-                    <table class="EH-conjugation-table">
-                        <thead>
-                            <tr><th data-i18n="common.form">Form</th>
-                                <th data-i18n="common.rule">Rule</th>
-                                <th data-i18n="common.example">Example</th>
-                             </thead>
-                        <tbody>
-                             <tr><td data-i18n="common.affirmative">Affirmative</td><td>subject + may/might + base verb</td><td>She may come.</td></tr>
-                             <tr><td data-i18n="common.negative">Negative</td><td>subject + may not / might not + base verb</td><td>They might not know.</td></tr>
-                             <tr><td data-i18n="common.question">Question</td><td>May/Might + subject + base verb?</td><td>May I leave?</td></tr>
-                        </tbody>
-                    </table>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMayMight1.grammar.importantNote">Important:</div>
-                        <p data-i18n="modalsMayMight1.grammar.noteText">Modals never take -s, -ing, or -ed. They are always followed by the infinitive without 'to'. The negative contraction "mightn't" is rare.</p>
-                    </div>
+        </div>
+
+        <!-- I. 2. Basic Grammar Rules -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="mayMight1.section2.title">I. 2. Basic Grammar Rules</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">🔧</span>
+                    <span data-i18n="mayMight1.section2.heading">Structure & key rules</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight1.section2.structTitle">📐 Structure:</div>
+                    <p data-i18n="mayMight1.section2.structDesc">Affirmative: subject + may/might + base verb → She may come.<br>Negative: subject + may not / might not + base verb → They might not know.<br>Question: May/Might + subject + base verb? → May I leave?</p>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight1.section2.importantTitle">⚠️ Important:</div>
+                    <p data-i18n="mayMight1.section2.importantDesc">Modals never take -s, -ing, or -ed. They are always followed by the infinitive without 'to'. The negative contraction "mightn't" is rare.</p>
                 </div>
             </div>
-            
-            <!-- Primary Functions of May -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight1.mayFunctions.title">Primary Uses of "May"</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">✅</span>
-                        <span data-i18n="modalsMayMight1.mayFunctions.permission">1. Permission (formal)</span>
-                    </h3>
-                    <p data-i18n="modalsMayMight1.mayFunctions.permissionText">We use may to ask for or give permission in formal situations.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.mayFunctions.permissionEx1">May I borrow your pen?</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.mayFunctions.permissionEx2">You may leave now.</div>
-                    </div>
+        </div>
+
+        <!-- I. 3. Primary Uses of "May" -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="mayMight1.section3.title">I. 3. Primary Uses of "May"</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">🔑</span>
+                    <span data-i18n="mayMight1.section3.heading">Permission, possibility & polite requests</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight1.section3.permTitle">1️⃣ Permission (formal)</div>
+                    <p data-i18n="mayMight1.section3.permDesc">Use may to ask for or give permission in formal situations.</p>
                 </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🌦️</span>
-                        <span data-i18n="modalsMayMight1.mayFunctions.possibility">2. Possibility (present/future)</span>
-                    </h3>
-                    <p data-i18n="modalsMayMight1.mayFunctions.possibilityText">May expresses that something is possible (often about 50% certainty).</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.mayFunctions.possibilityEx1">It may rain this afternoon.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.mayFunctions.possibilityEx2">She may be at home.</div>
-                    </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section3.permEx1">May I borrow your pen?</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section3.permEx2">You may leave now.</div>
                 </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🙋</span>
-                        <span data-i18n="modalsMayMight1.mayFunctions.politeRequest">3. Polite requests (with "I")</span>
-                    </h3>
-                    <p data-i18n="modalsMayMight1.mayFunctions.politeRequestText">May I is a very polite way to ask for permission.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.mayFunctions.politeRequestEx1">May I have a glass of water?</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.mayFunctions.politeRequestEx2">May I ask a question?</div>
-                    </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight1.section3.possTitle">2️⃣ Possibility (present/future)</div>
+                    <p data-i18n="mayMight1.section3.possDesc">May expresses that something is possible (often about 50% certainty).</p>
+                </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section3.possEx1">It may rain this afternoon.</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section3.possEx2">She may be at home.</div>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight1.section3.requestTitle">3️⃣ Polite requests (with "I")</div>
+                    <p data-i18n="mayMight1.section3.requestDesc">May I is a very polite way to ask for permission.</p>
+                </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section3.requestEx1">May I have a glass of water?</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section3.requestEx2">May I ask a question?</div>
                 </div>
             </div>
-            
-            <!-- Primary Functions of Might -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight1.mightFunctions.title">Primary Uses of "Might"</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🕰️</span>
-                        <span data-i18n="modalsMayMight1.mightFunctions.pastMay">1. Past of may (reported speech)</span>
-                    </h3>
-                    <p data-i18n="modalsMayMight1.mightFunctions.pastMayText">In indirect speech, might is used as the past form of may.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.mightFunctions.pastMayEx1">He said he might come later.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.mightFunctions.pastMayEx2">She thought it might rain.</div>
-                    </div>
+        </div>
+
+        <!-- I. 4. Primary Uses of "Might" -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="mayMight1.section4.title">I. 4. Primary Uses of "Might"</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">💡</span>
+                    <span data-i18n="mayMight1.section4.heading">Past of may, weaker possibility & polite suggestions</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight1.section4.pastTitle">1️⃣ Past of may (reported speech)</div>
+                    <p data-i18n="mayMight1.section4.pastDesc">In indirect speech, might is used as the past form of may.</p>
                 </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🤔</span>
-                        <span data-i18n="modalsMayMight1.mightFunctions.possibility">2. Less certain possibility (30-40%)</span>
-                    </h3>
-                    <p data-i18n="modalsMayMight1.mightFunctions.possibilityText">Might suggests a weaker possibility than may.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.mightFunctions.possibilityEx1">It might snow tonight.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.mightFunctions.possibilityEx2">They might be delayed.</div>
-                    </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section4.pastEx1">He said he might come later.</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section4.pastEx2">She thought it might rain.</div>
                 </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">💡</span>
-                        <span data-i18n="modalsMayMight1.mightFunctions.suggestion">3. Polite suggestions</span>
-                    </h3>
-                    <p data-i18n="modalsMayMight1.mightFunctions.suggestionText">We use might to make a suggestion in a gentle, indirect way.</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.mightFunctions.suggestionEx1">You might want to try the fish.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMayMight1.mightFunctions.suggestionEx2">We might consider a break.</div>
-                    </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight1.section4.weakTitle">2️⃣ Less certain possibility (30-40%)</div>
+                    <p data-i18n="mayMight1.section4.weakDesc">Might suggests a weaker possibility than may.</p>
+                </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section4.weakEx1">It might snow tonight.</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section4.weakEx2">They might be delayed.</div>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="mayMight1.section4.suggestTitle">3️⃣ Polite suggestions</div>
+                    <p data-i18n="mayMight1.section4.suggestDesc">Use might to make a suggestion in a gentle, indirect way.</p>
+                </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section4.suggestEx1">You might want to try the fish.</div>
+                    <div class="EH-conjugation-example" data-i18n="mayMight1.section4.suggestEx2">We might consider a break.</div>
                 </div>
             </div>
-            
-            <!-- Comparison table -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight1.comparison.title">May vs Might – Quick Comparison</h2>
-                <div class="EH-conjugation-subsection">
-                    <table class="EH-conjugation-table">
-                        <thead>
-                            <tr><th data-i18n="common.usage">Usage</th><th>May</th><th>Might</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-i18n="modalsMayMight1.comparison.permission">Permission</td>
-                                <td data-i18n="modalsMayMight1.comparison.mayPermission">formal: May I come in?</td>
-                                <td data-i18n="modalsMayMight1.comparison.mightPermission">rare / very formal: Might I suggest...?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="modalsMayMight1.comparison.possibility">Possibility</td>
-                                <td data-i18n="modalsMayMight1.comparison.mayPossibility">50% chance: It may rain.</td>
-                                <td data-i18n="modalsMayMight1.comparison.mightPossibility">30-40% chance: It might rain.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="modalsMayMight1.comparison.past">Past (reported)</td>
-                                <td>–</td>
-                                <td data-i18n="modalsMayMight1.comparison.mightPast">He said he might go.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        </div>
+
+        <!-- I. 5. May vs Might – Quick Comparison -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="mayMight1.section5.title">I. 5. May vs Might – Quick Comparison</h2>
+            <div class="EH-conjugation-subsection">
+                <table class="EH-conjugation-table">
+                    <thead>
+                        <tr><th data-i18n="mayMight1.section5.use">Use</th><th data-i18n="mayMight1.section5.may">May</th><th data-i18n="mayMight1.section5.might">Might</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td data-i18n="mayMight1.section5.permission">Permission</td><td data-i18n="mayMight1.section5.mayPerm">formal: May I come in?</td><td data-i18n="mayMight1.section5.mightPerm">rare/very formal: Might I suggest?</td></tr>
+                        <tr><td data-i18n="mayMight1.section5.possibility">Possibility</td><td data-i18n="mayMight1.section5.mayPoss">50% chance: It may rain.</td><td data-i18n="mayMight1.section5.mightPoss">30-40% chance: It might rain.</td></tr>
+                        <tr><td data-i18n="mayMight1.section5.pastReported">Past (reported)</td><td data-i18n="mayMight1.section5.mayPast">—</td><td data-i18n="mayMight1.section5.mightPast">He said he might go.</td></tr>
+                    </tbody>
+                </table>
             </div>
-            
-            <!-- EXERCISES (12) -->
-            <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMayMight1.exercises.title">Practice Exercises</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #0d47a1; margin-bottom: 20px;">Multiple Choice</h3>
-                <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #0d47a1; margin: 40px 0 20px 0;">Fill in the Blank</h3>
-                <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #0d47a1; margin: 40px 0 20px 0;">Sentence Ordering</h3>
-                <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
-                <div class="EH-exercise-type1-possibilities3-answers-control">
-                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
-                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
-                        <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
-                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers!</p>
-                    </div>
+        </div>
+
+        <!-- Exercises -->
+        <div class="EH-conjugation-section EH-exercise-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="mayMight1.exercises.title">Practice: May & Might Core Uses</h2>
+            <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+            <div class="EH-exercise-container" id="mc-exercises"></div>
+            <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+            <div class="EH-exercise-container" id="fill-exercises"></div>
+            <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+            <div class="EH-exercise-container" id="order-exercises"></div>
+            <div class="EH-exercise-type1-possibilities3-answers-control">
+                <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
+                    <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
+                    <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                    <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                 </div>
-            </div>
-            
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-shouldoughtto-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson →</span>
-                </button>
-				<!-- <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-					<span data-i18n="common.previousLesson">Previous Lesson</span>
-				</button> -->
-                <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-                    <span></span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">← Return to Conjugation</span>
-                </button>
             </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
-    <script>
-        window.I18N = {
-            en: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject", conjugation: "Conjugation", example: "Example", examples: "Examples:",
-                    i: "I", you: "You", he: "He", she: "She", we: "We", they: "They", verb: "Verb",
-                    form: "Form", rule: "Rule", affirmative: "Affirmative", negative: "Negative", question: "Question", usage: "Usage",
-                    returnToConjugation: "Return to Conjugation",
-                    nextLesson: "Next Lesson"
-                },
-                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
-                modalsMayMight1: {
-                    title: "May & Might: Core Concepts & Primary Uses",
-                    subtitle: "Learn how to use may and might to express permission, possibility, and polite requests",
-                    introduction: {
-                        title: "Introduction to May & Might",
-                        whatAre: "What are modals \"may\" and \"might\"?",
-                        definitionTitle: "Definition:",
-                        definition: "\"May\" and \"might\" are modal auxiliary verbs. They do not change form (no -s in third person) and are followed by the base form of the main verb.",
-                        coreIdeas: "Core ideas:",
-                        core1: "<strong>May</strong> – formal permission, possibility (present/future), polite requests.",
-                        core2: "<strong>Might</strong> – past of may (reported speech), less certain possibility, polite suggestions.",
-                        example1: "May I come in? (permission)",
-                        example2: "It may rain later. (possibility)",
-                        example3: "He said he might be late. (reported speech)",
-                        example4: "You might want to try this. (polite suggestion)"
-                    },
-                    grammar: {
-                        title: "Basic Grammar Rules",
-                        structure: "Structure",
-                        importantNote: "Important:",
-                        noteText: "Modals never take -s, -ing, or -ed. They are always followed by the infinitive without 'to'. The negative contraction \"mightn't\" is rare."
-                    },
-                    mayFunctions: {
-                        title: "Primary Uses of \"May\"",
-                        permission: "1. Permission (formal)",
-                        permissionText: "We use may to ask for or give permission in formal situations.",
-                        permissionEx1: "May I borrow your pen?",
-                        permissionEx2: "You may leave now.",
-                        possibility: "2. Possibility (present/future)",
-                        possibilityText: "May expresses that something is possible (often about 50% certainty).",
-                        possibilityEx1: "It may rain this afternoon.",
-                        possibilityEx2: "She may be at home.",
-                        politeRequest: "3. Polite requests (with \"I\")",
-                        politeRequestText: "May I is a very polite way to ask for permission.",
-                        politeRequestEx1: "May I have a glass of water?",
-                        politeRequestEx2: "May I ask a question?"
-                    },
-                    mightFunctions: {
-                        title: "Primary Uses of \"Might\"",
-                        pastMay: "1. Past of may (reported speech)",
-                        pastMayText: "In indirect speech, might is used as the past form of may.",
-                        pastMayEx1: "He said he might come later.",
-                        pastMayEx2: "She thought it might rain.",
-                        possibility: "2. Less certain possibility (30-40%)",
-                        possibilityText: "Might suggests a weaker possibility than may.",
-                        possibilityEx1: "It might snow tonight.",
-                        possibilityEx2: "They might be delayed.",
-                        suggestion: "3. Polite suggestions",
-                        suggestionText: "We use might to make a suggestion in a gentle, indirect way.",
-                        suggestionEx1: "You might want to try the fish.",
-                        suggestionEx2: "We might consider a break."
-                    },
-                    comparison: {
-                        title: "May vs Might – Quick Comparison",
-                        permission: "Permission",
-                        mayPermission: "formal: May I come in?",
-                        mightPermission: "rare / very formal: Might I suggest...?",
-                        possibility: "Possibility",
-                        mayPossibility: "50% chance: It may rain.",
-                        mightPossibility: "30-40% chance: It might rain.",
-                        past: "Past (reported)",
-                        mightPast: "He said he might go."
-                    },
-                    exercises: {
-                        title: "Practice Exercises",
-                        q1: "Choose the correct modal for formal permission:\n______ I leave early today?",
-                        q1a: "May", q1b: "Might", q1c: "Can",
-                        q2: "Choose for a less certain possibility:\nIt ______ snow tomorrow, but it's unlikely.",
-                        q2a: "may", q2b: "might", q2c: "must",
-                        q3: "Complete the reported speech:\nHe said he ______ be late.",
-                        q3a: "may", q3b: "might", q3c: "can",
-                        q4: "Choose the most polite request:\n______ I have a glass of water, please?",
-                        q4a: "Can", q4b: "May", q4c: "Might",
-                        q5: "Choose the correct negative:\nYou ______ enter without a ticket.",
-                        q5a: "may not", q5b: "might to", q5c: "don't may",
-                        q6: "Choose the best option for a polite suggestion:\nYou ______ want to check the website first.",
-                        q6a: "may", q6b: "might", q6c: "can",
-                        q7: "Complete with a polite request: ______ I borrow your pen, please?",
-                        q8: "Complete with a less certain possibility: It ______ (might) be too late to call.",
-                        q9: "Complete with the past of may (reported): She said she ______ (may) come.",
-                        q10: "Arrange: (I / may / come / in / ?)",
-                        q11: "Arrange: (it / might / be / sunny / .)",
-                        q12: "Arrange: (you / might / want / to / try / this / .)"
-                    }
-                }
+</div>
+
+<script>
+    window.I18N = {
+        en: {
+            common: {
+                siteName: "English Hub",
+                previousLesson: "← Previous Lesson",
+                returnToConjugation: "← Return to Conjugation",
+                nextLesson: "Next Lesson →"
             },
-            fr: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject (Sujet)", conjugation: "Conjugation (Conjugaison)", example: "Example (Exemple)", examples: "Examples: (Exemples :)",
-                    i: "I (Je)", you: "You (Vous)", he: "He (Il)", she: "She (Elle)", we: "We (Nous)", they: "They (Ils/Elles)", verb: "Verb (Verbe)",
-                    form: "Form (Forme)", rule: "Rule (Règle)", affirmative: "Affirmative (Affirmatif)", negative: "Negative (Négatif)", question: "Question (Question)", usage: "Usage (Usage)",
-                    returnToConjugation: "Retour à la conjugaison",
-                    nextLesson: "Leçon suivante"
+            footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+            mayMight1: {
+                title: { line1: "May & Might: I:", line2: "Core Concepts & Primary Uses", line3: "express permission, possibility, and polite requests", line4: "lesson: 1/3" },
+                section1: {
+                    title: "I. 1. Introduction to May & Might",
+                    heading: "What are modals \"may\" and \"might\"?",
+                    desc1: "📘 Definition:",
+                    desc2: "\"May\" and \"might\" are modal auxiliary verbs. They do not change form (no -s in third person) and are followed by the base form of the main verb.",
+                    coreTitle: "💡 Core ideas:",
+                    core1: "May – formal permission, possibility (present/future), polite requests.",
+                    core2: "Might – past of may (reported speech), less certain possibility, polite suggestions.",
+                    ex1: "May I come in? (permission)",
+                    ex2: "It may rain later. (possibility)",
+                    ex3: "He said he might be late. (reported speech)",
+                    ex4: "You might want to try this. (polite suggestion)"
                 },
-                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
-                modalsMayMight1: {
-                    title: "May & Might: Core Concepts & Primary Uses (May & Might : concepts de base et utilisations principales)",
-                    subtitle: "Learn how to use may and might to express permission, possibility, and polite requests (Apprenez à utiliser may et might pour exprimer la permission, la possibilité et les demandes polies)",
-                    introduction: {
-                        title: "Introduction to May & Might (Introduction à May & Might)",
-                        whatAre: "What are modals \"may\" and \"might\"? (Que sont les modaux \"may\" et \"might\" ?)",
-                        definitionTitle: "Definition: (Définition :)",
-                        definition: "\"May\" and \"might\" are modal auxiliary verbs. They do not change form (no -s in third person) and are followed by the base form of the main verb. (\"May\" et \"might\" sont des verbes auxiliaires modaux. Ils ne changent pas de forme – pas de -s à la troisième personne – et sont suivis de la base verbale.)",
-                        coreIdeas: "Core ideas: (Idées principales :)",
-                        core1: "<strong>May</strong> – formal permission, possibility (present/future), polite requests. (<strong>May</strong> – permission formelle, possibilité – présent/futur, demandes polies.)",
-                        core2: "<strong>Might</strong> – past of may (reported speech), less certain possibility, polite suggestions. (<strong>Might</strong> – passé de may – discours rapporté, possibilité moins certaine, suggestions polies.)",
-                        example1: "May I come in? (permission) (Puis-je entrer ? – permission)",
-                        example2: "It may rain later. (possibility) (Il peut pleuvoir plus tard – possibilité)",
-                        example3: "He said he might be late. (reported speech) (Il a dit qu'il pourrait être en retard – discours rapporté)",
-                        example4: "You might want to try this. (polite suggestion) (Vous voudrez peut-être essayer ceci – suggestion polie)"
-                    },
-                    grammar: {
-                        title: "Basic Grammar Rules (Règles grammaticales de base)",
-                        structure: "Structure (Structure)",
-                        importantNote: "Important: (Important :)",
-                        noteText: "Modals never take -s, -ing, or -ed. They are always followed by the infinitive without 'to'. The negative contraction \"mightn't\" is rare. (Les modaux ne prennent jamais -s, -ing ou -ed. Ils sont toujours suivis de l'infinitif sans 'to'. La contraction négative \"mightn't\" est rare.)"
-                    },
-                    mayFunctions: {
-                        title: "Primary Uses of \"May\" (Utilisations principales de \"May\")",
-                        permission: "1. Permission (formal) (1. Permission – formelle)",
-                        permissionText: "We use may to ask for or give permission in formal situations. (On utilise may pour demander ou donner la permission dans des situations formelles.)",
-                        permissionEx1: "May I borrow your pen? (Puis-je emprunter votre stylo ?)",
-                        permissionEx2: "You may leave now. (Vous pouvez partir maintenant.)",
-                        possibility: "2. Possibility (present/future) (2. Possibilité – présent/futur)",
-                        possibilityText: "May expresses that something is possible (often about 50% certainty). (May exprime que quelque chose est possible – souvent environ 50 % de certitude.)",
-                        possibilityEx1: "It may rain this afternoon. (Il peut pleuvoir cet après-midi.)",
-                        possibilityEx2: "She may be at home. (Elle est peut-être chez elle.)",
-                        politeRequest: "3. Polite requests (with \"I\") (3. Demandes polies – avec \"I\")",
-                        politeRequestText: "May I is a very polite way to ask for permission. (May I est une manière très polie de demander la permission.)",
-                        politeRequestEx1: "May I have a glass of water? (Puis-je avoir un verre d'eau ?)",
-                        politeRequestEx2: "May I ask a question? (Puis-je poser une question ?)"
-                    },
-                    mightFunctions: {
-                        title: "Primary Uses of \"Might\" (Utilisations principales de \"Might\")",
-                        pastMay: "1. Past of may (reported speech) (1. Passé de may – discours rapporté)",
-                        pastMayText: "In indirect speech, might is used as the past form of may. (Dans le discours indirect, might est utilisé comme passé de may.)",
-                        pastMayEx1: "He said he might come later. (Il a dit qu'il pourrait venir plus tard.)",
-                        pastMayEx2: "She thought it might rain. (Elle pensait qu'il pourrait pleuvoir.)",
-                        possibility: "2. Less certain possibility (30-40%) (2. Possibilité moins certaine – 30-40 %)",
-                        possibilityText: "Might suggests a weaker possibility than may. (Might suggère une possibilité plus faible que may.)",
-                        possibilityEx1: "It might snow tonight. (Il pourrait neiger ce soir.)",
-                        possibilityEx2: "They might be delayed. (Ils pourraient être retardés.)",
-                        suggestion: "3. Polite suggestions (3. Suggestions polies)",
-                        suggestionText: "We use might to make a suggestion in a gentle, indirect way. (On utilise might pour faire une suggestion de manière douce et indirecte.)",
-                        suggestionEx1: "You might want to try the fish. (Vous voudrez peut-être essayer le poisson.)",
-                        suggestionEx2: "We might consider a break. (Nous pourrions envisager une pause.)"
-                    },
-                    comparison: {
-                        title: "May vs Might – Quick Comparison (May vs Might – Comparaison rapide)",
-                        permission: "Permission (Permission)",
-                        mayPermission: "formal: May I come in? (formel : Puis-je entrer ?)",
-                        mightPermission: "rare / very formal: Might I suggest...? (rare / très formel : Puis-je suggérer... ?)",
-                        possibility: "Possibility (Possibilité)",
-                        mayPossibility: "50% chance: It may rain. (50 % de chance : Il peut pleuvoir.)",
-                        mightPossibility: "30-40% chance: It might rain. (30-40 % de chance : Il pourrait pleuvoir.)",
-                        past: "Past (reported) (Passé – rapporté)",
-                        mightPast: "He said he might go. (Il a dit qu'il pourrait aller.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (Exercices pratiques)",
-                        q1: "Choose the correct modal for formal permission:\n______ I leave early today? (Choisissez le modal correct pour la permission formelle :\n______ je partir tôt aujourd'hui ?)",
-                        q1a: "May (May)", q1b: "Might (Might)", q1c: "Can (Can)",
-                        q2: "Choose for a less certain possibility:\nIt ______ snow tomorrow, but it's unlikely. (Choisissez pour une possibilité moins certaine :\nIl ______ neiger demain, mais c'est peu probable.)",
-                        q2a: "may (may)", q2b: "might (might)", q2c: "must (must)",
-                        q3: "Complete the reported speech:\nHe said he ______ be late. (Complétez le discours rapporté :\nIl a dit qu'il ______ être en retard.)",
-                        q3a: "may (may)", q3b: "might (might)", q3c: "can (can)",
-                        q4: "Choose the most polite request:\n______ I have a glass of water, please? (Choisissez la demande la plus polie :\n______ je avoir un verre d'eau, s'il vous plaît ?)",
-                        q4a: "Can (Can)", q4b: "May (May)", q4c: "Might (Might)",
-                        q5: "Choose the correct negative:\nYou ______ enter without a ticket. (Choisissez la négation correcte :\nVous ______ entrer sans billet.)",
-                        q5a: "may not (may not)", q5b: "might to (might to)", q5c: "don't may (don't may)",
-                        q6: "Choose the best option for a polite suggestion:\nYou ______ want to check the website first. (Choisissez la meilleure option pour une suggestion polie :\nVous ______ vouloir consulter le site d'abord.)",
-                        q6a: "may (may)", q6b: "might (might)", q6c: "can (can)",
-                        q7: "Complete with a polite request: ______ I borrow your pen, please? (Complétez avec une demande polie : ______ je emprunter votre stylo, s'il vous plaît ?)",
-                        q8: "Complete with a less certain possibility: It ______ (might) be too late to call. (Complétez avec une possibilité moins certaine : Il ______ être trop tard pour appeler.)",
-                        q9: "Complete with the past of may (reported): She said she ______ (may) come. (Complétez avec le passé de may (discours rapporté) : Elle a dit qu'elle ______ venir.)",
-                        q10: "Arrange: (I / may / come / in / ?) (Remettez en ordre : (I / may / come / in / ?))",
-                        q11: "Arrange: (it / might / be / sunny / .) (Remettez en ordre : (it / might / be / sunny / .))",
-                        q12: "Arrange: (you / might / want / to / try / this / .) (Remettez en ordre : (you / might / want / to / try / this / .))"
-                    }
-                }
-            },
-            ar: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject (الفاعل)", conjugation: "Conjugation (التصريف)", example: "Example (مثال)", examples: "Examples: (أمثلة:)",
-                    i: "I (أنا)", you: "You (أنت)", he: "He (هو)", she: "She (هي)", we: "We (نحن)", they: "They (هم)", verb: "Verb (الفعل)",
-                    form: "Form (الصيغة)", rule: "Rule (القاعدة)", affirmative: "Affirmative (مثبت)", negative: "Negative (منفي)", question: "Question (سؤال)", usage: "Usage (الاستخدام)",
-                    returnToConjugation: "العودة إلى التصريف",
-                    nextLesson: "الدرس التالي"
+                section2: {
+                    title: "I. 2. Basic Grammar Rules",
+                    heading: "Structure & key rules",
+                    structTitle: "📐 Structure:",
+                    structDesc: "Affirmative: subject + may/might + base verb → She may come.\nNegative: subject + may not / might not + base verb → They might not know.\nQuestion: May/Might + subject + base verb? → May I leave?",
+                    importantTitle: "⚠️ Important:",
+                    importantDesc: "Modals never take -s, -ing, or -ed. They are always followed by the infinitive without 'to'. The negative contraction \"mightn't\" is rare."
                 },
-                footer: { developer: "المطور: Mejri Ziad", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
-                modalsMayMight1: {
-                    title: "May & Might: Core Concepts & Primary Uses (May & Might: المفاهيم الأساسية والاستخدامات الرئيسية)",
-                    subtitle: "Learn how to use may and might to express permission, possibility, and polite requests (تعلّم استخدام may و might للتعبير عن الإذن والإمكانية والطلبات المهذبة)",
-                    introduction: {
-                        title: "Introduction to May & Might (مقدمة إلى May & Might)",
-                        whatAre: "What are modals \"may\" and \"might\"? (ما هما الفعلان المساعدان \"may\" و \"might\"؟)",
-                        definitionTitle: "Definition: (تعريف:)",
-                        definition: "\"May\" and \"might\" are modal auxiliary verbs. They do not change form (no -s in third person) and are followed by the base form of the main verb. (\"May\" و \"might\" هما أفعال مساعدة نموذجية. لا يتغير شكلهما – لا يُضاف -s للغائب – ويتبعهما الفعل الرئيسي في المصدر.)",
-                        coreIdeas: "Core ideas: (الأفكار الأساسية:)",
-                        core1: "<strong>May</strong> – formal permission, possibility (present/future), polite requests. (<strong>May</strong> – إذن رسمي، إمكانية – حاضر/مستقبل، طلبات مهذبة.)",
-                        core2: "<strong>Might</strong> – past of may (reported speech), less certain possibility, polite suggestions. (<strong>Might</strong> – ماضي may – كلام منقول، إمكانية أقل يقينًا، اقتراحات مهذبة.)",
-                        example1: "May I come in? (permission) (هل يمكنني الدخول؟ – إذن)",
-                        example2: "It may rain later. (possibility) (قد تمطر لاحقًا – إمكانية)",
-                        example3: "He said he might be late. (reported speech) (قال إنه قد يتأخر – كلام منقول)",
-                        example4: "You might want to try this. (polite suggestion) (قد ترغب في تجربة هذا – اقتراح مهذب)"
-                    },
-                    grammar: {
-                        title: "Basic Grammar Rules (القواعد النحوية الأساسية)",
-                        structure: "Structure (البنية)",
-                        importantNote: "Important: (ملاحظة مهمة:)",
-                        noteText: "Modals never take -s, -ing, or -ed. They are always followed by the infinitive without 'to'. The negative contraction \"mightn't\" is rare. (الأفعال النموذجية لا تأخذ أبدًا -s أو -ing أو -ed. وهي تتبع دائمًا بصيغة المصدر بدون 'to'. الاختصار المنفي \"mightn't\" نادر.)"
-                    },
-                    mayFunctions: {
-                        title: "Primary Uses of \"May\" (الاستخدامات الرئيسية لـ \"May\")",
-                        permission: "1. Permission (formal) (1. الإذن – رسمي)",
-                        permissionText: "We use may to ask for or give permission in formal situations. (نستخدم may لطلب أو منح الإذن في المواقف الرسمية.)",
-                        permissionEx1: "May I borrow your pen? (هل يمكنني استعارة قلمك؟)",
-                        permissionEx2: "You may leave now. (يمكنك المغادرة الآن.)",
-                        possibility: "2. Possibility (present/future) (2. الإمكانية – حاضر/مستقبل)",
-                        possibilityText: "May expresses that something is possible (often about 50% certainty). (يعبر may عن أن شيئًا ما ممكن – غالبًا حوالي ٥٠٪ يقين.)",
-                        possibilityEx1: "It may rain this afternoon. (قد تمطر هذا الظهيرة.)",
-                        possibilityEx2: "She may be at home. (قد تكون في المنزل.)",
-                        politeRequest: "3. Polite requests (with \"I\") (3. الطلبات المهذبة – مع \"I\")",
-                        politeRequestText: "May I is a very polite way to ask for permission. (May I هي طريقة مهذبة جدًا لطلب الإذن.)",
-                        politeRequestEx1: "May I have a glass of water? (هل لي كوب من الماء؟)",
-                        politeRequestEx2: "May I ask a question? (هل لي طرح سؤال؟)"
-                    },
-                    mightFunctions: {
-                        title: "Primary Uses of \"Might\" (الاستخدامات الرئيسية لـ \"Might\")",
-                        pastMay: "1. Past of may (reported speech) (1. ماضي may – كلام منقول)",
-                        pastMayText: "In indirect speech, might is used as the past form of may. (في الكلام غير المباشر، يُستخدم might كصيغة الماضي لـ may.)",
-                        pastMayEx1: "He said he might come later. (قال إنه قد يأتي لاحقًا.)",
-                        pastMayEx2: "She thought it might rain. (اعتقدت أنه قد تمطر.)",
-                        possibility: "2. Less certain possibility (30-40%) (2. إمكانية أقل يقينًا – 30-40%)",
-                        possibilityText: "Might suggests a weaker possibility than may. (يشير might إلى إمكانية أضعف من may.)",
-                        possibilityEx1: "It might snow tonight. (قد تثلج الليلة.)",
-                        possibilityEx2: "They might be delayed. (قد يتأخرون.)",
-                        suggestion: "3. Polite suggestions (3. اقتراحات مهذبة)",
-                        suggestionText: "We use might to make a suggestion in a gentle, indirect way. (نستخدم might لتقديم اقتراح بطريقة لطيفة وغير مباشرة.)",
-                        suggestionEx1: "You might want to try the fish. (قد ترغب في تجربة السمك.)",
-                        suggestionEx2: "We might consider a break. (قد نفكر في استراحة.)"
-                    },
-                    comparison: {
-                        title: "May vs Might – Quick Comparison (May مقابل Might – مقارنة سريعة)",
-                        permission: "Permission (الإذن)",
-                        mayPermission: "formal: May I come in? (رسمي: هل يمكنني الدخول؟)",
-                        mightPermission: "rare / very formal: Might I suggest...? (نادر / رسمي جدًا: هل لي أن أقترح...؟)",
-                        possibility: "Possibility (الإمكانية)",
-                        mayPossibility: "50% chance: It may rain. (فرصة 50%: قد تمطر.)",
-                        mightPossibility: "30-40% chance: It might rain. (فرصة 30-40%: قد تمطر.)",
-                        past: "Past (reported) (الماضي – منقول)",
-                        mightPast: "He said he might go. (قال إنه قد يذهب.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (تمارين تطبيقية)",
-                        q1: "Choose the correct modal for formal permission:\n______ I leave early today? (اختر الفعل النموذجي الصحيح للإذن الرسمي :\n______ المغادرة مبكرًا اليوم؟)",
-                        q1a: "May (May)", q1b: "Might (Might)", q1c: "Can (Can)",
-                        q2: "Choose for a less certain possibility:\nIt ______ snow tomorrow, but it's unlikely. (اختر لإمكانية أقل يقينًا :\n______ تثلج غدًا، لكنه غير مرجح.)",
-                        q2a: "may (may)", q2b: "might (might)", q2c: "must (must)",
-                        q3: "Complete the reported speech:\nHe said he ______ be late. (أكمل الكلام المنقول :\nقال إنه ______ يتأخر.)",
-                        q3a: "may (may)", q3b: "might (might)", q3c: "can (can)",
-                        q4: "Choose the most polite request:\n______ I have a glass of water, please? (اختر الطلب الأكثر تهذيبًا :\n______ الحصول على كوب من الماء، من فضلك؟)",
-                        q4a: "Can (Can)", q4b: "May (May)", q4c: "Might (Might)",
-                        q5: "Choose the correct negative:\nYou ______ enter without a ticket. (اختر النفي الصحيح :\nأنت ______ الدخول بدون تذكرة.)",
-                        q5a: "may not (may not)", q5b: "might to (might to)", q5c: "don't may (don't may)",
-                        q6: "Choose the best option for a polite suggestion:\nYou ______ want to check the website first. (اختر الخيار الأفضل لاقتراح مهذب :\nأنت ______ التحقق من الموقع أولاً.)",
-                        q6a: "may (may)", q6b: "might (might)", q6c: "can (can)",
-                        q7: "Complete with a polite request: ______ I borrow your pen, please? (أكمل بطلب مهذب: ______ استعارة قلمك، من فضلك؟)",
-                        q8: "Complete with a less certain possibility: It ______ (might) be too late to call. (أكمل بإمكانية أقل يقينًا: من ______ أن يكون الوقت متأخرًا جدًا للاتصال.)",
-                        q9: "Complete with the past of may (reported): She said she ______ (may) come. (أكمل بماضي may (كلام منقول): قالت إنها ______ تأتي.)",
-                        q10: "Arrange: (I / may / come / in / ?) (رتب: (I / may / come / in / ?))",
-                        q11: "Arrange: (it / might / be / sunny / .) (رتب: (it / might / be / sunny / .))",
-                        q12: "Arrange: (you / might / want / to / try / this / .) (رتب: (you / might / want / to / try / this / .))"
-                    }
+                section3: {
+                    title: "I. 3. Primary Uses of \"May\"",
+                    heading: "Permission, possibility & polite requests",
+                    permTitle: "1️⃣ Permission (formal)",
+                    permDesc: "Use may to ask for or give permission in formal situations.",
+                    permEx1: "May I borrow your pen?",
+                    permEx2: "You may leave now.",
+                    possTitle: "2️⃣ Possibility (present/future)",
+                    possDesc: "May expresses that something is possible (often about 50% certainty).",
+                    possEx1: "It may rain this afternoon.",
+                    possEx2: "She may be at home.",
+                    requestTitle: "3️⃣ Polite requests (with \"I\")",
+                    requestDesc: "May I is a very polite way to ask for permission.",
+                    requestEx1: "May I have a glass of water?",
+                    requestEx2: "May I ask a question?"
+                },
+                section4: {
+                    title: "I. 4. Primary Uses of \"Might\"",
+                    heading: "Past of may, weaker possibility & polite suggestions",
+                    pastTitle: "1️⃣ Past of may (reported speech)",
+                    pastDesc: "In indirect speech, might is used as the past form of may.",
+                    pastEx1: "He said he might come later.",
+                    pastEx2: "She thought it might rain.",
+                    weakTitle: "2️⃣ Less certain possibility (30-40%)",
+                    weakDesc: "Might suggests a weaker possibility than may.",
+                    weakEx1: "It might snow tonight.",
+                    weakEx2: "They might be delayed.",
+                    suggestTitle: "3️⃣ Polite suggestions",
+                    suggestDesc: "Use might to make a suggestion in a gentle, indirect way.",
+                    suggestEx1: "You might want to try the fish.",
+                    suggestEx2: "We might consider a break."
+                },
+                section5: {
+                    title: "I. 5. May vs Might – Quick Comparison",
+                    use: "Use",
+                    may: "May",
+                    might: "Might",
+                    permission: "Permission",
+                    mayPerm: "formal: May I come in?",
+                    mightPerm: "rare/very formal: Might I suggest?",
+                    possibility: "Possibility",
+                    mayPoss: "50% chance: It may rain.",
+                    mightPoss: "30-40% chance: It might rain.",
+                    pastReported: "Past (reported)",
+                    mayPast: "—",
+                    mightPast: "He said he might go."
+                },
+                exercises: {
+                    title: "Practice: May & Might Core Uses",
+                    q1: "Choose the correct modal for formal permission: ______ I leave early today?",
+                    q1a: "May", q1b: "Might", q1c: "Can",
+                    q2: "Choose for a less certain possibility: It ______ snow tomorrow, but it's unlikely.",
+                    q2a: "may", q2b: "might", q2c: "must",
+                    q3: "Complete the reported speech: He said he ______ be late.",
+                    q3a: "may", q3b: "might", q3c: "can",
+                    q4: "Choose the most polite request: ______ I have a glass of water, please?",
+                    q4a: "Can", q4b: "May", q4c: "Might",
+                    q5: "Choose the correct negative: You ______ enter without a ticket.",
+                    q5a: "may not", q5b: "might to", q5c: "don't may",
+                    q6: "Choose the best option for a polite suggestion: You ______ want to check the website first.",
+                    q6a: "may", q6b: "might", q6c: "can",
+                    q7: "Complete with a polite request: ______ I borrow your pen, please?",
+                    q8: "Complete with a less certain possibility: It ______ (might) be too late to call.",
+                    q9: "Complete with the past of may (reported): She said she ______ (may) come.",
+                    q10: "Arrange (permission): (I / may / come / in / ?)",
+                    q11: "Arrange (possibility): (it / might / be / sunny / .)",
+                    q12: "Arrange (suggestion): (you / might / want / to / try / this / .)"
                 }
             }
-        };
-    </script>
-    
-    <script src="scripts/common-i18n.js"></script>
-    <script src="scripts/exercise-conjugation.js"></script>
-    <script>
-        // Build multiple choice exercises
-        const correctAnswersType1 = buildMultipleChoiceExercise({
-            containerId: 'mc-exercises',
-            prefix: 'EH-exercise-type1-possibilities3',
-            questions: [
-                {
-                    questionTextKey: 'modalsMayMight1.exercises.q1',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMayMight1.exercises.q1a' },
-                        { value: 'b', labelKey: 'modalsMayMight1.exercises.q1b' },
-                        { value: 'c', labelKey: 'modalsMayMight1.exercises.q1c' }
-                    ],
-                    correctAnswer: 'a'
+        },
+        fr: {
+            common: {
+                siteName: "English Hub",
+                previousLesson: "← Leçon Précédente",
+                returnToConjugation: "← Retour au Conjugaison",
+                nextLesson: "Leçon Suivante →"
+            },
+            footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+            mayMight1: {
+                title: { line1: "May & Might : I", line2: "Concepts de base et utilisations principales", line3: "exprimer la permission, la possibilité et les demandes polies", line4: "leçon : 1/3" },
+                section1: {
+                    title: "I. 1. Introduction à May & Might",
+                    heading: "Que sont les modaux « may » et « might » ?",
+                    desc1: "📘 Définition :",
+                    desc2: "« May » et « might » sont des auxiliaires modaux. Ils ne changent pas de forme (pas de -s à la 3e personne) et sont suivis de la base verbale.",
+                    coreTitle: "💡 Idées clés :",
+                    core1: "May – permission formelle, possibilité (présent/futur), demandes polies.",
+                    core2: "Might – passé de may (discours rapporté), possibilité moins certaine, suggestions polies.",
+                    ex1: "Puis-je entrer ? (permission)",
+                    ex2: "Il pourrait pleuvoir plus tard. (possibilité)",
+                    ex3: "Il a dit qu'il serait peut-être en retard. (discours rapporté)",
+                    ex4: "Vous pourriez essayer ceci. (suggestion polie)"
                 },
-                {
-                    questionTextKey: 'modalsMayMight1.exercises.q2',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMayMight1.exercises.q2a' },
-                        { value: 'b', labelKey: 'modalsMayMight1.exercises.q2b' },
-                        { value: 'c', labelKey: 'modalsMayMight1.exercises.q2c' }
-                    ],
-                    correctAnswer: 'b'
+                section2: {
+                    title: "I. 2. Règles grammaticales de base",
+                    heading: "Structure et règles clés",
+                    structTitle: "📐 Structure :",
+                    structDesc: "Affirmatif : sujet + may/might + verbe base → She may come.\nNégatif : sujet + may not/might not + verbe base → They might not know.\nInterrogatif : May/Might + sujet + verbe base ? → May I leave ?",
+                    importantTitle: "⚠️ Important :",
+                    importantDesc: "Les modaux ne prennent jamais -s, -ing ou -ed. Ils sont toujours suivis de l'infinitif sans 'to'. La contraction négative « mightn't » est rare."
                 },
-                {
-                    questionTextKey: 'modalsMayMight1.exercises.q3',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMayMight1.exercises.q3a' },
-                        { value: 'b', labelKey: 'modalsMayMight1.exercises.q3b' },
-                        { value: 'c', labelKey: 'modalsMayMight1.exercises.q3c' }
-                    ],
-                    correctAnswer: 'b'
+                section3: {
+                    title: "I. 3. Utilisations principales de « May »",
+                    heading: "Permission, possibilité et demandes polies",
+                    permTitle: "1️⃣ Permission (formelle)",
+                    permDesc: "Utilisez may pour demander ou donner une permission en contexte formel.",
+                    permEx1: "Puis-je emprunter votre stylo ?",
+                    permEx2: "Vous pouvez partir maintenant.",
+                    possTitle: "2️⃣ Possibilité (présent/futur)",
+                    possDesc: "May exprime qu'une chose est possible (environ 50% de certitude).",
+                    possEx1: "Il pourrait pleuvoir cet après-midi.",
+                    possEx2: "Elle est peut-être chez elle.",
+                    requestTitle: "3️⃣ Demandes polies (avec « I »)",
+                    requestDesc: "May I est une manière très polie de demander la permission.",
+                    requestEx1: "Puis-je avoir un verre d'eau ?",
+                    requestEx2: "Puis-je poser une question ?"
                 },
-                {
-                    questionTextKey: 'modalsMayMight1.exercises.q4',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMayMight1.exercises.q4a' },
-                        { value: 'b', labelKey: 'modalsMayMight1.exercises.q4b' },
-                        { value: 'c', labelKey: 'modalsMayMight1.exercises.q4c' }
-                    ],
-                    correctAnswer: 'b'
+                section4: {
+                    title: "I. 4. Utilisations principales de « Might »",
+                    heading: "Passé de may, possibilité plus faible & suggestions",
+                    pastTitle: "1️⃣ Passé de may (discours rapporté)",
+                    pastDesc: "Dans le discours indirect, might est utilisé comme forme passée de may.",
+                    pastEx1: "Il a dit qu'il viendrait peut-être.",
+                    pastEx2: "Elle pensait qu'il pourrait pleuvoir.",
+                    weakTitle: "2️⃣ Possibilité moins certaine (30-40%)",
+                    weakDesc: "Might suggère une possibilité plus faible que may.",
+                    weakEx1: "Il pourrait neiger ce soir.",
+                    weakEx2: "Ils pourraient être retardés.",
+                    suggestTitle: "3️⃣ Suggestions polies",
+                    suggestDesc: "Utilisez might pour faire une suggestion de manière douce et indirecte.",
+                    suggestEx1: "Vous pourriez essayer le poisson.",
+                    suggestEx2: "Nous pourrions envisager une pause."
                 },
-                {
-                    questionTextKey: 'modalsMayMight1.exercises.q5',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMayMight1.exercises.q5a' },
-                        { value: 'b', labelKey: 'modalsMayMight1.exercises.q5b' },
-                        { value: 'c', labelKey: 'modalsMayMight1.exercises.q5c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'modalsMayMight1.exercises.q6',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMayMight1.exercises.q6a' },
-                        { value: 'b', labelKey: 'modalsMayMight1.exercises.q6b' },
-                        { value: 'c', labelKey: 'modalsMayMight1.exercises.q6c' }
-                    ],
-                    correctAnswer: 'b'
+                section5: {
+                    title: "I. 5. May vs Might – Comparaison rapide",
+                    use: "Usage",
+                    may: "May",
+                    might: "Might",
+                    permission: "Permission",
+                    mayPerm: "formel : May I come in?",
+                    mightPerm: "rare/très formel : Might I suggest?",
+                    possibility: "Possibilité",
+                    mayPoss: "50% : It may rain.",
+                    mightPoss: "30-40% : It might rain.",
+                    pastReported: "Passé (rapporté)",
+                    mayPast: "—",
+                    mightPast: "He said he might go."
                 }
-            ]
-        });
-
-        // Build fill-in-the-blank exercises
-        const correctAnswersType2 = buildFillInTheBlankExercise({
-            containerId: 'fill-exercises',
-            prefix: 'fill',
-            questions: [
-                {
-                    questionTextKey: 'modalsMayMight1.exercises.q7',
-                    answers: ['May']
-                },
-                {
-                    questionTextKey: 'modalsMayMight1.exercises.q8',
-                    answers: ['might']
-                },
-                {
-                    questionTextKey: 'modalsMayMight1.exercises.q9',
-                    answers: ['might']
-                }
-            ]
-        });
-
-        // Build sentence ordering exercises
-        const correctAnswersType3 = buildSentenceOrderingExercise({
-            containerId: 'order-exercises',
-            prefix: 'order',
-            questions: [
-                {
-                    questionTextKey: 'modalsMayMight1.exercises.q10',
-                    words: ['I', 'may', 'come', 'in', '?'],
-                    correctSentence: 'May I come in ?'
-                },
-                {
-                    questionTextKey: 'modalsMayMight1.exercises.q11',
-                    words: ['it', 'might', 'be', 'sunny', '.'],
-                    correctSentence: 'It might be sunny .'
-                },
-                {
-                    questionTextKey: 'modalsMayMight1.exercises.q12',
-                    words: ['you', 'might', 'want', 'to', 'try', 'this', '.'],
-                    correctSentence: 'You might want to try this .'
-                }
-            ]
-        });
-
-        function checkAllExercises() {
-            let totalScore = 0;
-            let totalQuestions = 0;
-            
-            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
-            totalQuestions += 6;
-            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
-            totalQuestions += 3;
-            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
-            totalQuestions += 3;
-            
-            const scoreEl = document.getElementById('score-value');
-            const fbEl = document.getElementById('score-feedback');
-            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
-            if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
-                else fbEl.textContent = 'Review the lesson and try again.';
+                // No exercises object in French
             }
-            document.getElementById('score-display').style.display = 'block';
+        },
+        ar: {
+            common: {
+                siteName: "English Hub",
+                previousLesson: "الدرس السابق← ",
+                returnToConjugation: "العودة إلى التصريف← ",
+                nextLesson: "الدرس التالي →"
+            },
+            footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+            mayMight1: {
+                title: { line1: "may & might: 1", line2: "المفاهيم الأساسية والاستخدامات الأولية", line3: "التعبير عن الإذن، الاحتمال، والطلبات المهذبة", line4: "الدرس: 1/3" },
+                section1: {
+                    title: "I. 1. مقدمة إلى May & Might",
+                    heading: "ما هما الفعلان الناقصان may و might؟",
+                    desc1: "📘 تعريف:",
+                    desc2: "may و might أفعال ناقصة (modal auxiliaries). لا يتغير شكلهما (لا يضاف s في المفرد الغائب) ويتبعهما الفعل المجرد.",
+                    coreTitle: "💡 أفكار أساسية:",
+                    core1: "May – إذن رسمي، احتمال (حاضر/مستقبل)، طلبات مهذبة.",
+                    core2: "Might – ماضي may (الكلام المنقول)، احتمال أقل تأكيدًا، اقتراحات مهذبة.",
+                    ex1: "أيمكنني الدخول؟ (إذن)",
+                    ex2: "قد تمطر لاحقًا. (احتمال)",
+                    ex3: "قال إنه ربما يتأخر. (كلام منقول)",
+                    ex4: "ربما تود تجربة هذا. (اقتراح مهذب)"
+                },
+                section2: {
+                    title: "I. 2. القواعد الأساسية",
+                    heading: "البنية والقواعد الرئيسية",
+                    structTitle: "📐 البنية:",
+                    structDesc: "إثبات: فاعل + may/might + فعل مجرد → She may come.\nنفي: فاعل + may not / might not + فعل مجرد → They might not know.\nسؤال: May/Might + فاعل + فعل مجرد؟ → May I leave?",
+                    importantTitle: "⚠️ مهم:",
+                    importantDesc: "الأفعال الناقصة لا تأخذ -s أو -ing أو -ed. يتبعها دائمًا المصدر المجرد بدون 'to'. النفي المختصر 'mightn't' نادر."
+                },
+                section3: {
+                    title: "I. 3. الاستخدامات الرئيسية لـ May",
+                    heading: "الإذن، الاحتمال والطلبات المهذبة",
+                    permTitle: "1️⃣ الإذن (رسمي)",
+                    permDesc: "نستخدم may لطلب أو منح الإذن في المواقف الرسمية.",
+                    permEx1: "أيمكنني استعارة قلمك؟",
+                    permEx2: "يمكنك المغادرة الآن.",
+                    possTitle: "2️⃣ الاحتمال (حاضر/مستقبل)",
+                    possDesc: "يعبر may عن أن شيئًا ما ممكن (نسبة يقين 50% غالبًا).",
+                    possEx1: "قد تمطر بعد ظهر اليوم.",
+                    possEx2: "ربما تكون في المنزل.",
+                    requestTitle: "3️⃣ الطلبات المهذبة (مع I)",
+                    requestDesc: "May I طريقة مهذبة جدًا لطلب الإذن.",
+                    requestEx1: "هل لي بكأس ماء؟",
+                    requestEx2: "هل لي أن أسأل سؤالاً؟"
+                },
+                section4: {
+                    title: "I. 4. الاستخدامات الرئيسية لـ Might",
+                    heading: "ماضي may، احتمال أضعف واقتراحات مهذبة",
+                    pastTitle: "1️⃣ ماضي may (الكلام المنقول)",
+                    pastDesc: "في الكلام غير المباشر، يُستخدم might كصيغة ماضية لـ may.",
+                    pastEx1: "قال إنه قد يأتي لاحقًا.",
+                    pastEx2: "ظنت أنه قد تمطر.",
+                    weakTitle: "2️⃣ احتمال أقل تأكيدًا (30-40%)",
+                    weakDesc: "يعطي might احتمالاً أضعف من may.",
+                    weakEx1: "قد يثلج الليلة.",
+                    weakEx2: "قد يتأخرون.",
+                    suggestTitle: "3️⃣ اقتراحات مهذبة",
+                    suggestDesc: "نستخدم might لتقديم اقتراح بلطف وبطريقة غير مباشرة.",
+                    suggestEx1: "قد ترغب في تجربة السمك.",
+                    suggestEx2: "قد نفكر في أخذ استراحة."
+                },
+                section5: {
+                    title: "I. 5. مقارنة سريعة: May vs Might",
+                    use: "الاستخدام",
+                    may: "May",
+                    might: "Might",
+                    permission: "الإذن",
+                    mayPerm: "رسمي: May I come in?",
+                    mightPerm: "نادر/رسمي جدًا: Might I suggest?",
+                    possibility: "الاحتمال",
+                    mayPoss: "نسبة 50%: قد تمطر.",
+                    mightPoss: "نسبة 30-40%: ربما تمطر.",
+                    pastReported: "الماضي (المنقول)",
+                    mayPast: "—",
+                    mightPast: "قال إنه قد يذهب."
+                }
+                // No exercises object in Arabic
+            }
         }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
-            document.getElementById('check-all').addEventListener('click', checkAllExercises);
-        });
-        
-        // i18n rendering for HTML elements with innerHTML tags
-        (function() {
-            function applyHtmlI18n() {
-                const lang = document.getElementById('language-selector').value;
-                const elements = document.querySelectorAll('[data-i18n]');
-                elements.forEach(el => {
-                    const key = el.getAttribute('data-i18n');
-                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
-                        el.textContent = translation;
-                    }
-                });
-            }
-            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
-            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
-        })();
-    </script>
+    };
+</script>
+<script src="scripts/translation-refraction.js"></script>
+<script src="scripts/exercise-conjugation.js"></script>
+<script src="scripts/special-effects.js"></script>
+<script src="scripts/common-sections.js"></script>
+<script>
+    // Multiple choice exercises
+    const correctAnswersType1 = buildMultipleChoiceExercise({
+        containerId: 'mc-exercises',
+        prefix: 'EH-exercise-type1-possibilities3',
+        questions: [
+            { questionTextKey: 'mayMight1.exercises.q1', options: [{ value: 'a', labelKey: 'mayMight1.exercises.q1a' }, { value: 'b', labelKey: 'mayMight1.exercises.q1b' }, { value: 'c', labelKey: 'mayMight1.exercises.q1c' }], correctAnswer: 'a' },
+            { questionTextKey: 'mayMight1.exercises.q2', options: [{ value: 'a', labelKey: 'mayMight1.exercises.q2a' }, { value: 'b', labelKey: 'mayMight1.exercises.q2b' }, { value: 'c', labelKey: 'mayMight1.exercises.q2c' }], correctAnswer: 'b' },
+            { questionTextKey: 'mayMight1.exercises.q3', options: [{ value: 'a', labelKey: 'mayMight1.exercises.q3a' }, { value: 'b', labelKey: 'mayMight1.exercises.q3b' }, { value: 'c', labelKey: 'mayMight1.exercises.q3c' }], correctAnswer: 'b' },
+            { questionTextKey: 'mayMight1.exercises.q4', options: [{ value: 'a', labelKey: 'mayMight1.exercises.q4a' }, { value: 'b', labelKey: 'mayMight1.exercises.q4b' }, { value: 'c', labelKey: 'mayMight1.exercises.q4c' }], correctAnswer: 'b' },
+            { questionTextKey: 'mayMight1.exercises.q5', options: [{ value: 'a', labelKey: 'mayMight1.exercises.q5a' }, { value: 'b', labelKey: 'mayMight1.exercises.q5b' }, { value: 'c', labelKey: 'mayMight1.exercises.q5c' }], correctAnswer: 'a' },
+            { questionTextKey: 'mayMight1.exercises.q6', options: [{ value: 'a', labelKey: 'mayMight1.exercises.q6a' }, { value: 'b', labelKey: 'mayMight1.exercises.q6b' }, { value: 'c', labelKey: 'mayMight1.exercises.q6c' }], correctAnswer: 'b' }
+        ]
+    });
+
+    // Fill-in-the-blank exercises
+    correctAnswersType2 = buildFillInTheBlankExercise({
+        containerId: 'fill-exercises',
+        prefix: 'fill',
+        questions: [
+            { questionTextKey: 'mayMight1.exercises.q7', answers: ['May'] },
+            { questionTextKey: 'mayMight1.exercises.q8', answers: ['might'] },
+            { questionTextKey: 'mayMight1.exercises.q9', answers: ['might'] }
+        ]
+    });
+
+    // Sentence ordering exercises
+    const correctAnswersType3 = buildSentenceOrderingExercise({
+        containerId: 'order-exercises',
+        prefix: 'order',
+        questions: [
+            { questionTextKey: 'mayMight1.exercises.q10', words: ['May', 'I', 'come', 'in', '?'], correctSentence: 'May I come in ?' },
+            { questionTextKey: 'mayMight1.exercises.q11', words: ['it', 'might', 'be', 'sunny', '.'], correctSentence: 'It might be sunny .' },
+            { questionTextKey: 'mayMight1.exercises.q12', words: ['you', 'might', 'want', 'to', 'try', 'this', '.'], correctSentence: 'You might want to try this .' }
+        ]
+    });
+
+    function checkAllExercises() {
+        let totalScore = 0;
+        let totalQuestions = 0;
+
+        totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+        totalQuestions += 6;
+        totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+        totalQuestions += 3;
+        totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+        totalQuestions += 3;
+
+        const scoreEl = document.getElementById('score-value');
+        const fbEl = document.getElementById('score-feedback');
+        if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+        if (fbEl) {
+            if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered the core uses of may & might!';
+            else if (totalScore >= 9) fbEl.textContent = 'Good job! Review the differences in possibility degrees.';
+            else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review may vs might and reported speech again.';
+            else fbEl.textContent = 'Review the lesson and try again.';
+        }
+        document.getElementById('score-display').style.display = 'block';
+        if (window.EHScoreEffects && EHScoreEffects.show) {
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+        ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+        document.getElementById('check-all').addEventListener('click', checkAllExercises);
+    });
+
+    // i18n rendering – handles nested keys for title lines and all data-i18n
+    (function() {
+        function applyHtmlI18n() {
+            const lang = document.getElementById('language-selector').value;
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                if (translation) {
+                    el.textContent = translation;
+                }
+            });
+        }
+        window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+        document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+    })();
+</script>
 </body>
 </html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - English Hub</title>
+    <link rel="stylesheet" href="styles/legal.css">
+    <style>
+    :root {
+        --legal-container-max-width: 700px;
+    }
+    .legal-container {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div class="legal-lang-select">
+        <select id="language-selector" class="legal-lang-dropdown">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+    </div>
+
+    <div class="legal-container">
+        <h1 data-i18n="contact.title">Contact Us</h1>
+        <p data-i18n="contact.intro">We'd love to hear from you! Reach out via email or follow us on social media.</p>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong data-i18n="contact.emailLabel">Email:</strong>
+                <a href="mailto:nouveau.dep@gmail.com">nouveau.dep@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span data-i18n="contact.developerLabel">Developer:</span> Mejri Ziad
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="#" data-i18n="contact.facebook">Facebook</a>
+            <a href="#" data-i18n="contact.twitter">Twitter</a>
+            <a href="#" data-i18n="contact.instagram">Instagram</a>
+        </div>
+
+        <p class="response-text" data-i18n="contact.response">
+            We typically respond within 24 hours on business days.
+        </p>
+    </div>
+
+    <footer class="EH-common-footer">
+        <div class="EH-common-footer-content">
+            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
+            <div class="EH-common-footer-links">
+                <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
+                <a href="policy.html" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="contact.html" data-i18n="footer.contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.I18N = {
+            en: {
+                common: { siteName: "English Hub" },
+                footer: { developer: "Developer: Mejri Ziad", terms: "Terms of Service", privacy: "Privacy Policy", contact: "Contact" },
+                contact: {
+                    title: "Contact Us",
+                    intro: "We'd love to hear from you! Reach out via email or follow us on social media.",
+                    emailLabel: "Email:",
+                    developerLabel: "Developer:",
+                    facebook: "Facebook",
+                    twitter: "Twitter",
+                    instagram: "Instagram",
+                    response: "We typically respond within 24 hours on business days."
+                }
+            },
+            fr: {
+                common: { siteName: "English Hub" },
+                footer: { developer: "Développeur : Mejri Ziad", terms: "Conditions d'utilisation", privacy: "Politique de confidentialité", contact: "Contact" },
+                contact: {
+                    title: "Contactez‑nous",
+                    intro: "Nous serions ravis de vous entendre ! Écrivez‑nous ou suivez‑nous sur les réseaux sociaux.",
+                    emailLabel: "Email :",
+                    developerLabel: "Développeur :",
+                    facebook: "Facebook",
+                    twitter: "Twitter",
+                    instagram: "Instagram",
+                    response: "Nous répondons généralement dans les 24 heures les jours ouvrables."
+                }
+            },
+            ar: {
+                common: { siteName: "English Hub" },
+                footer: { developer: "المطور: ماجري زياد", terms: "شروط الخدمة", privacy: "سياسة الخصوصية", contact: "اتصل بنا" },
+                contact: {
+                    title: "اتصل بنا",
+                    intro: "يسعدنا أن نسمع منك! تواصل معنا عبر البريد الإلكتروني أو تابعنا على وسائل التواصل الاجتماعي.",
+                    emailLabel: "البريد الإلكتروني:",
+                    developerLabel: "المطور:",
+                    facebook: "فيسبوك",
+                    twitter: "تويتر",
+                    instagram: "انستغرام",
+                    response: "نرد عادةً خلال 24 ساعة في أيام العمل."
+                }
+            }
+        };
+    </script>
+    <script src="scripts/common-i18n.js"></script>
+</body>
+</html>

@@ -9,464 +9,48 @@
     <link rel="stylesheet" href="styles/common.css">
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6, #60a5fa);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-        
-        .EH-conjugation-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-        }
-        
-        .EH-conjugation-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .EH-conjugation-title {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .EH-conjugation-subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-        }
-        
-        .EH-conjugation-content {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
-        
-        .EH-conjugation-section {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .EH-conjugation-section-title {
-            font-size: 1.8rem;
-            color: #1e3a8a;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #60a5fa;
-        }
-        
-        .EH-conjugation-subsection {
-            margin-bottom: 25px;
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .EH-conjugation-subsection-title {
-            font-size: 1.4rem;
-            color: #3b82f6;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .EH-conjugation-subsection-icon {
-            font-size: 1.6rem;
-            margin-right: 10px;
-        }
-        
-        .EH-conjugation-rule {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f5f5f5;
-            border-radius: 10px;
-            border-left: 4px solid #60a5fa;
-        }
-        
-        .EH-conjugation-rule-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #1e3a8a;
-        }
-        
-        .EH-conjugation-examples {
-            background: #eff6ff;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-        }
-        
-        .EH-conjugation-example {
-            margin-bottom: 8px;
-            padding-left: 10px;
-            border-left: 2px solid #60a5fa;
-        }
-        
-        .EH-conjugation-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        
-        .EH-conjugation-table th,
-        .EH-conjugation-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        
-        .EH-conjugation-table th {
-            background-color: #3b82f6;
-            color: white;
-        }
-        
-        .EH-conjugation-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        .EH-conjugation-table tr:hover {
-            background-color: #eff6ff;
-        }
-        
-        /* Exercise Styles */
-        .EH-exercise-section {
-            margin-top: 40px;
-        }
-        
-        .EH-exercise-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .EH-exercise-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .EH-exercise-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .EH-exercise-number {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, #3b82f6, #60a5fa);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-text {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .EH-exercise-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option input {
-            cursor: pointer;
-        }
-        
-        .EH-exercise-option label {
-            cursor: pointer;
-        }
-        
-        /* Type 1: Multiple Choice Styles */
-        .EH-exercise-type1-possibilities3-answers-control {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
-            gap: 20px;
-        }
+        :root {
+            /* ---------- Theme (blue, same as original) ---------- */
+            --bg-gradient: linear-gradient(135deg, #1e3a8a, #3b82f6, #60a5fa);
+            --title-color: #1e3a8a;
+            --primary: #3b82f6;
+            --primary-hover: #1e3a8a;
+            --primary-light: #60a5fa;
+            --accent: #60a5fa;
+            --rule-bg: #eff6ff;
+            --rule-border: #60a5fa;
+            --example-bg: #eff6ff;
+            --example-border: #60a5fa;
+            --exercise-number-gradient: linear-gradient(135deg, #3b82f6, #60a5fa);
+            --nav-btn-bg: #3b82f6;
+            --nav-btn-hover: #1e3a8a;
+            --nav-back-btn-bg: #60a5fa;
+            --nav-back-btn-color: #004d40;
+            --nav-back-btn-hover: #3b82f6;
 
-        .EH-exercise-type1-possibilities3-check-answers-btn {
-            background: #3b82f6;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn:hover {
-            background: #1e3a8a;
-        }
-
-        .EH-exercise-type1-possibilities3-score-display {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            display: none;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-title {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #1e3a8a;
-        }
-
-        .EH-exercise-type1-possibilities3-score-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #3b82f6;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-feedback {
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        .EH-exercise-type1-possibilities3-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.correct {
-            background-color: #d4edda;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.incorrect {
-            background-color: #f8d7da;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 2: Fill in the Blank Styles */
-        .EH-exercise-type2-fillblank-input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .EH-exercise-type2-fillblank-input:focus {
-            border-color: #3b82f6;
-            outline: none;
-        }
-        
-        .EH-exercise-type2-fillblank-input-correct {
-            border-color: #28a745;
-            background-color: #d4edda;
-        }
-        
-        .EH-exercise-type2-fillblank-input-incorrect {
-            border-color: #dc3545;
-            background-color: #f8d7da;
-        }
-        
-        .EH-exercise-type2-fillblank-input-empty {
-            border-color: #ffc107;
-        }
-        
-        .EH-exercise-type2-fillblank-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type2-fillblank-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type2-fillblank-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 3: Sentence Ordering Styles */
-        .EH-exercise-type3-sentenceorder-word-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 15px;
-            border: 2px dashed #e0e0e0;
-            border-radius: 10px;
-            min-height: 60px;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word {
-            background: #eff6ff;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid #b3d4fc;
-            cursor: move;
-            user-select: none;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word:hover {
-            background: #dbeafe;
-        }
-        
-        .EH-exercise-type3-sentenceorder-dragging {
-            opacity: 0.5;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct {
-            border-color: #28a745;
-            background-color: #f8fff8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect {
-            border-color: #dc3545;
-            background-color: #fff8f8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Navigation Buttons */
-        .EH-conjugation-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-        
-        .EH-conjugation-nav-button {
-            background: #3b82f6;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .EH-conjugation-nav-button:hover {
-            background: #1e3a8a;
-        }
-        
-        .EH-conjugation-nav-button.back {
-            background: #60a5fa;
-        }
-        
-        .EH-conjugation-nav-button.back:hover {
-            background: #3b82f6;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .EH-conjugation-title {
-                font-size: 2rem;
-            }
-            
-            .EH-exercise-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .EH-conjugation-navigation {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .EH-conjugation-nav-button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .EH-conjugation-content {
-                padding: 20px;
-            }
+            /* ---------- Universal / Neutral ---------- */
+            --header-text: white;
+            --header-text-light: rgba(255, 255, 255, 0.9);
+            --content-bg: rgba(255, 255, 255, 0.95);
+            --text-color: #333;
+            --white: white;
+            --section-divider: #e0e0e0;
+            --card-bg: white;
+            --subsection-bg: white;
+            --card-border: #e0e0e0;
+            --input-border: #e0e0e0;
+            --dashed-border: #e0e0e0;
+            --table-border: #ddd;
+            --table-stripe: #f2f2f2;
+            --correct-bg: #d4edda;
+            --correct-color: #155724;
+            --correct-border: #c3e6cb;
+            --incorrect-bg: #f8d7da;
+            --incorrect-color: #721c24;
+            --incorrect-border: #f5c6cb;
         }
     </style>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
 </head>
 <body>
     <!-- Language Selector -->
@@ -546,41 +130,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="simpleFuture1.structure.willWork">will work</td>
-                                <td data-i18n="simpleFuture1.structure.exampleI">I will work tomorrow.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="simpleFuture1.structure.willWork">will work</td>
-                                <td data-i18n="simpleFuture1.structure.exampleYou">You will work here.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="simpleFuture1.structure.willWork">will work</td>
-                                <td data-i18n="simpleFuture1.structure.exampleHe">He will work at a bank.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="simpleFuture1.structure.willWork">will work</td>
-                                <td data-i18n="simpleFuture1.structure.exampleShe">She will work hard.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.it">It</td>
-                                <td data-i18n="simpleFuture1.structure.willWork">will work</td>
-                                <td data-i18n="simpleFuture1.structure.exampleIt">It will work well.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="simpleFuture1.structure.willWork">will work</td>
-                                <td data-i18n="simpleFuture1.structure.exampleWe">We will work together.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="simpleFuture1.structure.willWork">will work</td>
-                                <td data-i18n="simpleFuture1.structure.exampleThey">They will work late.</td>
-                            </tr>
+                            <tr><td data-i18n="common.i">I</td><td data-i18n="simpleFuture1.structure.willWork">will work</td><td data-i18n="simpleFuture1.structure.exampleI">I will work tomorrow.</td></tr>
+                            <tr><td data-i18n="common.you">You</td><td data-i18n="simpleFuture1.structure.willWork">will work</td><td data-i18n="simpleFuture1.structure.exampleYou">You will work here.</td></tr>
+                            <tr><td data-i18n="common.he">He</td><td data-i18n="simpleFuture1.structure.willWork">will work</td><td data-i18n="simpleFuture1.structure.exampleHe">He will work at a bank.</td></tr>
+                            <tr><td data-i18n="common.she">She</td><td data-i18n="simpleFuture1.structure.willWork">will work</td><td data-i18n="simpleFuture1.structure.exampleShe">She will work hard.</td></tr>
+                            <tr><td data-i18n="common.it">It</td><td data-i18n="simpleFuture1.structure.willWork">will work</td><td data-i18n="simpleFuture1.structure.exampleIt">It will work well.</td></tr>
+                            <tr><td data-i18n="common.we">We</td><td data-i18n="simpleFuture1.structure.willWork">will work</td><td data-i18n="simpleFuture1.structure.exampleWe">We will work together.</td></tr>
+                            <tr><td data-i18n="common.they">They</td><td data-i18n="simpleFuture1.structure.willWork">will work</td><td data-i18n="simpleFuture1.structure.exampleThey">They will work late.</td></tr>
                         </tbody>
                     </table>
                     
@@ -616,48 +172,16 @@
                     </h3>
                     <table class="EH-conjugation-table">
                         <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.conjugation">Conjugation</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
+                            <tr><th data-i18n="common.subject">Subject</th><th data-i18n="common.conjugation">Conjugation</th><th data-i18n="common.example">Example</th></tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="simpleFuture1.toBe.willBe">will be</td>
-                                <td data-i18n="simpleFuture1.toBe.exampleI">I will be a student next year.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="simpleFuture1.toBe.willBe">will be</td>
-                                <td data-i18n="simpleFuture1.toBe.exampleYou">You will be my friend.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="simpleFuture1.toBe.willBe">will be</td>
-                                <td data-i18n="simpleFuture1.toBe.exampleHe">He will be a teacher.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="simpleFuture1.toBe.willBe">will be</td>
-                                <td data-i18n="simpleFuture1.toBe.exampleShe">She will be happy.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.it">It</td>
-                                <td data-i18n="simpleFuture1.toBe.willBe">will be</td>
-                                <td data-i18n="simpleFuture1.toBe.exampleIt">It will be a beautiful day.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="simpleFuture1.toBe.willBe">will be</td>
-                                <td data-i18n="simpleFuture1.toBe.exampleWe">We will be here.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="simpleFuture1.toBe.willBe">will be</td>
-                                <td data-i18n="simpleFuture1.toBe.exampleThey">They will be students.</td>
-                            </tr>
+                            <tr><td data-i18n="common.i">I</td><td data-i18n="simpleFuture1.toBe.willBe">will be</td><td data-i18n="simpleFuture1.toBe.exampleI">I will be a student next year.</td></tr>
+                            <tr><td data-i18n="common.you">You</td><td data-i18n="simpleFuture1.toBe.willBe">will be</td><td data-i18n="simpleFuture1.toBe.exampleYou">You will be my friend.</td></tr>
+                            <tr><td data-i18n="common.he">He</td><td data-i18n="simpleFuture1.toBe.willBe">will be</td><td data-i18n="simpleFuture1.toBe.exampleHe">He will be a teacher.</td></tr>
+                            <tr><td data-i18n="common.she">She</td><td data-i18n="simpleFuture1.toBe.willBe">will be</td><td data-i18n="simpleFuture1.toBe.exampleShe">She will be happy.</td></tr>
+                            <tr><td data-i18n="common.it">It</td><td data-i18n="simpleFuture1.toBe.willBe">will be</td><td data-i18n="simpleFuture1.toBe.exampleIt">It will be a beautiful day.</td></tr>
+                            <tr><td data-i18n="common.we">We</td><td data-i18n="simpleFuture1.toBe.willBe">will be</td><td data-i18n="simpleFuture1.toBe.exampleWe">We will be here.</td></tr>
+                            <tr><td data-i18n="common.they">They</td><td data-i18n="simpleFuture1.toBe.willBe">will be</td><td data-i18n="simpleFuture1.toBe.exampleThey">They will be students.</td></tr>
                         </tbody>
                     </table>
                     
@@ -693,48 +217,16 @@
                     </h3>
                     <table class="EH-conjugation-table">
                         <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.conjugation">Conjugation</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
+                            <tr><th data-i18n="common.subject">Subject</th><th data-i18n="common.conjugation">Conjugation</th><th data-i18n="common.example">Example</th></tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="simpleFuture1.toHave.willHave">will have</td>
-                                <td data-i18n="simpleFuture1.toHave.exampleI">I will have a car.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="simpleFuture1.toHave.willHave">will have</td>
-                                <td data-i18n="simpleFuture1.toHave.exampleYou">You will have a book.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="simpleFuture1.toHave.willHave">will have</td>
-                                <td data-i18n="simpleFuture1.toHave.exampleHe">He will have a cat.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="simpleFuture1.toHave.willHave">will have</td>
-                                <td data-i18n="simpleFuture1.toHave.exampleShe">She will have a dog.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.it">It</td>
-                                <td data-i18n="simpleFuture1.toHave.willHave">will have</td>
-                                <td data-i18n="simpleFuture1.toHave.exampleIt">It will have four legs.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="simpleFuture1.toHave.willHave">will have</td>
-                                <td data-i18n="simpleFuture1.toHave.exampleWe">We will have time.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="simpleFuture1.toHave.willHave">will have</td>
-                                <td data-i18n="simpleFuture1.toHave.exampleThey">They will have money.</td>
-                            </tr>
+                            <tr><td data-i18n="common.i">I</td><td data-i18n="simpleFuture1.toHave.willHave">will have</td><td data-i18n="simpleFuture1.toHave.exampleI">I will have a car.</td></tr>
+                            <tr><td data-i18n="common.you">You</td><td data-i18n="simpleFuture1.toHave.willHave">will have</td><td data-i18n="simpleFuture1.toHave.exampleYou">You will have a book.</td></tr>
+                            <tr><td data-i18n="common.he">He</td><td data-i18n="simpleFuture1.toHave.willHave">will have</td><td data-i18n="simpleFuture1.toHave.exampleHe">He will have a cat.</td></tr>
+                            <tr><td data-i18n="common.she">She</td><td data-i18n="simpleFuture1.toHave.willHave">will have</td><td data-i18n="simpleFuture1.toHave.exampleShe">She will have a dog.</td></tr>
+                            <tr><td data-i18n="common.it">It</td><td data-i18n="simpleFuture1.toHave.willHave">will have</td><td data-i18n="simpleFuture1.toHave.exampleIt">It will have four legs.</td></tr>
+                            <tr><td data-i18n="common.we">We</td><td data-i18n="simpleFuture1.toHave.willHave">will have</td><td data-i18n="simpleFuture1.toHave.exampleWe">We will have time.</td></tr>
+                            <tr><td data-i18n="common.they">They</td><td data-i18n="simpleFuture1.toHave.willHave">will have</td><td data-i18n="simpleFuture1.toHave.exampleThey">They will have money.</td></tr>
                         </tbody>
                     </table>
                     
@@ -776,43 +268,15 @@
                     
                     <table class="EH-conjugation-table">
                         <thead>
-                            <tr>
-                                <th data-i18n="common.verb">Verb</th>
-                                <th data-i18n="simpleFuture1.irregularVerbs.futureForm">Future Form</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
+                            <tr><th data-i18n="common.verb">Verb</th><th data-i18n="simpleFuture1.irregularVerbs.futureForm">Future Form</th><th data-i18n="common.example">Example</th></tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="simpleFuture1.irregularVerbs.go">go</td>
-                                <td data-i18n="simpleFuture1.irregularVerbs.willGo">will go</td>
-                                <td data-i18n="simpleFuture1.irregularVerbs.goExample">I will go to school tomorrow.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simpleFuture1.irregularVerbs.do">do</td>
-                                <td data-i18n="simpleFuture1.irregularVerbs.willDo">will do</td>
-                                <td data-i18n="simpleFuture1.irregularVerbs.doExample">He will do his homework.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simpleFuture1.irregularVerbs.have">have</td>
-                                <td data-i18n="simpleFuture1.irregularVerbs.willHave">will have</td>
-                                <td data-i18n="simpleFuture1.irregularVerbs.haveExample">She will have a cat.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simpleFuture1.irregularVerbs.eat">eat</td>
-                                <td data-i18n="simpleFuture1.irregularVerbs.willEat">will eat</td>
-                                <td data-i18n="simpleFuture1.irregularVerbs.eatExample">We will eat dinner at 7 PM.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simpleFuture1.irregularVerbs.see">see</td>
-                                <td data-i18n="simpleFuture1.irregularVerbs.willSee">will see</td>
-                                <td data-i18n="simpleFuture1.irregularVerbs.seeExample">They will see a movie tomorrow.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simpleFuture1.irregularVerbs.take">take</td>
-                                <td data-i18n="simpleFuture1.irregularVerbs.willTake">will take</td>
-                                <td data-i18n="simpleFuture1.irregularVerbs.takeExample">I will take a bus to work.</td>
-                            </tr>
+                            <tr><td data-i18n="simpleFuture1.irregularVerbs.go">go</td><td data-i18n="simpleFuture1.irregularVerbs.willGo">will go</td><td data-i18n="simpleFuture1.irregularVerbs.goExample">I will go to school tomorrow.</td></tr>
+                            <tr><td data-i18n="simpleFuture1.irregularVerbs.do">do</td><td data-i18n="simpleFuture1.irregularVerbs.willDo">will do</td><td data-i18n="simpleFuture1.irregularVerbs.doExample">He will do his homework.</td></tr>
+                            <tr><td data-i18n="simpleFuture1.irregularVerbs.have">have</td><td data-i18n="simpleFuture1.irregularVerbs.willHave">will have</td><td data-i18n="simpleFuture1.irregularVerbs.haveExample">She will have a cat.</td></tr>
+                            <tr><td data-i18n="simpleFuture1.irregularVerbs.eat">eat</td><td data-i18n="simpleFuture1.irregularVerbs.willEat">will eat</td><td data-i18n="simpleFuture1.irregularVerbs.eatExample">We will eat dinner at 7 PM.</td></tr>
+                            <tr><td data-i18n="simpleFuture1.irregularVerbs.see">see</td><td data-i18n="simpleFuture1.irregularVerbs.willSee">will see</td><td data-i18n="simpleFuture1.irregularVerbs.seeExample">They will see a movie tomorrow.</td></tr>
+                            <tr><td data-i18n="simpleFuture1.irregularVerbs.take">take</td><td data-i18n="simpleFuture1.irregularVerbs.willTake">will take</td><td data-i18n="simpleFuture1.irregularVerbs.takeExample">I will take a bus to work.</td></tr>
                         </tbody>
                     </table>
                     
@@ -828,236 +292,30 @@
                 </div>
             </div>
             
-            <!-- Exercises Section -->
+            <!-- EXERCISES (12) – dynamic slots -->
             <div class="EH-conjugation-section EH-exercise-section">
                 <h2 class="EH-conjugation-section-title" data-i18n="simpleFuture1.exercises.title">Practice Exercises</h2>
                 
-                <!-- Type 1: Multiple Choice Exercises -->
                 <h3 style="color: #1e3a8a; margin-bottom: 20px;">Multiple Choice</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 1 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">1</div>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q1">Choose the correct future form of the verb "to be":</p>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q1Sentence">She ______ a doctor next year.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="simpleFuture1.exercises.q1a">is</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="simpleFuture1.exercises.q1b">will be</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="simpleFuture1.exercises.q1c">was</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 2 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">2</div>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q2">Choose the correct future form of the verb "to have":</p>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q2Sentence">They ______ a new house next month.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="simpleFuture1.exercises.q2a">has</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="simpleFuture1.exercises.q2b">will have</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="simpleFuture1.exercises.q2c">had</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 3 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">3</div>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q3">Choose the correct future form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q3Sentence">He ______ (work) in a new office next year.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="simpleFuture1.exercises.q3a">work</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="simpleFuture1.exercises.q3b">will work</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="simpleFuture1.exercises.q3c">worked</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 4 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">4</div>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q4">Choose the correct negative form:</p>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q4Sentence">I ______ go to school tomorrow.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="simpleFuture1.exercises.q4a">will not</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="simpleFuture1.exercises.q4b">do not</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="simpleFuture1.exercises.q4c">not</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 5 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">5</div>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q5">Choose the correct question form:</p>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q5Sentence">______ she work here next year?</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="simpleFuture1.exercises.q5a">Do</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="simpleFuture1.exercises.q5b">Will</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="simpleFuture1.exercises.q5c">Was</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 6 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">6</div>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q6">Choose the correct form of the irregular verb:</p>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q6Sentence">He ______ to school tomorrow.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-a" name="EH-exercise-type1-possibilities3-q6" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q6-a" data-i18n="simpleFuture1.exercises.q6a">go</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-b" name="EH-exercise-type1-possibilities3-q6" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q6-b" data-i18n="simpleFuture1.exercises.q6b">will go</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-c" name="EH-exercise-type1-possibilities3-q6" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q6-c" data-i18n="simpleFuture1.exercises.q6c">went</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q6-status"></div>
-                    </div>
-                </div>
+                <div class="EH-exercise-container" id="mc-exercises"></div>
                 
-                <!-- Type 2: Fill in the Blank Exercises -->
                 <h3 style="color: #1e3a8a; margin: 40px 0 20px 0;">Fill in the Blank</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 7 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">7</div>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q7">Complete the sentence with the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q7Sentence">I ______ (to be) a doctor in the future.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q1-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 8 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">8</div>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q8">Complete the sentence with the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q8Sentence">She ______ (to have) a new car next year.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q2-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 9 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">9</div>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q9">Complete the sentence with the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q9Sentence">They ______ (to go) to the beach tomorrow.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q3-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q3-status"></div>
-                    </div>
-                </div>
+                <div class="EH-exercise-container" id="fill-exercises"></div>
                 
-                <!-- Type 3: Sentence Ordering Exercises -->
                 <h3 style="color: #1e3a8a; margin: 40px 0 20px 0;">Sentence Ordering</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 10 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">10</div>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q10">Arrange the words to form a correct sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q1-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word1" data-original-index="1">He</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word3" data-original-index="3">soccer</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word4" data-original-index="4">tomorrow</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word2" data-original-index="2">will play</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word5" data-original-index="5">.</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 11 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">11</div>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q11">Arrange the words to form a correct sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q2-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word1" data-original-index="1">We</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word3" data-original-index="3">like</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word2" data-original-index="2">will not</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word4" data-original-index="4">coffee</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word5" data-original-index="5">.</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 12 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">12</div>
-                        <p class="EH-exercise-text" data-i18n="simpleFuture1.exercises.q12">Arrange the words to form a correct question:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q3-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word1" data-original-index="1">Will</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word3" data-original-index="3">speak</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word5" data-original-index="5">?</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word4" data-original-index="4">English</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word2" data-original-index="2">you</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word6" data-original-index="6">tomorrow</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q3-status"></div>
-                    </div>
-                </div>
+                <div class="EH-exercise-container" id="order-exercises"></div>
                 
-                <!-- Answer Check and Score System -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
-                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers">Check All Answers</button>
-                    <div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
                         <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
-                        <div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback">Check your answers to see how you did!</p>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Navigation Buttons -->
+            <!-- Navigation EXACTLY as original -->
             <div class="EH-conjugation-navigation">
                 <button class="EH-conjugation-nav-button back" onclick="window.location.href='conjugation.html'">
                     ← <span data-i18n="common.backToConjugation">Back to Verb Conjugation</span>
@@ -1069,6 +327,7 @@
         </div>
     </div>
     
+    <!-- Footer EXACTLY as original -->
     <footer class="EH-common-footer">
         <div class="EH-common-footer-content">
             <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
@@ -1080,92 +339,527 @@
         </div>
     </footer>
     
-    <!-- i18n translations -->
-    <script src="scripts/translations/i18n_en.js"></script>
-    <script src="scripts/translations/i18n_fr.js"></script>
-    <script src="scripts/translations/i18n_ar.js"></script>
-    <script src="scripts/common-i18n.js"></script>
-    <script src="scripts/exercise.js"></script>
-    
+    <!-- i18n translations (English + pattern "English (Translation)" for fr/ar) -->
     <script>
-        // Correct answers for Type 1 exercises
-        const correctAnswersType1 = {
-            'EH-exercise-type1-possibilities3-q1': 'b', // She will be a doctor next year.
-            'EH-exercise-type1-possibilities3-q2': 'b', // They will have a new house next month.
-            'EH-exercise-type1-possibilities3-q3': 'b', // He will work in a new office next year.
-            'EH-exercise-type1-possibilities3-q4': 'a', // I will not go to school tomorrow.
-            'EH-exercise-type1-possibilities3-q5': 'b', // Will she work here next year?
-            'EH-exercise-type1-possibilities3-q6': 'b'  // He will go to school tomorrow.
-        };
-        
-        // Correct answers for Type 2 exercises
-        const correctAnswersType2 = {
-            'EH-exercise-type2-fillblank-q1': 'will be',     // I will be a doctor in the future.
-            'EH-exercise-type2-fillblank-q2': 'will have',   // She will have a new car next year.
-            'EH-exercise-type2-fillblank-q3': 'will go'      // They will go to the beach tomorrow.
-        };
-        
-        // Correct answers for Type 3 exercises
-        const correctAnswersType3 = {
-            'EH-exercise-type3-sentenceorder-q1': 'He will play soccer tomorrow .',
-            'EH-exercise-type3-sentenceorder-q2': 'We will not like coffee .',
-            'EH-exercise-type3-sentenceorder-q3': 'Will you speak English tomorrow ?'
-        };
-        
-        // Combined function to check all exercise types
-        function checkAllExercises() {
-            let totalScore = 0;
-            let totalQuestions = 0;
-            
-            // Check Type 1 exercises
-            const type1Score = ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            totalScore += type1Score;
-            totalQuestions += Object.keys(correctAnswersType1).length;
-            
-            // Check Type 2 exercises
-            const type2Score = ExerciseType2FillBlankCheckAnswers(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            totalScore += type2Score;
-            totalQuestions += Object.keys(correctAnswersType2).length;
-            
-            // Check Type 3 exercises
-            const type3Score = ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            totalScore += type3Score;
-            totalQuestions += Object.keys(correctAnswersType3).length;
-            
-            // Update combined score display
-            const scoreValue = document.getElementById('EH-exercise-type1-possibilities3-score-value');
-            const scoreFeedback = document.getElementById('EH-exercise-type1-possibilities3-score-feedback');
-            
-            if (scoreValue) scoreValue.textContent = `${totalScore}/${totalQuestions}`;
-            
-            if (scoreFeedback) {
-                if (totalScore === totalQuestions) {
-                    scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
-                } else if (totalScore >= totalQuestions * 0.7) {
-                    scoreFeedback.textContent = 'Good job! You did well on this exercise.';
-                } else if (totalScore >= totalQuestions * 0.5) {
-                    scoreFeedback.textContent = 'Not bad, but you might want to review the material again.';
-                } else {
-                    scoreFeedback.textContent = 'You might want to review the material and try again.';
+        window.I18N = {
+            en: {
+                common: {
+                    siteName: "English Hub",
+                    backToConjugation: "Back to Verb Conjugation",
+                    nextLesson: "Next Lesson",
+                    examples: "Examples:",
+                    subject: "Subject",
+                    conjugation: "Conjugation",
+                    example: "Example",
+                    verb: "Verb",
+                    i: "I", you: "You", he: "He", she: "She", it: "It", we: "We", they: "They"
+                },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                simpleFuture1: {
+                    title: "Simple Future Tense: Generality",
+                    subtitle: "Learn to talk about future actions, plans, and predictions",
+                    introduction: {
+                        title: "Introduction to Simple Future",
+                        whatIs: "What is the Simple Future Tense?",
+                        definitionTitle: "Definition:",
+                        definition: "The Simple Future tense is used to talk about actions or events that will happen in the future.",
+                        usesTitle: "When to use:",
+                        use1: "Predictions about the future",
+                        use2: "Spontaneous decisions",
+                        use3: "Promises and offers",
+                        use4: "Future plans and intentions",
+                        example1: "I will work tomorrow.",
+                        example2: "She will visit her grandmother next week.",
+                        example3: "They will play soccer this weekend.",
+                        example4: "He will study for his exam."
+                    },
+                    structure: {
+                        title: "Basic Structure",
+                        conjugation: "How to Form the Simple Future",
+                        ruleTitle: "Basic Rule:",
+                        rule: "Use \"will\" + base form of the verb for all subjects.",
+                        willWork: "will work",
+                        exampleI: "I will work tomorrow.",
+                        exampleYou: "You will work here.",
+                        exampleHe: "He will work at a bank.",
+                        exampleShe: "She will work hard.",
+                        exampleIt: "It will work well.",
+                        exampleWe: "We will work together.",
+                        exampleThey: "They will work late.",
+                        negativeTitle: "Negative Form:",
+                        negativeRule: "Use \"will not\" (won't) + base form of verb.",
+                        negativeExample1: "I will not work tomorrow.",
+                        negativeExample2: "She will not work here.",
+                        negativeExample3: "They will not work late.",
+                        questionTitle: "Question Form:",
+                        questionRule: "Use \"will\" + subject + base form of verb.",
+                        questionExample1: "Will you work tomorrow?",
+                        questionExample2: "Will she work hard?",
+                        questionExample3: "Will they work together?"
+                    },
+                    toBe: {
+                        title: "The Verb \"To Be\" in Future",
+                        conjugation: "Conjugation of \"To Be\" in Future",
+                        willBe: "will be",
+                        exampleI: "I will be a student next year.",
+                        exampleYou: "You will be my friend.",
+                        exampleHe: "He will be a teacher.",
+                        exampleShe: "She will be happy.",
+                        exampleIt: "It will be a beautiful day.",
+                        exampleWe: "We will be here.",
+                        exampleThey: "They will be students.",
+                        negativeTitle: "Negative Form:",
+                        negativeRule: "Use \"will not be\" (won't be).",
+                        negativeExample1: "I will not be a doctor.",
+                        negativeExample2: "She will not be tired.",
+                        negativeExample3: "They will not be here.",
+                        questionTitle: "Question Form:",
+                        questionRule: "Use \"will\" + subject + \"be\".",
+                        questionExample1: "Will I be late?",
+                        questionExample2: "Will she be a teacher?",
+                        questionExample3: "Will they be ready?"
+                    },
+                    toHave: {
+                        title: "The Verb \"To Have\" in Future",
+                        conjugation: "Conjugation of \"To Have\" in Future",
+                        willHave: "will have",
+                        exampleI: "I will have a car.",
+                        exampleYou: "You will have a book.",
+                        exampleHe: "He will have a cat.",
+                        exampleShe: "She will have a dog.",
+                        exampleIt: "It will have four legs.",
+                        exampleWe: "We will have time.",
+                        exampleThey: "They will have money.",
+                        negativeTitle: "Negative Form:",
+                        negativeRule: "Use \"will not have\" (won't have).",
+                        negativeExample1: "I will not have a car.",
+                        negativeExample2: "She will not have a dog.",
+                        negativeExample3: "They will not have time.",
+                        questionTitle: "Question Form:",
+                        questionRule: "Use \"will\" + subject + \"have\".",
+                        questionExample1: "Will you have a car?",
+                        questionExample2: "Will she have a dog?",
+                        questionExample3: "Will they have time?"
+                    },
+                    irregularVerbs: {
+                        title: "Common Irregular Verbs in Future",
+                        conjugation: "Irregular Verb Conjugations in Future",
+                        ruleTitle: "About Irregular Verbs in Future:",
+                        rule: "All irregular verbs use \"will\" + base form in the Simple Future tense. The irregularity doesn't affect the future form.",
+                        futureForm: "Future Form",
+                        go: "go", willGo: "will go", goExample: "I will go to school tomorrow.",
+                        do: "do", willDo: "will do", doExample: "He will do his homework.",
+                        have: "have", willHave: "will have", haveExample: "She will have a cat.",
+                        eat: "eat", willEat: "will eat", eatExample: "We will eat dinner at 7 PM.",
+                        see: "see", willSee: "will see", seeExample: "They will see a movie tomorrow.",
+                        take: "take", willTake: "will take", takeExample: "I will take a bus to work.",
+                        moreExamplesTitle: "More Examples:",
+                        example1: "I will go to the gym tomorrow.",
+                        example2: "She will do her homework after school.",
+                        example3: "We will have a great time at the party.",
+                        example4: "He will eat breakfast at 8 AM."
+                    },
+                    exercises: {
+                        title: "Practice Exercises",
+                        q1: "Choose the correct future form of the verb \"to be\":",
+                        q1Sentence: "She ______ a doctor next year.",
+                        q1a: "is", q1b: "will be", q1c: "was",
+                        q2: "Choose the correct future form of the verb \"to have\":",
+                        q2Sentence: "They ______ a new house next month.",
+                        q2a: "has", q2b: "will have", q2c: "had",
+                        q3: "Choose the correct future form of the verb:",
+                        q3Sentence: "He ______ (work) in a new office next year.",
+                        q3a: "work", q3b: "will work", q3c: "worked",
+                        q4: "Choose the correct negative form:",
+                        q4Sentence: "I ______ go to school tomorrow.",
+                        q4a: "will not", q4b: "do not", q4c: "not",
+                        q5: "Choose the correct question form:",
+                        q5Sentence: "______ she work here next year?",
+                        q5a: "Do", q5b: "Will", q5c: "Was",
+                        q6: "Choose the correct form of the irregular verb:",
+                        q6Sentence: "He ______ to school tomorrow.",
+                        q6a: "go", q6b: "will go", q6c: "went",
+                        q7: "Complete the sentence with the correct form of the verb: I ______ (to be) a doctor in the future.",
+                        q8: "Complete the sentence with the correct form of the verb: She ______ (to have) a new car next year.",
+                        q9: "Complete the sentence with the correct form of the verb: They ______ (to go) to the beach tomorrow.",
+                        q10: "Arrange the words to form a correct sentence:",
+                        q11: "Arrange the words to form a correct sentence:",
+                        q12: "Arrange the words to form a correct question:"
+                    }
+                }
+            },
+            fr: {
+                common: {
+                    siteName: "English Hub",
+                    backToConjugation: "Back to Verb Conjugation (Retour à la conjugaison des verbes)",
+                    nextLesson: "Next Lesson (Leçon suivante)",
+                    examples: "Examples: (Exemples :)",
+                    subject: "Subject (Sujet)",
+                    conjugation: "Conjugation (Conjugaison)",
+                    example: "Example (Exemple)",
+                    verb: "Verb (Verbe)",
+                    i: "I (Je)", you: "You (Tu/Vous)", he: "He (Il)", she: "She (Elle)", it: "It (Il/Elle)", we: "We (Nous)", they: "They (Ils/Elles)"
+                },
+                footer: { developer: "Developer: Mejri Ziad (Développeur : Mejri Ziad)", privacy: "Privacy Policy (Politique de confidentialité)", terms: "Terms of Service (Conditions d'utilisation)", contact: "Contact" },
+                simpleFuture1: {
+                    title: "Simple Future Tense: Generality (Le futur simple : Généralités)",
+                    subtitle: "Learn to talk about future actions, plans, and predictions (Apprenez à parler d'actions, de projets et de prédictions futures)",
+                    introduction: {
+                        title: "Introduction to Simple Future (Introduction au futur simple)",
+                        whatIs: "What is the Simple Future Tense? (Qu'est-ce que le futur simple ?)",
+                        definitionTitle: "Definition: (Définition :)",
+                        definition: "The Simple Future tense is used to talk about actions or events that will happen in the future. (Le futur simple est utilisé pour parler d'actions ou d'événements qui se produiront dans le futur.)",
+                        usesTitle: "When to use: (Quand l'utiliser :)",
+                        use1: "Predictions about the future (Prédictions sur le futur)",
+                        use2: "Spontaneous decisions (Décisions spontanées)",
+                        use3: "Promises and offers (Promesses et offres)",
+                        use4: "Future plans and intentions (Projets et intentions futures)",
+                        example1: "I will work tomorrow. (Je travaillerai demain.)",
+                        example2: "She will visit her grandmother next week. (Elle rendra visite à sa grand-mère la semaine prochaine.)",
+                        example3: "They will play soccer this weekend. (Ils joueront au foot ce week-end.)",
+                        example4: "He will study for his exam. (Il étudiera pour son examen.)"
+                    },
+                    structure: {
+                        title: "Basic Structure (Structure de base)",
+                        conjugation: "How to Form the Simple Future (Comment former le futur simple)",
+                        ruleTitle: "Basic Rule: (Règle de base :)",
+                        rule: "Use \"will\" + base form of the verb for all subjects. (Utilisez \"will\" + la forme de base du verbe pour tous les sujets.)",
+                        willWork: "will work (travaillera)",
+                        exampleI: "I will work tomorrow. (Je travaillerai demain.)",
+                        exampleYou: "You will work here. (Tu travailleras ici.)",
+                        exampleHe: "He will work at a bank. (Il travaillera dans une banque.)",
+                        exampleShe: "She will work hard. (Elle travaillera dur.)",
+                        exampleIt: "It will work well. (Il fonctionnera bien.)",
+                        exampleWe: "We will work together. (Nous travaillerons ensemble.)",
+                        exampleThey: "They will work late. (Ils travailleront tard.)",
+                        negativeTitle: "Negative Form: (Forme négative :)",
+                        negativeRule: "Use \"will not\" (won't) + base form of verb. (Utilisez \"will not\" (won't) + base verbale.)",
+                        negativeExample1: "I will not work tomorrow. (Je ne travaillerai pas demain.)",
+                        negativeExample2: "She will not work here. (Elle ne travaillera pas ici.)",
+                        negativeExample3: "They will not work late. (Ils ne travailleront pas tard.)",
+                        questionTitle: "Question Form: (Forme interrogative :)",
+                        questionRule: "Use \"will\" + subject + base form of verb. (Utilisez \"will\" + sujet + base verbale.)",
+                        questionExample1: "Will you work tomorrow? (Travailleras-tu demain ?)",
+                        questionExample2: "Will she work hard? (Travaillera-t-elle dur ?)",
+                        questionExample3: "Will they work together? (Travailleront-ils ensemble ?)"
+                    },
+                    toBe: {
+                        title: "The Verb \"To Be\" in Future (Le verbe \"To Be\" au futur)",
+                        conjugation: "Conjugation of \"To Be\" in Future (Conjugaison de \"To Be\" au futur)",
+                        willBe: "will be (sera)",
+                        exampleI: "I will be a student next year. (Je serai étudiant l'année prochaine.)",
+                        exampleYou: "You will be my friend. (Tu seras mon ami.)",
+                        exampleHe: "He will be a teacher. (Il sera enseignant.)",
+                        exampleShe: "She will be happy. (Elle sera heureuse.)",
+                        exampleIt: "It will be a beautiful day. (Ce sera une belle journée.)",
+                        exampleWe: "We will be here. (Nous serons ici.)",
+                        exampleThey: "They will be students. (Ils seront étudiants.)",
+                        negativeTitle: "Negative Form: (Forme négative :)",
+                        negativeRule: "Use \"will not be\" (won't be). (Utilisez \"will not be\" (won't be).)",
+                        negativeExample1: "I will not be a doctor. (Je ne serai pas médecin.)",
+                        negativeExample2: "She will not be tired. (Elle ne sera pas fatiguée.)",
+                        negativeExample3: "They will not be here. (Ils ne seront pas ici.)",
+                        questionTitle: "Question Form: (Forme interrogative :)",
+                        questionRule: "Use \"will\" + subject + \"be\". (Utilisez \"will\" + sujet + \"be\".)",
+                        questionExample1: "Will I be late? (Serai-je en retard ?)",
+                        questionExample2: "Will she be a teacher? (Sera-t-elle enseignante ?)",
+                        questionExample3: "Will they be ready? (Seront-ils prêts ?)"
+                    },
+                    toHave: {
+                        title: "The Verb \"To Have\" in Future (Le verbe \"To Have\" au futur)",
+                        conjugation: "Conjugation of \"To Have\" in Future (Conjugaison de \"To Have\" au futur)",
+                        willHave: "will have (aura)",
+                        exampleI: "I will have a car. (J'aurai une voiture.)",
+                        exampleYou: "You will have a book. (Tu auras un livre.)",
+                        exampleHe: "He will have a cat. (Il aura un chat.)",
+                        exampleShe: "She will have a dog. (Elle aura un chien.)",
+                        exampleIt: "It will have four legs. (Il aura quatre pattes.)",
+                        exampleWe: "We will have time. (Nous aurons du temps.)",
+                        exampleThey: "They will have money. (Ils auront de l'argent.)",
+                        negativeTitle: "Negative Form: (Forme négative :)",
+                        negativeRule: "Use \"will not have\" (won't have). (Utilisez \"will not have\" (won't have).)",
+                        negativeExample1: "I will not have a car. (Je n'aurai pas de voiture.)",
+                        negativeExample2: "She will not have a dog. (Elle n'aura pas de chien.)",
+                        negativeExample3: "They will not have time. (Ils n'auront pas de temps.)",
+                        questionTitle: "Question Form: (Forme interrogative :)",
+                        questionRule: "Use \"will\" + subject + \"have\". (Utilisez \"will\" + sujet + \"have\".)",
+                        questionExample1: "Will you have a car? (Auras-tu une voiture ?)",
+                        questionExample2: "Will she have a dog? (Aura-t-elle un chien ?)",
+                        questionExample3: "Will they have time? (Auront-ils du temps ?)"
+                    },
+                    irregularVerbs: {
+                        title: "Common Irregular Verbs in Future (Verbes irréguliers courants au futur)",
+                        conjugation: "Irregular Verb Conjugations in Future (Conjugaisons des verbes irréguliers au futur)",
+                        ruleTitle: "About Irregular Verbs in Future: (À propos des verbes irréguliers au futur :)",
+                        rule: "All irregular verbs use \"will\" + base form in the Simple Future tense. The irregularity doesn't affect the future form. (Tous les verbes irréguliers utilisent \"will\" + base au futur simple. L'irrégularité n'affecte pas la forme du futur.)",
+                        futureForm: "Future Form (Forme future)",
+                        go: "go (aller)", willGo: "will go (ira)", goExample: "I will go to school tomorrow. (J'irai à l'école demain.)",
+                        do: "do (faire)", willDo: "will do (fera)", doExample: "He will do his homework. (Il fera ses devoirs.)",
+                        have: "have (avoir)", willHave: "will have (aura)", haveExample: "She will have a cat. (Elle aura un chat.)",
+                        eat: "eat (manger)", willEat: "will eat (mangera)", eatExample: "We will eat dinner at 7 PM. (Nous dînerons à 19h.)",
+                        see: "see (voir)", willSee: "will see (verra)", seeExample: "They will see a movie tomorrow. (Ils verront un film demain.)",
+                        take: "take (prendre)", willTake: "will take (prendra)", takeExample: "I will take a bus to work. (Je prendrai le bus pour aller au travail.)",
+                        moreExamplesTitle: "More Examples: (Plus d'exemples :)",
+                        example1: "I will go to the gym tomorrow. (J'irai à la salle de sport demain.)",
+                        example2: "She will do her homework after school. (Elle fera ses devoirs après l'école.)",
+                        example3: "We will have a great time at the party. (Nous passerons un bon moment à la fête.)",
+                        example4: "He will eat breakfast at 8 AM. (Il prendra son petit-déjeuner à 8h.)"
+                    },
+                    exercises: {
+                        title: "Practice Exercises (Exercices pratiques)",
+                        q1: "Choose the correct future form of the verb \"to be\": (Choisissez la forme future correcte du verbe \"to be\" :)",
+                        q1Sentence: "She ______ a doctor next year. (Elle ______ médecin l'année prochaine.)",
+                        q1a: "is", q1b: "will be (sera)", q1c: "was",
+                        q2: "Choose the correct future form of the verb \"to have\": (Choisissez la forme future correcte du verbe \"to have\" :)",
+                        q2Sentence: "They ______ a new house next month. (Ils ______ une nouvelle maison le mois prochain.)",
+                        q2a: "has", q2b: "will have (auront)", q2c: "had",
+                        q3: "Choose the correct future form of the verb: (Choisissez la forme future correcte du verbe :)",
+                        q3Sentence: "He ______ (work) in a new office next year. (Il ______ (travailler) dans un nouveau bureau l'année prochaine.)",
+                        q3a: "work", q3b: "will work (travaillera)", q3c: "worked",
+                        q4: "Choose the correct negative form: (Choisissez la forme négative correcte :)",
+                        q4Sentence: "I ______ go to school tomorrow. (Je ______ aller à l'école demain.)",
+                        q4a: "will not (ne vais pas)", q4b: "do not", q4c: "not",
+                        q5: "Choose the correct question form: (Choisissez la forme interrogative correcte :)",
+                        q5Sentence: "______ she work here next year? (______ elle travailler ici l'année prochaine ?)",
+                        q5a: "Do", q5b: "Will", q5c: "Was",
+                        q6: "Choose the correct form of the irregular verb: (Choisissez la forme correcte du verbe irrégulier :)",
+                        q6Sentence: "He ______ to school tomorrow. (Il ______ à l'école demain.)",
+                        q6a: "go", q6b: "will go (ira)", q6c: "went",
+                        q7: "Complete the sentence with the correct form of the verb: I ______ (to be) a doctor in the future. (Complétez avec la forme correcte : Je ______ (être) médecin à l'avenir.)",
+                        q8: "Complete the sentence with the correct form of the verb: She ______ (to have) a new car next year. (Elle ______ (avoir) une nouvelle voiture l'année prochaine.)",
+                        q9: "Complete the sentence with the correct form of the verb: They ______ (to go) to the beach tomorrow. (Ils ______ (aller) à la plage demain.)",
+                        q10: "Arrange the words to form a correct sentence: (Remettez les mots dans l'ordre :)",
+                        q11: "Arrange the words to form a correct sentence: (Remettez les mots dans l'ordre :)",
+                        q12: "Arrange the words to form a correct question: (Remettez les mots dans l'ordre pour former une question :)"
+                    }
+                }
+            },
+            ar: {
+                common: {
+                    siteName: "English Hub",
+                    backToConjugation: "Back to Verb Conjugation (العودة إلى تصريف الأفعال)",
+                    nextLesson: "Next Lesson (الدرس التالي)",
+                    examples: "Examples: (أمثلة:)",
+                    subject: "Subject (الفاعل)",
+                    conjugation: "Conjugation (التصريف)",
+                    example: "Example (مثال)",
+                    verb: "Verb (فعل)",
+                    i: "I (أنا)", you: "You (أنت)", he: "He (هو)", she: "She (هي)", it: "It (هو/هي)", we: "We (نحن)", they: "They (هم)"
+                },
+                footer: { developer: "Developer: Mejri Ziad (المطور: ماجري زياد)", privacy: "Privacy Policy (سياسة الخصوصية)", terms: "Terms of Service (شروط الخدمة)", contact: "Contact (اتصل بنا)" },
+                simpleFuture1: {
+                    title: "Simple Future Tense: Generality (زمن المستقبل البسيط: عموميات)",
+                    subtitle: "Learn to talk about future actions, plans, and predictions (تعلم التحدث عن الأفعال والخطط والتنبؤات المستقبلية)",
+                    introduction: {
+                        title: "Introduction to Simple Future (مقدمة إلى المستقبل البسيط)",
+                        whatIs: "What is the Simple Future Tense? (ما هو زمن المستقبل البسيط؟)",
+                        definitionTitle: "Definition: (تعريف:)",
+                        definition: "The Simple Future tense is used to talk about actions or events that will happen in the future. (يستخدم زمن المستقبل البسيط للتحدث عن أفعال أو أحداث ستحدث في المستقبل.)",
+                        usesTitle: "When to use: (متى نستخدمه:)",
+                        use1: "Predictions about the future (تنبؤات حول المستقبل)",
+                        use2: "Spontaneous decisions (قرارات عفوية)",
+                        use3: "Promises and offers (وعود وعروض)",
+                        use4: "Future plans and intentions (خطط ونوايا مستقبلية)",
+                        example1: "I will work tomorrow. (سأعمل غدًا.)",
+                        example2: "She will visit her grandmother next week. (ستزور جدتها الأسبوع القادم.)",
+                        example3: "They will play soccer this weekend. (سيلعبون كرة القدم في نهاية هذا الأسبوع.)",
+                        example4: "He will study for his exam. (سيدرس لامتحانه.)"
+                    },
+                    structure: {
+                        title: "Basic Structure (البنية الأساسية)",
+                        conjugation: "How to Form the Simple Future (كيفية تكوين المستقبل البسيط)",
+                        ruleTitle: "Basic Rule: (القاعدة الأساسية:)",
+                        rule: "Use \"will\" + base form of the verb for all subjects. (استخدم \"will\" + الشكل الأساسي للفعل لجميع الفواعل.)",
+                        willWork: "will work (سيعمل)",
+                        exampleI: "I will work tomorrow. (سأعمل غدًا.)",
+                        exampleYou: "You will work here. (ستعمل هنا.)",
+                        exampleHe: "He will work at a bank. (سيعمل في بنك.)",
+                        exampleShe: "She will work hard. (ستعمل بجد.)",
+                        exampleIt: "It will work well. (سيعمل بشكل جيد.)",
+                        exampleWe: "We will work together. (سنعمل معًا.)",
+                        exampleThey: "They will work late. (سيعملون حتى وقت متأخر.)",
+                        negativeTitle: "Negative Form: (صيغة النفي:)",
+                        negativeRule: "Use \"will not\" (won't) + base form of verb. (استخدم \"will not\" (won't) + الفعل الأساسي.)",
+                        negativeExample1: "I will not work tomorrow. (لن أعمل غدًا.)",
+                        negativeExample2: "She will not work here. (لن تعمل هنا.)",
+                        negativeExample3: "They will not work late. (لن يعملوا حتى وقت متأخر.)",
+                        questionTitle: "Question Form: (صيغة السؤال:)",
+                        questionRule: "Use \"will\" + subject + base form of verb. (استخدم \"will\" + الفاعل + الفعل الأساسي.)",
+                        questionExample1: "Will you work tomorrow? (هل ستعمل غدًا؟)",
+                        questionExample2: "Will she work hard? (هل ستعمل بجد؟)",
+                        questionExample3: "Will they work together? (هل سيعملون معًا؟)"
+                    },
+                    toBe: {
+                        title: "The Verb \"To Be\" in Future (الفعل \"To Be\" في المستقبل)",
+                        conjugation: "Conjugation of \"To Be\" in Future (تصريف \"To Be\" في المستقبل)",
+                        willBe: "will be (سيكون)",
+                        exampleI: "I will be a student next year. (سأكون طالبًا العام القادم.)",
+                        exampleYou: "You will be my friend. (ستكون صديقي.)",
+                        exampleHe: "He will be a teacher. (سيكون معلمًا.)",
+                        exampleShe: "She will be happy. (ستكون سعيدة.)",
+                        exampleIt: "It will be a beautiful day. (سيكون يومًا جميلًا.)",
+                        exampleWe: "We will be here. (سنكون هنا.)",
+                        exampleThey: "They will be students. (سيكونون طلابًا.)",
+                        negativeTitle: "Negative Form: (صيغة النفي:)",
+                        negativeRule: "Use \"will not be\" (won't be). (استخدم \"will not be\" (won't be).)",
+                        negativeExample1: "I will not be a doctor. (لن أكون طبيبًا.)",
+                        negativeExample2: "She will not be tired. (لن تكون متعبة.)",
+                        negativeExample3: "They will not be here. (لن يكونوا هنا.)",
+                        questionTitle: "Question Form: (صيغة السؤال:)",
+                        questionRule: "Use \"will\" + subject + \"be\". (استخدم \"will\" + الفاعل + \"be\".)",
+                        questionExample1: "Will I be late? (هل سأتأخر؟)",
+                        questionExample2: "Will she be a teacher? (هل ستكون معلمة؟)",
+                        questionExample3: "Will they be ready? (هل سيكونون مستعدين؟)"
+                    },
+                    toHave: {
+                        title: "The Verb \"To Have\" in Future (الفعل \"To Have\" في المستقبل)",
+                        conjugation: "Conjugation of \"To Have\" in Future (تصريف \"To Have\" في المستقبل)",
+                        willHave: "will have (سيملك)",
+                        exampleI: "I will have a car. (سأمتلك سيارة.)",
+                        exampleYou: "You will have a book. (ستملك كتابًا.)",
+                        exampleHe: "He will have a cat. (سيملك قطة.)",
+                        exampleShe: "She will have a dog. (ستملك كلبًا.)",
+                        exampleIt: "It will have four legs. (سيكون لديه أربعة أرجل.)",
+                        exampleWe: "We will have time. (سيكون لدينا وقت.)",
+                        exampleThey: "They will have money. (سيملكون مالًا.)",
+                        negativeTitle: "Negative Form: (صيغة النفي:)",
+                        negativeRule: "Use \"will not have\" (won't have). (استخدم \"will not have\" (won't have).)",
+                        negativeExample1: "I will not have a car. (لن أمتلك سيارة.)",
+                        negativeExample2: "She will not have a dog. (لن تملك كلبًا.)",
+                        negativeExample3: "They will not have time. (لن يملكوا وقتًا.)",
+                        questionTitle: "Question Form: (صيغة السؤال:)",
+                        questionRule: "Use \"will\" + subject + \"have\". (استخدم \"will\" + الفاعل + \"have\".)",
+                        questionExample1: "Will you have a car? (هل ستملك سيارة؟)",
+                        questionExample2: "Will she have a dog? (هل ستملك كلبًا؟)",
+                        questionExample3: "Will they have time? (هل سيملكون وقتًا؟)"
+                    },
+                    irregularVerbs: {
+                        title: "Common Irregular Verbs in Future (الأفعال الشاذة الشائعة في المستقبل)",
+                        conjugation: "Irregular Verb Conjugations in Future (تصريفات الأفعال الشاذة في المستقبل)",
+                        ruleTitle: "About Irregular Verbs in Future: (حول الأفعال الشاذة في المستقبل:)",
+                        rule: "All irregular verbs use \"will\" + base form in the Simple Future tense. The irregularity doesn't affect the future form. (جميع الأفعال الشاذة تستخدم \"will\" + المصدر في المستقبل البسيط. الشذوذ لا يؤثر على صيغة المستقبل.)",
+                        futureForm: "Future Form (صيغة المستقبل)",
+                        go: "go (يذهب)", willGo: "will go (سيذهب)", goExample: "I will go to school tomorrow. (سأذهب إلى المدرسة غدًا.)",
+                        do: "do (يفعل)", willDo: "will do (سيفعل)", doExample: "He will do his homework. (سيفعل واجبه.)",
+                        have: "have (يملك)", willHave: "will have (سيملك)", haveExample: "She will have a cat. (ستملك قطة.)",
+                        eat: "eat (يأكل)", willEat: "will eat (سيأكل)", eatExample: "We will eat dinner at 7 PM. (سنتناول العشاء الساعة 7 مساءً.)",
+                        see: "see (يرى)", willSee: "will see (سيرى)", seeExample: "They will see a movie tomorrow. (سيشاهدون فيلمًا غدًا.)",
+                        take: "take (يأخذ)", willTake: "will take (سيأخذ)", takeExample: "I will take a bus to work. (سأستقل الحافلة إلى العمل.)",
+                        moreExamplesTitle: "More Examples: (أمثلة إضافية:)",
+                        example1: "I will go to the gym tomorrow. (سأذهب إلى النادي غدًا.)",
+                        example2: "She will do her homework after school. (ستفعل واجبها بعد المدرسة.)",
+                        example3: "We will have a great time at the party. (سنقضي وقتًا رائعًا في الحفلة.)",
+                        example4: "He will eat breakfast at 8 AM. (سيتناول الفطور الساعة 8 صباحًا.)"
+                    },
+                    exercises: {
+                        title: "Practice Exercises (تمارين تطبيقية)",
+                        q1: "Choose the correct future form of the verb \"to be\": (اختر صيغة المستقبل الصحيحة للفعل \"to be\":)",
+                        q1Sentence: "She ______ a doctor next year. (هي ______ طبيبة العام القادم.)",
+                        q1a: "is", q1b: "will be (ستكون)", q1c: "was",
+                        q2: "Choose the correct future form of the verb \"to have\": (اختر صيغة المستقبل الصحيحة للفعل \"to have\":)",
+                        q2Sentence: "They ______ a new house next month. (هم ______ منزل جديد الشهر القادم.)",
+                        q2a: "has", q2b: "will have (سيملكون)", q2c: "had",
+                        q3: "Choose the correct future form of the verb: (اختر صيغة المستقبل الصحيحة للفعل:)",
+                        q3Sentence: "He ______ (work) in a new office next year. (هو ______ (يعمل) في مكتب جديد العام القادم.)",
+                        q3a: "work", q3b: "will work (سيعمل)", q3c: "worked",
+                        q4: "Choose the correct negative form: (اختر صيغة النفي الصحيحة:)",
+                        q4Sentence: "I ______ go to school tomorrow. (أنا ______ أذهب إلى المدرسة غدًا.)",
+                        q4a: "will not (لن)", q4b: "do not", q4c: "not",
+                        q5: "Choose the correct question form: (اختر صيغة السؤال الصحيحة:)",
+                        q5Sentence: "______ she work here next year? (______ هي تعمل هنا العام القادم؟)",
+                        q5a: "Do", q5b: "Will", q5c: "Was",
+                        q6: "Choose the correct form of the irregular verb: (اختر الصيغة الصحيحة للفعل الشاذ:)",
+                        q6Sentence: "He ______ to school tomorrow. (هو ______ إلى المدرسة غدًا.)",
+                        q6a: "go", q6b: "will go (سيذهب)", q6c: "went",
+                        q7: "Complete the sentence with the correct form of the verb: I ______ (to be) a doctor in the future. (أكمل بالصيغة الصحيحة: أنا ______ (أكون) طبيبًا في المستقبل.)",
+                        q8: "Complete the sentence with the correct form of the verb: She ______ (to have) a new car next year. (أكمل بالصيغة الصحيحة: هي ______ (تملك) سيارة جديدة العام القادم.)",
+                        q9: "Complete the sentence with the correct form of the verb: They ______ (to go) to the beach tomorrow. (أكمل بالصيغة الصحيحة: هم ______ (يذهبون) إلى الشاطئ غدًا.)",
+                        q10: "Arrange the words to form a correct sentence: (رتب الكلمات لتكوين جملة صحيحة:)",
+                        q11: "Arrange the words to form a correct sentence: (رتب الكلمات لتكوين جملة صحيحة:)",
+                        q12: "Arrange the words to form a correct question: (رتب الكلمات لتكوين سؤال صحيح:)"
+                    }
                 }
             }
-            
-            return totalScore;
-        }
-        
-        // Initialize when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set up answer checking for all exercise types
-            ExerciseType1Possibilities3Init(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            ExerciseType2FillBlankInit(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            ExerciseType3SentenceOrderInit(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            
-            // Replace the default check button with our combined function
-            const checkButton = document.getElementById('EH-exercise-type1-possibilities3-check-answers');
-            if (checkButton) {
-                checkButton.addEventListener('click', checkAllExercises);
-            }
+        };
+    </script>
+    
+    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/exercise-conjugation.js"></script>
+    
+    <script>
+        // Build multiple choice exercises
+        const correctAnswersType1 = buildMultipleChoiceExercise({
+            containerId: 'mc-exercises',
+            prefix: 'EH-exercise-type1-possibilities3',
+            questions: [
+                { questionTextKey: 'simpleFuture1.exercises.q1', options: [{ value: 'a', labelKey: 'simpleFuture1.exercises.q1a' }, { value: 'b', labelKey: 'simpleFuture1.exercises.q1b' }, { value: 'c', labelKey: 'simpleFuture1.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'simpleFuture1.exercises.q2', options: [{ value: 'a', labelKey: 'simpleFuture1.exercises.q2a' }, { value: 'b', labelKey: 'simpleFuture1.exercises.q2b' }, { value: 'c', labelKey: 'simpleFuture1.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'simpleFuture1.exercises.q3', options: [{ value: 'a', labelKey: 'simpleFuture1.exercises.q3a' }, { value: 'b', labelKey: 'simpleFuture1.exercises.q3b' }, { value: 'c', labelKey: 'simpleFuture1.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'simpleFuture1.exercises.q4', options: [{ value: 'a', labelKey: 'simpleFuture1.exercises.q4a' }, { value: 'b', labelKey: 'simpleFuture1.exercises.q4b' }, { value: 'c', labelKey: 'simpleFuture1.exercises.q4c' }], correctAnswer: 'a' },
+                { questionTextKey: 'simpleFuture1.exercises.q5', options: [{ value: 'a', labelKey: 'simpleFuture1.exercises.q5a' }, { value: 'b', labelKey: 'simpleFuture1.exercises.q5b' }, { value: 'c', labelKey: 'simpleFuture1.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'simpleFuture1.exercises.q6', options: [{ value: 'a', labelKey: 'simpleFuture1.exercises.q6a' }, { value: 'b', labelKey: 'simpleFuture1.exercises.q6b' }, { value: 'c', labelKey: 'simpleFuture1.exercises.q6c' }], correctAnswer: 'b' }
+            ]
         });
+
+        const correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises',
+            prefix: 'fill',
+            questions: [
+                { questionTextKey: 'simpleFuture1.exercises.q7', answers: ['will be'] },
+                { questionTextKey: 'simpleFuture1.exercises.q8', answers: ['will have'] },
+                { questionTextKey: 'simpleFuture1.exercises.q9', answers: ['will go'] }
+            ]
+        });
+
+        const correctAnswersType3 = buildSentenceOrderingExercise({
+            containerId: 'order-exercises',
+            prefix: 'order',
+            questions: [
+                { questionTextKey: 'simpleFuture1.exercises.q10', words: ['He', 'will', 'play', 'soccer', 'tomorrow', '.'], correctSentence: 'He will play soccer tomorrow .' },
+                { questionTextKey: 'simpleFuture1.exercises.q11', words: ['We', 'will', 'not', 'like', 'coffee', '.'], correctSentence: 'We will not like coffee .' },
+                { questionTextKey: 'simpleFuture1.exercises.q12', words: ['Will', 'you', 'speak', 'English', 'tomorrow', '?'], correctSentence: 'Will you speak English tomorrow ?' }
+            ]
+        });
+
+        function checkAllExercises() {
+            let totalScore = 0, totalQuestions = 0;
+            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3'); totalQuestions += 6;
+            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill'); totalQuestions += 3;
+            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order'); totalQuestions += 3;
+
+            const scoreEl = document.getElementById('score-value');
+            const fbEl = document.getElementById('score-feedback');
+            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+            if (fbEl) {
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                else fbEl.textContent = 'Review the lesson and try again.';
+            }
+            document.getElementById('score-display').style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+            document.getElementById('check-all').addEventListener('click', checkAllExercises);
+        });
+
+        // i18n rendering (innerHTML safe)
+        (function() {
+            function applyHtmlI18n() {
+                const lang = document.getElementById('language-selector').value;
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                    if (translation) {
+                        if (/<[^>]*>/.test(translation)) el.innerHTML = translation;
+                        else el.textContent = translation;
+                    }
+                });
+            }
+            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+        })();
     </script>
 </body>
 </html>

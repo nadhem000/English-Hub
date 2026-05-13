@@ -3,157 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zero Conditional: Variations & Extended Uses - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
-    <style>
-    :root {
-        /* Zero Conditional Part 2 theme – warm amber/orange */
-        --bg-gradient: linear-gradient(135deg, #e65100, #f57c00, #ffb74d);
-        --title-color: #e65100;
-        --primary: #f57c00;
-        --primary-hover: #e65100;
-        --primary-light: #ffb74d;
-        --accent: #ffb74d;
-        --rule-bg: #fff3e0;
-        --rule-border: #ffb74d;
-        --example-bg: #ffe0b2;
-        --example-border: #ffb74d;
-        --exercise-number-gradient: linear-gradient(135deg, #f57c00, #ffb74d);
-        --nav-btn-bg: #f57c00;
-        --nav-btn-hover: #e65100;
-        --nav-back-btn-bg: #ffb74d;
-        --nav-back-btn-color: white;
-        --nav-back-btn-hover: #f57c00;
-
-        /* Neutrals (same across all lessons) */
-        --header-text: white;
-        --header-text-light: rgba(255, 255, 255, 0.9);
-        --content-bg: rgba(255, 255, 255, 0.95);
-        --text-color: #333;
-        --white: white;
-        --section-divider: #e0e0e0;
-        --card-bg: white;
-        --subsection-bg: white;
-        --card-border: #e0e0e0;
-        --input-border: #e0e0e0;
-        --dashed-border: #e0e0e0;
-        --table-border: #ddd;
-        --table-stripe: #f2f2f2;
-        --correct-bg: #d4edda;
-        --correct-color: #155724;
-        --correct-border: #c3e6cb;
-        --incorrect-bg: #f8d7da;
-        --incorrect-color: #721c24;
-        --incorrect-border: #f5c6cb;
-    }
-    </style>
+    <title>Zero Conditional II: Variations & Extended Uses - English Hub</title>
     <link rel="stylesheet" href="styles/style-conjugation.css">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #e8dff5, #d5c8ed, #c2b0e5, #b39ddb);
+            --content-bg: #faf8fd;
+            --card-bg: #ffffff;
+            --subsection-bg: #f6f3fa;
+            --rule-bg: #f0eaf7;
+            --example-bg: #ebe3f4;
+            --table-stripe: #f3eef8;
+            --title-color: #3d1a6e;
+            --text-color: #2d1650;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #7c5cbf;
+            --primary-hover: #6a48b5;
+            --primary-light: #9175d4;
+            --accent: #8068c8;
+            --exercise-number-gradient: linear-gradient(135deg, #7c5cbf, #5e3d9e);
+            --rule-border: #7c5cbf;
+            --example-border: #7c5cbf;
+            --nav-btn-bg: #7c5cbf;
+            --nav-btn-hover: #5e3d9e;
+            --nav-back-btn-bg: #8068c8;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #7c5cbf;
+            --refract-divider-color: #b8a0d8;
+            --refract-translation-bg: #ebe3f5;
+            --refract-translation-border: #7c5cbf;
+            --refract-english-color: #2d1650;
+            --section-divider: #ddd0ec;
+            --card-border: #d9cce8;
+            --input-border: #c4b0dc;
+            --dashed-border: #c4b0dc;
+            --table-border: #cebce4;
+            --correct-bg: #e0d8f0;
+            --correct-color: #2d1650;
+            --correct-border: #a08cc8;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #ece6f4;
+            --neutral-color: #5a4a7a;
+            --neutral-border: #c4b8dc;
+            --empty-input-border: #b8a8d0;
+            --empty-input-bg: #f4f0f8;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #7c5cbf;
+            --language-selector-color: #2d1650;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #1a1030, #231840, #2c2050, #352860);
+            --content-bg: #1c1430;
+            --card-bg: #251c3d;
+            --subsection-bg: #251c3d;
+            --rule-bg: #1c1430;
+            --example-bg: #1c1430;
+            --table-stripe: #201838;
+            --title-color: #c4b0e8;
+            --text-color: #e0d8f0;
+            --header-text: #e0d8f0;
+            --header-text-light: #c0b0d8;
+            --primary: #a78bfa;
+            --primary-hover: #b9a3fb;
+            --primary-light: #a78bfa;
+            --accent: #a78bfa;
+            --rule-border: #a78bfa;
+            --example-border: #a78bfa;
+            --exercise-number-gradient: linear-gradient(135deg, #a78bfa, #7c5cbf);
+            --nav-btn-bg: #a78bfa;
+            --nav-btn-hover: #7c5cbf;
+            --nav-back-btn-bg: #b9a3fb;
+            --nav-back-btn-color: #0f0a1e;
+            --nav-back-btn-hover: #a78bfa;
+            --refract-divider-color: #9a80d8;
+            --refract-translation-bg: #302858;
+            --refract-translation-border: #9a80d8;
+            --refract-english-color: #d8ccf4;
+            --section-divider: #2a1e48;
+            --card-border: #2a1e48;
+            --input-border: #3d2e68;
+            --dashed-border: #3d2e68;
+            --table-border: #342858;
+            --white: #e8e0f4;
+            --correct-bg: #1e2d3a;
+            --correct-color: #a3c8e6;
+            --correct-border: #6078b0;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #282048;
+            --neutral-color: #c0b0d8;
+            --neutral-border: #4a3870;
+            --empty-input-border: #3d2e68;
+            --empty-input-bg: #1c1430;
+            --language-selector-bg: #251c3d;
+            --language-selector-border: #a78bfa;
+            --language-selector-color: #e0d8f0;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
+        }
+    </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="zeroConditional2.title">Zero Conditional: Variations & Extended Uses</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="zeroConditional2.subtitle">Explore modals, imperative, and the difference between 'if' and 'when' in zero conditional structures.</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="zeroConditional2.title.line1">Zero Conditional II:</div>
+                <div class="EH-conjugation-title-line" data-i18n="zeroConditional2.title.line2">Variations & Extended Uses</div>
+                <div class="EH-conjugation-subtitle" data-i18n="zeroConditional2.title.line3">Modals, imperative, and the difference between 'if' and 'when'.</div>
+                <div class="EH-conjugation-subtitle" data-i18n="zeroConditional2.title.line4">lesson: 2/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Section 1: Using Modals in the Result Clause -->
+            <!-- Section 1: Modals in the Result Clause -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional2.modals.title">Modals in the Result Clause</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional2.modals.title">II. 1. Modals in the Result Clause</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⚡</span>
-                        <span data-i18n="zeroConditional2.modals.subtitle">Expressing certainty, permission, or possibility</span>
+                        <span class="EH-conjugation-subsection-icon">🔧</span>
+                        <span data-i18n="zeroConditional2.modals.heading">Using can, will, may</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional2.modals.ruleTitle">Using can, will, may:</div>
-                        <p data-i18n="zeroConditional2.modals.ruleText">In zero conditional, the result clause can include modals like <strong>can</strong> (permission/ability), <strong>will</strong> (certain future result), or <strong>may</strong> (possibility). The if-clause still uses present simple.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional2.modals.ex1">If you are over 18, you <strong>can</strong> vote. (permission)</div>
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional2.modals.ex2">If you don’t water plants, they <strong>will</strong> die. (certain result)</div>
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional2.modals.ex3">If the temperature drops, water <strong>may</strong> freeze. (possibility)</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional2.modals.desc">📘 In zero conditional, the result clause can include modals:</div>
+                        <p data-i18n="zeroConditional2.modals.desc2">The if-clause still uses present simple. Modals like <strong>can</strong> (permission/ability), <strong>will</strong> (certain future result), or <strong>may</strong> (possibility) add nuance to the result.</p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional2.modals.canTitle">✅ can — permission or ability:</div>
+                        <p data-i18n="zeroConditional2.modals.canDesc">If you are over 18, you can vote. (permission)</p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional2.modals.willTitle">✅ will — certain future result:</div>
+                        <p data-i18n="zeroConditional2.modals.willDesc">If you don't water plants, they will die. (certain result)</p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional2.modals.mayTitle">✅ may — possibility:</div>
+                        <p data-i18n="zeroConditional2.modals.mayDesc">If the temperature drops, water may freeze. (possibility)</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional2.modals.ex1">If you are over 18, you can vote.</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional2.modals.ex2">If you don't water plants, they will die.</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional2.modals.ex3">If the temperature drops, water may freeze.</div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Section 2: Imperative in the Result Clause -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional2.imperative.title">Imperative in the Result Clause</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional2.imperative.title">II. 2. Imperative in the Result Clause</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📢</span>
-                        <span data-i18n="zeroConditional2.imperative.subtitle">Instructions, advice, and commands</span>
+                        <span class="EH-conjugation-subsection-icon">📋</span>
+                        <span data-i18n="zeroConditional2.imperative.heading">Structure: If + present simple, (then) imperative</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional2.imperative.ruleTitle">Structure: If + present simple, (then) imperative</div>
-                        <p data-i18n="zeroConditional2.imperative.ruleText">The imperative gives a direct instruction or advice based on the condition. It is common in user manuals, advice, and warnings.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional2.imperative.ex1">If you feel tired, <strong>take</strong> a rest.</div>
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional2.imperative.ex2">If the machine stops, <strong>press</strong> the reset button.</div>
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional2.imperative.ex3">If you see smoke, <strong>call</strong> the fire department.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional2.imperative.desc">📘 The imperative gives a direct instruction or advice based on the condition:</div>
+                        <p data-i18n="zeroConditional2.imperative.desc2">This structure is common in user manuals, advice, and warnings. The word "then" is optional before the imperative.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional2.imperative.ex1">If you feel tired, take a rest.</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional2.imperative.ex2">If the machine stops, press the reset button.</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional2.imperative.ex3">If you see smoke, call the fire department.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Section 3: If vs When -->
+
+            <!-- Section 3: If vs When in Zero Conditional -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional2.ifWhen.title">If vs When in Zero Conditional</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional2.ifVsWhen.title">II. 3. If vs When in Zero Conditional</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔁</span>
-                        <span data-i18n="zeroConditional2.ifWhen.subtitle">Nuance of certainty</span>
+                        <span class="EH-conjugation-subsection-icon">🔄</span>
+                        <span data-i18n="zeroConditional2.ifVsWhen.heading">When to use each</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional2.ifWhen.ruleTitle">When to use each:</div>
-                        <p data-i18n="zeroConditional2.ifWhen.ruleText"><strong>If</strong> is used for general truths or possible situations; <strong>when</strong> implies a situation that is certain or habitual. Both are often interchangeable in zero conditional, but "when" suggests a stronger sense of time/certainty.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional2.ifWhen.ex1">If you heat ice, it melts. (general truth)</div>
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional2.ifWhen.ex2">When you heat ice, it melts. (also correct, same meaning)</div>
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional2.ifWhen.ex3">If I am late, I feel stressed. (possible situation)</div>
-                            <div class="EH-conjugation-example" data-i18n="zeroConditional2.ifWhen.ex4">When I am late, I feel stressed. (habitual, every time)</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional2.ifVsWhen.ifTitle">📘 If — general truths or possible situations:</div>
+                        <p data-i18n="zeroConditional2.ifVsWhen.ifDesc"><strong>If</strong> is used for general truths or possible situations. It presents a condition that may or may not occur.</p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional2.ifVsWhen.whenTitle">📘 When — certain or habitual situations:</div>
+                        <p data-i18n="zeroConditional2.ifVsWhen.whenDesc"><strong>When</strong> implies a situation that is certain or habitual. It suggests a stronger sense of time/certainty, as if the condition always happens.</p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="zeroConditional2.ifVsWhen.noteTitle">💡 Note:</div>
+                        <p data-i18n="zeroConditional2.ifVsWhen.noteDesc">Both are often interchangeable in zero conditional, but "when" suggests a stronger sense of time/certainty.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional2.ifVsWhen.ex1">If you heat ice, it melts. (general truth)</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional2.ifVsWhen.ex2">When you heat ice, it melts. (also correct, same meaning)</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional2.ifVsWhen.ex3">If I am late, I feel stressed. (possible situation)</div>
+                        <div class="EH-conjugation-example" data-i18n="zeroConditional2.ifVsWhen.ex4">When I am late, I feel stressed. (habitual, every time)</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- EXERCISES (12) – dynamic slots -->
+
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional2.exercises.title">Practice Exercises: Variations & Extended Uses</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #e65100; margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="zeroConditional2.exercises.title">Practice: Modals, Imperatives & If vs When</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #e65100; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #e65100; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
@@ -163,235 +236,216 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation -->
-			<div class="EH-conjugation-navigation">
-				<!-- <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-					<span></span>
-				</button> -->
-				<button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-					<span data-i18n="common.nextLesson">Next Lesson</span>
-				</button>
-				<button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-					<span data-i18n="common.previousLesson">Previous Lesson</span>
-				</button>
-				<button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-					<span data-i18n="common.returnToConjugation">Return to Conjugation</span>
-				</button>
-			</div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
     <script>
         window.I18N = {
             en: {
                 common: {
                     siteName: "English Hub",
-					previousLesson: "← Previous Lesson",
-					returnToConjugation: "← Return to Conjugation",
-					nextLesson: "Next Lesson →"
+                    previousLesson: "← Previous Lesson",
+                    returnToConjugation: "← Return to Conjugation",
+                    nextLesson: "Next Lesson →"
                 },
                 footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
                 zeroConditional2: {
-                    title: "Zero Conditional: Variations & Extended Uses",
-                    subtitle: "Explore modals, imperative, and the difference between 'if' and 'when' in zero conditional structures.",
+                    title: {
+                        line1: "Zero Conditional II:",
+                        line2: "Variations & Extended Uses",
+                        line3: "Modals, imperative, and the difference between 'if' and 'when'.",
+                        line4: "lesson: 2/3"
+                    },
                     modals: {
-                        title: "Modals in the Result Clause",
-                        subtitle: "Expressing certainty, permission, or possibility",
-                        ruleTitle: "Using can, will, may:",
-                        ruleText: "In zero conditional, the result clause can include modals like can (permission/ability), will (certain future result), or may (possibility). The if-clause still uses present simple.",
-                        ex1: "If you are over 18, you can vote. (permission)",
-                        ex2: "If you don’t water plants, they will die. (certain result)",
-                        ex3: "If the temperature drops, water may freeze. (possibility)"
+                        title: "II. 1. Modals in the Result Clause",
+                        heading: "Using can, will, may",
+                        desc: "📘 In zero conditional, the result clause can include modals:",
+                        desc2: "The if-clause still uses present simple. Modals like can (permission/ability), will (certain future result), or may (possibility) add nuance to the result.",
+                        canTitle: "✅ can — permission or ability:",
+                        canDesc: "If you are over 18, you can vote. (permission)",
+                        willTitle: "✅ will — certain future result:",
+                        willDesc: "If you don't water plants, they will die. (certain result)",
+                        mayTitle: "✅ may — possibility:",
+                        mayDesc: "If the temperature drops, water may freeze. (possibility)",
+                        ex1: "If you are over 18, you can vote.",
+                        ex2: "If you don't water plants, they will die.",
+                        ex3: "If the temperature drops, water may freeze."
                     },
                     imperative: {
-                        title: "Imperative in the Result Clause",
-                        subtitle: "Instructions, advice, and commands",
-                        ruleTitle: "Structure: If + present simple, (then) imperative",
-                        ruleText: "The imperative gives a direct instruction or advice based on the condition. It is common in user manuals, advice, and warnings.",
+                        title: "II. 2. Imperative in the Result Clause",
+                        heading: "Structure: If + present simple, (then) imperative",
+                        desc: "📘 The imperative gives a direct instruction or advice based on the condition:",
+                        desc2: "This structure is common in user manuals, advice, and warnings. The word \"then\" is optional before the imperative.",
                         ex1: "If you feel tired, take a rest.",
                         ex2: "If the machine stops, press the reset button.",
                         ex3: "If you see smoke, call the fire department."
                     },
-                    ifWhen: {
-                        title: "If vs When in Zero Conditional",
-                        subtitle: "Nuance of certainty",
-                        ruleTitle: "When to use each:",
-                        ruleText: "If is used for general truths or possible situations; when implies a situation that is certain or habitual. Both are often interchangeable in zero conditional, but 'when' suggests a stronger sense of time/certainty.",
+                    ifVsWhen: {
+                        title: "II. 3. If vs When in Zero Conditional",
+                        heading: "When to use each",
+                        ifTitle: "📘 If — general truths or possible situations:",
+                        ifDesc: "If is used for general truths or possible situations. It presents a condition that may or may not occur.",
+                        whenTitle: "📘 When — certain or habitual situations:",
+                        whenDesc: "When implies a situation that is certain or habitual. It suggests a stronger sense of time/certainty, as if the condition always happens.",
+                        noteTitle: "💡 Note:",
+                        noteDesc: "Both are often interchangeable in zero conditional, but \"when\" suggests a stronger sense of time/certainty.",
                         ex1: "If you heat ice, it melts. (general truth)",
                         ex2: "When you heat ice, it melts. (also correct, same meaning)",
                         ex3: "If I am late, I feel stressed. (possible situation)",
                         ex4: "When I am late, I feel stressed. (habitual, every time)"
                     },
                     exercises: {
-                        title: "Practice Exercises: Variations & Extended Uses",
-                        /* Multiple choice – unchanged */
+                        title: "Practice: Modals, Imperatives & If vs When",
                         q1: "If you finish your homework, you ______ go out.",
-                        q1a: "must", q1b: "can", q1c: "should",
+                        q1a: "must",
+                        q1b: "can",
+                        q1c: "should",
                         q2: "If you feel dizzy, ______ down.",
-                        q2a: "sit", q2b: "to sit", q2c: "sitting",
+                        q2a: "sit",
+                        q2b: "to sit",
+                        q2c: "sitting",
                         q3: "If you leave ice in the sun, it ______ melt.",
-                        q3a: "will", q3b: "may", q3c: "can",
+                        q3a: "will",
+                        q3b: "may",
+                        q3c: "can",
                         q4: "______ I have a day off, I go hiking.",
-                        q4a: "If", q4b: "When", q4c: "Both are possible",
+                        q4a: "If",
+                        q4b: "When",
+                        q4c: "Both are possible",
                         q5: "If you exercise regularly, you ______ feel more energetic.",
-                        q5a: "must", q5b: "will", q5c: "may",
+                        q5a: "must",
+                        q5b: "will",
+                        q5c: "may",
                         q6: "If you want to learn English, ______ every day.",
-                        q6a: "practice", q6b: "to practice", q6c: "practicing",
-                        /* Fill in the blanks – now include an instruction */
-                        q7: "Complete with a suitable modal (can / will / may):  If you drop a glass, it ______ break.",
-                        q8: "Complete with an imperative verb:  If the alarm rings, ______ the building immediately.",
-                        q9: "Choose if or when:  ______ you heat water to 100°C, it boils.",
-                        /* Sentence ordering – unchanged */
-                        q10: "Arrange the words to form a correct sentence (modal can):",
-                        q11: "Arrange the imperative sentence:",
-                        q12: "Arrange the sentence using 'when' for a habit:"
+                        q6a: "practice",
+                        q6b: "to practice",
+                        q6c: "practicing",
+                        q7: "Complete with a suitable modal (can / will / may): If you drop a glass, it ______ break.",
+                        q8: "Complete with an imperative verb: If the alarm rings, ______ the building immediately.",
+                        q9: "Choose if or when: ______ you heat water to 100°C, it boils.",
+                        q10: "Arrange the words to form a correct sentence (modal can): (you / enter / can / you / if / have / a / ticket / .)",
+                        q11: "Arrange the imperative sentence: (call / you / an / ambulance / if / see / an / accident / .)",
+                        q12: "Arrange the sentence using 'when' for a habit: (feel / I / stressed / when / yoga / do / I / .)"
                     }
                 }
             },
             fr: {
                 common: {
                     siteName: "English Hub",
-				previousLesson: "← Previous Lesson (Leçon Précédente)",
-				returnToConjugation: "← Return to Conjugation (Retour au Conjugaison)",
-					nextLesson: "Next Lesson (Leçon Suivante) →"
+                    previousLesson: "← Leçon Précédente",
+                    returnToConjugation: "← Retour au Conjugaison",
+                    nextLesson: "Leçon Suivante →"
                 },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
                 zeroConditional2: {
-                    title: "Zero Conditional: Variations & Extended Uses (Conditionnel zéro : variations et usages étendus)",
-                    subtitle: "Explore modals, imperative, and the difference between 'if' and 'when' in zero conditional structures. (Explorez les modaux, l'impératif et la différence entre 'if' et 'when' dans les structures du conditionnel zéro.)",
+                    title: {
+                        line1: "Conditionnel Zéro II :",
+                        line2: "Variations et Utilisations Avancées",
+                        line3: "Modaux, impératif et la différence entre 'if' et 'when'.",
+                        line4: "leçon : 2/3"
+                    },
                     modals: {
-                        title: "Modals in the Result Clause (Modaux dans la proposition de résultat)",
-                        subtitle: "Expressing certainty, permission, or possibility (Exprimer la certitude, la permission ou la possibilité)",
-                        ruleTitle: "Using can, will, may: (Utiliser can, will, may :)",
-                        ruleText: "In zero conditional, the result clause can include modals like can (permission/ability), will (certain future result), or may (possibility). The if-clause still uses present simple. (Dans le conditionnel zéro, la proposition de résultat peut inclure des modaux comme can (permission/capacité), will (résultat futur certain), ou may (possibilité). La proposition avec if utilise toujours le présent simple.)",
-                        ex1: "If you are over 18, you can vote. (permission) (Si vous avez plus de 18 ans, vous pouvez voter.)",
-                        ex2: "If you don’t water plants, they will die. (certain result) (Si vous n'arrosez pas les plantes, elles mourront.)",
-                        ex3: "If the temperature drops, water may freeze. (possibility) (Si la température baisse, l'eau peut geler.)"
+                        title: "II. 1. Modaux dans la Proposition Résultat",
+                        heading: "Utiliser can, will, may",
+                        desc: "📘 Dans le conditionnel zéro, la proposition résultat peut inclure des modaux :",
+                        desc2: "La proposition avec if reste au présent simple. Les modaux comme can (permission/capacité), will (résultat futur certain) ou may (possibilité) ajoutent une nuance au résultat.",
+                        canTitle: "✅ can — permission ou capacité :",
+                        canDesc: "Si vous avez plus de 18 ans, vous pouvez voter. (permission)",
+                        willTitle: "✅ will — résultat futur certain :",
+                        willDesc: "Si vous n'arrosez pas les plantes, elles mourront. (résultat certain)",
+                        mayTitle: "✅ may — possibilité :",
+                        mayDesc: "Si la température baisse, l'eau peut geler. (possibilité)",
+                        ex1: "Si vous avez plus de 18 ans, vous pouvez voter.",
+                        ex2: "Si vous n'arrosez pas les plantes, elles mourront.",
+                        ex3: "Si la température baisse, l'eau peut geler."
                     },
                     imperative: {
-                        title: "Imperative in the Result Clause (Impératif dans la proposition de résultat)",
-                        subtitle: "Instructions, advice, and commands (Instructions, conseils et ordres)",
-                        ruleTitle: "Structure: If + present simple, (then) imperative (Structure : If + présent simple, (alors) impératif)",
-                        ruleText: "The imperative gives a direct instruction or advice based on the condition. It is common in user manuals, advice, and warnings. (L'impératif donne une instruction directe ou un conseil basé sur la condition. Il est courant dans les manuels d'utilisation, les conseils et les avertissements.)",
-                        ex1: "If you feel tired, take a rest. (Si vous êtes fatigué, reposez-vous.)",
-                        ex2: "If the machine stops, press the reset button. (Si la machine s'arrête, appuyez sur le bouton de réinitialisation.)",
-                        ex3: "If you see smoke, call the fire department. (Si vous voyez de la fumée, appelez les pompiers.)"
+                        title: "II. 2. Impératif dans la Proposition Résultat",
+                        heading: "Structure : If + présent simple, (then) impératif",
+                        desc: "📘 L'impératif donne une instruction directe ou un conseil basé sur la condition :",
+                        desc2: "Cette structure est courante dans les manuels d'utilisation, les conseils et les avertissements. Le mot \"then\" est optionnel avant l'impératif.",
+                        ex1: "Si vous vous sentez fatigué, reposez-vous.",
+                        ex2: "Si la machine s'arrête, appuyez sur le bouton de réinitialisation.",
+                        ex3: "Si vous voyez de la fumée, appelez les pompiers."
                     },
-                    ifWhen: {
-                        title: "If vs When in Zero Conditional (If vs When dans le conditionnel zéro)",
-                        subtitle: "Nuance of certainty (Nuance de certitude)",
-                        ruleTitle: "When to use each: (Quand utiliser chacun :)",
-                        ruleText: "If is used for general truths or possible situations; when implies a situation that is certain or habitual. Both are often interchangeable in zero conditional, but 'when' suggests a stronger sense of time/certainty. (If est utilisé pour les vérités générales ou les situations possibles ; when implique une situation certaine ou habituelle. Les deux sont souvent interchangeables dans le conditionnel zéro, mais 'when' suggère un sens plus fort de temps/certitude.)",
-                        ex1: "If you heat ice, it melts. (general truth) (Si vous chauffez de la glace, elle fond.)",
-                        ex2: "When you heat ice, it melts. (also correct, same meaning) (Quand vous chauffez de la glace, elle fond.)",
-                        ex3: "If I am late, I feel stressed. (possible situation) (Si je suis en retard, je me sens stressé.)",
-                        ex4: "When I am late, I feel stressed. (habitual, every time) (Quand je suis en retard, je me sens stressé.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises: Variations & Extended Uses (Exercices pratiques : variations et usages étendus)",
-                        q1: "If you finish your homework, you ______ go out. (Si tu finis tes devoirs, tu ______ sortir.)",
-                        q1a: "must", q1b: "can", q1c: "should",
-                        q2: "If you feel dizzy, ______ down. (Si vous avez des vertiges, ______ vous.)",
-                        q2a: "sit", q2b: "to sit", q2c: "sitting",
-                        q3: "If you leave ice in the sun, it ______ melt. (Si vous laissez de la glace au soleil, elle ______ fondre.)",
-                        q3a: "will", q3b: "may", q3c: "can",
-                        q4: "______ I have a day off, I go hiking. (______ j'ai un jour de congé, je pars en randonnée.)",
-                        q4a: "If", q4b: "When", q4c: "Both are possible",
-                        q5: "If you exercise regularly, you ______ feel more energetic. (Si vous faites de l'exercice régulièrement, vous ______ vous sentir plus énergique.)",
-                        q5a: "must", q5b: "will", q5c: "may",
-                        q6: "If you want to learn English, ______ every day. (Si vous voulez apprendre l'anglais, ______ chaque jour.)",
-                        q6a: "practice", q6b: "to practice", q6c: "practicing",
-                        q7: "Complete with a suitable modal (can / will / may):  If you drop a glass, it ______ break. (Complétez avec un modal approprié : Si vous laissez tomber un verre, il ______ se casser.)",
-                        q8: "Complete with an imperative verb:  If the alarm rings, ______ the building immediately. (Complétez avec un verbe impératif : Si l'alarme sonne, ______ le bâtiment immédiatement.)",
-                        q9: "Choose if or when:  ______ you heat water to 100°C, it boils. (Choisissez if ou when : ______ vous chauffez l'eau à 100°C, elle bout.)",
-                        q10: "Arrange the words to form a correct sentence (modal can): (Remettez les mots dans l'ordre pour former une phrase correcte – modal can :)",
-                        q11: "Arrange the imperative sentence: (Remettez la phrase impérative dans l'ordre :)",
-                        q12: "Arrange the sentence using 'when' for a habit: (Remettez la phrase avec 'when' pour une habitude dans l'ordre :)"
+                    ifVsWhen: {
+                        title: "II. 3. If vs When dans le Conditionnel Zéro",
+                        heading: "Quand utiliser chacun",
+                        ifTitle: "📘 If — vérités générales ou situations possibles :",
+                        ifDesc: "If est utilisé pour des vérités générales ou des situations possibles. Il présente une condition qui peut ou non se produire.",
+                        whenTitle: "📘 When — situations certaines ou habituelles :",
+                        whenDesc: "When implique une situation certaine ou habituelle. Il suggère un sens plus fort de temps/certitude, comme si la condition se produit toujours.",
+                        noteTitle: "💡 Remarque :",
+                        noteDesc: "Les deux sont souvent interchangeables dans le conditionnel zéro, mais \"when\" suggère un sens plus fort de temps/certitude.",
+                        ex1: "Si vous chauffez de la glace, elle fond. (vérité générale)",
+                        ex2: "Quand vous chauffez de la glace, elle fond. (également correct, même sens)",
+                        ex3: "Si je suis en retard, je me sens stressé. (situation possible)",
+                        ex4: "Quand je suis en retard, je me sens stressé. (habituel, chaque fois)"
                     }
                 }
             },
             ar: {
                 common: {
                     siteName: "English Hub",
-					previousLesson: "Previous Lesson (الدرس السابق)← ",
-					returnToConjugation: "Return to Conjugation (العودة إلى التصريف)← ",
-					nextLesson: "Next Lesson (الدرس التالي) →"
+                    previousLesson: "الدرس السابق← ",
+                    returnToConjugation: "العودة إلى التصريف← ",
+                    nextLesson: "الدرس التالي →"
                 },
                 footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
                 zeroConditional2: {
-                    title: "Zero Conditional: Variations & Extended Uses (الشرط الصفري: تنويعات واستخدامات موسعة)",
-                    subtitle: "Explore modals, imperative, and the difference between 'if' and 'when' in zero conditional structures. (استكشف الأفعال المساعدة، صيغة الأمر، والفرق بين 'if' و 'when' في تراكيب الشرط الصفري.)",
+                    title: {
+                        line1: "الشرط الصفري: 2:",
+                        line2: "الاختلافات والاستخدامات المتقدمة",
+                        line3: "الأفعال الناقصة، الأمر، والفرق بين 'if' و 'when'.",
+                        line4: "الدرس: 2/3"
+                    },
                     modals: {
-                        title: "Modals in the Result Clause (الأفعال المساعدة في جملة النتيجة)",
-                        subtitle: "Expressing certainty, permission, or possibility (اليقين، الإذن، أو الاحتمال)",
-                        ruleTitle: "Using can, will, may: (استخدام can، will، may:)",
-                        ruleText: "In zero conditional, the result clause can include modals like can (permission/ability), will (certain future result), or may (possibility). The if-clause still uses present simple. (في الشرط الصفري، يمكن أن تتضمن جملة النتيجة أفعالاً مساعدة مثل can (إذن/قدرة)، will (نتيجة مستقبلية مؤكدة)، أو may (احتمال). جملة if لا تزال تستخدم المضارع البسيط.)",
-                        ex1: "If you are over 18, you can vote. (permission) (إذا كنت فوق 18 عامًا، يمكنك التصويت.)",
-                        ex2: "If you don’t water plants, they will die. (certain result) (إذا لم تسقِ النباتات، ستموت.)",
-                        ex3: "If the temperature drops, water may freeze. (possibility) (إذا انخفضت درجة الحرارة، قد يتجمد الماء.)"
+                        title: "II. 1. الأفعال الناقصة في جملة النتيجة",
+                        heading: "استخدام can، will، may",
+                        desc: "📘 في الشرط الصفري، يمكن أن تتضمن جملة النتيجة أفعالًا ناقصة:",
+                        desc2: "تبقى جملة if في المضارع البسيط. الأفعال الناقصة مثل can (إذن/قدرة)، will (نتيجة مستقبلية مؤكدة)، أو may (إمكانية) تضيف فارقًا دقيقًا للنتيجة.",
+                        canTitle: "✅ can — إذن أو قدرة:",
+                        canDesc: "إذا كنت فوق 18 عامًا، يمكنك التصويت. (إذن)",
+                        willTitle: "✅ will — نتيجة مستقبلية مؤكدة:",
+                        willDesc: "إذا لم تسقِ النباتات، ستموت. (نتيجة مؤكدة)",
+                        mayTitle: "✅ may — إمكانية:",
+                        mayDesc: "إذا انخفضت درجة الحرارة، قد يتجمد الماء. (إمكانية)",
+                        ex1: "إذا كنت فوق 18 عامًا، يمكنك التصويت.",
+                        ex2: "إذا لم تسقِ النباتات، ستموت.",
+                        ex3: "إذا انخفضت درجة الحرارة، قد يتجمد الماء."
                     },
                     imperative: {
-                        title: "Imperative in the Result Clause (صيغة الأمر في جملة النتيجة)",
-                        subtitle: "Instructions, advice, and commands (تعليمات، نصائح، أوامر)",
-                        ruleTitle: "Structure: If + present simple, (then) imperative (البنية: If + مضارع بسيط، (ثم) فعل أمر)",
-                        ruleText: "The imperative gives a direct instruction or advice based on the condition. It is common in user manuals, advice, and warnings. (صيغة الأمر تعطي تعليمات أو نصائح مباشرة بناءً على الشرط. وهي شائعة في كتيبات الاستخدام والنصائح والتحذيرات.)",
-                        ex1: "If you feel tired, take a rest. (إذا شعرت بالتعب، خذ قسطًا من الراحة.)",
-                        ex2: "If the machine stops, press the reset button. (إذا توقفت الآلة، اضغط زر إعادة الضبط.)",
-                        ex3: "If you see smoke, call the fire department. (إذا رأيت دخانًا، اتصل بقسم الإطفاء.)"
+                        title: "II. 2. الأمر في جملة النتيجة",
+                        heading: "البنية: If + مضارع بسيط، (then) أمر",
+                        desc: "📘 يعطي الأمر توجيهًا مباشرًا أو نصيحة بناءً على الشرط:",
+                        desc2: "هذه البنية شائعة في كتيبات المستخدم والنصائح والتحذيرات. كلمة \"then\" اختيارية قبل الأمر.",
+                        ex1: "إذا شعرت بالتعب، استرح.",
+                        ex2: "إذا توقفت الآلة، اضغط زر إعادة التشغيل.",
+                        ex3: "إذا رأيت دخانًا، اتصل بقسم الإطفاء."
                     },
-                    ifWhen: {
-                        title: "If vs When in Zero Conditional (If مقابل When في الشرط الصفري)",
-                        subtitle: "Nuance of certainty (فروق دقيقة في اليقين)",
-                        ruleTitle: "When to use each: (متى تستخدم كلًا منهما:)",
-                        ruleText: "If is used for general truths or possible situations; when implies a situation that is certain or habitual. Both are often interchangeable in zero conditional, but 'when' suggests a stronger sense of time/certainty. (If يستخدم للحقائق العامة أو المواقف المحتملة؛ when يشير إلى موقف مؤكد أو معتاد. كلاهما غالبًا قابل للتبادل في الشرط الصفري، لكن 'when' توحي بإحساس أقوى بالزمن/اليقين.)",
-                        ex1: "If you heat ice, it melts. (general truth) (إذا سخنت الجليد، يذوب.)",
-                        ex2: "When you heat ice, it melts. (also correct, same meaning) (عندما تسخن الجليد، يذوب.)",
-                        ex3: "If I am late, I feel stressed. (possible situation) (إذا تأخرت، أشعر بالتوتر.)",
-                        ex4: "When I am late, I feel stressed. (habitual, every time) (عندما أتأخر، أشعر بالتوتر.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises: Variations & Extended Uses (تمارين تطبيقية: تنويعات واستخدامات موسعة)",
-                        q1: "If you finish your homework, you ______ go out. (إذا أنهيت واجبك، ______ الخروج.)",
-                        q1a: "must", q1b: "can", q1c: "should",
-                        q2: "If you feel dizzy, ______ down. (إذا شعرت بدوار، ______.)",
-                        q2a: "sit", q2b: "to sit", q2c: "sitting",
-                        q3: "If you leave ice in the sun, it ______ melt. (إذا تركت الجليد في الشمس، فإنه ______ يذوب.)",
-                        q3a: "will", q3b: "may", q3c: "can",
-                        q4: "______ I have a day off, I go hiking. (______ لدي يوم عطلة، أذهب للمشي في الطبيعة.)",
-                        q4a: "If", q4b: "When", q4c: "Both are possible",
-                        q5: "If you exercise regularly, you ______ feel more energetic. (إذا مارست الرياضة بانتظام، ______ تشعر بمزيد من النشاط.)",
-                        q5a: "must", q5b: "will", q5c: "may",
-                        q6: "If you want to learn English, ______ every day. (إذا أردت تعلم الإنجليزية، ______ كل يوم.)",
-                        q6a: "practice", q6b: "to practice", q6c: "practicing",
-                        q7: "Complete with a suitable modal (can / will / may):  If you drop a glass, it ______ break. (أكمل بفعل مساعد مناسب : إذا أسقطت كأسًا، فإنه ______ ينكسر.)",
-                        q8: "Complete with an imperative verb:  If the alarm rings, ______ the building immediately. (أكمل بفعل أمر : إذا دوى جرس الإنذار، ______ المبنى فورًا.)",
-                        q9: "Choose if or when:  ______ you heat water to 100°C, it boils. (اختر if أو when : ______ تسخن الماء إلى 100°م، يغلي.)",
-                        q10: "Arrange the words to form a correct sentence (modal can): (رتب الكلمات لتكوين جملة صحيحة – فعل مساعد can:)",
-                        q11: "Arrange the imperative sentence: (رتب جملة الأمر:)",
-                        q12: "Arrange the sentence using 'when' for a habit: (رتب الجملة باستخدام 'when' لعادة:)"
+                    ifVsWhen: {
+                        title: "II. 3. If مقابل When في الشرط الصفري",
+                        heading: "متى تستخدم كل منهما",
+                        ifTitle: "📘 If — حقائق عامة أو مواقف محتملة:",
+                        ifDesc: "تُستخدم If للحقائق العامة أو المواقف المحتملة. تقدم شرطًا قد يحدث أو لا يحدث.",
+                        whenTitle: "📘 When — مواقف مؤكدة أو اعتيادية:",
+                        whenDesc: "تشير When إلى موقف مؤكد أو اعتيادي. توحي بإحساس أقوى بالوقت/اليقين، كما لو أن الشرط يحدث دائمًا.",
+                        noteTitle: "💡 ملاحظة:",
+                        noteDesc: "كلاهما غالبًا قابلان للتبديل في الشرط الصفري، لكن \"when\" توحي بإحساس أقوى بالوقت/اليقين.",
+                        ex1: "إذا سخنت الثلج، يذوب. (حقيقة عامة)",
+                        ex2: "عندما تسخن الثلج، يذوب. (صحيح أيضًا، نفس المعنى)",
+                        ex3: "إذا تأخرت، أشعر بالتوتر. (موقف محتمل)",
+                        ex4: "عندما أتأخر، أشعر بالتوتر. (اعتيادي، كل مرة)"
                     }
                 }
             }
         };
     </script>
-
-    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ========== 1. Build exercises and get answer keys ==========
+        // Multiple choice exercises
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
@@ -404,28 +458,32 @@
                 { questionTextKey: 'zeroConditional2.exercises.q6', options: [{ value: 'a', labelKey: 'zeroConditional2.exercises.q6a' }, { value: 'b', labelKey: 'zeroConditional2.exercises.q6b' }, { value: 'c', labelKey: 'zeroConditional2.exercises.q6c' }], correctAnswer: 'a' }
             ]
         });
-
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+    </script>
+    <script>
+        // Fill-in-the-blank exercises
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                { questionTextKey: 'zeroConditional2.exercises.q7', answers: ['will', 'may', 'can'] },
+                { questionTextKey: 'zeroConditional2.exercises.q7', answers: ['will break', 'may break', 'can break'] },
                 { questionTextKey: 'zeroConditional2.exercises.q8', answers: ['leave', 'evacuate', 'exit'] },
                 { questionTextKey: 'zeroConditional2.exercises.q9', answers: ['If', 'When'] }
             ]
         });
-
+    </script>
+    <script>
+        // Sentence ordering exercises
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                { questionTextKey: 'zeroConditional2.exercises.q10', words: ['you', 'enter', 'can', 'you', 'if', 'have', 'a ticket', '.'], correctSentence: 'If you have a ticket you can enter .' },
-                { questionTextKey: 'zeroConditional2.exercises.q11', words: ['call', 'you', 'an ambulance', 'if', 'see', 'an accident', '.'], correctSentence: 'If you see an accident call an ambulance .' },
-                { questionTextKey: 'zeroConditional2.exercises.q12', words: ['feel', 'I', 'stressed', 'when', 'yoga', 'do', 'I', '.'], correctSentence: 'When I feel stressed I do yoga .' }
+                { questionTextKey: 'zeroConditional2.exercises.q10', words: ['If', 'you', 'have', 'a', 'ticket', 'you', 'can', 'enter', '.'], correctSentence: 'If you have a ticket you can enter .' },
+                { questionTextKey: 'zeroConditional2.exercises.q11', words: ['If', 'you', 'see', 'an', 'accident', 'call', 'an', 'ambulance', '.'], correctSentence: 'If you see an accident call an ambulance .' },
+                { questionTextKey: 'zeroConditional2.exercises.q12', words: ['When', 'I', 'feel', 'stressed', 'I', 'do', 'yoga', '.'], correctSentence: 'When I feel stressed I do yoga .' }
             ]
         });
-
-        // ========== 2. Check & init functions ==========
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
@@ -441,29 +499,30 @@
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered zero conditional variations!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit modals, imperatives, and if vs when.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
-        }
 
+            // Sound & visual effects
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
         document.addEventListener('DOMContentLoaded', function() {
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-
-        // ========== 3. i18n rendering (unchanged) ==========
+        // i18n rendering – handles nested keys for title lines
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
-                document.querySelectorAll('[data-i18n]').forEach(el => {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
+                    if (translation) {
                         el.textContent = translation;
                     }
                 });

@@ -3,198 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Third Conditional: Introduction & Basic Form - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>Third Conditional I: Introduction & Basic Form - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-    :root {
-        /* ---------- Theme ---------- */
-        --bg-gradient: linear-gradient(135deg, #4a148c, #7b1fa2, #ab47bc);
-        --title-color: #6a1b9a;
-        --primary: #8e24aa;
-        --primary-hover: #6a1b9a;
-        --primary-light: #ce93d8;
-        --accent: #ce93d8;
-        --rule-bg: #f3e5f5;
-        --rule-border: #ce93d8;
-        --example-bg: #e1bee7;
-        --example-border: #ce93d8;
-        --exercise-number-gradient: linear-gradient(135deg, #8e24aa, #ce93d8);
-        --nav-btn-bg: #8e24aa;
-        --nav-btn-hover: #6a1b9a;
-        --nav-back-btn-bg: #ce93d8;
-        --nav-back-btn-color: #4a148c;
-        --nav-back-btn-hover: #ba68c8;
-
-        /* ---------- Universal / Neutral (same for all pages) ---------- */
-        --header-text: white;
-        --header-text-light: rgba(255, 255, 255, 0.9);
-        --content-bg: rgba(255, 255, 255, 0.95);
-        --text-color: #333;
-        --white: white;
-
-        --section-divider: #e0e0e0;
-        --card-bg: white;
-        --subsection-bg: white;
-        --card-border: #e0e0e0;
-        --input-border: #e0e0e0;
-        --dashed-border: #e0e0e0;
-        --table-border: #ddd;
-        --table-stripe: #f2f2f2;
-
-        --correct-bg: #d4edda;
-        --correct-color: #155724;
-        --correct-border: #c3e6cb;
-        --incorrect-bg: #f8d7da;
-        --incorrect-color: #721c24;
-        --incorrect-border: #f5c6cb;
-    }
-</style>
-<link rel="stylesheet" href="styles/style-conjugation.css">
+        :root {
+            --bg-gradient: linear-gradient(135deg, #f5d5c8, #f0c4b4, #e8a898, #e09480);
+            --content-bg: #fef8f6;
+            --card-bg: #ffffff;
+            --subsection-bg: #fdf2ee;
+            --rule-bg: #fcebe5;
+            --example-bg: #fae2da;
+            --table-stripe: #fdf4f0;
+            --title-color: #5c1e18;
+            --text-color: #3d2018;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #c45d4a;
+            --primary-hover: #ad4a38;
+            --primary-light: #d47260;
+            --accent: #c86856;
+            --exercise-number-gradient: linear-gradient(135deg, #c45d4a, #9a3d2e);
+            --rule-border: #c45d4a;
+            --example-border: #c45d4a;
+            --nav-btn-bg: #c45d4a;
+            --nav-btn-hover: #9a3d2e;
+            --nav-back-btn-bg: #c86856;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #c45d4a;
+            --refract-divider-color: #d4a090;
+            --refract-translation-bg: #f5e0d8;
+            --refract-translation-border: #c45d4a;
+            --refract-english-color: #3d2018;
+            --section-divider: #edd5cb;
+            --card-border: #edd5cb;
+            --input-border: #d4b8a8;
+            --dashed-border: #d4b8a8;
+            --table-border: #e0c8b8;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #f2e8e4;
+            --neutral-color: #6b4e3d;
+            --neutral-border: #d4b8a8;
+            --empty-input-border: #c8a898;
+            --empty-input-bg: #faf3ef;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #c45d4a;
+            --language-selector-color: #3d2018;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #5c1e18, #6b2820, #7a3228, #8a3c30);
+            --content-bg: #3d1e18;
+            --card-bg: #4a2520;
+            --subsection-bg: #4a2520;
+            --rule-bg: #3d1e18;
+            --example-bg: #3d1e18;
+            --table-stripe: #45221d;
+            --title-color: #f0b8a8;
+            --text-color: #f0d8d0;
+            --header-text: #f0d8d0;
+            --header-text-light: #d4b0a0;
+            --primary: #d47866;
+            --primary-hover: #e08a7a;
+            --primary-light: #d47866;
+            --accent: #d47866;
+            --rule-border: #d47866;
+            --example-border: #d47866;
+            --exercise-number-gradient: linear-gradient(135deg, #d47866, #c45d4a);
+            --nav-btn-bg: #d47866;
+            --nav-btn-hover: #c45d4a;
+            --nav-back-btn-bg: #e08a7a;
+            --nav-back-btn-color: #2a0f0a;
+            --nav-back-btn-hover: #d47866;
+            --refract-divider-color: #c89080;
+            --refract-translation-bg: #5c2e25;
+            --refract-translation-border: #c89080;
+            --refract-english-color: #f4d8cc;
+            --section-divider: #5c2e25;
+            --card-border: #5c2e25;
+            --input-border: #6b3d32;
+            --dashed-border: #6b3d32;
+            --table-border: #5a3028;
+            --white: #f0d8d0;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #4a3028;
+            --neutral-color: #d4b8a8;
+            --neutral-border: #6b3d32;
+            --empty-input-border: #6b3d32;
+            --empty-input-bg: #3d1e18;
+            --language-selector-bg: #4a2520;
+            --language-selector-border: #d47866;
+            --language-selector-color: #f0d8d0;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
+        }
+    </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="thirdConditional1.title">Third Conditional: Introduction & Basic Form</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="thirdConditional1.subtitle">Learn how to talk about unreal past situations, regrets, and hypothetical past results using if + past perfect, would have + past participle.</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="thirdConditional1.title.line1">Third Conditional I:</div>
+                <div class="EH-conjugation-title-line" data-i18n="thirdConditional1.title.line2">Introduction & Basic Form</div>
+                <div class="EH-conjugation-subtitle" data-i18n="thirdConditional1.title.line3">Unreal past situations, regrets, and hypothetical past results.</div>
+                <div class="EH-conjugation-subtitle" data-i18n="thirdConditional1.title.line4">lesson: 1/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Introduction Section -->
+            <!-- Section 1: Introduction to Third Conditional -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="thirdConditional1.introduction.title">Introduction to Third Conditional</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="thirdConditional1.intro.title">I. 1. Introduction to the Third Conditional</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⏳</span>
-                        <span data-i18n="thirdConditional1.introduction.whatIs">What is the Third Conditional?</span>
+                        <span class="EH-conjugation-subsection-icon">📘</span>
+                        <span data-i18n="thirdConditional1.intro.heading">What is the Third Conditional?</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="thirdConditional1.introduction.definitionTitle">Definition:</div>
-                        <p data-i18n="thirdConditional1.introduction.definition">The third conditional is used to talk about unreal situations in the past. It expresses that the condition did not happen, so the result did not happen either. It often expresses regrets or criticism.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="thirdConditional1.intro.desc1">📘 Definition:</div>
+                        <p data-i18n="thirdConditional1.intro.desc2">The third conditional is used to talk about <strong>unreal situations in the past</strong>. It expresses that the condition did not happen, so the result did not happen either. It often expresses <strong>regrets</strong> or <strong>criticism</strong>.</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="thirdConditional1.introduction.coreIdeas">Core ideas:</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="thirdConditional1.intro.coreTitle">💡 Core ideas:</div>
                         <ul>
-                            <li data-i18n="thirdConditional1.introduction.core1">Unreal past: <em>If I had studied, I would have passed the exam.</em></li>
-                            <li data-i18n="thirdConditional1.introduction.core2">Regrets: <em>If I hadn't been so rude, she wouldn't have left.</em></li>
-                            <li data-i18n="thirdConditional1.introduction.core3">Hypothetical past results: <em>They would have won if they had trained more.</em></li>
+                            <li data-i18n="thirdConditional1.intro.core1"><strong>Unreal past:</strong> If I had studied, I would have passed the exam.</li>
+                            <li data-i18n="thirdConditional1.intro.core2"><strong>Regrets:</strong> If I hadn't been so rude, she wouldn't have left.</li>
+                            <li data-i18n="thirdConditional1.intro.core3"><strong>Hypothetical past results:</strong> They would have won if they had trained more.</li>
                         </ul>
                     </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.introduction.example1">If I had seen him, I would have told him.</div>
-                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.introduction.example2">She would have been on time if she had taken the train.</div>
-                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.introduction.example3">If we had known about the party, we would have gone.</div>
-                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.introduction.example4">He wouldn't have broken the window if he had been careful.</div>
+                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.intro.ex1">If I had seen him, I would have told him.</div>
+                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.intro.ex2">She would have been on time if she had taken the train.</div>
+                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.intro.ex3">If we had known about the party, we would have gone.</div>
+                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.intro.ex4">He wouldn't have broken the window if he had been careful.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Basic Structure -->
+            <!-- Section 2: Basic Structure -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="thirdConditional1.structure.title">Basic Structure</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="thirdConditional1.structure.title">I. 2. Basic Structure</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📐</span>
-                        <span data-i18n="thirdConditional1.structure.formula">Form: If + Past Perfect, Would Have + Past Participle</span>
+                        <span class="EH-conjugation-subsection-icon">🔧</span>
+                        <span data-i18n="thirdConditional1.structure.heading">Form: If + Past Perfect, Would Have + Past Participle</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="thirdConditional1.structure.ruleTitle">Rule:</div>
-                        <p data-i18n="thirdConditional1.structure.rule">The if-clause uses the past perfect (had + past participle). The main clause uses would have + past participle. The order can be reversed; a comma is used when the if-clause comes first.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="thirdConditional1.structure.desc1">📘 Rule:</div>
+                        <p data-i18n="thirdConditional1.structure.desc2">The <strong>if-clause</strong> uses the past perfect (<em>had + past participle</em>). The <strong>main clause</strong> uses <em>would have + past participle</em>. The order can be reversed; a comma is used when the if-clause comes first.</p>
                     </div>
                     <table class="EH-conjugation-table">
                         <thead>
-                            <tr><th data-i18n="common.structure">Structure</th><th data-i18n="common.example">Example</th></tr>
+                            <tr><th data-i18n="thirdConditional1.structure.structureCol">Structure</th><th data-i18n="thirdConditional1.structure.exampleCol">Example</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td data-i18n="thirdConditional1.structure.ifFirst">If + past perfect, + would have + past participle</td><td data-i18n="thirdConditional1.structure.exampleIfFirst">If I had known, I would have helped.</td></tr>
-                            <tr><td data-i18n="thirdConditional1.structure.resultFirst">Would have + past participle + if + past perfect</td><td data-i18n="thirdConditional1.structure.exampleResultFirst">I would have helped if I had known.</td></tr>
+                            <tr>
+                                <td data-i18n="thirdConditional1.structure.structIfFirst">If + past perfect,<br>+ would have + p.p.</td>
+                                <td data-i18n="thirdConditional1.structure.exIfFirst">If I had known, I would have helped.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="thirdConditional1.structure.structResultFirst">Would have + p.p.<br>+ if + past perfect</td>
+                                <td data-i18n="thirdConditional1.structure.exResultFirst">I would have helped if I had known.</td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="thirdConditional1.structure.contractionsNote">Contractions:</div>
-                        <p data-i18n="thirdConditional1.structure.contractionsText">In spoken English, "had" is often contracted to 'd, and "would have" to "would've".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="thirdConditional1.structure.contractionExample1">If I'd known, I'd've called. (If I had known, I would have called)</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="thirdConditional1.structure.contractionsTitle">🗣️ Contractions:</div>
+                        <p data-i18n="thirdConditional1.structure.contractionsDesc">In spoken English, <strong>"had"</strong> is often contracted to <strong>'d</strong>, and <strong>"would have"</strong> to <strong>"would've"</strong>. Example: <em>If I'd known, I'd've called.</em> (If I had known, I would have called.)</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="thirdConditional1.structure.negativeTitle">Negative Forms:</div>
-                        <p data-i18n="thirdConditional1.structure.negativeRule">Use "hadn't" in the if-clause and "wouldn't have" in the main clause.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="thirdConditional1.structure.negativeExample1">If you hadn't missed the bus, you wouldn't have been late.</div>
-                            <div class="EH-conjugation-example" data-i18n="thirdConditional1.structure.negativeExample2">She wouldn't have been upset if you had apologized.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="thirdConditional1.structure.negativeTitle">❌ Negative Forms:</div>
+                        <p data-i18n="thirdConditional1.structure.negativeDesc">Use <strong>"hadn't"</strong> in the if-clause and <strong>"wouldn't have"</strong> in the main clause.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.structure.negEx1">If you hadn't missed the bus, you wouldn't have been late.</div>
+                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.structure.negEx2">She wouldn't have been upset if you had apologized.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Uses: Regrets & Unreal Past -->
+            <!-- Section 3: Common Uses -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="thirdConditional1.uses.title">Common Uses: Unreal Past & Regrets</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="thirdConditional1.uses.title">I. 3. Common Uses: Unreal Past & Regrets</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">😔</span>
-                        <span data-i18n="thirdConditional1.uses.regrets">Regrets & Criticism</span>
+                        <span class="EH-conjugation-subsection-icon">💬</span>
+                        <span data-i18n="thirdConditional1.uses.heading">Regrets, Criticism & Hypothetical Past Results</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <p data-i18n="thirdConditional1.uses.regretsText">We use the third conditional to express regret about past actions that cannot be changed, or to criticize past behaviour.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="thirdConditional1.uses.regretExample1">If I had saved more money, I would have bought the car. (I didn't save, I didn't buy)</div>
-                            <div class="EH-conjugation-example" data-i18n="thirdConditional1.uses.regretExample2">If they had listened to me, they wouldn't have made that mistake.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="thirdConditional1.uses.regretsTitle">😔 Regrets & Criticism:</div>
+                        <p data-i18n="thirdConditional1.uses.regretsDesc">We use the third conditional to express <strong>regret</strong> about past actions that cannot be changed, or to <strong>criticize</strong> past behaviour.</p>
                     </div>
-                </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">💡</span>
-                        <span data-i18n="thirdConditional1.uses.hypotheticalPast">Hypothetical Past Results</span>
-                    </h3>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.uses.regretsEx1">If I had saved more money, I would have bought the car. (I didn't save, I didn't buy)</div>
+                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.uses.regretsEx2">If they had listened to me, they wouldn't have made that mistake.</div>
+                    </div>
                     <div class="EH-conjugation-rule">
-                        <p data-i18n="thirdConditional1.uses.hypotheticalText">It also describes imaginary alternative past outcomes.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="thirdConditional1.uses.hypotheticalExample1">What would you have done if you had seen the accident?</div>
-                            <div class="EH-conjugation-example" data-i18n="thirdConditional1.uses.hypotheticalExample2">If we had left earlier, we would have caught the plane.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="thirdConditional1.uses.hypoTitle">🔮 Hypothetical Past Results:</div>
+                        <p data-i18n="thirdConditional1.uses.hypoDesc">It also describes <strong>imaginary alternative past outcomes</strong>.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.uses.hypoEx1">What would you have done if you had seen the accident?</div>
+                        <div class="EH-conjugation-example" data-i18n="thirdConditional1.uses.hypoEx2">If we had left earlier, we would have caught the plane.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- EXERCISES (12) – dynamic slots -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="thirdConditional1.exercises.title">Practice Exercises</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #6a1b9a; margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="thirdConditional1.exercises.title">Practice: Third Conditional Basics</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #6a1b9a; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #6a1b9a; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
@@ -204,433 +250,303 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation -->
-			<div class="EH-conjugation-navigation">
-				<button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-					<span data-i18n="common.nextLesson">Next Lesson</span>
-				</button>
-				<button class="EH-conjugation-nav-button" style="pointer-events: none;">
-					<span></span>
-				</button>
-				<button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-					<span data-i18n="common.returnToConjugation">Return to Conjugation</span>
-				</button>
-			</div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations (unchanged) -->
     <script>
         window.I18N = {
             en: {
                 common: {
                     siteName: "English Hub",
-					previousLesson: "← Previous Lesson",
-					returnToConjugation: "← Return to Conjugation",
-					nextLesson: "Next Lesson →",
-                    examples: "Examples:",
-                    structure: "Structure"
+                    previousLesson: "← Previous Lesson",
+                    returnToConjugation: "← Return to Conjugation",
+                    nextLesson: "Next Lesson →"
                 },
                 footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
                 thirdConditional1: {
-                    title: "Third Conditional: Introduction & Basic Form",
-                    subtitle: "Learn how to talk about unreal past situations, regrets, and hypothetical past results using if + past perfect, would have + past participle.",
-                    introduction: {
-                        title: "Introduction to Third Conditional",
-                        whatIs: "What is the Third Conditional?",
-                        definitionTitle: "Definition:",
-                        definition: "The third conditional is used to talk about unreal situations in the past. It expresses that the condition did not happen, so the result did not happen either. It often expresses regrets or criticism.",
-                        coreIdeas: "Core ideas:",
-                        core1: "Unreal past: <em>If I had studied, I would have passed the exam.</em>",
-                        core2: "Regrets: <em>If I hadn't been so rude, she wouldn't have left.</em>",
-                        core3: "Hypothetical past results: <em>They would have won if they had trained more.</em>",
-                        example1: "If I had seen him, I would have told him.",
-                        example2: "She would have been on time if she had taken the train.",
-                        example3: "If we had known about the party, we would have gone.",
-                        example4: "He wouldn't have broken the window if he had been careful."
+                    title: {
+                        line1: "Third Conditional I:",
+                        line2: "Introduction & Basic Form",
+                        line3: "Unreal past situations, regrets, and hypothetical past results.",
+                        line4: "lesson: 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. Introduction to the Third Conditional",
+                        heading: "What is the Third Conditional?",
+                        desc1: "📘 Definition:",
+                        desc2: "The third conditional is used to talk about unreal situations in the past. It expresses that the condition did not happen, so the result did not happen either. It often expresses regrets or criticism.",
+                        coreTitle: "💡 Core ideas:",
+                        core1: "Unreal past: If I had studied, I would have passed the exam.",
+                        core2: "Regrets: If I hadn't been so rude, she wouldn't have left.",
+                        core3: "Hypothetical past results: They would have won if they had trained more.",
+                        ex1: "If I had seen him, I would have told him.",
+                        ex2: "She would have been on time if she had taken the train.",
+                        ex3: "If we had known about the party, we would have gone.",
+                        ex4: "He wouldn't have broken the window if he had been careful."
                     },
                     structure: {
-                        title: "Basic Structure",
-                        formula: "Form: If + Past Perfect, Would Have + Past Participle",
-                        ruleTitle: "Rule:",
-                        rule: "The if-clause uses the past perfect (had + past participle). The main clause uses would have + past participle. The order can be reversed; a comma is used when the if-clause comes first.",
-                        ifFirst: "If + past perfect, + would have + past participle",
-                        exampleIfFirst: "If I had known, I would have helped.",
-                        resultFirst: "Would have + past participle + if + past perfect",
-                        exampleResultFirst: "I would have helped if I had known.",
-                        contractionsNote: "Contractions:",
-                        contractionsText: "In spoken English, 'had' is often contracted to 'd, and 'would have' to 'would've'.",
-                        contractionExample1: "If I'd known, I'd've called. (If I had known, I would have called)",
-                        negativeTitle: "Negative Forms:",
-                        negativeRule: "Use 'hadn't' in the if-clause and 'wouldn't have' in the main clause.",
-                        negativeExample1: "If you hadn't missed the bus, you wouldn't have been late.",
-                        negativeExample2: "She wouldn't have been upset if you had apologized."
+                        title: "I. 2. Basic Structure",
+                        heading: "Form: If + Past Perfect, Would Have + Past Participle",
+                        desc1: "📘 Rule:",
+                        desc2: "The if-clause uses the past perfect (had + past participle). The main clause uses would have + past participle. The order can be reversed; a comma is used when the if-clause comes first.",
+                        structureCol: "Structure",
+                        exampleCol: "Example",
+                        structIfFirst: "If + past perfect, + would have + p.p.",
+                        exIfFirst: "If I had known, I would have helped.",
+                        structResultFirst: "Would have + p.p. + if + past perfect",
+                        exResultFirst: "I would have helped if I had known.",
+                        contractionsTitle: "🗣️ Contractions:",
+                        contractionsDesc: "In spoken English, \"had\" is often contracted to 'd, and \"would have\" to \"would've\". Example: If I'd known, I'd've called. (If I had known, I would have called.)",
+                        negativeTitle: "❌ Negative Forms:",
+                        negativeDesc: "Use \"hadn't\" in the if-clause and \"wouldn't have\" in the main clause.",
+                        negEx1: "If you hadn't missed the bus, you wouldn't have been late.",
+                        negEx2: "She wouldn't have been upset if you had apologized."
                     },
                     uses: {
-                        title: "Common Uses: Unreal Past & Regrets",
-                        regrets: "Regrets & Criticism",
-                        regretsText: "We use the third conditional to express regret about past actions that cannot be changed, or to criticize past behaviour.",
-                        regretExample1: "If I had saved more money, I would have bought the car. (I didn't save, I didn't buy)",
-                        regretExample2: "If they had listened to me, they wouldn't have made that mistake.",
-                        hypotheticalPast: "Hypothetical Past Results",
-                        hypotheticalText: "It also describes imaginary alternative past outcomes.",
-                        hypotheticalExample1: "What would you have done if you had seen the accident?",
-                        hypotheticalExample2: "If we had left earlier, we would have caught the plane."
+                        title: "I. 3. Common Uses: Unreal Past & Regrets",
+                        heading: "Regrets, Criticism & Hypothetical Past Results",
+                        regretsTitle: "😔 Regrets & Criticism:",
+                        regretsDesc: "We use the third conditional to express regret about past actions that cannot be changed, or to criticize past behaviour.",
+                        regretsEx1: "If I had saved more money, I would have bought the car. (I didn't save, I didn't buy)",
+                        regretsEx2: "If they had listened to me, they wouldn't have made that mistake.",
+                        hypoTitle: "🔮 Hypothetical Past Results:",
+                        hypoDesc: "It also describes imaginary alternative past outcomes.",
+                        hypoEx1: "What would you have done if you had seen the accident?",
+                        hypoEx2: "If we had left earlier, we would have caught the plane."
                     },
                     exercises: {
-                        title: "Practice Exercises",
-                        q1: "Choose the correct form:",
-                        q1Sentence: "If I _____ about the meeting, I would have attended.",
-                        q1a: "knew", q1b: "had known", q1c: "have known",
-                        q2: "Choose the correct form:",
-                        q2Sentence: "If she _____ harder, she would have passed the exam.",
-                        q2a: "studied", q2b: "had studied", q2c: "has studied",
-                        q3: "Choose the correct form:",
-                        q3Sentence: "They would have come if they _____ invited.",
-                        q3a: "were", q3b: "had been", q3c: "have been",
-                        q4: "Choose the correct negative form:",
-                        q4Sentence: "If we _____ the bus, we would have arrived on time.",
-                        q4a: "didn't miss", q4b: "hadn't missed", q4c: "haven't missed",
-                        q5: "Choose the correct form:",
-                        q5Sentence: "He would have called you if he _____ your number.",
-                        q5a: "had", q5b: "had had", q5c: "has",
-                        q6: "Choose the correct form:",
-                        q6Sentence: "If I _____ more careful, I wouldn't have broken the vase.",
-                        q6a: "was", q6b: "had been", q6c: "have been",
-                        q7: "Complete with the correct form:",
-                        q7Sentence: "If I had seen him, I _____ (tell) him the news.",
-                        q8: "Complete with the correct form:",
-                        q8Sentence: "She wouldn't have been late if she _____ (leave) earlier.",
-                        q9: "Complete with the negative form:",
-                        q9Sentence: "If they _____ (not spend) so much money, they would have saved more.",
-                        q10: "Arrange the words to form a correct sentence:",
-                        q11: "Arrange the words:",
-                        q12: "Arrange the words:"
+                        title: "Practice: Third Conditional Basics",
+                        q1: "If I _____ about the meeting, I would have attended.",
+                        q1a: "knew",
+                        q1b: "had known",
+                        q1c: "have known",
+                        q2: "If she _____ harder, she would have passed the exam.",
+                        q2a: "studied",
+                        q2b: "had studied",
+                        q2c: "has studied",
+                        q3: "They would have come if they _____ invited.",
+                        q3a: "were",
+                        q3b: "had been",
+                        q3c: "have been",
+                        q4: "If we _____ the bus, we would have arrived on time.",
+                        q4a: "didn't miss",
+                        q4b: "hadn't missed",
+                        q4c: "haven't missed",
+                        q5: "He would have called you if he _____ your number.",
+                        q5a: "had",
+                        q5b: "had had",
+                        q5c: "has",
+                        q6: "If I _____ more careful, I wouldn't have broken the vase.",
+                        q6a: "was",
+                        q6b: "had been",
+                        q6c: "have been",
+                        q7: "Complete with the correct verb form: If I had seen him, I ____ (tell) him the news.",
+                        q8: "Complete with the correct verb form: She wouldn't have been late if she ____ (leave) earlier.",
+                        q9: "Complete with the correct negative form: If they ____ (not spend) so much money, they would have saved more.",
+                        q10: "Arrange (third conditional): (if / you / had / told / me / I / would / have / helped / you / .)",
+                        q11: "Arrange (third conditional): (she / would / have / passed / the / exam / if / she / had / studied / .)",
+                        q12: "Arrange (third conditional): (we / would / not / have / missed / the / flight / if / we / had / left / earlier / .)"
                     }
                 }
             },
             fr: {
-                common: { siteName: "English Hub",
-				previousLesson: "← Previous Lesson (Leçon Précédente)",
-				returnToConjugation: "← Return to Conjugation (Retour au Conjugaison)",
-					nextLesson: "Next Lesson (Leçon Suivante) →", examples: "Examples: (Exemples :)" },
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "← Leçon Précédente",
+                    returnToConjugation: "← Retour au Conjugaison",
+                    nextLesson: "Leçon Suivante →"
+                },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
                 thirdConditional1: {
-                    title: "Third Conditional: Introduction & Basic Form (Conditionnel de type 3 : introduction et forme de base)",
-                    subtitle: "Learn how to talk about unreal past situations, regrets, and hypothetical past results using if + past perfect, would have + past participle. (Apprenez à parler de situations passées irréelles, de regrets et de résultats hypothétiques passés avec if + plus-que-parfait, would have + participe passé.)",
-                    introduction: {
-                        title: "Introduction to Third Conditional (Introduction au conditionnel de type 3)",
-                        whatIs: "What is the Third Conditional? (Qu'est-ce que le conditionnel de type 3 ?)",
-                        definitionTitle: "Definition: (Définition :)",
-                        definition: "The third conditional is used to talk about unreal situations in the past. It expresses that the condition did not happen, so the result did not happen either. It often expresses regrets or criticism. (Le conditionnel de type 3 est utilisé pour parler de situations irréelles dans le passé. Il exprime que la condition ne s'est pas réalisée, donc le résultat ne s'est pas produit non plus. Il exprime souvent des regrets ou des critiques.)",
-                        coreIdeas: "Core ideas: (Idées principales :)",
-                        core1: "Unreal past: <em>If I had studied, I would have passed the exam.</em> (Passé irréel : <em>Si j'avais étudié, j'aurais réussi l'examen.</em>)",
-                        core2: "Regrets: <em>If I hadn't been so rude, she wouldn't have left.</em> (Regrets : <em>Si je n'avais pas été si impoli, elle ne serait pas partie.</em>)",
-                        core3: "Hypothetical past results: <em>They would have won if they had trained more.</em> (Résultats hypothétiques passés : <em>Ils auraient gagné s'ils s'étaient plus entraînés.</em>)",
-                        example1: "If I had seen him, I would have told him. (Si je l'avais vu, je le lui aurais dit.)",
-                        example2: "She would have been on time if she had taken the train. (Elle aurait été à l'heure si elle avait pris le train.)",
-                        example3: "If we had known about the party, we would have gone. (Si nous avions été au courant de la fête, nous y serions allés.)",
-                        example4: "He wouldn't have broken the window if he had been careful. (Il n'aurait pas cassé la fenêtre s'il avait été prudent.)"
+                    title: {
+                        line1: "Conditionnel type 3 I :",
+                        line2: "Introduction et forme de base",
+                        line3: "Situations passées irréelles, regrets et résultats hypothétiques.",
+                        line4: "leçon : 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. Introduction au conditionnel type 3",
+                        heading: "Qu'est-ce que le conditionnel type 3 ?",
+                        desc1: "📘 Définition :",
+                        desc2: "Le conditionnel type 3 sert à parler de situations irréelles dans le passé. Il exprime que la condition ne s'est pas réalisée, donc le résultat ne s'est pas produit non plus. Il exprime souvent des regrets ou des critiques.",
+                        coreTitle: "💡 Idées clés :",
+                        core1: "Passé irréel : Si j'avais étudié, j'aurais réussi l'examen.",
+                        core2: "Regrets : Si je n'avais pas été si impoli, elle ne serait pas partie.",
+                        core3: "Résultats hypothétiques : Ils auraient gagné s'ils s'étaient plus entraînés.",
+                        ex1: "Si je l'avais vu, je lui aurais dit.",
+                        ex2: "Elle serait arrivée à l'heure si elle avait pris le train.",
+                        ex3: "Si nous avions su pour la fête, nous y serions allés.",
+                        ex4: "Il n'aurait pas cassé la fenêtre s'il avait été prudent."
                     },
                     structure: {
-                        title: "Basic Structure (Structure de base)",
-                        formula: "Form: If + Past Perfect, Would Have + Past Participle (Forme : If + plus-que-parfait, would have + participe passé)",
-                        ruleTitle: "Rule: (Règle :)",
-                        rule: "The if-clause uses the past perfect (had + past participle). The main clause uses would have + past participle. The order can be reversed; a comma is used when the if-clause comes first. (La proposition avec if utilise le plus-que-parfait (had + participe passé). La proposition principale utilise would have + participe passé. L'ordre peut être inversé ; une virgule est utilisée lorsque la proposition avec if vient en premier.)",
-                        ifFirst: "If + past perfect, + would have + past participle",
-                        exampleIfFirst: "If I had known, I would have helped. (Si j'avais su, j'aurais aidé.)",
-                        resultFirst: "Would have + past participle + if + past perfect",
-                        exampleResultFirst: "I would have helped if I had known. (J'aurais aidé si j'avais su.)",
-                        contractionsNote: "Contractions: (Contractions :)",
-                        contractionsText: "In spoken English, 'had' is often contracted to 'd, and 'would have' to 'would've'. (En anglais parlé, 'had' est souvent contracté en 'd, et 'would have' en 'would've'.)",
-                        contractionExample1: "If I'd known, I'd've called. (If I had known, I would have called) (Si j'avais su, j'aurais appelé.)",
-                        negativeTitle: "Negative Forms: (Formes négatives :)",
-                        negativeRule: "Use 'hadn't' in the if-clause and 'wouldn't have' in the main clause. (Utilisez 'hadn't' dans la proposition avec if et 'wouldn't have' dans la proposition principale.)",
-                        negativeExample1: "If you hadn't missed the bus, you wouldn't have been late. (Si tu n'avais pas raté le bus, tu n'aurais pas été en retard.)",
-                        negativeExample2: "She wouldn't have been upset if you had apologized. (Elle n'aurait pas été contrariée si tu t'étais excusé.)"
+                        title: "I. 2. Structure de base",
+                        heading: "Forme : If + plus-que-parfait, would have + participe passé",
+                        desc1: "📘 Règle :",
+                        desc2: "La proposition avec if utilise le plus-que-parfait (had + participe passé). La proposition principale utilise would have + participe passé. L'ordre peut être inversé ; une virgule est utilisée quand la proposition if vient en premier.",
+                        structureCol: "Structure",
+                        exampleCol: "Exemple",
+                        structIfFirst: "If + plus-que-parfait, + would have + p.p.",
+                        exIfFirst: "Si j'avais su, j'aurais aidé.",
+                        structResultFirst: "Would have + p.p. + if + plus-que-parfait",
+                        exResultFirst: "J'aurais aidé si j'avais su.",
+                        contractionsTitle: "🗣️ Contractions :",
+                        contractionsDesc: "À l'oral, \"had\" est souvent contracté en 'd, et \"would have\" en \"would've\". Exemple : If I'd known, I'd've called. (Si j'avais su, j'aurais appelé.)",
+                        negativeTitle: "❌ Formes négatives :",
+                        negativeDesc: "Utilisez \"hadn't\" dans la proposition if et \"wouldn't have\" dans la proposition principale.",
+                        negEx1: "Si tu n'avais pas raté le bus, tu ne serais pas arrivé en retard.",
+                        negEx2: "Elle n'aurait pas été contrariée si tu t'étais excusé."
                     },
                     uses: {
-                        title: "Common Uses: Unreal Past & Regrets (Utilisations courantes : passé irréel et regrets)",
-                        regrets: "Regrets & Criticism (Regrets et critiques)",
-                        regretsText: "We use the third conditional to express regret about past actions that cannot be changed, or to criticize past behaviour. (Nous utilisons le conditionnel de type 3 pour exprimer des regrets concernant des actions passées qui ne peuvent être changées, ou pour critiquer un comportement passé.)",
-                        regretExample1: "If I had saved more money, I would have bought the car. (I didn't save, I didn't buy) (Si j'avais économisé plus d'argent, j'aurais acheté la voiture. (Je n'ai pas économisé, je n'ai pas acheté))",
-                        regretExample2: "If they had listened to me, they wouldn't have made that mistake. (S'ils m'avaient écouté, ils n'auraient pas fait cette erreur.)",
-                        hypotheticalPast: "Hypothetical Past Results (Résultats hypothétiques passés)",
-                        hypotheticalText: "It also describes imaginary alternative past outcomes. (Il décrit également des issues passées alternatives imaginaires.)",
-                        hypotheticalExample1: "What would you have done if you had seen the accident? (Qu'aurais-tu fait si tu avais vu l'accident ?)",
-                        hypotheticalExample2: "If we had left earlier, we would have caught the plane. (Si nous étions partis plus tôt, nous aurions pris l'avion.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (Exercices pratiques)",
-                        q1: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q1Sentence: "If I _____ about the meeting, I would have attended. (Si j'_____ au sujet de la réunion, j'aurais assisté.)",
-                        q1a: "knew (savais)", q1b: "had known (avais su)", q1c: "have known (ai su)",
-                        q2: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q2Sentence: "If she _____ harder, she would have passed the exam. (Si elle _____ plus dur, elle aurait réussi l'examen.)",
-                        q2a: "studied (étudiait)", q2b: "had studied (avait étudié)", q2c: "has studied (a étudié)",
-                        q3: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q3Sentence: "They would have come if they _____ invited. (Ils seraient venus s'ils _____ invités.)",
-                        q3a: "were (étaient)", q3b: "had been (avaient été)", q3c: "have been (ont été)",
-                        q4: "Choose the correct negative form: (Choisissez la forme négative correcte :)",
-                        q4Sentence: "If we _____ the bus, we would have arrived on time. (Si nous _____ le bus, nous serions arrivés à l'heure.)",
-                        q4a: "didn't miss (n'avons pas raté)", q4b: "hadn't missed (n'avions pas raté)", q4c: "haven't missed (n'avons pas raté)",
-                        q5: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q5Sentence: "He would have called you if he _____ your number. (Il t'aurait appelé s'il _____ ton numéro.)",
-                        q5a: "had (avait)", q5b: "had had (avait eu)", q5c: "has (a)",
-                        q6: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q6Sentence: "If I _____ more careful, I wouldn't have broken the vase. (Si j'_____ plus prudent, je n'aurais pas cassé le vase.)",
-                        q6a: "was (étais)", q6b: "had been (avais été)", q6c: "have been (ai été)",
-                        q7: "Complete with the correct form: (Complétez avec la forme correcte :)",
-                        q7Sentence: "If I had seen him, I _____ (tell) him the news. (Si je l'avais vu, je lui _____ (dire) la nouvelle.)",
-                        q8: "Complete with the correct form: (Complétez avec la forme correcte :)",
-                        q8Sentence: "She wouldn't have been late if she _____ (leave) earlier. (Elle n'aurait pas été en retard si elle _____ (partir) plus tôt.)",
-                        q9: "Complete with the negative form: (Complétez avec la forme négative :)",
-                        q9Sentence: "If they _____ (not spend) so much money, they would have saved more. (S'ils _____ (ne pas dépenser) autant d'argent, ils auraient économisé plus.)",
-                        q10: "Arrange the words to form a correct sentence: (Remettez les mots dans l'ordre pour former une phrase correcte :)",
-                        q11: "Arrange the words: (Remettez les mots dans l'ordre :)",
-                        q12: "Arrange the words: (Remettez les mots dans l'ordre :)"
+                        title: "I. 3. Utilisations courantes : passé irréel et regrets",
+                        heading: "Regrets, critiques et résultats hypothétiques",
+                        regretsTitle: "😔 Regrets et critiques :",
+                        regretsDesc: "On utilise le conditionnel type 3 pour exprimer des regrets concernant des actions passées qui ne peuvent être changées, ou pour critiquer un comportement passé.",
+                        regretsEx1: "Si j'avais économisé plus d'argent, j'aurais acheté la voiture. (Je n'ai pas économisé, je n'ai pas acheté)",
+                        regretsEx2: "S'ils m'avaient écouté, ils n'auraient pas fait cette erreur.",
+                        hypoTitle: "🔮 Résultats hypothétiques :",
+                        hypoDesc: "Il décrit également des résultats passés alternatifs imaginaires.",
+                        hypoEx1: "Qu'aurais-tu fait si tu avais vu l'accident ?",
+                        hypoEx2: "Si nous étions partis plus tôt, nous aurions attrapé l'avion."
                     }
                 }
             },
             ar: {
-                common: { siteName: "English Hub",
-					previousLesson: "Previous Lesson (الدرس السابق)← ",
-					returnToConjugation: "Return to Conjugation (العودة إلى التصريف)← ",
-					nextLesson: "Next Lesson (الدرس التالي) →", examples: "Examples: (أمثلة:)" },
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "الدرس السابق← ",
+                    returnToConjugation: "العودة إلى التصريف← ",
+                    nextLesson: "الدرس التالي →"
+                },
                 footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
                 thirdConditional1: {
-                    title: "Third Conditional: Introduction & Basic Form (الشرط الثالث: مقدمة وصيغة أساسية)",
-                    subtitle: "Learn how to talk about unreal past situations, regrets, and hypothetical past results using if + past perfect, would have + past participle. (تعلّم كيفية التحدث عن مواقف غير حقيقية في الماضي، والندم، ونتائج ماضية افتراضية باستخدام if + الماضي التام، would have + التصريف الثالث.)",
-                    introduction: {
-                        title: "Introduction to Third Conditional (مقدمة إلى الشرط الثالث)",
-                        whatIs: "What is the Third Conditional? (ما هو الشرط الثالث؟)",
-                        definitionTitle: "Definition: (تعريف:)",
-                        definition: "The third conditional is used to talk about unreal situations in the past. It expresses that the condition did not happen, so the result did not happen either. It often expresses regrets or criticism. (يستخدم الشرط الثالث للحديث عن مواقف غير حقيقية في الماضي. يعبر عن أن الشرط لم يحدث، وبالتالي النتيجة لم تحدث أيضًا. غالبًا ما يعبر عن الندم أو النقد.)",
-                        coreIdeas: "Core ideas: (الأفكار الأساسية:)",
-                        core1: "Unreal past: <em>If I had studied, I would have passed the exam.</em> (ماضٍ غير حقيقي: <em>إذا كنت قد درست، لكنت قد نجحت في الامتحان.</em>)",
-                        core2: "Regrets: <em>If I hadn't been so rude, she wouldn't have left.</em> (ندم: <em>إذا لم أكن فظًا جدًا، لما كانت قد غادرت.</em>)",
-                        core3: "Hypothetical past results: <em>They would have won if they had trained more.</em> (نتائج ماضية افتراضية: <em>كانوا سيفوزون لو تدربوا أكثر.</em>)",
-                        example1: "If I had seen him, I would have told him. (إذا كنت قد رأيته، لكنت أخبرته.)",
-                        example2: "She would have been on time if she had taken the train. (كانت ستكون في الموعد إذا كانت قد استقلت القطار.)",
-                        example3: "If we had known about the party, we would have gone. (إذا كنا قد علمنا بالحفلة، لكنا ذهبنا.)",
-                        example4: "He wouldn't have broken the window if he had been careful. (ما كان ليكسر النافذة لو كان حريصًا.)"
+                    title: {
+                        line1: "الشرط الثالث: 1:",
+                        line2: "المقدمة والشكل الأساسي",
+                        line3: "مواقف ماضية غير حقيقية، ندم، ونتائج افتراضية.",
+                        line4: "الدرس: 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. مقدمة عن الشرط الثالث",
+                        heading: "ما هو الشرط الثالث؟",
+                        desc1: "📘 التعريف:",
+                        desc2: "يُستخدم الشرط الثالث للتحدث عن مواقف غير حقيقية في الماضي. يعبر عن أن الشرط لم يحدث، وبالتالي النتيجة لم تحدث أيضًا. غالبًا ما يعبر عن الندم أو النقد.",
+                        coreTitle: "💡 أفكار أساسية:",
+                        core1: "ماضٍ غير حقيقي: إذا كنت قد درست، لكنت نجحت في الامتحان.",
+                        core2: "الندم: إذا لم أكن وقحًا، لما غادرت.",
+                        core3: "نتائج افتراضية: كانوا سيفوزون لو تدربوا أكثر.",
+                        ex1: "إذا كنت قد رأيته، لكنت أخبرته.",
+                        ex2: "كانت ستصل في الوقت المحدد لو أخذت القطار.",
+                        ex3: "إذا كنا قد علمنا بالحفلة، لكنا ذهبنا.",
+                        ex4: "ما كان ليكسر النافذة لو كان حذرًا."
                     },
                     structure: {
-                        title: "Basic Structure (البنية الأساسية)",
-                        formula: "Form: If + Past Perfect, Would Have + Past Participle (الصيغة: If + الماضي التام، Would Have + التصريف الثالث)",
-                        ruleTitle: "Rule: (القاعدة:)",
-                        rule: "The if-clause uses the past perfect (had + past participle). The main clause uses would have + past participle. The order can be reversed; a comma is used when the if-clause comes first. (جملة if تستخدم الماضي التام (had + التصريف الثالث). الجملة الرئيسية تستخدم would have + التصريف الثالث. يمكن عكس الترتيب؛ تُستخدم فاصلة عندما تأتي جملة if أولاً.)",
-                        ifFirst: "If + past perfect, + would have + past participle",
-                        exampleIfFirst: "If I had known, I would have helped. (إذا كنت قد علمت، لكنت ساعدت.)",
-                        resultFirst: "Would have + past participle + if + past perfect",
-                        exampleResultFirst: "I would have helped if I had known. (كنت سأساعد لو كنت قد علمت.)",
-                        contractionsNote: "Contractions: (الاختصارات:)",
-                        contractionsText: "In spoken English, 'had' is often contracted to 'd, and 'would have' to 'would've'. (في اللغة الإنجليزية المنطوقة، غالبًا ما يتم اختصار 'had' إلى 'd، و 'would have' إلى 'would've'.)",
-                        contractionExample1: "If I'd known, I'd've called. (If I had known, I would have called) (إذا كنت قد علمت، لكنت اتصلت.)",
-                        negativeTitle: "Negative Forms: (صيغ النفي:)",
-                        negativeRule: "Use 'hadn't' in the if-clause and 'wouldn't have' in the main clause. (استخدم 'hadn't' في جملة if و 'wouldn't have' في الجملة الرئيسية.)",
-                        negativeExample1: "If you hadn't missed the bus, you wouldn't have been late. (إذا لم تكن قد فاتتك الحافلة، لما كنت قد تأخرت.)",
-                        negativeExample2: "She wouldn't have been upset if you had apologized. (ما كانت لتنزعج لو كنت قد اعتذرت.)"
+                        title: "I. 2. البنية الأساسية",
+                        heading: "الصيغة: If + ماضي تام، would have + اسم المفعول",
+                        desc1: "📘 القاعدة:",
+                        desc2: "تستخدم جملة if الماضي التام (had + اسم المفعول). وتستخدم الجملة الرئيسية would have + اسم المفعول. يمكن عكس الترتيب؛ تُستخدم فاصلة عندما تأتي جملة if أولاً.",
+                        structureCol: "البنية",
+                        exampleCol: "مثال",
+                        structIfFirst: "If + ماضي تام، + would have + اسم المفعول",
+                        exIfFirst: "إذا كنت قد علمت، لكنت ساعدت.",
+                        structResultFirst: "Would have + اسم المفعول + if + ماضي تام",
+                        exResultFirst: "كنت سأساعد إذا كنت قد علمت.",
+                        contractionsTitle: "🗣️ الاختصارات:",
+                        contractionsDesc: "في الإنجليزية المنطوقة، غالبًا ما تُختصر \"had\" إلى 'd، و\"would have\" إلى \"would've\". مثال: If I'd known, I'd've called. (إذا كنت قد علمت، لكنت اتصلت.)",
+                        negativeTitle: "❌ الصيغ المنفية:",
+                        negativeDesc: "استخدم \"hadn't\" في جملة if و\"wouldn't have\" في الجملة الرئيسية.",
+                        negEx1: "إذا لم تكن قد فاتك الحافلة، لما كنت قد تأخرت.",
+                        negEx2: "ما كانت لتغضب لو كنت قد اعتذرت."
                     },
                     uses: {
-                        title: "Common Uses: Unreal Past & Regrets (الاستخدامات الشائعة: ماضٍ غير حقيقي وندم)",
-                        regrets: "Regrets & Criticism (الندم والنقد)",
-                        regretsText: "We use the third conditional to express regret about past actions that cannot be changed, or to criticize past behaviour. (نستخدم الشرط الثالث للتعبير عن الندم على أفعال ماضية لا يمكن تغييرها، أو لنقد سلوك سابق.)",
-                        regretExample1: "If I had saved more money, I would have bought the car. (I didn't save, I didn't buy) (إذا كنت قد وفرت المزيد من المال، لكنت اشتريت السيارة. (لم أوفر، لم أشتري))",
-                        regretExample2: "If they had listened to me, they wouldn't have made that mistake. (إذا كانوا قد استمعوا إلي، لما ارتكبوا ذلك الخطأ.)",
-                        hypotheticalPast: "Hypothetical Past Results (نتائج ماضية افتراضية)",
-                        hypotheticalText: "It also describes imaginary alternative past outcomes. (كما يصف نتائج بديلة خيالية للماضي.)",
-                        hypotheticalExample1: "What would you have done if you had seen the accident? (ماذا كنت ستفعل لو كنت قد رأيت الحادث؟)",
-                        hypotheticalExample2: "If we had left earlier, we would have caught the plane. (إذا كنا قد غادرنا مبكرًا، لكنا لحقنا بالطائرة.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (تمارين تطبيقية)",
-                        q1: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q1Sentence: "If I _____ about the meeting, I would have attended. (إذا _____ أنا عن الاجتماع، كنت سأحضر.)",
-                        q1a: "knew (عرفت)", q1b: "had known (كنت قد عرفت)", q1c: "have known (قد عرفت)",
-                        q2: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q2Sentence: "If she _____ harder, she would have passed the exam. (إذا _____ هي بجد أكبر، كانت ستنجح في الامتحان.)",
-                        q2a: "studied (درست)", q2b: "had studied (كانت قد درست)", q2c: "has studied (قد درست)",
-                        q3: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q3Sentence: "They would have come if they _____ invited. (كانوا سيتون لو _____ مدعوين.)",
-                        q3a: "were (كانوا)", q3b: "had been (كانوا قد)", q3c: "have been (قد كانوا)",
-                        q4: "Choose the correct negative form: (اختر صيغة النفي الصحيحة:)",
-                        q4Sentence: "If we _____ the bus, we would have arrived on time. (إذا _____ نحن الحافلة، لكنا وصلنا في الوقت المحدد.)",
-                        q4a: "didn't miss (لم نفوت)", q4b: "hadn't missed (لم نكن قد فوتنا)", q4c: "haven't missed (لم نفوت)",
-                        q5: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q5Sentence: "He would have called you if he _____ your number. (كان سيتصل بك لو _____ رقمك.)",
-                        q5a: "had (كان لديه)", q5b: "had had (كان قد حصل على)", q5c: "has (لديه)",
-                        q6: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q6Sentence: "If I _____ more careful, I wouldn't have broken the vase. (إذا _____ أنا أكثر حذرًا، لما كسرت المزهرية.)",
-                        q6a: "was (كنت)", q6b: "had been (كنت قد)", q6c: "have been (قد كنت)",
-                        q7: "Complete with the correct form: (أكمل بالصيغة الصحيحة:)",
-                        q7Sentence: "If I had seen him, I _____ (tell) him the news. (إذا كنت قد رأيته، _____ (أخبر) بالخبر.)",
-                        q8: "Complete with the correct form: (أكمل بالصيغة الصحيحة:)",
-                        q8Sentence: "She wouldn't have been late if she _____ (leave) earlier. (ما كانت ستتأخر لو _____ (تغادر) مبكرًا.)",
-                        q9: "Complete with the negative form: (أكمل بالنفي:)",
-                        q9Sentence: "If they _____ (not spend) so much money, they would have saved more. (إذا _____ (لا ينفقون) الكثير من المال، لكانوا قد وفرّوا أكثر.)",
-                        q10: "Arrange the words to form a correct sentence: (رتب الكلمات لتكوين جملة صحيحة:)",
-                        q11: "Arrange the words: (رتب الكلمات:)",
-                        q12: "Arrange the words: (رتب الكلمات:)"
+                        title: "I. 3. الاستخدامات الشائعة: الماضي غير الحقيقي والندم",
+                        heading: "الندم والنقد والنتائج الافتراضية",
+                        regretsTitle: "😔 الندم والنقد:",
+                        regretsDesc: "نستخدم الشرط الثالث للتعبير عن الندم على أفعال ماضية لا يمكن تغييرها، أو لنقد سلوك ماضٍ.",
+                        regretsEx1: "إذا كنت قد ادخرت مالًا أكثر، لكنت اشتريت السيارة. (لم أدخر، لم أشترِ)",
+                        regretsEx2: "إذا استمعوا إلي، لما ارتكبوا ذلك الخطأ.",
+                        hypoTitle: "🔮 نتائج افتراضية:",
+                        hypoDesc: "كما يصف نتائج ماضية بديلة خيالية.",
+                        hypoEx1: "ماذا كنت ستفعل لو رأيت الحادث؟",
+                        hypoEx2: "إذا كنا قد غادرنا مبكرًا، لكنا لحقنا بالطائرة."
                     }
                 }
             }
         };
     </script>
-    
-    <script src="scripts/common-i18n.js"></script>
-    <!-- Modular exercise engine -->
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
-
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // Build multiple choice exercises
+        // Multiple choice exercises
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'thirdConditional1.exercises.q1',
-                    options: [
-                        { value: 'a', labelKey: 'thirdConditional1.exercises.q1a' },
-                        { value: 'b', labelKey: 'thirdConditional1.exercises.q1b' },
-                        { value: 'c', labelKey: 'thirdConditional1.exercises.q1c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'thirdConditional1.exercises.q2',
-                    options: [
-                        { value: 'a', labelKey: 'thirdConditional1.exercises.q2a' },
-                        { value: 'b', labelKey: 'thirdConditional1.exercises.q2b' },
-                        { value: 'c', labelKey: 'thirdConditional1.exercises.q2c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'thirdConditional1.exercises.q3',
-                    options: [
-                        { value: 'a', labelKey: 'thirdConditional1.exercises.q3a' },
-                        { value: 'b', labelKey: 'thirdConditional1.exercises.q3b' },
-                        { value: 'c', labelKey: 'thirdConditional1.exercises.q3c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'thirdConditional1.exercises.q4',
-                    options: [
-                        { value: 'a', labelKey: 'thirdConditional1.exercises.q4a' },
-                        { value: 'b', labelKey: 'thirdConditional1.exercises.q4b' },
-                        { value: 'c', labelKey: 'thirdConditional1.exercises.q4c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'thirdConditional1.exercises.q5',
-                    options: [
-                        { value: 'a', labelKey: 'thirdConditional1.exercises.q5a' },
-                        { value: 'b', labelKey: 'thirdConditional1.exercises.q5b' },
-                        { value: 'c', labelKey: 'thirdConditional1.exercises.q5c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'thirdConditional1.exercises.q6',
-                    options: [
-                        { value: 'a', labelKey: 'thirdConditional1.exercises.q6a' },
-                        { value: 'b', labelKey: 'thirdConditional1.exercises.q6b' },
-                        { value: 'c', labelKey: 'thirdConditional1.exercises.q6c' }
-                    ],
-                    correctAnswer: 'b'
-                }
+                { questionTextKey: 'thirdConditional1.exercises.q1', options: [{ value: 'a', labelKey: 'thirdConditional1.exercises.q1a' }, { value: 'b', labelKey: 'thirdConditional1.exercises.q1b' }, { value: 'c', labelKey: 'thirdConditional1.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'thirdConditional1.exercises.q2', options: [{ value: 'a', labelKey: 'thirdConditional1.exercises.q2a' }, { value: 'b', labelKey: 'thirdConditional1.exercises.q2b' }, { value: 'c', labelKey: 'thirdConditional1.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'thirdConditional1.exercises.q3', options: [{ value: 'a', labelKey: 'thirdConditional1.exercises.q3a' }, { value: 'b', labelKey: 'thirdConditional1.exercises.q3b' }, { value: 'c', labelKey: 'thirdConditional1.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'thirdConditional1.exercises.q4', options: [{ value: 'a', labelKey: 'thirdConditional1.exercises.q4a' }, { value: 'b', labelKey: 'thirdConditional1.exercises.q4b' }, { value: 'c', labelKey: 'thirdConditional1.exercises.q4c' }], correctAnswer: 'b' },
+                { questionTextKey: 'thirdConditional1.exercises.q5', options: [{ value: 'a', labelKey: 'thirdConditional1.exercises.q5a' }, { value: 'b', labelKey: 'thirdConditional1.exercises.q5b' }, { value: 'c', labelKey: 'thirdConditional1.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'thirdConditional1.exercises.q6', options: [{ value: 'a', labelKey: 'thirdConditional1.exercises.q6a' }, { value: 'b', labelKey: 'thirdConditional1.exercises.q6b' }, { value: 'c', labelKey: 'thirdConditional1.exercises.q6c' }], correctAnswer: 'b' }
             ]
         });
-
-        // Build fill-in-the-blank exercises
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+    </script>
+    <script>
+        // Fill-in-the-blank exercises
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'thirdConditional1.exercises.q7',
-                    answers: ['would have told']
-                },
-                {
-                    questionTextKey: 'thirdConditional1.exercises.q8',
-                    answers: ['had left']
-                },
-                {
-                    questionTextKey: 'thirdConditional1.exercises.q9',
-                    answers: ["hadn't spent", "had not spent"]
-                }
+                { questionTextKey: 'thirdConditional1.exercises.q7', answers: ['would have told'] },
+                { questionTextKey: 'thirdConditional1.exercises.q8', answers: ['had left'] },
+                { questionTextKey: 'thirdConditional1.exercises.q9', answers: ['hadn\'t spent', 'had not spent'] }
             ]
         });
-
-        // Build sentence ordering exercises
+    </script>
+    <script>
+        // Sentence ordering exercises
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'thirdConditional1.exercises.q10',
-                    words: ['if', 'you', 'had', 'told', 'me', 'I', 'would', 'have', 'helped', 'you', '.'],
-                    correctSentence: 'if you had told me I would have helped you .'
-                },
-                {
-                    questionTextKey: 'thirdConditional1.exercises.q11',
-                    words: ['would', 'have', 'passed', 'the', 'exam', 'if', 'she', 'had', 'studied', '.'],
-                    correctSentence: 'would have passed the exam if she had studied .'
-                },
-                {
-                    questionTextKey: 'thirdConditional1.exercises.q12',
-                    words: ['not', 'have', 'missed', 'the', 'flight', 'if', 'we', 'had', 'left', 'earlier', '.'],
-                    correctSentence: 'not have missed the flight if we had left earlier .'
-                }
+                { questionTextKey: 'thirdConditional1.exercises.q10', words: ['if', 'you', 'had', 'told', 'me', 'I', 'would', 'have', 'helped', 'you', '.'], correctSentence: 'if you had told me I would have helped you .' },
+                { questionTextKey: 'thirdConditional1.exercises.q11', words: ['she', 'would', 'have', 'passed', 'the', 'exam', 'if', 'she', 'had', 'studied', '.'], correctSentence: 'she would have passed the exam if she had studied .' },
+                { questionTextKey: 'thirdConditional1.exercises.q12', words: ['we', 'would', 'not', 'have', 'missed', 'the', 'flight', 'if', 'we', 'had', 'left', 'earlier', '.'], correctSentence: 'we would not have missed the flight if we had left earlier .' }
             ]
         });
-
-        // Check all exercises
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
-            
+
             totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
             totalQuestions += 6;
             totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
             totalQuestions += 3;
             totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
             totalQuestions += 3;
-            
+
             const scoreEl = document.getElementById('score-value');
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered the third conditional basics!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit past perfect and would have structures.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
+
+            // ---------- sound & visual effects ----------
+            EHScoreEffects.show(totalScore, totalQuestions);
         }
-        
         document.addEventListener('DOMContentLoaded', function() {
-            // Init drag-and-drop for ordering (builder creates HTML, init adds touch/drag)
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-        
-        // i18n rendering for HTML elements with innerHTML tags
+        // i18n rendering – handles nested keys for title lines
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
@@ -638,9 +554,7 @@
                 elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
+                    if (translation) {
                         el.textContent = translation;
                     }
                 });

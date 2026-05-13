@@ -3,245 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Must & Have to: Core Concepts & Primary Uses - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
-    <style>
-    :root {
-        /* Theme – must/have to (amber/orange) */
-        --bg-gradient: linear-gradient(135deg, #bf360c, #e65100, #ff9800);
-        --title-color: #bf360c;
-        --primary: #e65100;
-        --primary-hover: #bf360c;
-        --primary-light: #ffcc80;
-        --accent: #ff9800;
-        --rule-bg: #fff3e0;
-        --rule-border: #ff9800;
-        --example-bg: #ffe0b2;
-        --example-border: #ff9800;
-        --exercise-number-gradient: linear-gradient(135deg, #e65100, #ff9800);
-        --nav-btn-bg: #e65100;
-        --nav-btn-hover: #bf360c;
-        --nav-back-btn-bg: #ff9800;
-        --nav-back-btn-color: #4a148c;   /* not critical */
-        --nav-back-btn-hover: #e65100;
-
-        /* Neutrals (same as other lessons) */
-        --header-text: white;
-        --header-text-light: rgba(255, 255, 255, 0.9);
-        --content-bg: rgba(255, 255, 255, 0.95);
-        --text-color: #333;
-        --white: white;
-        --section-divider: #e0e0e0;
-        --card-bg: white;
-        --subsection-bg: white;
-        --card-border: #e0e0e0;
-        --input-border: #e0e0e0;
-        --dashed-border: #e0e0e0;
-        --table-border: #ddd;
-        --table-stripe: #f2f2f2;
-        --correct-bg: #d4edda;
-        --correct-color: #155724;
-        --correct-border: #c3e6cb;
-        --incorrect-bg: #f8d7da;
-        --incorrect-color: #721c24;
-        --incorrect-border: #f5c6cb;
-    }
-    </style>
+    <title>Must & Have to I: Core Concepts & Primary Uses - English Hub</title>
     <link rel="stylesheet" href="styles/style-conjugation.css">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #c2e0f0, #a8cce8, #8eb8e0, #74a4d8);
+            --content-bg: #f4fafe;
+            --card-bg: #ffffff;
+            --subsection-bg: #edf5fc;
+            --rule-bg: #e4eef9;
+            --example-bg: #dce6f5;
+            --table-stripe: #eef3fa;
+            --title-color: #1a4a6e;
+            --text-color: #1c3a4c;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #2c6e9e;
+            --primary-hover: #1f5a85;
+            --primary-light: #4082b0;
+            --accent: #2c7cb6;
+            --exercise-number-gradient: linear-gradient(135deg, #2c6e9e, #1f5a85);
+            --rule-border: #2c6e9e;
+            --example-border: #2c6e9e;
+            --nav-btn-bg: #2c6e9e;
+            --nav-btn-hover: #1f5a85;
+            --nav-back-btn-bg: #4082b0;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #2c6e9e;
+            --refract-divider-color: #8eb4d0;
+            --refract-translation-bg: #e2edf8;
+            --refract-translation-border: #2c6e9e;
+            --refract-english-color: #1c3a4c;
+            --section-divider: #cfdfef;
+            --card-border: #cfdfef;
+            --input-border: #b0c8e0;
+            --dashed-border: #b0c8e0;
+            --table-border: #c0d4e8;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #e8f0f8;
+            --neutral-color: #4a6a7e;
+            --neutral-border: #b8cce0;
+            --empty-input-border: #a0bcd4;
+            --empty-input-bg: #f2f8ff;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #2c6e9e;
+            --language-selector-color: #1a4a6e;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #0e3d5c, #164d6e, #1e5c80, #266c92);
+            --content-bg: #0f2a38;
+            --card-bg: #183c4c;
+            --subsection-bg: #183c4c;
+            --rule-bg: #0f2a38;
+            --example-bg: #0f2a38;
+            --table-stripe: #123545;
+            --title-color: #9acce8;
+            --text-color: #d4e8f4;
+            --header-text: #d4e8f4;
+            --header-text-light: #b0d0e0;
+            --primary: #4a9ed4;
+            --primary-hover: #60b0e0;
+            --primary-light: #4a9ed4;
+            --accent: #4a9ed4;
+            --rule-border: #4a9ed4;
+            --example-border: #4a9ed4;
+            --exercise-number-gradient: linear-gradient(135deg, #4a9ed4, #2c6e9e);
+            --nav-btn-bg: #4a9ed4;
+            --nav-btn-hover: #2c6e9e;
+            --nav-back-btn-bg: #60b0e0;
+            --nav-back-btn-color: #0a1e2a;
+            --nav-back-btn-hover: #4a9ed4;
+            --refract-divider-color: #6a9ec0;
+            --refract-translation-bg: #1e4a60;
+            --refract-translation-border: #6a9ec0;
+            --refract-english-color: #ccf0fc;
+            --section-divider: #1e5068;
+            --card-border: #1e5068;
+            --input-border: #2c6880;
+            --dashed-border: #2c6880;
+            --table-border: #245a72;
+            --white: #e0f0f8;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #1e3a4a;
+            --neutral-color: #b0d0e0;
+            --neutral-border: #2c6880;
+            --empty-input-border: #2c6880;
+            --empty-input-bg: #0f2a38;
+            --language-selector-bg: #183c4c;
+            --language-selector-border: #4a9ed4;
+            --language-selector-color: #d4e8f4;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
+        }
+    </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="modalsMustHaveTo1.title">Must & Have to: Core Concepts & Primary Uses</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="modalsMustHaveTo1.subtitle">Learn how to use must and have to to express obligation, necessity, and deduction</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="mustHaveTo1.title.line1">Must & Have to: I:</div>
+                <div class="EH-conjugation-title-line" data-i18n="mustHaveTo1.title.line2">Core Concepts & Primary Uses</div>
+                <div class="EH-conjugation-subtitle" data-i18n="mustHaveTo1.title.line3">express obligation, necessity, and deduction</div>
+                <div class="EH-conjugation-subtitle" data-i18n="mustHaveTo1.title.line4">lesson: 1/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Introduction -->
+            <!-- Section 1: Introduction to Must & Have to -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo1.introduction.title">Introduction to Must & Have to</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo1.intro.title">I. 1. Introduction to Must & Have to</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔰</span>
-                        <span data-i18n="modalsMustHaveTo1.introduction.whatAre">What are modals "must" and "have to"?</span>
+                        <span class="EH-conjugation-subsection-icon">📘</span>
+                        <span data-i18n="mustHaveTo1.intro.heading">What are modals "must" and "have to"?</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMustHaveTo1.introduction.definitionTitle">Definition:</div>
-                        <p data-i18n="modalsMustHaveTo1.introduction.definition">"Must" and "have to" are used to express obligation, necessity, and deduction. "Must" is a modal verb; "have to" is a semi-modal that behaves like a normal verb in questions and negatives.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo1.intro.desc1">📘 Definition:</div>
+                        <p data-i18n="mustHaveTo1.intro.desc2">"Must" and "have to" are used to express obligation, necessity, and deduction. "Must" is a modal verb; "have to" is a semi-modal that behaves like a normal verb in questions and negatives.</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMustHaveTo1.introduction.coreIdeas">Core ideas:</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo1.intro.coreTitle">💡 Core ideas:</div>
                         <ul>
-                            <li data-i18n="modalsMustHaveTo1.introduction.core1"><strong>Must</strong> – strong internal obligation, necessity, logical deduction.</li>
-                            <li data-i18n="modalsMustHaveTo1.introduction.core2"><strong>Have to</strong> – external obligation (rules, laws), general necessity.</li>
+                            <li data-i18n="mustHaveTo1.intro.core1">Must – strong internal obligation, necessity, logical deduction.</li>
+                            <li data-i18n="mustHaveTo1.intro.core2">Have to – external obligation (rules, laws), general necessity.</li>
                         </ul>
                     </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.introduction.example1">I must go. (obligation)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.introduction.example2">You have to wear a uniform. (external obligation)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.introduction.example3">She must be at home. (deduction)</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.introduction.example4">They have to work hard. (necessity)</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.intro.ex1">I must go. (obligation)</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.intro.ex2">You have to wear a uniform. (external obligation)</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.intro.ex3">She must be at home. (deduction)</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.intro.ex4">They have to work hard. (necessity)</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Basic Grammar Rules -->
+            <!-- Section 2: Basic Grammar Rules -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo1.grammar.title">Basic Grammar Rules</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo1.grammar.title">I. 2. Basic Grammar Rules</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⚙️</span>
-                        <span data-i18n="modalsMustHaveTo1.grammar.structure">Structure</span>
+                        <span class="EH-conjugation-subsection-icon">🔧</span>
+                        <span data-i18n="mustHaveTo1.grammar.heading">Structure: affirmative, negative, question</span>
                     </h3>
                     <table class="EH-conjugation-table">
                         <thead>
-                            <tr>
-                                <th data-i18n="common.form">Form</th>
-                                <th data-i18n="common.rule">Rule</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
+                            <tr><th data-i18n="mustHaveTo1.grammar.formCol">Form</th><th data-i18n="mustHaveTo1.grammar.ruleCol">Rule</th><th data-i18n="mustHaveTo1.grammar.exampleCol">Example</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td data-i18n="common.affirmative">Affirmative</td><td>subject + must / have to + base verb</td><td>She must study. / We have to leave.</td></tr>
-                            <tr><td data-i18n="common.negative">Negative</td><td>subject + must not/mustn't / do/does not have to + base verb</td><td>You mustn't smoke. / He doesn't have to come.</td></tr>
-                            <tr><td data-i18n="common.question">Question</td><td>Must + subject + base verb? / Do/Does + subject + have to + base verb?</td><td>Must I go? / Do they have to pay?</td></tr>
+                            <tr><td data-i18n="mustHaveTo1.grammar.affirmative">Affirmative</td><td data-i18n="mustHaveTo1.grammar.affirmRule">subject + must / have to + base verb</td><td data-i18n="mustHaveTo1.grammar.affirmEx">She must study. / We have to leave.</td></tr>
+                            <tr><td data-i18n="mustHaveTo1.grammar.negative">Negative</td><td data-i18n="mustHaveTo1.grammar.negRule">subject + must not/mustn't / do/does not have to + base verb</td><td data-i18n="mustHaveTo1.grammar.negEx">You mustn't smoke. / He doesn't have to come.</td></tr>
+                            <tr><td data-i18n="mustHaveTo1.grammar.question">Question</td><td data-i18n="mustHaveTo1.grammar.quesRule">Must + subject + base verb? / Do/Does + subject + have to + base verb?</td><td data-i18n="mustHaveTo1.grammar.quesEx">Must I go? / Do they have to pay?</td></tr>
                         </tbody>
                     </table>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="modalsMustHaveTo1.grammar.importantNote">Important:</div>
-                        <p data-i18n="modalsMustHaveTo1.grammar.noteText">Must has no past form (use "had to" for past). "Have to" uses auxiliary do/does for questions and negatives.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo1.grammar.noteTitle">⚠️ Important:</div>
+                        <p data-i18n="mustHaveTo1.grammar.noteDesc">Must has no past form (use "had to" for past). "Have to" uses auxiliary do/does for questions and negatives.</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Primary Functions of Must -->
+            <!-- Section 3: Primary Uses of Must -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo1.mustFunctions.title">Primary Uses of "Must"</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo1.usesMust.title">I. 3. Primary Uses of "Must"</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">✅</span>
-                        <span data-i18n="modalsMustHaveTo1.mustFunctions.obligation">1. Strong internal obligation</span>
+                        <span class="EH-conjugation-subsection-icon">💪</span>
+                        <span data-i18n="mustHaveTo1.usesMust.heading">Internal obligation, deduction, prohibition</span>
                     </h3>
-                    <p data-i18n="modalsMustHaveTo1.mustFunctions.obligationText">We use must to express what the speaker feels is necessary (personal conviction).</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.mustFunctions.obligationEx1">I must call my mother.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.mustFunctions.obligationEx2">You must see that film; it's amazing.</div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo1.usesMust.obligTitle">1. Strong internal obligation</div>
+                        <p data-i18n="mustHaveTo1.usesMust.obligDesc">We use must to express what the speaker feels is necessary (personal conviction).</p>
                     </div>
-                </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🧠</span>
-                        <span data-i18n="modalsMustHaveTo1.mustFunctions.deduction">2. Deduction / logical conclusion</span>
-                    </h3>
-                    <p data-i18n="modalsMustHaveTo1.mustFunctions.deductionText">Must expresses that we are almost sure something is true based on evidence.</p>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.mustFunctions.deductionEx1">He's been driving for hours; he must be tired.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.mustFunctions.deductionEx2">The lights are on. She must be home.</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.usesMust.obligEx1">I must call my mother.</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.usesMust.obligEx2">You must see that film; it's amazing.</div>
                     </div>
-                </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⚠️</span>
-                        <span data-i18n="modalsMustHaveTo1.mustFunctions.prohibition">3. Prohibition (mustn't)</span>
-                    </h3>
-                    <p data-i18n="modalsMustHaveTo1.mustFunctions.prohibitionText">Must not / mustn't is used to say something is forbidden.</p>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo1.usesMust.dedTitle">2. Deduction / logical conclusion</div>
+                        <p data-i18n="mustHaveTo1.usesMust.dedDesc">Must expresses that we are almost sure something is true based on evidence.</p>
+                    </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.mustFunctions.prohibitionEx1">You mustn't smoke in the hospital.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.mustFunctions.prohibitionEx2">We mustn't be late.</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.usesMust.dedEx1">He's been driving for hours; he must be tired.</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.usesMust.dedEx2">The lights are on. She must be home.</div>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo1.usesMust.prohTitle">3. Prohibition (mustn't)</div>
+                        <p data-i18n="mustHaveTo1.usesMust.prohDesc">Must not / mustn't is used to say something is forbidden.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.usesMust.prohEx1">You mustn't smoke in the hospital.</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.usesMust.prohEx2">We mustn't be late.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Primary Functions of Have to -->
+            <!-- Section 4: Primary Uses of Have to -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo1.haveToFunctions.title">Primary Uses of "Have to"</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo1.usesHaveTo.title">I. 4. Primary Uses of "Have to"</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🏛️</span>
-                        <span data-i18n="modalsMustHaveTo1.haveToFunctions.external">1. External obligation (rules, laws)</span>
+                        <span class="EH-conjugation-subsection-icon">📜</span>
+                        <span data-i18n="mustHaveTo1.usesHaveTo.heading">External obligation, general necessity, no obligation</span>
                     </h3>
-                    <p data-i18n="modalsMustHaveTo1.haveToFunctions.externalText">We use have to when the obligation comes from an external source (law, rules, someone else).</p>
-                    <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.haveToFunctions.externalEx1">Employees have to wear an ID badge.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.haveToFunctions.externalEx2">You have to have a ticket to enter.</div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo1.usesHaveTo.extTitle">1. External obligation (rules, laws)</div>
+                        <p data-i18n="mustHaveTo1.usesHaveTo.extDesc">We use have to when the obligation comes from an external source (law, rules, someone else).</p>
                     </div>
-                </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📆</span>
-                        <span data-i18n="modalsMustHaveTo1.haveToFunctions.necessity">2. General necessity</span>
-                    </h3>
-                    <p data-i18n="modalsMustHaveTo1.haveToFunctions.necessityText">Have to expresses that something is necessary in everyday life.</p>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.haveToFunctions.necessityEx1">I have to eat breakfast every day.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.haveToFunctions.necessityEx2">She has to take this medicine.</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.usesHaveTo.extEx1">Employees have to wear an ID badge.</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.usesHaveTo.extEx2">You have to have a ticket to enter.</div>
                     </div>
-                </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔓</span>
-                        <span data-i18n="modalsMustHaveTo1.haveToFunctions.noObligation">3. No obligation (don't have to)</span>
-                    </h3>
-                    <p data-i18n="modalsMustHaveTo1.haveToFunctions.noObligationText">Don't/doesn't have to means it is not necessary (but you can if you want).</p>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo1.usesHaveTo.genTitle">2. General necessity</div>
+                        <p data-i18n="mustHaveTo1.usesHaveTo.genDesc">Have to expresses that something is necessary in everyday life.</p>
+                    </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.haveToFunctions.noObligationEx1">You don't have to come if you're busy.</div>
-                        <div class="EH-conjugation-example" data-i18n="modalsMustHaveTo1.haveToFunctions.noObligationEx2">He doesn't have to work on Sundays.</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.usesHaveTo.genEx1">I have to eat breakfast every day.</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.usesHaveTo.genEx2">She has to take this medicine.</div>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="mustHaveTo1.usesHaveTo.noObTitle">3. No obligation (don't have to)</div>
+                        <p data-i18n="mustHaveTo1.usesHaveTo.noObDesc">Don't/doesn't have to means it is not necessary (but you can if you want).</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.usesHaveTo.noObEx1">You don't have to come if you're busy.</div>
+                        <div class="EH-conjugation-example" data-i18n="mustHaveTo1.usesHaveTo.noObEx2">He doesn't have to work on Sundays.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Comparison table -->
+            <!-- Section 5: Must vs Have to – Quick Comparison -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo1.comparison.title">Must vs Have to – Quick Comparison</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo1.comparison.title">I. 5. Must vs Have to – Quick Comparison</h2>
                 <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">⚖️</span>
+                        <span data-i18n="mustHaveTo1.comparison.heading">Differences at a glance</span>
+                    </h3>
                     <table class="EH-conjugation-table">
-                        <thead><tr><th data-i18n="common.usage">Usage</th><th>Must</th><th>Have to</th></tr></thead>
+                        <thead><tr><th data-i18n="mustHaveTo1.comparison.usageCol">Usage</th><th data-i18n="mustHaveTo1.comparison.mustCol">Must</th><th data-i18n="mustHaveTo1.comparison.haveToCol">Have to</th></tr></thead>
                         <tbody>
-                            <tr><td data-i18n="modalsMustHaveTo1.comparison.obligation">Obligation</td><td>internal (speaker's feeling)</td><td>external (rules, others)</td></tr>
-                            <tr><td data-i18n="modalsMustHaveTo1.comparison.negative">Negative meaning</td><td>mustn't = prohibition</td><td>don't have to = not necessary</td></tr>
-                            <tr><td data-i18n="modalsMustHaveTo1.comparison.past">Past form</td><td>had to (no must in past)</td><td>had to (with did/didn't)</td></tr>
+                            <tr><td data-i18n="mustHaveTo1.comparison.oblig">Obligation</td><td data-i18n="mustHaveTo1.comparison.mustOblig">internal (speaker's feeling)</td><td data-i18n="mustHaveTo1.comparison.haveToOblig">external (rules, others)</td></tr>
+                            <tr><td data-i18n="mustHaveTo1.comparison.neg">Negative meaning</td><td data-i18n="mustHaveTo1.comparison.mustNeg">mustn't = prohibition</td><td data-i18n="mustHaveTo1.comparison.haveToNeg">don't have to = not necessary</td></tr>
+                            <tr><td data-i18n="mustHaveTo1.comparison.past">Past form</td><td data-i18n="mustHaveTo1.comparison.mustPast">had to (no must in past)</td><td data-i18n="mustHaveTo1.comparison.haveToPast">had to (with did/didn't)</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            
-            <!-- EXERCISES (12) – dynamic slots -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="modalsMustHaveTo1.exercises.title">Practice Exercises</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: var(--title-color); margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="mustHaveTo1.exercises.title">Practice: Must, Have to, Mustn't & Don't Have to</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: var(--title-color); margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: var(--title-color); margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
@@ -251,128 +292,33 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-shouldoughtto-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson →</span>
-                </button>
-				<!-- <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-					<span data-i18n="common.previousLesson">Previous Lesson</span>
-				</button> -->
-                <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-                    <span></span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">← Return to Conjugation</span>
-                </button>
-            </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
     <script>
         window.I18N = {
             en: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject", conjugation: "Conjugation", example: "Example", examples: "Examples:",
-                    i: "I", you: "You", he: "He", she: "She", it: "It", we: "We", they: "They",
-                    verb: "Verb",
-                    form: "Form", rule: "Rule", affirmative: "Affirmative", negative: "Negative", question: "Question", usage: "Usage",
-                    previousLesson: "← Previous Lesson",
-                    returnToConjugation: "← Return to Conjugation",
-                    nextLesson: "Next Lesson →"
-                },
+                common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
                 footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
-                modalsMustHaveTo1: {
-                    title: "Must & Have to: Core Concepts & Primary Uses",
-                    subtitle: "Learn how to use must and have to to express obligation, necessity, and deduction",
-                    introduction: {
-                        title: "Introduction to Must & Have to",
-                        whatAre: "What are modals \"must\" and \"have to\"?",
-                        definitionTitle: "Definition:",
-                        definition: "\"Must\" and \"have to\" are used to express obligation, necessity, and deduction. \"Must\" is a modal verb; \"have to\" is a semi-modal that behaves like a normal verb in questions and negatives.",
-                        coreIdeas: "Core ideas:",
-                        core1: "<strong>Must</strong> – strong internal obligation, necessity, logical deduction.",
-                        core2: "<strong>Have to</strong> – external obligation (rules, laws), general necessity.",
-                        example1: "I must go. (obligation)",
-                        example2: "You have to wear a uniform. (external obligation)",
-                        example3: "She must be at home. (deduction)",
-                        example4: "They have to work hard. (necessity)"
-                    },
-                    grammar: {
-                        title: "Basic Grammar Rules",
-                        structure: "Structure",
-                        importantNote: "Important:",
-                        noteText: "Must has no past form (use \"had to\" for past). \"Have to\" uses auxiliary do/does for questions and negatives."
-                    },
-                    mustFunctions: {
-                        title: "Primary Uses of \"Must\"",
-                        obligation: "1. Strong internal obligation",
-                        obligationText: "We use must to express what the speaker feels is necessary (personal conviction).",
-                        obligationEx1: "I must call my mother.",
-                        obligationEx2: "You must see that film; it's amazing.",
-                        deduction: "2. Deduction / logical conclusion",
-                        deductionText: "Must expresses that we are almost sure something is true based on evidence.",
-                        deductionEx1: "He's been driving for hours; he must be tired.",
-                        deductionEx2: "The lights are on. She must be home.",
-                        prohibition: "3. Prohibition (mustn't)",
-                        prohibitionText: "Must not / mustn't is used to say something is forbidden.",
-                        prohibitionEx1: "You mustn't smoke in the hospital.",
-                        prohibitionEx2: "We mustn't be late."
-                    },
-                    haveToFunctions: {
-                        title: "Primary Uses of \"Have to\"",
-                        external: "1. External obligation (rules, laws)",
-                        externalText: "We use have to when the obligation comes from an external source (law, rules, someone else).",
-                        externalEx1: "Employees have to wear an ID badge.",
-                        externalEx2: "You have to have a ticket to enter.",
-                        necessity: "2. General necessity",
-                        necessityText: "Have to expresses that something is necessary in everyday life.",
-                        necessityEx1: "I have to eat breakfast every day.",
-                        necessityEx2: "She has to take this medicine.",
-                        noObligation: "3. No obligation (don't have to)",
-                        noObligationText: "Don't/doesn't have to means it is not necessary (but you can if you want).",
-                        noObligationEx1: "You don't have to come if you're busy.",
-                        noObligationEx2: "He doesn't have to work on Sundays."
-                    },
-                    comparison: {
-                        title: "Must vs Have to – Quick Comparison",
-                        obligation: "Obligation",
-                        negative: "Negative meaning",
-                        past: "Past form"
-                    },
+                mustHaveTo1: {
+                    title: { line1: "Must & Have to: I:", line2: "Core Concepts & Primary Uses", line3: "express obligation, necessity, and deduction", line4: "lesson: 1/3" },
+                    intro: { title: "I. 1. Introduction to Must & Have to", heading: "What are modals \"must\" and \"have to\"?", desc1: "📘 Definition:", desc2: "\"Must\" and \"have to\" are used to express obligation, necessity, and deduction. \"Must\" is a modal verb; \"have to\" is a semi-modal that behaves like a normal verb in questions and negatives.", coreTitle: "💡 Core ideas:", core1: "Must – strong internal obligation, necessity, logical deduction.", core2: "Have to – external obligation (rules, laws), general necessity.", ex1: "I must go. (obligation)", ex2: "You have to wear a uniform. (external obligation)", ex3: "She must be at home. (deduction)", ex4: "They have to work hard. (necessity)" },
+                    grammar: { title: "I. 2. Basic Grammar Rules", heading: "Structure: affirmative, negative, question", formCol: "Form", ruleCol: "Rule", exampleCol: "Example", affirmative: "Affirmative", affirmRule: "subject + must / have to + base verb", affirmEx: "She must study. / We have to leave.", negative: "Negative", negRule: "subject + must not/mustn't / do/does not have to + base verb", negEx: "You mustn't smoke. / He doesn't have to come.", question: "Question", quesRule: "Must + subject + base verb? / Do/Does + subject + have to + base verb?", quesEx: "Must I go? / Do they have to pay?", noteTitle: "⚠️ Important:", noteDesc: "Must has no past form (use \"had to\" for past). \"Have to\" uses auxiliary do/does for questions and negatives." },
+                    usesMust: { title: "I. 3. Primary Uses of \"Must\"", heading: "Internal obligation, deduction, prohibition", obligTitle: "1. Strong internal obligation", obligDesc: "We use must to express what the speaker feels is necessary (personal conviction).", obligEx1: "I must call my mother.", obligEx2: "You must see that film; it's amazing.", dedTitle: "2. Deduction / logical conclusion", dedDesc: "Must expresses that we are almost sure something is true based on evidence.", dedEx1: "He's been driving for hours; he must be tired.", dedEx2: "The lights are on. She must be home.", prohTitle: "3. Prohibition (mustn't)", prohDesc: "Must not / mustn't is used to say something is forbidden.", prohEx1: "You mustn't smoke in the hospital.", prohEx2: "We mustn't be late." },
+                    usesHaveTo: { title: "I. 4. Primary Uses of \"Have to\"", heading: "External obligation, general necessity, no obligation", extTitle: "1. External obligation (rules, laws)", extDesc: "We use have to when the obligation comes from an external source (law, rules, someone else).", extEx1: "Employees have to wear an ID badge.", extEx2: "You have to have a ticket to enter.", genTitle: "2. General necessity", genDesc: "Have to expresses that something is necessary in everyday life.", genEx1: "I have to eat breakfast every day.", genEx2: "She has to take this medicine.", noObTitle: "3. No obligation (don't have to)", noObDesc: "Don't/doesn't have to means it is not necessary (but you can if you want).", noObEx1: "You don't have to come if you're busy.", noObEx2: "He doesn't have to work on Sundays." },
+                    comparison: { title: "I. 5. Must vs Have to – Quick Comparison", heading: "Differences at a glance", usageCol: "Usage", mustCol: "Must", haveToCol: "Have to", oblig: "Obligation", mustOblig: "internal (speaker's feeling)", haveToOblig: "external (rules, others)", neg: "Negative meaning", mustNeg: "mustn't = prohibition", haveToNeg: "don't have to = not necessary", past: "Past form", mustPast: "had to (no must in past)", haveToPast: "had to (with did/didn't)" },
                     exercises: {
-                        title: "Practice Exercises",
-                        q1: "Choose the correct modal for internal obligation:",
-                        q1Sentence: "I ______ finish this project today. It's my promise.",
+                        title: "Practice: Must, Have to, Mustn't & Don't Have to",
+                        q1: "Choose the correct modal for internal obligation: I ______ finish this project today. It's my promise.",
                         q1a: "must", q1b: "have to", q1c: "mustn't",
-                        q2: "Choose for external obligation (law):",
-                        q2Sentence: "You ______ wear a seatbelt by law.",
+                        q2: "Choose for external obligation (law): You ______ wear a seatbelt by law.",
                         q2a: "must", q2b: "have to", q2c: "don't have to",
-                        q3: "Choose for logical deduction:",
-                        q3Sentence: "The lights are on. She ______ be at home.",
+                        q3: "Choose for logical deduction: The lights are on. She ______ be at home.",
                         q3a: "must", q3b: "has to", q3c: "might",
-                        q4: "Choose for general necessity:",
-                        q4Sentence: "We ______ wake up early tomorrow.",
+                        q4: "Choose for general necessity: We ______ wake up early tomorrow.",
                         q4a: "must", q4b: "have to", q4c: "mustn't",
-                        q5: "Choose the correct negative for no obligation:",
-                        q5Sentence: "He ______ come if he doesn't want to.",
+                        q5: "Choose the correct negative for no obligation: He ______ come if he doesn't want to.",
                         q5a: "mustn't", q5b: "doesn't have to", q5c: "don't have to",
-                        q6: "Choose for prohibition:",
-                        q6Sentence: "You ______ smoke here; it's forbidden.",
+                        q6: "Choose for prohibition: You ______ smoke here; it's forbidden.",
                         q6a: "don't have to", q6b: "mustn't", q6c: "have to",
                         q7: "Complete (past): I ______ (must) go to the dentist yesterday.",
                         q8: "Complete: She ______ (not/have to) work on Sundays.",
@@ -384,314 +330,75 @@
                 }
             },
             fr: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject (Sujet)", conjugation: "Conjugation (Conjugaison)", example: "Example (Exemple)", examples: "Examples: (Exemples :)",
-                    i: "I (Je)", you: "You (Vous)", he: "He (Il)", she: "She (Elle)", it: "It (Il/Elle)", we: "We (Nous)", they: "They (Ils/Elles)",
-                    verb: "Verb (Verbe)",
-                    form: "Form (Forme)", rule: "Rule (Règle)", affirmative: "Affirmative (Affirmatif)", negative: "Negative (Négatif)", question: "Question (Question)", usage: "Usage (Usage)",
-                    previousLesson: "← Previous Lesson (Leçon Précédente)",
-                    returnToConjugation: "← Return to Conjugation (Retour au Conjugaison)",
-                    nextLesson: "Next Lesson (Leçon Suivante) →"
-                },
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
-                modalsMustHaveTo1: {
-                    title: "Must & Have to: Core Concepts & Primary Uses (Must & Have to : concepts de base et utilisations principales)",
-                    subtitle: "Learn how to use must and have to to express obligation, necessity, and deduction (Apprenez à utiliser must et have to pour exprimer l'obligation, la nécessité et la déduction)",
-                    introduction: {
-                        title: "Introduction to Must & Have to (Introduction à Must & Have to)",
-                        whatAre: "What are modals \"must\" and \"have to\"? (Que sont les modaux \"must\" et \"have to\" ?)",
-                        definitionTitle: "Definition: (Définition :)",
-                        definition: "\"Must\" and \"have to\" are used to express obligation, necessity, and deduction. \"Must\" is a modal verb; \"have to\" is a semi-modal that behaves like a normal verb in questions and negatives. (\"Must\" et \"have to\" sont utilisés pour exprimer l'obligation, la nécessité et la déduction. \"Must\" est un verbe modal ; \"have to\" est un semi-modal qui se comporte comme un verbe normal dans les questions et les négations.)",
-                        coreIdeas: "Core ideas: (Idées principales :)",
-                        core1: "<strong>Must</strong> – strong internal obligation, necessity, logical deduction. (<strong>Must</strong> – obligation interne forte, nécessité, déduction logique.)",
-                        core2: "<strong>Have to</strong> – external obligation (rules, laws), general necessity. (<strong>Have to</strong> – obligation externe – règles, lois, nécessité générale.)",
-                        example1: "I must go. (obligation) (Je dois partir.)",
-                        example2: "You have to wear a uniform. (external obligation) (Tu dois porter un uniforme.)",
-                        example3: "She must be at home. (deduction) (Elle doit être à la maison.)",
-                        example4: "They have to work hard. (necessity) (Ils doivent travailler dur.)"
-                    },
-                    grammar: {
-                        title: "Basic Grammar Rules (Règles grammaticales de base)",
-                        structure: "Structure (Structure)",
-                        importantNote: "Important: (Important :)",
-                        noteText: "Must has no past form (use \"had to\" for past). \"Have to\" uses auxiliary do/does for questions and negatives. (Must n'a pas de forme passée – utiliser \"had to\" pour le passé. \"Have to\" utilise l'auxiliaire do/does pour les questions et les négations.)"
-                    },
-                    mustFunctions: {
-                        title: "Primary Uses of \"Must\" (Utilisations principales de \"Must\")",
-                        obligation: "1. Strong internal obligation (1. Obligation interne forte)",
-                        obligationText: "We use must to express what the speaker feels is necessary (personal conviction). (On utilise must pour exprimer ce que le locuteur ressent comme nécessaire – conviction personnelle.)",
-                        obligationEx1: "I must call my mother. (Je dois appeler ma mère.)",
-                        obligationEx2: "You must see that film; it's amazing. (Tu dois voir ce film ; il est incroyable.)",
-                        deduction: "2. Deduction / logical conclusion (2. Déduction / conclusion logique)",
-                        deductionText: "Must expresses that we are almost sure something is true based on evidence. (Must exprime que nous sommes presque sûrs que quelque chose est vrai sur la base de preuves.)",
-                        deductionEx1: "He's been driving for hours; he must be tired. (Il conduit depuis des heures ; il doit être fatigué.)",
-                        deductionEx2: "The lights are on. She must be home. (Les lumières sont allumées. Elle doit être à la maison.)",
-                        prohibition: "3. Prohibition (mustn't) (3. Interdiction – mustn't)",
-                        prohibitionText: "Must not / mustn't is used to say something is forbidden. (Must not / mustn't est utilisé pour dire que quelque chose est interdit.)",
-                        prohibitionEx1: "You mustn't smoke in the hospital. (Tu ne dois pas fumer à l'hôpital.)",
-                        prohibitionEx2: "We mustn't be late. (Nous ne devons pas être en retard.)"
-                    },
-                    haveToFunctions: {
-                        title: "Primary Uses of \"Have to\" (Utilisations principales de \"Have to\")",
-                        external: "1. External obligation (rules, laws) (1. Obligation externe – règles, lois)",
-                        externalText: "We use have to when the obligation comes from an external source (law, rules, someone else). (On utilise have to quand l'obligation vient d'une source externe – loi, règles, quelqu'un d'autre.)",
-                        externalEx1: "Employees have to wear an ID badge. (Les employés doivent porter un badge.)",
-                        externalEx2: "You have to have a ticket to enter. (Vous devez avoir un billet pour entrer.)",
-                        necessity: "2. General necessity (2. Nécessité générale)",
-                        necessityText: "Have to expresses that something is necessary in everyday life. (Have to exprime que quelque chose est nécessaire dans la vie quotidienne.)",
-                        necessityEx1: "I have to eat breakfast every day. (Je dois prendre le petit-déjeuner tous les jours.)",
-                        necessityEx2: "She has to take this medicine. (Elle doit prendre ce médicament.)",
-                        noObligation: "3. No obligation (don't have to) (3. Absence d'obligation – don't have to)",
-                        noObligationText: "Don't/doesn't have to means it is not necessary (but you can if you want). (Don't/doesn't have to signifie que ce n'est pas nécessaire – mais vous pouvez si vous voulez.)",
-                        noObligationEx1: "You don't have to come if you're busy. (Tu n'as pas besoin de venir si tu es occupé.)",
-                        noObligationEx2: "He doesn't have to work on Sundays. (Il n'a pas besoin de travailler le dimanche.)"
-                    },
-                    comparison: {
-                        title: "Must vs Have to – Quick Comparison (Must vs Have to – Comparaison rapide)",
-                        obligation: "Obligation (Obligation)",
-                        negative: "Negative meaning (Sens négatif)",
-                        past: "Past form (Forme passée)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (Exercices pratiques)",
-                        q1: "Choose the correct modal for internal obligation: (Choisissez le modal correct pour l'obligation interne :)",
-                        q1Sentence: "I ______ finish this project today. It's my promise. (Je ______ terminer ce projet aujourd'hui. C'est ma promesse.)",
-                        q1a: "must (must)", q1b: "have to (have to)", q1c: "mustn't (mustn't)",
-                        q2: "Choose for external obligation (law): (Choisissez pour l'obligation externe – loi :)",
-                        q2Sentence: "You ______ wear a seatbelt by law. (Tu ______ porter une ceinture de sécurité par la loi.)",
-                        q2a: "must (must)", q2b: "have to (have to)", q2c: "don't have to (don't have to)",
-                        q3: "Choose for logical deduction: (Choisissez pour la déduction logique :)",
-                        q3Sentence: "The lights are on. She ______ be at home. (Les lumières sont allumées. Elle ______ être à la maison.)",
-                        q3a: "must (must)", q3b: "has to (has to)", q3c: "might (might)",
-                        q4: "Choose for general necessity: (Choisissez pour la nécessité générale :)",
-                        q4Sentence: "We ______ wake up early tomorrow. (Nous ______ nous réveiller tôt demain.)",
-                        q4a: "must (must)", q4b: "have to (have to)", q4c: "mustn't (mustn't)",
-                        q5: "Choose the correct negative for no obligation: (Choisissez la négation correcte pour l'absence d'obligation :)",
-                        q5Sentence: "He ______ come if he doesn't want to. (Il ______ venir s'il ne veut pas.)",
-                        q5a: "mustn't (mustn't)", q5b: "doesn't have to (doesn't have to)", q5c: "don't have to (don't have to)",
-                        q6: "Choose for prohibition: (Choisissez pour l'interdiction :)",
-                        q6Sentence: "You ______ smoke here; it's forbidden. (Tu ______ fumer ici ; c'est interdit.)",
-                        q6a: "don't have to (don't have to)", q6b: "mustn't (mustn't)", q6c: "have to (have to)",
-                        q7: "Complete (past): I ______ (must) go to the dentist yesterday. (Complétez – passé : Je ______ (must) aller chez le dentiste hier.)",
-                        q8: "Complete: She ______ (not/have to) work on Sundays. (Complétez : Elle ______ (not/have to) travailler le dimanche.)",
-                        q9: "Complete (question): ______ (have to) you leave now? (Complétez – question : ______ (have to) vous partir maintenant ?)",
-                        q10: "Arrange: (you / must / be / careful / .) (Remettez en ordre : (you / must / be / careful / .))",
-                        q11: "Arrange: (they / have to / wear / uniforms / do / ?) (Remettez en ordre : (they / have to / wear / uniforms / do / ?))",
-                        q12: "Arrange: (he / doesn't / have to / come / .) (Remettez en ordre : (he / doesn't / have to / come / .))"
-                    }
+                mustHaveTo1: {
+                    title: { line1: "Must & Have to : I :", line2: "Concepts clés et utilisations principales", line3: "exprimer l'obligation, la nécessité et la déduction", line4: "leçon : 1/3" },
+                    intro: { title: "I. 1. Introduction à Must et Have to", heading: "Que sont les modaux \"must\" et \"have to\" ?", desc1: "📘 Définition :", desc2: "Must et have to sont utilisés pour exprimer l'obligation, la nécessité et la déduction. Must est un modal ; have to est un semi-modal qui se comporte comme un verbe normal aux questions et négations.", coreTitle: "💡 Idées clés :", core1: "Must – obligation interne forte, nécessité, déduction logique.", core2: "Have to – obligation externe (règles, lois), nécessité générale.", ex1: "Je dois y aller. (obligation)", ex2: "Tu dois porter un uniforme. (obligation externe)", ex3: "Elle doit être chez elle. (déduction)", ex4: "Ils doivent travailler dur. (nécessité)" },
+                    grammar: { title: "I. 2. Règles grammaticales de base", heading: "Structure : affirmative, négative, interrogative", formCol: "Forme", ruleCol: "Règle", exampleCol: "Exemple", affirmative: "Affirmative", affirmRule: "sujet + must / have to + verbe base", affirmEx: "Elle doit étudier. / Nous devons partir.", negative: "Négative", negRule: "sujet + must not/mustn't / do/does not have to + verbe base", negEx: "Tu ne dois pas fumer. / Il n'a pas à venir.", question: "Interrogative", quesRule: "Must + sujet + verbe base ? / Do/Does + sujet + have to + verbe base ?", quesEx: "Dois-je y aller ? / Doivent-ils payer ?", noteTitle: "⚠️ Important :", noteDesc: "Must n'a pas de forme passée (utilisez 'had to'). Have to utilise l'auxiliaire do/does pour les questions et négations." },
+                    usesMust: { title: "I. 3. Utilisations principales de \"Must\"", heading: "Obligation interne, déduction, interdiction", obligTitle: "1. Obligation interne forte", obligDesc: "On utilise must pour exprimer ce que le locuteur ressent comme nécessaire (conviction personnelle).", obligEx1: "Je dois appeler ma mère.", obligEx2: "Tu dois voir ce film ; il est génial.", dedTitle: "2. Déduction / conclusion logique", dedDesc: "Must exprime que nous sommes presque sûrs que quelque chose est vrai sur la base d'indices.", dedEx1: "Il conduit depuis des heures ; il doit être fatigué.", dedEx2: "Les lumières sont allumées. Elle doit être à la maison.", prohTitle: "3. Interdiction (mustn't)", prohDesc: "Must not / mustn't sert à dire que quelque chose est interdit.", prohEx1: "Tu ne dois pas fumer à l'hôpital.", prohEx2: "Nous ne devons pas être en retard." },
+                    usesHaveTo: { title: "I. 4. Utilisations principales de \"Have to\"", heading: "Obligation externe, nécessité générale, absence d'obligation", extTitle: "1. Obligation externe (règles, lois)", extDesc: "On utilise have to quand l'obligation vient d'une source externe (loi, règles, quelqu'un d'autre).", extEx1: "Les employés doivent porter un badge.", extEx2: "Vous devez avoir un billet pour entrer.", genTitle: "2. Nécessité générale", genDesc: "Have to exprime que quelque chose est nécessaire dans la vie quotidienne.", genEx1: "Je dois prendre mon petit-déjeuner tous les jours.", genEx2: "Elle doit prendre ce médicament.", noObTitle: "3. Absence d'obligation (don't have to)", noObDesc: "Don't/doesn't have to signifie que ce n'est pas nécessaire (mais vous pouvez si vous voulez).", noObEx1: "Tu n'es pas obligé de venir si tu es occupé.", noObEx2: "Il n'a pas à travailler le dimanche." },
+                    comparison: { title: "I. 5. Must vs Have to – Comparaison rapide", heading: "Différences en un coup d'œil", usageCol: "Usage", mustCol: "Must", haveToCol: "Have to", oblig: "Obligation", mustOblig: "interne (sentiment du locuteur)", haveToOblig: "externe (règles, autres)", neg: "Sens négatif", mustNeg: "mustn't = interdiction", haveToNeg: "don't have to = pas nécessaire", past: "Passé", mustPast: "had to (pas de must au passé)", haveToPast: "had to (avec did/didn't)" }
                 }
             },
             ar: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject (الفاعل)", conjugation: "Conjugation (التصريف)", example: "Example (مثال)", examples: "Examples: (أمثلة:)",
-                    i: "I (أنا)", you: "You (أنت)", he: "He (هو)", she: "She (هي)", it: "It (هو/هي)", we: "We (نحن)", they: "They (هم)",
-                    verb: "Verb (الفعل)",
-                    form: "Form (الصيغة)", rule: "Rule (القاعدة)", affirmative: "Affirmative (مثبت)", negative: "Negative (منفي)", question: "Question (سؤال)", usage: "Usage (الاستخدام)",
-                    previousLesson: "Previous Lesson (الدرس السابق)← ",
-                    returnToConjugation: "Return to Conjugation (العودة إلى التصريف)← ",
-                    nextLesson: "Next Lesson (الدرس التالي) →"
-                },
+                common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
                 footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
-                modalsMustHaveTo1: {
-                    title: "Must & Have to: Core Concepts & Primary Uses (Must & Have to: المفاهيم الأساسية والاستخدامات الرئيسية)",
-                    subtitle: "Learn how to use must and have to to express obligation, necessity, and deduction (تعلّم استخدام must و have to للتعبير عن الالتزام والضرورة والاستنتاج)",
-                    introduction: {
-                        title: "Introduction to Must & Have to (مقدمة إلى Must & Have to)",
-                        whatAre: "What are modals \"must\" and \"have to\"? (ما هما الفعلان المساعدان \"must\" و \"have to\"؟)",
-                        definitionTitle: "Definition: (تعريف:)",
-                        definition: "\"Must\" and \"have to\" are used to express obligation, necessity, and deduction. \"Must\" is a modal verb; \"have to\" is a semi-modal that behaves like a normal verb in questions and negatives. (يستخدم \"must\" و \"have to\" للتعبير عن الالتزام والضرورة والاستنتاج. \"must\" هو فعل مساعد نموذجي؛ \"have to\" هو شبه مساعد يتصرف مثل الفعل العادي في الأسئلة والنفي.)",
-                        coreIdeas: "Core ideas: (الأفكار الأساسية:)",
-                        core1: "<strong>Must</strong> – strong internal obligation, necessity, logical deduction. (<strong>Must</strong> – التزام داخلي قوي، ضرورة، استنتاج منطقي.)",
-                        core2: "<strong>Have to</strong> – external obligation (rules, laws), general necessity. (<strong>Have to</strong> – التزام خارجي – قواعد، قوانين، ضرورة عامة.)",
-                        example1: "I must go. (obligation) (يجب أن أذهب.)",
-                        example2: "You have to wear a uniform. (external obligation) (عليك ارتداء زي موحد.)",
-                        example3: "She must be at home. (deduction) (لا بد أنها في المنزل.)",
-                        example4: "They have to work hard. (necessity) (عليهم العمل بجد.)"
-                    },
-                    grammar: {
-                        title: "Basic Grammar Rules (القواعد النحوية الأساسية)",
-                        structure: "Structure (البنية)",
-                        importantNote: "Important: (ملاحظة مهمة:)",
-                        noteText: "Must has no past form (use \"had to\" for past). \"Have to\" uses auxiliary do/does for questions and negatives. (ليس لـ Must صيغة ماضية – استخدم \"had to\" للماضي. يستخدم \"have to\" الأفعال المساعدة do/does للأسئلة والنفي.)"
-                    },
-                    mustFunctions: {
-                        title: "Primary Uses of \"Must\" (الاستخدامات الرئيسية لـ \"Must\")",
-                        obligation: "1. Strong internal obligation (1. التزام داخلي قوي)",
-                        obligationText: "We use must to express what the speaker feels is necessary (personal conviction). (نستخدم must للتعبير عما يشعر المتحدث بأنه ضروري – قناعة شخصية.)",
-                        obligationEx1: "I must call my mother. (يجب أن أتصل بأمي.)",
-                        obligationEx2: "You must see that film; it's amazing. (يجب أن ترى هذا الفيلم؛ إنه رائع.)",
-                        deduction: "2. Deduction / logical conclusion (2. استنتاج / نتيجة منطقية)",
-                        deductionText: "Must expresses that we are almost sure something is true based on evidence. (يعبر must عن أننا متأكدون تقريبًا من صحة شيء ما بناءً على الأدلة.)",
-                        deductionEx1: "He's been driving for hours; he must be tired. (إنه يقود لساعات؛ لا بد أنه متعب.)",
-                        deductionEx2: "The lights are on. She must be home. (الأضواء مضاءة. لا بد أنها في المنزل.)",
-                        prohibition: "3. Prohibition (mustn't) (3. المنع – mustn't)",
-                        prohibitionText: "Must not / mustn't is used to say something is forbidden. (يستخدم must not / mustn't للقول بأن شيئًا ما ممنوع.)",
-                        prohibitionEx1: "You mustn't smoke in the hospital. (يجب ألا تدخن في المستشفى.)",
-                        prohibitionEx2: "We mustn't be late. (يجب ألا نتأخر.)"
-                    },
-                    haveToFunctions: {
-                        title: "Primary Uses of \"Have to\" (الاستخدامات الرئيسية لـ \"Have to\")",
-                        external: "1. External obligation (rules, laws) (1. التزام خارجي – قواعد، قوانين)",
-                        externalText: "We use have to when the obligation comes from an external source (law, rules, someone else). (نستخدم have to عندما يأتي الالتزام من مصدر خارجي – قانون، قواعد، شخص آخر.)",
-                        externalEx1: "Employees have to wear an ID badge. (يجب على الموظفين ارتداء شارة تعريف.)",
-                        externalEx2: "You have to have a ticket to enter. (يجب أن يكون لديك تذكرة للدخول.)",
-                        necessity: "2. General necessity (2. ضرورة عامة)",
-                        necessityText: "Have to expresses that something is necessary in everyday life. (يعبر have to عن أن شيئًا ما ضروري في الحياة اليومية.)",
-                        necessityEx1: "I have to eat breakfast every day. (علي تناول الفطور كل يوم.)",
-                        necessityEx2: "She has to take this medicine. (عليها تناول هذا الدواء.)",
-                        noObligation: "3. No obligation (don't have to) (3. عدم الالتزام – don't have to)",
-                        noObligationText: "Don't/doesn't have to means it is not necessary (but you can if you want). (تعني don't/doesn't have to أنه ليس ضروريًا – لكن يمكنك إذا أردت.)",
-                        noObligationEx1: "You don't have to come if you're busy. (لست مضطرًا للحضور إذا كنت مشغولًا.)",
-                        noObligationEx2: "He doesn't have to work on Sundays. (ليس مضطرًا للعمل يوم الأحد.)"
-                    },
-                    comparison: {
-                        title: "Must vs Have to – Quick Comparison (Must مقابل Have to – مقارنة سريعة)",
-                        obligation: "Obligation (الالتزام)",
-                        negative: "Negative meaning (المعنى السلبي)",
-                        past: "Past form (صيغة الماضي)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (تمارين تطبيقية)",
-                        q1: "Choose the correct modal for internal obligation: (اختر الفعل النموذجي الصحيح للالتزام الداخلي:)",
-                        q1Sentence: "I ______ finish this project today. It's my promise. (أنا ______ إنهاء هذا المشروع اليوم. إنه وعدي.)",
-                        q1a: "must (must)", q1b: "have to (have to)", q1c: "mustn't (mustn't)",
-                        q2: "Choose for external obligation (law): (اختر للالتزام الخارجي – قانون:)",
-                        q2Sentence: "You ______ wear a seatbelt by law. (أنت ______ ارتداء حزام الأمان بموجب القانون.)",
-                        q2a: "must (must)", q2b: "have to (have to)", q2c: "don't have to (don't have to)",
-                        q3: "Choose for logical deduction: (اختر للاستنتاج المنطقي:)",
-                        q3Sentence: "The lights are on. She ______ be at home. (الأضواء مضاءة. هي ______ تكون في المنزل.)",
-                        q3a: "must (must)", q3b: "has to (has to)", q3c: "might (might)",
-                        q4: "Choose for general necessity: (اختر للضرورة العامة:)",
-                        q4Sentence: "We ______ wake up early tomorrow. (نحن ______ الاستيقاظ مبكرًا غدًا.)",
-                        q4a: "must (must)", q4b: "have to (have to)", q4c: "mustn't (mustn't)",
-                        q5: "Choose the correct negative for no obligation: (اختر النفي الصحيح لعدم الالتزام:)",
-                        q5Sentence: "He ______ come if he doesn't want to. (هو ______ المجيء إذا كان لا يريد.)",
-                        q5a: "mustn't (mustn't)", q5b: "doesn't have to (doesn't have to)", q5c: "don't have to (don't have to)",
-                        q6: "Choose for prohibition: (اختر للمنع:)",
-                        q6Sentence: "You ______ smoke here; it's forbidden. (أنت ______ التدخين هنا؛ إنه ممنوع.)",
-                        q6a: "don't have to (don't have to)", q6b: "mustn't (mustn't)", q6c: "have to (have to)",
-                        q7: "Complete (past): I ______ (must) go to the dentist yesterday. (أكمل – الماضي: أنا ______ (must) الذهاب إلى طبيب الأسنان أمس.)",
-                        q8: "Complete: She ______ (not/have to) work on Sundays. (أكمل: هي ______ (not/have to) العمل يوم الأحد.)",
-                        q9: "Complete (question): ______ (have to) you leave now? (أكمل – سؤال: ______ (have to) المغادرة الآن؟)",
-                        q10: "Arrange: (you / must / be / careful / .) (رتب: (you / must / be / careful / .))",
-                        q11: "Arrange: (they / have to / wear / uniforms / do / ?) (رتب: (they / have to / wear / uniforms / do / ?))",
-                        q12: "Arrange: (he / doesn't / have to / come / .) (رتب: (he / doesn't / have to / come / .))"
-                    }
+                mustHaveTo1: {
+                    title: { line1: "Must & Have to: 1:", line2: "المفاهيم الأساسية والاستخدامات الرئيسية", line3: "التعبير عن الوجوب والضرورة والاستنتاج", line4: "الدرس: 1/3" },
+                    intro: { title: "I. 1. مقدمة إلى Must و Have to", heading: "ما هما الفعلان الناقصان Must و Have to؟", desc1: "📘 التعريف:", desc2: "يُستخدمان للتعبير عن الوجوب والضرورة والاستنتاج. Must فعل ناقص؛ Have to شبه ناقص يتصرف كفعل عادي في النفي والاستفهام.", coreTitle: "💡 أفكار أساسية:", core1: "Must – وجوب داخلي قوي، ضرورة، استنتاج منطقي.", core2: "Have to – وجوب خارجي (قوانين، قواعد)، ضرورة عامة.", ex1: "يجب أن أذهب. (وجوب)", ex2: "يجب أن ترتدي زياً موحداً. (وجوب خارجي)", ex3: "لابد أنها في المنزل. (استنتاج)", ex4: "عليهم أن يعملوا بجد. (ضرورة)" },
+                    grammar: { title: "I. 2. القواعد الأساسية", heading: "البنية: الإثبات، النفي، السؤال", formCol: "الصيغة", ruleCol: "القاعدة", exampleCol: "مثال", affirmative: "إثبات", affirmRule: "الفاعل + must / have to + الفعل المجرد", affirmEx: "يجب أن تدرس. / علينا المغادرة.", negative: "نفي", negRule: "الفاعل + must not/mustn't / do/does not have to + الفعل المجرد", negEx: "ممنوع التدخين. / ليس مضطراً للحضور.", question: "سؤال", quesRule: "Must + الفاعل + الفعل المجرد؟ / Do/Does + الفاعل + have to + الفعل المجرد؟", quesEx: "هل يجب أن أذهب؟ / هل عليهم الدفع؟", noteTitle: "⚠️ مهم:", noteDesc: "Must ليس له صيغة ماض (استخدم hadto). Have to يستخدم فعلauxiliary do/does في النفي والسؤال." },
+                    usesMust: { title: "I. 3. الاستخدامات الأساسية لـ Must", heading: "وجوب داخلي، استنتاج، منع", obligTitle: "1. وجوب داخلي قوي", obligDesc: "نستخدم Must للتعبير عن ما يشعر المتحدث بضرورته (قناعة شخصية).", obligEx1: "يجب أن أتصل بأمي.", obligEx2: "يجب أن تشاهد هذا الفيلم؛ إنه رائع.", dedTitle: "2. استنتاج / نتيجة منطقية", dedDesc: "Must تعبر عن أننا متأكدون تقريباً من شيء بناء على دليل.", dedEx1: "إنه يقود منذ ساعات؛ لابد أنه متعب.", dedEx2: "الأضواء مضاءة. لابد أنها في المنزل.", prohTitle: "3. المنع (mustn't)", prohDesc: "must not / mustn't تستخدم لقول أن شيئاً ممنوع.", prohEx1: "ممنوع التدخين في المستشفى.", prohEx2: "لا يجب أن نتأخر." },
+                    usesHaveTo: { title: "I. 4. الاستخدامات الأساسية لـ Have to", heading: "وجوب خارجي، ضرورة عامة، لا وجوب", extTitle: "1. وجوب خارجي (قوانين، قواعد)", extDesc: "نستخدم have to عندما يأتي الوجوب من مصدر خارجي (قانون، قواعد، شخص آخر).", extEx1: "يجب على الموظفين ارتداء بطاقة هوية.", extEx2: "يجب أن يكون لديك تذكرة للدخول.", genTitle: "2. ضرورة عامة", genDesc: "Have to تعبر عن أن شيئاً ضروري في الحياة اليومية.", genEx1: "يجب أن أتناول الفطور كل يوم.", genEx2: "عليها تناول هذا الدواء.", noObTitle: "3. لا وجوب (don't have to)", noObDesc: "don't/doesn't have to تعني أنه ليس ضرورياً (لكن يمكنك إذا أردت).", noObEx1: "لست مضطراً للمجيء إذا كنت مشغولاً.", noObEx2: "ليس مضطراً للعمل أيام الأحد." },
+                    comparison: { title: "I. 5. Must مقابل Have to – مقارنة سريعة", heading: "الاختلافات بنظرة", usageCol: "الاستخدام", mustCol: "Must", haveToCol: "Have to", oblig: "الوجوب", mustOblig: "داخلي (شعور المتحدث)", haveToOblig: "خارجي (قوانين، آخرون)", neg: "المعنى السلبي", mustNeg: "mustn't = منع", haveToNeg: "don't have to = ليس ضرورياً", past: "صيغة الماضي", mustPast: "had to (لا يوجد must في الماضي)", haveToPast: "had to (مع did/didn't)" }
                 }
             }
         };
     </script>
-    
-    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
-
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ========== Build exercises and get answer keys ==========
+        // Multiple choice exercises
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'modalsMustHaveTo1.exercises.q1',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo1.exercises.q1a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo1.exercises.q1b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo1.exercises.q1c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo1.exercises.q2',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo1.exercises.q2a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo1.exercises.q2b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo1.exercises.q2c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo1.exercises.q3',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo1.exercises.q3a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo1.exercises.q3b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo1.exercises.q3c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo1.exercises.q4',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo1.exercises.q4a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo1.exercises.q4b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo1.exercises.q4c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo1.exercises.q5',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo1.exercises.q5a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo1.exercises.q5b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo1.exercises.q5c' }
-                    ],
-                    correctAnswer: 'b'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo1.exercises.q6',
-                    options: [
-                        { value: 'a', labelKey: 'modalsMustHaveTo1.exercises.q6a' },
-                        { value: 'b', labelKey: 'modalsMustHaveTo1.exercises.q6b' },
-                        { value: 'c', labelKey: 'modalsMustHaveTo1.exercises.q6c' }
-                    ],
-                    correctAnswer: 'b'
-                }
+                { questionTextKey: 'mustHaveTo1.exercises.q1', options: [{ value: 'a', labelKey: 'mustHaveTo1.exercises.q1a' }, { value: 'b', labelKey: 'mustHaveTo1.exercises.q1b' }, { value: 'c', labelKey: 'mustHaveTo1.exercises.q1c' }], correctAnswer: 'a' },
+                { questionTextKey: 'mustHaveTo1.exercises.q2', options: [{ value: 'a', labelKey: 'mustHaveTo1.exercises.q2a' }, { value: 'b', labelKey: 'mustHaveTo1.exercises.q2b' }, { value: 'c', labelKey: 'mustHaveTo1.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'mustHaveTo1.exercises.q3', options: [{ value: 'a', labelKey: 'mustHaveTo1.exercises.q3a' }, { value: 'b', labelKey: 'mustHaveTo1.exercises.q3b' }, { value: 'c', labelKey: 'mustHaveTo1.exercises.q3c' }], correctAnswer: 'a' },
+                { questionTextKey: 'mustHaveTo1.exercises.q4', options: [{ value: 'a', labelKey: 'mustHaveTo1.exercises.q4a' }, { value: 'b', labelKey: 'mustHaveTo1.exercises.q4b' }, { value: 'c', labelKey: 'mustHaveTo1.exercises.q4c' }], correctAnswer: 'b' },
+                { questionTextKey: 'mustHaveTo1.exercises.q5', options: [{ value: 'a', labelKey: 'mustHaveTo1.exercises.q5a' }, { value: 'b', labelKey: 'mustHaveTo1.exercises.q5b' }, { value: 'c', labelKey: 'mustHaveTo1.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'mustHaveTo1.exercises.q6', options: [{ value: 'a', labelKey: 'mustHaveTo1.exercises.q6a' }, { value: 'b', labelKey: 'mustHaveTo1.exercises.q6b' }, { value: 'c', labelKey: 'mustHaveTo1.exercises.q6c' }], correctAnswer: 'b' }
             ]
         });
-
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+    </script>
+    <script>
+        // Fill-in-the-blank exercises
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'modalsMustHaveTo1.exercises.q7',
-                    answers: ['had to']
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo1.exercises.q8',
-                    answers: ['doesn\'t have to', 'does not have to']
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo1.exercises.q9',
-                    answers: ['Do', 'do']
-                }
+                { questionTextKey: 'mustHaveTo1.exercises.q7', answers: ['had to'] },
+                { questionTextKey: 'mustHaveTo1.exercises.q8', answers: ['does not have to', "doesn't have to"] },
+                { questionTextKey: 'mustHaveTo1.exercises.q9', answers: ['Do'] }
             ]
         });
-
+    </script>
+    <script>
+        // Sentence ordering exercises
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'modalsMustHaveTo1.exercises.q10',
-                    words: ['you', 'must', 'be', 'careful', '.'],
-                    correctSentence: 'you must be careful .'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo1.exercises.q11',
-                    words: ['Do', 'they', 'have to', 'wear', 'uniforms', '?'],
-                    correctSentence: 'Do they have to wear uniforms ?'
-                },
-                {
-                    questionTextKey: 'modalsMustHaveTo1.exercises.q12',
-                    words: ['he', 'doesn\'t', 'have to', 'come', '.'],
-                    correctSentence: 'he doesn\'t have to come .'
-                }
+                { questionTextKey: 'mustHaveTo1.exercises.q10', words: ['you', 'must', 'be', 'careful', '.'], correctSentence: 'you must be careful .' },
+                { questionTextKey: 'mustHaveTo1.exercises.q11', words: ['they', 'have to', 'wear', 'uniforms', 'do', '?'], correctSentence: 'Do they have to wear uniforms ?' },
+                { questionTextKey: 'mustHaveTo1.exercises.q12', words: ['he', 'doesn\'t', 'have to', 'come', '.'], correctSentence: 'he doesn\'t have to come .' }
             ]
         });
-
-        // ========== Check & init functions ==========
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
@@ -707,29 +414,28 @@
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered must & have to basics!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit obligation vs necessity.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
-        }
 
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
         document.addEventListener('DOMContentLoaded', function() {
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-
-        // ========== i18n rendering (HTML tags support) ==========
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
-                document.querySelectorAll('[data-i18n]').forEach(el => {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
+                    if (translation) {
                         el.textContent = translation;
                     }
                 });

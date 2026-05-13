@@ -3,197 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Second Conditional: Introduction & Basic Form - English Hub</title>
-    
-    <!-- Common CSS & Conjugation Modules -->
-    <link rel="stylesheet" href="styles/common.css">
+    <title>Second Conditional I: Introduction & Basic Form - English Hub</title>
     <link rel="stylesheet" href="styles/style-conjugation.css">
-    
     <style>
         :root {
-            /* Second Conditional theme: warm amber/orange */
-            --bg-gradient: linear-gradient(135deg, #e65100, #f57c00, #ffb74d);
-            --title-color: #e65100;
-            --primary: #f57c00;
-            --primary-hover: #e65100;
-            --primary-light: #ffb74d;
-            --accent: #ff9800;
-            --rule-bg: #fff3e0;
-            --rule-border: #ffb74d;
-            --example-bg: #ffe0b2;
-            --example-border: #ffb74d;
-            --exercise-number-gradient: linear-gradient(135deg, #f57c00, #ffb74d);
-            --nav-btn-bg: #f57c00;
-            --nav-btn-hover: #e65100;
-            --nav-back-btn-bg: #ffb74d;
-            --nav-back-btn-color: #e65100;
-            --nav-back-btn-hover: #f57c00;
-
-            /* Neutrals */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
+            --bg-gradient: linear-gradient(135deg, #b2dfdb, #80cbc4, #4db6ac, #26a69a);
+            --content-bg: #f0faf9;
+            --card-bg: #ffffff;
+            --subsection-bg: #e0f5f2;
+            --rule-bg: #d1efe9;
+            --example-bg: #c3e8e1;
+            --table-stripe: #e8f6f3;
+            --title-color: #004d40;
+            --text-color: #1a3a32;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #00897b;
+            --primary-hover: #00695c;
+            --primary-light: #26a69a;
+            --accent: #26a69a;
+            --exercise-number-gradient: linear-gradient(135deg, #00897b, #004d40);
+            --rule-border: #00897b;
+            --example-border: #00897b;
+            --nav-btn-bg: #00897b;
+            --nav-btn-hover: #004d40;
+            --nav-back-btn-bg: #26a69a;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #00897b;
+            --refract-divider-color: #80cbc4;
+            --refract-translation-bg: #e0f5f2;
+            --refract-translation-border: #00897b;
+            --refract-english-color: #1a3a32;
+            --section-divider: #b2dfdb;
+            --card-border: #b2dfdb;
+            --input-border: #80cbc4;
+            --dashed-border: #80cbc4;
+            --table-border: #b2dfdb;
             --correct-bg: #d4edda;
             --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --correct-border: #82c9a8;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #e8f5f0;
+            --neutral-color: #2e4a3e;
+            --neutral-border: #80cbc4;
+            --empty-input-border: #80cbc4;
+            --empty-input-bg: #f0faf9;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #00897b;
+            --language-selector-color: #1a3a32;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #004d40, #00695c, #00897b, #26a69a);
+            --content-bg: #0a2a24;
+            --card-bg: #0d332b;
+            --subsection-bg: #0d332b;
+            --rule-bg: #0a2a24;
+            --example-bg: #0a2a24;
+            --table-stripe: #0f3a32;
+            --title-color: #80cbc4;
+            --text-color: #d0ece8;
+            --header-text: #d0ece8;
+            --header-text-light: #b2dfdb;
+            --primary: #26a69a;
+            --primary-hover: #4db6ac;
+            --primary-light: #26a69a;
+            --accent: #26a69a;
+            --rule-border: #26a69a;
+            --example-border: #26a69a;
+            --exercise-number-gradient: linear-gradient(135deg, #26a69a, #00897b);
+            --nav-btn-bg: #26a69a;
+            --nav-btn-hover: #00897b;
+            --nav-back-btn-bg: #4db6ac;
+            --nav-back-btn-color: #0a2a24;
+            --nav-back-btn-hover: #26a69a;
+            --refract-divider-color: #80cbc4;
+            --refract-translation-bg: #1a5248;
+            --refract-translation-border: #80cbc4;
+            --refract-english-color: #e0f5f2;
+            --section-divider: #1a5248;
+            --card-border: #1a5248;
+            --input-border: #2e6b5e;
+            --dashed-border: #2e6b5e;
+            --table-border: #1e5c50;
+            --white: #d0ece8;
+            --correct-bg: #1e4a2e;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #1a3a2e;
+            --neutral-color: #b2dfdb;
+            --neutral-border: #2e6b5e;
+            --empty-input-border: #2e6b5e;
+            --empty-input-bg: #0a2a24;
+            --language-selector-bg: #0d332b;
+            --language-selector-border: #26a69a;
+            --language-selector-color: #d0ece8;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="secondConditional1.title">Second Conditional: Introduction & Basic Form</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="secondConditional1.subtitle">Learn how to talk about unreal, improbable or imaginary situations using if + past simple, would + infinitive.</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="secondConditional1.title.line1">Second Conditional I:</div>
+                <div class="EH-conjugation-title-line" data-i18n="secondConditional1.title.line2">Introduction & Basic Form</div>
+                <div class="EH-conjugation-subtitle" data-i18n="secondConditional1.title.line3">Unreal, improbable or imaginary situations</div>
+                <div class="EH-conjugation-subtitle" data-i18n="secondConditional1.title.line4">lesson: 1/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Section 1: Introduction -->
+            <!-- Section 1: Introduction to Second Conditional -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional1.introduction.title">Introduction to Second Conditional</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional1.intro.title">I. 1. Introduction to the Second Conditional</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">✨</span>
-                        <span data-i18n="secondConditional1.introduction.whatIs">What is the Second Conditional?</span>
+                        <span class="EH-conjugation-subsection-icon">📘</span>
+                        <span data-i18n="secondConditional1.intro.heading">What is the Second Conditional?</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional1.introduction.definitionTitle">Definition:</div>
-                        <p data-i18n="secondConditional1.introduction.definition">The second conditional is used to talk about unreal, imaginary or improbable situations in the present or future. It expresses that the condition is not true or is very unlikely to happen.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional1.intro.definition">📘 Definition:</div>
+                        <p data-i18n="secondConditional1.intro.desc">The second conditional is used to talk about unreal, imaginary or improbable situations in the present or future. It expresses that the condition is not true or is very unlikely to happen.</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional1.introduction.coreIdeas">Core ideas:</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional1.intro.coreIdeas">💡 Core ideas:</div>
                         <ul>
-                            <li data-i18n="secondConditional1.introduction.core1">Imaginary present/future: <em>If I won the lottery, I would buy a house.</em></li>
-                            <li data-i18n="secondConditional1.introduction.core2">Unreal situations: <em>If I were you, I would apologize. (were for all persons)</em></li>
-                            <li data-i18n="secondConditional1.introduction.core3">Hypothetical advice: <em>If she studied more, she would get better grades.</em></li>
+                            <li data-i18n="secondConditional1.intro.core1">Imaginary present/future: If I won the lottery, I would buy a house.</li>
+                            <li data-i18n="secondConditional1.intro.core2">Unreal situations: If I were you, I would apologize. (were for all persons)</li>
+                            <li data-i18n="secondConditional1.intro.core3">Hypothetical advice: If she studied more, she would get better grades.</li>
                         </ul>
                     </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="secondConditional1.introduction.example1">If I had a car, I would drive to work.</div>
-                        <div class="EH-conjugation-example" data-i18n="secondConditional1.introduction.example2">If we lived in Paris, we would speak French.</div>
-                        <div class="EH-conjugation-example" data-i18n="secondConditional1.introduction.example3">He would travel more if he had more money.</div>
-                        <div class="EH-conjugation-example" data-i18n="secondConditional1.introduction.example4">What would you do if you saw a ghost?</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional1.intro.ex1">If I had a car, I would drive to work.</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional1.intro.ex2">If we lived in Paris, we would speak French.</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional1.intro.ex3">He would travel more if he had more money.</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional1.intro.ex4">What would you do if you saw a ghost?</div>
                     </div>
                 </div>
             </div>
-            
             <!-- Section 2: Basic Structure -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional1.structure.title">Basic Structure</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional1.structure.title">I. 2. Basic Structure</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📐</span>
-                        <span data-i18n="secondConditional1.structure.formula">Form: If + Past Simple, Would + Infinitive</span>
+                        <span class="EH-conjugation-subsection-icon">🔧</span>
+                        <span data-i18n="secondConditional1.structure.heading">Form: If + Past Simple, Would + Infinitive</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional1.structure.ruleTitle">Rule:</div>
-                        <p data-i18n="secondConditional1.structure.rule">The if-clause uses the past simple tense (or 'were' for all persons). The main clause uses would + base verb. The order can be reversed; a comma is used when the if-clause comes first.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional1.structure.rule">📘 Rule:</div>
+                        <p data-i18n="secondConditional1.structure.desc">The if-clause uses the past simple tense (or 'were' for all persons). The main clause uses would + base verb. The order can be reversed; a comma is used when the if-clause comes first.</p>
                     </div>
                     <table class="EH-conjugation-table">
                         <thead>
-                            <tr><th data-i18n="common.structure">Structure</th><th data-i18n="common.example">Example</th></tr>
+                            <tr><th data-i18n="secondConditional1.structure.tableStruct">Structure</th><th data-i18n="secondConditional1.structure.tableExample">Example</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td data-i18n="secondConditional1.structure.ifFirst">If + past simple, + would + infinitive</td><td data-i18n="secondConditional1.structure.exampleIfFirst">If I knew her number, I would call her.</td></tr>
-                            <tr><td data-i18n="secondConditional1.structure.resultFirst">Would + infinitive + if + past simple</td><td data-i18n="secondConditional1.structure.exampleResultFirst">I would call her if I knew her number.</td></tr>
+                            <tr>
+                                <td data-i18n="secondConditional1.structure.structIfFirst">If + past simple,<br>+ would + infinitive</td>
+                                <td data-i18n="secondConditional1.structure.exIfFirst">If I knew her number, I would call her.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="secondConditional1.structure.structResultFirst">Would + infinitive<br>+ if + past simple</td>
+                                <td data-i18n="secondConditional1.structure.exResultFirst">I would call her if I knew her number.</td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional1.structure.wereNote">Using "were" for all subjects:</div>
-                        <p data-i18n="secondConditional1.structure.wereText">In formal English, 'were' is used instead of 'was' in the if-clause for all persons (especially after "If I were you").</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="secondConditional1.structure.wereExample1">If I were rich, I would buy a yacht.</div>
-                            <div class="EH-conjugation-example" data-i18n="secondConditional1.structure.wereExample2">If she were here, she would help us.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional1.structure.wereTitle">🗣️ Using "were" for all subjects:</div>
+                        <p data-i18n="secondConditional1.structure.wereDesc">In formal English, 'were' is used instead of 'was' in the if-clause for all persons (especially after "If I were you").</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="secondConditional1.structure.wereEx1">If I were rich, I would buy a yacht.</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional1.structure.wereEx2">If she were here, she would help us.</div>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional1.structure.negativeTitle">Negative Forms:</div>
-                        <p data-i18n="secondConditional1.structure.negativeRule">Use "didn't" in the if-clause and "wouldn't" in the main clause.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="secondConditional1.structure.negativeExample1">If I didn't have a job, I would travel.</div>
-                            <div class="EH-conjugation-example" data-i18n="secondConditional1.structure.negativeExample2">She wouldn't be upset if you apologized.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="secondConditional1.structure.negativeTitle">❌ Negative Forms:</div>
+                        <p data-i18n="secondConditional1.structure.negativeDesc">Use "didn't" in the if-clause and "wouldn't" in the main clause.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="secondConditional1.structure.negEx1">If I didn't have a job, I would travel.</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional1.structure.negEx2">She wouldn't be upset if you apologized.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Section 3: Uses -->
+            <!-- Section 3: Common Uses -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional1.uses.title">Common Uses: Unreal & Imaginary Situations</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional1.uses.title">I. 3. Common Uses: Unreal & Imaginary Situations</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">💭</span>
-                        <span data-i18n="secondConditional1.uses.hypothetical">Hypothetical Present / Future</span>
+                        <span class="EH-conjugation-subsection-icon">🌍</span>
+                        <span data-i18n="secondConditional1.uses.heading">Hypothetical Present / Future</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <p data-i18n="secondConditional1.uses.hypotheticalText">We use the second conditional to imagine a different reality – something that is not true now or is unlikely to happen.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="secondConditional1.uses.hypotheticalExample1">If I spoke Italian, I would live in Rome.</div>
-                            <div class="EH-conjugation-example" data-i18n="secondConditional1.uses.hypotheticalExample2">If they offered me the job, I would accept it.</div>
-                        </div>
+                        <p data-i18n="secondConditional1.uses.hypoDesc">We use the second conditional to imagine a different reality – something that is not true now or is unlikely to happen.</p>
                     </div>
-                </div>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🎭</span>
-                        <span data-i18n="secondConditional1.uses.advice">Advice (If I were you...)</span>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="secondConditional1.uses.hypoEx1">If I spoke Italian, I would live in Rome.</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional1.uses.hypoEx2">If they offered me the job, I would accept it.</div>
+                    </div>
+                    <h3 class="EH-conjugation-subsection-title" style="margin-top:1.4em;">
+                        <span class="EH-conjugation-subsection-icon">💬</span>
+                        <span data-i18n="secondConditional1.uses.adviceHeading">Advice (If I were you...)</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <p data-i18n="secondConditional1.uses.adviceText">Giving advice with "If I were you" is a classic second conditional structure.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="secondConditional1.uses.adviceExample1">If I were you, I would study more.</div>
-                            <div class="EH-conjugation-example" data-i18n="secondConditional1.uses.adviceExample2">If I were him, I wouldn't say that.</div>
-                        </div>
+                        <p data-i18n="secondConditional1.uses.adviceDesc">Giving advice with "If I were you" is a classic second conditional structure.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="secondConditional1.uses.adviceEx1">If I were you, I would study more.</div>
+                        <div class="EH-conjugation-example" data-i18n="secondConditional1.uses.adviceEx2">If I were him, I wouldn't say that.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- EXERCISES (12 total) : modular construction -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional1.exercises.title">Practice Exercises</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #e65100; margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="secondConditional1.exercises.title">Practice: Second Conditional Basics</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #e65100; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #e65100; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
@@ -203,381 +256,317 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional3-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson</span>
-                </button>
-                <button class="EH-conjugation-nav-button" style="pointer-events: none;">
-                    <span></span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">Return to Conjugation</span>
-                </button>
-            </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations (exactly as original, expanded with required keys) -->
     <script>
         window.I18N = {
             en: {
                 common: {
                     siteName: "English Hub",
-					previousLesson: "← Previous Lesson",
-					returnToConjugation: "← Return to Conjugation",
-					nextLesson: "Next Lesson →",
-                    examples: "Examples:"
+                    previousLesson: "← Previous Lesson",
+                    returnToConjugation: "← Return to Conjugation",
+                    nextLesson: "Next Lesson →"
                 },
                 footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
                 secondConditional1: {
-                    title: "Second Conditional: Introduction & Basic Form",
-                    subtitle: "Learn how to talk about unreal, improbable or imaginary situations using if + past simple, would + infinitive.",
-                    introduction: {
-                        title: "Introduction to Second Conditional",
-                        whatIs: "What is the Second Conditional?",
-                        definitionTitle: "Definition:",
-                        definition: "The second conditional is used to talk about unreal, imaginary or improbable situations in the present or future. It expresses that the condition is not true or is very unlikely to happen.",
-                        coreIdeas: "Core ideas:",
-                        core1: "Imaginary present/future: <em>If I won the lottery, I would buy a house.</em>",
-                        core2: "Unreal situations: <em>If I were you, I would apologize. (were for all persons)</em>",
-                        core3: "Hypothetical advice: <em>If she studied more, she would get better grades.</em>",
-                        example1: "If I had a car, I would drive to work.",
-                        example2: "If we lived in Paris, we would speak French.",
-                        example3: "He would travel more if he had more money.",
-                        example4: "What would you do if you saw a ghost?"
+                    title: {
+                        line1: "Second Conditional I:",
+                        line2: "Introduction & Basic Form",
+                        line3: "Unreal, improbable or imaginary situations",
+                        line4: "lesson: 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. Introduction to the Second Conditional",
+                        heading: "What is the Second Conditional?",
+                        definition: "📘 Definition:",
+                        desc: "The second conditional is used to talk about unreal, imaginary or improbable situations in the present or future. It expresses that the condition is not true or is very unlikely to happen.",
+                        coreIdeas: "💡 Core ideas:",
+                        core1: "Imaginary present/future: If I won the lottery, I would buy a house.",
+                        core2: "Unreal situations: If I were you, I would apologize. (were for all persons)",
+                        core3: "Hypothetical advice: If she studied more, she would get better grades.",
+                        ex1: "If I had a car, I would drive to work.",
+                        ex2: "If we lived in Paris, we would speak French.",
+                        ex3: "He would travel more if he had more money.",
+                        ex4: "What would you do if you saw a ghost?"
                     },
                     structure: {
-                        title: "Basic Structure",
-                        formula: "Form: If + Past Simple, Would + Infinitive",
-                        ruleTitle: "Rule:",
-                        rule: "The if-clause uses the past simple tense (or 'were' for all persons). The main clause uses would + base verb. The order can be reversed; a comma is used when the if-clause comes first.",
-                        ifFirst: "If + past simple, + would + infinitive",
-                        exampleIfFirst: "If I knew her number, I would call her.",
-                        resultFirst: "Would + infinitive + if + past simple",
-                        exampleResultFirst: "I would call her if I knew her number.",
-                        wereNote: "Using \"were\" for all subjects:",
-                        wereText: "In formal English, 'were' is used instead of 'was' in the if-clause for all persons (especially after \"If I were you\").",
-                        wereExample1: "If I were rich, I would buy a yacht.",
-                        wereExample2: "If she were here, she would help us.",
-                        negativeTitle: "Negative Forms:",
-                        negativeRule: "Use \"didn't\" in the if-clause and \"wouldn't\" in the main clause.",
-                        negativeExample1: "If I didn't have a job, I would travel.",
-                        negativeExample2: "She wouldn't be upset if you apologized."
+                        title: "I. 2. Basic Structure",
+                        heading: "Form: If + Past Simple, Would + Infinitive",
+                        rule: "📘 Rule:",
+                        desc: "The if-clause uses the past simple tense (or 'were' for all persons). The main clause uses would + base verb. The order can be reversed; a comma is used when the if-clause comes first.",
+                        tableStruct: "Structure",
+                        tableExample: "Example",
+                        structIfFirst: "If + past simple, + would + infinitive",
+                        exIfFirst: "If I knew her number, I would call her.",
+                        structResultFirst: "Would + infinitive + if + past simple",
+                        exResultFirst: "I would call her if I knew her number.",
+                        wereTitle: "🗣️ Using 'were' for all subjects:",
+                        wereDesc: "In formal English, 'were' is used instead of 'was' in the if-clause for all persons (especially after \"If I were you\").",
+                        wereEx1: "If I were rich, I would buy a yacht.",
+                        wereEx2: "If she were here, she would help us.",
+                        negativeTitle: "❌ Negative Forms:",
+                        negativeDesc: "Use \"didn't\" in the if-clause and \"wouldn't\" in the main clause.",
+                        negEx1: "If I didn't have a job, I would travel.",
+                        negEx2: "She wouldn't be upset if you apologized."
                     },
                     uses: {
-                        title: "Common Uses: Unreal & Imaginary Situations",
-                        hypothetical: "Hypothetical Present / Future",
-                        hypotheticalText: "We use the second conditional to imagine a different reality – something that is not true now or is unlikely to happen.",
-                        hypotheticalExample1: "If I spoke Italian, I would live in Rome.",
-                        hypotheticalExample2: "If they offered me the job, I would accept it.",
-                        advice: "Advice (If I were you...)",
-                        adviceText: "Giving advice with \"If I were you\" is a classic second conditional structure.",
-                        adviceExample1: "If I were you, I would study more.",
-                        adviceExample2: "If I were him, I wouldn't say that."
+                        title: "I. 3. Common Uses: Unreal & Imaginary Situations",
+                        heading: "Hypothetical Present / Future",
+                        hypoDesc: "We use the second conditional to imagine a different reality – something that is not true now or is unlikely to happen.",
+                        hypoEx1: "If I spoke Italian, I would live in Rome.",
+                        hypoEx2: "If they offered me the job, I would accept it.",
+                        adviceHeading: "Advice (If I were you...)",
+                        adviceDesc: "Giving advice with \"If I were you\" is a classic second conditional structure.",
+                        adviceEx1: "If I were you, I would study more.",
+                        adviceEx2: "If I were him, I wouldn't say that."
                     },
                     exercises: {
-                        title: "Practice Exercises",
-                        q1: "Choose the correct form:",
-                        q1Sentence: "If I _____ you, I would accept the offer.",
-                        q1a: "were", q1b: "was", q1c: "am",
-                        q2: "Choose the correct form:",
-                        q2Sentence: "If she _____ harder, she would succeed.",
-                        q2a: "work", q2b: "works", q2c: "worked",
-                        q3: "Choose the correct form:",
-                        q3Sentence: "If they _____ more money, they would travel around the world.",
-                        q3a: "have", q3b: "had", q3c: "has",
-                        q4: "Choose the correct form:",
-                        q4Sentence: "He would buy a car if he _____ enough money.",
-                        q4a: "have", q4b: "had", q4c: "has",
-                        q5: "Choose the correct form:",
-                        q5Sentence: "If we _____ a garden, we would grow vegetables.",
-                        q5a: "have", q5b: "had", q5c: "has",
-                        q6: "Choose the correct form:",
-                        q6Sentence: "I would call you if I _____ your number.",
-                        q6a: "know", q6b: "knew", q6c: "have known",
-                        q7: "Complete with the correct form:",
-                        q7Sentence: "If I ______ (be) you, I would go.",
-                        q8: "Complete with the negative form:",
-                        q8Sentence: "If it ______ (not rain), we would play outside.",
-                        q9: "Complete with the correct verb:",
-                        q9Sentence: "She would feel better if she ______ (exercise) more.",
-                        q10: "Arrange the words to form a correct sentence:",
-                        q11: "Arrange the words:",
-                        q12: "Arrange the words:"
+                        title: "Practice: Second Conditional Basics",
+                        q1: "Choose the correct form: If I _____ you, I would accept the offer.",
+                        q1a: "were",
+                        q1b: "was",
+                        q1c: "am",
+                        q2: "Choose the correct form: If she _____ harder, she would succeed.",
+                        q2a: "work",
+                        q2b: "works",
+                        q2c: "worked",
+                        q3: "Choose the correct form: If they _____ more money, they would travel around the world.",
+                        q3a: "have",
+                        q3b: "had",
+                        q3c: "has",
+                        q4: "Choose the correct form: He would buy a car if he _____ enough money.",
+                        q4a: "have",
+                        q4b: "had",
+                        q4c: "has",
+                        q5: "Choose the correct form: If we _____ a garden, we would grow vegetables.",
+                        q5a: "have",
+                        q5b: "had",
+                        q5c: "has",
+                        q6: "Choose the correct form: I would call you if I _____ your number.",
+                        q6a: "know",
+                        q6b: "knew",
+                        q6c: "have known",
+                        q7: "Complete with the correct form: If I ______ (be) you, I would go.",
+                        q8: "Complete with the negative form: If it ______ (not rain), we would play outside.",
+                        q9: "Complete with the correct verb: She would feel better if she ______ (exercise) more.",
+                        q10: "Arrange: (If / I / were / you / I / would / apologize / .)",
+                        q11: "Arrange: (If / she / had / time / she / would / join / the / club / .)",
+                        q12: "Arrange: (They / would / be / happy / if / they / won / the / lottery / .)"
                     }
                 }
             },
             fr: {
-                common: { siteName: "English Hub",
-				previousLesson: "← Previous Lesson (Leçon Précédente)",
-				returnToConjugation: "← Return to Conjugation (Retour au Conjugaison)",
-					nextLesson: "Next Lesson (Leçon Suivante) →", examples: "Examples: (Exemples :)" },
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "← Leçon Précédente",
+                    returnToConjugation: "← Retour au Conjugaison",
+                    nextLesson: "Leçon Suivante →"
+                },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
                 secondConditional1: {
-                    title: "Second Conditional: Introduction & Basic Form (Conditionnel de type 2 : introduction et forme de base)",
-                    subtitle: "Learn how to talk about unreal, improbable or imaginary situations using if + past simple, would + infinitive. (Apprenez à parler de situations irréelles, improbables ou imaginaires avec if + prétérit, would + infinitif.)",
-                    introduction: {
-                        title: "Introduction to Second Conditional (Introduction au conditionnel de type 2)",
-                        whatIs: "What is the Second Conditional? (Qu'est-ce que le conditionnel de type 2 ?)",
-                        definitionTitle: "Definition: (Définition :)",
-                        definition: "The second conditional is used to talk about unreal, imaginary or improbable situations in the present or future. It expresses that the condition is not true or is very unlikely to happen. (Le conditionnel de type 2 est utilisé pour parler de situations irréelles, imaginaires ou improbables dans le présent ou le futur. Il exprime que la condition n'est pas vraie ou a très peu de chances de se réaliser.)",
-                        coreIdeas: "Core ideas: (Idées principales :)",
-                        core1: "Imaginary present/future: <em>If I won the lottery, I would buy a house.</em> (Présent/futur imaginaire : <em>Si je gagnais à la loterie, j'achèterais une maison.</em>)",
-                        core2: "Unreal situations: <em>If I were you, I would apologize. (were for all persons)</em> (Situations irréelles : <em>Si j'étais toi, je m'excuserais.</em>)",
-                        core3: "Hypothetical advice: <em>If she studied more, she would get better grades.</em> (Conseil hypothétique : <em>Si elle étudiait plus, elle aurait de meilleures notes.</em>)",
-                        example1: "If I had a car, I would drive to work. (Si j'avais une voiture, j'irais au travail en voiture.)",
-                        example2: "If we lived in Paris, we would speak French. (Si nous vivions à Paris, nous parlerions français.)",
-                        example3: "He would travel more if he had more money. (Il voyagerait plus s'il avait plus d'argent.)",
-                        example4: "What would you do if you saw a ghost? (Que ferais-tu si tu voyais un fantôme ?)"
+                    title: {
+                        line1: "Conditionnel type 2 I :",
+                        line2: "Introduction et forme de base",
+                        line3: "Situations irréelles, improbables ou imaginaires",
+                        line4: "leçon : 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. Introduction au conditionnel type 2",
+                        heading: "Qu'est-ce que le conditionnel type 2 ?",
+                        definition: "📘 Définition :",
+                        desc: "Le conditionnel type 2 sert à parler de situations irréelles, imaginaires ou improbables au présent ou au futur. Il exprime que la condition n'est pas vraie ou a très peu de chances de se réaliser.",
+                        coreIdeas: "💡 Idées clés :",
+                        core1: "Présent/futur imaginaire : Si je gagnais au loto, j'achèterais une maison.",
+                        core2: "Situations irréelles : Si j'étais vous, je m'excuserais. (were pour toutes les personnes)",
+                        core3: "Conseil hypothétique : Si elle étudiait plus, elle aurait de meilleures notes.",
+                        ex1: "Si j'avais une voiture, j'irais au travail en voiture.",
+                        ex2: "Si nous vivions à Paris, nous parlerions français.",
+                        ex3: "Il voyagerait plus s'il avait plus d'argent.",
+                        ex4: "Que feriez-vous si vous voyiez un fantôme ?"
                     },
                     structure: {
-                        title: "Basic Structure (Structure de base)",
-                        formula: "Form: If + Past Simple, Would + Infinitive (Forme : If + prétérit, would + infinitif)",
-                        ruleTitle: "Rule: (Règle :)",
-                        rule: "The if-clause uses the past simple tense (or 'were' for all persons). The main clause uses would + base verb. The order can be reversed; a comma is used when the if-clause comes first. (La proposition avec if utilise le prétérit (ou 'were' pour toutes les personnes). La proposition principale utilise would + verbe de base. L'ordre peut être inversé ; une virgule est utilisée lorsque la proposition avec if vient en premier.)",
-                        ifFirst: "If + past simple, + would + infinitive",
-                        exampleIfFirst: "If I knew her number, I would call her. (Si je connaissais son numéro, je l'appellerais.)",
-                        resultFirst: "Would + infinitive + if + past simple",
-                        exampleResultFirst: "I would call her if I knew her number. (Je l'appellerais si je connaissais son numéro.)",
-                        wereNote: "Using \"were\" for all subjects: (Utilisation de \"were\" pour tous les sujets :)",
-                        wereText: "In formal English, 'were' is used instead of 'was' in the if-clause for all persons (especially after \"If I were you\"). (En anglais formel, 'were' remplace 'was' dans la proposition avec if pour toutes les personnes, surtout après \"If I were you\".)",
-                        wereExample1: "If I were rich, I would buy a yacht. (Si j'étais riche, j'achèterais un yacht.)",
-                        wereExample2: "If she were here, she would help us. (Si elle était là, elle nous aiderait.)",
-                        negativeTitle: "Negative Forms: (Formes négatives :)",
-                        negativeRule: "Use \"didn't\" in the if-clause and \"wouldn't\" in the main clause. (Utilisez \"didn't\" dans la proposition avec if et \"wouldn't\" dans la proposition principale.)",
-                        negativeExample1: "If I didn't have a job, I would travel. (Si je n'avais pas de travail, je voyagerais.)",
-                        negativeExample2: "She wouldn't be upset if you apologized. (Elle ne serait pas contrariée si tu t'excusais.)"
+                        title: "I. 2. Structure de base",
+                        heading: "Forme : If + passé simple, would + infinitif",
+                        rule: "📘 Règle :",
+                        desc: "La proposition avec if utilise le passé simple (ou 'were' pour toutes les personnes). La proposition principale utilise would + base verbale. L'ordre peut être inversé ; une virgule est utilisée quand la proposition if vient en premier.",
+                        tableStruct: "Structure",
+                        tableExample: "Exemple",
+                        structIfFirst: "If + passé simple, + would + infinitif",
+                        exIfFirst: "Si je connaissais son numéro, je l'appellerais.",
+                        structResultFirst: "Would + infinitif + if + passé simple",
+                        exResultFirst: "Je l'appellerais si je connaissais son numéro.",
+                        wereTitle: "🗣️ Utiliser 'were' pour tous les sujets :",
+                        wereDesc: "En anglais formel, 'were' est utilisé à la place de 'was' dans la proposition if pour toutes les personnes (surtout après \"If I were you\").",
+                        wereEx1: "Si j'étais riche, j'achèterais un yacht.",
+                        wereEx2: "Si elle était ici, elle nous aiderait.",
+                        negativeTitle: "❌ Formes négatives :",
+                        negativeDesc: "Utilisez \"didn't\" dans la proposition if et \"wouldn't\" dans la proposition principale.",
+                        negEx1: "Si je n'avais pas de travail, je voyagerais.",
+                        negEx2: "Elle ne serait pas contrariée si tu t'excusais."
                     },
                     uses: {
-                        title: "Common Uses: Unreal & Imaginary Situations (Utilisations courantes : situations irréelles et imaginaires)",
-                        hypothetical: "Hypothetical Present / Future (Présent/futur hypothétique)",
-                        hypotheticalText: "We use the second conditional to imagine a different reality – something that is not true now or is unlikely to happen. (Nous utilisons le conditionnel de type 2 pour imaginer une réalité différente – quelque chose qui n'est pas vrai maintenant ou qui est improbable.)",
-                        hypotheticalExample1: "If I spoke Italian, I would live in Rome. (Si je parlais italien, je vivrais à Rome.)",
-                        hypotheticalExample2: "If they offered me the job, I would accept it. (S'ils m'offraient le poste, je l'accepterais.)",
-                        advice: "Advice (If I were you...) (Conseil (If I were you...))",
-                        adviceText: "Giving advice with \"If I were you\" is a classic second conditional structure. (Donner un conseil avec \"If I were you\" est une structure classique du conditionnel de type 2.)",
-                        adviceExample1: "If I were you, I would study more. (Si j'étais toi, j'étudierais plus.)",
-                        adviceExample2: "If I were him, I wouldn't say that. (Si j'étais lui, je ne dirais pas ça.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (Exercices pratiques)",
-                        q1: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q1Sentence: "If I _____ you, I would accept the offer. (Si je _____ toi, j'accepterais l'offre.)",
-                        q1a: "were (étais)", q1b: "was (étais)", q1c: "am (suis)",
-                        q2: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q2Sentence: "If she _____ harder, she would succeed. (Si elle _____ plus dur, elle réussirait.)",
-                        q2a: "work (travaille)", q2b: "works (travaille)", q2c: "worked (travaillait)",
-                        q3: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q3Sentence: "If they _____ more money, they would travel around the world. (S'ils _____ plus d'argent, ils voyageraient autour du monde.)",
-                        q3a: "have (ont)", q3b: "had (avaient)", q3c: "has (a)",
-                        q4: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q4Sentence: "He would buy a car if he _____ enough money. (Il achèterait une voiture s'il _____ assez d'argent.)",
-                        q4a: "have (a)", q4b: "had (avait)", q4c: "has (a)",
-                        q5: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q5Sentence: "If we _____ a garden, we would grow vegetables. (Si nous _____ un jardin, nous cultiverions des légumes.)",
-                        q5a: "have (avons)", q5b: "had (avions)", q5c: "has (a)",
-                        q6: "Choose the correct form: (Choisissez la forme correcte :)",
-                        q6Sentence: "I would call you if I _____ your number. (Je t'appellerais si je _____ ton numéro.)",
-                        q6a: "know (sais)", q6b: "knew (savais)", q6c: "have known (ai su)",
-                        q7: "Complete with the correct form: (Complétez avec la forme correcte :)",
-                        q7Sentence: "If I ______ (be) you, I would go. (Si je ______ toi, j'irais.)",
-                        q8: "Complete with the negative form: (Complétez avec la forme négative :)",
-                        q8Sentence: "If it ______ (not rain), we would play outside. (S'il ______ (ne pas pleuvoir), nous jouerions dehors.)",
-                        q9: "Complete with the correct verb: (Complétez avec le verbe correct :)",
-                        q9Sentence: "She would feel better if she ______ (exercise) more. (Elle se sentirait mieux si elle ______ (faire de l'exercice) plus.)",
-                        q10: "Arrange the words to form a correct sentence: (Remettez les mots dans l'ordre pour former une phrase correcte :)",
-                        q11: "Arrange the words: (Remettez les mots dans l'ordre :)",
-                        q12: "Arrange the words: (Remettez les mots dans l'ordre :)"
+                        title: "I. 3. Utilisations courantes : situations irréelles et imaginaires",
+                        heading: "Présent / futur hypothétique",
+                        hypoDesc: "On utilise le conditionnel type 2 pour imaginer une réalité différente – quelque chose qui n'est pas vrai maintenant ou qui est peu probable.",
+                        hypoEx1: "Si je parlais italien, j'habiterais à Rome.",
+                        hypoEx2: "S'ils me proposaient le poste, je l'accepterais.",
+                        adviceHeading: "Conseil (Si j'étais vous...)",
+                        adviceDesc: "Donner un conseil avec \"Si j'étais vous\" est une structure classique du conditionnel type 2.",
+                        adviceEx1: "Si j'étais vous, j'étudierais plus.",
+                        adviceEx2: "Si j'étais lui, je ne dirais pas cela."
                     }
                 }
             },
             ar: {
-                common: { siteName: "English Hub",					
-					previousLesson: "Previous Lesson (الدرس السابق)← ",
-					returnToConjugation: "Return to Conjugation (العودة إلى التصريف)← ",
-					nextLesson: "Next Lesson (الدرس التالي) →", examples: "Examples: (أمثلة:)" },
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "الدرس السابق← ",
+                    returnToConjugation: "العودة إلى التصريف← ",
+                    nextLesson: "الدرس التالي →"
+                },
                 footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
                 secondConditional1: {
-                    title: "Second Conditional: Introduction & Basic Form (الشرط الثاني: مقدمة وصيغة أساسية)",
-                    subtitle: "Learn how to talk about unreal, improbable or imaginary situations using if + past simple, would + infinitive. (تعلّم كيفية التحدث عن مواقف غير حقيقية، غير محتملة أو تخيلية باستخدام if + ماضٍ بسيط، would + مصدر.)",
-                    introduction: {
-                        title: "Introduction to Second Conditional (مقدمة إلى الشرط الثاني)",
-                        whatIs: "What is the Second Conditional? (ما هو الشرط الثاني؟)",
-                        definitionTitle: "Definition: (تعريف:)",
-                        definition: "The second conditional is used to talk about unreal, imaginary or improbable situations in the present or future. It expresses that the condition is not true or is very unlikely to happen. (يستخدم الشرط الثاني للحديث عن مواقف غير حقيقية، تخيلية أو غير محتملة في الحاضر أو المستقبل. يعبر عن أن الشرط غير صحيح أو من غير المرجح حدوثه.)",
-                        coreIdeas: "Core ideas: (الأفكار الأساسية:)",
-                        core1: "Imaginary present/future: <em>If I won the lottery, I would buy a house.</em> (حاضر/مستقبل تخيلي: <em>إذا ربحت اليانصيب، سأشتري منزلاً.</em>)",
-                        core2: "Unreal situations: <em>If I were you, I would apologize. (were for all persons)</em> (مواقف غير حقيقية: <em>إذا كنت مكانك، سأعتذر. (were لجميع الضمائر)</em>)",
-                        core3: "Hypothetical advice: <em>If she studied more, she would get better grades.</em> (نصيحة افتراضية: <em>إذا درست أكثر، لكانت حصلت على درجات أفضل.</em>)",
-                        example1: "If I had a car, I would drive to work. (إذا كان لدي سيارة، كنت سأقود إلى العمل.)",
-                        example2: "If we lived in Paris, we would speak French. (إذا كنا نعيش في باريس، كنا سنتحدث الفرنسية.)",
-                        example3: "He would travel more if he had more money. (كان سيسافر أكثر إذا كان لديه مال أكثر.)",
-                        example4: "What would you do if you saw a ghost? (ماذا كنت ستفعل إذا رأيت شبحاً؟)"
+                    title: {
+                        line1: "الشرط الثاني: 1:",
+                        line2: "مقدمة والشكل الأساسي",
+                        line3: "مواقف غير حقيقية، غير محتملة أو خيالية",
+                        line4: "الدرس: 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. مقدمة في الشرط الثاني",
+                        heading: "ما هو الشرط الثاني؟",
+                        definition: "📘 التعريف:",
+                        desc: "يُستخدم الشرط الثاني للتحدث عن مواقف غير حقيقية أو خيالية أو غير محتملة في الحاضر أو المستقبل. يعبر عن أن الشرط غير صحيح أو من غير المرجح حدوثه.",
+                        coreIdeas: "💡 أفكار أساسية:",
+                        core1: "حاضر/مستقبل تخيلي: إذا ربحت اليانصيب، سأشتري منزلاً.",
+                        core2: "مواقف غير حقيقية: إذا كنت مكانك، لاعتذرت. (were لكل الأشخاص)",
+                        core3: "نصيحة افتراضية: إذا درست أكثر، لتحصلت على درجات أفضل.",
+                        ex1: "إذا كانت لدي سيارة، لقدت إلى العمل.",
+                        ex2: "إذا عشنا في باريس، لتكلمنا الفرنسية.",
+                        ex3: "سيسافر أكثر إذا كان لديه مال أكثر.",
+                        ex4: "ماذا كنت ستفعل إذا رأيت شبحاً؟"
                     },
                     structure: {
-                        title: "Basic Structure (البنية الأساسية)",
-                        formula: "Form: If + Past Simple, Would + Infinitive (الصيغة: If + ماضٍ بسيط، Would + مصدر)",
-                        ruleTitle: "Rule: (القاعدة:)",
-                        rule: "The if-clause uses the past simple tense (or 'were' for all persons). The main clause uses would + base verb. The order can be reversed; a comma is used when the if-clause comes first. (جملة if تستخدم زمن الماضي البسيط (أو 'were' لجميع الضمائر). الجملة الرئيسية تستخدم would + الفعل المجرد. يمكن عكس الترتيب؛ تُستخدم فاصلة عندما تأتي جملة if أولاً.)",
-                        ifFirst: "If + past simple, + would + infinitive",
-                        exampleIfFirst: "If I knew her number, I would call her. (إذا كنت أعرف رقمها، كنت سأتصل بها.)",
-                        resultFirst: "Would + infinitive + if + past simple",
-                        exampleResultFirst: "I would call her if I knew her number. (كنت سأتصل بها إذا كنت أعرف رقمها.)",
-                        wereNote: "Using \"were\" for all subjects: (استخدام \"were\" لجميع الفاعلين:)",
-                        wereText: "In formal English, 'were' is used instead of 'was' in the if-clause for all persons (especially after \"If I were you\"). (في الإنجليزية الرسمية، يُستخدم 'were' بدلاً من 'was' في جملة if لجميع الضمائر، خاصة بعد \"If I were you\".)",
-                        wereExample1: "If I were rich, I would buy a yacht. (إذا كنت غنياً، كنت سأشتري يختاً.)",
-                        wereExample2: "If she were here, she would help us. (إذا كانت هنا، كانت ستساعدنا.)",
-                        negativeTitle: "Negative Forms: (صيغ النفي:)",
-                        negativeRule: "Use \"didn't\" in the if-clause and \"wouldn't\" in the main clause. (استخدم \"didn't\" في جملة if و \"wouldn't\" في الجملة الرئيسية.)",
-                        negativeExample1: "If I didn't have a job, I would travel. (إذا لم يكن لدي وظيفة، كنت سأسافر.)",
-                        negativeExample2: "She wouldn't be upset if you apologized. (لن تنزعج إذا اعتذرت.)"
+                        title: "I. 2. البنية الأساسية",
+                        heading: "الصيغة: If + ماضٍ بسيط، would + مصدر",
+                        rule: "📘 القاعدة:",
+                        desc: "تستخدم جملة if الماضي البسيط (أو 'were' لكل الأشخاص). تستخدم الجملة الرئيسية would + الفعل الأساسي. يمكن عكس الترتيب؛ تُستخدم فاصلة عندما تأتي جملة if أولاً.",
+                        tableStruct: "البنية",
+                        tableExample: "مثال",
+                        structIfFirst: "If + ماضٍ بسيط، + would + مصدر",
+                        exIfFirst: "إذا عرفت رقمها، لاتصلت بها.",
+                        structResultFirst: "Would + مصدر + if + ماضٍ بسيط",
+                        exResultFirst: "كنت سأتصل بها إذا عرفت رقمها.",
+                        wereTitle: "🗣️ استخدام 'were' لكل الفاعلين:",
+                        wereDesc: "في الإنجليزية الرسمية، تُستخدم 'were' بدلاً من 'was' في جملة if لجميع الأشخاص (خاصة بعد \"If I were you\").",
+                        wereEx1: "إذا كنت غنياً، لاشتريت يختاً.",
+                        wereEx2: "إذا كانت هنا، لساعدتنا.",
+                        negativeTitle: "❌ صيغ النفي:",
+                        negativeDesc: "استخدم \"didn't\" في جملة if و \"wouldn't\" في الجملة الرئيسية.",
+                        negEx1: "إذا لم يكن لدي عمل، لسافرت.",
+                        negEx2: "لن تكون منزعجة إذا اعتذرت."
                     },
                     uses: {
-                        title: "Common Uses: Unreal & Imaginary Situations (الاستخدامات الشائعة: مواقف غير حقيقية وتخيلية)",
-                        hypothetical: "Hypothetical Present / Future (حاضر/مستقبل افتراضي)",
-                        hypotheticalText: "We use the second conditional to imagine a different reality – something that is not true now or is unlikely to happen. (نستخدم الشرط الثاني لتخيل واقع مختلف – شيء غير صحيح الآن أو من غير المحتمل حدوثه.)",
-                        hypotheticalExample1: "If I spoke Italian, I would live in Rome. (إذا كنت أتحدث الإيطالية، لكنت أعيش في روما.)",
-                        hypotheticalExample2: "If they offered me the job, I would accept it. (إذا عرضوا عليّ الوظيفة، كنت سأقبلها.)",
-                        advice: "Advice (If I were you...) (نصيحة (If I were you...))",
-                        adviceText: "Giving advice with \"If I were you\" is a classic second conditional structure. (تقديم النصيحة باستخدام \"If I were you\" هو تركيب كلاسيكي للشرط الثاني.)",
-                        adviceExample1: "If I were you, I would study more. (إذا كنت مكانك، كنت سأدرس أكثر.)",
-                        adviceExample2: "If I were him, I wouldn't say that. (إذا كنت مكانه، لن أقول ذلك.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (تمارين تطبيقية)",
-                        q1: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q1Sentence: "If I _____ you, I would accept the offer. (إذا _____ أنا مكانك، كنت سأقبل العرض.)",
-                        q1a: "were (كنت)", q1b: "was (كنت)", q1c: "am (أنا)",
-                        q2: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q2Sentence: "If she _____ harder, she would succeed. (إذا _____ هي بجد أكبر، كانت ستنجح.)",
-                        q2a: "work (تعمل)", q2b: "works (تعمل)", q2c: "worked (عملت)",
-                        q3: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q3Sentence: "If they _____ more money, they would travel around the world. (إذا _____ هم مالاً أكثر، كانوا سيسافرون حول العالم.)",
-                        q3a: "have (لديهم)", q3b: "had (كان لديهم)", q3c: "has (لديه)",
-                        q4: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q4Sentence: "He would buy a car if he _____ enough money. (كان سيشتري سيارة إذا _____ مالاً كافياً.)",
-                        q4a: "have (لديه)", q4b: "had (كان لديه)", q4c: "has (لديه)",
-                        q5: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q5Sentence: "If we _____ a garden, we would grow vegetables. (إذا _____ حديقة، كنا سنزرع الخضروات.)",
-                        q5a: "have (لدينا)", q5b: "had (كان لدينا)", q5c: "has (لديه)",
-                        q6: "Choose the correct form: (اختر الصيغة الصحيحة:)",
-                        q6Sentence: "I would call you if I _____ your number. (كنت سأتصل بك إذا _____ رقمك.)",
-                        q6a: "know (أعرف)", q6b: "knew (عرفت)", q6c: "have known (عرفت سابقاً)",
-                        q7: "Complete with the correct form: (أكمل بالصيغة الصحيحة:)",
-                        q7Sentence: "If I ______ (be) you, I would go. (إذا ______ أنا مكانك، كنت سأذهب.)",
-                        q8: "Complete with the negative form: (أكمل بالنفي:)",
-                        q8Sentence: "If it ______ (not rain), we would play outside. (إذا ______ (لا تمطر)، كنا سنلعب بالخارج.)",
-                        q9: "Complete with the correct verb: (أكمل بالفعل الصحيح:)",
-                        q9Sentence: "She would feel better if she ______ (exercise) more. (كانت ستشعر بتحسن إذا ______ (تمارس الرياضة) أكثر.)",
-                        q10: "Arrange the words to form a correct sentence: (رتب الكلمات لتكوين جملة صحيحة:)",
-                        q11: "Arrange the words: (رتب الكلمات:)",
-                        q12: "Arrange the words: (رتب الكلمات:)"
+                        title: "I. 3. الاستخدامات الشائعة: مواقف غير حقيقية وتخيلية",
+                        heading: "حاضر / مستقبل افتراضي",
+                        hypoDesc: "نستخدم الشرط الثاني لتخيل واقع مختلف – شيء غير صحيح الآن أو غير محتمل الحدوث.",
+                        hypoEx1: "إذا تحدثت الإيطالية، لأقمت في روما.",
+                        hypoEx2: "إذا عرضوا عليّ الوظيفة، لقبلتها.",
+                        adviceHeading: "نصيحة (إذا كنت مكانك...)",
+                        adviceDesc: "تقديم النصيحة باستخدام \"إذا كنت مكانك\" هو تركيب كلاسيكي للشرط الثاني.",
+                        adviceEx1: "إذا كنت مكانك، لدرست أكثر.",
+                        adviceEx2: "إذا كنت مكانه، لما قلت ذلك."
                     }
                 }
             }
         };
     </script>
-    
-    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
-    
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ---------- BUILD EXERCISES MODULARLY ----------
-        // Multiple Choice (6 questions)
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                { questionTextKey: 'secondConditional1.exercises.q1', options: [{value:'a',labelKey:'secondConditional1.exercises.q1a'},{value:'b',labelKey:'secondConditional1.exercises.q1b'},{value:'c',labelKey:'secondConditional1.exercises.q1c'}], correctAnswer: 'a' },
-                { questionTextKey: 'secondConditional1.exercises.q2', options: [{value:'a',labelKey:'secondConditional1.exercises.q2a'},{value:'b',labelKey:'secondConditional1.exercises.q2b'},{value:'c',labelKey:'secondConditional1.exercises.q2c'}], correctAnswer: 'c' },
-                { questionTextKey: 'secondConditional1.exercises.q3', options: [{value:'a',labelKey:'secondConditional1.exercises.q3a'},{value:'b',labelKey:'secondConditional1.exercises.q3b'},{value:'c',labelKey:'secondConditional1.exercises.q3c'}], correctAnswer: 'b' },
-                { questionTextKey: 'secondConditional1.exercises.q4', options: [{value:'a',labelKey:'secondConditional1.exercises.q4a'},{value:'b',labelKey:'secondConditional1.exercises.q4b'},{value:'c',labelKey:'secondConditional1.exercises.q4c'}], correctAnswer: 'b' },
-                { questionTextKey: 'secondConditional1.exercises.q5', options: [{value:'a',labelKey:'secondConditional1.exercises.q5a'},{value:'b',labelKey:'secondConditional1.exercises.q5b'},{value:'c',labelKey:'secondConditional1.exercises.q5c'}], correctAnswer: 'b' },
-                { questionTextKey: 'secondConditional1.exercises.q6', options: [{value:'a',labelKey:'secondConditional1.exercises.q6a'},{value:'b',labelKey:'secondConditional1.exercises.q6b'},{value:'c',labelKey:'secondConditional1.exercises.q6c'}], correctAnswer: 'b' }
+                { questionTextKey: 'secondConditional1.exercises.q1', options: [{ value: 'a', labelKey: 'secondConditional1.exercises.q1a' }, { value: 'b', labelKey: 'secondConditional1.exercises.q1b' }, { value: 'c', labelKey: 'secondConditional1.exercises.q1c' }], correctAnswer: 'a' },
+                { questionTextKey: 'secondConditional1.exercises.q2', options: [{ value: 'a', labelKey: 'secondConditional1.exercises.q2a' }, { value: 'b', labelKey: 'secondConditional1.exercises.q2b' }, { value: 'c', labelKey: 'secondConditional1.exercises.q2c' }], correctAnswer: 'c' },
+                { questionTextKey: 'secondConditional1.exercises.q3', options: [{ value: 'a', labelKey: 'secondConditional1.exercises.q3a' }, { value: 'b', labelKey: 'secondConditional1.exercises.q3b' }, { value: 'c', labelKey: 'secondConditional1.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'secondConditional1.exercises.q4', options: [{ value: 'a', labelKey: 'secondConditional1.exercises.q4a' }, { value: 'b', labelKey: 'secondConditional1.exercises.q4b' }, { value: 'c', labelKey: 'secondConditional1.exercises.q4c' }], correctAnswer: 'b' },
+                { questionTextKey: 'secondConditional1.exercises.q5', options: [{ value: 'a', labelKey: 'secondConditional1.exercises.q5a' }, { value: 'b', labelKey: 'secondConditional1.exercises.q5b' }, { value: 'c', labelKey: 'secondConditional1.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'secondConditional1.exercises.q6', options: [{ value: 'a', labelKey: 'secondConditional1.exercises.q6a' }, { value: 'b', labelKey: 'secondConditional1.exercises.q6b' }, { value: 'c', labelKey: 'secondConditional1.exercises.q6c' }], correctAnswer: 'b' }
             ]
         });
-        
-        // Fill in the Blank (3 questions)
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+    </script>
+    <script>
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
                 { questionTextKey: 'secondConditional1.exercises.q7', answers: ['were'] },
-                { questionTextKey: 'secondConditional1.exercises.q8', answers: ['didn\'t rain', 'did not rain'] },
+                { questionTextKey: 'secondConditional1.exercises.q8', answers: ["didn't rain", "did not rain"] },
                 { questionTextKey: 'secondConditional1.exercises.q9', answers: ['exercised'] }
             ]
         });
-        
-        // Sentence Ordering (3 questions)
+    </script>
+    <script>
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                { questionTextKey: 'secondConditional1.exercises.q10', words: ['If','I','were','you','I','would','apologize','.'], correctSentence: 'If I were you I would apologize .' },
-                { questionTextKey: 'secondConditional1.exercises.q11', words: ['If','she','had','time','she','would','join','the','club','.'], correctSentence: 'If she had time she would join the club .' },
-                { questionTextKey: 'secondConditional1.exercises.q12', words: ['They','would','be','happy','if','they','won','the','lottery','.'], correctSentence: 'They would be happy if they won the lottery .' }
+                { questionTextKey: 'secondConditional1.exercises.q10', words: ['if', 'i', 'were', 'you', 'i', 'would', 'apologize', '.'], correctSentence: 'if i were you i would apologize .' },
+                { questionTextKey: 'secondConditional1.exercises.q11', words: ['if', 'she', 'had', 'time', 'she', 'would', 'join', 'the', 'club', '.'], correctSentence: 'if she had time she would join the club .' },
+                { questionTextKey: 'secondConditional1.exercises.q12', words: ['they', 'would', 'be', 'happy', 'if', 'they', 'won', 'the', 'lottery', '.'], correctSentence: 'they would be happy if they won the lottery .' }
             ]
         });
-        
-        // ---------- SCORING & CHECK ----------
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
-            
+
             totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
             totalQuestions += 6;
             totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
             totalQuestions += 3;
             totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
             totalQuestions += 3;
-            
+
             const scoreEl = document.getElementById('score-value');
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered the second conditional!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit past simple and would structures.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
+
+            EHScoreEffects.show(totalScore, totalQuestions);
         }
-        
+
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize ordering drag & drop (already built by builder, re-init to attach events)
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-        
-        // i18n rendering for dynamic elements and static content
+
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
-                document.querySelectorAll('[data-i18n]').forEach(el => {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
+                    if (translation) {
                         el.textContent = translation;
                     }
                 });
             }
-            window.addEventListener('load', () => { setTimeout(applyHtmlI18n, 100); });
-            document.getElementById('language-selector').addEventListener('change', () => { setTimeout(applyHtmlI18n, 50); });
+            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
         })();
     </script>
 </body>

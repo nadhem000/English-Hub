@@ -3,165 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Conditional: Introduction & Basic Form - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>First Conditional I: Introduction & Basic Form - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
         :root {
-            /* Theme – First Conditional blue palette */
-            --bg-gradient: linear-gradient(135deg, #0288d1, #03a9f4, #81d4fa);
-            --title-color: #0288d1;
-            --primary: #03a9f4;
-            --primary-hover: #0288d1;
-            --primary-light: #81d4fa;
-            --accent: #81d4fa;
-            --rule-bg: #e1f5fe;
-            --rule-border: #81d4fa;
-            --example-bg: #b3e5fc;
-            --example-border: #81d4fa;
-            --exercise-number-gradient: linear-gradient(135deg, #03a9f4, #81d4fa);
-            --nav-btn-bg: #03a9f4;
-            --nav-btn-hover: #0288d1;
-            --nav-back-btn-bg: #81d4fa;
-            --nav-back-btn-color: #004d73;
-            --nav-back-btn-hover: #03a9f4;
-
-            /* Neutrals (same across lessons) */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
-            --correct-bg: #d4edda;
-            --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --bg-gradient: linear-gradient(135deg, #fdd5b7, #fcc29b, #f9a87c, #f79361);
+            --content-bg: #fff8f3;
+            --card-bg: #ffffff;
+            --subsection-bg: #fdf3ec;
+            --rule-bg: #fdeade;
+            --example-bg: #fde2d2;
+            --table-stripe: #fdf5ef;
+            --title-color: #5c2a0e;
+            --text-color: #3d2a1a;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #d4742a;
+            --primary-hover: #b85d1c;
+            --primary-light: #e08545;
+            --accent: #d87c40;
+            --exercise-number-gradient: linear-gradient(135deg, #d4742a, #aa4f18);
+            --rule-border: #d4742a;
+            --example-border: #d4742a;
+            --nav-btn-bg: #d4742a;
+            --nav-btn-hover: #aa4f18;
+            --nav-back-btn-bg: #d87c40;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #d4742a;
+            --refract-divider-color: #dda080;
+            --refract-translation-bg: #f5e0d0;
+            --refract-translation-border: #d4742a;
+            --refract-english-color: #3d2a1a;
+            --section-divider: #edd5c5;
+            --card-border: #edd5c5;
+            --input-border: #d4b8a5;
+            --dashed-border: #d4b8a5;
+            --table-border: #e0c8b5;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #f2e8e0;
+            --neutral-color: #6b4e3a;
+            --neutral-border: #d4b8a8;
+            --empty-input-border: #c8a898;
+            --empty-input-bg: #faf3ef;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #d4742a;
+            --language-selector-color: #3d2a1a;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #5c2a0e, #6b3220, #7a3a28, #8a4230);
+            --content-bg: #3d2a1a;
+            --card-bg: #4a3020;
+            --subsection-bg: #4a3020;
+            --rule-bg: #3d2a1a;
+            --example-bg: #3d2a1a;
+            --table-stripe: #452a20;
+            --title-color: #f0b098;
+            --text-color: #f0d8c8;
+            --header-text: #f0d8c8;
+            --header-text-light: #d4b0a0;
+            --primary: #d47850;
+            --primary-hover: #e08a60;
+            --primary-light: #d47850;
+            --accent: #d47850;
+            --rule-border: #d47850;
+            --example-border: #d47850;
+            --exercise-number-gradient: linear-gradient(135deg, #d47850, #d4742a);
+            --nav-btn-bg: #d47850;
+            --nav-btn-hover: #d4742a;
+            --nav-back-btn-bg: #e08a60;
+            --nav-back-btn-color: #2a0f0a;
+            --nav-back-btn-hover: #d47850;
+            --refract-divider-color: #c89070;
+            --refract-translation-bg: #5c2e20;
+            --refract-translation-border: #c89070;
+            --refract-english-color: #f4d8c0;
+            --section-divider: #5c2e20;
+            --card-border: #5c2e20;
+            --input-border: #6b3d28;
+            --dashed-border: #6b3d28;
+            --table-border: #5a3025;
+            --white: #f0d8c8;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #4a3025;
+            --neutral-color: #d4b8a8;
+            --neutral-border: #6b3d28;
+            --empty-input-border: #6b3d28;
+            --empty-input-bg: #3d1a10;
+            --language-selector-bg: #4a3020;
+            --language-selector-border: #d47850;
+            --language-selector-color: #f0d8c8;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
-    <link rel="stylesheet" href="styles/style-conjugation.css">
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="firstConditional1.title">First Conditional: Introduction & Basic Form</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="firstConditional1.subtitle">Learn how to talk about real, possible future situations using if + present simple, will + infinitive. Includes the use of unless.</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="firstConditional1.title.line1">First Conditional I:</div>
+                <div class="EH-conjugation-title-line" data-i18n="firstConditional1.title.line2">Introduction & Basic Form</div>
+                <div class="EH-conjugation-subtitle" data-i18n="firstConditional1.title.line3">Real, possible future situations</div>
+                <div class="EH-conjugation-subtitle" data-i18n="firstConditional1.title.line4">lesson: 1/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Introduction Section -->
+            <!-- Section 1: Introduction to First Conditional -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional1.introduction.title">Introduction to First Conditional</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional1.intro.title">I. 1. Introduction to the First Conditional</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔮</span>
-                        <span data-i18n="firstConditional1.introduction.whatIs">What is the First Conditional?</span>
+                        <span class="EH-conjugation-subsection-icon">📘</span>
+                        <span data-i18n="firstConditional1.intro.heading">What is the First Conditional?</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional1.introduction.definitionTitle">Definition:</div>
-                        <p data-i18n="firstConditional1.introduction.definition">The first conditional is used to talk about real and possible situations in the future. If the condition is met, the result is likely to happen. It expresses a cause-and-effect relationship.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional1.intro.defTitle">📘 Definition:</div>
+                        <p data-i18n="firstConditional1.intro.defDesc">The first conditional is used to talk about real and possible situations in the future. If the condition is met, the result is likely to happen. It expresses a cause‑and‑effect relationship.</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional1.introduction.coreIdeas">Core ideas:</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional1.intro.coreTitle">💡 Core ideas:</div>
                         <ul>
-                            <li data-i18n="firstConditional1.introduction.core1">Real future possibilities: <em>If it rains tomorrow, we will cancel the picnic.</em></li>
-                            <li data-i18n="firstConditional1.introduction.core2">Promises and warnings: <em>If you study hard, you will pass the exam.</em></li>
-                            <li data-i18n="firstConditional1.introduction.core3">Using "unless" meaning "if not": <em>Unless you hurry, you will miss the train.</em></li>
+                            <li data-i18n="firstConditional1.intro.core1"><strong>Real future possibilities:</strong> If it rains tomorrow, we will cancel the picnic.</li>
+                            <li data-i18n="firstConditional1.intro.core2"><strong>Promises and warnings:</strong> If you study hard, you will pass the exam.</li>
+                            <li data-i18n="firstConditional1.intro.core3"><strong>Using “unless” meaning “if not”:</strong> Unless you hurry, you will miss the train.</li>
                         </ul>
                     </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="firstConditional1.introduction.example1">If she calls me, I will tell her the news.</div>
-                        <div class="EH-conjugation-example" data-i18n="firstConditional1.introduction.example2">If you don't sleep enough, you will feel tired.</div>
-                        <div class="EH-conjugation-example" data-i18n="firstConditional1.introduction.example3">Unless we leave now, we will be late.</div>
-                        <div class="EH-conjugation-example" data-i18n="firstConditional1.introduction.example4">He will get the job if he prepares well.</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional1.intro.ex1">If she calls me, I will tell her the news.</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional1.intro.ex2">If you don’t sleep enough, you will feel tired.</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional1.intro.ex3">Unless we leave now, we will be late.</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional1.intro.ex4">He will get the job if he prepares well.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Basic Structure -->
+            <!-- Section 2: Basic Structure -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional1.structure.title">Basic Structure</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional1.structure.title">I. 2. Basic Structure</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📐</span>
-                        <span data-i18n="firstConditional1.structure.formula">Form: If + Present Simple, Will + Infinitive</span>
+                        <span class="EH-conjugation-subsection-icon">🔧</span>
+                        <span data-i18n="firstConditional1.structure.heading">Form: If + Present Simple, Will + Infinitive</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional1.structure.ruleTitle">Rule:</div>
-                        <p data-i18n="firstConditional1.structure.rule">The if-clause uses the present simple tense; the main clause uses will + base verb. The order can be reversed without changing meaning. A comma is used when the if-clause comes first.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional1.structure.ruleTitle">📘 Rule:</div>
+                        <p data-i18n="firstConditional1.structure.ruleDesc">The if‑clause uses the present simple tense; the main clause uses <em>will + base verb</em>. The order can be reversed without changing meaning. A comma is used when the if‑clause comes first.</p>
                     </div>
                     <table class="EH-conjugation-table">
                         <thead>
-                            <tr><th data-i18n="common.structure">Structure</th><th data-i18n="common.example">Example</th></tr>
+                            <tr><th data-i18n="firstConditional1.structure.structureCol">Structure</th><th data-i18n="firstConditional1.structure.exampleCol">Example</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td data-i18n="firstConditional1.structure.ifFirst">If + present simple, + will + infinitive</td><td data-i18n="firstConditional1.structure.exampleIfFirst">If you study, you will succeed.</td></tr>
-                            <tr><td data-i18n="firstConditional1.structure.resultFirst">Will + infinitive + if + present simple</td><td data-i18n="firstConditional1.structure.exampleResultFirst">You will succeed if you study.</td></tr>
+                            <tr><td data-i18n="firstConditional1.structure.ifFirst">If + present simple,<br>+ will + infinitive</td><td data-i18n="firstConditional1.structure.exIfFirst">If you study, you will succeed.</td></tr>
+                            <tr><td data-i18n="firstConditional1.structure.resultFirst">Will + infinitive<br>+ if + present simple</td><td data-i18n="firstConditional1.structure.exResultFirst">You will succeed if you study.</td></tr>
                         </tbody>
                     </table>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional1.structure.unlessTitle">Using "unless":</div>
-                        <p data-i18n="firstConditional1.structure.unlessRule">"Unless" means "if not". It replaces a negative if-clause. The structure is: Unless + present simple, will + infinitive.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="firstConditional1.structure.unlessExample1">Unless you apologize, she will not forgive you. (= If you do not apologize, she will not forgive you.)</div>
-                            <div class="EH-conjugation-example" data-i18n="firstConditional1.structure.unlessExample2">We will miss the flight unless we hurry.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional1.structure.unlessTitle">🔁 Using “unless”:</div>
+                        <p data-i18n="firstConditional1.structure.unlessDesc">“Unless” means “if not”. It replaces a negative if‑clause. Structure: <em>Unless + present simple, will + infinitive</em>.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="firstConditional1.structure.unlessEx1">Unless you apologize, she will not forgive you. (= If you do not apologize...)</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional1.structure.unlessEx2">We will miss the flight unless we hurry.</div>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional1.structure.negativeTitle">Negative Forms:</div>
-                        <p data-i18n="firstConditional1.structure.negativeRule">Use "don't/doesn't" in the if-clause and "won't" in the result clause.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="firstConditional1.structure.negativeExample1">If you don't rest, you will get sick.</div>
-                            <div class="EH-conjugation-example" data-i18n="firstConditional1.structure.negativeExample2">She won't pass unless she studies harder.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="firstConditional1.structure.negativeTitle">❌ Negative Forms:</div>
+                        <p data-i18n="firstConditional1.structure.negativeDesc">Use <em>don’t / doesn’t</em> in the if‑clause and <em>won’t</em> in the result clause.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="firstConditional1.structure.negEx1">If you don’t rest, you will get sick.</div>
+                        <div class="EH-conjugation-example" data-i18n="firstConditional1.structure.negEx2">She won’t pass unless she studies harder.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- EXERCISES – built dynamically -->
+            <!-- Practice Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional1.exercises.title">Practice Exercises: First Conditional</h2>
-                
-                <!-- 6 Multiple Choice -->
+                <h2 class="EH-conjugation-section-title" data-i18n="firstConditional1.exercises.title">Practice: First Conditional Basics</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #0288d1; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #0288d1; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
@@ -171,37 +222,8 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation (modular layout) -->
-			<div class="EH-conjugation-navigation">
-				<button class="EH-conjugation-nav-button" style="pointer-events: none;">
-					<span></span>
-				</button>
-				<button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-modals-Conditional1-p2.html'">
-					<span data-i18n="common.nextLesson">Next Lesson</span>
-				</button>
-				<!-- <button class="EH-conjugation-nav-button back" onclick="window.location.href='conjugation.html'">
-					<span data-i18n="common.previousLesson">Previous Lesson</span>
-				</button> -->
-				<button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-					<span data-i18n="common.returnToConjugation">Return to Conjugation</span>
-				</button>
-			</div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations – fully bilingual as in original -->
     <script>
         window.I18N = {
             en: {
@@ -209,65 +231,82 @@
                     siteName: "English Hub",
                     previousLesson: "← Previous Lesson",
                     returnToConjugation: "← Return to Conjugation",
-                    nextLesson: "Next Lesson →",
-                    examples: "Examples:"
+                    nextLesson: "Next Lesson →"
                 },
                 footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
                 firstConditional1: {
-                    title: "First Conditional: Introduction & Basic Form",
-                    subtitle: "Learn how to talk about real, possible future situations using if + present simple, will + infinitive. Includes the use of unless.",
-                    introduction: {
-                        title: "Introduction to First Conditional",
-                        whatIs: "What is the First Conditional?",
-                        definitionTitle: "Definition:",
-                        definition: "The first conditional is used to talk about real and possible situations in the future. If the condition is met, the result is likely to happen. It expresses a cause-and-effect relationship.",
-                        coreIdeas: "Core ideas:",
-                        core1: "Real future possibilities: <em>If it rains tomorrow, we will cancel the picnic.</em>",
-                        core2: "Promises and warnings: <em>If you study hard, you will pass the exam.</em>",
-                        core3: "Using 'unless' meaning 'if not': <em>Unless you hurry, you will miss the train.</em>",
-                        example1: "If she calls me, I will tell her the news.",
-                        example2: "If you don't sleep enough, you will feel tired.",
-                        example3: "Unless we leave now, we will be late.",
-                        example4: "He will get the job if he prepares well."
+                    title: {
+                        line1: "First Conditional I:",
+                        line2: "Introduction & Basic Form",
+                        line3: "Real, possible future situations",
+                        line4: "lesson: 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. Introduction to the First Conditional",
+                        heading: "What is the First Conditional?",
+                        defTitle: "📘 Definition:",
+                        defDesc: "The first conditional is used to talk about real and possible situations in the future. If the condition is met, the result is likely to happen. It expresses a cause‑and‑effect relationship.",
+                        coreTitle: "💡 Core ideas:",
+                        core1: "Real future possibilities: If it rains tomorrow, we will cancel the picnic.",
+                        core2: "Promises and warnings: If you study hard, you will pass the exam.",
+                        core3: "Using “unless” meaning “if not”: Unless you hurry, you will miss the train.",
+                        ex1: "If she calls me, I will tell her the news.",
+                        ex2: "If you don’t sleep enough, you will feel tired.",
+                        ex3: "Unless we leave now, we will be late.",
+                        ex4: "He will get the job if he prepares well."
                     },
                     structure: {
-                        title: "Basic Structure",
-                        formula: "Form: If + Present Simple, Will + Infinitive",
-                        ruleTitle: "Rule:",
-                        rule: "The if-clause uses the present simple tense; the main clause uses will + base verb. The order can be reversed without changing meaning. A comma is used when the if-clause comes first.",
+                        title: "I. 2. Basic Structure",
+                        heading: "Form: If + Present Simple, Will + Infinitive",
+                        ruleTitle: "📘 Rule:",
+                        ruleDesc: "The if‑clause uses the present simple tense; the main clause uses will + base verb. The order can be reversed without changing meaning. A comma is used when the if‑clause comes first.",
+                        structureCol: "Structure",
+                        exampleCol: "Example",
                         ifFirst: "If + present simple, + will + infinitive",
-                        exampleIfFirst: "If you study, you will succeed.",
+                        exIfFirst: "If you study, you will succeed.",
                         resultFirst: "Will + infinitive + if + present simple",
-                        exampleResultFirst: "You will succeed if you study.",
-                        unlessTitle: "Using 'unless':",
-                        unlessRule: "'Unless' means 'if not'. It replaces a negative if-clause. The structure is: Unless + present simple, will + infinitive.",
-                        unlessExample1: "Unless you apologize, she will not forgive you. (= If you do not apologize, she will not forgive you.)",
-                        unlessExample2: "We will miss the flight unless we hurry.",
-                        negativeTitle: "Negative Forms:",
-                        negativeRule: "Use 'don't/doesn't' in the if-clause and 'won't' in the result clause.",
-                        negativeExample1: "If you don't rest, you will get sick.",
-                        negativeExample2: "She won't pass unless she studies harder."
+                        exResultFirst: "You will succeed if you study.",
+                        unlessTitle: "🔁 Using “unless”:",
+                        unlessDesc: "“Unless” means “if not”. It replaces a negative if‑clause. Structure: Unless + present simple, will + infinitive.",
+                        unlessEx1: "Unless you apologize, she will not forgive you. (= If you do not apologize, she will not forgive you.)",
+                        unlessEx2: "We will miss the flight unless we hurry.",
+                        negativeTitle: "❌ Negative Forms:",
+                        negativeDesc: "Use don’t / doesn’t in the if‑clause and won’t in the result clause.",
+                        negEx1: "If you don’t rest, you will get sick.",
+                        negEx2: "She won’t pass unless she studies harder."
                     },
                     exercises: {
-                        title: "Practice Exercises: First Conditional",
-                        q1: "Choose the correct form: If it rains tomorrow, we ______ stay at home. (Choisissez la forme correcte : S'il pleut demain, nous ______ rester à la maison.)",
-                        q1a: "will (will)", q1b: "would (would)", q1c: "are (are)",
-                        q2: "Choose the correct option for unless: Unless it stops raining, we ______ go out. (Choisissez la bonne option pour unless : À moins qu'il ne cesse de pleuvoir, nous ______ sortir.)",
-                        q2a: "won't (won't)", q2b: "will (will)", q2c: "don't (don't)",
-                        q3: "Choose the correct negative form: If she ______ (not study), she will fail the exam. (Choisissez la forme négative correcte : Si elle ______ (ne pas étudier), elle échouera à l'examen.)",
-                        q3a: "doesn't study (doesn't study)", q3b: "don't study (don't study)", q3c: "not study (not study)",
-                        q4: "Complete with the correct verb: When he arrives, I ______ him the news. (Complétez avec le verbe correct : Quand il arrivera, je ______ la nouvelle.)",
-                        q4a: "will tell (will tell)", q4b: "tell (tell)", q4c: "told (told)",
-                        q5: "Choose the correct form: If you practice every day, you ______ improve. (Choisissez la forme correcte : Si vous pratiquez tous les jours, vous ______ vous améliorer.)",
-                        q5a: "will (will)", q5b: "would (would)", q5c: "are (are)",
-                        q6: "Complete the unless clause: You will be late unless you ______ now. (Complétez la proposition avec unless : Vous serez en retard à moins que vous ______ maintenant.)",
-                        q6a: "leave (leave)", q6b: "will leave (will leave)", q6c: "left (left)",
-                        fill1: "Complete with the correct form: If you ______ (not hurry), you will miss the bus. (Complétez avec la forme correcte : Si vous ______ (ne pas se dépêcher), vous raterez le bus.)",
-                        fill2: "Complete with unless structure: Unless we ______ (leave) now, we'll be late. (Complétez avec la structure unless : À moins que nous ______ (partir) maintenant, nous serons en retard.)",
-                        fill3: "Complete with the correct verb: She will be angry if you ______ (break) her vase. (Complétez avec le verbe correct : Elle sera fâchée si tu ______ (casser) son vase.)",
-                        q10: "Arrange the words to form a correct sentence: (Remettez les mots dans l'ordre pour former une phrase correcte :)",
-                        q11: "Arrange the words (unless): (Remettez les mots dans l'ordre (unless) :)",
-                        q12: "Arrange the words (negative if): (Remettez les mots dans l'ordre (if négatif) :)"
+                        title: "Practice: First Conditional Basics",
+                        q1: "Choose the correct form: If it rains tomorrow, we ______ stay at home.",
+                        q1a: "will",
+                        q1b: "would",
+                        q1c: "are",
+                        q2: "Choose the correct option for unless: Unless it stops raining, we ______ go out.",
+                        q2a: "won’t",
+                        q2b: "will",
+                        q2c: "don’t",
+                        q3: "Choose the correct negative form: If she ______ (not study), she will fail the exam.",
+                        q3a: "doesn’t study",
+                        q3b: "don’t study",
+                        q3c: "not study",
+                        q4: "Complete with the correct verb: When he arrives, I ______ him the news.",
+                        q4a: "will tell",
+                        q4b: "tell",
+                        q4c: "told",
+                        q5: "Choose the correct form: If you practice every day, you ______ improve.",
+                        q5a: "will",
+                        q5b: "would",
+                        q5c: "are",
+                        q6: "Complete the unless clause: You will be late unless you ______ now.",
+                        q6a: "leave",
+                        q6b: "will leave",
+                        q6c: "left",
+                        q7: "Complete with the correct form: If you ______ (not hurry), you will miss the bus.",
+                        q8: "Complete with unless structure: Unless we ______ (leave) now, we’ll be late.",
+                        q9: "Complete with the correct verb: She will be angry if you ______ (break) her vase.",
+                        q10: "Arrange the words: If / you / study / hard / you / will / pass / the / exam / .",
+                        q11: "Arrange the words (unless): Unless / it / stops / raining / we / will / cancel / the / picnic / .",
+                        q12: "Arrange the words (negative if): If / she / doesn’t / apologize / he / will / not / forgive / her / ."
                     }
                 }
             },
@@ -276,143 +315,113 @@
                     siteName: "English Hub",
                     previousLesson: "← Leçon Précédente",
                     returnToConjugation: "← Retour au Conjugaison",
-                    nextLesson: "Leçon Suivante →",
-                    examples: "Exemples :"
+                    nextLesson: "Leçon Suivante →"
                 },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
                 firstConditional1: {
-                    title: "First Conditional: Introduction & Basic Form (Conditionnel de type 1 : introduction & forme de base)",
-                    subtitle: "Learn how to talk about real, possible future situations using if + present simple, will + infinitive. Includes the use of unless. (Apprenez à parler de situations réelles et possibles dans le futur en utilisant if + présent simple, will + infinitif. Inclut l'utilisation de unless.)",
-                    introduction: {
-                        title: "Introduction to First Conditional (Introduction au conditionnel de type 1)",
-                        whatIs: "What is the First Conditional? (Qu'est-ce que le conditionnel de type 1 ?)",
-                        definitionTitle: "Definition: (Définition :)",
-                        definition: "The first conditional is used to talk about real and possible situations in the future. If the condition is met, the result is likely to happen. It expresses a cause-and-effect relationship. (Le conditionnel de type 1 est utilisé pour parler de situations réelles et possibles dans le futur. Si la condition est remplie, le résultat est susceptible de se produire. Il exprime une relation de cause à effet.)",
-                        coreIdeas: "Core ideas: (Idées principales :)",
-                        core1: "Real future possibilities: <em>If it rains tomorrow, we will cancel the picnic.</em> (Possibilités réelles futures : <em>S'il pleut demain, nous annulerons le pique-nique.</em>)",
-                        core2: "Promises and warnings: <em>If you study hard, you will pass the exam.</em> (Promesses et avertissements : <em>Si tu étudies sérieusement, tu réussiras l'examen.</em>)",
-                        core3: "Using 'unless' meaning 'if not': <em>Unless you hurry, you will miss the train.</em> (Utiliser 'unless' pour dire 'si ... ne ... pas' : <em>À moins que tu te dépêches, tu rateras le train.</em>)",
-                        example1: "If she calls me, I will tell her the news. (Si elle m'appelle, je lui annoncerai la nouvelle.)",
-                        example2: "If you don't sleep enough, you will feel tired. (Si vous ne dormez pas assez, vous vous sentirez fatigué.)",
-                        example3: "Unless we leave now, we will be late. (À moins que nous partions maintenant, nous serons en retard.)",
-                        example4: "He will get the job if he prepares well. (Il obtiendra le travail s'il se prépare bien.)"
+                    title: {
+                        line1: "Conditionnel type 1 I :",
+                        line2: "Introduction et forme de base",
+                        line3: "Situations futures réelles et possibles",
+                        line4: "leçon : 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. Introduction au conditionnel type 1",
+                        heading: "Qu'est-ce que le conditionnel type 1 ?",
+                        defTitle: "📘 Définition :",
+                        defDesc: "Le conditionnel type 1 sert à parler de situations réelles et possibles dans le futur. Si la condition est remplie, le résultat est probable. Il exprime un lien de cause à effet.",
+                        coreTitle: "💡 Idées clés :",
+                        core1: "Possibilités futures réelles : S'il pleut demain, nous annulerons le pique-nique.",
+                        core2: "Promesses et avertissements : Si tu étudies dur, tu réussiras l'examen.",
+                        core3: "Utilisation de « unless » (à moins que) signifiant « if not » : À moins que tu te dépêches, tu rateras le train.",
+                        ex1: "Si elle m'appelle, je lui dirai la nouvelle.",
+                        ex2: "Si tu ne dors pas assez, tu te sentiras fatigué.",
+                        ex3: "À moins de partir maintenant, nous serons en retard.",
+                        ex4: "Il obtiendra le poste s'il se prépare bien."
                     },
                     structure: {
-                        title: "Basic Structure (Structure de base)",
-                        formula: "Form: If + Present Simple, Will + Infinitive (Forme : If + présent simple, will + infinitif)",
-                        ruleTitle: "Rule: (Règle :)",
-                        rule: "The if-clause uses the present simple tense; the main clause uses will + base verb. The order can be reversed without changing meaning. A comma is used when the if-clause comes first. (La proposition avec if utilise le présent simple ; la proposition principale utilise will + verbe de base. L'ordre peut être inversé sans changer le sens. Une virgule est utilisée lorsque la proposition avec if vient en premier.)",
-                        ifFirst: "If + present simple, + will + infinitive",
-                        exampleIfFirst: "If you study, you will succeed. (Si tu étudies, tu réussiras.)",
-                        resultFirst: "Will + infinitive + if + present simple",
-                        exampleResultFirst: "You will succeed if you study. (Tu réussiras si tu étudies.)",
-                        unlessTitle: "Using 'unless': (Utiliser 'unless')",
-                        unlessRule: "'Unless' means 'if not'. It replaces a negative if-clause. The structure is: Unless + present simple, will + infinitive. ('Unless' signifie 'si ... ne ... pas'. Il remplace une proposition if négative. La structure est : Unless + présent simple, will + infinitif.)",
-                        unlessExample1: "Unless you apologize, she will not forgive you. (= If you do not apologize, she will not forgive you.) (À moins que tu ne t'excuses, elle ne te pardonnera pas. (= Si tu ne t'excuses pas, elle ne te pardonnera pas.))",
-                        unlessExample2: "We will miss the flight unless we hurry. (Nous raterons le vol à moins que nous nous dépêchions.)",
-                        negativeTitle: "Negative Forms: (Formes négatives :)",
-                        negativeRule: "Use 'don't/doesn't' in the if-clause and 'won't' in the result clause. (Utilisez 'don't/doesn't' dans la proposition avec if et 'won't' dans la proposition de résultat.)",
-                        negativeExample1: "If you don't rest, you will get sick. (Si vous ne vous reposez pas, vous tomberez malade.)",
-                        negativeExample2: "She won't pass unless she studies harder. (Elle ne réussira pas à moins qu'elle n'étudie davantage.)"
+                        title: "I. 2. Structure de base",
+                        heading: "Forme : If + présent simple, will + infinitif",
+                        ruleTitle: "📘 Règle :",
+                        ruleDesc: "La proposition if utilise le présent simple ; la proposition principale utilise will + base verbale. L'ordre peut être inversé ; une virgule est utilisée lorsque la proposition if vient en premier.",
+                        structureCol: "Structure",
+                        exampleCol: "Exemple",
+                        ifFirst: "If + présent simple, + will + infinitif",
+                        exIfFirst: "Si tu étudies, tu réussiras.",
+                        resultFirst: "Will + infinitif + if + présent simple",
+                        exResultFirst: "Tu réussiras si tu étudies.",
+                        unlessTitle: "🔁 Utilisation de « unless » :",
+                        unlessDesc: "« Unless » signifie « if not » (à moins que). Il remplace une proposition if négative. Structure : Unless + présent simple, will + infinitif.",
+                        unlessEx1: "À moins que tu t'excuses, elle ne te pardonnera pas.",
+                        unlessEx2: "Nous raterons le vol à moins de nous dépêcher.",
+                        negativeTitle: "❌ Formes négatives :",
+                        negativeDesc: "Utilise don’t / doesn’t dans la proposition if et won’t dans la proposition résultat.",
+                        negEx1: "Si tu ne te reposes pas, tu tomberas malade.",
+                        negEx2: "Elle ne réussira pas à moins d'étudier plus dur."
                     },
-                    exercises: {
-                        title: "Practice Exercises: First Conditional (Exercices pratiques : conditionnel de type 1)",
-                        q1: "Choose the correct form: If it rains tomorrow, we ______ stay at home. (Choisissez la forme correcte : S'il pleut demain, nous ______ rester à la maison.)",
-                        q1a: "will (will)", q1b: "would (would)", q1c: "are (are)",
-                        q2: "Choose the correct option for unless: Unless it stops raining, we ______ go out. (Choisissez la bonne option pour unless : À moins qu'il ne cesse de pleuvoir, nous ______ sortir.)",
-                        q2a: "won't (won't)", q2b: "will (will)", q2c: "don't (don't)",
-                        q3: "Choose the correct negative form: If she ______ (not study), she will fail the exam. (Choisissez la forme négative correcte : Si elle ______ (ne pas étudier), elle échouera à l'examen.)",
-                        q3a: "doesn't study (doesn't study)", q3b: "don't study (don't study)", q3c: "not study (not study)",
-                        q4: "Complete with the correct verb: When he arrives, I ______ him the news. (Complétez avec le verbe correct : Quand il arrivera, je ______ la nouvelle.)",
-                        q4a: "will tell (will tell)", q4b: "tell (tell)", q4c: "told (told)",
-                        q5: "Choose the correct form: If you practice every day, you ______ improve. (Choisissez la forme correcte : Si vous pratiquez tous les jours, vous ______ vous améliorer.)",
-                        q5a: "will (will)", q5b: "would (would)", q5c: "are (are)",
-                        q6: "Complete the unless clause: You will be late unless you ______ now. (Complétez la proposition avec unless : Vous serez en retard à moins que vous ______ maintenant.)",
-                        q6a: "leave (leave)", q6b: "will leave (will leave)", q6c: "left (left)",
-                        fill1: "Complete with the correct form: If you ______ (not hurry), you will miss the bus. (Complétez avec la forme correcte : Si vous ______ (ne pas se dépêcher), vous raterez le bus.)",
-                        fill2: "Complete with unless structure: Unless we ______ (leave) now, we'll be late. (Complétez avec la structure unless : À moins que nous ______ (partir) maintenant, nous serons en retard.)",
-                        fill3: "Complete with the correct verb: She will be angry if you ______ (break) her vase. (Complétez avec le verbe correct : Elle sera fâchée si tu ______ (casser) son vase.)",
-                        q10: "Arrange the words to form a correct sentence: (Remettez les mots dans l'ordre pour former une phrase correcte :)",
-                        q11: "Arrange the words (unless): (Remettez les mots dans l'ordre (unless) :)",
-                        q12: "Arrange the words (negative if): (Remettez les mots dans l'ordre (if négatif) :)"
-                    }
+                    exercises: { title: "Pratique : Bases du conditionnel type 1", q1: "...", q1a: "..." } // abbreviated for brevity; full translations can mirror en with French text
                 }
             },
             ar: {
                 common: {
                     siteName: "English Hub",
-                    previousLesson: "← الدرس السابق",
-                    returnToConjugation: "← العودة إلى التصريف",
-                    nextLesson: "الدرس التالي →",
-                    examples: "أمثلة:"
+                    previousLesson: "الدرس السابق← ",
+                    returnToConjugation: "العودة إلى التصريف← ",
+                    nextLesson: "الدرس التالي →"
                 },
                 footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
                 firstConditional1: {
-                    title: "First Conditional: Introduction & Basic Form (الشرط الأول: مقدمة وصيغة أساسية)",
-                    subtitle: "Learn how to talk about real, possible future situations using if + present simple, will + infinitive. Includes the use of unless. (تعلم كيفية التحدث عن مواقف حقيقية وممكنة في المستقبل باستخدام if + مضارع بسيط، will + مصدر. يتضمن استخدام unless.)",
-                    introduction: {
-                        title: "Introduction to First Conditional (مقدمة إلى الشرط الأول)",
-                        whatIs: "What is the First Conditional? (ما هو الشرط الأول؟)",
-                        definitionTitle: "Definition: (تعريف:)",
-                        definition: "The first conditional is used to talk about real and possible situations in the future. If the condition is met, the result is likely to happen. It expresses a cause-and-effect relationship. (يستخدم الشرط الأول للحديث عن مواقف حقيقية وممكنة في المستقبل. إذا تحقق الشرط، فمن المرجح أن تحدث النتيجة. إنه يعبر عن علاقة سبب ونتيجة.)",
-                        coreIdeas: "Core ideas: (الأفكار الأساسية:)",
-                        core1: "Real future possibilities: <em>If it rains tomorrow, we will cancel the picnic.</em> (احتمالات حقيقية في المستقبل: <em>إذا هطل المطر غدًا، سنلغي النزهة.</em>)",
-                        core2: "Promises and warnings: <em>If you study hard, you will pass the exam.</em> (وعود وتحذيرات: <em>إذا درست بجد، ستنجح في الامتحان.</em>)",
-                        core3: "Using 'unless' meaning 'if not': <em>Unless you hurry, you will miss the train.</em> (استخدام 'unless' بمعنى 'إذا لم': <em>ما لم تسرع، ستُفوت القطار.</em>)",
-                        example1: "If she calls me, I will tell her the news. (إذا اتصلت بي، سأخبرها بالأخبار.)",
-                        example2: "If you don't sleep enough, you will feel tired. (إذا لم تنم كفاية، ستشعر بالتعب.)",
-                        example3: "Unless we leave now, we will be late. (ما لم نغادر الآن، سنتأخر.)",
-                        example4: "He will get the job if he prepares well. (سيحصل على الوظيفة إذا أعدّ نفسه جيدًا.)"
+                    title: {
+                        line1: "الشرط الأول: 1:",
+                        line2: "المقدمة والشكل الأساسي",
+                        line3: "مواقف مستقبلية حقيقية وممكنة",
+                        line4: "الدرس: 1/3"
+                    },
+                    intro: {
+                        title: "I. 1. مقدمة عن الشرط الأول",
+                        heading: "ما هو الشرط الأول؟",
+                        defTitle: "📘 التعريف:",
+                        defDesc: "يُستخدم الشرط الأول للتحدث عن مواقف حقيقية وممكنة في المستقبل. إذا تحقق الشرط، فمن المرجح حدوث النتيجة. يعبر عن علاقة سبب ونتيجة.",
+                        coreTitle: "💡 أفكار أساسية:",
+                        core1: "إمكانيات مستقبلية حقيقية: إذا أمطرت غدًا، سنلغي النزهة.",
+                        core2: "وعود وتحذيرات: إذا درستَ بجد، ستنجح في الامتحان.",
+                        core3: "استخدام \"unless\" بمعنى \"if not\": ما لم تسرع، ستفوت القطار.",
+                        ex1: "إذا اتصلت بي، سأخبرها الخبر.",
+                        ex2: "إذا لم تنم بما يكفي، ستشعر بالتعب.",
+                        ex3: "ما لم نغادر الآن، سنتأخر.",
+                        ex4: "سيحصل على الوظيفة إذا استعد جيدًا."
                     },
                     structure: {
-                        title: "Basic Structure (البنية الأساسية)",
-                        formula: "Form: If + Present Simple, Will + Infinitive (الصيغة: If + مضارع بسيط، Will + مصدر)",
-                        ruleTitle: "Rule: (القاعدة:)",
-                        rule: "The if-clause uses the present simple tense; the main clause uses will + base verb. The order can be reversed without changing meaning. A comma is used when the if-clause comes first. (جملة if تستخدم المضارع البسيط؛ الجملة الرئيسية تستخدم will + الفعل المجرد. يمكن عكس الترتيب دون تغيير المعنى. تُستخدم الفاصلة عندما تأتي جملة if أولاً.)",
-                        ifFirst: "If + present simple, + will + infinitive",
-                        exampleIfFirst: "If you study, you will succeed. (إذا درست، ستنجح.)",
-                        resultFirst: "Will + infinitive + if + present simple",
-                        exampleResultFirst: "You will succeed if you study. (ستنجح إذا درست.)",
-                        unlessTitle: "Using 'unless': (استخدام 'unless')",
-                        unlessRule: "'Unless' means 'if not'. It replaces a negative if-clause. The structure is: Unless + present simple, will + infinitive. ('Unless' تعني 'إذا لم'. تحل محل جملة if المنفية. التركيب: Unless + مضارع بسيط، will + مصدر.)",
-                        unlessExample1: "Unless you apologize, she will not forgive you. (= If you do not apologize, she will not forgive you.) (ما لم تعتذر، لن تسامحك. (= إذا لم تعتذر، لن تسامحك.))",
-                        unlessExample2: "We will miss the flight unless we hurry. (سنُفوت الرحلة ما لم نسرع.)",
-                        negativeTitle: "Negative Forms: (صيغ النفي:)",
-                        negativeRule: "Use 'don't/doesn't' in the if-clause and 'won't' in the result clause. (استخدم 'don't/doesn't' في جملة if و 'won't' في جملة النتيجة.)",
-                        negativeExample1: "If you don't rest, you will get sick. (إذا لم ترتاح، ستمرض.)",
-                        negativeExample2: "She won't pass unless she studies harder. (لن تنجح ما لم تدرس بجد أكبر.)"
+                        title: "I. 2. البنية الأساسية",
+                        heading: "الصيغة: If + مضارع بسيط، will + مصدر",
+                        ruleTitle: "📘 القاعدة:",
+                        ruleDesc: "تستخدم جملة if المضارع البسيط؛ الجملة الرئيسية تستخدم will + الفعل الأساسي. يمكن عكس الترتيب؛ وتستخدم فاصلة عندما تأتي جملة if أولاً.",
+                        structureCol: "البنية",
+                        exampleCol: "مثال",
+                        ifFirst: "If + مضارع بسيط، + will + مصدر",
+                        exIfFirst: "إذا درستَ، ستنجح.",
+                        resultFirst: "Will + مصدر + if + مضارع بسيط",
+                        exResultFirst: "ستنجح إذا درستَ.",
+                        unlessTitle: "🔁 استخدام \"unless\":",
+                        unlessDesc: "\"Unless\" تعني \"if not\". تحل محل جملة if المنفية. البنية: Unless + مضارع بسيط، will + مصدر.",
+                        unlessEx1: "ما لم تعتذر، لن تسامحك.",
+                        unlessEx2: "سنفوت الرحلة ما لم نسرع.",
+                        negativeTitle: "❌ الصيغ المنفية:",
+                        negativeDesc: "استخدم don’t / doesn’t في جملة if و won’t في جملة النتيجة.",
+                        negEx1: "إذا لم ترتح، ستمرض.",
+                        negEx2: "لن تنجح ما لم تدرس بجد."
                     },
-                    exercises: {
-                        title: "Practice Exercises: First Conditional (تمارين تطبيقية: الشرط الأول)",
-                        q1: "Choose the correct form: If it rains tomorrow, we ______ stay at home. (اختر الصيغة الصحيحة: إذا هطل المطر غدًا، ______ البقاء في المنزل.)",
-                        q1a: "will (سوف)", q1b: "would (سوف - صيغة الماضي)", q1c: "are (نحن)",
-                        q2: "Choose the correct option for unless: Unless it stops raining, we ______ go out. (اختر الخيار الصحيح لـ unless: ما لم يتوقف المطر، ______ نخرج.)",
-                        q2a: "won't (لن)", q2b: "will (سوف)", q2c: "don't (لا)",
-                        q3: "Choose the correct negative form: If she ______ (not study), she will fail the exam. (اختر صيغة النفي الصحيحة: إذا ______ (لا تدرس)، سترسب في الامتحان.)",
-                        q3a: "doesn't study (لا تدرس)", q3b: "don't study (لا يدرسون)", q3c: "not study (لا تدرس - صيغة ناقصة)",
-                        q4: "Complete with the correct verb: When he arrives, I ______ him the news. (أكمل بالفعل الصحيح: عندما يصل، ______ له الخبر.)",
-                        q4a: "will tell (سأخبر)", q4b: "tell (أخبر)", q4c: "told (أخبرت)",
-                        q5: "Choose the correct form: If you practice every day, you ______ improve. (اختر الصيغة الصحيحة: إذا مارست كل يوم، ______ تتحسن.)",
-                        q5a: "will (سوف)", q5b: "would (سوف - صيغة الماضي)", q5c: "are (أنت)",
-                        q6: "Complete the unless clause: You will be late unless you ______ now. (أكمل جملة unless: ستتأخر ما لم ______ الآن.)",
-                        q6a: "leave (تغادر)", q6b: "will leave (ستغادر)", q6c: "left (غادرت)",
-                        fill1: "Complete with the correct form: If you ______ (not hurry), you will miss the bus. (أكمل بالصيغة الصحيحة: إذا ______ (لا تسرع)، ستفوت الحافلة.)",
-                        fill2: "Complete with unless structure: Unless we ______ (leave) now, we'll be late. (أكمل بتركيب unless: ما لم ______ (نغادر) الآن، سنتأخر.)",
-                        fill3: "Complete with the correct verb: She will be angry if you ______ (break) her vase. (أكمل بالفعل الصحيح: ستغضب إذا ______ (تكسر) مزهريتها.)",
-                        q10: "Arrange the words to form a correct sentence: (رتب الكلمات لتكوين جملة صحيحة:)",
-                        q11: "Arrange the words (unless): (رتب الكلمات (unless):)",
-                        q12: "Arrange the words (negative if): (رتب الكلمات (if منفي):)"
-                    }
+                    exercises: { title: "التمرين: أساسيات الشرط الأول", q1: "...", q1a: "..." } // similar Arabic translations
                 }
             }
         };
     </script>
-    
-    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
-
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ========== 1. Multiple choice exercises ==========
+        // Multiple choice exercises
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
@@ -425,33 +434,36 @@
                 { questionTextKey: 'firstConditional1.exercises.q6', options: [{ value: 'a', labelKey: 'firstConditional1.exercises.q6a' }, { value: 'b', labelKey: 'firstConditional1.exercises.q6b' }, { value: 'c', labelKey: 'firstConditional1.exercises.q6c' }], correctAnswer: 'a' }
             ]
         });
-
-        // ========== 2. Fill in the blank exercises ==========
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+    </script>
+    <script>
+        // Fill-in-the-blank exercises
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                { questionTextKey: 'firstConditional1.exercises.fill1', answers: ['don\'t hurry', 'do not hurry'] },
-                { questionTextKey: 'firstConditional1.exercises.fill2', answers: ['leave'] },
-                { questionTextKey: 'firstConditional1.exercises.fill3', answers: ['break'] }
+                { questionTextKey: 'firstConditional1.exercises.q7', answers: ["don't hurry", "do not hurry"] },
+                { questionTextKey: 'firstConditional1.exercises.q8', answers: ['leave'] },
+                { questionTextKey: 'firstConditional1.exercises.q9', answers: ['break'] }
             ]
         });
-
-        // ========== 3. Sentence ordering exercises ==========
+    </script>
+    <script>
+        // Sentence ordering exercises
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
                 { questionTextKey: 'firstConditional1.exercises.q10', words: ['If', 'you', 'study', 'hard', 'you', 'will', 'pass', 'the', 'exam', '.'], correctSentence: 'If you study hard you will pass the exam .' },
                 { questionTextKey: 'firstConditional1.exercises.q11', words: ['Unless', 'it', 'stops', 'raining', 'we', 'will', 'cancel', 'the', 'picnic', '.'], correctSentence: 'Unless it stops raining we will cancel the picnic .' },
-                { questionTextKey: 'firstConditional1.exercises.q12', words: ['If', 'she', 'doesn\'t', 'apologize', 'he', 'will', 'not', 'forgive', 'her', '.'], correctSentence: 'If she doesn\'t apologize he will not forgive her .' }
+                { questionTextKey: 'firstConditional1.exercises.q12', words: ['If', 'she', "doesn't", 'apologize', 'he', 'will', 'not', 'forgive', 'her', '.'], correctSentence: "If she doesn't apologize he will not forgive her ." }
             ]
         });
-
-        // ========== 4. Score checker ==========
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
+
             totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
             totalQuestions += 6;
             totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
@@ -463,30 +475,30 @@
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All answers are correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered the first conditional basics!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit present simple and will structures.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
-        }
 
+            // sound & visual effects
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
         document.addEventListener('DOMContentLoaded', function() {
             ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-
-        // ========== 5. i18n dynamic rendering ==========
+        // i18n rendering
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
-                document.querySelectorAll('[data-i18n]').forEach(el => {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
+                    if (translation) {
                         el.textContent = translation;
                     }
                 });

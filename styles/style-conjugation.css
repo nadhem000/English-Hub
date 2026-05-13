@@ -9,6 +9,23 @@
     /* Empty input (unanswered) */
     --empty-input-border: #aaa;
     --empty-input-bg: #f9f9f9;
+    
+    /* Refraction translation */
+    --refract-english-color: #333;
+    --refract-divider-color: #ccc;
+    --refract-translation-bg: #aaa;
+    --refract-translation-border: #aaa;
+    --refract-translation-padding: 4px 8px;
+    --refract-translation-radius: 4px;
+    --refract-divider-margin: 6px 0;
+
+    /* Language selector (moved from inline) */
+    --language-selector-bg: rgba(255, 255, 255, 0.9);
+    --language-selector-border: #fff;
+    --language-selector-color: #333;
+    --language-selector-padding: 8px 12px;
+    --language-selector-radius: 8px;
+    --language-selector-font-weight: bold;
 }
 
 * {
@@ -24,6 +41,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    color: var(--text-color, #333);   /* ← add this line */
 }
 
 .EH-conjugation-container {
@@ -55,6 +73,7 @@ body {
     padding: 30px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     margin-bottom: 30px;
+    color: var(--text-color); 
 }
 
 .EH-conjugation-section {
@@ -77,6 +96,7 @@ body {
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);   
 }
 
 .EH-conjugation-subsection-title {
@@ -99,6 +119,7 @@ body {
     background: var(--rule-bg);
     border-radius: 10px;
     border-left: 4px solid var(--rule-border);
+    color: var(--text-color);   
 }
 
 .EH-conjugation-rule-title {
@@ -112,6 +133,7 @@ body {
     border-radius: 10px;
     padding: 15px;
     margin-top: 15px;
+    color: var(--text-color);   
 }
 
 .EH-conjugation-example {
@@ -132,6 +154,7 @@ body {
     border: 1px solid var(--table-border);
     padding: 10px;
     text-align: left;
+    color: var(--text-color);  
 }
 
 .EH-conjugation-table th {
@@ -166,6 +189,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid var(--card-border);
+    color: var(--text-color);   
 }
 
 .EH-exercise-card:hover {
@@ -211,6 +235,7 @@ body {
 
 .EH-exercise-option label {
     cursor: pointer;
+    color: var(--text-color);  
 }
 
 .EH-exercise-type1-possibilities3-option.correct {
@@ -511,10 +536,176 @@ body {
     background: var(--nav-back-btn-hover);
 }
 
-/* Footer styles remain in common.css */
-/* .EH-common-footer { ... } */
+/* ----------------------------------------------------------
+   Common Header & Footer (merged from common.css)
+   ---------------------------------------------------------- */
+.EH-common-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--header-text, white);
+}
 
-/* Responsive */
+.EH-common-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.EH-common-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.EH-common-footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.EH-common-footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.EH-common-footer-developer {
+    font-weight: bold;
+}
+
+.EH-common-footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.EH-common-footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.EH-common-footer-links a:hover {
+    color: #fdbb2d;
+}
+
+/* Site Header (shared across lessons) */
+.EH-site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.EH-site-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.EH-site-logo:hover {
+    transform: scale(1.05);
+}
+
+.EH-site-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.EH-site-logo-link {
+    position: relative;
+    display: inline-block;
+}
+
+.EH-site-logo-link::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.EH-site-logo-link:hover::after {
+    opacity: 1;
+}
+
+/* Refraction (kept as before) */
+
+/* .EH-conjugation-refraction-english {
+    display: block;
+    font-weight: normal;
+    color: var(--refract-english-color);
+} */
+.EH-conjugation-refraction-divider {
+    border: none;
+    border-top: 2px solid var(--refract-divider-color);
+    margin: var(--refract-divider-margin);
+}
+.EH-conjugation-refraction-translation {
+    display: block;
+    border: 1px solid var(--refract-translation-border);
+    padding: var(--refract-translation-padding);
+    margin-top: 4px;
+    background: var(--refract-translation-bg);
+    font-style: italic;
+    border-radius: var(--refract-translation-radius);
+    color: var(--text-color);   /* ← ADD THIS LINE */
+}
+
+/* --------------- NEW: Language Selector --------------- */
+.EH-language-selector-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.EH-language-selector {
+    padding: var(--language-selector-padding);
+    border-radius: var(--language-selector-radius);
+    border: 2px solid var(--language-selector-border);
+    background: var(--language-selector-bg);
+    color: var(--language-selector-color);
+    font-weight: var(--language-selector-font-weight);
+}
+
+/* --------------- NEW: Exercise Section Subheadings --------------- */
+.EH-exercise-section-heading {
+    color: var(--title-color);
+    margin: 0 0 20px 0;   /* bottom margin only by default */
+}
+
+.EH-exercise-section-heading-top {
+    margin-top: 40px;      /* extra spacing for headings that follow a previous exercise block */
+}
+
+/* Responsive (merged from common.css + existing) */
 @media (max-width: 768px) {
     .EH-conjugation-title {
         font-size: 2rem;
@@ -530,10 +721,109 @@ body {
         width: 100%;
         justify-content: center;
     }
+
+    .EH-common-title {
+        font-size: 2.5rem;
+    }
+    .EH-common-footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .EH-site-header {
+        padding: 12px 15px;
+        gap: 12px;
+    }
+    .EH-site-logo {
+        width: 40px;
+        height: 40px;
+    }
+    .EH-site-name {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
     .EH-conjugation-content {
         padding: 20px;
     }
+
+    .EH-common-title {
+        font-size: 2rem;
+    }
+    .EH-common-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .EH-site-header {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+    .EH-site-logo {
+        width: 35px;
+        height: 35px;
+    }
+    .EH-site-name {
+        font-size: 1.3rem;
+    }
+}
+
+/* Theme toggle button */
+.EH-theme-toggle {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1.4rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 12px;
+    transition: background 0.3s;
+}
+
+.EH-theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* dark theme override for the button */
+[data-theme="dark"] .EH-theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+        /* additional style for title lines */
+        .EH-conjugation-title-line {
+            display: block;
+            margin-bottom: 0.2em;
+            font-weight: inherit;
+            color: inherit;
+        }
+        .EH-conjugation-title-wrapper {
+            /* inherits EH-conjugation-title styling */
+        }
+		/* Score pop animation */
+/* -------------------- Score flash classes -------------------- */
+.EH-score-flash-high,
+.EH-score-flash-mid,
+.EH-score-flash-low {
+    transition: background-color 0.25s ease;
+}
+.EH-score-flash-high {
+    background-color: var(--score-flash-high-bg);
+}
+.EH-score-flash-mid {
+    background-color: var(--score-flash-mid-bg);
+}
+.EH-score-flash-low {
+    background-color: var(--score-flash-low-bg);
+}
+
+/* Score number pop (keep as before) */
+.EH-score-pop {
+    animation: ehScorePop 0.4s ease-in-out;
+}
+
+@keyframes ehScorePop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.3); color: var(--primary); }
+    100% { transform: scale(1); }
 }
