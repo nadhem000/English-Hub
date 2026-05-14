@@ -422,182 +422,154 @@ setupSentenceOrdering: function(lessonId) {
     }
 },
     
-    // Check all exercises
-    setupAllExercisesChecking: function(lessonId) {
-        const lesson = this.lessons[lessonId];
-        if (!lesson) return;
+    // Check all exercises - FIXED to use lessonId dynamically
+setupAllExercisesChecking: function(lessonId) {
+    const lesson = this.lessons[lessonId];
+    if (!lesson) return;
+    
+    const checkAllBtn = document.getElementById(`EH-${lessonId}-check-all`);
+    if (!checkAllBtn) return;
+    
+    checkAllBtn.addEventListener('click', () => {
+        let totalScore = 0;
+        let maxScore = 0;
         
-        const checkAllBtn = document.getElementById('EH-park-check-all');
-        if (!checkAllBtn) return;
-        
-        checkAllBtn.addEventListener('click', function() {
-            let totalScore = 0;
-            let maxScore = 0;
+        // 1. Multiple choice questions
+        for (let i = 1; i <= lesson.mcQuestions; i++) {
+            maxScore++;
+            const questionId = `${lessonId}-q${i}`;
+            const correctAnswer = lesson.correctAnswers[questionId];
+            const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+            const feedbackElement = document.getElementById(`${questionId}-feedback`);
             
-            // 1. Check multiple choice questions
-            for (let i = 1; i <= lesson.mcQuestions; i++) {
-                maxScore++;
-                const questionId = `park-q${i}`;
-                const correctAnswer = lesson.correctAnswers[questionId];
-                const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
-                const feedbackElement = document.getElementById(`${questionId}-feedback`);
-                
-                if (selectedOption) {
-                    if (selectedOption.value === correctAnswer) {
-                        totalScore++;
-                        if (feedbackElement) {
-                            feedbackElement.textContent = '✓ Correct!';
-                            feedbackElement.className = 'EH-comprehension-answer-feedback correct';
-                        }
-                    } else {
-                        if (feedbackElement) {
-                            feedbackElement.textContent = '✗ Incorrect.';
-                            feedbackElement.className = 'EH-comprehension-answer-feedback incorrect';
-                        }
+            if (selectedOption) {
+                if (selectedOption.value === correctAnswer) {
+                    totalScore++;
+                    if (feedbackElement) {
+                        feedbackElement.textContent = '✓ Correct!';
+                        feedbackElement.className = 'EH-comprehension-answer-feedback correct';
                     }
                 } else {
                     if (feedbackElement) {
-                        feedbackElement.textContent = 'Please select an answer.';
+                        feedbackElement.textContent = '✗ Incorrect.';
                         feedbackElement.className = 'EH-comprehension-answer-feedback incorrect';
                     }
                 }
+            } else {
                 if (feedbackElement) {
-                    feedbackElement.style.display = 'block';
+                    feedbackElement.textContent = 'Please select an answer.';
+                    feedbackElement.className = 'EH-comprehension-answer-feedback incorrect';
                 }
             }
+            if (feedbackElement) feedbackElement.style.display = 'block';
+        }
+        
+        // 2. True/False questions
+        const tfQuestions = document.querySelectorAll('.EH-comprehension-true-false-question');
+        tfQuestions.forEach((question, index) => {
+            maxScore++;
+            const questionId = `tf${index + 1}`;
+            const correctAnswer = lesson.correctAnswers[questionId];
+            const selectedButton = question.querySelector('.EH-comprehension-true-false-option.selected-true, .EH-comprehension-true-false-option.selected-false');
+            const feedbackElement = document.getElementById(`${questionId}-feedback`);
             
-            // 2. Check True/False questions
-            const tfQuestions = document.querySelectorAll('.EH-comprehension-true-false-question');
-            tfQuestions.forEach((question, index) => {
-                maxScore++;
-                const questionId = `tf${index + 1}`;
-                const correctAnswer = lesson.correctAnswers[questionId];
-                const selectedButton = question.querySelector('.EH-comprehension-true-false-option.selected-true, .EH-comprehension-true-false-option.selected-false');
-                const feedbackElement = document.getElementById(`${questionId}-feedback`);
-                
-                if (selectedButton) {
-                    if (selectedButton.dataset.answer === correctAnswer) {
-                        totalScore++;
-                        if (feedbackElement) {
-                            feedbackElement.textContent = '✓ Correct!';
-                            feedbackElement.className = 'EH-comprehension-answer-feedback correct';
-                        }
-                    } else {
-                        if (feedbackElement) {
-                            feedbackElement.textContent = '✗ Incorrect.';
-                            feedbackElement.className = 'EH-comprehension-answer-feedback incorrect';
-                        }
+            if (selectedButton) {
+                if (selectedButton.dataset.answer === correctAnswer) {
+                    totalScore++;
+                    if (feedbackElement) {
+                        feedbackElement.textContent = '✓ Correct!';
+                        feedbackElement.className = 'EH-comprehension-answer-feedback correct';
                     }
                 } else {
                     if (feedbackElement) {
-                        feedbackElement.textContent = 'Please select an answer.';
+                        feedbackElement.textContent = '✗ Incorrect.';
                         feedbackElement.className = 'EH-comprehension-answer-feedback incorrect';
                     }
                 }
+            } else {
                 if (feedbackElement) {
-                    feedbackElement.style.display = 'block';
+                    feedbackElement.textContent = 'Please select an answer.';
+                    feedbackElement.className = 'EH-comprehension-answer-feedback incorrect';
+                }
+            }
+            if (feedbackElement) feedbackElement.style.display = 'block';
+        });
+        
+        // 3. Fill in the blanks
+        const fillQuestions = lesson.fillBlanks || [];
+        fillQuestions.forEach((fill) => {
+            let fillScore = 0;
+            fill.ids.forEach((inputId, answerIndex) => {
+                const input = document.getElementById(inputId);
+                if (input) {
+                    const userAnswer = input.value.trim().toLowerCase();
+                    const correctAnswer = fill.answers[answerIndex].toLowerCase();
+                    if (userAnswer === correctAnswer) {
+                        fillScore++;
+                        input.classList.add('correct');
+                        input.classList.remove('incorrect');
+                    } else {
+                        input.classList.add('incorrect');
+                        input.classList.remove('correct');
+                    }
                 }
             });
-            
-            // 3. Check Fill in the Blanks
-            const fillQuestions = lesson.fillBlanks || [];
-            fillQuestions.forEach((fill, fillIndex) => {
-                let fillScore = 0;
-                fill.ids.forEach((inputId, answerIndex) => {
-                    const input = document.getElementById(inputId);
-                    if (input) {
-                        const userAnswer = input.value.trim().toLowerCase();
-                        const correctAnswer = fill.answers[answerIndex].toLowerCase();
-                        
-                        if (userAnswer === correctAnswer) {
-                            fillScore++;
-                            input.classList.add('correct');
-                            input.classList.remove('incorrect');
-                        } else {
-                            input.classList.add('incorrect');
-                            input.classList.remove('correct');
-                        }
-                    }
-                });
-                
-                maxScore += fill.ids.length;
-                totalScore += fillScore;
-                
-                const feedbackElement = document.getElementById(fill.feedbackId);
-                if (feedbackElement) {
-                    feedbackElement.textContent = `${fillScore}/${fill.ids.length} correct`;
-                    feedbackElement.className = fillScore === fill.ids.length ? 
-                        'EH-comprehension-answer-feedback correct' : 
-                        'EH-comprehension-answer-feedback incorrect';
-                    feedbackElement.style.display = 'block';
-                }
-            });
-            
-            // 4. Check Sentence Ordering
-            const orderingItems = document.querySelectorAll('#ordering-list .EH-comprehension-ordering-item');
-            if (orderingItems.length > 0) {
-                const userOrder = Array.from(orderingItems).map(item => item.dataset.order);
-                const correctOrder = lesson.correctAnswers.ordering;
-                
-                let orderingScore = 0;
-                userOrder.forEach((order, index) => {
-                    if (order === correctOrder[index]) {
-                        orderingScore++;
-                    }
-                });
-                
-                maxScore += correctOrder.length;
-                totalScore += orderingScore;
-                
-                const orderingFeedback = document.getElementById('ordering-feedback');
-                if (orderingFeedback) {
-                    orderingFeedback.textContent = `${orderingScore}/${correctOrder.length} in correct order`;
-                    orderingFeedback.className = orderingScore === correctOrder.length ? 
-                        'EH-comprehension-answer-feedback correct' : 
-                        'EH-comprehension-answer-feedback incorrect';
-                    orderingFeedback.style.display = 'block';
-                }
-            }
-            
-            // Update score display
-            const scoreValue = document.getElementById('EH-park-score-value');
-            const scoreFeedback = document.getElementById('EH-park-score-feedback');
-            const scoreDisplay = document.getElementById('EH-park-score-display');
-            
-            if (scoreValue) {
-                scoreValue.textContent = `${totalScore}/${maxScore}`;
-            }
-            
-            // Set feedback based on score percentage
-            if (scoreFeedback) {
-                const percentage = (totalScore / maxScore) * 100;
-                if (percentage >= 90) {
-                    scoreFeedback.textContent = 'Excellent! Perfect score! You understood the story very well.';
-                    scoreFeedback.setAttribute('data-i18n-comprehension', 'parkLesson.scoreFeedback.excellent');
-                } else if (percentage >= 70) {
-                    scoreFeedback.textContent = 'Good job! You understood most of the story.';
-                    scoreFeedback.setAttribute('data-i18n-comprehension', 'parkLesson.scoreFeedback.good');
-                } else if (percentage >= 50) {
-                    scoreFeedback.textContent = 'Not bad! You might want to read the story again.';
-                    scoreFeedback.setAttribute('data-i18n-comprehension', 'parkLesson.scoreFeedback.average');
-                } else {
-                    scoreFeedback.textContent = 'Try reading the story again and pay attention to the details.';
-                    scoreFeedback.setAttribute('data-i18n-comprehension', 'parkLesson.scoreFeedback.needsImprovement');
-                }
-                
-                // Apply translations
-                if (window.TranslationManager && TranslationManager.systems.comprehension) {
-                    const currentLang = TranslationManager.systems.comprehension.currentLang || 'en';
-                    TranslationManager.updateSystem('comprehension', currentLang);
-                }
-            }
-            
-            if (scoreDisplay) {
-                scoreDisplay.style.display = 'block';
-                scoreDisplay.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            maxScore += fill.ids.length;
+            totalScore += fillScore;
+            const feedbackElement = document.getElementById(fill.feedbackId);
+            if (feedbackElement) {
+                feedbackElement.textContent = `${fillScore}/${fill.ids.length} correct`;
+                feedbackElement.className = fillScore === fill.ids.length ?
+                    'EH-comprehension-answer-feedback correct' :
+                    'EH-comprehension-answer-feedback incorrect';
+                feedbackElement.style.display = 'block';
             }
         });
-    },
+        
+        // 4. Sentence ordering
+        const orderingItems = document.querySelectorAll('#ordering-list .EH-comprehension-ordering-item');
+        if (orderingItems.length > 0) {
+            const userOrder = Array.from(orderingItems).map(item => item.dataset.order);
+            const correctOrder = lesson.correctAnswers.ordering;
+            let orderingScore = 0;
+            userOrder.forEach((order, index) => {
+                if (order === correctOrder[index]) orderingScore++;
+            });
+            maxScore += correctOrder.length;
+            totalScore += orderingScore;
+            const orderingFeedback = document.getElementById('ordering-feedback');
+            if (orderingFeedback) {
+                orderingFeedback.textContent = `${orderingScore}/${correctOrder.length} in correct order`;
+                orderingFeedback.className = orderingScore === correctOrder.length ?
+                    'EH-comprehension-answer-feedback correct' :
+                    'EH-comprehension-answer-feedback incorrect';
+                orderingFeedback.style.display = 'block';
+            }
+        }
+        
+        // Update score display (dynamic ID)
+        const scoreValue = document.getElementById(`EH-${lessonId}-score-value`);
+        const scoreFeedback = document.getElementById(`EH-${lessonId}-score-feedback`);
+        const scoreDisplay = document.getElementById(`EH-${lessonId}-score-display`);
+        
+        if (scoreValue) scoreValue.textContent = `${totalScore}/${maxScore}`;
+        
+        if (scoreFeedback) {
+            const percentage = (totalScore / maxScore) * 100;
+            let feedbackText = '';
+            if (percentage >= 90) feedbackText = 'Excellent! Perfect score! You understood the story very well.';
+            else if (percentage >= 70) feedbackText = 'Good job! You understood most of the story.';
+            else if (percentage >= 50) feedbackText = 'Not bad! You might want to read the story again.';
+            else feedbackText = 'Try reading the story again and pay attention to the details.';
+            scoreFeedback.textContent = feedbackText;
+        }
+        
+        if (scoreDisplay) {
+            scoreDisplay.style.display = 'block';
+            scoreDisplay.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    });
+},
     
     // Reset all exercises for a lesson
     resetLesson: function(lessonId) {
