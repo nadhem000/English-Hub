@@ -3,1240 +3,577 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Present Tense: Negative, Passive & Idioms - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>Simple Present III: Negative, Passive & Idioms - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #6a1b9a, #8e24aa, #ab47bc);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-        
-        .EH-conjugation-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-        }
-        
-        .EH-conjugation-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .EH-conjugation-title {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .EH-conjugation-subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-        }
-        
-        .EH-conjugation-content {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
-        
-        .EH-conjugation-section {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .EH-conjugation-section-title {
-            font-size: 1.8rem;
-            color: #6a1b9a;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #ab47bc;
-        }
-        
-        .EH-conjugation-subsection {
-            margin-bottom: 25px;
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .EH-conjugation-subsection-title {
-            font-size: 1.4rem;
-            color: #8e24aa;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .EH-conjugation-subsection-icon {
-            font-size: 1.6rem;
-            margin-right: 10px;
-        }
-        
-        .EH-conjugation-rule {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f5f5f5;
-            border-radius: 10px;
-            border-left: 4px solid #ab47bc;
-        }
-        
-        .EH-conjugation-rule-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #6a1b9a;
-        }
-        
-        .EH-conjugation-examples {
-            background: #f3e5f5;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-        }
-        
-        .EH-conjugation-example {
-            margin-bottom: 8px;
-            padding-left: 10px;
-            border-left: 2px solid #ab47bc;
-        }
-        
-        .EH-conjugation-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        
-        .EH-conjugation-table th,
-        .EH-conjugation-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        
-        .EH-conjugation-table th {
-            background-color: #8e24aa;
-            color: white;
-        }
-        
-        .EH-conjugation-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        .EH-conjugation-table tr:hover {
-            background-color: #f3e5f5;
-        }
-        
-        /* Exercise Styles */
-        .EH-exercise-section {
-            margin-top: 40px;
-        }
-        
-        .EH-exercise-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .EH-exercise-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .EH-exercise-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .EH-exercise-number {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, #8e24aa, #ab47bc);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-text {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .EH-exercise-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option input {
-            cursor: pointer;
-        }
-        
-        .EH-exercise-option label {
-            cursor: pointer;
-        }
-        
-        /* Type 1: Multiple Choice Styles */
-        .EH-exercise-type1-possibilities3-answers-control {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
-            gap: 20px;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn {
-            background: #8e24aa;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn:hover {
-            background: #6a1b9a;
-        }
-
-        .EH-exercise-type1-possibilities3-score-display {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            display: none;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-title {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #6a1b9a;
-        }
-
-        .EH-exercise-type1-possibilities3-score-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #8e24aa;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-feedback {
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        .EH-exercise-type1-possibilities3-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.correct {
-            background-color: #d4edda;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.incorrect {
-            background-color: #f8d7da;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 2: Fill in the Blank Styles */
-        .EH-exercise-type2-fillblank-input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .EH-exercise-type2-fillblank-input:focus {
-            border-color: #8e24aa;
-            outline: none;
-        }
-        
-        .EH-exercise-type2-fillblank-input-correct {
-            border-color: #28a745;
-            background-color: #d4edda;
-        }
-        
-        .EH-exercise-type2-fillblank-input-incorrect {
-            border-color: #dc3545;
-            background-color: #f8d7da;
-        }
-        
-        .EH-exercise-type2-fillblank-input-empty {
-            border-color: #ffc107;
-        }
-        
-        .EH-exercise-type2-fillblank-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type2-fillblank-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type2-fillblank-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 3: Sentence Ordering Styles */
-        .EH-exercise-type3-sentenceorder-word-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 15px;
-            border: 2px dashed #e0e0e0;
-            border-radius: 10px;
-            min-height: 60px;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word {
-            background: #f3e5f5;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid #ce93d8;
-            cursor: move;
-            user-select: none;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word:hover {
-            background: #e1bee7;
-        }
-        
-        .EH-exercise-type3-sentenceorder-dragging {
-            opacity: 0.5;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct {
-            border-color: #28a745;
-            background-color: #f8fff8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect {
-            border-color: #dc3545;
-            background-color: #fff8f8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Navigation Buttons */
-        .EH-conjugation-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-        
-        .EH-conjugation-nav-button {
-            background: #8e24aa;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .EH-conjugation-nav-button:hover {
-            background: #6a1b9a;
-        }
-        
-        .EH-conjugation-nav-button.back {
-            background: #ab47bc;
-        }
-        
-        .EH-conjugation-nav-button.back:hover {
-            background: #8e24aa;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .EH-conjugation-title {
-                font-size: 2rem;
-            }
-            
-            .EH-exercise-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .EH-conjugation-navigation {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .EH-conjugation-nav-button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .EH-conjugation-content {
-                padding: 20px;
-            }
+        /* FRESH TEAL / SLATE COLOR PALETTE (distinct from green/blue/amber/purple) */
+        :root {
+            --bg-gradient: linear-gradient(135deg, #cfe9f0, #b8dee8, #9ecfd8, #85c2cf);
+            --content-bg: #f4fbfe;
+            --card-bg: #ffffff;
+            --subsection-bg: #f0f9fc;
+            --rule-bg: #e6f4f8;
+            --example-bg: #daedf2;
+            --table-stripe: #eef7fb;
+            --title-color: #1b5c6e;
+            --text-color: #1a4b5a;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #2c8c9e;
+            --primary-hover: #226e7c;
+            --primary-light: #3ea3b5;
+            --accent: #338f9e;
+            --exercise-number-gradient: linear-gradient(135deg, #2c8c9e, #1f6b7a);
+            --rule-border: #2c8c9e;
+            --example-border: #2c8c9e;
+            --nav-btn-bg: #2c8c9e;
+            --nav-btn-hover: #1f6b7a;
+            --nav-back-btn-bg: #3ea3b5;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #2c8c9e;
+            --refract-divider-color: #8ebfcc;
+            --refract-translation-bg: #e6f4f8;
+            --refract-translation-border: #2c8c9e;
+            --refract-english-color: #1a4b5a;
+            --section-divider: #cbe3ea;
+            --card-border: #cbe3ea;
+            --input-border: #aaccd9;
+            --dashed-border: #aaccd9;
+            --table-border: #c2dde6;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #eef3f5;
+            --neutral-color: #4b6f7a;
+            --neutral-border: #bcd3db;
+            --empty-input-border: #9bc2cd;
+            --empty-input-bg: #f9feff;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #2c8c9e;
+            --language-selector-color: #1a4b5a;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #1e4e5a, #1f6372, #237786, #288b9a);
+            --content-bg: #162f38;
+            --card-bg: #1e424e;
+            --subsection-bg: #1e424e;
+            --rule-bg: #162f38;
+            --example-bg: #162f38;
+            --table-stripe: #1a3842;
+            --title-color: #aae0ec;
+            --text-color: #daecf0;
+            --header-text: #daecf0;
+            --header-text-light: #b2d4e0;
+            --primary: #48b5ca;
+            --primary-hover: #60c7db;
+            --primary-light: #48b5ca;
+            --accent: #48b5ca;
+            --rule-border: #48b5ca;
+            --example-border: #48b5ca;
+            --exercise-number-gradient: linear-gradient(135deg, #48b5ca, #2c8c9e);
+            --nav-btn-bg: #48b5ca;
+            --nav-btn-hover: #2c8c9e;
+            --nav-back-btn-bg: #60c7db;
+            --nav-back-btn-color: #0a252e;
+            --nav-back-btn-hover: #48b5ca;
+            --refract-divider-color: #6fc7da;
+            --refract-translation-bg: #2a5566;
+            --refract-translation-border: #6fc7da;
+            --refract-english-color: #d9ecf2;
+            --section-divider: #2b5768;
+            --card-border: #2b5768;
+            --input-border: #458196;
+            --dashed-border: #458196;
+            --table-border: #376f82;
+            --white: #e0f0f5;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #233e48;
+            --neutral-color: #c2dce6;
+            --neutral-border: #488197;
+            --empty-input-border: #488197;
+            --empty-input-bg: #162f38;
+            --language-selector-bg: #1e424e;
+            --language-selector-border: #48b5ca;
+            --language-selector-color: #daecf0;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="ar">العربية</option>
-        </select>
-    </div>
-    
-    <div class="EH-site-header">
-        <a href="index.html" class="EH-site-logo-link" title="Main Page">
-            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
-        </a>
-        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
-    </div>
-    
-    <div class="EH-conjugation-container">
-        <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="simplePresent3.title">Simple Present Tense: Negative, Passive & Idioms</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="simplePresent3.subtitle">Learn to form negative sentences, use passive voice, and understand common idioms</p>
-        </header>
-        
-        <div class="EH-conjugation-content">
-            <!-- Introduction Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent3.introduction.title">Negative Forms in Simple Present</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">❌</span>
-                        <span data-i18n="simplePresent3.introduction.whatIs">How to Form Negative Sentences</span>
-                    </h3>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.introduction.definitionTitle">Basic Negative Structure:</div>
-                        <p data-i18n="simplePresent3.introduction.definition">In English, we use the word "not" to form negative sentences in the simple present tense. The structure depends on the type of verb used in the sentence.</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.introduction.typesTitle">Types of Negative Sentences:</div>
-                        <ul>
-                            <li data-i18n="simplePresent3.introduction.type1">Negative with "To Be"</li>
-                            <li data-i18n="simplePresent3.introduction.type2">Negative with "To Have"</li>
-                            <li data-i18n="simplePresent3.introduction.type3">Negative with Other Verbs</li>
-                        </ul>
-                    </div>
+<div class="EH-language-selector-wrapper">
+    <select id="language-selector" class="EH-language-selector">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية</option>
+    </select>
+    <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+</div>
+<div class="EH-site-header">
+    <a href="index.html" class="EH-site-logo-link" title="Main Page">
+        <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+    </a>
+    <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+</div>
+<div class="EH-conjugation-container">
+    <header class="EH-conjugation-header">
+        <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+            <div class="EH-conjugation-title-line" data-i18n="simplePresent3.title.line1">Simple Present Tense: III:</div>
+            <div class="EH-conjugation-title-line" data-i18n="simplePresent3.title.line2">Negative, Passive & Idioms</div>
+            <div class="EH-conjugation-subtitle" data-i18n="simplePresent3.title.line3">negative sentences, passive voice, and common idioms in the simple present tense</div>
+            <div class="EH-conjugation-subtitle" data-i18n="simplePresent3.title.line4">lesson: 3/3</div>
+        </div>
+    </header>
+    <div class="EH-conjugation-content">
+        <!-- Section 1: Negative Forms -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="simplePresent3.negative.title">I. 1. Negative Forms in Simple Present</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">🚫</span>
+                    <span data-i18n="simplePresent3.negative.heading">Basic negative structure & types</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.negative.ruleTitle">📘 Formula (general):</div>
+                    <p data-i18n="simplePresent3.negative.ruleDesc">For most verbs: <strong>[Subject] + do/does + not + base verb</strong>. For "to be": add "not" after the verb. For "to have": use do/does + not + have.</p>
                 </div>
             </div>
-            
-            <!-- Negative with To Be Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent3.toBeNegative.title">Negative with "To Be"</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="simplePresent3.toBeNegative.conjugation">Negative Formation with "To Be"</span>
-                    </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.toBeNegative.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="simplePresent3.toBeNegative.rule">With the verb "to be," we simply add "not" after the verb to form negative sentences.</p>
-                        <p data-i18n="simplePresent3.toBeNegative.formula">Formula: [Subject] + [To Be] + "not" + [Rest of Sentence]</p>
-                    </div>
-                    
-                    <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="simplePresent3.toBeNegative.positive">Positive</th>
-                                <th data-i18n="simplePresent3.toBeNegative.negative">Negative</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="simplePresent3.toBeNegative.positiveI">I am a student.</td>
-                                <td data-i18n="simplePresent3.toBeNegative.negativeI">I am not a student.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="simplePresent3.toBeNegative.positiveYou">You are my friend.</td>
-                                <td data-i18n="simplePresent3.toBeNegative.negativeYou">You are not my friend.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="simplePresent3.toBeNegative.positiveHe">He is a teacher.</td>
-                                <td data-i18n="simplePresent3.toBeNegative.negativeHe">He is not a teacher.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="simplePresent3.toBeNegative.positiveShe">She is happy.</td>
-                                <td data-i18n="simplePresent3.toBeNegative.negativeShe">She is not happy.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="simplePresent3.toBeNegative.positiveWe">We are here.</td>
-                                <td data-i18n="simplePresent3.toBeNegative.negativeWe">We are not here.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="simplePresent3.toBeNegative.positiveThey">They are students.</td>
-                                <td data-i18n="simplePresent3.toBeNegative.negativeThey">They are not students.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.toBeNegative.contractionsTitle">Contractions:</div>
-                        <p data-i18n="simplePresent3.toBeNegative.contractionsRule">In spoken English and informal writing, we often use contractions (short forms) of "to be + not".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.toBeNegative.contractionExample1">I'm not a student.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.toBeNegative.contractionExample2">You aren't my friend. (or You're not my friend)</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.toBeNegative.contractionExample3">He isn't a teacher. (or He's not a teacher)</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.toBeNegative.contractionExample4">She isn't happy. (or She's not happy)</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.toBeNegative.contractionExample5">We aren't here. (or We're not here)</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.toBeNegative.contractionExample6">They aren't students. (or They're not students)</div>
-                        </div>
-                    </div>
+            <!-- Negative with to be -->
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">📘</span>
+                    <span data-i18n="simplePresent3.negative.toBeTitle">Negative with "to be"</span>
+                </h3>
+                <table class="EH-conjugation-table">
+                    <thead><tr><th data-i18n="simplePresent3.negative.subject">Subject</th><th data-i18n="simplePresent3.negative.positive">Positive</th><th data-i18n="simplePresent3.negative.negative">Negative</th></tr></thead>
+                    <tbody>
+                        <tr><td data-i18n="simplePresent3.negative.row1_sub">I</td><td data-i18n="simplePresent3.negative.row1_pos">I am a student.</td><td data-i18n="simplePresent3.negative.row1_neg">I am not a student.</td></tr>
+                        <tr><td data-i18n="simplePresent3.negative.row2_sub">You</td><td data-i18n="simplePresent3.negative.row2_pos">You are my friend.</td><td data-i18n="simplePresent3.negative.row2_neg">You are not my friend.</td></tr>
+                        <tr><td data-i18n="simplePresent3.negative.row3_sub">He</td><td data-i18n="simplePresent3.negative.row3_pos">He is a teacher.</td><td data-i18n="simplePresent3.negative.row3_neg">He is not a teacher.</td></tr>
+                        <tr><td data-i18n="simplePresent3.negative.row4_sub">She</td><td data-i18n="simplePresent3.negative.row4_pos">She is happy.</td><td data-i18n="simplePresent3.negative.row4_neg">She is not happy.</td></tr>
+                        <tr><td data-i18n="simplePresent3.negative.row5_sub">We</td><td data-i18n="simplePresent3.negative.row5_pos">We are here.</td><td data-i18n="simplePresent3.negative.row5_neg">We are not here.</td></tr>
+                        <tr><td data-i18n="simplePresent3.negative.row6_sub">They</td><td data-i18n="simplePresent3.negative.row6_pos">They are students.</td><td data-i18n="simplePresent3.negative.row6_neg">They are not students.</td></tr>
+                    </tbody>
+                </table>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="simplePresent3.negative.contractionsBe">🗣️ Contractions: I'm not, you aren't / you're not, he isn't / he's not, she isn't, we aren't, they aren't.</div>
                 </div>
             </div>
-            
-            <!-- Negative with To Have Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent3.toHaveNegative.title">Negative with "To Have"</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="simplePresent3.toHaveNegative.conjugation">Negative Formation with "To Have"</span>
-                    </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.toHaveNegative.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="simplePresent3.toHaveNegative.rule">With the verb "to have," we use "do not" (don't) or "does not" (doesn't) to form negative sentences.</p>
-                        <p data-i18n="simplePresent3.toHaveNegative.formula">Formula: [Subject] + [Do/Does] + "not" + "have" + [Rest of Sentence]</p>
-                    </div>
-                    
-                    <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="simplePresent3.toHaveNegative.positive">Positive</th>
-                                <th data-i18n="simplePresent3.toHaveNegative.negative">Negative</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="simplePresent3.toHaveNegative.positiveI">I have a car.</td>
-                                <td data-i18n="simplePresent3.toHaveNegative.negativeI">I do not have a car.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="simplePresent3.toHaveNegative.positiveYou">You have a book.</td>
-                                <td data-i18n="simplePresent3.toHaveNegative.negativeYou">You do not have a book.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="simplePresent3.toHaveNegative.positiveHe">He has a cat.</td>
-                                <td data-i18n="simplePresent3.toHaveNegative.negativeHe">He does not have a cat.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="simplePresent3.toHaveNegative.positiveShe">She has a dog.</td>
-                                <td data-i18n="simplePresent3.toHaveNegative.negativeShe">She does not have a dog.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="simplePresent3.toHaveNegative.positiveWe">We have time.</td>
-                                <td data-i18n="simplePresent3.toHaveNegative.negativeWe">We do not have time.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="simplePresent3.toHaveNegative.positiveThey">They have money.</td>
-                                <td data-i18n="simplePresent3.toHaveNegative.negativeThey">They do not have money.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.toHaveNegative.contractionsTitle">Contractions:</div>
-                        <p data-i18n="simplePresent3.toHaveNegative.contractionsRule">In spoken English and informal writing, we often use contractions (short forms).</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.toHaveNegative.contractionExample1">I don't have a car.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.toHaveNegative.contractionExample2">You don't have a book.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.toHaveNegative.contractionExample3">He doesn't have a cat.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.toHaveNegative.contractionExample4">She doesn't have a dog.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.toHaveNegative.contractionExample5">We don't have time.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.toHaveNegative.contractionExample6">They don't have money.</div>
-                        </div>
-                    </div>
+            <!-- Negative with to have -->
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">📘</span>
+                    <span data-i18n="simplePresent3.negative.toHaveTitle">Negative with "to have" (main verb)</span>
+                </h3>
+                <table class="EH-conjugation-table">
+                    <thead><tr><th data-i18n="simplePresent3.negative.subject">Subject</th><th data-i18n="simplePresent3.negative.positive">Positive</th><th data-i18n="simplePresent3.negative.negative">Negative</th></tr></thead>
+                    <tbody>
+                        <tr><td>I</td><td data-i18n="simplePresent3.negative.row1_pos_have">I have a car.</td><td data-i18n="simplePresent3.negative.row1_neg_have">I do not have a car.</td></tr>
+                        <tr><td>You</td><td data-i18n="simplePresent3.negative.row2_pos_have">You have a book.</td><td data-i18n="simplePresent3.negative.row2_neg_have">You do not have a book.</td></tr>
+                        <tr><td>He</td><td data-i18n="simplePresent3.negative.row3_pos_have">He has a cat.</td><td data-i18n="simplePresent3.negative.row3_neg_have">He does not have a cat.</td></tr>
+                        <tr><td>She</td><td data-i18n="simplePresent3.negative.row4_pos_have">She has a dog.</td><td data-i18n="simplePresent3.negative.row4_neg_have">She does not have a dog.</td></tr>
+                        <tr><td>We</td><td data-i18n="simplePresent3.negative.row5_pos_have">We have time.</td><td data-i18n="simplePresent3.negative.row5_neg_have">We do not have time.</td></tr>
+                        <tr><td>They</td><td data-i18n="simplePresent3.negative.row6_pos_have">They have money.</td><td data-i18n="simplePresent3.negative.row6_neg_have">They do not have money.</td></tr>
+                    </tbody>
+                </table>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="simplePresent3.negative.contractionsHave">Contractions: I don't have, you don't have, he doesn't have, she doesn't have, we don't have, they don't have.</div>
                 </div>
             </div>
-            
-            <!-- Negative with Other Verbs Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent3.otherVerbsNegative.title">Negative with Other Verbs</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📝</span>
-                        <span data-i18n="simplePresent3.otherVerbsNegative.conjugation">Negative Formation with Regular and Irregular Verbs</span>
-                    </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.otherVerbsNegative.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="simplePresent3.otherVerbsNegative.rule">For all other verbs (not "to be" or "to have"), we use "do not" (don't) or "does not" (doesn't) to form negative sentences.</p>
-                        <p data-i18n="simplePresent3.otherVerbsNegative.formula">Formula: [Subject] + [Do/Does] + "not" + [Base Form of Verb] + [Rest of Sentence]</p>
-                        <p data-i18n="simplePresent3.otherVerbsNegative.doDoesRule">Use "do not" for I, you, we, they. Use "does not" for he, she, it.</p>
-                    </div>
-                    
-                    <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="simplePresent3.otherVerbsNegative.positive">Positive</th>
-                                <th data-i18n="simplePresent3.otherVerbsNegative.negative">Negative</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="simplePresent3.otherVerbsNegative.positiveI">I work every day.</td>
-                                <td data-i18n="simplePresent3.otherVerbsNegative.negativeI">I do not work every day.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="simplePresent3.otherVerbsNegative.positiveYou">You like coffee.</td>
-                                <td data-i18n="simplePresent3.otherVerbsNegative.negativeYou">You do not like coffee.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="simplePresent3.otherVerbsNegative.positiveHe">He plays soccer.</td>
-                                <td data-i18n="simplePresent3.otherVerbsNegative.negativeHe">He does not play soccer.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="simplePresent3.otherVerbsNegative.positiveShe">She studies English.</td>
-                                <td data-i18n="simplePresent3.otherVerbsNegative.negativeShe">She does not study English.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="simplePresent3.otherVerbsNegative.positiveWe">We live in Paris.</td>
-                                <td data-i18n="simplePresent3.otherVerbsNegative.negativeWe">We do not live in Paris.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="simplePresent3.otherVerbsNegative.positiveThey">They speak French.</td>
-                                <td data-i18n="simplePresent3.otherVerbsNegative.negativeThey">They do not speak French.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.otherVerbsNegative.contractionsTitle">Contractions:</div>
-                        <p data-i18n="simplePresent3.otherVerbsNegative.contractionsRule">In spoken English and informal writing, we often use contractions (short forms).</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.otherVerbsNegative.contractionExample1">I don't work every day.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.otherVerbsNegative.contractionExample2">You don't like coffee.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.otherVerbsNegative.contractionExample3">He doesn't play soccer.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.otherVerbsNegative.contractionExample4">She doesn't study English.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.otherVerbsNegative.contractionExample5">We don't live in Paris.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.otherVerbsNegative.contractionExample6">They don't speak French.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.otherVerbsNegative.irregularTitle">Negative with Irregular Verbs:</div>
-                        <p data-i18n="simplePresent3.otherVerbsNegative.irregularRule">Even with irregular verbs, we still use "do not" or "does not" to form negatives.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.otherVerbsNegative.irregularExample1">I don't go to the gym. (go → goes for he/she/it)</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.otherVerbsNegative.irregularExample2">She doesn't do her homework. (do → does for he/she/it)</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.otherVerbsNegative.irregularExample3">They don't have classes today. (have → has for he/she/it)</div>
-                        </div>
-                    </div>
+            <!-- Negative with other verbs -->
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">📘</span>
+                    <span data-i18n="simplePresent3.negative.otherTitle">Negative with other verbs (including irregular)</span>
+                </h3>
+                <table class="EH-conjugation-table">
+                    <thead><tr><th data-i18n="simplePresent3.negative.subject">Subject</th><th data-i18n="simplePresent3.negative.positive">Positive</th><th data-i18n="simplePresent3.negative.negative">Negative</th></tr></thead>
+                    <tbody>
+                        <tr><td>I</td><td data-i18n="simplePresent3.negative.row1_pos_other">I work every day.</td><td data-i18n="simplePresent3.negative.row1_neg_other">I do not work every day.</td></tr>
+                        <tr><td>You</td><td data-i18n="simplePresent3.negative.row2_pos_other">You like coffee.</td><td data-i18n="simplePresent3.negative.row2_neg_other">You do not like coffee.</td></tr>
+                        <tr><td>He</td><td data-i18n="simplePresent3.negative.row3_pos_other">He plays soccer.</td><td data-i18n="simplePresent3.negative.row3_neg_other">He does not play soccer.</td></tr>
+                        <tr><td>She</td><td data-i18n="simplePresent3.negative.row4_pos_other">She studies English.</td><td data-i18n="simplePresent3.negative.row4_neg_other">She does not study English.</td></tr>
+                        <tr><td>We</td><td data-i18n="simplePresent3.negative.row5_pos_other">We live in Paris.</td><td data-i18n="simplePresent3.negative.row5_neg_other">We do not live in Paris.</td></tr>
+                        <tr><td>They</td><td data-i18n="simplePresent3.negative.row6_pos_other">They speak French.</td><td data-i18n="simplePresent3.negative.row6_neg_other">They do not speak French.</td></tr>
+                    </tbody>
+                </table>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="simplePresent3.negative.irregEx">I don't go to the gym. / She doesn't do her homework. / They don't have classes today.</div>
                 </div>
             </div>
-            
-            <!-- Passive Voice Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent3.passive.title">Passive Voice in Simple Present</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔄</span>
-                        <span data-i18n="simplePresent3.passive.whatIs">What is Passive Voice?</span>
-                    </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.passive.definitionTitle">Definition:</div>
-                        <p data-i18n="simplePresent3.passive.definition">In passive voice, the subject receives the action rather than performing it. We use passive voice when the doer of the action is unknown, unimportant, or obvious from context.</p>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.passive.structureTitle">Structure of Passive Voice:</div>
-                        <p data-i18n="simplePresent3.passive.structureRule">Formula: [Subject] + [am/is/are] + [Past Participle] + [by + agent (optional)]</p>
-                        <p data-i18n="simplePresent3.passive.structureExample">Example: "The book is read by students."</p>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.passive.formationTitle">Forming Passive Voice:</div>
-                        <p data-i18n="simplePresent3.passive.formationRule">To form passive voice in simple present tense, use the appropriate form of "to be" (am, is, are) followed by the past participle of the main verb.</p>
-                    </div>
-                    
-                    <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="simplePresent3.passive.active">Active Voice</th>
-                                <th data-i18n="simplePresent3.passive.passive">Passive Voice</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-i18n="simplePresent3.passive.activeExample1">I write a letter.</td>
-                                <td data-i18n="simplePresent3.passive.passiveExample1">A letter is written by me.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simplePresent3.passive.activeExample2">You clean the room.</td>
-                                <td data-i18n="simplePresent3.passive.passiveExample2">The room is cleaned by you.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simplePresent3.passive.activeExample3">He fixes the car.</td>
-                                <td data-i18n="simplePresent3.passive.passiveExample3">The car is fixed by him.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simplePresent3.passive.activeExample4">She teaches the students.</td>
-                                <td data-i18n="simplePresent3.passive.passiveExample4">The students are taught by her.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simplePresent3.passive.activeExample5">We build houses.</td>
-                                <td data-i18n="simplePresent3.passive.passiveExample5">Houses are built by us.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simplePresent3.passive.activeExample6">They sell fruits.</td>
-                                <td data-i18n="simplePresent3.passive.passiveExample6">Fruits are sold by them.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.passive.negativeTitle">Negative Passive Voice:</div>
-                        <p data-i18n="simplePresent3.passive.negativeRule">To form negative passive voice, add "not" after the form of "to be".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.passive.negativeExample1">The book is not read by students.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.passive.negativeExample2">The car is not fixed by him.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.passive.negativeExample3">The students are not taught by her.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.passive.questionTitle">Question Form in Passive Voice:</div>
-                        <p data-i18n="simplePresent3.passive.questionRule">To form questions in passive voice, invert the subject and the form of "to be".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.passive.questionExample1">Is the book read by students?</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.passive.questionExample2">Is the car fixed by him?</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.passive.questionExample3">Are the students taught by her?</div>
-                        </div>
-                    </div>
+        </div>
+        <!-- Section 2: Passive Voice -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="simplePresent3.passive.title">I. 2. Passive Voice in Simple Present</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">🔄</span>
+                    <span data-i18n="simplePresent3.passive.heading">Structure: am/is/are + past participle</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.passive.ruleTitle">📘 Formula:</div>
+                    <p data-i18n="simplePresent3.passive.ruleDesc">Subject + am/is/are + past participle (+ by + agent). The focus is on the action receiver.</p>
+                </div>
+                <table class="EH-conjugation-table">
+                    <thead><tr><th data-i18n="simplePresent3.passive.active">Active Voice</th><th data-i18n="simplePresent3.passive.passive">Passive Voice</th></tr></thead>
+                    <tbody>
+                        <tr><td data-i18n="simplePresent3.passive.row1_active">I write a letter.</td><td data-i18n="simplePresent3.passive.row1_passive">A letter is written by me.</td></tr>
+                        <tr><td data-i18n="simplePresent3.passive.row2_active">She teaches the students.</td><td data-i18n="simplePresent3.passive.row2_passive">The students are taught by her.</td></tr>
+                        <tr><td data-i18n="simplePresent3.passive.row3_active">They build houses.</td><td data-i18n="simplePresent3.passive.row3_passive">Houses are built by them.</td></tr>
+                    </tbody>
+                </table>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.passive.negativeTitle">❌ Negative Passive:</div>
+                    <p data-i18n="simplePresent3.passive.negativeDesc">Add "not" after am/is/are: <em>The book is not read by students.</em> / <em>The car is not fixed by him.</em></p>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.passive.questionTitle">❓ Question Form:</div>
+                    <p data-i18n="simplePresent3.passive.questionDesc">Invert subject and am/is/are: <em>Is the book read by students?</em> / <em>Are the houses built by them?</em></p>
+                </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="simplePresent3.passive.ex1">English is spoken in many countries.</div>
+                    <div class="EH-conjugation-example" data-i18n="simplePresent3.passive.ex2">The windows are not cleaned every day.</div>
                 </div>
             </div>
-            
-            <!-- Idioms Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent3.idioms.title">Common Idioms in Simple Present</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">💬</span>
-                        <span data-i18n="simplePresent3.idioms.whatAre">What Are Idioms?</span>
-                    </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.idioms.definitionTitle">Definition:</div>
-                        <p data-i18n="simplePresent3.idioms.definition">Idioms are expressions whose meanings cannot be understood from the literal definitions of the words that make them up. They often use the simple present tense to express general truths or habitual actions.</p>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.idioms.commonIdiomsTitle">Common Idioms in Simple Present:</div>
-                        <table class="EH-conjugation-table">
-                            <thead>
-                                <tr>
-                                    <th data-i18n="simplePresent3.idioms.idiom">Idiom</th>
-                                    <th data-i18n="simplePresent3.idioms.meaning">Meaning</th>
-                                    <th data-i18n="simplePresent3.idioms.example">Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td data-i18n="simplePresent3.idioms.breakALeg">Break a leg</td>
-                                    <td data-i18n="simplePresent3.idioms.breakALegMeaning">Good luck</td>
-                                    <td data-i18n="simplePresent3.idioms.breakALegExample">"Break a leg on your performance tonight!"</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="simplePresent3.idioms.hitTheBooks">Hit the books</td>
-                                    <td data-i18n="simplePresent3.idioms.hitTheBooksMeaning">Study hard</td>
-                                    <td data-i18n="simplePresent3.idioms.hitTheBooksExample">"I need to hit the books for my exam tomorrow."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="simplePresent3.idioms.rainingCatsAndDogs">Raining cats and dogs</td>
-                                    <td data-i18n="simplePresent3.idioms.rainingCatsAndDogsMeaning">Raining very heavily</td>
-                                    <td data-i18n="simplePresent3.idioms.rainingCatsAndDogsExample">"Take an umbrella; it's raining cats and dogs outside."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="simplePresent3.idioms.onceInABlueMoon">Once in a blue moon</td>
-                                    <td data-i18n="simplePresent3.idioms.onceInABlueMoonMeaning">Very rarely</td>
-                                    <td data-i18n="simplePresent3.idioms.onceInABlueMoonExample">"I only see my old school friends once in a blue moon."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="simplePresent3.idioms.biteTheBullet">Bite the bullet</td>
-                                    <td data-i18n="simplePresent3.idioms.biteTheBulletMeaning">Endure a painful experience</td>
-                                    <td data-i18n="simplePresent3.idioms.biteTheBulletExample">"I need to bite the bullet and tell my boss about the mistake."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="simplePresent3.idioms.pieceOfCake">Piece of cake</td>
-                                    <td data-i18n="simplePresent3.idioms.pieceOfCakeMeaning">Very easy</td>
-                                    <td data-i18n="simplePresent3.idioms.pieceOfCakeExample">"The test was a piece of cake; I finished in 20 minutes."</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePresent3.idioms.usageTitle">Using Idioms in Sentences:</div>
-                        <p data-i18n="simplePresent3.idioms.usageRule">Idioms are typically used in simple present tense to express general truths, habits, or common situations.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.idioms.usageExample1">"When it rains, it pours." (When one bad thing happens, many bad things happen)</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.idioms.usageExample2">"The early bird catches the worm." (People who act early get advantages)</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePresent3.idioms.usageExample3">"Actions speak louder than words." (What you do is more important than what you say)</div>
-                        </div>
-                    </div>
+        </div>
+        <!-- Section 3: Common Idioms -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="simplePresent3.idioms.title">I. 3. Common Idioms in Simple Present</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">💡</span>
+                    <span data-i18n="simplePresent3.idioms.heading">Idiomatic expressions with simple present</span>
+                </h3>
+                <table class="EH-conjugation-table">
+                    <thead><tr><th data-i18n="simplePresent3.idioms.idiom">Idiom</th><th data-i18n="simplePresent3.idioms.meaning">Meaning</th><th data-i18n="simplePresent3.idioms.example">Example</th></tr></thead>
+                    <tbody>
+                        <tr><td data-i18n="simplePresent3.idioms.idiom1">break a leg</td><td data-i18n="simplePresent3.idioms.meaning1">good luck</td><td data-i18n="simplePresent3.idioms.example1">"Break a leg on your performance tonight!"</td></tr>
+                        <tr><td data-i18n="simplePresent3.idioms.idiom2">hit the books</td><td data-i18n="simplePresent3.idioms.meaning2">study hard</td><td data-i18n="simplePresent3.idioms.example2">I need to hit the books for my exam.</td></tr>
+                        <tr><td data-i18n="simplePresent3.idioms.idiom3">raining cats and dogs</td><td data-i18n="simplePresent3.idioms.meaning3">raining very heavily</td><td data-i18n="simplePresent3.idioms.example3">Take an umbrella; it's raining cats and dogs.</td></tr>
+                        <tr><td data-i18n="simplePresent3.idioms.idiom4">once in a blue moon</td><td data-i18n="simplePresent3.idioms.meaning4">very rarely</td><td data-i18n="simplePresent3.idioms.example4">I see my old friends once in a blue moon.</td></tr>
+                        <tr><td data-i18n="simplePresent3.idioms.idiom5">bite the bullet</td><td data-i18n="simplePresent3.idioms.meaning5">endure a painful necessity</td><td data-i18n="simplePresent3.idioms.example5">I need to bite the bullet and tell the truth.</td></tr>
+                        <tr><td data-i18n="simplePresent3.idioms.idiom6">piece of cake</td><td data-i18n="simplePresent3.idioms.meaning6">very easy</td><td data-i18n="simplePresent3.idioms.example6">The test was a piece of cake.</td></tr>
+                    </tbody>
+                </table>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="simplePresent3.idioms.sentenceEx">When it rains, it pours. / The early bird catches the worm.</div>
                 </div>
             </div>
-            
-            <!-- Exercises Section -->
-            <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePresent3.exercises.title">Practice Exercises</h2>
-                
-                <!-- Type 1: Multiple Choice Exercises -->
-                <h3 style="color: #6a1b9a; margin-bottom: 20px;">Multiple Choice</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 1 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">1</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q1">Choose the correct negative form:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q1Sentence">She ______ a doctor.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="simplePresent3.exercises.q1a">is not</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="simplePresent3.exercises.q1b">does not</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="simplePresent3.exercises.q1c">not is</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 2 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">2</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q2">Choose the correct negative form:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q2Sentence">They ______ coffee.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="simplePresent3.exercises.q2a">doesn't like</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="simplePresent3.exercises.q2b">don't like</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="simplePresent3.exercises.q2c">not like</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 3 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">3</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q3">Choose the correct passive form:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q3Sentence">The book ______ by students.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="simplePresent3.exercises.q3a">is read</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="simplePresent3.exercises.q3b">reads</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="simplePresent3.exercises.q3c">is reading</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 4 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">4</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q4">Choose the correct idiom meaning:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q4Sentence">"Break a leg" means:</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="simplePresent3.exercises.q4a">Get injured</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="simplePresent3.exercises.q4b">Good luck</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="simplePresent3.exercises.q4c">Run fast</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 5 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">5</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q5">Choose the correct negative passive form:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q5Sentence">The car ______ by him.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="simplePresent3.exercises.q5a">is not fixed</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="simplePresent3.exercises.q5b">doesn't fix</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="simplePresent3.exercises.q5c">not fixes</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 6 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">6</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q6">Choose the correct idiom meaning:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q6Sentence">"Piece of cake" means:</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-a" name="EH-exercise-type1-possibilities3-q6" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q6-a" data-i18n="simplePresent3.exercises.q6a">Very easy</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-b" name="EH-exercise-type1-possibilities3-q6" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q6-b" data-i18n="simplePresent3.exercises.q6b">Delicious food</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-c" name="EH-exercise-type1-possibilities3-q6" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q6-c" data-i18n="simplePresent3.exercises.q6c">Small portion</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q6-status"></div>
-                    </div>
+        </div>
+        <!-- Exercises Section -->
+        <div class="EH-conjugation-section EH-exercise-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="simplePresent3.exercises.title">Practice: Negative, Passive & Idioms</h2>
+            <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+            <div class="EH-exercise-container" id="mc-exercises"></div>
+            <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+            <div class="EH-exercise-container" id="fill-exercises"></div>
+            <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+            <div class="EH-exercise-container" id="order-exercises"></div>
+            <div class="EH-exercise-type1-possibilities3-answers-control">
+                <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
+                    <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
+                    <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                    <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                 </div>
-                
-                <!-- Type 2: Fill in the Blank Exercises -->
-                <h3 style="color: #6a1b9a; margin: 40px 0 20px 0;">Fill in the Blank</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 7 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">7</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q7">Complete the negative sentence:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q7Sentence">I ______ (not/like) coffee.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q1-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 8 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">8</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q8">Complete the passive sentence:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q8Sentence">English ______ (speak) in many countries.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q2-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 9 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">9</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q9">Complete the negative passive sentence:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q9Sentence">The house ______ (not/clean) every day.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q3-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Type 3: Sentence Ordering Exercises -->
-                <h3 style="color: #6a1b9a; margin: 40px 0 20px 0;">Sentence Ordering</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 10 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">10</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q10">Arrange the words to form a correct negative sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q1-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word1" data-original-index="1">He</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word3" data-original-index="3">not</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word5" data-original-index="5">.</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word4" data-original-index="4">French</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word2" data-original-index="2">does</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word6" data-original-index="6">speak</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 11 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">11</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q11">Arrange the words to form a correct passive sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q2-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word1" data-original-index="1">The</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word3" data-original-index="3">by</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word5" data-original-index="5">.</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word4" data-original-index="4">students</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word2" data-original-index="2">book</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word7" data-original-index="7">is</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word6" data-original-index="6">read</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 12 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">12</div>
-                        <p class="EH-exercise-text" data-i18n="simplePresent3.exercises.q12">Arrange the words to form a sentence with an idiom:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q3-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word1" data-original-index="1">This</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word3" data-original-index="3">a</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word5" data-original-index="5">cake</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word4" data-original-index="4">of</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word2" data-original-index="2">is</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word6" data-original-index="6">piece</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word7" data-original-index="7">.</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Answer Check and Score System -->
-                <div class="EH-exercise-type1-possibilities3-answers-control">
-                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers">Check All Answers</button>
-                    <div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
-                        <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
-                        <div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback">Check your answers to see how you did!</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Navigation Buttons -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='conjugation.html'">
-                    ← <span data-i18n="common.backToConjugation">Back to Verb Conjugation</span>
-                </button>
-                <!-- <button class="EH-conjugation-nav-button" onclick="window.location.href='EH-conj-past-simple-p1.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson</span> →
-                </button> -->
             </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
-    <script src="scripts/translations/i18n_en.js"></script>
-    <script src="scripts/translations/i18n_fr.js"></script>
-    <script src="scripts/translations/i18n_ar.js"></script>
-    <script src="scripts/common-i18n.js"></script>
-    <script src="scripts/exercise.js"></script>
-    
-    <script>
-        // Correct answers for Type 1 exercises
-        const correctAnswersType1 = {
-            'EH-exercise-type1-possibilities3-q1': 'a', // She is not a doctor.
-            'EH-exercise-type1-possibilities3-q2': 'b', // They don't like coffee.
-            'EH-exercise-type1-possibilities3-q3': 'a', // The book is read by students.
-            'EH-exercise-type1-possibilities3-q4': 'b', // Break a leg means good luck.
-            'EH-exercise-type1-possibilities3-q5': 'a', // The car is not fixed by him.
-            'EH-exercise-type1-possibilities3-q6': 'a'  // Piece of cake means very easy.
-        };
-        
-        // Correct answers for Type 2 exercises
-        const correctAnswersType2 = {
-            'EH-exercise-type2-fillblank-q1': 'do not like',     // I do not like coffee.
-            'EH-exercise-type2-fillblank-q2': 'is spoken',       // English is spoken in many countries.
-            'EH-exercise-type2-fillblank-q3': 'is not cleaned'   // The house is not cleaned every day.
-        };
-        
-        // Correct answers for Type 3 exercises
-        const correctAnswersType3 = {
-            'EH-exercise-type3-sentenceorder-q1': 'He does not speak French .',
-            'EH-exercise-type3-sentenceorder-q2': 'The book is read by students .',
-            'EH-exercise-type3-sentenceorder-q3': 'This is a piece of cake .'
-        };
-        
-        // Combined function to check all exercise types
-        function checkAllExercises() {
-            let totalScore = 0;
-            let totalQuestions = 0;
-            
-            // Check Type 1 exercises
-            const type1Score = ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            totalScore += type1Score;
-            totalQuestions += Object.keys(correctAnswersType1).length;
-            
-            // Check Type 2 exercises
-            const type2Score = ExerciseType2FillBlankCheckAnswers(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            totalScore += type2Score;
-            totalQuestions += Object.keys(correctAnswersType2).length;
-            
-            // Check Type 3 exercises
-            const type3Score = ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            totalScore += type3Score;
-            totalQuestions += Object.keys(correctAnswersType3).length;
-            
-            // Update combined score display
-            const scoreValue = document.getElementById('EH-exercise-type1-possibilities3-score-value');
-            const scoreFeedback = document.getElementById('EH-exercise-type1-possibilities3-score-feedback');
-            
-            if (scoreValue) scoreValue.textContent = `${totalScore}/${totalQuestions}`;
-            
-            if (scoreFeedback) {
-                if (totalScore === totalQuestions) {
-                    scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
-                } else if (totalScore >= totalQuestions * 0.7) {
-                    scoreFeedback.textContent = 'Good job! You did well on this exercise.';
-                } else if (totalScore >= totalQuestions * 0.5) {
-                    scoreFeedback.textContent = 'Not bad, but you might want to review the material again.';
-                } else {
-                    scoreFeedback.textContent = 'You might want to review the material and try again.';
+</div>
+<script>
+    window.I18N = {
+        en: {
+            common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+            footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+            simplePresent3: {
+                title: { line1: "Simple Present Tense: III:", line2: "Negative, Passive & Idioms", line3: "negative sentences, passive voice, and common idioms in the simple present tense", line4: "lesson: 3/3" },
+                negative: {
+                    title: "I. 1. Negative Forms in Simple Present", heading: "Basic negative structure & types", ruleTitle: "📘 Formula (general):", ruleDesc: "For most verbs: [Subject] + do/does + not + base verb. For 'to be': add 'not' after the verb. For 'to have': use do/does + not + have.",
+                    toBeTitle: "Negative with 'to be'", toHaveTitle: "Negative with 'to have' (main verb)", otherTitle: "Negative with other verbs (including irregular)",
+                    subject: "Subject", positive: "Positive", negative: "Negative", contractionsBe: "🗣️ Contractions: I'm not, you aren't / you're not, he isn't / he's not, she isn't, we aren't, they aren't.",
+                    row1_sub: "I", row1_pos: "I am a student.", row1_neg: "I am not a student.",
+                    row2_sub: "You", row2_pos: "You are my friend.", row2_neg: "You are not my friend.",
+                    row3_sub: "He", row3_pos: "He is a teacher.", row3_neg: "He is not a teacher.",
+                    row4_sub: "She", row4_pos: "She is happy.", row4_neg: "She is not happy.",
+                    row5_sub: "We", row5_pos: "We are here.", row5_neg: "We are not here.",
+                    row6_sub: "They", row6_pos: "They are students.", row6_neg: "They are not students.",
+                    row1_pos_have: "I have a car.", row1_neg_have: "I do not have a car.",
+                    row2_pos_have: "You have a book.", row2_neg_have: "You do not have a book.",
+                    row3_pos_have: "He has a cat.", row3_neg_have: "He does not have a cat.",
+                    row4_pos_have: "She has a dog.", row4_neg_have: "She does not have a dog.",
+                    row5_pos_have: "We have time.", row5_neg_have: "We do not have time.",
+                    row6_pos_have: "They have money.", row6_neg_have: "They do not have money.",
+                    contractionsHave: "Contractions: I don't have, you don't have, he doesn't have, she doesn't have, we don't have, they don't have.",
+                    row1_pos_other: "I work every day.", row1_neg_other: "I do not work every day.",
+                    row2_pos_other: "You like coffee.", row2_neg_other: "You do not like coffee.",
+                    row3_pos_other: "He plays soccer.", row3_neg_other: "He does not play soccer.",
+                    row4_pos_other: "She studies English.", row4_neg_other: "She does not study English.",
+                    row5_pos_other: "We live in Paris.", row5_neg_other: "We do not live in Paris.",
+                    row6_pos_other: "They speak French.", row6_neg_other: "They do not speak French.",
+                    irregEx: "I don't go to the gym. / She doesn't do her homework. / They don't have classes today."
+                },
+                passive: {
+                    title: "I. 2. Passive Voice in Simple Present", heading: "Structure: am/is/are + past participle", ruleTitle: "📘 Formula:", ruleDesc: "Subject + am/is/are + past participle (+ by + agent). The focus is on the action receiver.",
+                    active: "Active Voice", passive: "Passive Voice", negativeTitle: "❌ Negative Passive:", negativeDesc: "Add 'not' after am/is/are: The book is not read by students. / The car is not fixed by him.",
+                    questionTitle: "❓ Question Form:", questionDesc: "Invert subject and am/is/are: Is the book read by students? / Are the houses built by them?",
+                    row1_active: "I write a letter.", row1_passive: "A letter is written by me.",
+                    row2_active: "She teaches the students.", row2_passive: "The students are taught by her.",
+                    row3_active: "They build houses.", row3_passive: "Houses are built by them.",
+                    ex1: "English is spoken in many countries.", ex2: "The windows are not cleaned every day."
+                },
+                idioms: {
+                    title: "I. 3. Common Idioms in Simple Present", heading: "Idiomatic expressions with simple present",
+                    idiom: "Idiom", meaning: "Meaning", example: "Example",
+                    idiom1: "break a leg", meaning1: "good luck", example1: "\"Break a leg on your performance tonight!\"",
+                    idiom2: "hit the books", meaning2: "study hard", example2: "I need to hit the books for my exam.",
+                    idiom3: "raining cats and dogs", meaning3: "raining very heavily", example3: "Take an umbrella; it's raining cats and dogs.",
+                    idiom4: "once in a blue moon", meaning4: "very rarely", example4: "I see my old friends once in a blue moon.",
+                    idiom5: "bite the bullet", meaning5: "endure a painful necessity", example5: "I need to bite the bullet and tell the truth.",
+                    idiom6: "piece of cake", meaning6: "very easy", example6: "The test was a piece of cake.",
+                    sentenceEx: "When it rains, it pours. / The early bird catches the worm."
+                },
+                exercises: {
+                    title: "Practice: Negative, Passive & Idioms",
+                    q1: "Choose the correct negative form: She ______ a doctor.",
+                    q1a: "is not", q1b: "does not", q1c: "not is",
+                    q2: "Choose the correct negative form: They ______ coffee.",
+                    q2a: "doesn't like", q2b: "don't like", q2c: "not like",
+                    q3: "Choose the correct passive form: The book ______ by students.",
+                    q3a: "is read", q3b: "reads", q3c: "is reading",
+                    q4: "What does 'break a leg' mean?",
+                    q4a: "Get injured", q4b: "Good luck", q4c: "Run fast",
+                    q5: "Choose the correct negative passive form: The car ______ by him.",
+                    q5a: "is not fixed", q5b: "doesn't fix", q5c: "not fixes",
+                    q6: "What does 'piece of cake' mean?",
+                    q6a: "Very easy", q6b: "Delicious food", q6c: "Small portion",
+                    q7: "Complete the negative sentence: I ______ coffee. (not/like)",
+                    q8: "Complete the passive sentence: English ______ in many countries. (speak)",
+                    q9: "Complete the negative passive sentence: The house ______ every day. (not/clean)",
+                    q10: "Arrange: (He, does, not, speak, French, .)",
+                    q11: "Arrange: (The, book, is, read, by, students, .)",
+                    q12: "Arrange: (This, is, a, piece, of, cake, .)"
                 }
             }
-            
-            return totalScore;
-        }
-        
-        // Initialize when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set up answer checking for all exercise types
-            ExerciseType1Possibilities3Init(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            ExerciseType2FillBlankInit(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            ExerciseType3SentenceOrderInit(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            
-            // Replace the default check button with our combined function
-            const checkButton = document.getElementById('EH-exercise-type1-possibilities3-check-answers');
-            if (checkButton) {
-                checkButton.addEventListener('click', checkAllExercises);
+        },
+        fr: {
+            common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
+            footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+            simplePresent3: {
+                title: { line1: "Présent simple : III", line2: "Négation, voix passive et expressions", line3: "phrases négatives, voix passive et expressions courantes au présent simple", line4: "leçon : 3/3" },
+                negative: {
+                    title: "I. 1. Formes négatives au présent simple", heading: "Structure négative de base", ruleTitle: "📘 Formule générale :", ruleDesc: "Pour la plupart des verbes : [Sujet] + do/does + not + base verbale. Pour 'to be' : ajoutez 'not' après le verbe. Pour 'to have' : utilisez do/does + not + have.",
+                    toBeTitle: "Négation avec 'to be'", toHaveTitle: "Négation avec 'to have' (verbe principal)", otherTitle: "Négation avec d'autres verbes (y compris irréguliers)",
+                    subject: "Sujet", positive: "Positif", negative: "Négatif", contractionsBe: "🗣️ Contractions : I'm not, you aren't / you're not, he isn't, she isn't, we aren't, they aren't.",
+                    row1_sub: "Je", row1_pos: "Je suis étudiant.", row1_neg: "Je ne suis pas étudiant.",
+                    row2_sub: "Tu/Vous", row2_pos: "Tu es mon ami.", row2_neg: "Tu n'es pas mon ami.",
+                    row3_sub: "Il", row3_pos: "Il est professeur.", row3_neg: "Il n'est pas professeur.",
+                    row4_sub: "Elle", row4_pos: "Elle est heureuse.", row4_neg: "Elle n'est pas heureuse.",
+                    row5_sub: "Nous", row5_pos: "Nous sommes ici.", row5_neg: "Nous ne sommes pas ici.",
+                    row6_sub: "Ils/Elles", row6_pos: "Ils sont étudiants.", row6_neg: "Ils ne sont pas étudiants.",
+                    row1_pos_have: "J'ai une voiture.", row1_neg_have: "Je n'ai pas de voiture.",
+                    row2_pos_have: "Tu as un livre.", row2_neg_have: "Tu n'as pas de livre.",
+                    row3_pos_have: "Il a un chat.", row3_neg_have: "Il n'a pas de chat.",
+                    row4_pos_have: "Elle a un chien.", row4_neg_have: "Elle n'a pas de chien.",
+                    row5_pos_have: "Nous avons du temps.", row5_neg_have: "Nous n'avons pas de temps.",
+                    row6_pos_have: "Ils ont de l'argent.", row6_neg_have: "Ils n'ont pas d'argent.",
+                    contractionsHave: "Contractions : I don't have, you don't have, he doesn't have, etc.",
+                    row1_pos_other: "Je travaille tous les jours.", row1_neg_other: "Je ne travaille pas tous les jours.",
+                    row2_pos_other: "Tu aimes le café.", row2_neg_other: "Tu n'aimes pas le café.",
+                    row3_pos_other: "Il joue au foot.", row3_neg_other: "Il ne joue pas au foot.",
+                    row4_pos_other: "Elle étudie l'anglais.", row4_neg_other: "Elle n'étudie pas l'anglais.",
+                    row5_pos_other: "Nous vivons à Paris.", row5_neg_other: "Nous ne vivons pas à Paris.",
+                    row6_pos_other: "Ils parlent français.", row6_neg_other: "Ils ne parlent pas français.",
+                    irregEx: "Je ne vais pas à la salle de sport. / Elle ne fait pas ses devoirs."
+                },
+                passive: {
+                    title: "I. 2. Voix passive au présent simple", heading: "Structure : am/is/are + participe passé", ruleTitle: "📘 Formule :", ruleDesc: "Sujet + am/is/are + participe passé (+ par + agent). L'accent est sur le receveur de l'action.",
+                    active: "Voix active", passive: "Voix passive", negativeTitle: "❌ Passive négative :", negativeDesc: "Ajoutez 'not' après am/is/are : Le livre n'est pas lu par les étudiants.",
+                    questionTitle: "❓ Forme interrogative :", questionDesc: "Inversez le sujet et am/is/are : Le livre est-il lu par les étudiants ?",
+                    row1_active: "J'écris une lettre.", row1_passive: "Une lettre est écrite par moi.",
+                    row2_active: "Elle enseigne aux étudiants.", row2_passive: "Les étudiants sont enseignés par elle.",
+                    row3_active: "Ils construisent des maisons.", row3_passive: "Des maisons sont construites par eux.",
+                    ex1: "L'anglais est parlé dans de nombreux pays.", ex2: "Les fenêtres ne sont pas nettoyées chaque jour."
+                },
+                idioms: {
+                    title: "I. 3. Expressions idiomatiques courantes", heading: "Expressions au présent simple",
+                    idiom: "Expression", meaning: "Signification", example: "Exemple",
+                    idiom1: "se casser une jambe (ironique)", meaning1: "bonne chance", example1: "« Casse-toi une jambe pour ton spectacle ! »",
+                    idiom2: "se mettre au travail", meaning2: "étudier sérieusement", example2: "Je dois me mettre au travail pour mon examen.",
+                    idiom3: "pleuvoir des cordes", meaning3: "pleuvoir très fort", example3: "Prends un parapluie, il pleut des cordes.",
+                    idiom4: "tous les trente-six du mois", meaning4: "très rarement", example4: "Je vois mes vieux amis tous les trente-six du mois.",
+                    idiom5: "prendre son courage à deux mains", meaning5: "affronter une situation difficile", example5: "Je dois prendre mon courage à deux mains et dire la vérité.",
+                    idiom6: "du gâteau", meaning6: "très facile", example6: "Le test, c'était du gâteau.",
+                    sentenceEx: "Quand il pleut, il pleut des cordes. / C'est le premier arrivé qui est servi."
+                }
             }
+        },
+        ar: {
+            common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+            footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+            simplePresent3: {
+                title: { line1: "المضارع البسيط: 3", line2: "النفي، المبني للمجهول، والتعابير", line3: "الجمل المنفية، المبني للمجهول، والتعابير الشائعة في زمن المضارع البسيط", line4: "الدرس: 3/3" },
+                negative: {
+                    title: "I. 1. صيغ النفي في المضارع البسيط", heading: "البنية الأساسية للنفي", ruleTitle: "📘 الصيغة العامة:", ruleDesc: "معظم الأفعال: [الفاعل] + do/does + not + الفعل المجرد. مع 'to be': أضف 'not' بعد الفعل. مع 'to have': استخدم do/does + not + have.",
+                    toBeTitle: "النفي مع 'to be'", toHaveTitle: "النفي مع 'to have' (كفعل رئيسي)", otherTitle: "النفي مع أفعال أخرى (بما فيها الشاذة)",
+                    subject: "الفاعل", positive: "مثبت", negative: "منفي", contractionsBe: "🗣️ الاختصارات: I'm not, you aren't, he isn't, إلخ.",
+                    row1_sub: "أنا", row1_pos: "أنا طالب.", row1_neg: "أنا لست طالبًا.",
+                    row2_sub: "أنت", row2_pos: "أنت صديقي.", row2_neg: "أنت لست صديقي.",
+                    row3_sub: "هو", row3_pos: "هو معلم.", row3_neg: "هو ليس معلماً.",
+                    row4_sub: "هي", row4_pos: "هي سعيدة.", row4_neg: "هي ليست سعيدة.",
+                    row5_sub: "نحن", row5_pos: "نحن هنا.", row5_neg: "نحن لسنا هنا.",
+                    row6_sub: "هم", row6_pos: "هم طلاب.", row6_neg: "هم ليسوا طلاباً.",
+                    row1_pos_have: "لدي سيارة.", row1_neg_have: "ليس لدي سيارة.",
+                    row2_pos_have: "لديك كتاب.", row2_neg_have: "ليس لديك كتاب.",
+                    row3_pos_have: "لديه قطة.", row3_neg_have: "ليس لديه قطة.",
+                    row4_pos_have: "لديها كلب.", row4_neg_have: "ليس لديها كلب.",
+                    row5_pos_have: "لدينا وقت.", row5_neg_have: "ليس لدينا وقت.",
+                    row6_pos_have: "لديهم مال.", row6_neg_have: "ليس لديهم مال.",
+                    contractionsHave: "الاختصارات: I don't have, he doesn't have, إلخ.",
+                    row1_pos_other: "أعمل كل يوم.", row1_neg_other: "لا أعمل كل يوم.",
+                    row2_pos_other: "تحب القهوة.", row2_neg_other: "لا تحب القهوة.",
+                    row3_pos_other: "يلعب كرة القدم.", row3_neg_other: "لا يلعب كرة القدم.",
+                    row4_pos_other: "تدرس الإنجليزية.", row4_neg_other: "لا تدرس الإنجليزية.",
+                    row5_pos_other: "نعيش في باريس.", row5_neg_other: "لا نعيش في باريس.",
+                    row6_pos_other: "يتحدثون الفرنسية.", row6_neg_other: "لا يتحدثون الفرنسية.",
+                    irregEx: "لا أذهب إلى النادي الرياضي. / هي لا تؤدي واجبها."
+                },
+                passive: {
+                    title: "I. 2. المبني للمجهول في المضارع البسيط", heading: "البنية: am/is/are + التصريف الثالث", ruleTitle: "📘 الصيغة:", ruleDesc: "الفاعل + am/is/are + التصريف الثالث (+ بواسطة + الفاعل الأصلي). التركيز على متلقي الفعل.",
+                    active: "المبني للمعلوم", passive: "المبني للمجهول", negativeTitle: "❌ المبني للمجهول المنفي:", negativeDesc: "أضف 'not' بعد am/is/are: الكتاب لا يُقرأ من قبل الطلاب.",
+                    questionTitle: "❓ صيغة السؤال:", questionDesc: "اعكس الفاعل و am/is/are: هل يُقرأ الكتاب من قبل الطلاب؟",
+                    row1_active: "أكتب رسالة.", row1_passive: "تكتب رسالة بواسطتي.",
+                    row2_active: "هي تدرس الطلاب.", row2_passive: "الطلاب يدرسون بواسطتها.",
+                    row3_active: "هم يبنون منازل.", row3_passive: "تُبنى المنازل بواسطتهم.",
+                    ex1: "تُتحدث الإنجليزية في العديد من البلدان.", ex2: "لا تُنظف النوافذ كل يوم."
+                },
+                idioms: {
+                    title: "I. 3. التعابير الشائعة في المضارع البسيط", heading: "تعبيرات اصطلاحية مع المضارع البسيط",
+                    idiom: "التعبير", meaning: "المعنى", example: "مثال",
+                    idiom1: "كسر ساق (مجازي)", meaning1: "حظ سعيد", example1: "«اكسر ساقك في أدائك الليلة!»",
+                    idiom2: "اضرب الكتب", meaning2: "ادرس بجد", example2: "أحتاج أن أضرب الكتب لامتحاني.",
+                    idiom3: "تمطر قططًا وكلابًا", meaning3: "تمطر بغزارة", example3: "خذ مظلة، إنها تمطر قططًا وكلابًا.",
+                    idiom4: "مرة في القمر الأزرق", meaning4: "نادرًا جدًا", example4: "أرى أصدقائي القدامى مرة في القمر الأزرق.",
+                    idiom5: "عض الرصاصة", meaning5: "تحمل موقفًا صعبًا", example5: "يجب أن أعض الرصاصة وأقول الحقيقة.",
+                    idiom6: "قطعة كعكة", meaning6: "سهل جدًا", example6: "كان الاختبار قطعة كعكة.",
+                    sentenceEx: "عندما تمطر، تمطر بغزارة. / الطائر المبكر يصطاد الدودة."
+                }
+            }
+        }
+    };
+</script>
+<script src="scripts/translation-refraction.js"></script>
+<script src="scripts/exercise-conjugation.js"></script>
+<script src="scripts/special-effects.js"></script>
+<script src="scripts/common-sections.js"></script>
+<script>
+    // Multiple choice exercises
+    const correctAnswersType1 = buildMultipleChoiceExercise({
+        containerId: 'mc-exercises',
+        prefix: 'EH-exercise-type1-possibilities3',
+        questions: [
+            { questionTextKey: 'simplePresent3.exercises.q1', options: [{ value: 'a', labelKey: 'simplePresent3.exercises.q1a' }, { value: 'b', labelKey: 'simplePresent3.exercises.q1b' }, { value: 'c', labelKey: 'simplePresent3.exercises.q1c' }], correctAnswer: 'a' },
+            { questionTextKey: 'simplePresent3.exercises.q2', options: [{ value: 'a', labelKey: 'simplePresent3.exercises.q2a' }, { value: 'b', labelKey: 'simplePresent3.exercises.q2b' }, { value: 'c', labelKey: 'simplePresent3.exercises.q2c' }], correctAnswer: 'b' },
+            { questionTextKey: 'simplePresent3.exercises.q3', options: [{ value: 'a', labelKey: 'simplePresent3.exercises.q3a' }, { value: 'b', labelKey: 'simplePresent3.exercises.q3b' }, { value: 'c', labelKey: 'simplePresent3.exercises.q3c' }], correctAnswer: 'a' },
+            { questionTextKey: 'simplePresent3.exercises.q4', options: [{ value: 'a', labelKey: 'simplePresent3.exercises.q4a' }, { value: 'b', labelKey: 'simplePresent3.exercises.q4b' }, { value: 'c', labelKey: 'simplePresent3.exercises.q4c' }], correctAnswer: 'b' },
+            { questionTextKey: 'simplePresent3.exercises.q5', options: [{ value: 'a', labelKey: 'simplePresent3.exercises.q5a' }, { value: 'b', labelKey: 'simplePresent3.exercises.q5b' }, { value: 'c', labelKey: 'simplePresent3.exercises.q5c' }], correctAnswer: 'a' },
+            { questionTextKey: 'simplePresent3.exercises.q6', options: [{ value: 'a', labelKey: 'simplePresent3.exercises.q6a' }, { value: 'b', labelKey: 'simplePresent3.exercises.q6b' }, { value: 'c', labelKey: 'simplePresent3.exercises.q6c' }], correctAnswer: 'a' }
+        ]
+    });
+</script>
+<script>
+    // Fill-in-the-blank exercises
+    correctAnswersType2 = buildFillInTheBlankExercise({
+        containerId: 'fill-exercises',
+        prefix: 'fill',
+        questions: [
+            { questionTextKey: 'simplePresent3.exercises.q7', answers: ['do not like', 'don\'t like'] },
+            { questionTextKey: 'simplePresent3.exercises.q8', answers: ['is spoken'] },
+            { questionTextKey: 'simplePresent3.exercises.q9', answers: ['is not cleaned', 'isn\'t cleaned'] }
+        ]
+    });
+</script>
+<script>
+    // Sentence ordering exercises
+    const correctAnswersType3 = buildSentenceOrderingExercise({
+        containerId: 'order-exercises',
+        prefix: 'order',
+        questions: [
+            { questionTextKey: 'simplePresent3.exercises.q10', words: ['He', 'does', 'not', 'speak', 'French', '.'], correctSentence: 'He does not speak French .' },
+            { questionTextKey: 'simplePresent3.exercises.q11', words: ['The', 'book', 'is', 'read', 'by', 'students', '.'], correctSentence: 'The book is read by students .' },
+            { questionTextKey: 'simplePresent3.exercises.q12', words: ['This', 'is', 'a', 'piece', 'of', 'cake', '.'], correctSentence: 'This is a piece of cake .' }
+        ]
+    });
+</script>
+<script>
+    function checkAllExercises() {
+        let totalScore = 0;
+        let totalQuestions = 0;
+
+        totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+        totalQuestions += 6;
+        totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+        totalQuestions += 3;
+        totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+        totalQuestions += 3;
+
+        const scoreEl = document.getElementById('score-value');
+        const fbEl = document.getElementById('score-feedback');
+        if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+        if (fbEl) {
+            if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered simple present negatives, passive & idioms!';
+            else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+            else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit negative structures and passive voice.';
+            else fbEl.textContent = 'Review the lesson and try again.';
+        }
+        document.getElementById('score-display').style.display = 'block';
+        if (typeof EHScoreEffects !== 'undefined' && EHScoreEffects.show) EHScoreEffects.show(totalScore, totalQuestions);
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof ExerciseType2FillBlankInit === 'function') ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+        if (typeof ExerciseType3SentenceOrderInit === 'function') ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+        const checkBtn = document.getElementById('check-all');
+        if (checkBtn) checkBtn.addEventListener('click', checkAllExercises);
+    });
+    // i18n rendering
+    (function() {
+        function applyHtmlI18n() {
+            const lang = document.getElementById('language-selector').value;
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                if (translation) el.textContent = translation;
+            });
+        }
+        window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+        document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+    })();
+    // Theme toggle (simple if not handled by external)
+    if (document.getElementById('theme-toggle')) {
+        const toggleBtn = document.getElementById('theme-toggle');
+        const setTheme = (dark) => {
+            if (dark) document.documentElement.setAttribute('data-theme', 'dark');
+            else document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('EH-theme', dark ? 'dark' : 'light');
+        };
+        const saved = localStorage.getItem('EH-theme');
+        if (saved === 'dark') setTheme(true);
+        toggleBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            setTheme(!isDark);
         });
-    </script>
+    }
+</script>
 </body>
 </html>

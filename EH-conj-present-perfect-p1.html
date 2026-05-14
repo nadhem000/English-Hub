@@ -3,1181 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Present Perfect Tense: Generality - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>Present Perfect I: Introduction & Basic Uses - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #6495ed, #5dade2, #48c9b0);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-        
-        .EH-conjugation-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-        }
-        
-        .EH-conjugation-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .EH-conjugation-title {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .EH-conjugation-subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-        }
-        
-        .EH-conjugation-content {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
-        
-        .EH-conjugation-section {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .EH-conjugation-section-title {
-            font-size: 1.8rem;
-            color: #6495ed;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #48c9b0;
-        }
-        
-        .EH-conjugation-subsection {
-            margin-bottom: 25px;
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .EH-conjugation-subsection-title {
-            font-size: 1.4rem;
-            color: #5dade2;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .EH-conjugation-subsection-icon {
-            font-size: 1.6rem;
-            margin-right: 10px;
-        }
-        
-        .EH-conjugation-rule {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f5f5f5;
-            border-radius: 10px;
-            border-left: 4px solid #48c9b0;
-        }
-        
-        .EH-conjugation-rule-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #6495ed;
-        }
-        
-        .EH-conjugation-examples {
-            background: #e8f8f5;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-        }
-        
-        .EH-conjugation-example {
-            margin-bottom: 8px;
-            padding-left: 10px;
-            border-left: 2px solid #48c9b0;
-        }
-        
-        .EH-conjugation-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        
-        .EH-conjugation-table th,
-        .EH-conjugation-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        
-        .EH-conjugation-table th {
-            background-color: #5dade2;
-            color: white;
-        }
-        
-        .EH-conjugation-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        .EH-conjugation-table tr:hover {
-            background-color: #e8f8f5;
-        }
-        
-        /* Exercise Styles */
-        .EH-exercise-section {
-            margin-top: 40px;
-        }
-        
-        .EH-exercise-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .EH-exercise-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .EH-exercise-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .EH-exercise-number {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, #5dade2, #48c9b0);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-text {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .EH-exercise-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option input {
-            cursor: pointer;
-        }
-        
-        .EH-exercise-option label {
-            cursor: pointer;
-        }
-        
-        /* Type 1: Multiple Choice Styles */
-        .EH-exercise-type1-possibilities3-answers-control {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
-            gap: 20px;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn {
-            background: #5dade2;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn:hover {
-            background: #6495ed;
-        }
-
-        .EH-exercise-type1-possibilities3-score-display {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            display: none;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-title {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #6495ed;
-        }
-
-        .EH-exercise-type1-possibilities3-score-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #5dade2;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-feedback {
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        .EH-exercise-type1-possibilities3-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.correct {
-            background-color: #d4edda;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.incorrect {
-            background-color: #f8d7da;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 2: Fill in the Blank Styles */
-        .EH-exercise-type2-fillblank-input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .EH-exercise-type2-fillblank-input:focus {
-            border-color: #5dade2;
-            outline: none;
-        }
-        
-        .EH-exercise-type2-fillblank-input-correct {
-            border-color: #28a745;
-            background-color: #d4edda;
-        }
-        
-        .EH-exercise-type2-fillblank-input-incorrect {
-            border-color: #dc3545;
-            background-color: #f8d7da;
-        }
-        
-        .EH-exercise-type2-fillblank-input-empty {
-            border-color: #ffc107;
-        }
-        
-        .EH-exercise-type2-fillblank-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type2-fillblank-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type2-fillblank-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 3: Sentence Ordering Styles */
-        .EH-exercise-type3-sentenceorder-word-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 15px;
-            border: 2px dashed #e0e0e0;
-            border-radius: 10px;
-            min-height: 60px;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word {
-            background: #e8f8f5;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid #48c9b0;
-            cursor: move;
-            user-select: none;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word:hover {
-            background: #d1f2eb;
-        }
-        
-        .EH-exercise-type3-sentenceorder-dragging {
-            opacity: 0.5;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct {
-            border-color: #28a745;
-            background-color: #f8fff8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect {
-            border-color: #dc3545;
-            background-color: #fff8f8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Navigation Buttons */
-        .EH-conjugation-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-        
-        .EH-conjugation-nav-button {
-            background: #5dade2;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .EH-conjugation-nav-button:hover {
-            background: #6495ed;
-        }
-        
-        .EH-conjugation-nav-button.back {
-            background: #48c9b0;
-        }
-        
-        .EH-conjugation-nav-button.back:hover {
-            background: #5dade2;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .EH-conjugation-title {
-                font-size: 2rem;
-            }
-            
-            .EH-exercise-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .EH-conjugation-navigation {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .EH-conjugation-nav-button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .EH-conjugation-content {
-                padding: 20px;
-            }
+        :root {
+            --bg-gradient: linear-gradient(135deg, #ffe0b5, #ffd59e, #ffb347, #f39c12);
+            --content-bg: #fffaf2;
+            --card-bg: #ffffff;
+            --subsection-bg: #fff4e6;
+            --rule-bg: #ffefdb;
+            --example-bg: #ffe8cc;
+            --table-stripe: #fff2e0;
+            --title-color: #a45d2e;
+            --text-color: #4a2c1a;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #e67e22;
+            --primary-hover: #d35400;
+            --primary-light: #f39c12;
+            --accent: #f0a04b;
+            --exercise-number-gradient: linear-gradient(135deg, #e67e22, #d35400);
+            --rule-border: #e67e22;
+            --example-border: #e67e22;
+            --nav-btn-bg: #e67e22;
+            --nav-btn-hover: #d35400;
+            --nav-back-btn-bg: #f39c12;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #e67e22;
+            --refract-divider-color: #f5c78e;
+            --refract-translation-bg: #ffefe0;
+            --refract-translation-border: #e67e22;
+            --refract-english-color: #4a2c1a;
+            --section-divider: #f7d9b0;
+            --card-border: #f7d9b0;
+            --input-border: #f3cf9c;
+            --dashed-border: #f3cf9c;
+            --table-border: #f0c89a;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #fcebd6;
+            --neutral-color: #7a5a42;
+            --neutral-border: #e6c394;
+            --empty-input-border: #e6bc82;
+            --empty-input-bg: #fef7ed;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #e67e22;
+            --language-selector-color: #4a2c1a;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #5e2e12, #784218, #8c5120, #a85f28);
+            --content-bg: #2e1e12;
+            --card-bg: #3e281a;
+            --subsection-bg: #3e281a;
+            --rule-bg: #2e1e12;
+            --example-bg: #2e1e12;
+            --table-stripe: #332013;
+            --title-color: #ffc48a;
+            --text-color: #f5e2ce;
+            --header-text: #f5e2ce;
+            --header-text-light: #d4bb9e;
+            --primary: #f39c12;
+            --primary-hover: #e67e22;
+            --primary-light: #f39c12;
+            --accent: #f39c12;
+            --rule-border: #f39c12;
+            --example-border: #f39c12;
+            --exercise-number-gradient: linear-gradient(135deg, #f39c12, #e67e22);
+            --nav-btn-bg: #f39c12;
+            --nav-btn-hover: #e67e22;
+            --nav-back-btn-bg: #ffb347;
+            --nav-back-btn-color: #2a1508;
+            --nav-back-btn-hover: #f39c12;
+            --refract-divider-color: #d49c60;
+            --refract-translation-bg: #4a301e;
+            --refract-translation-border: #d49c60;
+            --refract-english-color: #f5dec4;
+            --section-divider: #4a301e;
+            --card-border: #4a301e;
+            --input-border: #6a4a2e;
+            --dashed-border: #6a4a2e;
+            --table-border: #5a3a24;
+            --white: #f5dec4;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #4a3028;
+            --neutral-color: #d4b8a8;
+            --neutral-border: #6b3d32;
+            --empty-input-border: #7a5036;
+            --empty-input-bg: #2e1e12;
+            --language-selector-bg: #3e281a;
+            --language-selector-border: #f39c12;
+            --language-selector-color: #f5dec4;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="presentPerfect1.title">Present Perfect Tense: Generality</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="presentPerfect1.subtitle">Learn to talk about past actions with present relevance</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="presentPerfect1.title.line1">Present Perfect I:</div>
+                <div class="EH-conjugation-title-line" data-i18n="presentPerfect1.title.line2">Introduction & Basic Uses</div>
+                <div class="EH-conjugation-subtitle" data-i18n="presentPerfect1.title.line3">Connect past actions to the present, life experiences, and unspecified time.</div>
+                <div class="EH-conjugation-subtitle" data-i18n="presentPerfect1.title.line4">lesson: 1/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Introduction Section -->
+            <!-- Section 1: Introduction -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect1.introduction.title">Introduction to Present Perfect</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect1.intro.title">I. 1. Introduction to the Present Perfect</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📚</span>
-                        <span data-i18n="presentPerfect1.introduction.whatIs">What is the Present Perfect Tense?</span>
+                        <span class="EH-conjugation-subsection-icon">📘</span>
+                        <span data-i18n="presentPerfect1.intro.heading">What is the Present Perfect Tense?</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.introduction.definitionTitle">Definition:</div>
-                        <p data-i18n="presentPerfect1.introduction.definition">The Present Perfect tense connects the past with the present. It is used for actions that happened at an unspecified time in the past, or actions that started in the past and continue to the present.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.intro.definitionTitle">📘 Definition:</div>
+                        <p data-i18n="presentPerfect1.intro.definitionText">The Present Perfect tense connects the past with the present. It is used for actions that happened at an unspecified time in the past, or actions that started in the past and continue to the present.</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.introduction.usesTitle">When to use:</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.intro.whenTitle">💡 When to use:</div>
                         <ul>
-                            <li data-i18n="presentPerfect1.introduction.use1">Actions that happened at an unspecified time in the past</li>
-                            <li data-i18n="presentPerfect1.introduction.use2">Actions that started in the past and continue to the present</li>
-                            <li data-i18n="presentPerfect1.introduction.use3">Life experiences</li>
-                            <li data-i18n="presentPerfect1.introduction.use4">Recent past actions with present results</li>
+                            <li data-i18n="presentPerfect1.intro.when1">Actions that happened at an unspecified time in the past</li>
+                            <li data-i18n="presentPerfect1.intro.when2">Actions that started in the past and continue to the present</li>
+                            <li data-i18n="presentPerfect1.intro.when3">Life experiences</li>
+                            <li data-i18n="presentPerfect1.intro.when4">Recent past actions with present results</li>
                         </ul>
                     </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.introduction.example1">I have finished my homework.</div>
-                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.introduction.example2">She has lived in London for five years.</div>
-                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.introduction.example3">They have visited Paris three times.</div>
-                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.introduction.example4">He has just arrived.</div>
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.intro.ex1">I have finished my homework.</div>
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.intro.ex2">She has lived in London for five years.</div>
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.intro.ex3">They have visited Paris three times.</div>
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.intro.ex4">He has just arrived.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Structure Section -->
+            <!-- Section 2: Basic Structure -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect1.structure.title">Basic Structure</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect1.structure.title">I. 2. Basic Structure: Have/Has + Past Participle</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="presentPerfect1.structure.conjugation">How to Form the Present Perfect</span>
+                        <span class="EH-conjugation-subsection-icon">🔧</span>
+                        <span data-i18n="presentPerfect1.structure.heading">Form: Subject + have/has + past participle</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.structure.ruleTitle">Basic Rule:</div>
-                        <p data-i18n="presentPerfect1.structure.rule">Use "have/has" + past participle of the verb.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.structure.ruleTitle">📘 Basic Rule:</div>
+                        <p data-i18n="presentPerfect1.structure.ruleText">Use "have" with I, you, we, they; use "has" with he, she, it. The main verb is in its past participle form.</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.conjugation">Conjugation</th>
-                                <th data-i18n="common.example">Example (work)</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentPerfect1.structure.subjectCol">Subject</th><th data-i18n="presentPerfect1.structure.conjugationCol">Conjugation</th><th data-i18n="presentPerfect1.structure.exampleCol">Example (work)</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="presentPerfect1.structure.haveWorked">have worked</td>
-                                <td data-i18n="presentPerfect1.structure.exampleI">I have worked here for two years.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="presentPerfect1.structure.haveWorked">have worked</td>
-                                <td data-i18n="presentPerfect1.structure.exampleYou">You have worked hard today.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="presentPerfect1.structure.hasWorked">has worked</td>
-                                <td data-i18n="presentPerfect1.structure.exampleHe">He has worked at this company since 2020.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="presentPerfect1.structure.hasWorked">has worked</td>
-                                <td data-i18n="presentPerfect1.structure.exampleShe">She has worked on this project for months.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.it">It</td>
-                                <td data-i18n="presentPerfect1.structure.hasWorked">has worked</td>
-                                <td data-i18n="presentPerfect1.structure.exampleIt">It has worked well so far.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="presentPerfect1.structure.haveWorked">have worked</td>
-                                <td data-i18n="presentPerfect1.structure.exampleWe">We have worked together before.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="presentPerfect1.structure.haveWorked">have worked</td>
-                                <td data-i18n="presentPerfect1.structure.exampleThey">They have worked in this industry for a long time.</td>
-                            </tr>
+                            <tr><td>I</td><td>have worked</td><td data-i18n="presentPerfect1.structure.exI">I have worked here for two years.</td></tr>
+                            <tr><td>You</td><td>have worked</td><td data-i18n="presentPerfect1.structure.exYou">You have worked hard today.</td></tr>
+                            <tr><td>He</td><td>has worked</td><td data-i18n="presentPerfect1.structure.exHe">He has worked at this company since 2020.</td></tr>
+                            <tr><td>She</td><td>has worked</td><td data-i18n="presentPerfect1.structure.exShe">She has worked on this project for months.</td></tr>
+                            <tr><td>It</td><td>has worked</td><td data-i18n="presentPerfect1.structure.exIt">It has worked well so far.</td></tr>
+                            <tr><td>We</td><td>have worked</td><td data-i18n="presentPerfect1.structure.exWe">We have worked together before.</td></tr>
+                            <tr><td>They</td><td>have worked</td><td data-i18n="presentPerfect1.structure.exThey">They have worked in this industry for a long time.</td></tr>
                         </tbody>
                     </table>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.structure.negativeTitle">Negative Form:</div>
-                        <p data-i18n="presentPerfect1.structure.negativeRule">Add "not" after "have/has".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.structure.negativeExample1">I have not finished my work.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.structure.negativeExample2">She has not visited that museum.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.structure.negativeExample3">They have not seen the new movie.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.structure.negativeTitle">❌ Negative Form:</div>
+                        <p data-i18n="presentPerfect1.structure.negativeText">Add "not" after have/has: have not (haven't), has not (hasn't).</p>
                     </div>
-                    
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.structure.negEx1">I have not finished my work.</div>
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.structure.negEx2">She has not visited that museum.</div>
+                    </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.structure.questionTitle">Question Form:</div>
-                        <p data-i18n="presentPerfect1.structure.questionRule">Invert the subject and "have/has".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.structure.questionExample1">Have you finished your homework?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.structure.questionExample2">Has she visited Paris?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.structure.questionExample3">Have they seen the new movie?</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.structure.questionTitle">❓ Question Form:</div>
+                        <p data-i18n="presentPerfect1.structure.questionText">Invert the subject and have/has.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.structure.qEx1">Have you finished your homework?</div>
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.structure.qEx2">Has she visited Paris?</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- To Be Section -->
+            <!-- Section 3: Verb To Be in Present Perfect -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect1.toBe.title">The Verb "To Be" in Present Perfect</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect1.verbToBe.title">I. 3. The Verb "To Be" in Present Perfect</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="presentPerfect1.toBe.conjugation">Using "To Be" in Present Perfect</span>
+                        <span class="EH-conjugation-subsection-icon">✨</span>
+                        <span data-i18n="presentPerfect1.verbToBe.heading">Have/Has Been: States, experiences & ongoing conditions</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.toBe.ruleTitle">Important Note:</div>
-                        <p data-i18n="presentPerfect1.toBe.rule">The verb "to be" in Present Perfect uses "have/has been". It is used to talk about states or conditions that started in the past and continue to the present, or experiences in life.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.verbToBe.noteTitle">📘 Important Note:</div>
+                        <p data-i18n="presentPerfect1.verbToBe.noteText">The verb "to be" in Present Perfect uses "have/has been". It refers to states, life experiences, or conditions that started in the past and continue to the present.</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.conjugation">Conjugation</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentPerfect1.verbToBe.subjectCol">Subject</th><th data-i18n="presentPerfect1.verbToBe.conjugationCol">Conjugation</th><th data-i18n="presentPerfect1.verbToBe.exampleCol">Example</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="presentPerfect1.toBe.haveBeen">have been</td>
-                                <td data-i18n="presentPerfect1.toBe.exampleI">I have been to London.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="presentPerfect1.toBe.haveBeen">have been</td>
-                                <td data-i18n="presentPerfect1.toBe.exampleYou">You have been very helpful.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="presentPerfect1.toBe.hasBeen">has been</td>
-                                <td data-i18n="presentPerfect1.toBe.exampleHe">He has been sick for three days.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="presentPerfect1.toBe.hasBeen">has been</td>
-                                <td data-i18n="presentPerfect1.toBe.exampleShe">She has been a teacher since 2015.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.it">It</td>
-                                <td data-i18n="presentPerfect1.toBe.hasBeen">has been</td>
-                                <td data-i18n="presentPerfect1.toBe.exampleIt">It has been raining all day.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="presentPerfect1.toBe.haveBeen">have been</td>
-                                <td data-i18n="presentPerfect1.toBe.exampleWe">We have been friends for ten years.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="presentPerfect1.toBe.haveBeen">have been</td>
-                                <td data-i18n="presentPerfect1.toBe.exampleThey">They have been married since last year.</td>
-                            </tr>
+                            <tr><td>I</td><td>have been</td><td data-i18n="presentPerfect1.verbToBe.exI">I have been to London.</td></tr>
+                            <tr><td>You</td><td>have been</td><td data-i18n="presentPerfect1.verbToBe.exYou">You have been very helpful.</td></tr>
+                            <tr><td>He</td><td>has been</td><td data-i18n="presentPerfect1.verbToBe.exHe">He has been sick for three days.</td></tr>
+                            <tr><td>She</td><td>has been</td><td data-i18n="presentPerfect1.verbToBe.exShe">She has been a teacher since 2015.</td></tr>
+                            <tr><td>It</td><td>has been</td><td data-i18n="presentPerfect1.verbToBe.exIt">It has been raining all day.</td></tr>
+                            <tr><td>We</td><td>have been</td><td data-i18n="presentPerfect1.verbToBe.exWe">We have been friends for ten years.</td></tr>
+                            <tr><td>They</td><td>have been</td><td data-i18n="presentPerfect1.verbToBe.exThey">They have been married since last year.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.toBe.negativeTitle">Negative Form:</div>
-                        <p data-i18n="presentPerfect1.toBe.negativeRule">Add "not" after "have/has".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.toBe.negativeExample1">I have not been to Paris.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.toBe.negativeExample2">She has not been feeling well.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.toBe.negativeExample3">They have not been here before.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.toBe.questionTitle">Question Form:</div>
-                        <p data-i18n="presentPerfect1.toBe.questionRule">Invert the subject and "have/has".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.toBe.questionExample1">Have you been to London?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.toBe.questionExample2">Has she been working here long?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.toBe.questionExample3">Have they been waiting long?</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.verbToBe.negEx1">I have not been to Paris.</div>
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.verbToBe.qEx1">Have you been to London?</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- To Have Section -->
+            <!-- Section 4: Verb To Have -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect1.toHave.title">The Verb "To Have" in Present Perfect</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect1.verbToHave.title">I. 4. The Verb "To Have" in Present Perfect</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="presentPerfect1.toHave.conjugation">Using "To Have" in Present Perfect</span>
+                        <span class="EH-conjugation-subsection-icon">📌</span>
+                        <span data-i18n="presentPerfect1.verbToHave.heading">Have/Has Had: possession & experiences</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.toHave.ruleTitle">Important Note:</div>
-                        <p data-i18n="presentPerfect1.toHave.rule">"To have" in Present Perfect uses "have/has had". It is used to talk about possession, experiences, or actions that started in the past and continue to the present.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.verbToHave.noteTitle">📘 Important Note:</div>
+                        <p data-i18n="presentPerfect1.verbToHave.noteText">"To have" in Present Perfect uses "have/has had". Used for possession, experiences, or actions that started in the past and continue.</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.conjugation">Conjugation</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentPerfect1.verbToHave.subjectCol">Subject</th><th data-i18n="presentPerfect1.verbToHave.conjugationCol">Conjugation</th><th data-i18n="presentPerfect1.verbToHave.exampleCol">Example</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="presentPerfect1.toHave.haveHad">have had</td>
-                                <td data-i18n="presentPerfect1.toHave.exampleI">I have had this car for five years.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="presentPerfect1.toHave.haveHad">have had</td>
-                                <td data-i18n="presentPerfect1.toHave.exampleYou">You have had enough time to finish.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="presentPerfect1.toHave.hasHad">has had</td>
-                                <td data-i18n="presentPerfect1.toHave.exampleHe">He has had three cups of coffee today.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="presentPerfect1.toHave.hasHad">has had</td>
-                                <td data-i18n="presentPerfect1.toHave.exampleShe">She has had this job since last year.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.it">It</td>
-                                <td data-i18n="presentPerfect1.toHave.hasHad">has had</td>
-                                <td data-i18n="presentPerfect1.toHave.exampleIt">It has had a big impact on our lives.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="presentPerfect1.toHave.haveHad">have had</td>
-                                <td data-i18n="presentPerfect1.toHave.exampleWe">We have had many opportunities.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="presentPerfect1.toHave.haveHad">have had</td>
-                                <td data-i18n="presentPerfect1.toHave.exampleThey">They have had a lot of problems recently.</td>
-                            </tr>
+                            <tr><td>I</td><td>have had</td><td data-i18n="presentPerfect1.verbToHave.exI">I have had this car for five years.</td></tr>
+                            <tr><td>You</td><td>have had</td><td data-i18n="presentPerfect1.verbToHave.exYou">You have had enough time to finish.</td></tr>
+                            <tr><td>He</td><td>has had</td><td data-i18n="presentPerfect1.verbToHave.exHe">He has had three cups of coffee today.</td></tr>
+                            <tr><td>She</td><td>has had</td><td data-i18n="presentPerfect1.verbToHave.exShe">She has had this job since last year.</td></tr>
+                            <tr><td>It</td><td>has had</td><td data-i18n="presentPerfect1.verbToHave.exIt">It has had a big impact on our lives.</td></tr>
+                            <tr><td>We</td><td>have had</td><td data-i18n="presentPerfect1.verbToHave.exWe">We have had many opportunities.</td></tr>
+                            <tr><td>They</td><td>have had</td><td data-i18n="presentPerfect1.verbToHave.exThey">They have had a lot of problems recently.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.toHave.negativeTitle">Negative Form:</div>
-                        <p data-i18n="presentPerfect1.toHave.negativeRule">Add "not" after "have/has".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.toHave.negativeExample1">I have not had breakfast yet.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.toHave.negativeExample2">She has not had any problems.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.toHave.negativeExample3">They have not had time to finish.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.toHave.questionTitle">Question Form:</div>
-                        <p data-i18n="presentPerfect1.toHave.questionRule">Invert the subject and "have/has".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.toHave.questionExample1">Have you had lunch yet?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.toHave.questionExample2">Has she had any experience with this?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.toHave.questionExample3">Have they had enough time to prepare?</div>
-                        </div>
-                    </div>
                 </div>
             </div>
-            
-            <!-- Irregular Verbs Section -->
+            <!-- Section 5: Common Verbs -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect1.irregularVerbs.title">Common Verbs in Present Perfect</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect1.commonVerbs.title">I. 5. Common Verbs in Present Perfect</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⚠️</span>
-                        <span data-i18n="presentPerfect1.irregularVerbs.conjugation">Verb Conjugations in Present Perfect</span>
+                        <span class="EH-conjugation-subsection-icon">📖</span>
+                        <span data-i18n="presentPerfect1.commonVerbs.heading">Irregular past participles & examples</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.irregularVerbs.ruleTitle">About Verbs in Present Perfect:</div>
-                        <p data-i18n="presentPerfect1.irregularVerbs.rule">Regular verbs form the past participle by adding -ed. Irregular verbs have special past participle forms that must be memorized.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.commonVerbs.descTitle">📘 About Verbs:</div>
+                        <p data-i18n="presentPerfect1.commonVerbs.descText">Regular verbs add -ed. Irregular verbs have special past participle forms that must be memorized.</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.verb">Verb</th>
-                                <th data-i18n="presentPerfect1.irregularVerbs.pastParticiple">Past Participle</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentPerfect1.commonVerbs.verbCol">Verb</th><th data-i18n="presentPerfect1.commonVerbs.participleCol">Past Participle</th><th data-i18n="presentPerfect1.commonVerbs.exampleCol">Example</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="presentPerfect1.irregularVerbs.go">go</td>
-                                <td data-i18n="presentPerfect1.irregularVerbs.gone">gone</td>
-                                <td data-i18n="presentPerfect1.irregularVerbs.goExample">I have gone to the store.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentPerfect1.irregularVerbs.do">do</td>
-                                <td data-i18n="presentPerfect1.irregularVerbs.done">done</td>
-                                <td data-i18n="presentPerfect1.irregularVerbs.doExample">He has done his homework.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentPerfect1.irregularVerbs.see">see</td>
-                                <td data-i18n="presentPerfect1.irregularVerbs.seen">seen</td>
-                                <td data-i18n="presentPerfect1.irregularVerbs.seeExample">She has seen that movie.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentPerfect1.irregularVerbs.eat">eat</td>
-                                <td data-i18n="presentPerfect1.irregularVerbs.eaten">eaten</td>
-                                <td data-i18n="presentPerfect1.irregularVerbs.eatExample">We have eaten lunch.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentPerfect1.irregularVerbs.write">write</td>
-                                <td data-i18n="presentPerfect1.irregularVerbs.written">written</td>
-                                <td data-i18n="presentPerfect1.irregularVerbs.writeExample">They have written a letter.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentPerfect1.irregularVerbs.take">take</td>
-                                <td data-i18n="presentPerfect1.irregularVerbs.taken">taken</td>
-                                <td data-i18n="presentPerfect1.irregularVerbs.takeExample">I have taken the bus to work.</td>
-                            </tr>
+                            <tr><td>go</td><td>gone</td><td data-i18n="presentPerfect1.commonVerbs.exGo">I have gone to the store.</td></tr>
+                            <tr><td>do</td><td>done</td><td data-i18n="presentPerfect1.commonVerbs.exDo">He has done his homework.</td></tr>
+                            <tr><td>see</td><td>seen</td><td data-i18n="presentPerfect1.commonVerbs.exSee">She has seen that movie.</td></tr>
+                            <tr><td>eat</td><td>eaten</td><td data-i18n="presentPerfect1.commonVerbs.exEat">We have eaten lunch.</td></tr>
+                            <tr><td>write</td><td>written</td><td data-i18n="presentPerfect1.commonVerbs.exWrite">They have written a letter.</td></tr>
+                            <tr><td>take</td><td>taken</td><td data-i18n="presentPerfect1.commonVerbs.exTake">I have taken the bus to work.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect1.irregularVerbs.moreExamplesTitle">More Examples:</div>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.irregularVerbs.example1">I have gone to that restaurant many times.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.irregularVerbs.example2">She has done all her chores.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.irregularVerbs.example3">We have seen this show before.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect1.irregularVerbs.example4">He has eaten already.</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.commonVerbs.extra1">I have gone to that restaurant many times.</div>
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.commonVerbs.extra2">She has done all her chores.</div>
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect1.commonVerbs.extra3">We have seen this show before.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Exercises Section -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect1.exercises.title">Practice Exercises</h2>
-                
-                <!-- Type 1: Multiple Choice Exercises -->
-                <h3 style="color: #6495ed; margin-bottom: 20px;">Multiple Choice</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 1 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">1</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q1">Choose the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q1Sentence">I ______ my homework.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="presentPerfect1.exercises.q1a">finish</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="presentPerfect1.exercises.q1b">have finished</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="presentPerfect1.exercises.q1c">finished</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 2 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">2</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q2">Choose the correct form of the verb "to be":</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q2Sentence">She ______ to Paris.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="presentPerfect1.exercises.q2a">has been</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="presentPerfect1.exercises.q2b">is</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="presentPerfect1.exercises.q2c">was</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 3 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">3</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q3">Choose the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q3Sentence">They ______ that movie three times.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="presentPerfect1.exercises.q3a">see</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="presentPerfect1.exercises.q3b">have seen</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="presentPerfect1.exercises.q3c">saw</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 4 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">4</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q4">Choose the correct negative form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q4Sentence">I ______ my breakfast yet.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="presentPerfect1.exercises.q4a">have not eaten</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="presentPerfect1.exercises.q4b">did not eat</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="presentPerfect1.exercises.q4c">not eat</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 5 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">5</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q5">Choose the correct question form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q5Sentence">______ you been to London?</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="presentPerfect1.exercises.q5a">Do</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="presentPerfect1.exercises.q5b">Have</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="presentPerfect1.exercises.q5c">Did</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 6 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">6</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q6">Choose the correct past participle of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q6Sentence">He has ______ his homework.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-a" name="EH-exercise-type1-possibilities3-q6" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q6-a" data-i18n="presentPerfect1.exercises.q6a">do</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-b" name="EH-exercise-type1-possibilities3-q6" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q6-b" data-i18n="presentPerfect1.exercises.q6b">done</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-c" name="EH-exercise-type1-possibilities3-q6" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q6-c" data-i18n="presentPerfect1.exercises.q6c">did</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q6-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Type 2: Fill in the Blank Exercises -->
-                <h3 style="color: #6495ed; margin: 40px 0 20px 0;">Fill in the Blank</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 7 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">7</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q7">Complete the sentence with the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q7Sentence">I ______ (to finish) my work.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q1-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 8 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">8</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q8">Complete the sentence with the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q8Sentence">She ______ (to write) three letters today.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q2-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 9 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">9</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q9">Complete the sentence with the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q9Sentence">They ______ (to live) here for five years.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q3-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Type 3: Sentence Ordering Exercises -->
-                <h3 style="color: #6495ed; margin: 40px 0 20px 0;">Sentence Ordering</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 10 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">10</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q10">Arrange the words to form a correct sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q1-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word1" data-original-index="1">I</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word3" data-original-index="3">finished</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word4" data-original-index="4">my</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word2" data-original-index="2">have</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word5" data-original-index="5">homework</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word6" data-original-index="6">.</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 11 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">11</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q11">Arrange the words to form a correct sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q2-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word1" data-original-index="1">She</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word3" data-original-index="3">not</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word2" data-original-index="2">has</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word4" data-original-index="4">visited</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word5" data-original-index="5">Paris</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word6" data-original-index="6">.</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 12 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">12</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect1.exercises.q12">Arrange the words to form a correct question:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q3-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word1" data-original-index="1">Have</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word3" data-original-index="3">eaten</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word5" data-original-index="5">?</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word4" data-original-index="4">lunch</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word2" data-original-index="2">you</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Answer Check and Score System -->
+                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect1.exercises.title">Practice: Present Perfect Basics</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+                <div class="EH-exercise-container" id="mc-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+                <div class="EH-exercise-container" id="fill-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+                <div class="EH-exercise-container" id="order-exercises"></div>
                 <div class="EH-exercise-type1-possibilities3-answers-control">
-                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers">Check All Answers</button>
-                    <div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
                         <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
-                        <div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback">Check your answers to see how you did!</p>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Navigation Buttons -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='conjugation.html'">
-                    ← <span data-i18n="common.backToConjugation">Back to Verb Conjugation</span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='EH-conj-present-perfect-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson</span> →
-                </button>
             </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
-    <script src="scripts/translations/i18n_en.js"></script>
-    <script src="scripts/translations/i18n_fr.js"></script>
-    <script src="scripts/translations/i18n_ar.js"></script>
-    <script src="scripts/common-i18n.js"></script>
-    <script src="scripts/exercise.js"></script>
-    
     <script>
-        // Correct answers for Type 1 exercises
-        const correctAnswersType1 = {
-            'EH-exercise-type1-possibilities3-q1': 'b', // I have finished my homework.
-            'EH-exercise-type1-possibilities3-q2': 'a', // She has been to Paris.
-            'EH-exercise-type1-possibilities3-q3': 'b', // They have seen that movie three times.
-            'EH-exercise-type1-possibilities3-q4': 'a', // I have not eaten my breakfast yet.
-            'EH-exercise-type1-possibilities3-q5': 'b', // Have you been to London?
-            'EH-exercise-type1-possibilities3-q6': 'b'  // He has done his homework.
+        window.I18N = {
+            en: {
+                common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                presentPerfect1: {
+                    title: { line1: "Present Perfect I:", line2: "Introduction & Basic Uses", line3: "Connect past actions to the present, life experiences, and unspecified time.", line4: "lesson: 1/3" },
+                    intro: { title: "I. 1. Introduction to the Present Perfect", heading: "What is the Present Perfect Tense?", definitionTitle: "📘 Definition:", definitionText: "The Present Perfect tense connects the past with the present. It is used for actions that happened at an unspecified time in the past, or actions that started in the past and continue to the present.", whenTitle: "💡 When to use:", when1: "Actions that happened at an unspecified time in the past", when2: "Actions that started in the past and continue to the present", when3: "Life experiences", when4: "Recent past actions with present results", ex1: "I have finished my homework.", ex2: "She has lived in London for five years.", ex3: "They have visited Paris three times.", ex4: "He has just arrived." },
+                    structure: { title: "I. 2. Basic Structure: Have/Has + Past Participle", heading: "Form: Subject + have/has + past participle", ruleTitle: "📘 Basic Rule:", ruleText: "Use \"have\" with I, you, we, they; use \"has\" with he, she, it. The main verb is in its past participle form.", subjectCol: "Subject", conjugationCol: "Conjugation", exampleCol: "Example", exI: "I have worked here for two years.", exYou: "You have worked hard today.", exHe: "He has worked at this company since 2020.", exShe: "She has worked on this project for months.", exIt: "It has worked well so far.", exWe: "We have worked together before.", exThey: "They have worked in this industry for a long time.", negativeTitle: "❌ Negative Form:", negativeText: "Add \"not\" after have/has: have not (haven't), has not (hasn't).", negEx1: "I have not finished my work.", negEx2: "She has not visited that museum.", questionTitle: "❓ Question Form:", questionText: "Invert the subject and have/has.", qEx1: "Have you finished your homework?", qEx2: "Has she visited Paris?" },
+                    verbToBe: { title: "I. 3. The Verb \"To Be\" in Present Perfect", heading: "Have/Has Been: States, experiences & ongoing conditions", noteTitle: "📘 Important Note:", noteText: "The verb \"to be\" in Present Perfect uses \"have/has been\". It refers to states, life experiences, or conditions that started in the past and continue to the present.", subjectCol: "Subject", conjugationCol: "Conjugation", exampleCol: "Example", exI: "I have been to London.", exYou: "You have been very helpful.", exHe: "He has been sick for three days.", exShe: "She has been a teacher since 2015.", exIt: "It has been raining all day.", exWe: "We have been friends for ten years.", exThey: "They have been married since last year.", negEx1: "I have not been to Paris.", qEx1: "Have you been to London?" },
+                    verbToHave: { title: "I. 4. The Verb \"To Have\" in Present Perfect", heading: "Have/Has Had: possession & experiences", noteTitle: "📘 Important Note:", noteText: "\"To have\" in Present Perfect uses \"have/has had\". Used for possession, experiences, or actions that started in the past and continue.", subjectCol: "Subject", conjugationCol: "Conjugation", exampleCol: "Example", exI: "I have had this car for five years.", exYou: "You have had enough time to finish.", exHe: "He has had three cups of coffee today.", exShe: "She has had this job since last year.", exIt: "It has had a big impact on our lives.", exWe: "We have had many opportunities.", exThey: "They have had a lot of problems recently." },
+                    commonVerbs: { title: "I. 5. Common Verbs in Present Perfect", heading: "Irregular past participles & examples", descTitle: "📘 About Verbs:", descText: "Regular verbs add -ed. Irregular verbs have special past participle forms that must be memorized.", verbCol: "Verb", participleCol: "Past Participle", exampleCol: "Example", exGo: "I have gone to the store.", exDo: "He has done his homework.", exSee: "She has seen that movie.", exEat: "We have eaten lunch.", exWrite: "They have written a letter.", exTake: "I have taken the bus to work.", extra1: "I have gone to that restaurant many times.", extra2: "She has done all her chores.", extra3: "We have seen this show before." },
+                    exercises: { title: "Practice: Present Perfect Basics", q1: "Choose the correct form: I ______ my homework.", q1a: "finish", q1b: "have finished", q1c: "finished", q2: "Choose the correct form of 'to be': She ______ to Paris.", q2a: "has been", q2b: "is", q2c: "was", q3: "Choose the correct form: They ______ that movie three times.", q3a: "see", q3b: "have seen", q3c: "saw", q4: "Choose the correct negative: I ______ my breakfast yet.", q4a: "have not eaten", q4b: "did not eat", q4c: "not eat", q5: "Choose the correct question: ______ you been to London?", q5a: "Do", q5b: "Have", q5c: "Did", q6: "Choose the correct past participle: He has ______ his homework.", q6a: "do", q6b: "done", q6c: "did", q7: "Complete the sentence: I ______ (to finish) my work.", q8: "Complete the sentence: She ______ (to write) three letters today.", q9: "Complete the sentence: They ______ (to live) here for five years.", q10: "Arrange: (I, have, finished, my, homework, .)", q11: "Arrange: (She, has, not, visited, Paris, .)", q12: "Arrange: (Have, you, eaten, lunch, ?)" }
+                }
+            },
+            fr: {
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
+                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+                presentPerfect1: {
+                    title: { line1: "Present Perfect I :", line2: "Introduction et usages de base", line3: "Reliez les actions passées au présent, expériences de vie.", line4: "leçon : 1/3" },
+                    intro: { title: "I. 1. Introduction au Present Perfect", heading: "Qu'est-ce que le Present Perfect ?", definitionTitle: "📘 Définition :", definitionText: "Le Present Perfect relie le passé au présent. Il est utilisé pour des actions à un moment non spécifié dans le passé, ou des actions commencées dans le passé et qui continuent.", whenTitle: "💡 Quand l'utiliser :", when1: "Actions à un moment non spécifié dans le passé", when2: "Actions commencées dans le passé et qui continuent", when3: "Expériences de vie", when4: "Actions récentes avec résultats présents", ex1: "J'ai fini mes devoirs.", ex2: "Elle a vécu à Londres pendant cinq ans.", ex3: "Ils ont visité Paris trois fois.", ex4: "Il vient d'arriver." },
+                    structure: { title: "I. 2. Structure de base : Have/Has + Participe passé", heading: "Forme : Sujet + have/has + participe passé", ruleTitle: "📘 Règle de base :", ruleText: "Utilisez 'have' avec I, you, we, they ; 'has' avec he, she, it.", subjectCol: "Sujet", conjugationCol: "Conjugaison", exampleCol: "Exemple", exI: "J'ai travaillé ici pendant deux ans.", exYou: "Vous avez bien travaillé aujourd'hui.", exHe: "Il a travaillé dans cette entreprise depuis 2020.", exShe: "Elle a travaillé sur ce projet depuis des mois.", exIt: "Cela a bien fonctionné jusqu'à présent.", exWe: "Nous avons déjà travaillé ensemble.", exThey: "Ils ont travaillé dans ce secteur depuis longtemps.", negativeTitle: "❌ Forme négative :", negativeText: "Ajoutez 'not' après have/has.", negEx1: "Je n'ai pas fini mon travail.", negEx2: "Elle n'a pas visité ce musée.", questionTitle: "❓ Forme interrogative :", questionText: "Inversez le sujet et have/has.", qEx1: "As-tu fini tes devoirs ?", qEx2: "A-t-elle visité Paris ?" },
+                    verbToBe: { title: "I. 3. Le verbe 'Être' au Present Perfect", heading: "Have/Has Been : états, expériences", noteTitle: "📘 Remarque importante :", noteText: "Le verbe 'être' au Present Perfect utilise 'have/has been'.", subjectCol: "Sujet", conjugationCol: "Conjugaison", exampleCol: "Exemple", exI: "Je suis allé à Londres.", exYou: "Vous avez été très utile.", exHe: "Il est malade depuis trois jours.", exShe: "Elle est enseignante depuis 2015.", exIt: "Il a plu toute la journée.", exWe: "Nous sommes amis depuis dix ans.", exThey: "Ils sont mariés depuis l'année dernière.", negEx1: "Je ne suis pas allé à Paris.", qEx1: "Êtes-vous allé à Londres ?" },
+                    verbToHave: { title: "I. 4. Le verbe 'Avoir' au Present Perfect", heading: "Have/Has Had : possession & expériences", noteTitle: "📘 Remarque :", noteText: "Le verbe 'avoir' utilise 'have/has had'.", subjectCol: "Sujet", conjugationCol: "Conjugaison", exampleCol: "Exemple", exI: "J'ai cette voiture depuis cinq ans.", exYou: "Vous avez eu assez de temps.", exHe: "Il a bu trois tasses de café aujourd'hui.", exShe: "Elle a ce poste depuis l'année dernière.", exIt: "Cela a eu un grand impact.", exWe: "Nous avons eu beaucoup d'opportunités.", exThey: "Ils ont eu beaucoup de problèmes récemment." },
+                    commonVerbs: { title: "I. 5. Verbes courants au Present Perfect", heading: "Participes passés irréguliers", descTitle: "📘 À propos des verbes :", descText: "Les verbes réguliers ajoutent -ed. Les irréguliers sont à mémoriser.", verbCol: "Verbe", participleCol: "Participe passé", exampleCol: "Exemple", exGo: "Je suis allé au magasin.", exDo: "Il a fait ses devoirs.", exSee: "Elle a vu ce film.", exEat: "Nous avons déjeuné.", exWrite: "Ils ont écrit une lettre.", exTake: "J'ai pris le bus pour aller au travail.", extra1: "Je suis allé souvent dans ce restaurant.", extra2: "Elle a fait toutes ses corvées.", extra3: "Nous avons déjà vu ce spectacle." }
+                }
+            },
+            ar: {
+                common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+                presentPerfect1: {
+                    title: { line1: "المضارع التام: 1", line2: "المقدمة والاستخدامات الأساسية", line3: "ربط الأحداث الماضية بالحاضر، الخبرات الحياتية.", line4: "الدرس: 1/3" },
+                    intro: { title: "I. 1. مقدمة عن المضارع التام", heading: "ما هو زمن المضارع التام؟", definitionTitle: "📘 التعريف:", definitionText: "يربط المضارع التام الماضي بالحاضر. يُستخدم لأحداث وقعت في وقت غير محدد في الماضي، أو أحداث بدأت في الماضي ومستمرة حتى الحاضر.", whenTitle: "💡 متى يُستخدم:", when1: "أحداث في وقت غير محدد بالماضي", when2: "أحداث بدأت بالماضي ومستمرة", when3: "تجارب حياتية", when4: "أحداث ماضية حديثة لها نتائج حالية", ex1: "لقد أنهيت واجبي.", ex2: "لقد عاشت في لندن لخمس سنوات.", ex3: "لقد زاروا باريس ثلاث مرات.", ex4: "لقد وصل للتو." },
+                    structure: { title: "I. 2. البنية الأساسية: have/has + التصريف الثالث", heading: "الصيغة: الفاعل + have/has + التصريف الثالث", ruleTitle: "📘 القاعدة الأساسية:", ruleText: "نستخدم 'have' مع I, you, we, they و 'has' مع he, she, it.", subjectCol: "الفاعل", conjugationCol: "التصريف", exampleCol: "مثال", exI: "لقد عملت هنا لمدة عامين.", exYou: "لقد عملت بجد اليوم.", exHe: "لقد عمل في هذه الشركة منذ 2020.", exShe: "لقد عملت في هذا المشروع لشهور.", exIt: "لقد عمل بشكل جيد حتى الآن.", exWe: "لقد عملنا معًا من قبل.", exThey: "لقد عملوا في هذا المجال لوقت طويل.", negativeTitle: "❌ النفي:", negativeText: "أضف 'not' بعد have/has.", negEx1: "لم أنهِ عملي بعد.", negEx2: "لم تزر ذلك المتحف.", questionTitle: "❓ السؤال:", questionText: "نقلب الفاعل و have/has.", qEx1: "هل أنهيت واجبك؟", qEx2: "هل زارت باريس؟" },
+                    verbToBe: { title: "I. 3. فعل 'يكون' في المضارع التام", heading: "have/has been: الحالات والخبرات", noteTitle: "📘 ملاحظة مهمة:", noteText: "فعل 'يكون' في المضارع التام يأتي 'have/has been'.", subjectCol: "الفاعل", conjugationCol: "التصريف", exampleCol: "مثال", exI: "لقد ذهبت إلى لندن.", exYou: "لقد كنت مفيدًا جدًا.", exHe: "لقد كان مريضًا لثلاثة أيام.", exShe: "لقد كانت معلمة منذ 2015.", exIt: "لقد كانت تمطر طوال اليوم.", exWe: "لقد كنا أصدقاء لعشر سنوات.", exThey: "لقد كانا متزوجين منذ العام الماضي.", negEx1: "لم أذهب إلى باريس.", qEx1: "هل ذهبت إلى لندن؟" },
+                    verbToHave: { title: "I. 4. فعل 'يملك' في المضارع التام", heading: "have/has had: الملكية والخبرات", noteTitle: "📘 ملاحظة:", noteText: "فعل 'يملك' في المضارع التام يأتي 'have/has had'.", subjectCol: "الفاعل", conjugationCol: "التصريف", exampleCol: "مثال", exI: "لقد امتلكت هذه السيارة لخمس سنوات.", exYou: "لقد كان لديك وقت كافٍ.", exHe: "لقد تناول ثلاثة أكواب من القهوة اليوم.", exShe: "لقد شغلت هذا المنصب منذ العام الماضي.", exIt: "لقد كان له تأثير كبير.", exWe: "لقد حصلنا على فرص كثيرة.", exThey: "لقد واجهوا الكثير من المشاكل مؤخرًا." },
+                    commonVerbs: { title: "I. 5. الأفعال الشائعة في المضارع التام", heading: "التصريف الثالث للأفعال الشاذة", descTitle: "📘 عن الأفعال:", descText: "الأفعال المنتظمة تزيد -ed. الشاذة لها تصريف ثالث خاص يحفظ.", verbCol: "الفعل", participleCol: "التصريف الثالث", exampleCol: "مثال", exGo: "لقد ذهبت إلى المتجر.", exDo: "لقد أدى واجبه.", exSee: "لقد رأت ذلك الفيلم.", exEat: "لقد تناولنا الغداء.", exWrite: "لقد كتبوا رسالة.", exTake: "لقد استقللت الحافلة للعمل.", extra1: "لقد ذهبت إلى ذلك المطعم مرات عديدة.", extra2: "لقد أنجزت جميع أعمالها المنزلية.", extra3: "لقد شاهدنا هذا العرض من قبل." }
+                }
+            }
         };
-        
-        // Correct answers for Type 2 exercises
-        const correctAnswersType2 = {
-            'EH-exercise-type2-fillblank-q1': 'have finished',     // I have finished my work.
-            'EH-exercise-type2-fillblank-q2': 'has written',   // She has written three letters today.
-            'EH-exercise-type2-fillblank-q3': 'have lived'      // They have lived here for five years.
-        };
-        
-        // Correct answers for Type 3 exercises
-        const correctAnswersType3 = {
-            'EH-exercise-type3-sentenceorder-q1': 'I have finished my homework .',
-            'EH-exercise-type3-sentenceorder-q2': 'She has not visited Paris .',
-            'EH-exercise-type3-sentenceorder-q3': 'Have you eaten lunch ?'
-        };
-        
-        // Combined function to check all exercise types
+    </script>
+    <script src="scripts/translation-refraction.js"></script>
+    <script src="scripts/exercise-conjugation.js"></script>
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
+    <script>
+        // Multiple Choice
+        const correctAnswersType1 = buildMultipleChoiceExercise({
+            containerId: 'mc-exercises',
+            prefix: 'EH-exercise-type1-possibilities3',
+            questions: [
+                { questionTextKey: 'presentPerfect1.exercises.q1', options: [{ value: 'a', labelKey: 'presentPerfect1.exercises.q1a' }, { value: 'b', labelKey: 'presentPerfect1.exercises.q1b' }, { value: 'c', labelKey: 'presentPerfect1.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'presentPerfect1.exercises.q2', options: [{ value: 'a', labelKey: 'presentPerfect1.exercises.q2a' }, { value: 'b', labelKey: 'presentPerfect1.exercises.q2b' }, { value: 'c', labelKey: 'presentPerfect1.exercises.q2c' }], correctAnswer: 'a' },
+                { questionTextKey: 'presentPerfect1.exercises.q3', options: [{ value: 'a', labelKey: 'presentPerfect1.exercises.q3a' }, { value: 'b', labelKey: 'presentPerfect1.exercises.q3b' }, { value: 'c', labelKey: 'presentPerfect1.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'presentPerfect1.exercises.q4', options: [{ value: 'a', labelKey: 'presentPerfect1.exercises.q4a' }, { value: 'b', labelKey: 'presentPerfect1.exercises.q4b' }, { value: 'c', labelKey: 'presentPerfect1.exercises.q4c' }], correctAnswer: 'a' },
+                { questionTextKey: 'presentPerfect1.exercises.q5', options: [{ value: 'a', labelKey: 'presentPerfect1.exercises.q5a' }, { value: 'b', labelKey: 'presentPerfect1.exercises.q5b' }, { value: 'c', labelKey: 'presentPerfect1.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'presentPerfect1.exercises.q6', options: [{ value: 'a', labelKey: 'presentPerfect1.exercises.q6a' }, { value: 'b', labelKey: 'presentPerfect1.exercises.q6b' }, { value: 'c', labelKey: 'presentPerfect1.exercises.q6c' }], correctAnswer: 'b' }
+            ]
+        });
+    </script>
+    <script>
+        // Fill in the blank
+        correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises',
+            prefix: 'fill',
+            questions: [
+                { questionTextKey: 'presentPerfect1.exercises.q7', answers: ['have finished'] },
+                { questionTextKey: 'presentPerfect1.exercises.q8', answers: ['has written'] },
+                { questionTextKey: 'presentPerfect1.exercises.q9', answers: ['have lived'] }
+            ]
+        });
+    </script>
+    <script>
+        // Sentence ordering
+        const correctAnswersType3 = buildSentenceOrderingExercise({
+            containerId: 'order-exercises',
+            prefix: 'order',
+            questions: [
+                { questionTextKey: 'presentPerfect1.exercises.q10', words: ['I', 'have', 'finished', 'my', 'homework', '.'], correctSentence: 'I have finished my homework .' },
+                { questionTextKey: 'presentPerfect1.exercises.q11', words: ['She', 'has', 'not', 'visited', 'Paris', '.'], correctSentence: 'She has not visited Paris .' },
+                { questionTextKey: 'presentPerfect1.exercises.q12', words: ['Have', 'you', 'eaten', 'lunch', '?'], correctSentence: 'Have you eaten lunch ?' }
+            ]
+        });
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
-            
-            // Check Type 1 exercises
-            const type1Score = ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            totalScore += type1Score;
-            totalQuestions += Object.keys(correctAnswersType1).length;
-            
-            // Check Type 2 exercises
-            const type2Score = ExerciseType2FillBlankCheckAnswers(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            totalScore += type2Score;
-            totalQuestions += Object.keys(correctAnswersType2).length;
-            
-            // Check Type 3 exercises
-            const type3Score = ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            totalScore += type3Score;
-            totalQuestions += Object.keys(correctAnswersType3).length;
-            
-            // Update combined score display
-            const scoreValue = document.getElementById('EH-exercise-type1-possibilities3-score-value');
-            const scoreFeedback = document.getElementById('EH-exercise-type1-possibilities3-score-feedback');
-            
-            if (scoreValue) scoreValue.textContent = `${totalScore}/${totalQuestions}`;
-            
-            if (scoreFeedback) {
-                if (totalScore === totalQuestions) {
-                    scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
-                } else if (totalScore >= totalQuestions * 0.7) {
-                    scoreFeedback.textContent = 'Good job! You did well on this exercise.';
-                } else if (totalScore >= totalQuestions * 0.5) {
-                    scoreFeedback.textContent = 'Not bad, but you might want to review the material again.';
-                } else {
-                    scoreFeedback.textContent = 'You might want to review the material and try again.';
-                }
+            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+            totalQuestions += 6;
+            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+            totalQuestions += 3;
+            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+            totalQuestions += 3;
+            const scoreEl = document.getElementById('score-value');
+            const fbEl = document.getElementById('score-feedback');
+            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+            if (fbEl) {
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered the present perfect basics!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit have/has and past participles.';
+                else fbEl.textContent = 'Review the lesson and try again.';
             }
-            
-            return totalScore;
+            document.getElementById('score-display').style.display = 'block';
+            EHScoreEffects.show(totalScore, totalQuestions);
         }
-        
-        // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
-            // Set up answer checking for all exercise types
-            ExerciseType1Possibilities3Init(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            ExerciseType2FillBlankInit(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            ExerciseType3SentenceOrderInit(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            
-            // Replace the default check button with our combined function
-            const checkButton = document.getElementById('EH-exercise-type1-possibilities3-check-answers');
-            if (checkButton) {
-                checkButton.addEventListener('click', checkAllExercises);
-            }
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+            document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
+        (function() {
+            function applyHtmlI18n() {
+                const lang = document.getElementById('language-selector').value;
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                    if (translation) el.textContent = translation;
+                });
+            }
+            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+        })();
     </script>
 </body>
 </html>

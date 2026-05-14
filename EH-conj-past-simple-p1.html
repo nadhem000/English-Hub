@@ -3,1180 +3,550 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Past Tense: Generality - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>Simple Past I: Introduction & Basic Forms - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #8B4513, #A0522D, #CD853F);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-        
-        .EH-conjugation-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-        }
-        
-        .EH-conjugation-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .EH-conjugation-title {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .EH-conjugation-subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-        }
-        
-        .EH-conjugation-content {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
-        
-        .EH-conjugation-section {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .EH-conjugation-section-title {
-            font-size: 1.8rem;
-            color: #8B4513;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #CD853F;
-        }
-        
-        .EH-conjugation-subsection {
-            margin-bottom: 25px;
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .EH-conjugation-subsection-title {
-            font-size: 1.4rem;
-            color: #A0522D;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .EH-conjugation-subsection-icon {
-            font-size: 1.6rem;
-            margin-right: 10px;
-        }
-        
-        .EH-conjugation-rule {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f5f5f5;
-            border-radius: 10px;
-            border-left: 4px solid #CD853F;
-        }
-        
-        .EH-conjugation-rule-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #8B4513;
-        }
-        
-        .EH-conjugation-examples {
-            background: #f9f0e8;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-        }
-        
-        .EH-conjugation-example {
-            margin-bottom: 8px;
-            padding-left: 10px;
-            border-left: 2px solid #CD853F;
-        }
-        
-        .EH-conjugation-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        
-        .EH-conjugation-table th,
-        .EH-conjugation-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        
-        .EH-conjugation-table th {
-            background-color: #A0522D;
-            color: white;
-        }
-        
-        .EH-conjugation-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        .EH-conjugation-table tr:hover {
-            background-color: #f9f0e8;
-        }
-        
-        /* Exercise Styles */
-        .EH-exercise-section {
-            margin-top: 40px;
-        }
-        
-        .EH-exercise-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .EH-exercise-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .EH-exercise-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .EH-exercise-number {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, #A0522D, #CD853F);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-text {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .EH-exercise-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option input {
-            cursor: pointer;
-        }
-        
-        .EH-exercise-option label {
-            cursor: pointer;
-        }
-        
-        /* Type 1: Multiple Choice Styles */
-        .EH-exercise-type1-possibilities3-answers-control {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
-            gap: 20px;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn {
-            background: #A0522D;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn:hover {
-            background: #8B4513;
-        }
-
-        .EH-exercise-type1-possibilities3-score-display {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            display: none;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-title {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #8B4513;
-        }
-
-        .EH-exercise-type1-possibilities3-score-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #A0522D;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-feedback {
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        .EH-exercise-type1-possibilities3-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.correct {
-            background-color: #d4edda;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.incorrect {
-            background-color: #f8d7da;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 2: Fill in the Blank Styles */
-        .EH-exercise-type2-fillblank-input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .EH-exercise-type2-fillblank-input:focus {
-            border-color: #A0522D;
-            outline: none;
-        }
-        
-        .EH-exercise-type2-fillblank-input-correct {
-            border-color: #28a745;
-            background-color: #d4edda;
-        }
-        
-        .EH-exercise-type2-fillblank-input-incorrect {
-            border-color: #dc3545;
-            background-color: #f8d7da;
-        }
-        
-        .EH-exercise-type2-fillblank-input-empty {
-            border-color: #ffc107;
-        }
-        
-        .EH-exercise-type2-fillblank-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type2-fillblank-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type2-fillblank-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 3: Sentence Ordering Styles */
-        .EH-exercise-type3-sentenceorder-word-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 15px;
-            border: 2px dashed #e0e0e0;
-            border-radius: 10px;
-            min-height: 60px;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word {
-            background: #f9f0e8;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid #e0c9b8;
-            cursor: move;
-            user-select: none;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word:hover {
-            background: #f2e0d2;
-        }
-        
-        .EH-exercise-type3-sentenceorder-dragging {
-            opacity: 0.5;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct {
-            border-color: #28a745;
-            background-color: #f8fff8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect {
-            border-color: #dc3545;
-            background-color: #fff8f8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Navigation Buttons */
-        .EH-conjugation-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-        
-        .EH-conjugation-nav-button {
-            background: #A0522D;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .EH-conjugation-nav-button:hover {
-            background: #8B4513;
-        }
-        
-        .EH-conjugation-nav-button.back {
-            background: #CD853F;
-        }
-        
-        .EH-conjugation-nav-button.back:hover {
-            background: #A0522D;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .EH-conjugation-title {
-                font-size: 2rem;
-            }
-            
-            .EH-exercise-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .EH-conjugation-navigation {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .EH-conjugation-nav-button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .EH-conjugation-content {
-                padding: 20px;
-            }
+        /* Warm amber / orange color palette */
+        :root {
+            --bg-gradient: linear-gradient(135deg, #fde4c2, #fcd5a5, #f7c08a, #f0b27a);
+            --content-bg: #fffaf5;
+            --card-bg: #ffffff;
+            --subsection-bg: #fff3e8;
+            --rule-bg: #fdeadf;
+            --example-bg: #fae6d4;
+            --table-stripe: #fff2e8;
+            --title-color: #8b3c1c;
+            --text-color: #4a2a1a;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #e67e22;
+            --primary-hover: #d35400;
+            --primary-light: #f39c12;
+            --accent: #e67e22;
+            --exercise-number-gradient: linear-gradient(135deg, #e67e22, #d35400);
+            --rule-border: #e67e22;
+            --example-border: #e67e22;
+            --nav-btn-bg: #e67e22;
+            --nav-btn-hover: #d35400;
+            --nav-back-btn-bg: #f39c12;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #e67e22;
+            --refract-divider-color: #f0b27a;
+            --refract-translation-bg: #fae6d4;
+            --refract-translation-border: #e67e22;
+            --refract-english-color: #4a2a1a;
+            --section-divider: #f0d5b5;
+            --card-border: #f0d5b5;
+            --input-border: #e6c3a0;
+            --dashed-border: #e6c3a0;
+            --table-border: #f0d5b5;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #fff0e5;
+            --neutral-color: #8b5a3c;
+            --neutral-border: #e6c3a0;
+            --empty-input-border: #d4a373;
+            --empty-input-bg: #fef6ed;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #e67e22;
+            --language-selector-color: #4a2a1a;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #4a2a1a, #5c3622, #6e442a, #805232);
+            --content-bg: #2e1e12;
+            --card-bg: #3b281c;
+            --subsection-bg: #3b281c;
+            --rule-bg: #2e1e12;
+            --example-bg: #2e1e12;
+            --table-stripe: #352318;
+            --title-color: #f7b577;
+            --text-color: #f0dbc8;
+            --header-text: #f0dbc8;
+            --header-text-light: #c8a87c;
+            --primary: #f39c12;
+            --primary-hover: #e67e22;
+            --primary-light: #f39c12;
+            --accent: #f39c12;
+            --rule-border: #f39c12;
+            --example-border: #f39c12;
+            --exercise-number-gradient: linear-gradient(135deg, #f39c12, #e67e22);
+            --nav-btn-bg: #f39c12;
+            --nav-btn-hover: #e67e22;
+            --nav-back-btn-bg: #f5b041;
+            --nav-back-btn-color: #1e0f06;
+            --nav-back-btn-hover: #f39c12;
+            --refract-divider-color: #c88a4a;
+            --refract-translation-bg: #4a2a1a;
+            --refract-translation-border: #c88a4a;
+            --refract-english-color: #f0dbc8;
+            --section-divider: #4a2a1a;
+            --card-border: #4a2a1a;
+            --input-border: #6e442a;
+            --dashed-border: #6e442a;
+            --table-border: #5c3622;
+            --white: #f0dbc8;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #4a2a1a;
+            --neutral-color: #c8a87c;
+            --neutral-border: #6e442a;
+            --empty-input-border: #6e442a;
+            --empty-input-bg: #2e1e12;
+            --language-selector-bg: #3b281c;
+            --language-selector-border: #f39c12;
+            --language-selector-color: #f0dbc8;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="simplePast1.title">Simple Past Tense: Generality</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="simplePast1.subtitle">Learn to talk about completed actions and events in the past</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="pastSimple1.title.line1">Simple Past Tense:</div>
+                <div class="EH-conjugation-title-line" data-i18n="pastSimple1.title.line2">I: Generality & Basic Forms</div>
+                <div class="EH-conjugation-subtitle" data-i18n="pastSimple1.title.line3">Completed actions and events in the past</div>
+                <div class="EH-conjugation-subtitle" data-i18n="pastSimple1.title.line4">lesson: 1/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Introduction Section -->
+            <!-- Section 1: Introduction to Simple Past -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePast1.introduction.title">Introduction to Simple Past</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="pastSimple1.intro.title">I. 1. Introduction to Simple Past</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📚</span>
-                        <span data-i18n="simplePast1.introduction.whatIs">What is the Simple Past Tense?</span>
+                        <span class="EH-conjugation-subsection-icon">📘</span>
+                        <span data-i18n="pastSimple1.intro.heading">What is the Simple Past Tense?</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePast1.introduction.definitionTitle">Definition:</div>
-                        <p data-i18n="simplePast1.introduction.definition">The Simple Past tense is used to talk about actions or events that happened in the past and are now completed.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="pastSimple1.intro.desc1">📘 Definition:</div>
+                        <p data-i18n="pastSimple1.intro.desc2">The Simple Past tense is used to talk about <strong>actions or events that happened in the past and are now completed</strong>.</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePast1.introduction.usesTitle">When to use:</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="pastSimple1.intro.whenTitle">⏳ When to use:</div>
                         <ul>
-                            <li data-i18n="simplePast1.introduction.use1">Completed actions in the past</li>
-                            <li data-i18n="simplePast1.introduction.use2">Past habits or routines</li>
-                            <li data-i18n="simplePast1.introduction.use3">Past facts or general truths</li>
-                            <li data-i18n="simplePast1.introduction.use4">Sequences of past actions</li>
+                            <li data-i18n="pastSimple1.intro.when1"><strong>Completed actions in the past</strong></li>
+                            <li data-i18n="pastSimple1.intro.when2"><strong>Past habits or routines</strong></li>
+                            <li data-i18n="pastSimple1.intro.when3"><strong>Past facts or general truths</strong></li>
+                            <li data-i18n="pastSimple1.intro.when4"><strong>Sequences of past actions</strong></li>
                         </ul>
                     </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="simplePast1.introduction.example1">I worked at a bank last year.</div>
-                        <div class="EH-conjugation-example" data-i18n="simplePast1.introduction.example2">She visited her grandmother yesterday.</div>
-                        <div class="EH-conjugation-example" data-i18n="simplePast1.introduction.example3">They played soccer when they were children.</div>
-                        <div class="EH-conjugation-example" data-i18n="simplePast1.introduction.example4">He lived in Paris for five years.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.intro.ex1">I worked at a bank last year.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.intro.ex2">She visited her grandmother yesterday.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.intro.ex3">They played soccer when they were children.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.intro.ex4">He lived in Paris for five years.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- To Be Section -->
+
+            <!-- Section 2: The Verb "To Be" in Past -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePast1.toBe.title">The Verb "To Be" in Past</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="pastSimple1.tobe.title">I. 2. The Verb "To Be" in Past</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="simplePast1.toBe.conjugation">Conjugation of "To Be" in Past</span>
+                        <span class="EH-conjugation-subsection-icon">🔧</span>
+                        <span data-i18n="pastSimple1.tobe.heading">Conjugation of "To Be" in Past</span>
                     </h3>
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.conjugation">Conjugation</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="pastSimple1.tobe.subjectCol">Subject</th><th data-i18n="pastSimple1.tobe.conjugationCol">Conjugation</th><th data-i18n="pastSimple1.tobe.exampleCol">Example</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="simplePast1.toBe.was">was</td>
-                                <td data-i18n="simplePast1.toBe.exampleI">I was a student.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="simplePast1.toBe.were">were</td>
-                                <td data-i18n="simplePast1.toBe.exampleYou">You were my friend.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="simplePast1.toBe.was">was</td>
-                                <td data-i18n="simplePast1.toBe.exampleHe">He was a teacher.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="simplePast1.toBe.was">was</td>
-                                <td data-i18n="simplePast1.toBe.exampleShe">She was happy.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.it">It</td>
-                                <td data-i18n="simplePast1.toBe.was">was</td>
-                                <td data-i18n="simplePast1.toBe.exampleIt">It was a beautiful day.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="simplePast1.toBe.were">were</td>
-                                <td data-i18n="simplePast1.toBe.exampleWe">We were here.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="simplePast1.toBe.were">were</td>
-                                <td data-i18n="simplePast1.toBe.exampleThey">They were students.</td>
-                            </tr>
+                            <tr><td>I</td><td>was</td><td data-i18n="pastSimple1.tobe.exI">I was a student.</td></tr>
+                            <tr><td>You</td><td>were</td><td data-i18n="pastSimple1.tobe.exYou">You were my friend.</td></tr>
+                            <tr><td>He/She/It</td><td>was</td><td data-i18n="pastSimple1.tobe.exHe">He was a teacher.</td></tr>
+                            <tr><td>We</td><td>were</td><td data-i18n="pastSimple1.tobe.exWe">We were here.</td></tr>
+                            <tr><td>They</td><td>were</td><td data-i18n="pastSimple1.tobe.exThey">They were students.</td></tr>
                         </tbody>
                     </table>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePast1.toBe.negativeTitle">Negative Form:</div>
-                        <p data-i18n="simplePast1.toBe.negativeRule">Add "not" after the verb.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.toBe.negativeExample1">I was not a doctor.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.toBe.negativeExample2">She was not tired.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.toBe.negativeExample3">They were not here.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="pastSimple1.tobe.negativeTitle">❌ Negative Form:</div>
+                        <p data-i18n="pastSimple1.tobe.negativeDesc">Add <strong>"not"</strong> after was/were: was not (wasn't), were not (weren't).</p>
                     </div>
-                    
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.tobe.negEx1">I was not a doctor.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.tobe.negEx2">She was not tired.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.tobe.negEx3">They were not here.</div>
+                    </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePast1.toBe.questionTitle">Question Form:</div>
-                        <p data-i18n="simplePast1.toBe.questionRule">Invert the subject and the verb.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.toBe.questionExample1">Was I late?</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.toBe.questionExample2">Was she a teacher?</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.toBe.questionExample3">Were they ready?</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="pastSimple1.tobe.questionTitle">❓ Question Form:</div>
+                        <p data-i18n="pastSimple1.tobe.questionDesc">Invert the subject and was/were.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.tobe.qEx1">Was I late?</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.tobe.qEx2">Was she a teacher?</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.tobe.qEx3">Were they ready?</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- To Have Section -->
+
+            <!-- Section 3: The Verb "To Have" in Past -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePast1.toHave.title">The Verb "To Have" in Past</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="pastSimple1.tohave.title">I. 3. The Verb "To Have" in Past</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="simplePast1.toHave.conjugation">Conjugation of "To Have" in Past</span>
+                        <span class="EH-conjugation-subsection-icon">⚡</span>
+                        <span data-i18n="pastSimple1.tohave.heading">Conjugation of "To Have" in Past</span>
                     </h3>
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.conjugation">Conjugation</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="pastSimple1.tohave.subjectCol">Subject</th><th data-i18n="pastSimple1.tohave.conjugationCol">Conjugation</th><th data-i18n="pastSimple1.tohave.exampleCol">Example</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="simplePast1.toHave.had">had</td>
-                                <td data-i18n="simplePast1.toHave.exampleI">I had a car.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="simplePast1.toHave.had">had</td>
-                                <td data-i18n="simplePast1.toHave.exampleYou">You had a book.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="simplePast1.toHave.had">had</td>
-                                <td data-i18n="simplePast1.toHave.exampleHe">He had a cat.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="simplePast1.toHave.had">had</td>
-                                <td data-i18n="simplePast1.toHave.exampleShe">She had a dog.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.it">It</td>
-                                <td data-i18n="simplePast1.toHave.had">had</td>
-                                <td data-i18n="simplePast1.toHave.exampleIt">It had four legs.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="simplePast1.toHave.had">had</td>
-                                <td data-i18n="simplePast1.toHave.exampleWe">We had time.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="simplePast1.toHave.had">had</td>
-                                <td data-i18n="simplePast1.toHave.exampleThey">They had money.</td>
-                            </tr>
+                            <tr><td>I</td><td>had</td><td data-i18n="pastSimple1.tohave.exI">I had a car.</td></tr>
+                            <tr><td>You</td><td>had</td><td data-i18n="pastSimple1.tohave.exYou">You had a book.</td></tr>
+                            <tr><td>He/She/It</td><td>had</td><td data-i18n="pastSimple1.tohave.exHe">He had a cat.</td></tr>
+                            <tr><td>We</td><td>had</td><td data-i18n="pastSimple1.tohave.exWe">We had time.</td></tr>
+                            <tr><td>They</td><td>had</td><td data-i18n="pastSimple1.tohave.exThey">They had money.</td></tr>
                         </tbody>
                     </table>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePast1.toHave.negativeTitle">Negative Form:</div>
-                        <p data-i18n="simplePast1.toHave.negativeRule">Use "did not" (didn't) + have.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.toHave.negativeExample1">I didn't have a car.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.toHave.negativeExample2">She didn't have a dog.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.toHave.negativeExample3">They didn't have time.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="pastSimple1.tohave.negativeTitle">❌ Negative Form:</div>
+                        <p data-i18n="pastSimple1.tohave.negativeDesc">Use <strong>"did not" (didn't) + have</strong>.</p>
                     </div>
-                    
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.tohave.negEx1">I didn't have a car.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.tohave.negEx2">She didn't have a dog.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.tohave.negEx3">They didn't have time.</div>
+                    </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePast1.toHave.questionTitle">Question Form:</div>
-                        <p data-i18n="simplePast1.toHave.questionRule">Use "did" + subject + have.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.toHave.questionExample1">Did you have a car?</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.toHave.questionExample2">Did she have a dog?</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.toHave.questionExample3">Did they have time?</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="pastSimple1.tohave.questionTitle">❓ Question Form:</div>
+                        <p data-i18n="pastSimple1.tohave.questionDesc">Use <strong>"did" + subject + have</strong>.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.tohave.qEx1">Did you have a car?</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.tohave.qEx2">Did she have a dog?</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.tohave.qEx3">Did they have time?</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Regular Verbs Section -->
+
+            <!-- Section 4: Regular Verbs in Past -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePast1.regularVerbs.title">Regular Verbs in Past</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="pastSimple1.regular.title">I. 4. Regular Verbs in Past</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">📝</span>
-                        <span data-i18n="simplePast1.regularVerbs.conjugation">Conjugation of Regular Verbs in Past</span>
+                        <span data-i18n="pastSimple1.regular.heading">Basic Rule: add -ed</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePast1.regularVerbs.ruleTitle">Basic Rule:</div>
-                        <p data-i18n="simplePast1.regularVerbs.rule">For most regular verbs, add -ed to the base form for all subjects.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="pastSimple1.regular.desc1">📘 Rule:</div>
+                        <p data-i18n="pastSimple1.regular.desc2">For most regular verbs, add <strong>-ed</strong> to the base form for all subjects.</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.conjugation">Conjugation</th>
-                                <th data-i18n="common.example">Example (work)</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="pastSimple1.regular.subjectCol">Subject</th><th data-i18n="pastSimple1.regular.conjugationCol">Conjugation</th><th data-i18n="pastSimple1.regular.exampleCol">Example (work)</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="simplePast1.regularVerbs.worked">worked</td>
-                                <td data-i18n="simplePast1.regularVerbs.exampleI">I worked yesterday.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="simplePast1.regularVerbs.worked">worked</td>
-                                <td data-i18n="simplePast1.regularVerbs.exampleYou">You worked here.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="simplePast1.regularVerbs.worked">worked</td>
-                                <td data-i18n="simplePast1.regularVerbs.exampleHe">He worked at a bank.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="simplePast1.regularVerbs.worked">worked</td>
-                                <td data-i18n="simplePast1.regularVerbs.exampleShe">She worked hard.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.it">It</td>
-                                <td data-i18n="simplePast1.regularVerbs.worked">worked</td>
-                                <td data-i18n="simplePast1.regularVerbs.exampleIt">It worked well.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="simplePast1.regularVerbs.worked">worked</td>
-                                <td data-i18n="simplePast1.regularVerbs.exampleWe">We worked together.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="simplePast1.regularVerbs.worked">worked</td>
-                                <td data-i18n="simplePast1.regularVerbs.exampleThey">They worked late.</td>
-                            </tr>
+                            <tr><td>I</td><td>worked</td><td data-i18n="pastSimple1.regular.exI">I worked yesterday.</td></tr>
+                            <tr><td>You</td><td>worked</td><td data-i18n="pastSimple1.regular.exYou">You worked here.</td></tr>
+                            <tr><td>He/She/It</td><td>worked</td><td data-i18n="pastSimple1.regular.exHe">He worked at a bank.</td></tr>
+                            <tr><td>We</td><td>worked</td><td data-i18n="pastSimple1.regular.exWe">We worked together.</td></tr>
+                            <tr><td>They</td><td>worked</td><td data-i18n="pastSimple1.regular.exThey">They worked late.</td></tr>
                         </tbody>
                     </table>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePast1.regularVerbs.spellingTitle">Spelling Rules for -ed:</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="pastSimple1.regular.spellingTitle">✍️ Spelling Rules for -ed:</div>
                         <ul>
-                            <li data-i18n="simplePast1.regularVerbs.spelling1">Most verbs: add -ed (work → worked)</li>
-                            <li data-i18n="simplePast1.regularVerbs.spelling2">Verbs ending in -e: add -d (live → lived)</li>
-                            <li data-i18n="simplePast1.regularVerbs.spelling3">Verbs ending in consonant + y: change y to i and add -ed (study → studied)</li>
-                            <li data-i18n="simplePast1.regularVerbs.spelling4">Verbs ending in vowel + y: add -ed (play → played)</li>
-                            <li data-i18n="simplePast1.regularVerbs.spelling5">One-syllable verbs ending in consonant-vowel-consonant: double the final consonant and add -ed (stop → stopped)</li>
+                            <li data-i18n="pastSimple1.regular.spell1">Most verbs: add -ed (work → worked)</li>
+                            <li data-i18n="pastSimple1.regular.spell2">Verbs ending in -e: add -d (live → lived)</li>
+                            <li data-i18n="pastSimple1.regular.spell3">Verbs ending in consonant + y: change y to i and add -ed (study → studied)</li>
+                            <li data-i18n="pastSimple1.regular.spell4">Verbs ending in vowel + y: add -ed (play → played)</li>
+                            <li data-i18n="pastSimple1.regular.spell5">One-syllable verbs CVC: double final consonant + -ed (stop → stopped)</li>
                         </ul>
                     </div>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePast1.regularVerbs.negativeTitle">Negative Form:</div>
-                        <p data-i18n="simplePast1.regularVerbs.negativeRule">Use "did not" (didn't) + base form of verb.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.regularVerbs.negativeExample1">I didn't work yesterday.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.regularVerbs.negativeExample2">She didn't work here.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.regularVerbs.negativeExample3">They didn't work late.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="pastSimple1.regular.negativeTitle">❌ Negative Form:</div>
+                        <p data-i18n="pastSimple1.regular.negativeDesc">Use <strong>"did not" (didn't) + base form</strong> of verb.</p>
                     </div>
-                    
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.regular.negEx1">I didn't work yesterday.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.regular.negEx2">She didn't work here.</div>
+                    </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePast1.regularVerbs.questionTitle">Question Form:</div>
-                        <p data-i18n="simplePast1.regularVerbs.questionRule">Use "did" + subject + base form of verb.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.regularVerbs.questionExample1">Did you work yesterday?</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.regularVerbs.questionExample2">Did she work hard?</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.regularVerbs.questionExample3">Did they work together?</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="pastSimple1.regular.questionTitle">❓ Question Form:</div>
+                        <p data-i18n="pastSimple1.regular.questionDesc">Use <strong>"did" + subject + base form</strong>.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.regular.qEx1">Did you work yesterday?</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.regular.qEx2">Did they work together?</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Irregular Verbs Section -->
+
+            <!-- Section 5: Common Irregular Verbs -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePast1.irregularVerbs.title">Common Irregular Verbs</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="pastSimple1.irregular.title">I. 5. Common Irregular Verbs</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">⚠️</span>
-                        <span data-i18n="simplePast1.irregularVerbs.conjugation">Irregular Verb Conjugations in Past</span>
+                        <span data-i18n="pastSimple1.irregular.heading">Irregular past forms must be memorized</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePast1.irregularVerbs.ruleTitle">About Irregular Verbs:</div>
-                        <p data-i18n="simplePast1.irregularVerbs.rule">Some verbs don't follow the regular -ed pattern. They have their own unique past forms that must be memorized.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="pastSimple1.irregular.desc1">📘 About Irregular Verbs:</div>
+                        <p data-i18n="pastSimple1.irregular.desc2">Some verbs don't follow the regular -ed pattern. They have their own unique past forms.</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.verb">Verb</th>
-                                <th data-i18n="simplePast1.irregularVerbs.pastForm">Past Form</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="pastSimple1.irregular.verbCol">Verb</th><th data-i18n="pastSimple1.irregular.pastCol">Past Form</th><th data-i18n="pastSimple1.irregular.exampleCol">Example</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="simplePast1.irregularVerbs.go">go</td>
-                                <td data-i18n="simplePast1.irregularVerbs.went">went</td>
-                                <td data-i18n="simplePast1.irregularVerbs.goExample">I went to school yesterday.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simplePast1.irregularVerbs.do">do</td>
-                                <td data-i18n="simplePast1.irregularVerbs.did">did</td>
-                                <td data-i18n="simplePast1.irregularVerbs.doExample">He did his homework.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simplePast1.irregularVerbs.have">have</td>
-                                <td data-i18n="simplePast1.irregularVerbs.had">had</td>
-                                <td data-i18n="simplePast1.irregularVerbs.haveExample">She had a cat.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simplePast1.irregularVerbs.eat">eat</td>
-                                <td data-i18n="simplePast1.irregularVerbs.ate">ate</td>
-                                <td data-i18n="simplePast1.irregularVerbs.eatExample">We ate dinner at 7 PM.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simplePast1.irregularVerbs.see">see</td>
-                                <td data-i18n="simplePast1.irregularVerbs.saw">saw</td>
-                                <td data-i18n="simplePast1.irregularVerbs.seeExample">They saw a movie last night.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="simplePast1.irregularVerbs.take">take</td>
-                                <td data-i18n="simplePast1.irregularVerbs.took">took</td>
-                                <td data-i18n="simplePast1.irregularVerbs.takeExample">I took a bus to work.</td>
-                            </tr>
+                            <tr><td>go</td><td>went</td><td data-i18n="pastSimple1.irregular.exGo">I went to school yesterday.</td></tr>
+                            <tr><td>do</td><td>did</td><td data-i18n="pastSimple1.irregular.exDo">He did his homework.</td></tr>
+                            <tr><td>have</td><td>had</td><td data-i18n="pastSimple1.irregular.exHave">She had a cat.</td></tr>
+                            <tr><td>eat</td><td>ate</td><td data-i18n="pastSimple1.irregular.exEat">We ate dinner at 7 PM.</td></tr>
+                            <tr><td>see</td><td>saw</td><td data-i18n="pastSimple1.irregular.exSee">They saw a movie last night.</td></tr>
+                            <tr><td>take</td><td>took</td><td data-i18n="pastSimple1.irregular.exTake">I took a bus to work.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="simplePast1.irregularVerbs.moreExamplesTitle">More Examples:</div>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.irregularVerbs.example1">I went to the gym yesterday.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.irregularVerbs.example2">She did her homework after school.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.irregularVerbs.example3">We had a great time at the party.</div>
-                            <div class="EH-conjugation-example" data-i18n="simplePast1.irregularVerbs.example4">He ate breakfast at 8 AM.</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.irregular.more1">I went to the gym yesterday.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.irregular.more2">She did her homework after school.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastSimple1.irregular.more3">We had a great time at the party.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Exercises Section -->
+
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="simplePast1.exercises.title">Practice Exercises</h2>
-                
-                <!-- Type 1: Multiple Choice Exercises -->
-                <h3 style="color: #8B4513; margin-bottom: 20px;">Multiple Choice</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 1 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">1</div>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q1">Choose the correct past form of the verb "to be":</p>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q1Sentence">She ______ a doctor last year.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="simplePast1.exercises.q1a">is</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="simplePast1.exercises.q1b">was</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="simplePast1.exercises.q1c">were</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 2 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">2</div>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q2">Choose the correct past form of the verb "to have":</p>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q2Sentence">They ______ two cats when they were children.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="simplePast1.exercises.q2a">has</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="simplePast1.exercises.q2b">had</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="simplePast1.exercises.q2c">have</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 3 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">3</div>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q3">Choose the correct past form of the regular verb:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q3Sentence">He ______ (work) in an office last year.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="simplePast1.exercises.q3a">work</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="simplePast1.exercises.q3b">worked</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="simplePast1.exercises.q3c">working</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 4 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">4</div>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q4">Choose the correct negative form:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q4Sentence">I ______ like coffee when I was young.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="simplePast1.exercises.q4a">didn't</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="simplePast1.exercises.q4b">don't</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="simplePast1.exercises.q4c">not</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 5 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">5</div>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q5">Choose the correct question form:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q5Sentence">______ she work here last year?</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="simplePast1.exercises.q5a">Do</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="simplePast1.exercises.q5b">Did</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="simplePast1.exercises.q5c">Was</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 6 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">6</div>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q6">Choose the correct form of the irregular verb:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q6Sentence">He ______ to school yesterday.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-a" name="EH-exercise-type1-possibilities3-q6" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q6-a" data-i18n="simplePast1.exercises.q6a">go</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-b" name="EH-exercise-type1-possibilities3-q6" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q6-b" data-i18n="simplePast1.exercises.q6b">went</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-c" name="EH-exercise-type1-possibilities3-q6" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q6-c" data-i18n="simplePast1.exercises.q6c">goed</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q6-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Type 2: Fill in the Blank Exercises -->
-                <h3 style="color: #8B4513; margin: 40px 0 20px 0;">Fill in the Blank</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 7 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">7</div>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q7">Complete the sentence with the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q7Sentence">I ______ (to be) a student last year.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q1-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 8 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">8</div>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q8">Complete the sentence with the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q8Sentence">She ______ (to have) a cat when she was young.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q2-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 9 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">9</div>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q9">Complete the sentence with the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q9Sentence">They ______ (to go) to school yesterday.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q3-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Type 3: Sentence Ordering Exercises -->
-                <h3 style="color: #8B4513; margin: 40px 0 20px 0;">Sentence Ordering</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 10 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">10</div>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q10">Arrange the words to form a correct sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q1-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word1" data-original-index="1">He</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word3" data-original-index="3">soccer</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word4" data-original-index="4">yesterday</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word2" data-original-index="2">played</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word5" data-original-index="5">.</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 11 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">11</div>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q11">Arrange the words to form a correct sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q2-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word1" data-original-index="1">We</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word3" data-original-index="3">like</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word2" data-original-index="2">didn't</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word4" data-original-index="4">coffee</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word5" data-original-index="5">.</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 12 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">12</div>
-                        <p class="EH-exercise-text" data-i18n="simplePast1.exercises.q12">Arrange the words to form a correct question:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q3-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word1" data-original-index="1">Did</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word3" data-original-index="3">speak</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word5" data-original-index="5">?</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word4" data-original-index="4">English</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word2" data-original-index="2">you</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word6" data-original-index="6">yesterday</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Answer Check and Score System -->
+                <h2 class="EH-conjugation-section-title" data-i18n="pastSimple1.exercises.title">Practice: Simple Past Basics</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+                <div class="EH-exercise-container" id="mc-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+                <div class="EH-exercise-container" id="fill-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+                <div class="EH-exercise-container" id="order-exercises"></div>
                 <div class="EH-exercise-type1-possibilities3-answers-control">
-                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers">Check All Answers</button>
-                    <div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
                         <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
-                        <div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback">Check your answers to see how you did!</p>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Navigation Buttons -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='conjugation.html'">
-                    ← <span data-i18n="common.backToConjugation">Back to Verb Conjugation</span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='EH-conj-past-simple-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson</span> →
-                </button>
             </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
-    <script src="scripts/translations/i18n_en.js"></script>
-    <script src="scripts/translations/i18n_fr.js"></script>
-    <script src="scripts/translations/i18n_ar.js"></script>
-    <script src="scripts/common-i18n.js"></script>
-    <script src="scripts/exercise.js"></script>
-    
+
     <script>
-        // Correct answers for Type 1 exercises
-        const correctAnswersType1 = {
-            'EH-exercise-type1-possibilities3-q1': 'b', // She was a doctor last year.
-            'EH-exercise-type1-possibilities3-q2': 'b', // They had two cats when they were children.
-            'EH-exercise-type1-possibilities3-q3': 'b', // He worked in an office last year.
-            'EH-exercise-type1-possibilities3-q4': 'a', // I didn't like coffee when I was young.
-            'EH-exercise-type1-possibilities3-q5': 'b', // Did she work here last year?
-            'EH-exercise-type1-possibilities3-q6': 'b'  // He went to school yesterday.
+        window.I18N = {
+            en: {
+                common: {
+                    siteName: "English Hub",
+                    previousLesson: "← Previous Lesson",
+                    returnToConjugation: "← Return to Conjugation",
+                    nextLesson: "Next Lesson →"
+                },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                pastSimple1: {
+                    title: { line1: "Simple Past Tense:", line2: "I: Generality & Basic Forms", line3: "Completed actions and events in the past", line4: "lesson: 1/3" },
+                    intro: {
+                        title: "I. 1. Introduction to Simple Past", heading: "What is the Simple Past Tense?",
+                        desc1: "📘 Definition:", desc2: "The Simple Past tense is used to talk about actions or events that happened in the past and are now completed.",
+                        whenTitle: "⏳ When to use:", when1: "Completed actions in the past", when2: "Past habits or routines", when3: "Past facts or general truths", when4: "Sequences of past actions",
+                        ex1: "I worked at a bank last year.", ex2: "She visited her grandmother yesterday.", ex3: "They played soccer when they were children.", ex4: "He lived in Paris for five years."
+                    },
+                    tobe: {
+                        title: "I. 2. The Verb 'To Be' in Past", heading: "Conjugation of 'To Be' in Past",
+                        subjectCol: "Subject", conjugationCol: "Conjugation", exampleCol: "Example",
+                        exI: "I was a student.", exYou: "You were my friend.", exHe: "He was a teacher.", exWe: "We were here.", exThey: "They were students.",
+                        negativeTitle: "❌ Negative Form:", negativeDesc: "Add 'not' after was/were: was not (wasn't), were not (weren't).",
+                        negEx1: "I was not a doctor.", negEx2: "She was not tired.", negEx3: "They were not here.",
+                        questionTitle: "❓ Question Form:", questionDesc: "Invert the subject and was/were.",
+                        qEx1: "Was I late?", qEx2: "Was she a teacher?", qEx3: "Were they ready?"
+                    },
+                    tohave: {
+                        title: "I. 3. The Verb 'To Have' in Past", heading: "Conjugation of 'To Have' in Past",
+                        subjectCol: "Subject", conjugationCol: "Conjugation", exampleCol: "Example",
+                        exI: "I had a car.", exYou: "You had a book.", exHe: "He had a cat.", exWe: "We had time.", exThey: "They had money.",
+                        negativeTitle: "❌ Negative Form:", negativeDesc: "Use 'did not' (didn't) + have.",
+                        negEx1: "I didn't have a car.", negEx2: "She didn't have a dog.", negEx3: "They didn't have time.",
+                        questionTitle: "❓ Question Form:", questionDesc: "Use 'did' + subject + have.",
+                        qEx1: "Did you have a car?", qEx2: "Did she have a dog?", qEx3: "Did they have time?"
+                    },
+                    regular: {
+                        title: "I. 4. Regular Verbs in Past", heading: "Basic Rule: add -ed",
+                        desc1: "📘 Rule:", desc2: "For most regular verbs, add -ed to the base form for all subjects.",
+                        subjectCol: "Subject", conjugationCol: "Conjugation", exampleCol: "Example (work)",
+                        exI: "I worked yesterday.", exYou: "You worked here.", exHe: "He worked at a bank.", exWe: "We worked together.", exThey: "They worked late.",
+                        spellingTitle: "✍️ Spelling Rules for -ed:",
+                        spell1: "Most verbs: add -ed (work → worked)", spell2: "Verbs ending in -e: add -d (live → lived)",
+                        spell3: "Verbs ending in consonant + y: change y to i and add -ed (study → studied)",
+                        spell4: "Verbs ending in vowel + y: add -ed (play → played)",
+                        spell5: "One-syllable verbs CVC: double final consonant + -ed (stop → stopped)",
+                        negativeTitle: "❌ Negative Form:", negativeDesc: "Use 'did not' (didn't) + base form.",
+                        negEx1: "I didn't work yesterday.", negEx2: "She didn't work here.",
+                        questionTitle: "❓ Question Form:", questionDesc: "Use 'did' + subject + base form.",
+                        qEx1: "Did you work yesterday?", qEx2: "Did they work together?"
+                    },
+                    irregular: {
+                        title: "I. 5. Common Irregular Verbs", heading: "Irregular past forms must be memorized",
+                        desc1: "📘 About Irregular Verbs:", desc2: "Some verbs don't follow the regular -ed pattern. They have their own unique past forms.",
+                        verbCol: "Verb", pastCol: "Past Form", exampleCol: "Example",
+                        exGo: "I went to school yesterday.", exDo: "He did his homework.", exHave: "She had a cat.",
+                        exEat: "We ate dinner at 7 PM.", exSee: "They saw a movie last night.", exTake: "I took a bus to work.",
+                        more1: "I went to the gym yesterday.", more2: "She did her homework after school.", more3: "We had a great time at the party."
+                    },
+                    exercises: {
+                        title: "Practice: Simple Past Basics",
+                        q1: "Choose the correct past form of 'to be': She ______ a doctor last year.",
+                        q1a: "is", q1b: "was", q1c: "were",
+                        q2: "Choose the correct past form of 'to have': They ______ two cats when they were children.",
+                        q2a: "has", q2b: "had", q2c: "have",
+                        q3: "Choose the correct past form of regular verb: He ______ (work) in an office last year.",
+                        q3a: "work", q3b: "worked", q3c: "working",
+                        q4: "Choose the correct negative form: I ______ like coffee when I was young.",
+                        q4a: "didn't", q4b: "don't", q4c: "not",
+                        q5: "Choose the correct question form: ______ she work here last year?",
+                        q5a: "Do", q5b: "Did", q5c: "Was",
+                        q6: "Choose the correct irregular past form: He ______ to school yesterday.",
+                        q6a: "go", q6b: "went", q6c: "goed",
+                        q7: "Complete the sentence: I ______ (to be) a student last year.",
+                        q8: "Complete the sentence: She ______ (to have) a cat when she was young.",
+                        q9: "Complete the sentence: They ______ (to go) to school yesterday.",
+                        q10: "Arrange: He, played, soccer, yesterday, .",
+                        q11: "Arrange: We, didn't, like, coffee, .",
+                        q12: "Arrange (question): Did, you, speak, English, yesterday, ?"
+                    }
+                }
+            },
+            fr: {
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
+                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+                pastSimple1: {
+                    title: { line1: "Passé Simple :", line2: "I: Généralités et formes de base", line3: "Actions et événements accomplis dans le passé", line4: "leçon : 1/3" },
+                    intro: { title: "I. 1. Introduction au Passé Simple", heading: "Qu'est-ce que le Passé Simple ?", desc1: "📘 Définition :", desc2: "Le passé simple exprime des actions ou événements terminés dans le passé.", whenTitle: "⏳ Quand l'utiliser :", when1: "Actions accomplies dans le passé", when2: "Habitudes passées", when3: "Faits ou vérités générales passées", when4: "Séquences d'actions passées", ex1: "J'ai travaillé dans une banque l'année dernière.", ex2: "Elle a rendu visite à sa grand-mère hier.", ex3: "Ils jouaient au football quand ils étaient enfants.", ex4: "Il a vécu à Paris pendant cinq ans." },
+                    tobe: { title: "I. 2. Le verbe 'To Be' au passé", heading: "Conjugaison de 'To Be' au passé", subjectCol: "Sujet", conjugationCol: "Conjugaison", exampleCol: "Exemple", exI: "J'étais étudiant.", exYou: "Tu étais mon ami.", exHe: "Il était professeur.", exWe: "Nous étions ici.", exThey: "Ils étaient étudiants.", negativeTitle: "❌ Forme négative :", negativeDesc: "Ajoutez 'not' après was/were.", negEx1: "Je n'étais pas médecin.", negEx2: "Elle n'était pas fatiguée.", negEx3: "Ils n'étaient pas ici.", questionTitle: "❓ Forme interrogative :", questionDesc: "Inversez le sujet et was/were.", qEx1: "Étais-je en retard ?", qEx2: "Était-elle professeur ?", qEx3: "Étaient-ils prêts ?" },
+                    tohave: { title: "I. 3. Le verbe 'To Have' au passé", heading: "Conjugaison de 'To Have' au passé", subjectCol: "Sujet", conjugationCol: "Conjugaison", exampleCol: "Exemple", exI: "J'avais une voiture.", exYou: "Tu avais un livre.", exHe: "Il avait un chat.", exWe: "Nous avions du temps.", exThey: "Ils avaient de l'argent.", negativeTitle: "❌ Forme négative :", negativeDesc: "Utilisez 'did not' (didn't) + have.", negEx1: "Je n'avais pas de voiture.", negEx2: "Elle n'avait pas de chien.", negEx3: "Ils n'avaient pas de temps.", questionTitle: "❓ Forme interrogative :", questionDesc: "Utilisez 'did' + sujet + have.", qEx1: "Aviez-vous une voiture ?", qEx2: "Avait-elle un chien ?", qEx3: "Avaient-ils du temps ?" },
+                    regular: { title: "I. 4. Verbes réguliers au passé", heading: "Règle de base : ajouter -ed", desc1: "📘 Règle :", desc2: "Ajoutez -ed à la base du verbe pour tous les sujets.", subjectCol: "Sujet", conjugationCol: "Conjugaison", exampleCol: "Exemple (travailler)", exI: "J'ai travaillé hier.", exYou: "Tu as travaillé ici.", exHe: "Il a travaillé dans une banque.", exWe: "Nous avons travaillé ensemble.", exThey: "Ils ont travaillé tard.", spellingTitle: "✍️ Règles d'orthographe :", spell1: "Verbes normaux : ajouter -ed", spell2: "Verbes en -e : ajouter -d", spell3: "Consonne + y : y→i + -ed", spell4: "Voyelle + y : ajouter -ed", spell5: "CVC : double consonne + -ed", negativeTitle: "❌ Négation :", negativeDesc: "did not (didn't) + base verbale", negEx1: "Je n'ai pas travaillé hier.", negEx2: "Elle n'a pas travaillé ici.", questionTitle: "❓ Question :", questionDesc: "did + sujet + base verbale", qEx1: "As-tu travaillé hier ?", qEx2: "Ont-ils travaillé ensemble ?" },
+                    irregular: { title: "I. 5. Verbes irréguliers courants", heading: "Formes passées uniques à mémoriser", desc1: "📘 Verbes irréguliers :", desc2: "Ils ne suivent pas la règle du -ed.", verbCol: "Verbe", pastCol: "Passé", exampleCol: "Exemple", exGo: "Je suis allé à l'école hier.", exDo: "Il a fait ses devoirs.", exHave: "Elle avait un chat.", exEat: "Nous avons dîné à 19h.", exSee: "Ils ont vu un film hier soir.", exTake: "J'ai pris le bus.", more1: "Je suis allé à la salle de sport hier.", more2: "Elle a fait ses devoirs après l'école.", more3: "Nous avons passé un bon moment à la fête." }
+                }
+            },
+            ar: {
+                common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+                pastSimple1: {
+                    title: { line1: "الماضي البسيط:", line2: "I: العموميات والأشكال الأساسية", line3: "أحداث مكتملة في الماضي", line4: "الدرس: 1/3" },
+                    intro: { title: "I. 1. مقدمة إلى الماضي البسيط", heading: "ما هو زمن الماضي البسيط؟", desc1: "📘 تعريف:", desc2: "يُستخدم الماضي البسيط للتحدث عن أحداث اكتملت في الماضي.", whenTitle: "⏳ متى نستخدمه؟", when1: "أحداث مكتملة في الماضي", when2: "عادات ماضية", when3: "حقائق عامة ماضية", when4: "تسلسل أحداث ماضية", ex1: "عملت في بنك العام الماضي.", ex2: "زارت جدتها أمس.", ex3: "لعبوا كرة القدم عندما كانوا أطفالاً.", ex4: "عاش في باريس خمس سنوات." },
+                    tobe: { title: "I. 2. الفعل 'To Be' في الماضي", heading: "تصريف 'To Be' في الماضي", subjectCol: "الفاعل", conjugationCol: "التصريف", exampleCol: "مثال", exI: "كنت طالباً.", exYou: "كنت صديقي.", exHe: "كان معلماً.", exWe: "كنا هنا.", exThey: "كانوا طلاباً.", negativeTitle: "❌ النفي:", negativeDesc: "أضف 'not' بعد was/were.", negEx1: "لم أكن طبيباً.", negEx2: "لم تكن متعبة.", negEx3: "لم يكونوا هنا.", questionTitle: "❓ السؤال:", questionDesc: "اعكس الفاعل و was/were.", qEx1: "هل كنت متأخراً؟", qEx2: "هل كانت معلمة؟", qEx3: "هل كانوا جاهزين؟" },
+                    tohave: { title: "I. 3. الفعل 'To Have' في الماضي", heading: "تصريف 'To Have' في الماضي", subjectCol: "الفاعل", conjugationCol: "التصريف", exampleCol: "مثال", exI: "كانت لدي سيارة.", exYou: "كان لديك كتاب.", exHe: "كان لديه قط.", exWe: "كان لدينا وقت.", exThey: "كان لديهم مال.", negativeTitle: "❌ النفي:", negativeDesc: "استخدم 'did not' (didn't) + have", negEx1: "لم تكن لدي سيارة.", negEx2: "لم يكن لديها كلب.", negEx3: "لم يكن لديهم وقت.", questionTitle: "❓ السؤال:", questionDesc: "استخدم 'did' + فاعل + have", qEx1: "هل كانت لديك سيارة؟", qEx2: "هل كان لديها كلب؟", qEx3: "هل كان لديهم وقت؟" },
+                    regular: { title: "I. 4. الأفعال المنتظمة في الماضي", heading: "القاعدة الأساسية: إضافة -ed", desc1: "📘 القاعدة:", desc2: "أضف -ed إلى الفعل الأساسي.", subjectCol: "الفاعل", conjugationCol: "التصريف", exampleCol: "مثال (يعمل)", exI: "عملت أمس.", exYou: "عملت هنا.", exHe: "عمل في بنك.", exWe: "عملنا معاً.", exThey: "عملوا متأخرين.", spellingTitle: "✍️ قواعد إملائية:", spell1: "معظم الأفعال: +ed", spell2: "تنتهي بـ e: +d", spell3: "ساكن + y: y→i +ed", spell4: "متحرك + y: +ed", spell5: "CVC: مضاعفة الحرف +ed", negativeTitle: "❌ النفي:", negativeDesc: "did not + الفعل الأساسي", negEx1: "لم أعمل أمس.", negEx2: "لم تعمل هنا.", questionTitle: "❓ السؤال:", questionDesc: "did + فاعل + فعل أساسي", qEx1: "هل عملت أمس؟", qEx2: "هل عملوا معاً؟" },
+                    irregular: { title: "I. 5. الأفعال الشاذة الشائعة", heading: "صيغ ماضية فريدة يجب حفظها", desc1: "📘 أفعال شاذة:", desc2: "لا تتبع قاعدة -ed.", verbCol: "الفعل", pastCol: "الماضي", exampleCol: "مثال", exGo: "ذهبت إلى المدرسة أمس.", exDo: "أدى واجبه.", exHave: "كان لديها قط.", exEat: "تناولنا العشاء الساعة 7.", exSee: "شاهدوا فيلماً الليلة الماضية.", exTake: "استقللت الحافلة.", more1: "ذهبت إلى النادي الرياضي أمس.", more2: "أدت واجبها بعد المدرسة.", more3: "قضينا وقتًا رائعًا في الحفلة." }
+                }
+            }
         };
-        
-        // Correct answers for Type 2 exercises
-        const correctAnswersType2 = {
-            'EH-exercise-type2-fillblank-q1': 'was',     // I was a student last year.
-            'EH-exercise-type2-fillblank-q2': 'had',     // She had a cat when she was young.
-            'EH-exercise-type2-fillblank-q3': 'went'     // They went to school yesterday.
-        };
-        
-        // Correct answers for Type 3 exercises
-        const correctAnswersType3 = {
-            'EH-exercise-type3-sentenceorder-q1': 'He played soccer yesterday .',
-            'EH-exercise-type3-sentenceorder-q2': 'We didn\'t like coffee .',
-            'EH-exercise-type3-sentenceorder-q3': 'Did you speak English yesterday ?'
-        };
-        
-        // Combined function to check all exercise types
+    </script>
+    <script src="scripts/translation-refraction.js"></script>
+    <script src="scripts/exercise-conjugation.js"></script>
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
+    <script>
+        // Multiple choice exercises
+        const correctAnswersType1 = buildMultipleChoiceExercise({
+            containerId: 'mc-exercises',
+            prefix: 'EH-exercise-type1-possibilities3',
+            questions: [
+                { questionTextKey: 'pastSimple1.exercises.q1', options: [{ value: 'a', labelKey: 'pastSimple1.exercises.q1a' }, { value: 'b', labelKey: 'pastSimple1.exercises.q1b' }, { value: 'c', labelKey: 'pastSimple1.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'pastSimple1.exercises.q2', options: [{ value: 'a', labelKey: 'pastSimple1.exercises.q2a' }, { value: 'b', labelKey: 'pastSimple1.exercises.q2b' }, { value: 'c', labelKey: 'pastSimple1.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'pastSimple1.exercises.q3', options: [{ value: 'a', labelKey: 'pastSimple1.exercises.q3a' }, { value: 'b', labelKey: 'pastSimple1.exercises.q3b' }, { value: 'c', labelKey: 'pastSimple1.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'pastSimple1.exercises.q4', options: [{ value: 'a', labelKey: 'pastSimple1.exercises.q4a' }, { value: 'b', labelKey: 'pastSimple1.exercises.q4b' }, { value: 'c', labelKey: 'pastSimple1.exercises.q4c' }], correctAnswer: 'a' },
+                { questionTextKey: 'pastSimple1.exercises.q5', options: [{ value: 'a', labelKey: 'pastSimple1.exercises.q5a' }, { value: 'b', labelKey: 'pastSimple1.exercises.q5b' }, { value: 'c', labelKey: 'pastSimple1.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'pastSimple1.exercises.q6', options: [{ value: 'a', labelKey: 'pastSimple1.exercises.q6a' }, { value: 'b', labelKey: 'pastSimple1.exercises.q6b' }, { value: 'c', labelKey: 'pastSimple1.exercises.q6c' }], correctAnswer: 'b' }
+            ]
+        });
+    </script>
+    <script>
+        // Fill-in-the-blank exercises
+        correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises',
+            prefix: 'fill',
+            questions: [
+                { questionTextKey: 'pastSimple1.exercises.q7', answers: ['was'] },
+                { questionTextKey: 'pastSimple1.exercises.q8', answers: ['had'] },
+                { questionTextKey: 'pastSimple1.exercises.q9', answers: ['went'] }
+            ]
+        });
+    </script>
+    <script>
+        // Sentence ordering exercises
+        const correctAnswersType3 = buildSentenceOrderingExercise({
+            containerId: 'order-exercises',
+            prefix: 'order',
+            questions: [
+                { questionTextKey: 'pastSimple1.exercises.q10', words: ['He', 'played', 'soccer', 'yesterday', '.'], correctSentence: 'He played soccer yesterday .' },
+                { questionTextKey: 'pastSimple1.exercises.q11', words: ['We', 'didn\'t', 'like', 'coffee', '.'], correctSentence: 'We didn\'t like coffee .' },
+                { questionTextKey: 'pastSimple1.exercises.q12', words: ['Did', 'you', 'speak', 'English', 'yesterday', '?'], correctSentence: 'Did you speak English yesterday ?' }
+            ]
+        });
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
-            
-            // Check Type 1 exercises
-            const type1Score = ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            totalScore += type1Score;
-            totalQuestions += Object.keys(correctAnswersType1).length;
-            
-            // Check Type 2 exercises
-            const type2Score = ExerciseType2FillBlankCheckAnswers(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            totalScore += type2Score;
-            totalQuestions += Object.keys(correctAnswersType2).length;
-            
-            // Check Type 3 exercises
-            const type3Score = ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            totalScore += type3Score;
-            totalQuestions += Object.keys(correctAnswersType3).length;
-            
-            // Update combined score display
-            const scoreValue = document.getElementById('EH-exercise-type1-possibilities3-score-value');
-            const scoreFeedback = document.getElementById('EH-exercise-type1-possibilities3-score-feedback');
-            
-            if (scoreValue) scoreValue.textContent = `${totalScore}/${totalQuestions}`;
-            
-            if (scoreFeedback) {
-                if (totalScore === totalQuestions) {
-                    scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
-                } else if (totalScore >= totalQuestions * 0.7) {
-                    scoreFeedback.textContent = 'Good job! You did well on this exercise.';
-                } else if (totalScore >= totalQuestions * 0.5) {
-                    scoreFeedback.textContent = 'Not bad, but you might want to review the material again.';
-                } else {
-                    scoreFeedback.textContent = 'You might want to review the material and try again.';
-                }
+
+            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+            totalQuestions += 6;
+            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+            totalQuestions += 3;
+            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+            totalQuestions += 3;
+
+            const scoreEl = document.getElementById('score-value');
+            const fbEl = document.getElementById('score-feedback');
+            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+            if (fbEl) {
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered the Simple Past basics!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit was/were, had, or irregular verbs.';
+                else fbEl.textContent = 'Review the lesson and try again.';
             }
-            
-            return totalScore;
+            document.getElementById('score-display').style.display = 'block';
+
+            // sound & visual effects
+            EHScoreEffects.show(totalScore, totalQuestions);
         }
-        
-        // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
-            // Set up answer checking for all exercise types
-            ExerciseType1Possibilities3Init(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            ExerciseType2FillBlankInit(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            ExerciseType3SentenceOrderInit(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            
-            // Replace the default check button with our combined function
-            const checkButton = document.getElementById('EH-exercise-type1-possibilities3-check-answers');
-            if (checkButton) {
-                checkButton.addEventListener('click', checkAllExercises);
-            }
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+            document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
+        // i18n rendering – handles nested keys for title lines
+        (function() {
+            function applyHtmlI18n() {
+                const lang = document.getElementById('language-selector').value;
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                    if (translation) {
+                        el.textContent = translation;
+                    }
+                });
+            }
+            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+        })();
     </script>
 </body>
 </html>

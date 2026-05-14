@@ -3,1046 +3,527 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Perfect: Questions & Adverbs - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
+    <title>Future Perfect II: Questions & Adverbs - English Hub</title>
     <link rel="stylesheet" href="styles/style-conjugation.css">
-    
     <style>
-        /* ---------- Theme ---------- */
         :root {
-            --bg-gradient: linear-gradient(135deg, #6c3483, #8e44ad, #c39bd3);
-            --title-color: #6c3483;
-            --primary: #8e44ad;
-            --primary-hover: #6c3483;
-            --primary-light: #c39bd3;
-            --accent: #c39bd3;
-            --rule-bg: #f3e8fc;
-            --rule-border: #c39bd3;
-            --example-bg: #e1bee7;
-            --example-border: #c39bd3;
-            --exercise-number-gradient: linear-gradient(135deg, #8e44ad, #c39bd3);
-            --nav-btn-bg: #8e44ad;
-            --nav-btn-hover: #6c3483;
-            --nav-back-btn-bg: #c39bd3;
-            --nav-back-btn-color: #4a148c;
-            --nav-back-btn-hover: #ba68c8;
-
-            /* ---------- Universal / Neutral ---------- */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
-
-            --correct-bg: #d4edda;
-            --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --bg-gradient: linear-gradient(135deg, #c1e0f0, #a8d4e8, #8fc4dc, #7ab8d4);
+            --content-bg: #f5fafd;
+            --card-bg: #ffffff;
+            --subsection-bg: #f0f7fc;
+            --rule-bg: #e8f2f8;
+            --example-bg: #deedf5;
+            --table-stripe: #ecf4fa;
+            --title-color: #1c5a7a;
+            --text-color: #1c4055;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #2c7da0;
+            --primary-hover: #1f5e7a;
+            --primary-light: #4896b8;
+            --accent: #3c8db0;
+            --exercise-number-gradient: linear-gradient(135deg, #2c7da0, #1f5e7a);
+            --rule-border: #2c7da0;
+            --example-border: #2c7da0;
+            --nav-btn-bg: #2c7da0;
+            --nav-btn-hover: #1f5e7a;
+            --nav-back-btn-bg: #4896b8;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #2c7da0;
+            --refract-divider-color: #8fbfd8;
+            --refract-translation-bg: #e0f0f8;
+            --refract-translation-border: #2c7da0;
+            --refract-english-color: #1c4055;
+            --section-divider: #c8dfec;
+            --card-border: #c8dfec;
+            --input-border: #a8c8dc;
+            --dashed-border: #a8c8dc;
+            --table-border: #bcd4e4;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #eef2f6;
+            --neutral-color: #4a6a7a;
+            --neutral-border: #b8d0dc;
+            --empty-input-border: #9cbdd0;
+            --empty-input-bg: #f2f8fc;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #2c7da0;
+            --language-selector-color: #1c4055;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
         }
-
-        body {
-            background: var(--bg-gradient);
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #1a3e52, #204a60, #265a74, #2c6a88);
+            --content-bg: #1a2e3a;
+            --card-bg: #223d4a;
+            --subsection-bg: #223d4a;
+            --rule-bg: #1a2e3a;
+            --example-bg: #1a2e3a;
+            --table-stripe: #1e3440;
+            --title-color: #9fd0e8;
+            --text-color: #d0e4f0;
+            --header-text: #d0e4f0;
+            --header-text-light: #a8c4d8;
+            --primary: #4aa0c4;
+            --primary-hover: #5cb0d4;
+            --primary-light: #4aa0c4;
+            --accent: #4aa0c4;
+            --rule-border: #4aa0c4;
+            --example-border: #4aa0c4;
+            --exercise-number-gradient: linear-gradient(135deg, #4aa0c4, #2c7da0);
+            --nav-btn-bg: #4aa0c4;
+            --nav-btn-hover: #2c7da0;
+            --nav-back-btn-bg: #5cb0d4;
+            --nav-back-btn-color: #0a202a;
+            --nav-back-btn-hover: #4aa0c4;
+            --refract-divider-color: #7ab8d4;
+            --refract-translation-bg: #2a5068;
+            --refract-translation-border: #7ab8d4;
+            --refract-english-color: #d4e8f4;
+            --section-divider: #26506a;
+            --card-border: #26506a;
+            --input-border: #3a6a82;
+            --dashed-border: #3a6a82;
+            --table-border: #2e5c74;
+            --white: #e0ecf4;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #263e4a;
+            --neutral-color: #b0ccdc;
+            --neutral-border: #3a6a82;
+            --empty-input-border: #3a6a82;
+            --empty-input-bg: #1a2e3a;
+            --language-selector-bg: #223d4a;
+            --language-selector-border: #4aa0c4;
+            --language-selector-color: #d0e4f0;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="futurePerfect2.title">Future Perfect Tense: Questions & Adverbs</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="futurePerfect2.subtitle">Learn to form questions and use time expressions correctly in the future perfect</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="futurePerfect2.title.line1">Future Perfect Tense: II:</div>
+                <div class="EH-conjugation-title-line" data-i18n="futurePerfect2.title.line2">Questions & Adverbs</div>
+                <div class="EH-conjugation-subtitle" data-i18n="futurePerfect2.title.line3">Questions and time expressions in the future perfect</div>
+                <div class="EH-conjugation-subtitle" data-i18n="futurePerfect2.title.line4">lesson: 2/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Introduction Section -->
+            <!-- Section 1: Forming Questions -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect2.introduction.title">Forming Questions in Future Perfect</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect2.formingQuestions.title">II. 1. Forming Questions in Future Perfect</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">❓</span>
-                        <span data-i18n="futurePerfect2.introduction.whatIs">How to Form Questions</span>
+                        <span data-i18n="futurePerfect2.formingQuestions.heading">Basic question structure and types</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.introduction.definitionTitle">Basic Question Structure:</div>
-                        <p data-i18n="futurePerfect2.introduction.definition">In the future perfect tense, we form questions by inverting the subject and the auxiliary verb "will". The main verb remains "have" + past participle.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.formingQuestions.desc1">📘 Basic Question Structure:</div>
+                        <p data-i18n="futurePerfect2.formingQuestions.desc2">In the future perfect tense, we form questions by inverting the subject and the auxiliary verb "will". The main verb remains "have" + past participle.</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.introduction.typesTitle">Types of Questions:</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.formingQuestions.typesTitle">📘 Types of Questions:</div>
                         <ul>
-                            <li data-i18n="futurePerfect2.introduction.type1">Yes/No Questions (Will + subject + have + past participle?)</li>
-                            <li data-i18n="futurePerfect2.introduction.type2">Wh- Questions (What, where, when, why, who, how + will + subject + have + past participle?)</li>
-                            <li data-i18n="futurePerfect2.introduction.type3">Negative Questions (Won't + subject + have + past participle?)</li>
+                            <li data-i18n="futurePerfect2.formingQuestions.type1"><strong>Yes/No Questions:</strong> Will + subject + have + past participle?</li>
+                            <li data-i18n="futurePerfect2.formingQuestions.type2"><strong>Wh- Questions:</strong> (What, where, when, why, who, how) + will + subject + have + past participle?</li>
+                            <li data-i18n="futurePerfect2.formingQuestions.type3"><strong>Negative Questions:</strong> Won't + subject + have + past participle?</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            
-            <!-- Questions with To Be -->
+            <!-- Section 2: Questions with To Be -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect2.toBeQuestions.title">Questions with "To Be" in Future Perfect</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect2.toBeQuestions.title">II. 2. Questions with "To Be" in Future Perfect</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="futurePerfect2.toBeQuestions.conjugation">Question Formation with "To Be"</span>
+                        <span class="EH-conjugation-subsection-icon">🧭</span>
+                        <span data-i18n="futurePerfect2.toBeQuestions.heading">Using will have been in questions</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.toBeQuestions.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="futurePerfect2.toBeQuestions.rule">With the verb "to be" in the future perfect, we use "will have been". To form questions, place "will" before the subject, followed by "have been".</p>
-                        <p data-i18n="futurePerfect2.toBeQuestions.formula">Formula: [Will] + [Subject] + [Have been] + [Rest of Sentence] + ?</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.toBeQuestions.desc1">📘 Formula:</div>
+                        <p data-i18n="futurePerfect2.toBeQuestions.desc2">[Will] + [Subject] + [Have been] + [Rest of Sentence] + ?</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
                         <thead>
-                             <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.statement">Statement</th>
-                                <th data-i18n="common.question">Question</th>
-                             </tr>
+                            <tr><th data-i18n="futurePerfect2.toBeQuestions.subject">Subject</th><th data-i18n="futurePerfect2.toBeQuestions.statement">Statement</th><th data-i18n="futurePerfect2.toBeQuestions.question">Question</th></tr>
                         </thead>
                         <tbody>
-                             <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="futurePerfect2.toBeQuestions.statementI">I will have been to London by then.</td>
-                                <td data-i18n="futurePerfect2.toBeQuestions.questionI">Will I have been to London by then?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="futurePerfect2.toBeQuestions.statementYou">You will have been very helpful.</td>
-                                <td data-i18n="futurePerfect2.toBeQuestions.questionYou">Will you have been very helpful?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="futurePerfect2.toBeQuestions.statementHe">He will have been sick for three days by tomorrow.</td>
-                                <td data-i18n="futurePerfect2.toBeQuestions.questionHe">Will he have been sick for three days by tomorrow?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="futurePerfect2.toBeQuestions.statementShe">She will have been a teacher for ten years next month.</td>
-                                <td data-i18n="futurePerfect2.toBeQuestions.questionShe">Will she have been a teacher for ten years next month?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="futurePerfect2.toBeQuestions.statementWe">We will have been friends for twenty years in 2025.</td>
-                                <td data-i18n="futurePerfect2.toBeQuestions.questionWe">Will we have been friends for twenty years in 2025?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="futurePerfect2.toBeQuestions.statementThey">They will have been married since 2010.</td>
-                                <td data-i18n="futurePerfect2.toBeQuestions.questionThey">Will they have been married since 2010?</td>
-                             </tr>
+                            <tr><td data-i18n="futurePerfect2.toBeQuestions.subjI">I</td><td data-i18n="futurePerfect2.toBeQuestions.stmtI">I will have been to London by then.</td><td data-i18n="futurePerfect2.toBeQuestions.quesI">Will I have been to London by then?</td></tr>
+                            <tr><td data-i18n="futurePerfect2.toBeQuestions.subjYou">You</td><td data-i18n="futurePerfect2.toBeQuestions.stmtYou">You will have been very helpful.</td><td data-i18n="futurePerfect2.toBeQuestions.quesYou">Will you have been very helpful?</td></tr>
+                            <tr><td data-i18n="futurePerfect2.toBeQuestions.subjHe">He</td><td data-i18n="futurePerfect2.toBeQuestions.stmtHe">He will have been sick for three days by tomorrow.</td><td data-i18n="futurePerfect2.toBeQuestions.quesHe">Will he have been sick for three days by tomorrow?</td></tr>
+                            <tr><td data-i18n="futurePerfect2.toBeQuestions.subjShe">She</td><td data-i18n="futurePerfect2.toBeQuestions.stmtShe">She will have been a teacher for ten years next month.</td><td data-i18n="futurePerfect2.toBeQuestions.quesShe">Will she have been a teacher for ten years next month?</td></tr>
+                            <tr><td data-i18n="futurePerfect2.toBeQuestions.subjWe">We</td><td data-i18n="futurePerfect2.toBeQuestions.stmtWe">We will have been friends for twenty years in 2025.</td><td data-i18n="futurePerfect2.toBeQuestions.quesWe">Will we have been friends for twenty years in 2025?</td></tr>
+                            <tr><td data-i18n="futurePerfect2.toBeQuestions.subjThey">They</td><td data-i18n="futurePerfect2.toBeQuestions.stmtThey">They will have been married since 2010.</td><td data-i18n="futurePerfect2.toBeQuestions.quesThey">Will they have been married since 2010?</td></tr>
                         </tbody>
                     </table>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.toBeQuestions.whTitle">Wh- Questions with "To Be":</div>
-                        <p data-i18n="futurePerfect2.toBeQuestions.whRule">For Wh- questions, place the question word at the beginning, then "will", subject, and "have been".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect2.toBeQuestions.whExample1">Where will you have been before the meeting?</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect2.toBeQuestions.whExample2">Why will she have been so quiet?</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect2.toBeQuestions.whExample3">How long will they have been married by then?</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.toBeQuestions.whTitle">📘 Wh- Questions with "To Be":</div>
+                        <p data-i18n="futurePerfect2.toBeQuestions.whDesc">Place the question word at the beginning, then "will", subject, and "have been". Examples: <em>Where will you have been before the meeting? Why will she have been so quiet? How long will they have been married by then?</em></p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Questions with To Have -->
+            <!-- Section 3: Questions with To Have -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect2.toHaveQuestions.title">Questions with "To Have" in Future Perfect</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect2.toHaveQuestions.title">II. 3. Questions with "To Have" in Future Perfect</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="futurePerfect2.toHaveQuestions.conjugation">Question Formation with "To Have"</span>
+                        <span class="EH-conjugation-subsection-icon">📦</span>
+                        <span data-i18n="futurePerfect2.toHaveQuestions.heading">Using will have had in questions</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.toHaveQuestions.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="futurePerfect2.toHaveQuestions.rule">"To have" in future perfect becomes "will have had". To form questions, place "will" before the subject, followed by "have had".</p>
-                        <p data-i18n="futurePerfect2.toHaveQuestions.formula">Formula: [Will] + [Subject] + [Have had] + [Rest of Sentence] + ?</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.toHaveQuestions.desc1">📘 Formula:</div>
+                        <p data-i18n="futurePerfect2.toHaveQuestions.desc2">[Will] + [Subject] + [Have had] + [Rest of Sentence] + ?</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                             <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.statement">Statement</th>
-                                <th data-i18n="common.question">Question</th>
-                             </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="futurePerfect2.toHaveQuestions.subject">Subject</th><th data-i18n="futurePerfect2.toHaveQuestions.statement">Statement</th><th data-i18n="futurePerfect2.toHaveQuestions.question">Question</th></tr></thead>
                         <tbody>
-                             <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="futurePerfect2.toHaveQuestions.statementI">I will have had breakfast by then.</td>
-                                <td data-i18n="futurePerfect2.toHaveQuestions.questionI">Will I have had breakfast by then?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="futurePerfect2.toHaveQuestions.statementYou">You will have had enough time.</td>
-                                <td data-i18n="futurePerfect2.toHaveQuestions.questionYou">Will you have had enough time?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="futurePerfect2.toHaveQuestions.statementHe">He will have had three cups of coffee by noon.</td>
-                                <td data-i18n="futurePerfect2.toHaveQuestions.questionHe">Will he have had three cups of coffee by noon?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="futurePerfect2.toHaveQuestions.statementShe">She will have had a similar experience.</td>
-                                <td data-i18n="futurePerfect2.toHaveQuestions.questionShe">Will she have had a similar experience?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="futurePerfect2.toHaveQuestions.statementWe">We will have had many opportunities.</td>
-                                <td data-i18n="futurePerfect2.toHaveQuestions.questionWe">Will we have had many opportunities?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="futurePerfect2.toHaveQuestions.statementThey">They will have had a lot of problems.</td>
-                                <td data-i18n="futurePerfect2.toHaveQuestions.questionThey">Will they have had a lot of problems?</td>
-                             </tr>
+                            <tr><td>I</td><td data-i18n="futurePerfect2.toHaveQuestions.stmtI">I will have had breakfast by then.</td><td data-i18n="futurePerfect2.toHaveQuestions.quesI">Will I have had breakfast by then?</td></tr>
+                            <tr><td>You</td><td data-i18n="futurePerfect2.toHaveQuestions.stmtYou">You will have had enough time.</td><td data-i18n="futurePerfect2.toHaveQuestions.quesYou">Will you have had enough time?</td></tr>
+                            <tr><td>He</td><td data-i18n="futurePerfect2.toHaveQuestions.stmtHe">He will have had three cups of coffee by noon.</td><td data-i18n="futurePerfect2.toHaveQuestions.quesHe">Will he have had three cups of coffee by noon?</td></tr>
+                            <tr><td>She</td><td data-i18n="futurePerfect2.toHaveQuestions.stmtShe">She will have had a similar experience.</td><td data-i18n="futurePerfect2.toHaveQuestions.quesShe">Will she have had a similar experience?</td></tr>
+                            <tr><td>We</td><td data-i18n="futurePerfect2.toHaveQuestions.stmtWe">We will have had many opportunities.</td><td data-i18n="futurePerfect2.toHaveQuestions.quesWe">Will we have had many opportunities?</td></tr>
+                            <tr><td>They</td><td data-i18n="futurePerfect2.toHaveQuestions.stmtThey">They will have had a lot of problems.</td><td data-i18n="futurePerfect2.toHaveQuestions.quesThey">Will they have had a lot of problems?</td></tr>
                         </tbody>
                     </table>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.toHaveQuestions.whTitle">Wh- Questions with "To Have":</div>
-                        <p data-i18n="futurePerfect2.toHaveQuestions.whRule">For Wh- questions, place the question word at the beginning, then "will", subject, and "have had".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect2.toHaveQuestions.whExample1">What will you have had for breakfast?</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect2.toHaveQuestions.whExample2">Where will she have had her car repaired?</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect2.toHaveQuestions.whExample3">How many interviews will they have had by Friday?</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.toHaveQuestions.whTitle">📘 Wh- Questions with "To Have":</div>
+                        <p data-i18n="futurePerfect2.toHaveQuestions.whDesc">Examples: <em>What will you have had for breakfast? Where will she have had her car repaired? How many interviews will they have had by Friday?</em></p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Questions with Other Verbs -->
+            <!-- Section 4: Questions with Other Verbs -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect2.otherVerbsQuestions.title">Questions with Other Verbs</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect2.otherVerbsQuestions.title">II. 4. Questions with Other Verbs</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📝</span>
-                        <span data-i18n="futurePerfect2.otherVerbsQuestions.conjugation">Question Formation with Regular & Irregular Verbs</span>
+                        <span class="EH-conjugation-subsection-icon">⚡</span>
+                        <span data-i18n="futurePerfect2.otherVerbsQuestions.heading">General question formation</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.otherVerbsQuestions.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="futurePerfect2.otherVerbsQuestions.rule">For all main verbs, we form questions by placing 'will' before the subject, followed by 'have' and the past participle.</p>
-                        <p data-i18n="futurePerfect2.otherVerbsQuestions.formula">Formula: [Will] + [Subject] + [Have] + [Past Participle] + [Rest of Sentence] + ?</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.otherVerbsQuestions.desc1">📘 Formula:</div>
+                        <p data-i18n="futurePerfect2.otherVerbsQuestions.desc2">[Will] + [Subject] + [Have] + [Past Participle] + [Rest of Sentence] + ?</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                             <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.statement">Statement</th>
-                                <th data-i18n="common.question">Question</th>
-                             </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="futurePerfect2.otherVerbsQuestions.subject">Subject</th><th data-i18n="futurePerfect2.otherVerbsQuestions.statement">Statement</th><th data-i18n="futurePerfect2.otherVerbsQuestions.question">Question</th></tr></thead>
                         <tbody>
-                             <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="futurePerfect2.otherVerbsQuestions.statementI">I will have finished my work.</td>
-                                <td data-i18n="futurePerfect2.otherVerbsQuestions.questionI">Will I have finished my work?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="futurePerfect2.otherVerbsQuestions.statementYou">You will have seen that movie.</td>
-                                <td data-i18n="futurePerfect2.otherVerbsQuestions.questionYou">Will you have seen that movie?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="futurePerfect2.otherVerbsQuestions.statementHe">He will have written a letter.</td>
-                                <td data-i18n="futurePerfect2.otherVerbsQuestions.questionHe">Will he have written a letter?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="futurePerfect2.otherVerbsQuestions.statementShe">She will have gone home.</td>
-                                <td data-i18n="futurePerfect2.otherVerbsQuestions.questionShe">Will she have gone home?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="futurePerfect2.otherVerbsQuestions.statementWe">We will have eaten dinner.</td>
-                                <td data-i18n="futurePerfect2.otherVerbsQuestions.questionWe">Will we have eaten dinner?</td>
-                             </tr>
-                             <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="futurePerfect2.otherVerbsQuestions.statementThey">They will have taken the bus.</td>
-                                <td data-i18n="futurePerfect2.otherVerbsQuestions.questionThey">Will they have taken the bus?</td>
-                             </tr>
+                            <tr><td>I</td><td data-i18n="futurePerfect2.otherVerbsQuestions.stmtI">I will have finished my work.</td><td data-i18n="futurePerfect2.otherVerbsQuestions.quesI">Will I have finished my work?</td></tr>
+                            <tr><td>You</td><td data-i18n="futurePerfect2.otherVerbsQuestions.stmtYou">You will have seen that movie.</td><td data-i18n="futurePerfect2.otherVerbsQuestions.quesYou">Will you have seen that movie?</td></tr>
+                            <tr><td>He</td><td data-i18n="futurePerfect2.otherVerbsQuestions.stmtHe">He will have written a letter.</td><td data-i18n="futurePerfect2.otherVerbsQuestions.quesHe">Will he have written a letter?</td></tr>
+                            <tr><td>She</td><td data-i18n="futurePerfect2.otherVerbsQuestions.stmtShe">She will have gone home.</td><td data-i18n="futurePerfect2.otherVerbsQuestions.quesShe">Will she have gone home?</td></tr>
+                            <tr><td>We</td><td data-i18n="futurePerfect2.otherVerbsQuestions.stmtWe">We will have eaten dinner.</td><td data-i18n="futurePerfect2.otherVerbsQuestions.quesWe">Will we have eaten dinner?</td></tr>
+                            <tr><td>They</td><td data-i18n="futurePerfect2.otherVerbsQuestions.stmtThey">They will have taken the bus.</td><td data-i18n="futurePerfect2.otherVerbsQuestions.quesThey">Will they have taken the bus?</td></tr>
                         </tbody>
                     </table>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.otherVerbsQuestions.whTitle">Wh- Questions with Other Verbs:</div>
-                        <p data-i18n="futurePerfect2.otherVerbsQuestions.whRule">For Wh- questions, place the question word at the beginning, then 'will', subject, 'have', and past participle.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect2.otherVerbsQuestions.whExample1">What will you have done by then?</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect2.otherVerbsQuestions.whExample2">Where will they have gone?</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect2.otherVerbsQuestions.whExample3">Why will she have left early?</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.otherVerbsQuestions.whTitle">📘 Wh- Questions with Other Verbs:</div>
+                        <p data-i18n="futurePerfect2.otherVerbsQuestions.whDesc">Examples: <em>What will you have done by then? Where will they have gone? Why will she have left early?</em></p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Time Expressions Section -->
+            <!-- Section 5: Time Expressions -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect2.adverbs.title">Time Expressions in Future Perfect</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect2.timeExpressions.title">II. 5. Time Expressions in Future Perfect</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⏱️</span>
-                        <span data-i18n="futurePerfect2.adverbs.whatAre">Common Time Expressions</span>
+                        <span class="EH-conjugation-subsection-icon">⏰</span>
+                        <span data-i18n="futurePerfect2.timeExpressions.heading">Common time expressions with the future perfect</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.adverbs.definitionTitle">Definition:</div>
-                        <p data-i18n="futurePerfect2.adverbs.definition">Time expressions help specify when an action will have been completed before another future moment. They are often used with the future perfect.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.timeExpressions.desc1">📘 Definition:</div>
+                        <p data-i18n="futurePerfect2.timeExpressions.desc2">Time expressions help specify when an action will have been completed before another future moment. They are often used with the future perfect.</p>
                     </div>
-                    
+                    <table class="EH-conjugation-table">
+                        <thead><tr><th data-i18n="futurePerfect2.timeExpressions.expression">Expression</th><th data-i18n="futurePerfect2.timeExpressions.meaning">Meaning</th><th data-i18n="futurePerfect2.timeExpressions.example">Example</th></tr></thead>
+                        <tbody>
+                            <tr><td>by + time</td><td>not later than</td><td data-i18n="futurePerfect2.timeExpressions.exByTime">I will have finished by 6 PM.</td></tr>
+                            <tr><td>by the time</td><td>before a specific event</td><td data-i18n="futurePerfect2.timeExpressions.exByTheTime">By the time you arrive, we will have left.</td></tr>
+                            <tr><td>already</td><td>before that time</td><td data-i18n="futurePerfect2.timeExpressions.exAlready">They will have already eaten.</td></tr>
+                            <tr><td>just</td><td>a very short time before</td><td data-i18n="futurePerfect2.timeExpressions.exJust">She will have just left.</td></tr>
+                            <tr><td>never</td><td>not at any time</td><td data-i18n="futurePerfect2.timeExpressions.exNever">He will have never seen snow.</td></tr>
+                            <tr><td>ever</td><td>at any time (questions)</td><td data-i18n="futurePerfect2.timeExpressions.exEver">Will you have ever visited Paris?</td></tr>
+                        </tbody>
+                    </table>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.adverbs.commonAdverbsTitle">Common Time Expressions:</div>
-                        <table class="EH-conjugation-table">
-                            <thead>
-                                 <tr>
-                                    <th data-i18n="futurePerfect2.adverbs.adverb">Expression</th>
-                                    <th data-i18n="futurePerfect2.adverbs.meaning">Meaning</th>
-                                    <th data-i18n="futurePerfect2.adverbs.example">Example</th>
-                                 </tr>
-                            </thead>
-                            <tbody>
-                                 <tr>
-                                    <td data-i18n="futurePerfect2.adverbs.by">by + time</td>
-                                    <td data-i18n="futurePerfect2.adverbs.byMeaning">not later than</td>
-                                    <td data-i18n="futurePerfect2.adverbs.byExample">I will have finished by 6 PM.</td>
-                                 </tr>
-                                 <tr>
-                                    <td data-i18n="futurePerfect2.adverbs.byTheTime">by the time</td>
-                                    <td data-i18n="futurePerfect2.adverbs.byTheTimeMeaning">before a specific event</td>
-                                    <td data-i18n="futurePerfect2.adverbs.byTheTimeExample">By the time you arrive, we will have left.</td>
-                                 </tr>
-                                 <tr>
-                                    <td data-i18n="futurePerfect2.adverbs.already">already</td>
-                                    <td data-i18n="futurePerfect2.adverbs.alreadyMeaning">before that time</td>
-                                    <td data-i18n="futurePerfect2.adverbs.alreadyExample">They will have already eaten.</td>
-                                 </tr>
-                                 <tr>
-                                    <td data-i18n="futurePerfect2.adverbs.just">just</td>
-                                    <td data-i18n="futurePerfect2.adverbs.justMeaning">a very short time before</td>
-                                    <td data-i18n="futurePerfect2.adverbs.justExample">She will have just left.</td>
-                                 </tr>
-                                 <tr>
-                                    <td data-i18n="futurePerfect2.adverbs.never">never</td>
-                                    <td data-i18n="futurePerfect2.adverbs.neverMeaning">not at any time</td>
-                                    <td data-i18n="futurePerfect2.adverbs.neverExample">He will have never seen snow.</td>
-                                 </tr>
-                                 <tr>
-                                    <td data-i18n="futurePerfect2.adverbs.ever">ever</td>
-                                    <td data-i18n="futurePerfect2.adverbs.everMeaning">at any time (questions)</td>
-                                    <td data-i18n="futurePerfect2.adverbs.everExample">Will you have ever visited Paris?</td>
-                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.adverbs.placementTitle">Placement:</div>
-                        <p data-i18n="futurePerfect2.adverbs.placementRule1">1. Adverbs like already, just, never, ever usually go after "will have" but before the past participle.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect2.adverbs.placementExample1">I will have already finished.</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect2.adverbs.placementExample2">She will have just arrived.</div>
-                        </div>
-                        <p data-i18n="futurePerfect2.adverbs.placementRule2">2. "By" phrases usually come at the end or beginning.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect2.adverbs.placementExample3">By tomorrow, we will have left.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect2.timeExpressions.placementTitle">📘 Placement:</div>
+                        <p data-i18n="futurePerfect2.timeExpressions.placementDesc">Adverbs like already, just, never, ever usually go after "will have" but before the past participle. Example: I will have already finished. / She will have just arrived. "By" phrases usually come at the end or beginning: By tomorrow, we will have left.</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Exercises Section -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect2.exercises.title">Practice Exercises</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #6c3483; margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect2.exercises.title">Practice: Questions & Time Expressions</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #6c3483; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #6c3483; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Answer Check and Score System -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
                         <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
                         <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see how you did!</p>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation Buttons -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-future-perfect-p1.html'">
-                    <span data-i18n="common.previousLesson">← Previous Lesson</span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">← Return to Conjugation</span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='EH-conj-future-perfect-p3.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson →</span>
-                </button>
-            </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations (full object for this page) -->
     <script>
         window.I18N = {
             en: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Subject", statement: "Statement", question: "Question",
-                    i: "I", you: "You", he: "He", she: "She", we: "We", they: "They",
-                    previousLesson: "← Previous Lesson",
-                    returnToConjugation: "← Return to Conjugation",
-                    nextLesson: "Next Lesson →"
-                },
-                footer: {
-                    developer: "Developer: Mejri Ziad",
-                    privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact"
-                },
+                common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
                 futurePerfect2: {
-                    title: "Future Perfect Tense: Questions & Adverbs",
-                    subtitle: "Learn to form questions and use time expressions correctly in the future perfect",
-                    introduction: {
-                        title: "Forming Questions in Future Perfect",
-                        whatIs: "How to Form Questions",
-                        definitionTitle: "Basic Question Structure:",
-                        definition: "In the future perfect tense, we form questions by inverting the subject and the auxiliary verb 'will'. The main verb remains 'have' + past participle.",
-                        typesTitle: "Types of Questions:",
-                        type1: "Yes/No Questions (Will + subject + have + past participle?)",
-                        type2: "Wh- Questions (What, where, when, why, who, how + will + subject + have + past participle?)",
-                        type3: "Negative Questions (Won't + subject + have + past participle?)"
-                    },
-                    toBeQuestions: {
-                        title: 'Questions with "To Be" in Future Perfect',
-                        conjugation: 'Question Formation with "To Be"',
-                        ruleTitle: "Step-by-Step Process:",
-                        rule: 'With the verb "to be" in the future perfect, we use "will have been". To form questions, place "will" before the subject, followed by "have been".',
-                        formula: "Formula: [Will] + [Subject] + [Have been] + [Rest of Sentence] + ?",
-                        statementI: "I will have been to London by then.",
-                        questionI: "Will I have been to London by then?",
-                        statementYou: "You will have been very helpful.",
-                        questionYou: "Will you have been very helpful?",
-                        statementHe: "He will have been sick for three days by tomorrow.",
-                        questionHe: "Will he have been sick for three days by tomorrow?",
-                        statementShe: "She will have been a teacher for ten years next month.",
-                        questionShe: "Will she have been a teacher for ten years next month?",
-                        statementWe: "We will have been friends for twenty years in 2025.",
-                        questionWe: "Will we have been friends for twenty years in 2025?",
-                        statementThey: "They will have been married since 2010.",
-                        questionThey: "Will they have been married since 2010?",
-                        whTitle: "Wh- Questions with 'To Be':",
-                        whRule: 'For Wh- questions, place the question word at the beginning, then "will", subject, and "have been".',
-                        whExample1: "Where will you have been before the meeting?",
-                        whExample2: "Why will she have been so quiet?",
-                        whExample3: "How long will they have been married by then?"
-                    },
-                    toHaveQuestions: {
-                        title: 'Questions with "To Have" in Future Perfect',
-                        conjugation: 'Question Formation with "To Have"',
-                        ruleTitle: "Step-by-Step Process:",
-                        rule: '"To have" in future perfect becomes "will have had". To form questions, place "will" before the subject, followed by "have had".',
-                        formula: "Formula: [Will] + [Subject] + [Have had] + [Rest of Sentence] + ?",
-                        statementI: "I will have had breakfast by then.",
-                        questionI: "Will I have had breakfast by then?",
-                        statementYou: "You will have had enough time.",
-                        questionYou: "Will you have had enough time?",
-                        statementHe: "He will have had three cups of coffee by noon.",
-                        questionHe: "Will he have had three cups of coffee by noon?",
-                        statementShe: "She will have had a similar experience.",
-                        questionShe: "Will she have had a similar experience?",
-                        statementWe: "We will have had many opportunities.",
-                        questionWe: "Will we have had many opportunities?",
-                        statementThey: "They will have had a lot of problems.",
-                        questionThey: "Will they have had a lot of problems?",
-                        whTitle: "Wh- Questions with 'To Have':",
-                        whRule: 'For Wh- questions, place the question word at the beginning, then "will", subject, and "have had".',
-                        whExample1: "What will you have had for breakfast?",
-                        whExample2: "Where will she have had her car repaired?",
-                        whExample3: "How many interviews will they have had by Friday?"
-                    },
-                    otherVerbsQuestions: {
-                        title: "Questions with Other Verbs",
-                        conjugation: "Question Formation with Regular & Irregular Verbs",
-                        ruleTitle: "Step-by-Step Process:",
-                        rule: "For all main verbs, we form questions by placing 'will' before the subject, followed by 'have' and the past participle.",
-                        formula: "Formula: [Will] + [Subject] + [Have] + [Past Participle] + [Rest of Sentence] + ?",
-                        statementI: "I will have finished my work.",
-                        questionI: "Will I have finished my work?",
-                        statementYou: "You will have seen that movie.",
-                        questionYou: "Will you have seen that movie?",
-                        statementHe: "He will have written a letter.",
-                        questionHe: "Will he have written a letter?",
-                        statementShe: "She will have gone home.",
-                        questionShe: "Will she have gone home?",
-                        statementWe: "We will have eaten dinner.",
-                        questionWe: "Will we have eaten dinner?",
-                        statementThey: "They will have taken the bus.",
-                        questionThey: "Will they have taken the bus?",
-                        whTitle: "Wh- Questions with Other Verbs:",
-                        whRule: "For Wh- questions, place the question word at the beginning, then 'will', subject, 'have', and past participle.",
-                        whExample1: "What will you have done by then?",
-                        whExample2: "Where will they have gone?",
-                        whExample3: "Why will she have left early?"
-                    },
-                    adverbs: {
-                        title: "Time Expressions in Future Perfect",
-                        whatAre: "Common Time Expressions",
-                        definitionTitle: "Definition:",
-                        definition: "Time expressions help specify when an action will have been completed before another future moment. They are often used with the future perfect.",
-                        commonAdverbsTitle: "Common Time Expressions:",
-                        adverb: "Expression", meaning: "Meaning", example: "Example",
-                        by: "by + time", byMeaning: "not later than", byExample: "I will have finished by 6 PM.",
-                        byTheTime: "by the time", byTheTimeMeaning: "before a specific event", byTheTimeExample: "By the time you arrive, we will have left.",
-                        already: "already", alreadyMeaning: "before that time", alreadyExample: "They will have already eaten.",
-                        just: "just", justMeaning: "a very short time before", justExample: "She will have just left.",
-                        never: "never", neverMeaning: "not at any time", neverExample: "He will have never seen snow.",
-                        ever: "ever", everMeaning: "at any time (questions)", everExample: "Will you have ever visited Paris?",
-                        placementTitle: "Placement:",
-                        placementRule1: "1. Adverbs like already, just, never, ever usually go after 'will have' but before the past participle.",
-                        placementExample1: "I will have already finished.",
-                        placementExample2: "She will have just arrived.",
-                        placementRule2: "2. 'By' phrases usually come at the end or beginning.",
-                        placementExample3: "By tomorrow, we will have left."
-                    },
+                    title: { line1: "Future Perfect Tense: II:", line2: "Questions & Adverbs", line3: "Questions and time expressions in the future perfect", line4: "lesson: 2/3" },
+                    formingQuestions: { title: "II. 1. Forming Questions in Future Perfect", heading: "Basic question structure and types", desc1: "📘 Basic Question Structure:", desc2: "In the future perfect tense, we form questions by inverting the subject and the auxiliary verb 'will'. The main verb remains 'have' + past participle.", typesTitle: "📘 Types of Questions:", type1: "Yes/No Questions: Will + subject + have + past participle?", type2: "Wh- Questions: (What, where, when, why, who, how) + will + subject + have + past participle?", type3: "Negative Questions: Won't + subject + have + past participle?" },
+                    toBeQuestions: { title: "II. 2. Questions with 'To Be' in Future Perfect", heading: "Using will have been in questions", desc1: "📘 Formula:", desc2: "[Will] + [Subject] + [Have been] + [Rest of Sentence] + ?", subject: "Subject", statement: "Statement", question: "Question", subjI: "I", stmtI: "I will have been to London by then.", quesI: "Will I have been to London by then?", subjYou: "You", stmtYou: "You will have been very helpful.", quesYou: "Will you have been very helpful?", subjHe: "He", stmtHe: "He will have been sick for three days by tomorrow.", quesHe: "Will he have been sick for three days by tomorrow?", subjShe: "She", stmtShe: "She will have been a teacher for ten years next month.", quesShe: "Will she have been a teacher for ten years next month?", subjWe: "We", stmtWe: "We will have been friends for twenty years in 2025.", quesWe: "Will we have been friends for twenty years in 2025?", subjThey: "They", stmtThey: "They will have been married since 2010.", quesThey: "Will they have been married since 2010?", whTitle: "📘 Wh- Questions with 'To Be':", whDesc: "Place the question word at the beginning, then 'will', subject, and 'have been'. Examples: Where will you have been before the meeting? Why will she have been so quiet? How long will they have been married by then?" },
+                    toHaveQuestions: { title: "II. 3. Questions with 'To Have' in Future Perfect", heading: "Using will have had in questions", desc1: "📘 Formula:", desc2: "[Will] + [Subject] + [Have had] + [Rest of Sentence] + ?", subject: "Subject", statement: "Statement", question: "Question", stmtI: "I will have had breakfast by then.", quesI: "Will I have had breakfast by then?", stmtYou: "You will have had enough time.", quesYou: "Will you have had enough time?", stmtHe: "He will have had three cups of coffee by noon.", quesHe: "Will he have had three cups of coffee by noon?", stmtShe: "She will have had a similar experience.", quesShe: "Will she have had a similar experience?", stmtWe: "We will have had many opportunities.", quesWe: "Will we have had many opportunities?", stmtThey: "They will have had a lot of problems.", quesThey: "Will they have had a lot of problems?", whTitle: "📘 Wh- Questions with 'To Have':", whDesc: "Examples: What will you have had for breakfast? Where will she have had her car repaired? How many interviews will they have had by Friday?" },
+                    otherVerbsQuestions: { title: "II. 4. Questions with Other Verbs", heading: "General question formation", desc1: "📘 Formula:", desc2: "[Will] + [Subject] + [Have] + [Past Participle] + [Rest of Sentence] + ?", subject: "Subject", statement: "Statement", question: "Question", stmtI: "I will have finished my work.", quesI: "Will I have finished my work?", stmtYou: "You will have seen that movie.", quesYou: "Will you have seen that movie?", stmtHe: "He will have written a letter.", quesHe: "Will he have written a letter?", stmtShe: "She will have gone home.", quesShe: "Will she have gone home?", stmtWe: "We will have eaten dinner.", quesWe: "Will we have eaten dinner?", stmtThey: "They will have taken the bus.", quesThey: "Will they have taken the bus?", whTitle: "📘 Wh- Questions with Other Verbs:", whDesc: "Examples: What will you have done by then? Where will they have gone? Why will she have left early?" },
+                    timeExpressions: { title: "II. 5. Time Expressions in Future Perfect", heading: "Common time expressions with the future perfect", desc1: "📘 Definition:", desc2: "Time expressions help specify when an action will have been completed before another future moment. They are often used with the future perfect.", expression: "Expression", meaning: "Meaning", example: "Example", exByTime: "I will have finished by 6 PM.", exByTheTime: "By the time you arrive, we will have left.", exAlready: "They will have already eaten.", exJust: "She will have just left.", exNever: "He will have never seen snow.", exEver: "Will you have ever visited Paris?", placementTitle: "📘 Placement:", placementDesc: "Adverbs like already, just, never, ever usually go after 'will have' but before the past participle. Example: I will have already finished. / She will have just arrived. 'By' phrases usually come at the end or beginning: By tomorrow, we will have left." },
                     exercises: {
-                        title: "Practice Exercises",
-                        q1Sentence: "______ you have finished your work by then?",
-                        q1a: "Will", q1b: "Have", q1c: "Did",
-                        q2Sentence: "______ she have been to Paris before 2026?",
-                        q2a: "Has", q2b: "Will", q2c: "Had",
-                        q3Sentence: "______ they have had breakfast by then?",
-                        q3a: "Will", q3b: "Have", q3c: "Had",
-                        q4Sentence: "They ______ left by tomorrow.",
-                        q4a: "will have already", q4b: "will already have", q4c: "already will have",
-                        q5Sentence: "We will have left ______ you arrive.",
-                        q5a: "by the time", q5b: "while", q5c: "during",
-                        q6Sentence: "______ will you have done by 2026?",
-                        q6a: "What", q6b: "Where", q6c: "When",
-                        q7Sentence: "______ you have finished the report by Monday?",
-                        q8Sentence: "Where ______ she have gone by then?",
-                        q9Sentence: "By noon, I will have ______ finished. (before that time)",
-                        q10: "Arrange the question:",
-                        q11: "Arrange the negative question:",
-                        q12: "Arrange the Wh- question:"
+                        title: "Practice: Questions & Time Expressions",
+                        q1: "______ you have finished your work by then?", q1a: "Will", q1b: "Have", q1c: "Did",
+                        q2: "______ she have been to Paris before 2026?", q2a: "Has", q2b: "Will", q2c: "Had",
+                        q3: "______ they have had breakfast by then?", q3a: "Will", q3b: "Have", q3c: "Had",
+                        q4: "They ______ left by tomorrow.", q4a: "will have already", q4b: "will already have", q4c: "already will have",
+                        q5: "We will have left ______ you arrive.", q5a: "by the time", q5b: "while", q5c: "during",
+                        q6: "______ will you have done by 2026?", q6a: "What", q6b: "Where", q6c: "When",
+                        q7: "______ you have finished the report by Monday?",
+                        q8: "Where ______ she have gone by then?",
+                        q9: "By noon, I will have ______ finished.",
+                        q10: "Arrange: (Will / you / have / finished / ?)",
+                        q11: "Arrange negative question: (Won't / they / have / arrived / by then / ?)",
+                        q12: "Arrange Wh- question: (What / will / she / have / done / ?)"
                     }
                 }
             },
             fr: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "Sujet",
-statement: "Affirmation",
-question: "Question",
-i: "Je",
-you: "Vous",
-he: "Il",
-she: "Elle",
-we: "Nous",
-they: "Ils/Elles",
-                    previousLesson: "← Leçon Précédente",
-                    returnToConjugation: "← Retour à la Conjugaison",
-                    nextLesson: "Leçon Suivante →"
-                },
-                footer: {
-                    developer: "Développeur : Mejri Ziad",
-                    privacy: "Politique de confidentialité",
-                    terms: "Conditions d'utilisation",
-                    contact: "Contact"
-                },
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
+                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
                 futurePerfect2: {
-                    title: "Future Perfect Tense: Questions & Adverbs (Future Perfect : Questions et adverbes)",
-                    subtitle: "Learn to form questions and use time expressions correctly in the future perfect (Apprenez à former des questions et à utiliser les expressions de temps au future perfect)",
-                    introduction: {
-                        title: "Forming Questions in Future Perfect (Former des questions au future perfect)",
-                        whatIs: "How to Form Questions (Comment former des questions)",
-                        definitionTitle: "Basic Question Structure: (Structure de base des questions :)",
-                        definition: "In the future perfect tense, we form questions by inverting the subject and the auxiliary verb 'will'. The main verb remains 'have' + past participle. (Au future perfect, on forme les questions en inversant le sujet et l'auxiliaire 'will'. Le verbe principal reste 'have' + participe passé.)",
-                        typesTitle: "Types of Questions: (Types de questions :)",
-                        type1: "Yes/No Questions (Will + subject + have + past participle?) (Questions fermées (Will + sujet + have + participe passé ?))",
-                        type2: "Wh- Questions (What, where, when, why, who, how + will + subject + have + past participle?) (Questions avec mots interrogatifs (What, where, when, why, who, how + will + sujet + have + participe passé ?))",
-                        type3: "Negative Questions (Won't + subject + have + past participle?) (Questions négatives (Won't + sujet + have + participe passé ?))"
-                    },
-                    toBeQuestions: {
-                        title: 'Questions with "To Be" in Future Perfect (Questions avec "Être" au future perfect)',
-                        conjugation: 'Question Formation with "To Be" (Formation des questions avec "Être")',
-                        ruleTitle: "Step-by-Step Process: (Processus étape par étape :)",
-                        rule: 'With the verb "to be" in the future perfect, we use "will have been". To form questions, place "will" before the subject, followed by "have been". (Avec le verbe "être" au future perfect, on utilise "will have been". Pour former une question, placez "will" avant le sujet, suivi de "have been".)',
-                        formula: "Formula: [Will] + [Subject] + [Have been] + [Rest of Sentence] + ? (Formule : [Will] + [Sujet] + [Have been] + [Reste de la phrase] + ?)",
-                        statementI: "I will have been to London by then. (Je serai allé à Londres d'ici là.)",
-                        questionI: "Will I have been to London by then? (Serai-je allé à Londres d'ici là ?)",
-                        statementYou: "You will have been very helpful. (Vous aurez été très utile.)",
-                        questionYou: "Will you have been very helpful? (Aurez-vous été très utile ?)",
-                        statementHe: "He will have been sick for three days by tomorrow. (Il aura été malade pendant trois jours d'ici demain.)",
-                        questionHe: "Will he have been sick for three days by tomorrow? (Aura-t-il été malade pendant trois jours d'ici demain ?)",
-                        statementShe: "She will have been a teacher for ten years next month. (Elle sera enseignante depuis dix ans le mois prochain.)",
-                        questionShe: "Will she have been a teacher for ten years next month? (Sera-t-elle enseignante depuis dix ans le mois prochain ?)",
-                        statementWe: "We will have been friends for twenty years in 2025. (Nous serons amis depuis vingt ans en 2025.)",
-                        questionWe: "Will we have been friends for twenty years in 2025? (Serons-nous amis depuis vingt ans en 2025 ?)",
-                        statementThey: "They will have been married since 2010. (Ils seront mariés depuis 2010.)",
-                        questionThey: "Will they have been married since 2010? (Seront-ils mariés depuis 2010 ?)",
-                        whTitle: "Wh- Questions with 'To Be': (Questions en Wh- avec 'Être' :)",
-                        whRule: 'For Wh- questions, place the question word at the beginning, then "will", subject, and "have been". (Placez le mot interrogatif au début, puis "will", sujet, et "have been".)',
-                        whExample1: "Where will you have been before the meeting? (Où aurez-vous été avant la réunion ?)",
-                        whExample2: "Why will she have been so quiet? (Pourquoi aura-t-elle été si silencieuse ?)",
-                        whExample3: "How long will they have been married by then? (Depuis combien de temps seront-ils mariés d'ici là ?)"
-                    },
-                    toHaveQuestions: {
-                        title: 'Questions with "To Have" in Future Perfect (Questions avec "Avoir" au future perfect)',
-                        conjugation: 'Question Formation with "To Have" (Formation des questions avec "Avoir")',
-                        ruleTitle: "Step-by-Step Process: (Processus étape par étape :)",
-                        rule: '"To have" in future perfect becomes "will have had". To form questions, place "will" before the subject, followed by "have had". ("Avoir" au future perfect devient "will have had". Pour former une question, placez "will" avant le sujet, suivi de "have had".)',
-                        formula: "Formula: [Will] + [Subject] + [Have had] + [Rest of Sentence] + ? (Formule : [Will] + [Sujet] + [Have had] + [Reste de la phrase] + ?)",
-                        statementI: "I will have had breakfast by then. (J'aurai pris le petit-déjeuner d'ici là.)",
-                        questionI: "Will I have had breakfast by then? (Aurai-je pris le petit-déjeuner d'ici là ?)",
-                        statementYou: "You will have had enough time. (Vous aurez eu assez de temps.)",
-                        questionYou: "Will you have had enough time? (Aurez-vous eu assez de temps ?)",
-                        statementHe: "He will have had three cups of coffee by noon. (Il aura bu trois tasses de café d'ici midi.)",
-                        questionHe: "Will he have had three cups of coffee by noon? (Aura-t-il bu trois tasses de café d'ici midi ?)",
-                        statementShe: "She will have had a similar experience. (Elle aura eu une expérience similaire.)",
-                        questionShe: "Will she have had a similar experience? (Aura-t-elle eu une expérience similaire ?)",
-                        statementWe: "We will have had many opportunities. (Nous aurons eu de nombreuses opportunités.)",
-                        questionWe: "Will we have had many opportunities? (Aurons-nous eu de nombreuses opportunités ?)",
-                        statementThey: "They will have had a lot of problems. (Ils auront eu beaucoup de problèmes.)",
-                        questionThey: "Will they have had a lot of problems? (Auront-ils eu beaucoup de problèmes ?)",
-                        whTitle: "Wh- Questions with 'To Have': (Questions en Wh- avec 'Avoir' :)",
-                        whRule: 'For Wh- questions, place the question word at the beginning, then "will", subject, and "have had". (Placez le mot interrogatif au début, puis "will", sujet, et "have had".)',
-                        whExample1: "What will you have had for breakfast? (Qu'aurez-vous pris au petit-déjeuner ?)",
-                        whExample2: "Where will she have had her car repaired? (Où aura-t-elle fait réparer sa voiture ?)",
-                        whExample3: "How many interviews will they have had by Friday? (Combien d'entretiens auront-ils eus d'ici vendredi ?)"
-                    },
-                    otherVerbsQuestions: {
-                        title: "Questions with Other Verbs (Questions avec d'autres verbes)",
-                        conjugation: "Question Formation with Regular & Irregular Verbs (Formation des questions avec verbes réguliers et irréguliers)",
-                        ruleTitle: "Step-by-Step Process: (Processus étape par étape :)",
-                        rule: "For all main verbs, we form questions by placing 'will' before the subject, followed by 'have' and the past participle. (Pour tous les verbes principaux, on forme les questions en plaçant 'will' avant le sujet, suivi de 'have' et du participe passé.)",
-                        formula: "Formula: [Will] + [Subject] + [Have] + [Past Participle] + [Rest of Sentence] + ? (Formule : [Will] + [Sujet] + [Have] + [Participe passé] + [Reste de la phrase] + ?)",
-                        statementI: "I will have finished my work. (J'aurai fini mon travail.)",
-                        questionI: "Will I have finished my work? (Aurai-je fini mon travail ?)",
-                        statementYou: "You will have seen that movie. (Vous aurez vu ce film.)",
-                        questionYou: "Will you have seen that movie? (Aurez-vous vu ce film ?)",
-                        statementHe: "He will have written a letter. (Il aura écrit une lettre.)",
-                        questionHe: "Will he have written a letter? (Aura-t-il écrit une lettre ?)",
-                        statementShe: "She will have gone home. (Elle sera rentrée chez elle.)",
-                        questionShe: "Will she have gone home? (Sera-t-elle rentrée chez elle ?)",
-                        statementWe: "We will have eaten dinner. (Nous aurons dîné.)",
-                        questionWe: "Will we have eaten dinner? (Aurons-nous dîné ?)",
-                        statementThey: "They will have taken the bus. (Ils auront pris le bus.)",
-                        questionThey: "Will they have taken the bus? (Auront-ils pris le bus ?)",
-                        whTitle: "Wh- Questions with Other Verbs: (Questions en Wh- avec d'autres verbes :)",
-                        whRule: "For Wh- questions, place the question word at the beginning, then 'will', subject, 'have', and past participle. (Placez le mot interrogatif au début, puis 'will', sujet, 'have', et participe passé.)",
-                        whExample1: "What will you have done by then? (Qu'aurez-vous fait d'ici là ?)",
-                        whExample2: "Where will they have gone? (Où seront-ils allés ?)",
-                        whExample3: "Why will she have left early? (Pourquoi sera-t-elle partie tôt ?)"
-                    },
-                    adverbs: {
-                        title: "Time Expressions in Future Perfect (Expressions de temps au future perfect)",
-                        whatAre: "Common Time Expressions (Expressions courantes)",
-                        definitionTitle: "Definition: (Définition :)",
-                        definition: "Time expressions help specify when an action will have been completed before another future moment. They are often used with the future perfect. (Les expressions de temps précisent quand une action aura été terminée avant un autre moment futur. Elles sont souvent utilisées avec le future perfect.)",
-                        commonAdverbsTitle: "Common Time Expressions: (Expressions courantes :)",
-                        adverb: "Expression (Expression)", meaning: "Meaning (Signification)", example: "Example (Exemple)",
-                        by: "by + time (by + moment)", byMeaning: "not later than (au plus tard)", byExample: "I will have finished by 6 PM. (J'aurai fini à 18h.)",
-                        byTheTime: "by the time (by the time)", byTheTimeMeaning: "before a specific event (avant un événement spécifique)", byTheTimeExample: "By the time you arrive, we will have left. (Quand vous arriverez, nous serons partis.)",
-                        already: "already (déjà)", alreadyMeaning: "before that time (avant ce moment)", alreadyExample: "They will have already eaten. (Ils auront déjà mangé.)",
-                        just: "just (venir de)", justMeaning: "a very short time before (très peu de temps avant)", justExample: "She will have just left. (Elle viendra de partir.)",
-                        never: "never (jamais)", neverMeaning: "not at any time (à aucun moment)", neverExample: "He will have never seen snow. (Il n'aura jamais vu de neige.)",
-                        ever: "ever (déjà)", everMeaning: "at any time (questions) (à un moment (questions))", everExample: "Will you have ever visited Paris? (Aurez-vous déjà visité Paris ?)",
-                        placementTitle: "Placement: (Placement :)",
-                        placementRule1: "1. Adverbs like already, just, never, ever usually go after 'will have' but before the past participle. (1. Les adverbes comme already, just, never, ever se placent généralement après 'will have' mais avant le participe passé.)",
-                        placementExample1: "I will have already finished. (J'aurai déjà fini.)",
-                        placementExample2: "She will have just arrived. (Elle viendra d'arriver.)",
-                        placementRule2: "2. 'By' phrases usually come at the end or beginning. (2. Les expressions avec 'by' se placent généralement à la fin ou au début.)",
-                        placementExample3: "By tomorrow, we will have left. (D'ici demain, nous serons partis.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (Exercices pratiques)",
-                        q1Sentence: "______ you have finished your work by then? (______ vous ayez fini votre travail d'ici là ?)",
-                        q1a: "Will (Will)", q1b: "Have (Have)", q1c: "Did (Did)",
-                        q2Sentence: "______ she have been to Paris before 2026? (______ elle soit allée à Paris avant 2026 ?)",
-                        q2a: "Has (Has)", q2b: "Will (Will)", q2c: "Had (Had)",
-q3Sentence: "______ they have had breakfast by then? (______ ils aient pris le petit-déjeuner d'ici là ?)",
-q3a: "Will (Will)", q3b: "Have (Have)", q3c: "Had (Had)",
-q4Sentence: "They ______ left by tomorrow. (Ils ______ partis d'ici demain.)",
-q4a: "will have already (will have already)", q4b: "will already have (will already have)", q4c: "already will have (already will have)",
-q5Sentence: "We will have left ______ you arrive. (Nous serons partis ______ vous arriviez.)",
-q5a: "by the time (by the time)", q5b: "while (while)", q5c: "during (during)",
-q6Sentence: "______ will you have done by 2026? (______ aurez-vous fait d'ici 2026 ?)",
-q6a: "What (What)", q6b: "Where (Where)", q6c: "When (When)",
-q7Sentence: "______ you have finished the report by Monday? (______ vous ayez fini le rapport pour lundi ?)",
-q8Sentence: "Where ______ she have gone by then? (Où ______ elle soit allée d'ici là ?)",
-q9Sentence: "By noon, I will have ______ finished. (before that time) (À midi, j'aurai ______ fini. (avant ce moment))",
-q10: "Arrange the question: (Remettez la question dans l'ordre :)",
-q11: "Arrange the negative question: (Remettez la question négative dans l'ordre :)",
-q12: "Arrange the Wh- question: (Remettez la question en Wh- dans l'ordre :)"
-                    }
+                    title: { line1: "Futur antérieur II :", line2: "Questions et adverbes", line3: "Questions et expressions de temps au futur antérieur", line4: "leçon : 2/3" },
+                    formingQuestions: { title: "II. 1. Former des questions au futur antérieur", heading: "Structure de base et types de questions", desc1: "📘 Structure de base :", desc2: "Au futur antérieur, on forme les questions en inversant le sujet et l'auxiliaire 'will'. Le verbe principal reste 'have' + participe passé.", typesTitle: "📘 Types de questions :", type1: "Questions fermées : Will + sujet + have + participe passé ?", type2: "Questions ouvertes : (What, where, when, why, who, how) + will + sujet + have + participe passé ?", type3: "Questions négatives : Won't + sujet + have + participe passé ?" },
+                    toBeQuestions: { title: "II. 2. Questions avec 'To Be' au futur antérieur", heading: "Utiliser will have been dans les questions", desc1: "📘 Formule :", desc2: "[Will] + [Sujet] + [Have been] + [Reste de la phrase] + ?", subject: "Sujet", statement: "Déclaration", question: "Question", subjI: "Je", stmtI: "J'aurai été à Londres d'ici là.", quesI: "Aurai-je été à Londres d'ici là ?", subjYou: "Tu", stmtYou: "Tu auras été très utile.", quesYou: "Auras-tu été très utile ?", subjHe: "Il", stmtHe: "Il aura été malade pendant trois jours demain.", quesHe: "Aura-t-il été malade pendant trois jours demain ?", subjShe: "Elle", stmtShe: "Elle aura été enseignante pendant dix ans le mois prochain.", quesShe: "Aura-t-elle été enseignante pendant dix ans le mois prochain ?", subjWe: "Nous", stmtWe: "Nous aurons été amis pendant vingt ans en 2025.", quesWe: "Aurons-nous été amis pendant vingt ans en 2025 ?", subjThey: "Ils/Elles", stmtThey: "Ils auront été mariés depuis 2010.", quesThey: "Auront-ils été mariés depuis 2010 ?", whTitle: "📘 Questions ouvertes avec 'To Be' :", whDesc: "Placez le mot interrogatif au début, puis 'will', le sujet, et 'have been'. Exemples : Où auras-tu été avant la réunion ? Pourquoi aura-t-elle été si silencieuse ? Depuis combien de temps seront-ils mariés d'ici là ?" },
+                    toHaveQuestions: { title: "II. 3. Questions avec 'To Have' au futur antérieur", heading: "Utiliser will have had dans les questions", desc1: "📘 Formule :", desc2: "[Will] + [Sujet] + [Have had] + [Reste de la phrase] + ?", subject: "Sujet", statement: "Déclaration", question: "Question", stmtI: "J'aurai pris mon petit-déjeuner d'ici là.", quesI: "Aurai-je pris mon petit-déjeuner d'ici là ?", stmtYou: "Tu auras eu assez de temps.", quesYou: "Auras-tu eu assez de temps ?", stmtHe: "Il aura bu trois tasses de café à midi.", quesHe: "Aura-t-il bu trois tasses de café à midi ?", stmtShe: "Elle aura eu une expérience similaire.", quesShe: "Aura-t-elle eu une expérience similaire ?", stmtWe: "Nous aurons eu beaucoup d'opportunités.", quesWe: "Aurons-nous eu beaucoup d'opportunités ?", stmtThey: "Ils auront eu beaucoup de problèmes.", quesThey: "Auront-ils eu beaucoup de problèmes ?", whTitle: "📘 Questions ouvertes avec 'To Have' :", whDesc: "Exemples : Qu'auras-tu mangé au petit-déjeuner ? Où aura-t-elle fait réparer sa voiture ? Combien d'entretiens auront-ils passés d'ici vendredi ?" },
+                    otherVerbsQuestions: { title: "II. 4. Questions avec d'autres verbes", heading: "Formation générale des questions", desc1: "📘 Formule :", desc2: "[Will] + [Sujet] + [Have] + [Participe passé] + [Reste de la phrase] + ?", subject: "Sujet", statement: "Déclaration", question: "Question", stmtI: "J'aurai fini mon travail.", quesI: "Aurai-je fini mon travail ?", stmtYou: "Tu auras vu ce film.", quesYou: "Auras-tu vu ce film ?", stmtHe: "Il aura écrit une lettre.", quesHe: "Aura-t-il écrit une lettre ?", stmtShe: "Elle sera rentrée chez elle.", quesShe: "Sera-t-elle rentrée chez elle ?", stmtWe: "Nous aurons dîné.", quesWe: "Aurons-nous dîné ?", stmtThey: "Ils auront pris le bus.", quesThey: "Auront-ils pris le bus ?", whTitle: "📘 Questions ouvertes avec d'autres verbes :", whDesc: "Exemples : Qu'auras-tu fait d'ici là ? Où seront-ils allés ? Pourquoi sera-t-elle partie tôt ?" },
+                    timeExpressions: { title: "II. 5. Expressions de temps au futur antérieur", heading: "Expressions de temps courantes avec le futur antérieur", desc1: "📘 Définition :", desc2: "Les expressions de temps aident à préciser quand une action sera achevée avant un autre moment futur. Elles sont souvent utilisées avec le futur antérieur.", expression: "Expression", meaning: "Signification", example: "Exemple", exByTime: "J'aurai fini d'ici 18h.", exByTheTime: "Au moment où tu arriveras, nous serons partis.", exAlready: "Ils auront déjà mangé.", exJust: "Elle viendra de partir.", exNever: "Il n'aura jamais vu la neige.", exEver: "Auras-tu jamais visité Paris ?", placementTitle: "📘 Placement :", placementDesc: "Les adverbes comme already, just, never, ever se placent généralement après 'will have' mais avant le participe passé. Exemple : I will have already finished. / She will have just arrived. Les phrases avec 'by' viennent généralement à la fin ou au début." }
                 }
             },
             ar: {
-                common: {
-                    siteName: "English Hub",
-                    subject: "الفاعل",
-statement: "جملة خبرية",
-question: "سؤال",
-i: "أنا",
-you: "أنت",
-he: "هو",
-she: "هي",
-we: "نحن",
-they: "هم",
-                    previousLesson: "← الدرس السابق",
-                    returnToConjugation: "← العودة إلى التصريف",
-                    nextLesson: "الدرس التالي →"
-                },
-                footer: {
-                    developer: "المطور: ماجري زياد",
-                    privacy: "سياسة الخصوصية",
-                    terms: "شروط الخدمة",
-                    contact: "اتصل بنا"
-                },
-                futurePerfect2: {
-                    title: "Future Perfect Tense: Questions & Adverbs (المستقبل التام: الأسئلة وظروف الزمن)",
-                    subtitle: "Learn to form questions and use time expressions correctly in the future perfect (تعلّم تكوين الأسئلة واستخدام تعبيرات الوقت بشكل صحيح في المستقبل التام)",
-                    introduction: {
-                        title: "Forming Questions in Future Perfect (تكوين الأسئلة في المستقبل التام)",
-                        whatIs: "How to Form Questions (كيفية تكوين الأسئلة)",
-                        definitionTitle: "Basic Question Structure: (الهيكل الأساسي للسؤال:)",
-                        definition: "In the future perfect tense, we form questions by inverting the subject and the auxiliary verb 'will'. The main verb remains 'have' + past participle. (في زمن المستقبل التام، نشكل الأسئلة بقلب الفاعل والفعل المساعد 'will'. يبقى الفعل الرئيسي 'have' + التصريف الثالث.)",
-                        typesTitle: "Types of Questions: (أنواع الأسئلة:)",
-                        type1: "Yes/No Questions (Will + subject + have + past participle?) (أسئلة نعم/لا (Will + فاعل + have + التصريف الثالث؟))",
-                        type2: "Wh- Questions (What, where, when, why, who, how + will + subject + have + past participle?) (أسئلة بأدوات الاستفهام (ماذا، أين، لماذا... + will + فاعل + have + التصريف الثالث؟))",
-                        type3: "Negative Questions (Won't + subject + have + past participle?) (أسئلة منفية (Won't + فاعل + have + التصريف الثالث؟))"
-                    },
-                    toBeQuestions: {
-                        title: 'Questions with "To Be" in Future Perfect (الأسئلة مع فعل "يكون" في المستقبل التام)',
-                        conjugation: 'Question Formation with "To Be" (تكوين الأسئلة مع "يكون")',
-                        ruleTitle: "Step-by-Step Process: (الخطوات:)",
-                        rule: 'With the verb "to be" in the future perfect, we use "will have been". To form questions, place "will" before the subject, followed by "have been". (مع الفعل "يكون" في المستقبل التام، نستخدم "will have been". لتكوين سؤال، نضع "will" قبل الفاعل، يليه "have been".)',
-                        formula: "Formula: [Will] + [Subject] + [Have been] + [Rest of Sentence] + ? (الصيغة: [Will] + [الفاعل] + [Have been] + [باقي الجملة] + ؟)",
-                        statementI: "I will have been to London by then. (سأكون قد زرت لندن بحلول ذلك الوقت.)",
-                        questionI: "Will I have been to London by then? (هل سأكون قد زرت لندن بحلول ذلك الوقت؟)",
-                        statementYou: "You will have been very helpful. (ستكون قد كنت مفيدًا جدًا.)",
-                        questionYou: "Will you have been very helpful? (هل ستكون قد كنت مفيدًا جدًا؟)",
-                        statementHe: "He will have been sick for three days by tomorrow. (سيكون قد مرض لمدة ثلاثة أيام بحلول الغد.)",
-                        questionHe: "Will he have been sick for three days by tomorrow? (هل سيكون قد مرض لمدة ثلاثة أيام بحلول الغد؟)",
-                        statementShe: "She will have been a teacher for ten years next month. (ستكون قد كانت معلمة لمدة عشر سنوات الشهر القادم.)",
-                        questionShe: "Will she have been a teacher for ten years next month? (هل ستكون قد كانت معلمة لمدة عشر سنوات الشهر القادم؟)",
-                        statementWe: "We will have been friends for twenty years in 2025. (سنكون قد كنا أصدقاء لمدة عشرين عامًا في 2025.)",
-                        questionWe: "Will we have been friends for twenty years in 2025? (هل سنكون قد كنا أصدقاء لمدة عشرين عامًا في 2025؟)",
-                        statementThey: "They will have been married since 2010. (سيكونون متزوجين منذ عام 2010.)",
-                        questionThey: "Will they have been married since 2010? (هل سيكونون متزوجين منذ عام 2010؟)",
-                        whTitle: "Wh- Questions with 'To Be': (أسئلة Wh- مع 'يكون':)",
-                        whRule: 'For Wh- questions, place the question word at the beginning, then "will", subject, and "have been". (ضع أداة الاستفهام في البداية، ثم "will"، الفاعل، و "have been".)',
-                        whExample1: "Where will you have been before the meeting? (أين ستكون قد كنت قبل الاجتماع؟)",
-                        whExample2: "Why will she have been so quiet? (لماذا ستكون قد كانت هادئة جدًا؟)",
-                        whExample3: "How long will they have been married by then? (منذ متى سيكونون متزوجين بحلول ذلك الوقت؟)"
-                    },
-                    toHaveQuestions: {
-                        title: 'Questions with "To Have" in Future Perfect (الأسئلة مع فعل "يملك" في المستقبل التام)',
-                        conjugation: 'Question Formation with "To Have" (تكوين الأسئلة مع "يملك")',
-                        ruleTitle: "Step-by-Step Process: (الخطوات:)",
-                        rule: '"To have" in future perfect becomes "will have had". To form questions, place "will" before the subject, followed by "have had". ("يملك" في المستقبل التام يصبح "will have had". لتكوين سؤال، نضع "will" قبل الفاعل، يليه "have had".)',
-                        formula: "Formula: [Will] + [Subject] + [Have had] + [Rest of Sentence] + ? (الصيغة: [Will] + [الفاعل] + [Have had] + [باقي الجملة] + ؟)",
-                        statementI: "I will have had breakfast by then. (سأكون قد تناولت الإفطار بحلول ذلك الوقت.)",
-                        questionI: "Will I have had breakfast by then? (هل سأكون قد تناولت الإفطار بحلول ذلك الوقت؟)",
-                        statementYou: "You will have had enough time. (سيكون قد كان لديك وقت كافٍ.)",
-                        questionYou: "Will you have had enough time? (هل سيكون قد كان لديك وقت كافٍ؟)",
-                        statementHe: "He will have had three cups of coffee by noon. (سيكون قد شرب ثلاثة فناجين قهوة بحلول الظهر.)",
-                        questionHe: "Will he have had three cups of coffee by noon? (هل سيكون قد شرب ثلاثة فناجين قهوة بحلول الظهر؟)",
-                        statementShe: "She will have had a similar experience. (ستكون قد كانت لديها تجربة مماثلة.)",
-                        questionShe: "Will she have had a similar experience? (هل ستكون قد كانت لديها تجربة مماثلة؟)",
-                        statementWe: "We will have had many opportunities. (سنكون قد كانت لدينا فرص كثيرة.)",
-                        questionWe: "Will we have had many opportunities? (هل سنكون قد كانت لدينا فرص كثيرة؟)",
-                        statementThey: "They will have had a lot of problems. (سيكون قد كانت لديهم مشاكل كثيرة.)",
-                        questionThey: "Will they have had a lot of problems? (هل سيكون قد كانت لديهم مشاكل كثيرة؟)",
-                        whTitle: "Wh- Questions with 'To Have': (أسئلة Wh- مع 'يملك':)",
-                        whRule: 'For Wh- questions, place the question word at the beginning, then "will", subject, and "have had". (ضع أداة الاستفهام في البداية، ثم "will"، الفاعل، و "have had".)',
-                        whExample1: "What will you have had for breakfast? (ماذا ستكون قد تناولت على الإفطار؟)",
-                        whExample2: "Where will she have had her car repaired? (أين ستكون قد أصلحت سيارتها؟)",
-                        whExample3: "How many interviews will they have had by Friday? (كم مقابلة سيكونون قد أجروا بحلول الجمعة؟)"
-                    },
-                    otherVerbsQuestions: {
-                        title: "Questions with Other Verbs (الأسئلة مع أفعال أخرى)",
-                        conjugation: "Question Formation with Regular & Irregular Verbs (تكوين الأسئلة مع الأفعال المنتظمة والشاذة)",
-                        ruleTitle: "Step-by-Step Process: (الخطوات:)",
-                        rule: "For all main verbs, we form questions by placing 'will' before the subject, followed by 'have' and the past participle. (لجميع الأفعال الرئيسية، نشكل الأسئلة بوضع 'will' قبل الفاعل، يليه 'have' والتصريف الثالث.)",
-                        formula: "Formula: [Will] + [Subject] + [Have] + [Past Participle] + [Rest of Sentence] + ? (الصيغة: [Will] + [الفاعل] + [Have] + [التصريف الثالث] + [باقي الجملة] + ؟)",
-                        statementI: "I will have finished my work. (سأكون قد أنهيت عملي.)",
-                        questionI: "Will I have finished my work? (هل سأكون قد أنهيت عملي؟)",
-                        statementYou: "You will have seen that movie. (ستكون قد شاهدت ذلك الفيلم.)",
-                        questionYou: "Will you have seen that movie? (هل ستكون قد شاهدت ذلك الفيلم؟)",
-                        statementHe: "He will have written a letter. (سيكون قد كتب رسالة.)",
-                        questionHe: "Will he have written a letter? (هل سيكون قد كتب رسالة؟)",
-                        statementShe: "She will have gone home. (ستكون قد عادت إلى المنزل.)",
-                        questionShe: "Will she have gone home? (هل ستكون قد عادت إلى المنزل؟)",
-                        statementWe: "We will have eaten dinner. (سنكون قد تناولنا العشاء.)",
-                        questionWe: "Will we have eaten dinner? (هل سنكون قد تناولنا العشاء؟)",
-                        statementThey: "They will have taken the bus. (سيكون قد استقلوا الحافلة.)",
-                        questionThey: "Will they have taken the bus? (هل سيكون قد استقلوا الحافلة؟)",
-                        whTitle: "Wh- Questions with Other Verbs: (أسئلة Wh- مع أفعال أخرى:)",
-                        whRule: "For Wh- questions, place the question word at the beginning, then 'will', subject, 'have', and past participle. (ضع أداة الاستفهام في البداية، ثم 'will'، الفاعل، 'have'، والتصريف الثالث.)",
-                        whExample1: "What will you have done by then? (ماذا ستكون قد فعلت بحلول ذلك الوقت؟)",
-                        whExample2: "Where will they have gone? (أين سيكون قد ذهبوا؟)",
-                        whExample3: "Why will she have left early? (لماذا ستكون قد غادرت مبكرًا؟)"
-                    },
-                    adverbs: {
-                        title: "Time Expressions in Future Perfect (تعبيرات الوقت في المستقبل التام)",
-                        whatAre: "Common Time Expressions (تعبيرات الوقت الشائعة)",
-                        definitionTitle: "Definition: (تعريف:)",
-                        definition: "Time expressions help specify when an action will have been completed before another future moment. They are often used with the future perfect. (تساعد تعبيرات الوقت في تحديد متى سيكون الإجراء قد اكتمل قبل لحظة مستقبلية أخرى. غالبًا ما تستخدم مع المستقبل التام.)",
-                        commonAdverbsTitle: "Common Time Expressions: (تعبيرات الوقت الشائعة:)",
-                        adverb: "Expression (التعبير)", meaning: "Meaning (المعنى)", example: "Example (مثال)",
-                        by: "by + time (بحلول + وقت)", byMeaning: "not later than (في موعد لا يتجاوز)", byExample: "I will have finished by 6 PM. (سأكون قد أنهيت بحلول السادسة مساءً.)",
-                        byTheTime: "by the time (بحلول الوقت)", byTheTimeMeaning: "before a specific event (قبل حدث معين)", byTheTimeExample: "By the time you arrive, we will have left. (بحلول الوقت الذي تصل فيه، سنكون قد غادرنا.)",
-                        already: "already (بالفعل)", alreadyMeaning: "before that time (قبل ذلك الوقت)", alreadyExample: "They will have already eaten. (سيكونون قد أكلوا بالفعل.)",
-                        just: "just (لتو)", justMeaning: "a very short time before (قبل وقت قصير جدًا)", justExample: "She will have just left. (ستكون قد غادرت لتوها.)",
-                        never: "never (أبدًا)", neverMeaning: "not at any time (لم يحدث في أي وقت)", neverExample: "He will have never seen snow. (لن يكون قد رأى الثلج أبدًا.)",
-                        ever: "ever (في أي وقت)", everMeaning: "at any time (questions) (في أي وقت (للأسئلة))", everExample: "Will you have ever visited Paris? (هل ستكون قد زرت باريس من قبل؟)",
-                        placementTitle: "Placement: (مكان الكلمة:)",
-                        placementRule1: "1. Adverbs like already, just, never, ever usually go after 'will have' but before the past participle. (عادةً تأتي الظروف مثل already, just, never بعد 'will have' ولكن قبل التصريف الثالث.)",
-                        placementExample1: "I will have already finished. (سأكون قد انتهيت بالفعل.)",
-                        placementExample2: "She will have just arrived. (ستكون قد وصلت للتو.)",
-                        placementRule2: "2. 'By' phrases usually come at the end or beginning. (عبارات 'by' تأتي عادة في النهاية أو البداية.)",
-                        placementExample3: "By tomorrow, we will have left. (بحلول الغد، سنكون قد غادرنا.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (تمارين تطبيقية)",
-                        q1Sentence: "______ you have finished your work by then? (______ أنت تكون قد أنهيت عملك بحلول ذلك الوقت؟)",
-                        q1a: "Will (Will)", q1b: "Have (Have)", q1c: "Did (Did)",
-                        q2Sentence: "______ she have been to Paris before 2026? (______ هي تكون قد زارت باريس قبل 2026؟)",
-                        q2a: "Has (Has)", q2b: "Will (Will)", q2c: "Had (Had)",
-                        q3Sentence: "______ they have had breakfast by then? (______ هم يكونوا قد تناولوا الإفطار بحلول ذلك الوقت؟)",
-                        q3a: "Will (Will)", q3b: "Have (Have)", q3c: "Had (Had)",
-                        q4Sentence: "They ______ left by tomorrow. (هم ______ غادروا بحلول الغد.)",
-                        q4a: "will have already (will have already)", q4b: "will already have (will already have)", q4c: "already will have (already will have)",
-                        q5Sentence: "We will have left ______ you arrive. (سنكون قد غادرنا ______ تصل.)",
-                        q5a: "by the time (by the time)", q5b: "while (while)", q5c: "during (during)",
-                        q6Sentence: "______ will you have done by 2026? (______ ستكون قد فعلت بحلول 2026؟)",
-                        q6a: "What (What)", q6b: "Where (Where)", q6c: "When (When)",
-                        q7Sentence: "______ you have finished the report by Monday? (______ أنت تكون قد أنهيت التقرير بحلول الاثنين؟)",
-                        q8Sentence: "Where ______ she have gone by then? (أين ______ هي تكون قد ذهبت بحلول ذلك الوقت؟)",
-                        q9Sentence: "By noon, I will have ______ finished. (before that time) (بحلول الظهر، سأكون ______ قد انتهيت. (قبل ذلك الوقت))",
-                        q10: "Arrange the question: (رتب السؤال:)",
-                        q11: "Arrange the negative question: (رتب السؤال المنفي:)",
-                        q12: "Arrange the Wh- question: (رتب سؤال Wh-:)"
-                    }
-                }
-            }
+    common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+    footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+    futurePerfect2: {
+        title: { line1: "المستقبل التام: 2:", line2: "الأدوات الاستفهامية والظروف", line3: "صيغ السؤال والتعبيرات الزمنية في المستقبل التام", line4: "الدرس: 2/3" },
+        formingQuestions: {
+            title: "II. 1. تكوين الأسئلة في المستقبل التام",
+            heading: "بنية السؤال الأساسية وأنواعه",
+            desc1: "📘 بنية السؤال الأساسية:",
+            desc2: "في زمن المستقبل التام، نشكل الأسئلة بعكس الفاعل والفعل المساعد 'will'. يبقى الفعل الرئيسي 'have' + التصريف الثالث.",
+            typesTitle: "📘 أنواع الأسئلة:",
+            type1: "أسئلة بنعم/لا: Will + فاعل + have + تصريف ثالث؟",
+            type2: "أسئلة بأدوات استفهام: (What, where, when, why, who, how) + will + فاعل + have + تصريف ثالث؟",
+            type3: "أسئلة منفية: Won't + فاعل + have + تصريف ثالث؟"
+        },
+        toBeQuestions: {
+            title: "II. 2. الأسئلة مع 'To Be' في المستقبل التام",
+            heading: "استخدام will have been في الأسئلة",
+            desc1: "📘 الصيغة:",
+            desc2: "[Will] + [الفاعل] + [Have been] + [بقية الجملة] + ؟",
+            subject: "الفاعل",
+            statement: "الجملة الإخبارية",
+            question: "السؤال",
+            subjI: "أنا",
+            stmtI: "سأكون قد ذهبت إلى لندن بحلول ذلك الوقت.",
+            quesI: "هل سأكون قد ذهبت إلى لندن بحلول ذلك الوقت؟",
+            subjYou: "أنت",
+            stmtYou: "ستكون قد ساعدت كثيرًا.",
+            quesYou: "هل ستكون قد ساعدت كثيرًا؟",
+            subjHe: "هو",
+            stmtHe: "سيكون قد مكث مريضًا لمدة ثلاثة أيام بحلول الغد.",
+            quesHe: "هل سيكون قد مكث مريضًا لمدة ثلاثة أيام بحلول الغد؟",
+            subjShe: "هي",
+            stmtShe: "ستكون قد عملت معلمة لمدة عشر سنوات الشهر القادم.",
+            quesShe: "هل ستكون قد عملت معلمة لمدة عشر سنوات الشهر القادم؟",
+            subjWe: "نحن",
+            stmtWe: "سنكون قد بقينا أصدقاء لمدة عشرين سنة في 2025.",
+            quesWe: "هل سنكون قد بقينا أصدقاء لمدة عشرين سنة في 2025؟",
+            subjThey: "هم",
+            stmtThey: "سيكونون قد تزوجوا منذ 2010.",
+            quesThey: "هل سيكونون قد تزوجوا منذ 2010؟",
+            whTitle: "📘 أسئلة Wh مع 'To Be':",
+            whDesc: "ضع أداة الاستفهام في البداية، ثم 'will'، الفاعل، و'have been'. أمثلة: أين ستكون قبل الاجتماع؟ لماذا ستكون هادئة جدًا؟ منذ متى سيكونون متزوجين بحلول ذلك الوقت؟"
+        },
+        toHaveQuestions: {
+            title: "II. 3. الأسئلة مع 'To Have' في المستقبل التام",
+            heading: "استخدام will have had في الأسئلة",
+            desc1: "📘 الصيغة:",
+            desc2: "[Will] + [الفاعل] + [Have had] + [بقية الجملة] + ؟",
+            subject: "الفاعل",
+            statement: "الجملة الإخبارية",
+            question: "السؤال",
+            stmtI: "سأكون قد تناولت فطوري بحلول ذلك الوقت.",
+            quesI: "هل سأكون قد تناولت فطوري بحلول ذلك الوقت؟",
+            stmtYou: "ستكون قد حصلت على وقت كافٍ.",
+            quesYou: "هل ستكون قد حصلت على وقت كافٍ؟",
+            stmtHe: "سيكون قد شرب ثلاثة فناجين قهوة بحلول الظهر.",
+            quesHe: "هل سيكون قد شرب ثلاثة فناجين قهوة بحلول الظهر؟",
+            stmtShe: "ستكون قد مرت بتجربة مماثلة.",
+            quesShe: "هل ستكون قد مرت بتجربة مماثلة؟",
+            stmtWe: "سنكون قد حصلنا على فرص كثيرة.",
+            quesWe: "هل سنكون قد حصلنا على فرص كثيرة؟",
+            stmtThey: "سيكونون قد واجهوا الكثير من المشاكل.",
+            quesThey: "هل سيكونون قد واجهوا الكثير من المشاكل؟",
+            whTitle: "📘 أسئلة Wh مع 'To Have':",
+            whDesc: "أمثلة: ماذا ستكون قد تناولت على الفطور؟ أين ستكون قد أصلحت سيارتها؟ كم مقابلة سيكونون قد أجروها بحلول الجمعة؟"
+        },
+        otherVerbsQuestions: {
+            title: "II. 4. الأسئلة مع أفعال أخرى",
+            heading: "تكوين السؤال العام",
+            desc1: "📘 الصيغة:",
+            desc2: "[Will] + [الفاعل] + [Have] + [التصريف الثالث] + [بقية الجملة] + ؟",
+            subject: "الفاعل",
+            statement: "الجملة الإخبارية",
+            question: "السؤال",
+            stmtI: "سأكون قد أنهيت عملي.",
+            quesI: "هل سأكون قد أنهيت عملي؟",
+            stmtYou: "ستكون قد شاهدت ذلك الفيلم.",
+            quesYou: "هل ستكون قد شاهدت ذلك الفيلم؟",
+            stmtHe: "سيكون قد كتب رسالة.",
+            quesHe: "هل سيكون قد كتب رسالة؟",
+            stmtShe: "ستكون قد عادت إلى المنزل.",
+            quesShe: "هل ستكون قد عادت إلى المنزل؟",
+            stmtWe: "سنكون قد تناولنا العشاء.",
+            quesWe: "هل سنكون قد تناولنا العشاء؟",
+            stmtThey: "سيكونون قد استقلوا الحافلة.",
+            quesThey: "هل سيكونون قد استقلوا الحافلة؟",
+            whTitle: "📘 أسئلة Wh مع أفعال أخرى:",
+            whDesc: "أمثلة: ماذا ستكون قد فعلت بحلول ذلك الوقت؟ أين سيكونون قد ذهبوا؟ لماذا ستكون قد غادرت مبكرًا؟"
+        },
+        timeExpressions: {
+            title: "II. 5. التعبيرات الزمنية في المستقبل التام",
+            heading: "التعبيرات الزمنية الشائعة مع المستقبل التام",
+            desc1: "📘 التعريف:",
+            desc2: "تساعد التعبيرات الزمنية في تحديد متى سيكون الفعل قد اكتمل قبل لحظة مستقبلية أخرى. غالبًا ما تُستخدم مع المستقبل التام.",
+            expression: "التعبير",
+            meaning: "المعنى",
+            example: "مثال",
+            exByTime: "سأكون قد انتهيت بحلول السادسة مساءً.",
+            exByTheTime: "عندما تصل، نكون قد غادرنا.",
+            exAlready: "سيكونون قد تناولوا الطعام بالفعل.",
+            exJust: "ستكون قد غادرت للتو.",
+            exNever: "لن يكون قد رأى الثلج أبدًا.",
+            exEver: "هل ستكون قد زرت باريس يومًا ما؟",
+            placementTitle: "📘 الموضع:",
+            placementDesc: "الظروف مثل already، just، never، ever تأتي عادةً بعد 'will have' ولكن قبل التصريف الثالث. مثال: سأكون قد انتهيت بالفعل. / ستكون قد وصلت للتو. عبارات 'by' تأتي عادةً في النهاية أو البداية: بحلول الغد، نكون قد غادرنا."
+        }
+    }
+}
         };
     </script>
-    <script src="scripts/common-i18n.js"></script>
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // ---------- Build exercise sets & get answer keys ----------
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'futurePerfect2.exercises.q1Sentence',
-                    options: [
-                        { value: 'a', labelKey: 'futurePerfect2.exercises.q1a' },
-                        { value: 'b', labelKey: 'futurePerfect2.exercises.q1b' },
-                        { value: 'c', labelKey: 'futurePerfect2.exercises.q1c' }
-                    ],
-                    correctAnswer: 'a'   // Will
-                },
-                {
-                    questionTextKey: 'futurePerfect2.exercises.q2Sentence',
-                    options: [
-                        { value: 'a', labelKey: 'futurePerfect2.exercises.q2a' },
-                        { value: 'b', labelKey: 'futurePerfect2.exercises.q2b' },
-                        { value: 'c', labelKey: 'futurePerfect2.exercises.q2c' }
-                    ],
-                    correctAnswer: 'b'   // Will
-                },
-                {
-                    questionTextKey: 'futurePerfect2.exercises.q3Sentence',
-                    options: [
-                        { value: 'a', labelKey: 'futurePerfect2.exercises.q3a' },
-                        { value: 'b', labelKey: 'futurePerfect2.exercises.q3b' },
-                        { value: 'c', labelKey: 'futurePerfect2.exercises.q3c' }
-                    ],
-                    correctAnswer: 'a'   // Will
-                },
-                {
-                    questionTextKey: 'futurePerfect2.exercises.q4Sentence',
-                    options: [
-                        { value: 'a', labelKey: 'futurePerfect2.exercises.q4a' },
-                        { value: 'b', labelKey: 'futurePerfect2.exercises.q4b' },
-                        { value: 'c', labelKey: 'futurePerfect2.exercises.q4c' }
-                    ],
-                    correctAnswer: 'a'   // will have already
-                },
-                {
-                    questionTextKey: 'futurePerfect2.exercises.q5Sentence',
-                    options: [
-                        { value: 'a', labelKey: 'futurePerfect2.exercises.q5a' },
-                        { value: 'b', labelKey: 'futurePerfect2.exercises.q5b' },
-                        { value: 'c', labelKey: 'futurePerfect2.exercises.q5c' }
-                    ],
-                    correctAnswer: 'a'   // by the time
-                },
-                {
-                    questionTextKey: 'futurePerfect2.exercises.q6Sentence',
-                    options: [
-                        { value: 'a', labelKey: 'futurePerfect2.exercises.q6a' },
-                        { value: 'b', labelKey: 'futurePerfect2.exercises.q6b' },
-                        { value: 'c', labelKey: 'futurePerfect2.exercises.q6c' }
-                    ],
-                    correctAnswer: 'a'   // What
-                }
+                { questionTextKey: 'futurePerfect2.exercises.q1', options: [{ value: 'a', labelKey: 'futurePerfect2.exercises.q1a' }, { value: 'b', labelKey: 'futurePerfect2.exercises.q1b' }, { value: 'c', labelKey: 'futurePerfect2.exercises.q1c' }], correctAnswer: 'a' },
+                { questionTextKey: 'futurePerfect2.exercises.q2', options: [{ value: 'a', labelKey: 'futurePerfect2.exercises.q2a' }, { value: 'b', labelKey: 'futurePerfect2.exercises.q2b' }, { value: 'c', labelKey: 'futurePerfect2.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'futurePerfect2.exercises.q3', options: [{ value: 'a', labelKey: 'futurePerfect2.exercises.q3a' }, { value: 'b', labelKey: 'futurePerfect2.exercises.q3b' }, { value: 'c', labelKey: 'futurePerfect2.exercises.q3c' }], correctAnswer: 'a' },
+                { questionTextKey: 'futurePerfect2.exercises.q4', options: [{ value: 'a', labelKey: 'futurePerfect2.exercises.q4a' }, { value: 'b', labelKey: 'futurePerfect2.exercises.q4b' }, { value: 'c', labelKey: 'futurePerfect2.exercises.q4c' }], correctAnswer: 'a' },
+                { questionTextKey: 'futurePerfect2.exercises.q5', options: [{ value: 'a', labelKey: 'futurePerfect2.exercises.q5a' }, { value: 'b', labelKey: 'futurePerfect2.exercises.q5b' }, { value: 'c', labelKey: 'futurePerfect2.exercises.q5c' }], correctAnswer: 'a' },
+                { questionTextKey: 'futurePerfect2.exercises.q6', options: [{ value: 'a', labelKey: 'futurePerfect2.exercises.q6a' }, { value: 'b', labelKey: 'futurePerfect2.exercises.q6b' }, { value: 'c', labelKey: 'futurePerfect2.exercises.q6c' }], correctAnswer: 'a' }
             ]
         });
-
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+    </script>
+    <script>
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'futurePerfect2.exercises.q7Sentence',
-                    answers: ['will']
-                },
-                {
-                    questionTextKey: 'futurePerfect2.exercises.q8Sentence',
-                    answers: ['will']
-                },
-                {
-                    questionTextKey: 'futurePerfect2.exercises.q9Sentence',
-                    answers: ['already']
-                }
+                { questionTextKey: 'futurePerfect2.exercises.q7', answers: ['Will'] },
+                { questionTextKey: 'futurePerfect2.exercises.q8', answers: ['will'] },
+                { questionTextKey: 'futurePerfect2.exercises.q9', answers: ['already'] }
             ]
         });
-
+    </script>
+    <script>
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'futurePerfect2.exercises.q10',
-                    words: ['Will', 'you', 'have', 'finished', '?'],
-                    correctSentence: 'Will you have finished ?'
-                },
-                {
-                    questionTextKey: 'futurePerfect2.exercises.q11',
-                    words: ['Won\'t', 'they', 'have', 'arrived', 'by then', '?'],
-                    correctSentence: 'Won\'t they have arrived by then ?'
-                },
-                {
-                    questionTextKey: 'futurePerfect2.exercises.q12',
-                    words: ['What', 'will', 'she', 'have', 'done', '?'],
-                    correctSentence: 'What will she have done ?'
-                }
+                { questionTextKey: 'futurePerfect2.exercises.q10', words: ['Will', 'you', 'have', 'finished', '?'], correctSentence: 'Will you have finished ?' },
+                { questionTextKey: 'futurePerfect2.exercises.q11', words: ['Won\'t', 'they', 'have', 'arrived', 'by', 'then', '?'], correctSentence: 'Won\'t they have arrived by then ?' },
+                { questionTextKey: 'futurePerfect2.exercises.q12', words: ['What', 'will', 'she', 'have', 'done', '?'], correctSentence: 'What will she have done ?' }
             ]
         });
-
-        // ---------- Check all exercises & update score ----------
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
-            
             totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
             totalQuestions += 6;
             totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
             totalQuestions += 3;
             totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
             totalQuestions += 3;
-            
-            const scoreValue = document.getElementById('score-value');
-            const scoreFeedback = document.getElementById('score-feedback');
-            if (scoreValue) scoreValue.textContent = `${totalScore}/${totalQuestions}`;
-            
-            if (scoreFeedback) {
-                if (totalScore === totalQuestions) {
-                    scoreFeedback.textContent = 'Excellent! All answers are correct!';
-                } else if (totalScore >= 9) {
-                    scoreFeedback.textContent = 'Good job! You did well.';
-                } else if (totalScore >= 6) {
-                    scoreFeedback.textContent = 'Not bad, but review some material.';
-                } else {
-                    scoreFeedback.textContent = 'Review the lesson and try again.';
-                }
+            const scoreEl = document.getElementById('score-value');
+            const fbEl = document.getElementById('score-feedback');
+            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+            if (fbEl) {
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered future perfect questions!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit question structures.';
+                else fbEl.textContent = 'Review the lesson and try again.';
             }
-            
             document.getElementById('score-display').style.display = 'block';
+            EHScoreEffects.show(totalScore, totalQuestions);
         }
-
-        // ---------- Init ordering drag & drop ----------
         document.addEventListener('DOMContentLoaded', function() {
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
-            const checkButton = document.getElementById('check-all');
-            if (checkButton) {
-                checkButton.addEventListener('click', checkAllExercises);
-            }
+            document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-
-        // ---------- i18n rendering for HTML tags ----------
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
-                document.querySelectorAll('[data-i18n]').forEach(el => {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
-                        el.textContent = translation;
-                    }
+                    if (translation) el.textContent = translation;
                 });
             }
             window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });

@@ -4,1241 +4,531 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Present Perfect III: Negative, Passive & Idioms - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #ff1493, #da70d6, #9932cc);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-        
-        .EH-conjugation-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-        }
-        
-        .EH-conjugation-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .EH-conjugation-title {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .EH-conjugation-subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-        }
-        
-        .EH-conjugation-content {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
-        
-        .EH-conjugation-section {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .EH-conjugation-section-title {
-            font-size: 1.8rem;
-            color: #9932cc;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #da70d6;
-        }
-        
-        .EH-conjugation-subsection {
-            margin-bottom: 25px;
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .EH-conjugation-subsection-title {
-            font-size: 1.4rem;
-            color: #da70d6;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .EH-conjugation-subsection-icon {
-            font-size: 1.6rem;
-            margin-right: 10px;
-        }
-        
-        .EH-conjugation-rule {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f5f5f5;
-            border-radius: 10px;
-            border-left: 4px solid #da70d6;
-        }
-        
-        .EH-conjugation-rule-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #9932cc;
-        }
-        
-        .EH-conjugation-examples {
-            background: #fce4ec;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-        }
-        
-        .EH-conjugation-example {
-            margin-bottom: 8px;
-            padding-left: 10px;
-            border-left: 2px solid #da70d6;
-        }
-        
-        .EH-conjugation-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        
-        .EH-conjugation-table th,
-        .EH-conjugation-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        
-        .EH-conjugation-table th {
-            background-color: #da70d6;
-            color: white;
-        }
-        
-        .EH-conjugation-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        .EH-conjugation-table tr:hover {
-            background-color: #fce4ec;
-        }
-        
-        /* Exercise Styles */
-        .EH-exercise-section {
-            margin-top: 40px;
-        }
-        
-        .EH-exercise-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .EH-exercise-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .EH-exercise-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .EH-exercise-number {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, #da70d6, #9932cc);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-text {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .EH-exercise-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option input {
-            cursor: pointer;
-        }
-        
-        .EH-exercise-option label {
-            cursor: pointer;
-        }
-        
-        /* Type 1: Multiple Choice Styles */
-        .EH-exercise-type1-possibilities3-answers-control {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
-            gap: 20px;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn {
-            background: #da70d6;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn:hover {
-            background: #9932cc;
-        }
-
-        .EH-exercise-type1-possibilities3-score-display {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            display: none;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-title {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #9932cc;
-        }
-
-        .EH-exercise-type1-possibilities3-score-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #da70d6;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-feedback {
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        .EH-exercise-type1-possibilities3-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.correct {
-            background-color: #d4edda;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.incorrect {
-            background-color: #f8d7da;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 2: Fill in the Blank Styles */
-        .EH-exercise-type2-fillblank-input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .EH-exercise-type2-fillblank-input:focus {
-            border-color: #da70d6;
-            outline: none;
-        }
-        
-        .EH-exercise-type2-fillblank-input-correct {
-            border-color: #28a745;
-            background-color: #d4edda;
-        }
-        
-        .EH-exercise-type2-fillblank-input-incorrect {
-            border-color: #dc3545;
-            background-color: #f8d7da;
-        }
-        
-        .EH-exercise-type2-fillblank-input-empty {
-            border-color: #ffc107;
-        }
-        
-        .EH-exercise-type2-fillblank-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type2-fillblank-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type2-fillblank-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 3: Sentence Ordering Styles */
-        .EH-exercise-type3-sentenceorder-word-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 15px;
-            border: 2px dashed #e0e0e0;
-            border-radius: 10px;
-            min-height: 60px;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word {
-            background: #fce4ec;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid #f8bbd9;
-            cursor: move;
-            user-select: none;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word:hover {
-            background: #f8bbd9;
-        }
-        
-        .EH-exercise-type3-sentenceorder-dragging {
-            opacity: 0.5;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct {
-            border-color: #28a745;
-            background-color: #f8fff8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect {
-            border-color: #dc3545;
-            background-color: #fff8f8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Navigation Buttons */
-        .EH-conjugation-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-        
-        .EH-conjugation-nav-button {
-            background: #da70d6;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .EH-conjugation-nav-button:hover {
-            background: #9932cc;
-        }
-        
-        .EH-conjugation-nav-button.back {
-            background: #e6a0e3;
-        }
-        
-        .EH-conjugation-nav-button.back:hover {
-            background: #da70d6;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .EH-conjugation-title {
-                font-size: 2rem;
-            }
-            
-            .EH-exercise-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .EH-conjugation-navigation {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .EH-conjugation-nav-button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .EH-conjugation-content {
-                padding: 20px;
-            }
+        /* AMBER / GOLDEN - WARM COLOR PALETTE (distinct from green/red/blue) */
+        :root {
+            --bg-gradient: linear-gradient(135deg, #f9e2b7, #f5d59c, #efc57a, #eab85e);
+            --content-bg: #fefaf2;
+            --card-bg: #ffffff;
+            --subsection-bg: #fef5e8;
+            --rule-bg: #fcf0e0;
+            --example-bg: #faeccc;
+            --table-stripe: #fef6ec;
+            --title-color: #7a5b1e;
+            --text-color: #4a3a1a;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #d48f3b;
+            --primary-hover: #b8752a;
+            --primary-light: #e0a254;
+            --accent: #cc9a4a;
+            --exercise-number-gradient: linear-gradient(135deg, #d48f3b, #b36b2a);
+            --rule-border: #d48f3b;
+            --example-border: #d48f3b;
+            --nav-btn-bg: #d48f3b;
+            --nav-btn-hover: #b8752a;
+            --nav-back-btn-bg: #e0a254;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #d48f3b;
+            --refract-divider-color: #e2bc7c;
+            --refract-translation-bg: #fef0de;
+            --refract-translation-border: #d48f3b;
+            --refract-english-color: #4a3a1a;
+            --section-divider: #f0deb8;
+            --card-border: #eedcb0;
+            --input-border: #e2c994;
+            --dashed-border: #e2c994;
+            --table-border: #eed8aa;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #faf0e0;
+            --neutral-color: #7a6230;
+            --neutral-border: #e2c48a;
+            --empty-input-border: #dbbc7c;
+            --empty-input-bg: #fffaf0;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #d48f3b;
+            --language-selector-color: #4a3a1a;
+            --score-flash-mid-bg: #fff0b5;
+            --score-flash-low-bg: #ffddd6;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #5e471a, #7a5c24, #966f2e, #b08238);
+            --content-bg: #3a2e12;
+            --card-bg: #4d3e1c;
+            --subsection-bg: #4d3e1c;
+            --rule-bg: #3a2e12;
+            --example-bg: #3a2e12;
+            --table-stripe: #42361a;
+            --title-color: #f5d690;
+            --text-color: #f5e6c8;
+            --header-text: #f5e6c8;
+            --header-text-light: #ddc48a;
+            --primary: #e6a34b;
+            --primary-hover: #f0b35e;
+            --primary-light: #e6a34b;
+            --accent: #e6a34b;
+            --rule-border: #e6a34b;
+            --example-border: #e6a34b;
+            --exercise-number-gradient: linear-gradient(135deg, #e6a34b, #d48f3b);
+            --nav-btn-bg: #e6a34b;
+            --nav-btn-hover: #d48f3b;
+            --nav-back-btn-bg: #f0b35e;
+            --nav-back-btn-color: #2a1e06;
+            --nav-back-btn-hover: #e6a34b;
+            --refract-divider-color: #ddb46c;
+            --refract-translation-bg: #5c4a24;
+            --refract-translation-border: #ddb46c;
+            --refract-english-color: #f5e0b0;
+            --section-divider: #5e4a24;
+            --card-border: #5e4a24;
+            --input-border: #8e763e;
+            --dashed-border: #8e763e;
+            --table-border: #705e30;
+            --white: #f5e6c8;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #544620;
+            --neutral-color: #ddc48a;
+            --neutral-border: #8e763e;
+            --empty-input-border: #8e763e;
+            --empty-input-bg: #3a2e12;
+            --language-selector-bg: #4d3e1c;
+            --language-selector-border: #e6a34b;
+            --language-selector-color: #f5e6c8;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="ar">العربية</option>
-        </select>
-    </div>
-    
-    <div class="EH-site-header">
-        <a href="index.html" class="EH-site-logo-link" title="Main Page">
-            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
-        </a>
-        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
-    </div>
-    
-    <div class="EH-conjugation-container">
-        <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="presentPerfect3.title">Present Perfect III: Negative, Passive & Idioms</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="presentPerfect3.subtitle">Learn to form negative sentences, use passive voice, and understand common idioms in the present perfect tense</p>
-        </header>
-        
-        <div class="EH-conjugation-content">
-            <!-- Introduction Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect3.introduction.title">Negative Forms in Present Perfect</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">❌</span>
-                        <span data-i18n="presentPerfect3.introduction.whatIs">How to Form Negative Sentences</span>
-                    </h3>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.introduction.definitionTitle">Basic Negative Structure:</div>
-                        <p data-i18n="presentPerfect3.introduction.definition">In English, we use "not" after "have/has" to form negative sentences in the present perfect tense.</p>
-                        <p data-i18n="presentPerfect3.introduction.formula">Formula: [Subject] + [Have/Has] + "not" + [Past Participle] + [Rest of Sentence]</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.introduction.typesTitle">Types of Negative Sentences:</div>
-                        <ul>
-                            <li data-i18n="presentPerfect3.introduction.type1">Negative with "To Be"</li>
-                            <li data-i18n="presentPerfect3.introduction.type2">Negative with "To Have"</li>
-                            <li data-i18n="presentPerfect3.introduction.type3">Negative with Other Verbs</li>
-                        </ul>
-                    </div>
+<div class="EH-language-selector-wrapper">
+    <select id="language-selector" class="EH-language-selector">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية</option>
+    </select>
+    <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+</div>
+<div class="EH-site-header">
+    <a href="index.html" class="EH-site-logo-link" title="Main Page">
+        <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+    </a>
+    <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+</div>
+<div class="EH-conjugation-container">
+    <header class="EH-conjugation-header">
+        <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+            <div class="EH-conjugation-title-line" data-i18n="presentPerfect3.title.line1">Present Perfect Tense: III:</div>
+            <div class="EH-conjugation-title-line" data-i18n="presentPerfect3.title.line2">Negative, Passive & Idioms</div>
+            <div class="EH-conjugation-subtitle" data-i18n="presentPerfect3.title.line3">negative sentences, passive voice, and common idioms in the present perfect tense</div>
+            <div class="EH-conjugation-subtitle" data-i18n="presentPerfect3.title.line4">lesson: 3/3</div>
+        </div>
+    </header>
+    <div class="EH-conjugation-content">
+        <!-- Section 1: Negative Forms -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect3.negative.title">I. 1. Negative Forms in Present Perfect</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">🚫</span>
+                    <span data-i18n="presentPerfect3.negative.heading">Basic negative structure & examples</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.negative.ruleTitle">📘 Formula:</div>
+                    <p data-i18n="presentPerfect3.negative.ruleDesc"><strong>[Subject] + have/has + not + past participle</strong> (rest of sentence). Contractions: haven’t / hasn’t.</p>
                 </div>
-            </div>
-            
-            <!-- Negative with To Be Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect3.toBeNegative.title">Negative with "To Be"</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="presentPerfect3.toBeNegative.conjugation">Negative Formation with "To Be"</span>
-                    </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.toBeNegative.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="presentPerfect3.toBeNegative.rule">With the verb "to be" in present perfect, we add "not" after "have/has" to form negative sentences.</p>
-                        <p data-i18n="presentPerfect3.toBeNegative.formula">Formula: [Subject] + [Have/Has] + "not" + "been" + [Rest of Sentence]</p>
-                    </div>
-                    
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.negative.toBeTitle">📘 Negative with "to be"</div>
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="presentPerfect3.toBeNegative.positive">Positive</th>
-                                <th data-i18n="presentPerfect3.toBeNegative.negative">Negative</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentPerfect3.negative.subject">Subject</th><th data-i18n="presentPerfect3.negative.positive">Positive</th><th data-i18n="presentPerfect3.negative.negative">Negative</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="presentPerfect3.toBeNegative.positiveI">I have been to Paris.</td>
-                                <td data-i18n="presentPerfect3.toBeNegative.negativeI">I have not been to Paris.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="presentPerfect3.toBeNegative.positiveYou">You have been helpful.</td>
-                                <td data-i18n="presentPerfect3.toBeNegative.negativeYou">You have not been helpful.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="presentPerfect3.toBeNegative.positiveHe">He has been patient.</td>
-                                <td data-i18n="presentPerfect3.toBeNegative.negativeHe">He has not been patient.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="presentPerfect3.toBeNegative.positiveShe">She has been kind.</td>
-                                <td data-i18n="presentPerfect3.toBeNegative.negativeShe">She has not been kind.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="presentPerfect3.toBeNegative.positiveWe">We have been quiet.</td>
-                                <td data-i18n="presentPerfect3.toBeNegative.negativeWe">We have not been quiet.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="presentPerfect3.toBeNegative.positiveThey">They have been friendly.</td>
-                                <td data-i18n="presentPerfect3.toBeNegative.negativeThey">They have not been friendly.</td>
-                            </tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row1_sub">I</td><td data-i18n="presentPerfect3.negative.row1_pos">I have been to Paris.</td><td data-i18n="presentPerfect3.negative.row1_neg">I have not been to Paris.</td></tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row2_sub">You</td><td data-i18n="presentPerfect3.negative.row2_pos">You have been helpful.</td><td data-i18n="presentPerfect3.negative.row2_neg">You have not been helpful.</td></tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row3_sub">He</td><td data-i18n="presentPerfect3.negative.row3_pos">He has been patient.</td><td data-i18n="presentPerfect3.negative.row3_neg">He has not been patient.</td></tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row4_sub">She</td><td data-i18n="presentPerfect3.negative.row4_pos">She has been kind.</td><td data-i18n="presentPerfect3.negative.row4_neg">She has not been kind.</td></tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row5_sub">We</td><td data-i18n="presentPerfect3.negative.row5_pos">We have been quiet.</td><td data-i18n="presentPerfect3.negative.row5_neg">We have not been quiet.</td></tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row6_sub">They</td><td data-i18n="presentPerfect3.negative.row6_pos">They have been friendly.</td><td data-i18n="presentPerfect3.negative.row6_neg">They have not been friendly.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.toBeNegative.contractionsTitle">Contractions:</div>
-                        <p data-i18n="presentPerfect3.toBeNegative.contractionsRule">In spoken English and informal writing, we often use contractions (short forms).</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.toBeNegative.contractionExample1">I haven't been to Paris.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.toBeNegative.contractionExample2">You haven't been helpful.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.toBeNegative.contractionExample3">He hasn't been patient.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.toBeNegative.contractionExample4">She hasn't been kind.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.toBeNegative.contractionExample5">We haven't been quiet.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.toBeNegative.contractionExample6">They haven't been friendly.</div>
-                        </div>
-                    </div>
+                    <p data-i18n="presentPerfect3.negative.contractionsBe">🗣️ Contractions: I haven't been, she hasn't been, etc.</p>
                 </div>
-            </div>
-            
-            <!-- Negative with To Have Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect3.toHaveNegative.title">Negative with "To Have"</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="presentPerfect3.toHaveNegative.conjugation">Negative Formation with "To Have"</span>
-                    </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.toHaveNegative.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="presentPerfect3.toHaveNegative.rule">With the verb "to have" in present perfect, we add "not" after "have/has" to form negative sentences.</p>
-                        <p data-i18n="presentPerfect3.toHaveNegative.formula">Formula: [Subject] + [Have/Has] + "not" + "had" + [Rest of Sentence]</p>
-                    </div>
-                    
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.negative.toHaveTitle">📘 Negative with "to have" (as main verb)</div>
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="presentPerfect3.toHaveNegative.positive">Positive</th>
-                                <th data-i18n="presentPerfect3.toHaveNegative.negative">Negative</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentPerfect3.negative.subject">Subject</th><th data-i18n="presentPerfect3.negative.positive">Positive</th><th data-i18n="presentPerfect3.negative.negative">Negative</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="presentPerfect3.toHaveNegative.positiveI">I have had lunch.</td>
-                                <td data-i18n="presentPerfect3.toHaveNegative.negativeI">I have not had lunch.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="presentPerfect3.toHaveNegative.positiveYou">You have had a good time.</td>
-                                <td data-i18n="presentPerfect3.toHaveNegative.negativeYou">You have not had a good time.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="presentPerfect3.toHaveNegative.positiveHe">He has had trouble.</td>
-                                <td data-i18n="presentPerfect3.toHaveNegative.negativeHe">He has not had trouble.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="presentPerfect3.toHaveNegative.positiveShe">She has had a party.</td>
-                                <td data-i18n="presentPerfect3.toHaveNegative.negativeShe">She has not had a party.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="presentPerfect3.toHaveNegative.positiveWe">We have had a meeting.</td>
-                                <td data-i18n="presentPerfect3.toHaveNegative.negativeWe">We have not had a meeting.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="presentPerfect3.toHaveNegative.positiveThey">They have had fun.</td>
-                                <td data-i18n="presentPerfect3.toHaveNegative.negativeThey">They have not had fun.</td>
-                            </tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row1_sub_have">I</td><td data-i18n="presentPerfect3.negative.row1_pos_have">I have had lunch.</td><td data-i18n="presentPerfect3.negative.row1_neg_have">I have not had lunch.</td></tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row2_sub_have">You</td><td data-i18n="presentPerfect3.negative.row2_pos_have">You have had a good time.</td><td data-i18n="presentPerfect3.negative.row2_neg_have">You have not had a good time.</td></tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row3_sub_have">He</td><td data-i18n="presentPerfect3.negative.row3_pos_have">He has had trouble.</td><td data-i18n="presentPerfect3.negative.row3_neg_have">He has not had trouble.</td></tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row4_sub_have">She</td><td data-i18n="presentPerfect3.negative.row4_pos_have">She has had a party.</td><td data-i18n="presentPerfect3.negative.row4_neg_have">She has not had a party.</td></tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row5_sub_have">We</td><td data-i18n="presentPerfect3.negative.row5_pos_have">We have had a meeting.</td><td data-i18n="presentPerfect3.negative.row5_neg_have">We have not had a meeting.</td></tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row6_sub_have">They</td><td data-i18n="presentPerfect3.negative.row6_pos_have">They have had fun.</td><td data-i18n="presentPerfect3.negative.row6_neg_have">They have not had fun.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.toHaveNegative.contractionsTitle">Contractions:</div>
-                        <p data-i18n="presentPerfect3.toHaveNegative.contractionsRule">In spoken English and informal writing, we often use contractions (short forms).</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.toHaveNegative.contractionExample1">I haven't had lunch.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.toHaveNegative.contractionExample2">You haven't had a good time.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.toHaveNegative.contractionExample3">He hasn't had trouble.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.toHaveNegative.contractionExample4">She hasn't had a party.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.toHaveNegative.contractionExample5">We haven't had a meeting.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.toHaveNegative.contractionExample6">They haven't had fun.</div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            
-            <!-- Negative with Other Verbs Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect3.otherVerbsNegative.title">Negative with Other Verbs</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📝</span>
-                        <span data-i18n="presentPerfect3.otherVerbsNegative.conjugation">Negative Formation with Regular and Irregular Verbs</span>
-                    </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.otherVerbsNegative.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="presentPerfect3.otherVerbsNegative.rule">For all other verbs in the present perfect, we add "not" after "have/has" to form negative sentences.</p>
-                        <p data-i18n="presentPerfect3.otherVerbsNegative.formula">Formula: [Subject] + [Have/Has] + "not" + [Past Participle] + [Rest of Sentence]</p>
-                    </div>
-                    
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.negative.otherTitle">📘 Negative with other verbs (incl. irregular)</div>
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="presentPerfect3.otherVerbsNegative.positive">Positive</th>
-                                <th data-i18n="presentPerfect3.otherVerbsNegative.negative">Negative</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentPerfect3.negative.subject">Subject</th><th data-i18n="presentPerfect3.negative.positive">Positive</th><th data-i18n="presentPerfect3.negative.negative">Negative</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="presentPerfect3.otherVerbsNegative.positiveI">I have worked here.</td>
-                                <td data-i18n="presentPerfect3.otherVerbsNegative.negativeI">I have not worked here.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="presentPerfect3.otherVerbsNegative.positiveYou">You have studied English.</td>
-                                <td data-i18n="presentPerfect3.otherVerbsNegative.negativeYou">You have not studied English.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="presentPerfect3.otherVerbsNegative.positiveHe">He has played soccer.</td>
-                                <td data-i18n="presentPerfect3.otherVerbsNegative.negativeHe">He has not played soccer.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="presentPerfect3.otherVerbsNegative.positiveShe">She has read a book.</td>
-                                <td data-i18n="presentPerfect3.otherVerbsNegative.negativeShe">She has not read a book.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="presentPerfect3.otherVerbsNegative.positiveWe">We have watched a movie.</td>
-                                <td data-i18n="presentPerfect3.otherVerbsNegative.negativeWe">We have not watched a movie.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="presentPerfect3.otherVerbsNegative.positiveThey">They have cooked dinner.</td>
-                                <td data-i18n="presentPerfect3.otherVerbsNegative.negativeThey">They have not cooked dinner.</td>
-                            </tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row1_sub_other">I</td><td data-i18n="presentPerfect3.negative.row1_pos_other">I have worked here.</td><td data-i18n="presentPerfect3.negative.row1_neg_other">I have not worked here.</td></tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row2_sub_other">She</td><td data-i18n="presentPerfect3.negative.row2_pos_other">She has gone home.</td><td data-i18n="presentPerfect3.negative.row2_neg_other">She has not gone home.</td></tr>
+                            <tr><td data-i18n="presentPerfect3.negative.row3_sub_other">They</td><td data-i18n="presentPerfect3.negative.row3_pos_other">They have taken a break.</td><td data-i18n="presentPerfect3.negative.row3_neg_other">They have not taken a break.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.otherVerbsNegative.contractionsTitle">Contractions:</div>
-                        <p data-i18n="presentPerfect3.otherVerbsNegative.contractionsRule">In spoken English and informal writing, we often use contractions (short forms).</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.otherVerbsNegative.contractionExample1">I haven't worked here.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.otherVerbsNegative.contractionExample2">You haven't studied English.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.otherVerbsNegative.contractionExample3">He hasn't played soccer.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.otherVerbsNegative.contractionExample4">She hasn't read a book.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.otherVerbsNegative.contractionExample5">We haven't watched a movie.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.otherVerbsNegative.contractionExample6">They haven't cooked dinner.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.otherVerbsNegative.irregularTitle">Negative with Irregular Verbs:</div>
-                        <p data-i18n="presentPerfect3.otherVerbsNegative.irregularRule">Even with irregular verbs, we still use the same negative structure in the present perfect tense.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.otherVerbsNegative.irregularExample1">I haven't gone to the store. (go → gone)</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.otherVerbsNegative.irregularExample2">She hasn't done her homework. (do → done)</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.otherVerbsNegative.irregularExample3">They haven't taken a break. (take → taken)</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentPerfect3.negative.irregEx">I haven't gone to the store. / She hasn't done her homework.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Passive Voice Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect3.passive.title">Passive Voice in Present Perfect</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔄</span>
-                        <span data-i18n="presentPerfect3.passive.whatIs">What is Passive Voice?</span>
-                    </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.passive.definitionTitle">Definition:</div>
-                        <p data-i18n="presentPerfect3.passive.definition">In passive voice, the subject receives the action rather than performing it. We use passive voice when the doer of the action is unknown, unimportant, or obvious from context.</p>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.passive.structureTitle">Structure of Passive Voice in Present Perfect:</div>
-                        <p data-i18n="presentPerfect3.passive.structureRule">Formula: [Subject] + [have/has] + "been" + [Past Participle] + [by + agent (optional)]</p>
-                        <p data-i18n="presentPerfect3.passive.structureExample">Example: "The house has been built by workers."</p>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.passive.formationTitle">Forming Passive Voice:</div>
-                        <p data-i18n="presentPerfect3.passive.formationRule">To form passive voice in present perfect tense, use the appropriate form of "have/has" followed by "been" and the past participle of the main verb.</p>
-                    </div>
-                    
-                    <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="presentPerfect3.passive.active">Active Voice</th>
-                                <th data-i18n="presentPerfect3.passive.passive">Passive Voice</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-i18n="presentPerfect3.passive.activeExample1">I have written a letter.</td>
-                                <td data-i18n="presentPerfect3.passive.passiveExample1">A letter has been written by me.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentPerfect3.passive.activeExample2">You have cleaned the room.</td>
-                                <td data-i18n="presentPerfect3.passive.passiveExample2">The room has been cleaned by you.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentPerfect3.passive.activeExample3">He has fixed the car.</td>
-                                <td data-i18n="presentPerfect3.passive.passiveExample3">The car has been fixed by him.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentPerfect3.passive.activeExample4">She has taught the students.</td>
-                                <td data-i18n="presentPerfect3.passive.passiveExample4">The students have been taught by her.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentPerfect3.passive.activeExample5">We have built houses.</td>
-                                <td data-i18n="presentPerfect3.passive.passiveExample5">Houses have been built by us.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentPerfect3.passive.activeExample6">They have sold fruits.</td>
-                                <td data-i18n="presentPerfect3.passive.passiveExample6">Fruits have been sold by them.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.passive.negativeTitle">Negative Passive Voice:</div>
-                        <p data-i18n="presentPerfect3.passive.negativeRule">To form negative passive voice, add "not" after "have/has".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.passive.negativeExample1">The house has not been built by workers.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.passive.negativeExample2">The car has not been fixed by him.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.passive.negativeExample3">The students have not been taught by her.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.passive.questionTitle">Question Form in Passive Voice:</div>
-                        <p data-i18n="presentPerfect3.passive.questionRule">To form questions in passive voice, invert the subject and "have/has".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.passive.questionExample1">Has the house been built by workers?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.passive.questionExample2">Has the car been fixed by him?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.passive.questionExample3">Have the students been taught by her?</div>
-                        </div>
-                    </div>
+        </div>
+        <!-- Section 2: Passive Voice -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect3.passive.title">I. 2. Passive Voice in Present Perfect</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">🔄</span>
+                    <span data-i18n="presentPerfect3.passive.heading">Structure: have/has + been + past participle</span>
+                </h3>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.passive.ruleTitle">📘 Formula:</div>
+                    <p data-i18n="presentPerfect3.passive.ruleDesc">Subject + have/has + been + past participle (+ by + agent). The focus is on the action receiver.</p>
+                </div>
+                <table class="EH-conjugation-table">
+                    <thead><tr><th data-i18n="presentPerfect3.passive.active">Active Voice</th><th data-i18n="presentPerfect3.passive.passive">Passive Voice</th></tr></thead>
+                    <tbody>
+                        <tr><td data-i18n="presentPerfect3.passive.row1_active">I have written a letter.</td><td data-i18n="presentPerfect3.passive.row1_passive">A letter has been written by me.</td></tr>
+                        <tr><td data-i18n="presentPerfect3.passive.row2_active">She has taught the students.</td><td data-i18n="presentPerfect3.passive.row2_passive">The students have been taught by her.</td></tr>
+                        <tr><td data-i18n="presentPerfect3.passive.row3_active">They have built houses.</td><td data-i18n="presentPerfect3.passive.row3_passive">Houses have been built by them.</td></tr>
+                    </tbody>
+                </table>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.passive.negativeTitle">❌ Negative Passive:</div>
+                    <p data-i18n="presentPerfect3.passive.negativeDesc">Add "not" after have/has: <em>The house has not been built.</em> / <em>The car hasn't been fixed.</em></p>
+                </div>
+                <div class="EH-conjugation-rule">
+                    <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.passive.questionTitle">❓ Question Form:</div>
+                    <p data-i18n="presentPerfect3.passive.questionDesc">Invert subject and have/has: <em>Has the house been built?</em> / <em>Have the students been taught?</em></p>
+                </div>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="presentPerfect3.passive.ex1">The report has been written by the assistant.</div>
+                    <div class="EH-conjugation-example" data-i18n="presentPerfect3.passive.ex2">The windows haven't been cleaned yet.</div>
                 </div>
             </div>
-            
-            <!-- Idioms Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect3.idioms.title">Common Idioms in Present Perfect</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">💬</span>
-                        <span data-i18n="presentPerfect3.idioms.whatAre">What Are Idioms?</span>
-                    </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.idioms.definitionTitle">Definition:</div>
-                        <p data-i18n="presentPerfect3.idioms.definition">Idioms are expressions whose meanings cannot be understood from the literal definitions of the words that make them up. They often use the present perfect tense to describe experiences or completed actions.</p>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.idioms.commonIdiomsTitle">Common Idioms in Present Perfect:</div>
-                        <table class="EH-conjugation-table">
-                            <thead>
-                                <tr>
-                                    <th data-i18n="presentPerfect3.idioms.idiom">Idiom</th>
-                                    <th data-i18n="presentPerfect3.idioms.meaning">Meaning</th>
-                                    <th data-i18n="presentPerfect3.idioms.example">Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td data-i18n="presentPerfect3.idioms.turnedOverANewLeaf">Turned over a new leaf</td>
-                                    <td data-i18n="presentPerfect3.idioms.turnedOverANewLeafMeaning">Started behaving better</td>
-                                    <td data-i18n="presentPerfect3.idioms.turnedOverANewLeafExample">"He's turned over a new leaf since last year."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentPerfect3.idioms.beenThroughTheMill">Been through the mill</td>
-                                    <td data-i18n="presentPerfect3.idioms.beenThroughTheMillMeaning">Had many difficult experiences</td>
-                                    <td data-i18n="presentPerfect3.idioms.beenThroughTheMillExample">"She's been through the mill with that project."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentPerfect3.idioms.goneTheExtraMile">Gone the extra mile</td>
-                                    <td data-i18n="presentPerfect3.idioms.goneTheExtraMileMeaning">Made extra effort</td>
-                                    <td data-i18n="presentPerfect3.idioms.goneTheExtraMileExample">"They've gone the extra mile to help us."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentPerfect3.idioms.seenBetterDays">Seen better days</td>
-                                    <td data-i18n="presentPerfect3.idioms.seenBetterDaysMeaning">In poor condition now</td>
-                                    <td data-i18n="presentPerfect3.idioms.seenBetterDaysExample">"This car has seen better days."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentPerfect3.idioms.hitTheJackpot">Hit the jackpot</td>
-                                    <td data-i18n="presentPerfect3.idioms.hitTheJackpotMeaning">Had great success or luck</td>
-                                    <td data-i18n="presentPerfect3.idioms.hitTheJackpotExample">"We've hit the jackpot with this new client."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentPerfect3.idioms.bittenTheBullet">Bitten the bullet</td>
-                                    <td data-i18n="presentPerfect3.idioms.bittenTheBulletMeaning">Done something difficult but necessary</td>
-                                    <td data-i18n="presentPerfect3.idioms.bittenTheBulletExample">"I've bitten the bullet and started my diet."</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentPerfect3.idioms.usageTitle">Using Idioms in Sentences:</div>
-                        <p data-i18n="presentPerfect3.idioms.usageRule">Idioms are often used in present perfect tense to describe experiences or completed actions that have relevance to the present.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.idioms.usageExample1">"I've turned over a new leaf and started exercising regularly."</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.idioms.usageExample2">"She's been through the mill with her health issues."</div>
-                            <div class="EH-conjugation-example" data-i18n="presentPerfect3.idioms.usageExample3">"We've hit the jackpot with our new business idea."</div>
-                        </div>
-                    </div>
+        </div>
+        <!-- Section 3: Common Idioms -->
+        <div class="EH-conjugation-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect3.idioms.title">I. 3. Common Idioms in Present Perfect</h2>
+            <div class="EH-conjugation-subsection">
+                <h3 class="EH-conjugation-subsection-title">
+                    <span class="EH-conjugation-subsection-icon">💡</span>
+                    <span data-i18n="presentPerfect3.idioms.heading">Idioms with present perfect for experiences</span>
+                </h3>
+                <table class="EH-conjugation-table">
+                    <thead><tr><th data-i18n="presentPerfect3.idioms.idiom">Idiom</th><th data-i18n="presentPerfect3.idioms.meaning">Meaning</th><th data-i18n="presentPerfect3.idioms.example">Example</th></tr></thead>
+                    <tbody>
+                        <tr><td data-i18n="presentPerfect3.idioms.idiom1">turned over a new leaf</td><td data-i18n="presentPerfect3.idioms.meaning1">started behaving better</td><td data-i18n="presentPerfect3.idioms.example1">He's turned over a new leaf since last year.</td></tr>
+                        <tr><td data-i18n="presentPerfect3.idioms.idiom2">been through the mill</td><td data-i18n="presentPerfect3.idioms.meaning2">had many difficult experiences</td><td data-i18n="presentPerfect3.idioms.example2">She's been through the mill with that project.</td></tr>
+                        <tr><td data-i18n="presentPerfect3.idioms.idiom3">gone the extra mile</td><td data-i18n="presentPerfect3.idioms.meaning3">made extra effort</td><td data-i18n="presentPerfect3.idioms.example3">They've gone the extra mile to help us.</td></tr>
+                        <tr><td data-i18n="presentPerfect3.idioms.idiom4">seen better days</td><td data-i18n="presentPerfect3.idioms.meaning4">in poor condition now</td><td data-i18n="presentPerfect3.idioms.example4">This car has seen better days.</td></tr>
+                        <tr><td data-i18n="presentPerfect3.idioms.idiom5">hit the jackpot</td><td data-i18n="presentPerfect3.idioms.meaning5">great success or luck</td><td data-i18n="presentPerfect3.idioms.example5">We've hit the jackpot with this new client.</td></tr>
+                        <tr><td data-i18n="presentPerfect3.idioms.idiom6">bitten the bullet</td><td data-i18n="presentPerfect3.idioms.meaning6">done something difficult but necessary</td><td data-i18n="presentPerfect3.idioms.example6">I've bitten the bullet and started my diet.</td></tr>
+                    </tbody>
+                </table>
+                <div class="EH-conjugation-examples">
+                    <div class="EH-conjugation-example" data-i18n="presentPerfect3.idioms.sentenceEx">I've turned over a new leaf and started exercising regularly.</div>
+                    <div class="EH-conjugation-example" data-i18n="presentPerfect3.idioms.sentenceEx2">We've hit the jackpot with our new business idea.</div>
                 </div>
             </div>
-            
-            <!-- Exercises Section -->
-            <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect3.exercises.title">Practice Exercises</h2>
-                
-                <!-- Type 1: Multiple Choice Exercises -->
-                <h3 style="color: #9932cc; margin-bottom: 20px;">Multiple Choice</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 1 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">1</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q1">Choose the correct negative form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q1Sentence">She ______ to London.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="presentPerfect3.exercises.q1a">has not been</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="presentPerfect3.exercises.q1b">does not been</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="presentPerfect3.exercises.q1c">not has been</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 2 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">2</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q2">Choose the correct negative form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q2Sentence">They ______ that movie.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="presentPerfect3.exercises.q2a">haven't seen</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="presentPerfect3.exercises.q2b">haven't saw</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="presentPerfect3.exercises.q2c">not have seen</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 3 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">3</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q3">Choose the correct passive form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q3Sentence">The house ______ by workers.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="presentPerfect3.exercises.q3a">has been built</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="presentPerfect3.exercises.q3b">has built</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="presentPerfect3.exercises.q3c">has been building</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 4 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">4</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q4">Choose the correct idiom meaning:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q4Sentence">"Turned over a new leaf" means:</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="presentPerfect3.exercises.q4a">Started behaving better</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="presentPerfect3.exercises.q4b">Changed jobs</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="presentPerfect3.exercises.q4c">Moved to a new house</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 5 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">5</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q5">Choose the correct negative passive form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q5Sentence">The car ______ by him.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="presentPerfect3.exercises.q5a">has not been fixed</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="presentPerfect3.exercises.q5b">doesn't fixing</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="presentPerfect3.exercises.q5c">not has been fixed</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 6 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">6</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q6">Choose the correct idiom meaning:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q6Sentence">"Been through the mill" means:</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-a" name="EH-exercise-type1-possibilities3-q6" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q6-a" data-i18n="presentPerfect3.exercises.q6a">Had many difficult experiences</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-b" name="EH-exercise-type1-possibilities3-q6" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q6-b" data-i18n="presentPerfect3.exercises.q6b">Visited a factory</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-c" name="EH-exercise-type1-possibilities3-q6" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q6-c" data-i18n="presentPerfect3.exercises.q6c">Worked hard</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q6-status"></div>
-                    </div>
+        </div>
+        <!-- Exercises Section -->
+        <div class="EH-conjugation-section EH-exercise-section">
+            <h2 class="EH-conjugation-section-title" data-i18n="presentPerfect3.exercises.title">Practice: Negative, Passive & Idioms</h2>
+            <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+            <div class="EH-exercise-container" id="mc-exercises"></div>
+            <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+            <div class="EH-exercise-container" id="fill-exercises"></div>
+            <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+            <div class="EH-exercise-container" id="order-exercises"></div>
+            <div class="EH-exercise-type1-possibilities3-answers-control">
+                <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
+                    <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
+                    <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                    <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                 </div>
-                
-                <!-- Type 2: Fill in the Blank Exercises -->
-                <h3 style="color: #9932cc; margin: 40px 0 20px 0;">Fill in the Blank</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 7 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">7</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q7">Complete the negative sentence:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q7Sentence">I ______ (not/visit) Paris.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q1-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 8 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">8</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q8">Complete the passive sentence:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q8Sentence">The report ______ (write) by the team.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q2-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 9 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">9</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q9">Complete the negative passive sentence:</p>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q9Sentence">The room ______ (not/clean).</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q3-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Type 3: Sentence Ordering Exercises -->
-                <h3 style="color: #9932cc; margin: 40px 0 20px 0;">Sentence Ordering</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 10 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">10</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q10">Arrange the words to form a correct negative sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q1-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word1" data-original-index="1">He</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word3" data-original-index="3">not</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word5" data-original-index="5">.</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word4" data-original-index="4">lunch</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word2" data-original-index="2">has</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word6" data-original-index="6">had</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 11 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">11</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q11">Arrange the words to form a correct passive sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q2-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word1" data-original-index="1">The</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word3" data-original-index="3">by</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word5" data-original-index="5">.</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word4" data-original-index="4">workers</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word2" data-original-index="2">house</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word7" data-original-index="7">has</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word8" data-original-index="8">been</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word6" data-original-index="6">built</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 12 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">12</div>
-                        <p class="EH-exercise-text" data-i18n="presentPerfect3.exercises.q12">Arrange the words to form a sentence with an idiom:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q3-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word1" data-original-index="1">He</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word3" data-original-index="3">a</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word5" data-original-index="5">leaf</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word4" data-original-index="4">new</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word2" data-original-index="2">has</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word6" data-original-index="6">.</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word8" data-original-index="8">turned</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word7" data-original-index="7">over</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Answer Check and Score System -->
-                <div class="EH-exercise-type1-possibilities3-answers-control">
-                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers">Check All Answers</button>
-                    <div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
-                        <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
-                        <div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback">Check your answers to see how you did!</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Navigation Buttons -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-present-perfect-p2.html'">
-                    ← <span data-i18n="common.backToConjugation">Back to Present Perfect II</span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.backToConjugation">Back to Verb Conjugation</span> →
-                </button>
             </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
-    <script src="scripts/translations/i18n_en.js"></script>
-    <script src="scripts/translations/i18n_fr.js"></script>
-    <script src="scripts/translations/i18n_ar.js"></script>
-    <script src="scripts/common-i18n.js"></script>
-    <script src="scripts/exercise.js"></script>
-    
-    <script>
-        // Correct answers for Type 1 exercises
-        const correctAnswersType1 = {
-            'EH-exercise-type1-possibilities3-q1': 'a', // She has not been to London.
-            'EH-exercise-type1-possibilities3-q2': 'a', // They haven't seen that movie.
-            'EH-exercise-type1-possibilities3-q3': 'a', // The house has been built by workers.
-            'EH-exercise-type1-possibilities3-q4': 'a', // Turned over a new leaf means started behaving better.
-            'EH-exercise-type1-possibilities3-q5': 'a', // The car has not been fixed by him.
-            'EH-exercise-type1-possibilities3-q6': 'a'  // Been through the mill means had many difficult experiences.
-        };
-        
-        // Correct answers for Type 2 exercises
-        const correctAnswersType2 = {
-            'EH-exercise-type2-fillblank-q1': 'have not visited',     // I have not visited Paris.
-            'EH-exercise-type2-fillblank-q2': 'has been written',     // The report has been written by the team.
-            'EH-exercise-type2-fillblank-q3': 'has not been cleaned'  // The room has not been cleaned.
-        };
-        
-        // Correct answers for Type 3 exercises
-        const correctAnswersType3 = {
-            'EH-exercise-type3-sentenceorder-q1': 'He has not had lunch .',
-            'EH-exercise-type3-sentenceorder-q2': 'The house has been built by workers .',
-            'EH-exercise-type3-sentenceorder-q3': 'He has turned over a new leaf .'
-        };
-        
-        // Combined function to check all exercise types
-        function checkAllExercises() {
-            let totalScore = 0;
-            let totalQuestions = 0;
-            
-            // Check Type 1 exercises
-            const type1Score = ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            totalScore += type1Score;
-            totalQuestions += Object.keys(correctAnswersType1).length;
-            
-            // Check Type 2 exercises
-            const type2Score = ExerciseType2FillBlankCheckAnswers(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            totalScore += type2Score;
-            totalQuestions += Object.keys(correctAnswersType2).length;
-            
-            // Check Type 3 exercises
-            const type3Score = ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            totalScore += type3Score;
-            totalQuestions += Object.keys(correctAnswersType3).length;
-            
-            // Update combined score display
-            const scoreValue = document.getElementById('EH-exercise-type1-possibilities3-score-value');
-            const scoreFeedback = document.getElementById('EH-exercise-type1-possibilities3-score-feedback');
-            
-            if (scoreValue) scoreValue.textContent = `${totalScore}/${totalQuestions}`;
-            
-            if (scoreFeedback) {
-                if (totalScore === totalQuestions) {
-                    scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
-                } else if (totalScore >= totalQuestions * 0.7) {
-                    scoreFeedback.textContent = 'Good job! You did well on this exercise.';
-                } else if (totalScore >= totalQuestions * 0.5) {
-                    scoreFeedback.textContent = 'Not bad, but you might want to review the material again.';
-                } else {
-                    scoreFeedback.textContent = 'You might want to review the material and try again.';
+</div>
+
+<script>
+    window.I18N = {
+        en: {
+            common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+            footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+            presentPerfect3: {
+                title: { line1: "Present Perfect Tense: III:", line2: "Negative, Passive & Idioms", line3: "negative sentences, passive voice, and common idioms in the present perfect tense", line4: "lesson: 3/3" },
+                negative: {
+                    title: "I. 1. Negative Forms in Present Perfect", heading: "Basic negative structure & examples", ruleTitle: "📘 Formula:", ruleDesc: "[Subject] + have/has + not + past participle (rest of sentence). Contractions: haven’t / hasn’t.",
+                    toBeTitle: "📘 Negative with \"to be\"", toHaveTitle: "📘 Negative with \"to have\" (as main verb)", otherTitle: "📘 Negative with other verbs (incl. irregular)",
+                    subject: "Subject", positive: "Positive", negative: "Negative", contractionsBe: "🗣️ Contractions: I haven't been, she hasn't been, etc.",
+                    row1_sub: "I", row1_pos: "I have been to Paris.", row1_neg: "I have not been to Paris.",
+                    row2_sub: "You", row2_pos: "You have been helpful.", row2_neg: "You have not been helpful.",
+                    row3_sub: "He", row3_pos: "He has been patient.", row3_neg: "He has not been patient.",
+                    row4_sub: "She", row4_pos: "She has been kind.", row4_neg: "She has not been kind.",
+                    row5_sub: "We", row5_pos: "We have been quiet.", row5_neg: "We have not been quiet.",
+                    row6_sub: "They", row6_pos: "They have been friendly.", row6_neg: "They have not been friendly.",
+                    row1_sub_have: "I", row1_pos_have: "I have had lunch.", row1_neg_have: "I have not had lunch.",
+                    row2_sub_have: "You", row2_pos_have: "You have had a good time.", row2_neg_have: "You have not had a good time.",
+                    row3_sub_have: "He", row3_pos_have: "He has had trouble.", row3_neg_have: "He has not had trouble.",
+                    row4_sub_have: "She", row4_pos_have: "She has had a party.", row4_neg_have: "She has not had a party.",
+                    row5_sub_have: "We", row5_pos_have: "We have had a meeting.", row5_neg_have: "We have not had a meeting.",
+                    row6_sub_have: "They", row6_pos_have: "They have had fun.", row6_neg_have: "They have not had fun.",
+                    row1_sub_other: "I", row1_pos_other: "I have worked here.", row1_neg_other: "I have not worked here.",
+                    row2_sub_other: "She", row2_pos_other: "She has gone home.", row2_neg_other: "She has not gone home.",
+                    row3_sub_other: "They", row3_pos_other: "They have taken a break.", row3_neg_other: "They have not taken a break.",
+                    irregEx: "I haven't gone to the store. / She hasn't done her homework."
+                },
+                passive: {
+                    title: "I. 2. Passive Voice in Present Perfect", heading: "Structure: have/has + been + past participle", ruleTitle: "📘 Formula:", ruleDesc: "Subject + have/has + been + past participle (+ by + agent). Focus on action receiver.",
+                    active: "Active Voice", passive: "Passive Voice", negativeTitle: "❌ Negative Passive:", negativeDesc: "Add \"not\" after have/has: The house has not been built. / The car hasn't been fixed.",
+                    questionTitle: "❓ Question Form:", questionDesc: "Invert subject and have/has: Has the house been built? / Have the students been taught?",
+                    row1_active: "I have written a letter.", row1_passive: "A letter has been written by me.",
+                    row2_active: "She has taught the students.", row2_passive: "The students have been taught by her.",
+                    row3_active: "They have built houses.", row3_passive: "Houses have been built by them.",
+                    ex1: "The report has been written by the assistant.", ex2: "The windows haven't been cleaned yet."
+                },
+                idioms: {
+                    title: "I. 3. Common Idioms in Present Perfect", heading: "Idioms with present perfect for experiences",
+                    idiom: "Idiom", meaning: "Meaning", example: "Example",
+                    idiom1: "turned over a new leaf", meaning1: "started behaving better", example1: "He's turned over a new leaf since last year.",
+                    idiom2: "been through the mill", meaning2: "had many difficult experiences", example2: "She's been through the mill with that project.",
+                    idiom3: "gone the extra mile", meaning3: "made extra effort", example3: "They've gone the extra mile to help us.",
+                    idiom4: "seen better days", meaning4: "in poor condition now", example4: "This car has seen better days.",
+                    idiom5: "hit the jackpot", meaning5: "great success or luck", example5: "We've hit the jackpot with this new client.",
+                    idiom6: "bitten the bullet", meaning6: "done something difficult but necessary", example6: "I've bitten the bullet and started my diet.",
+                    sentenceEx: "I've turned over a new leaf and started exercising regularly.", sentenceEx2: "We've hit the jackpot with our new business idea."
+                },
+                exercises: {
+                    title: "Practice: Negative, Passive & Idioms",
+                    q1: "Choose the correct negative form: She ______ to London.",
+                    q1a: "has not been", q1b: "does not been", q1c: "not has been",
+                    q2: "Choose the correct negative form: They ______ that movie.",
+                    q2a: "haven't seen", q2b: "haven't saw", q2c: "not have seen",
+                    q3: "Choose the correct passive form: The house ______ by workers.",
+                    q3a: "has been built", q3b: "has built", q3c: "has been building",
+                    q4: "What does 'turned over a new leaf' mean?",
+                    q4a: "Started behaving better", q4b: "Changed jobs", q4c: "Moved to a new house",
+                    q5: "Choose the correct negative passive form: The car ______ by him.",
+                    q5a: "has not been fixed", q5b: "doesn't fixing", q5c: "not has been fixed",
+                    q6: "What does 'been through the mill' mean?",
+                    q6a: "Had many difficult experiences", q6b: "Visited a factory", q6c: "Worked hard",
+                    q7: "Complete the negative sentence: I ______ (not/visit) Paris.",
+                    q8: "Complete the passive sentence: The report ______ (write) by the team.",
+                    q9: "Complete the negative passive sentence: The room ______ (not/clean).",
+                    q10: "Arrange to form a correct negative sentence: (He, has, not, had, lunch, .)",
+                    q11: "Arrange to form a correct passive sentence: (The, house, has, been, built, by, workers, .)",
+                    q12: "Arrange to form a sentence with an idiom: (He, has, turned, over, a, new, leaf, .)"
                 }
             }
-            
-            return totalScore;
-        }
-        
-        // Initialize when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set up answer checking for all exercise types
-            ExerciseType1Possibilities3Init(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            ExerciseType2FillBlankInit(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            ExerciseType3SentenceOrderInit(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            
-            // Replace the default check button with our combined function
-            const checkButton = document.getElementById('EH-exercise-type1-possibilities3-check-answers');
-            if (checkButton) {
-                checkButton.addEventListener('click', checkAllExercises);
+        },
+        fr: {
+            common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
+            footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+            presentPerfect3: {
+                title: { line1: "Present Perfect (passé composé) : III", line2: "Négation, voix passive et expressions idiomatiques", line3: "phrases négatives, voix passive et expressions courantes au present perfect", line4: "leçon : 3/3" },
+                negative: {
+                    title: "I. 1. Formes négatives au Present Perfect", heading: "Structure négative de base", ruleTitle: "📘 Formule :", ruleDesc: "[Sujet] + have/has + not + participe passé. Contractions : haven't / hasn't.",
+                    toBeTitle: "📘 Négation avec 'to be'", toHaveTitle: "📘 Négation avec 'to have' (comme verbe principal)", otherTitle: "📘 Négation avec d'autres verbes (incl. irréguliers)",
+                    subject: "Sujet", positive: "Positif", negative: "Négatif", contractionsBe: "🗣️ Contractions : I haven't been, she hasn't been, etc.",
+                    row1_sub: "I", row1_pos: "I have been to Paris.", row1_neg: "I have not been to Paris.",
+                    row2_sub: "You", row2_pos: "You have been helpful.", row2_neg: "You have not been helpful.",
+                    row3_sub: "He", row3_pos: "He has been patient.", row3_neg: "He has not been patient.",
+                    row4_sub: "She", row4_pos: "She has been kind.", row4_neg: "She has not been kind.",
+                    row5_sub: "We", row5_pos: "We have been quiet.", row5_neg: "We have not been quiet.",
+                    row6_sub: "They", row6_pos: "They have been friendly.", row6_neg: "They have not been friendly.",
+                    row1_sub_have: "I", row1_pos_have: "I have had lunch.", row1_neg_have: "I have not had lunch.",
+                    row2_sub_have: "You", row2_pos_have: "You have had a good time.", row2_neg_have: "You have not had a good time.",
+                    row3_sub_have: "He", row3_pos_have: "He has had trouble.", row3_neg_have: "He has not had trouble.",
+                    row4_sub_have: "She", row4_pos_have: "She has had a party.", row4_neg_have: "She has not had a party.",
+                    row5_sub_have: "We", row5_pos_have: "We have had a meeting.", row5_neg_have: "We have not had a meeting.",
+                    row6_sub_have: "They", row6_pos_have: "They have had fun.", row6_neg_have: "They have not had fun.",
+                    row1_sub_other: "I", row1_pos_other: "I have worked here.", row1_neg_other: "I have not worked here.",
+                    row2_sub_other: "She", row2_pos_other: "She has gone home.", row2_neg_other: "She has not gone home.",
+                    row3_sub_other: "They", row3_pos_other: "They have taken a break.", row3_neg_other: "They have not taken a break.",
+                    irregEx: "I haven't gone to the store. / She hasn't done her homework."
+                },
+                passive: {
+                    title: "I. 2. Voix passive au Present Perfect", heading: "Structure : have/has + been + participe passé", ruleTitle: "📘 Formule :", ruleDesc: "Sujet + have/has + been + participe passé (+ by + agent). L'accent est sur le receveur de l'action.",
+                    active: "Voix active", passive: "Voix passive", negativeTitle: "❌ Passive négative :", negativeDesc: "Ajoutez 'not' après have/has : The house has not been built. / The car hasn't been fixed.",
+                    questionTitle: "❓ Forme interrogative :", questionDesc: "Inversez le sujet et have/has : Has the house been built? / Have the students been taught?",
+                    row1_active: "I have written a letter.", row1_passive: "A letter has been written by me.",
+                    row2_active: "She has taught the students.", row2_passive: "The students have been taught by her.",
+                    row3_active: "They have built houses.", row3_passive: "Houses have been built by them.",
+                    ex1: "The report has been written by the assistant.", ex2: "The windows haven't been cleaned yet."
+                },
+                idioms: {
+                    title: "I. 3. Expressions idiomatiques courantes", heading: "Idiomes avec present perfect",
+                    idiom: "Idiome", meaning: "Signification", example: "Exemple",
+                    idiom1: "tourné une nouvelle page", meaning1: "commencé à mieux se comporter", example1: "Il a tourné une nouvelle page depuis l'année dernière.",
+                    idiom2: "être passé par des épreuves", meaning2: "avoir vécu beaucoup de difficultés", example2: "Elle est passée par des épreuves avec ce projet.",
+                    idiom3: "fait des efforts supplémentaires", meaning3: "fourni un effort supplémentaire", example3: "Ils ont fait des efforts supplémentaires pour nous aider.",
+                    idiom4: "connu des jours meilleurs", meaning4: "en mauvais état maintenant", example4: "Cette voiture a connu des jours meilleurs.",
+                    idiom5: "trouvé le filon", meaning5: "grand succès ou chance", example5: "Nous avons trouvé le filon avec ce nouveau client.",
+                    idiom6: "pris son courage à deux mains", meaning6: "fait quelque chose de difficile mais nécessaire", example6: "J'ai pris mon courage à deux mains et j'ai commencé mon régime.",
+                    sentenceEx: "J'ai tourné une nouvelle page et je fais du sport régulièrement.", sentenceEx2: "Nous avons trouvé le filon avec notre nouvelle idée commerciale."
+                }
             }
-        });
-    </script>
+        },
+        ar: {
+            common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+            footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+            presentPerfect3: {
+                title: { line1: "المضارع التام: 3", line2: "النفي، المبني للمجهول، والتعابير", line3: "الجمل المنفية، المبني للمجهول، والتعابير الشائعة في زمن المضارع التام", line4: "الدرس: 3/3" },
+                negative: {
+                    title: "I. 1. صيغ النفي في المضارع التام", heading: "البنية الأساسية للنفي", ruleTitle: "📘 الصيغة:", ruleDesc: "[الفاعل] + have/has + not + التصريف الثالث (بقية الجملة). الاختصارات: haven't / hasn't.",
+                    toBeTitle: "📘 النفي مع 'to be'", toHaveTitle: "📘 النفي مع 'to have' (كفعل رئيسي)", otherTitle: "📘 النفي مع أفعال أخرى (بما فيها غير المنتظمة)",
+                    subject: "الفاعل", positive: "مثبت", negative: "منفي", contractionsBe: "🗣️ الاختصارات: I haven't been, she hasn't been, إلخ.",
+                    row1_sub: "أنا", row1_pos: "لقد كنت في باريس.", row1_neg: "لم أكن في باريس.",
+                    row2_sub: "أنت", row2_pos: "لقد كنت مفيدًا.", row2_neg: "لم تكن مفيدًا.",
+                    row3_sub: "هو", row3_pos: "لقد كان صبورًا.", row3_neg: "لم يكن صبورًا.",
+                    row4_sub: "هي", row4_pos: "لقد كانت لطيفة.", row4_neg: "لم تكن لطيفة.",
+                    row5_sub: "نحن", row5_pos: "لقد كنا هادئين.", row5_neg: "لم نكن هادئين.",
+                    row6_sub: "هم", row6_pos: "لقد كانوا ودودين.", row6_neg: "لم يكونوا ودودين.",
+                    row1_sub_have: "أنا", row1_pos_have: "لقد تناولت الغداء.", row1_neg_have: "لم أتناول الغداء.",
+                    row2_sub_have: "أنت", row2_pos_have: "لقد قضيت وقتًا ممتعًا.", row2_neg_have: "لم تقض وقتًا ممتعًا.",
+                    row3_sub_have: "هو", row3_pos_have: "لقد واجه مشكلة.", row3_neg_have: "لم يواجه مشكلة.",
+                    row4_sub_have: "هي", row4_pos_have: "لقد أقامت حفلة.", row4_neg_have: "لم تقم بحفلة.",
+                    row5_sub_have: "نحن", row5_pos_have: "لقد عقدنا اجتماعًا.", row5_neg_have: "لم نعقد اجتماعًا.",
+                    row6_sub_have: "هم", row6_pos_have: "لقد استمتعوا.", row6_neg_have: "لم يستمتعوا.",
+                    row1_sub_other: "أنا", row1_pos_other: "لقد عملت هنا.", row1_neg_other: "لم أعمل هنا.",
+                    row2_sub_other: "هي", row2_pos_other: "لقد ذهبت إلى المنزل.", row2_neg_other: "لم تذهب إلى المنزل.",
+                    row3_sub_other: "هم", row3_pos_other: "لقد أخذوا استراحة.", row3_neg_other: "لم يأخذوا استراحة.",
+                    irregEx: "لم أذهب إلى المتجر. / لم تؤدِ واجبها المنزلي."
+                },
+                passive: {
+                    title: "I. 2. المبني للمجهول في المضارع التام", heading: "البنية: have/has + been + التصريف الثالث", ruleTitle: "📘 الصيغة:", ruleDesc: "الفاعل + have/has + been + التصريف الثالث (+ بواسطة + الفاعل). التركيز على متلقي الفعل.",
+                    active: "المبني للمعلوم", passive: "المبني للمجهول", negativeTitle: "❌ المبني للمجهول المنفي:", negativeDesc: "أضف 'not' بعد have/has: The house has not been built. / The car hasn't been fixed.",
+                    questionTitle: "❓ صيغة السؤال:", questionDesc: "اعكس الفاعل و have/has: Has the house been built? / Have the students been taught?",
+                    row1_active: "لقد كتبت رسالة.", row1_passive: "تمت كتابة رسالة بواسطتي.",
+                    row2_active: "لقد درست الطلاب.", row2_passive: "تم تدريس الطلاب بواسطتها.",
+                    row3_active: "لقد بنوا منازل.", row3_passive: "تم بناء المنازل بواسطتهم.",
+                    ex1: "تم كتابة التقرير من قبل المساعد.", ex2: "لم يتم تنظيف النوافذ بعد."
+                },
+                idioms: {
+                    title: "I. 3. التعابير الشائعة في المضارع التام", heading: "تعابير مع المضارع التام للتعبير عن الخبرات",
+                    idiom: "التعبير", meaning: "المعنى", example: "مثال",
+                    idiom1: "قلب صفحة جديدة", meaning1: "بدأ يتصرف بشكل أفضل", example1: "لقد قلب صفحة جديدة منذ العام الماضي.",
+                    idiom2: "مر بتجارب صعبة", meaning2: "عانى من العديد من التجارب الصعبة", example2: "لقد مرت بتجارب صعبة مع هذا المشروع.",
+                    idiom3: "بذل جهدًا إضافيًا", meaning3: "قدم جهدًا إضافيًا", example3: "لقد بذلوا جهدًا إضافيًا لمساعدتنا.",
+                    idiom4: "شرب أيامًا أفضل", meaning4: "في حالة سيئة الآن", example4: "هذه السيارة شربت أيامًا أفضل.",
+                    idiom5: "حقق الفوز الكبير", meaning5: "نجاح كبير أو حظ", example5: "لقد حققنا الفوز الكبير مع هذا العميل الجديد.",
+                    idiom6: "عض الرصاصة", meaning6: "فعل شيئًا صعبًا لكنه ضروري", example6: "لقد عضضت الرصاصة وبدأت حميتي الغذائية.",
+                    sentenceEx: "لقد قلبت صفحة جديدة وبدأت أمارس الرياضة بانتظام.", sentenceEx2: "لقد حققنا الفوز الكبير بفكرة عملنا الجديدة."
+                }
+            }
+        }
+    };
+</script>
+<script src="scripts/translation-refraction.js"></script>
+<script src="scripts/exercise-conjugation.js"></script>
+<script src="scripts/special-effects.js"></script>
+<script src="scripts/common-sections.js"></script>
+<script>
+    // Multiple choice exercises
+    const correctAnswersType1 = buildMultipleChoiceExercise({
+        containerId: 'mc-exercises',
+        prefix: 'EH-exercise-type1-possibilities3',
+        questions: [
+            { questionTextKey: 'presentPerfect3.exercises.q1', options: [{ value: 'a', labelKey: 'presentPerfect3.exercises.q1a' }, { value: 'b', labelKey: 'presentPerfect3.exercises.q1b' }, { value: 'c', labelKey: 'presentPerfect3.exercises.q1c' }], correctAnswer: 'a' },
+            { questionTextKey: 'presentPerfect3.exercises.q2', options: [{ value: 'a', labelKey: 'presentPerfect3.exercises.q2a' }, { value: 'b', labelKey: 'presentPerfect3.exercises.q2b' }, { value: 'c', labelKey: 'presentPerfect3.exercises.q2c' }], correctAnswer: 'a' },
+            { questionTextKey: 'presentPerfect3.exercises.q3', options: [{ value: 'a', labelKey: 'presentPerfect3.exercises.q3a' }, { value: 'b', labelKey: 'presentPerfect3.exercises.q3b' }, { value: 'c', labelKey: 'presentPerfect3.exercises.q3c' }], correctAnswer: 'a' },
+            { questionTextKey: 'presentPerfect3.exercises.q4', options: [{ value: 'a', labelKey: 'presentPerfect3.exercises.q4a' }, { value: 'b', labelKey: 'presentPerfect3.exercises.q4b' }, { value: 'c', labelKey: 'presentPerfect3.exercises.q4c' }], correctAnswer: 'a' },
+            { questionTextKey: 'presentPerfect3.exercises.q5', options: [{ value: 'a', labelKey: 'presentPerfect3.exercises.q5a' }, { value: 'b', labelKey: 'presentPerfect3.exercises.q5b' }, { value: 'c', labelKey: 'presentPerfect3.exercises.q5c' }], correctAnswer: 'a' },
+            { questionTextKey: 'presentPerfect3.exercises.q6', options: [{ value: 'a', labelKey: 'presentPerfect3.exercises.q6a' }, { value: 'b', labelKey: 'presentPerfect3.exercises.q6b' }, { value: 'c', labelKey: 'presentPerfect3.exercises.q6c' }], correctAnswer: 'a' }
+        ]
+    });
+</script>
+<script>
+    // Fill-in-the-blank exercises
+    correctAnswersType2 = buildFillInTheBlankExercise({
+        containerId: 'fill-exercises',
+        prefix: 'fill',
+        questions: [
+            { questionTextKey: 'presentPerfect3.exercises.q7', answers: ['have not visited', 'haven\'t visited'] },
+            { questionTextKey: 'presentPerfect3.exercises.q8', answers: ['has been written'] },
+            { questionTextKey: 'presentPerfect3.exercises.q9', answers: ['has not been cleaned', 'hasn\'t been cleaned'] }
+        ]
+    });
+</script>
+<script>
+    // Sentence ordering exercises
+    const correctAnswersType3 = buildSentenceOrderingExercise({
+        containerId: 'order-exercises',
+        prefix: 'order',
+        questions: [
+            { questionTextKey: 'presentPerfect3.exercises.q10', words: ['He', 'has', 'not', 'had', 'lunch', '.'], correctSentence: 'He has not had lunch .' },
+            { questionTextKey: 'presentPerfect3.exercises.q11', words: ['The', 'house', 'has', 'been', 'built', 'by', 'workers', '.'], correctSentence: 'The house has been built by workers .' },
+            { questionTextKey: 'presentPerfect3.exercises.q12', words: ['He', 'has', 'turned', 'over', 'a', 'new', 'leaf', '.'], correctSentence: 'He has turned over a new leaf .' }
+        ]
+    });
+</script>
+<script>
+    function checkAllExercises() {
+        let totalScore = 0;
+        let totalQuestions = 0;
+
+        totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+        totalQuestions += 6;
+        totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+        totalQuestions += 3;
+        totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+        totalQuestions += 3;
+
+        const scoreEl = document.getElementById('score-value');
+        const fbEl = document.getElementById('score-feedback');
+        if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+        if (fbEl) {
+            if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered present perfect negatives, passive & idioms!';
+            else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+            else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit negative forms and passive voice.';
+            else fbEl.textContent = 'Review the lesson and try again.';
+        }
+        document.getElementById('score-display').style.display = 'block';
+        EHScoreEffects.show(totalScore, totalQuestions);
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof ExerciseType2FillBlankInit === 'function') ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+        if (typeof ExerciseType3SentenceOrderInit === 'function') ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+        const checkBtn = document.getElementById('check-all');
+        if (checkBtn) checkBtn.addEventListener('click', checkAllExercises);
+    });
+    // i18n rendering
+    (function() {
+        function applyHtmlI18n() {
+            const lang = document.getElementById('language-selector').value;
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                if (translation) el.textContent = translation;
+            });
+        }
+        window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+        document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+    })();
+</script>
 </body>
 </html>

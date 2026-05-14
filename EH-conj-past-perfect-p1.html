@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Perfect I: Introduction & Basic Form - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #c5e3f5, #aed6f0, #8bc1e8, #6aadd8);
+            --content-bg: #f4fafd;
+            --card-bg: #ffffff;
+            --subsection-bg: #eef5fa;
+            --rule-bg: #e4f0f8;
+            --example-bg: #d9eaf3;
+            --table-stripe: #eff6fc;
+            --title-color: #1a4a6e;
+            --text-color: #1a3a50;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #3a7ca5;
+            --primary-hover: #2c6085;
+            --primary-light: #5599c2;
+            --accent: #4682b4;
+            --exercise-number-gradient: linear-gradient(135deg, #3a7ca5, #2a5f82);
+            --rule-border: #3a7ca5;
+            --example-border: #3a7ca5;
+            --nav-btn-bg: #3a7ca5;
+            --nav-btn-hover: #2c6085;
+            --nav-back-btn-bg: #5599c2;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #3a7ca5;
+            --refract-divider-color: #8eb9d4;
+            --refract-translation-bg: #e0eff8;
+            --refract-translation-border: #3a7ca5;
+            --refract-english-color: #1a3a50;
+            --section-divider: #cde0ed;
+            --card-border: #cde0ed;
+            --input-border: #b4d0e4;
+            --dashed-border: #b4d0e4;
+            --table-border: #c5ddea;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #eaf1f7;
+            --neutral-color: #4a6f8a;
+            --neutral-border: #b8d0e0;
+            --empty-input-border: #a0c0d8;
+            --empty-input-bg: #f5fafd;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #3a7ca5;
+            --language-selector-color: #1a3a50;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #1a3a4a, #1e4a60, #245a72, #2a6a84);
+            --content-bg: #1a2f3a;
+            --card-bg: #1f3d4a;
+            --subsection-bg: #1f3d4a;
+            --rule-bg: #1a2f3a;
+            --example-bg: #1a2f3a;
+            --table-stripe: #1e3440;
+            --title-color: #b0d4f0;
+            --text-color: #d6eaf0;
+            --header-text: #d6eaf0;
+            --header-text-light: #b0cce0;
+            --primary: #5c9ec2;
+            --primary-hover: #70b0d0;
+            --primary-light: #5c9ec2;
+            --accent: #5c9ec2;
+            --rule-border: #5c9ec2;
+            --example-border: #5c9ec2;
+            --exercise-number-gradient: linear-gradient(135deg, #5c9ec2, #3a7ca5);
+            --nav-btn-bg: #5c9ec2;
+            --nav-btn-hover: #3a7ca5;
+            --nav-back-btn-bg: #70b0d0;
+            --nav-back-btn-color: #0a1c28;
+            --nav-back-btn-hover: #5c9ec2;
+            --refract-divider-color: #70a8c8;
+            --refract-translation-bg: #2a4e64;
+            --refract-translation-border: #70a8c8;
+            --refract-english-color: #cce6f5;
+            --section-divider: #2a4e64;
+            --card-border: #2a4e64;
+            --input-border: #3a6a82;
+            --dashed-border: #3a6a82;
+            --table-border: #305e78;
+            --white: #e6f0f8;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #2a4a5a;
+            --neutral-color: #b0d0e0;
+            --neutral-border: #3a6a82;
+            --empty-input-border: #3a6a82;
+            --empty-input-bg: #1a2f3a;
+            --language-selector-bg: #1f3d4a;
+            --language-selector-border: #5c9ec2;
+            --language-selector-color: #d6eaf0;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+    </div>
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+    </div>
+    <div class="EH-conjugation-container">
+        <header class="EH-conjugation-header">
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="pastPerfect1.title.line1">Past Perfect I:</div>
+                <div class="EH-conjugation-title-line" data-i18n="pastPerfect1.title.line2">Introduction & Basic Form</div>
+                <div class="EH-conjugation-subtitle" data-i18n="pastPerfect1.title.line3">Actions that happened before another action in the past. Clarify sequence, causes, and reported speech.</div>
+                <div class="EH-conjugation-subtitle" data-i18n="pastPerfect1.title.line4">lesson: 1/3</div>
+            </div>
+        </header>
+        <div class="EH-conjugation-content">
+            <!-- Section 1: Introduction -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect1.intro.title">I. 1. Introduction to Past Perfect</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">📘</span>
+                        <span data-i18n="pastPerfect1.intro.heading">What is the Past Perfect Tense?</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect1.intro.desc1">📘 Definition:</div>
+                        <p data-i18n="pastPerfect1.intro.desc2">The Past Perfect tense is used to talk about an action that was completed before another action or time in the past. It helps clarify the order of past events.</p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect1.intro.whenTitle">📌 When to use:</div>
+                        <ul>
+                            <li data-i18n="pastPerfect1.intro.when1">An action that happened before another action in the past</li>
+                            <li data-i18n="pastPerfect1.intro.when2">To show the cause of a past state or event</li>
+                            <li data-i18n="pastPerfect1.intro.when3">In reported speech to refer to an earlier past</li>
+                            <li data-i18n="pastPerfect1.intro.when4">With time expressions like 'already', 'just', 'never', 'before', etc.</li>
+                        </ul>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect1.intro.ex1">I had finished my homework before dinner.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect1.intro.ex2">She had already left when I arrived.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect1.intro.ex3">They had never seen such a beautiful sunset.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect1.intro.ex4">He had lived in London for five years before moving to Paris.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 2: Basic Structure -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect1.structure.title">I. 2. Basic Structure</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🔧</span>
+                        <span data-i18n="pastPerfect1.structure.heading">How to Form the Past Perfect</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect1.structure.ruleTitle">📘 Basic Rule:</div>
+                        <p data-i18n="pastPerfect1.structure.ruleDesc">Use <strong>"had"</strong> + past participle of the verb for all subjects.</p>
+                    </div>
+                    <table class="EH-conjugation-table">
+                        <thead>
+                            <tr><th data-i18n="pastPerfect1.structure.subjectCol">Subject</th><th data-i18n="pastPerfect1.structure.conjugationCol">Conjugation</th><th data-i18n="pastPerfect1.structure.exampleCol">Example (work)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>I</td><td>had worked</td><td data-i18n="pastPerfect1.structure.exI">I had worked there before.</td></tr>
+                            <tr><td>You</td><td>had worked</td><td data-i18n="pastPerfect1.structure.exYou">You had worked hard all day.</td></tr>
+                            <tr><td>He</td><td>had worked</td><td data-i18n="pastPerfect1.structure.exHe">He had worked at that company for ten years.</td></tr>
+                            <tr><td>She</td><td>had worked</td><td data-i18n="pastPerfect1.structure.exShe">She had worked on the project for months.</td></tr>
+                            <tr><td>It</td><td>had worked</td><td data-i18n="pastPerfect1.structure.exIt">It had worked perfectly until yesterday.</td></tr>
+                            <tr><td>We</td><td>had worked</td><td data-i18n="pastPerfect1.structure.exWe">We had worked together before.</td></tr>
+                            <tr><td>They</td><td>had worked</td><td data-i18n="pastPerfect1.structure.exThey">They had worked in that industry for years.</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect1.structure.negativeTitle">❌ Negative Form:</div>
+                        <p data-i18n="pastPerfect1.structure.negativeDesc">Add <strong>"not"</strong> after "had" (hadn't).</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.structure.negEx1">I had not finished my work.</div>
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.structure.negEx2">She had not visited that museum.</div>
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.structure.negEx3">They had not seen the movie.</div>
+                        </div>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect1.structure.questionTitle">❓ Question Form:</div>
+                        <p data-i18n="pastPerfect1.structure.questionDesc">Invert the subject and "had".</p>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.structure.qEx1">Had you finished your homework?</div>
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.structure.qEx2">Had she visited Paris before?</div>
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.structure.qEx3">Had they seen the movie?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 3: Verb To Be -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect1.verbToBe.title">I. 3. The Verb "To Be" in Past Perfect</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">📖</span>
+                        <span data-i18n="pastPerfect1.verbToBe.heading">Using "Had Been" for states & conditions</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect1.verbToBe.note">📘 Important Note:</div>
+                        <p data-i18n="pastPerfect1.verbToBe.desc">The verb "to be" in Past Perfect uses <strong>"had been"</strong>. It is used to talk about states or conditions that existed before another past event.</p>
+                    </div>
+                    <table class="EH-conjugation-table">
+                        <thead><tr><th>Subject</th><th>Conjugation</th><th data-i18n="pastPerfect1.verbToBe.exampleCol">Example</th></tr></thead>
+                        <tbody>
+                            <tr><td>I</td><td>had been</td><td data-i18n="pastPerfect1.verbToBe.exI">I had been to London before.</td></tr>
+                            <tr><td>You</td><td>had been</td><td data-i18n="pastPerfect1.verbToBe.exYou">You had been very helpful before that.</td></tr>
+                            <tr><td>He</td><td>had been</td><td data-i18n="pastPerfect1.verbToBe.exHe">He had been sick for three days before seeing a doctor.</td></tr>
+                            <tr><td>She</td><td>had been</td><td data-i18n="pastPerfect1.verbToBe.exShe">She had been a teacher for ten years before retiring.</td></tr>
+                            <tr><td>It</td><td>had been</td><td data-i18n="pastPerfect1.verbToBe.exIt">It had been raining all day when we arrived.</td></tr>
+                            <tr><td>We</td><td>had been</td><td data-i18n="pastPerfect1.verbToBe.exWe">We had been friends for ten years before the argument.</td></tr>
+                            <tr><td>They</td><td>had been</td><td data-i18n="pastPerfect1.verbToBe.exThey">They had been married since 2010 before they moved.</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect1.verbToBe.negativeTitle">❌ Negative Form:</div>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.verbToBe.negEx1">I had not been to Paris before.</div>
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.verbToBe.negEx2">She had not been feeling well earlier.</div>
+                        </div>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect1.verbToBe.questionTitle">❓ Question Form:</div>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.verbToBe.qEx1">Had you been to London before?</div>
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.verbToBe.qEx2">Had they been waiting long?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 4: Verb To Have -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect1.verbToHave.title">I. 4. The Verb "To Have" in Past Perfect</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">📌</span>
+                        <span data-i18n="pastPerfect1.verbToHave.heading">Using "Had Had" for possession & experiences</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect1.verbToHave.note">📘 Important Note:</div>
+                        <p data-i18n="pastPerfect1.verbToHave.desc">"To have" in Past Perfect uses <strong>"had had"</strong>. The first "had" is the auxiliary, the second is the past participle of "have".</p>
+                    </div>
+                    <table class="EH-conjugation-table">
+                        <thead><tr><th>Subject</th><th>Conjugation</th><th data-i18n="pastPerfect1.verbToHave.exampleCol">Example</th></tr></thead>
+                        <tbody>
+                            <tr><td>I</td><td>had had</td><td data-i18n="pastPerfect1.verbToHave.exI">I had had this car for five years before selling it.</td></tr>
+                            <tr><td>You</td><td>had had</td><td data-i18n="pastPerfect1.verbToHave.exYou">You had had enough time to finish.</td></tr>
+                            <tr><td>He</td><td>had had</td><td data-i18n="pastPerfect1.verbToHave.exHe">He had had three cups of coffee before the meeting.</td></tr>
+                            <tr><td>She</td><td>had had</td><td data-i18n="pastPerfect1.verbToHave.exShe">She had had this job for a year before quitting.</td></tr>
+                            <tr><td>It</td><td>had had</td><td data-i18n="pastPerfect1.verbToHave.exIt">It had had a big impact on our lives before we moved.</td></tr>
+                            <tr><td>We</td><td>had had</td><td data-i18n="pastPerfect1.verbToHave.exWe">We had had many opportunities before that.</td></tr>
+                            <tr><td>They</td><td>had had</td><td data-i18n="pastPerfect1.verbToHave.exThey">They had had a lot of problems before the solution.</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect1.verbToHave.negativeTitle">❌ Negative Form:</div>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.verbToHave.negEx1">I had not had breakfast before leaving.</div>
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.verbToHave.negEx2">She had not had any problems before.</div>
+                        </div>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect1.verbToHave.questionTitle">❓ Question Form:</div>
+                        <div class="EH-conjugation-examples">
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.verbToHave.qEx1">Had you had breakfast before leaving?</div>
+                            <div class="EH-conjugation-example" data-i18n="pastPerfect1.verbToHave.qEx2">Had they had enough time to prepare?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 5: Common Verbs -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect1.commonVerbs.title">I. 5. Common Verbs in Past Perfect</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">📖</span>
+                        <span data-i18n="pastPerfect1.commonVerbs.heading">Regular & Irregular Past Participles</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <p data-i18n="pastPerfect1.commonVerbs.desc">Regular verbs add <strong>-ed</strong>; irregular verbs have special past participle forms that must be memorized.</p>
+                    </div>
+                    <table class="EH-conjugation-table">
+                        <thead><tr><th data-i18n="pastPerfect1.commonVerbs.verbCol">Verb</th><th data-i18n="pastPerfect1.commonVerbs.pastPartCol">Past Participle</th><th data-i18n="pastPerfect1.commonVerbs.exampleCol">Example</th></tr></thead>
+                        <tbody>
+                            <tr><td>go</td><td>gone</td><td data-i18n="pastPerfect1.commonVerbs.exGo">I had gone to the store before you called.</td></tr>
+                            <tr><td>do</td><td>done</td><td data-i18n="pastPerfect1.commonVerbs.exDo">He had done his homework by then.</td></tr>
+                            <tr><td>see</td><td>seen</td><td data-i18n="pastPerfect1.commonVerbs.exSee">She had seen that movie before.</td></tr>
+                            <tr><td>eat</td><td>eaten</td><td data-i18n="pastPerfect1.commonVerbs.exEat">We had eaten dinner when he arrived.</td></tr>
+                            <tr><td>write</td><td>written</td><td data-i18n="pastPerfect1.commonVerbs.exWrite">They had written a letter before leaving.</td></tr>
+                            <tr><td>take</td><td>taken</td><td data-i18n="pastPerfect1.commonVerbs.exTake">I had taken the bus before I got a car.</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect1.commonVerbs.more1">I had gone to that restaurant many times before it closed.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect1.commonVerbs.more2">She had done all her chores by the time her mother came home.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect1.commonVerbs.more3">We had seen this show before, so we left early.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect1.commonVerbs.more4">He had eaten already, so he didn't join us for dinner.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercises -->
+            <div class="EH-conjugation-section EH-exercise-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect1.exercises.title">Practice: Past Perfect Basics</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+                <div class="EH-exercise-container" id="mc-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+                <div class="EH-exercise-container" id="fill-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+                <div class="EH-exercise-container" id="order-exercises"></div>
+                <div class="EH-exercise-type1-possibilities3-answers-control">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
+                        <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.I18N = {
+            en: {
+                common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                pastPerfect1: {
+                    title: { line1: "Past Perfect I:", line2: "Introduction & Basic Form", line3: "Actions that happened before another action in the past. Clarify sequence, causes, and reported speech.", line4: "lesson: 1/3" },
+                    intro: { title: "I. 1. Introduction to Past Perfect", heading: "What is the Past Perfect Tense?", desc1: "📘 Definition:", desc2: "The Past Perfect tense is used to talk about an action that was completed before another action or time in the past. It helps clarify the order of past events.", whenTitle: "📌 When to use:", when1: "An action that happened before another action in the past", when2: "To show the cause of a past state or event", when3: "In reported speech to refer to an earlier past", when4: "With time expressions like 'already', 'just', 'never', 'before', etc.", ex1: "I had finished my homework before dinner.", ex2: "She had already left when I arrived.", ex3: "They had never seen such a beautiful sunset.", ex4: "He had lived in London for five years before moving to Paris." },
+                    structure: { title: "I. 2. Basic Structure", heading: "How to Form the Past Perfect", ruleTitle: "📘 Basic Rule:", ruleDesc: "Use \"had\" + past participle of the verb for all subjects.", subjectCol: "Subject", conjugationCol: "Conjugation", exampleCol: "Example (work)", exI: "I had worked there before.", exYou: "You had worked hard all day.", exHe: "He had worked at that company for ten years.", exShe: "She had worked on the project for months.", exIt: "It had worked perfectly until yesterday.", exWe: "We had worked together before.", exThey: "They had worked in that industry for years.", negativeTitle: "❌ Negative Form:", negativeDesc: "Add \"not\" after \"had\" (hadn't).", negEx1: "I had not finished my work.", negEx2: "She had not visited that museum.", negEx3: "They had not seen the movie.", questionTitle: "❓ Question Form:", questionDesc: "Invert the subject and \"had\".", qEx1: "Had you finished your homework?", qEx2: "Had she visited Paris before?", qEx3: "Had they seen the movie?" },
+                    verbToBe: { title: "I. 3. The Verb \"To Be\" in Past Perfect", heading: "Using \"Had Been\" for states & conditions", note: "📘 Important Note:", desc: "The verb \"to be\" in Past Perfect uses \"had been\". It is used to talk about states or conditions that existed before another past event.", exampleCol: "Example", exI: "I had been to London before.", exYou: "You had been very helpful before that.", exHe: "He had been sick for three days before seeing a doctor.", exShe: "She had been a teacher for ten years before retiring.", exIt: "It had been raining all day when we arrived.", exWe: "We had been friends for ten years before the argument.", exThey: "They had been married since 2010 before they moved.", negativeTitle: "❌ Negative Form:", negEx1: "I had not been to Paris before.", negEx2: "She had not been feeling well earlier.", questionTitle: "❓ Question Form:", qEx1: "Had you been to London before?", qEx2: "Had they been waiting long?" },
+                    verbToHave: { title: "I. 4. The Verb \"To Have\" in Past Perfect", heading: "Using \"Had Had\" for possession & experiences", note: "📘 Important Note:", desc: "\"To have\" in Past Perfect uses \"had had\". The first \"had\" is the auxiliary, the second is the past participle of \"have\".", exampleCol: "Example", exI: "I had had this car for five years before selling it.", exYou: "You had had enough time to finish.", exHe: "He had had three cups of coffee before the meeting.", exShe: "She had had this job for a year before quitting.", exIt: "It had had a big impact on our lives before we moved.", exWe: "We had had many opportunities before that.", exThey: "They had had a lot of problems before the solution.", negativeTitle: "❌ Negative Form:", negEx1: "I had not had breakfast before leaving.", negEx2: "She had not had any problems before.", questionTitle: "❓ Question Form:", qEx1: "Had you had breakfast before leaving?", qEx2: "Had they had enough time to prepare?" },
+                    commonVerbs: { title: "I. 5. Common Verbs in Past Perfect", heading: "Regular & Irregular Past Participles", desc: "Regular verbs add -ed; irregular verbs have special past participle forms that must be memorized.", verbCol: "Verb", pastPartCol: "Past Participle", exampleCol: "Example", exGo: "I had gone to the store before you called.", exDo: "He had done his homework by then.", exSee: "She had seen that movie before.", exEat: "We had eaten dinner when he arrived.", exWrite: "They had written a letter before leaving.", exTake: "I had taken the bus before I got a car.", more1: "I had gone to that restaurant many times before it closed.", more2: "She had done all her chores by the time her mother came home.", more3: "We had seen this show before, so we left early.", more4: "He had eaten already, so he didn't join us for dinner." },
+                    exercises: {
+                        title: "Practice: Past Perfect Basics",
+                        q1: "I ______ my work before he arrived.", q1a: "finished", q1b: "had finished", q1c: "have finished",
+                        q2: "She ______ to Paris before.", q2a: "had been", q2b: "has been", q2c: "was",
+                        q3: "They ______ dinner when I called.", q3a: "ate", q3b: "had eaten", q3c: "have eaten",
+                        q4: "He ______ that movie before last night.", q4a: "didn't see", q4b: "hadn't seen", q4c: "hasn't seen",
+                        q5: "______ you finished the report before the meeting?", q5a: "Did", q5b: "Had", q5c: "Have",
+                        q6: "She had ______ a letter.", q6a: "wrote", q6b: "written", q6c: "write",
+                        q7: "Complete: I ______ (to finish) my work before he arrived.",
+                        q8: "Complete: She ______ (to be) to Paris before.",
+                        q9: "Complete: They ______ (to eat) dinner when I called.",
+                        q10: "Arrange: I, had, finished, my, work, .",
+                        q11: "Arrange: She, had, not, visited, Paris, .",
+                        q12: "Arrange: Had, you, eaten, lunch, ?"
+                    }
+                }
+            },
+            fr: {
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
+                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+                pastPerfect1: {
+                    title: { line1: "Past Perfect I :", line2: "Introduction et forme de base", line3: "Actions antérieures à une autre action dans le passé. Clarifiez l'ordre, les causes et le discours rapporté.", line4: "leçon : 1/3" },
+                    intro: { title: "I. 1. Introduction au Past Perfect", heading: "Qu'est-ce que le Past Perfect ?", desc1: "📘 Définition :", desc2: "Le Past Perfect est utilisé pour parler d'une action terminée avant une autre action ou un moment dans le passé.", whenTitle: "📌 Quand l'utiliser :", when1: "Une action antérieure à une autre dans le passé", when2: "Pour montrer la cause d'un état ou événement passé", when3: "Dans le discours rapporté", when4: "Avec des expressions comme 'already', 'just', 'never', 'before'", ex1: "J'avais fini mes devoirs avant le dîner.", ex2: "Elle était déjà partie quand je suis arrivé.", ex3: "Ils n'avaient jamais vu un si beau coucher de soleil.", ex4: "Il avait vécu à Londres pendant cinq ans avant de déménager à Paris." },
+                    structure: { title: "I. 2. Structure de base", heading: "Comment former le Past Perfect", ruleTitle: "📘 Règle de base :", ruleDesc: "Utilisez \"had\" + participe passé pour tous les sujets.", subjectCol: "Sujet", conjugationCol: "Conjugaison", exampleCol: "Exemple (work)", exI: "J'avais travaillé là avant.", exYou: "Vous aviez travaillé dur toute la journée.", exHe: "Il avait travaillé dans cette entreprise pendant dix ans.", exShe: "Elle avait travaillé sur le projet pendant des mois.", exIt: "Cela avait parfaitement fonctionné jusqu'à hier.", exWe: "Nous avions travaillé ensemble avant.", exThey: "Ils avaient travaillé dans cette industrie pendant des années.", negativeTitle: "❌ Forme négative :", negativeDesc: "Ajoutez \"not\" après \"had\" (hadn't).", negEx1: "Je n'avais pas fini mon travail.", negEx2: "Elle n'avait pas visité ce musée.", negEx3: "Ils n'avaient pas vu le film.", questionTitle: "❓ Forme interrogative :", questionDesc: "Inversez le sujet et \"had\".", qEx1: "Aviez-vous fini vos devoirs ?", qEx2: "Était-elle déjà allée à Paris ?", qEx3: "Avaient-ils vu le film ?" },
+                    verbToBe: { title: "I. 3. Le verbe \"Être\" au Past Perfect", heading: "Utilisation de \"Had Been\"", note: "📘 Remarque :", desc: "Le verbe \"être\" utilise \"had been\".", exampleCol: "Exemple", exI: "J'étais déjà allé à Londres.", exYou: "Vous aviez été très utile avant cela.", exHe: "Il avait été malade trois jours avant de consulter.", exShe: "Elle avait été enseignante dix ans avant sa retraite.", exIt: "Il avait plu toute la journée quand nous sommes arrivés.", exWe: "Nous avions été amis dix ans avant la dispute.", exThey: "Ils étaient mariés depuis 2010 avant de déménager.", negativeTitle: "❌ Forme négative :", negEx1: "Je n'étais jamais allé à Paris.", negEx2: "Elle ne s'était pas sentie bien plus tôt.", questionTitle: "❓ Forme interrogative :", qEx1: "Étiez-vous déjà allé à Londres ?", qEx2: "Avaient-ils attendu longtemps ?" },
+                    verbToHave: { title: "I. 4. Le verbe \"Avoir\" au Past Perfect", heading: "Utilisation de \"Had Had\"", note: "📘 Remarque :", desc: "\"Avoir\" utilise \"had had\".", exampleCol: "Exemple", exI: "J'avais eu cette voiture cinq ans avant de la vendre.", exYou: "Vous aviez eu assez de temps pour finir.", exHe: "Il avait eu trois tasses de café avant la réunion.", exShe: "Elle avait eu cet emploi un an avant de démissionner.", exIt: "Cela avait eu un grand impact avant notre déménagement.", exWe: "Nous avions eu beaucoup d'opportunités avant cela.", exThey: "Ils avaient eu beaucoup de problèmes avant la solution.", negativeTitle: "❌ Forme négative :", negEx1: "Je n'avais pas pris de petit-déjeuner avant de partir.", negEx2: "Elle n'avait eu aucun problème avant.", questionTitle: "❓ Forme interrogative :", qEx1: "Aviez-vous pris votre petit-déjeuner avant de partir ?", qEx2: "Avaient-ils eu assez de temps pour préparer ?" },
+                    commonVerbs: { title: "I. 5. Verbes courants au Past Perfect", heading: "Participes passés réguliers et irréguliers", desc: "Les verbes réguliers ajoutent -ed ; les irréguliers ont des formes à mémoriser.", verbCol: "Verbe", pastPartCol: "Participe passé", exampleCol: "Exemple", exGo: "J'étais allé au magasin avant que tu appelles.", exDo: "Il avait fait ses devoirs à ce moment-là.", exSee: "Elle avait vu ce film auparavant.", exEat: "Nous avions dîné quand il est arrivé.", exWrite: "Ils avaient écrit une lettre avant de partir.", exTake: "J'avais pris le bus avant d'avoir une voiture.", more1: "J'étais allé plusieurs fois dans ce restaurant avant qu'il ferme.", more2: "Elle avait fait toutes ses corvées quand sa mère est rentrée.", more3: "Nous avions déjà vu ce spectacle, alors nous sommes partis tôt.", more4: "Il avait déjà mangé, donc il ne s'est pas joint au dîner." }
+                }
+            },
+            ar: {
+                common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+                pastPerfect1: {
+                    title: { line1: "الماضي التام: 1:", line2: "المقدمة والشكل الأساسي", line3: "أحداث وقعت قبل حدث آخر في الماضي. توضيح التسلسل والأسباب والكلام المنقول.", line4: "الدرس: 1/3" },
+                    intro: { title: "I. 1. مقدمة إلى الماضي التام", heading: "ما هو زمن الماضي التام؟", desc1: "📘 التعريف:", desc2: "يُستخدم الماضي التام للتحدث عن حدث اكتمل قبل حدث آخر في الماضي.", whenTitle: "📌 متى نستخدمه:", when1: "حدث وقع قبل حدث آخر في الماضي", when2: "لإظهار سبب حالة أو حدث ماضٍ", when3: "في الكلام المنقول", when4: "مع تعبيرات مثل 'بالفعل'، 'فقط'، 'أبدًا'، 'قبل'", ex1: "كنت قد أنهيت واجبي قبل العشاء.", ex2: "كانت قد غادرت بالفعل عندما وصلت.", ex3: "لم يكونوا قد رأوا غروبًا جميلاً كهذا من قبل.", ex4: "كان قد عاش في لندن خمس سنوات قبل الانتقال إلى باريس." },
+                    structure: { title: "I. 2. البنية الأساسية", heading: "كيفية تشكيل الماضي التام", ruleTitle: "📘 القاعدة الأساسية:", ruleDesc: "استخدم \"had\" + التصريف الثالث لجميع الفاعلين.", subjectCol: "الفاعل", conjugationCol: "التصريف", exampleCol: "مثال (work)", exI: "كنت قد عملت هناك من قبل.", exYou: "كنت قد عملت بجد طوال اليوم.", exHe: "كان قد عمل في تلك الشركة عشر سنوات.", exShe: "كانت قد عملت على المشروع لأشهر.", exIt: "كان قد عمل بشكل مثالي حتى البارحة.", exWe: "كنا قد عملنا معًا من قبل.", exThey: "كانوا قد عملوا في هذا المجال لسنوات.", negativeTitle: "❌ صيغة النفي:", negativeDesc: "أضف \"not\" بعد \"had\" (hadn't).", negEx1: "لم أكن قد أنهيت عملي.", negEx2: "لم تكن قد زارت ذلك المتحف.", negEx3: "لم يكونوا قد شاهدوا الفيلم.", questionTitle: "❓ صيغة السؤال:", questionDesc: "اعكس الفاعل و \"had\".", qEx1: "هل كنت قد أنهيت واجبك؟", qEx2: "هل كانت قد زارت باريس من قبل؟", qEx3: "هل كانوا قد شاهدوا الفيلم؟" },
+                    verbToBe: { title: "I. 3. الفعل \"يكون\" في الماضي التام", heading: "استخدام \"Had Been\"", note: "📘 ملاحظة:", desc: "الفعل \"يكون\" يستخدم \"had been\".", exampleCol: "مثال", exI: "كنت قد ذهبت إلى لندن من قبل.", exYou: "كنت قد كنت مفيدًا جدًا قبل ذلك.", exHe: "كان مريضًا ثلاثة أيام قبل زيارة الطبيب.", exShe: "كانت معلمة عشر سنوات قبل التقاعد.", exIt: "كان المطر يهطل طوال اليوم عندما وصلنا.", exWe: "كنا أصدقاء عشر سنوات قبل الخلاف.", exThey: "كانا متزوجين منذ 2010 قبل أن ينتقلا.", negativeTitle: "❌ صيغة النفي:", negEx1: "لم أكن قد ذهبت إلى باريس من قبل.", negEx2: "لم تكن تشعر بحالة جيدة في وقت سابق.", questionTitle: "❓ صيغة السؤال:", qEx1: "هل كنت قد ذهبت إلى لندن من قبل؟", qEx2: "هل كانوا ينتظرون طويلاً؟" },
+                    verbToHave: { title: "I. 4. الفعل \"يملك\" في الماضي التام", heading: "استخدام \"Had Had\"", note: "📘 ملاحظة:", desc: "الفعل \"يملك\" يستخدم \"had had\".", exampleCol: "مثال", exI: "كنت قد امتلكت هذه السيارة خمس سنوات قبل بيعها.", exYou: "كنت قد حصلت على وقت كافٍ للإنهاء.", exHe: "كان قد تناول ثلاثة فناجين قهوة قبل الاجتماع.", exShe: "كانت قد شغلت هذه الوظيفة عامًا قبل الاستقالة.", exIt: "كان له تأثير كبير على حياتنا قبل أن ننتقل.", exWe: "كنا قد حصلنا على فرص كثيرة قبل ذلك.", exThey: "كانوا قد واجهوا مشاكل كثيرة قبل الحل.", negativeTitle: "❌ صيغة النفي:", negEx1: "لم أكن قد تناولت الفطور قبل المغادرة.", negEx2: "لم تكن قد واجهت أي مشاكل من قبل.", questionTitle: "❓ صيغة السؤال:", qEx1: "هل كنت قد تناولت الفطور قبل المغادرة؟", qEx2: "هل كانوا قد حصلوا على وقت كافٍ للتحضير؟" },
+                    commonVerbs: { title: "I. 5. أفعال شائعة في الماضي التام", heading: "التصريفات الثالثة المنتظمة وغير المنتظمة", desc: "الأفعال المنتظمة تضيف -ed، وغير المنتظمة لها أشكال خاصة.", verbCol: "الفعل", pastPartCol: "التصريف الثالث", exampleCol: "مثال", exGo: "كنت قد ذهبت إلى المتجر قبل أن تتصل.", exDo: "كان قد أنهى واجبه بحلول ذلك الوقت.", exSee: "كانت قد شاهدت ذلك الفيلم من قبل.", exEat: "كنا قد تناولنا العشاء عندما وصل.", exWrite: "كانوا قد كتبوا رسالة قبل المغادرة.", exTake: "كنت قد استقللت الحافلة قبل أن أحصل على سيارة.", more1: "كنت قد ذهبت إلى ذلك المطعم عدة مرات قبل إغلاقه.", more2: "كانت قد أنجزت جميع أعمالها المنزلية عندما عادت والدتها.", more3: "كنا قد شاهدنا هذا العرض من قبل، لذا غادرنا مبكرًا.", more4: "كان قد أكل بالفعل، لذلك لم ينضم إلينا للعشاء." }
+                }
+            }
+        };
+    </script>
+    <script src="scripts/translation-refraction.js"></script>
+    <script src="scripts/exercise-conjugation.js"></script>
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
+    <script>
+        // Multiple choice exercises
+        const correctAnswersType1 = buildMultipleChoiceExercise({
+            containerId: 'mc-exercises',
+            prefix: 'EH-exercise-type1-possibilities3',
+            questions: [
+                { questionTextKey: 'pastPerfect1.exercises.q1', options: [{ value: 'a', labelKey: 'pastPerfect1.exercises.q1a' }, { value: 'b', labelKey: 'pastPerfect1.exercises.q1b' }, { value: 'c', labelKey: 'pastPerfect1.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'pastPerfect1.exercises.q2', options: [{ value: 'a', labelKey: 'pastPerfect1.exercises.q2a' }, { value: 'b', labelKey: 'pastPerfect1.exercises.q2b' }, { value: 'c', labelKey: 'pastPerfect1.exercises.q2c' }], correctAnswer: 'a' },
+                { questionTextKey: 'pastPerfect1.exercises.q3', options: [{ value: 'a', labelKey: 'pastPerfect1.exercises.q3a' }, { value: 'b', labelKey: 'pastPerfect1.exercises.q3b' }, { value: 'c', labelKey: 'pastPerfect1.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'pastPerfect1.exercises.q4', options: [{ value: 'a', labelKey: 'pastPerfect1.exercises.q4a' }, { value: 'b', labelKey: 'pastPerfect1.exercises.q4b' }, { value: 'c', labelKey: 'pastPerfect1.exercises.q4c' }], correctAnswer: 'b' },
+                { questionTextKey: 'pastPerfect1.exercises.q5', options: [{ value: 'a', labelKey: 'pastPerfect1.exercises.q5a' }, { value: 'b', labelKey: 'pastPerfect1.exercises.q5b' }, { value: 'c', labelKey: 'pastPerfect1.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'pastPerfect1.exercises.q6', options: [{ value: 'a', labelKey: 'pastPerfect1.exercises.q6a' }, { value: 'b', labelKey: 'pastPerfect1.exercises.q6b' }, { value: 'c', labelKey: 'pastPerfect1.exercises.q6c' }], correctAnswer: 'b' }
+            ]
+        });
+    </script>
+    <script>
+        // Fill-in-the-blank exercises
+        const correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises',
+            prefix: 'fill',
+            questions: [
+                { questionTextKey: 'pastPerfect1.exercises.q7', answers: ['had finished'] },
+                { questionTextKey: 'pastPerfect1.exercises.q8', answers: ['had been'] },
+                { questionTextKey: 'pastPerfect1.exercises.q9', answers: ['had eaten'] }
+            ]
+        });
+    </script>
+    <script>
+        // Sentence ordering exercises
+        const correctAnswersType3 = buildSentenceOrderingExercise({
+            containerId: 'order-exercises',
+            prefix: 'order',
+            questions: [
+                { questionTextKey: 'pastPerfect1.exercises.q10', words: ['I', 'had', 'finished', 'my', 'work', '.'], correctSentence: 'I had finished my work .' },
+                { questionTextKey: 'pastPerfect1.exercises.q11', words: ['She', 'had', 'not', 'visited', 'Paris', '.'], correctSentence: 'She had not visited Paris .' },
+                { questionTextKey: 'pastPerfect1.exercises.q12', words: ['Had', 'you', 'eaten', 'lunch', '?'], correctSentence: 'Had you eaten lunch ?' }
+            ]
+        });
+    </script>
+    <script>
+        function checkAllExercises() {
+            let totalScore = 0;
+            let totalQuestions = 0;
+
+            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+            totalQuestions += 6;
+            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+            totalQuestions += 3;
+            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+            totalQuestions += 3;
+
+            const scoreEl = document.getElementById('score-value');
+            const fbEl = document.getElementById('score-feedback');
+            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+            if (fbEl) {
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered the Past Perfect basics!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit had + past participle structures.';
+                else fbEl.textContent = 'Review the lesson and try again.';
+            }
+            document.getElementById('score-display').style.display = 'block';
+            if (typeof EHScoreEffects !== 'undefined') EHScoreEffects.show(totalScore, totalQuestions);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof ExerciseType2FillBlankInit === 'function') ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+            if (typeof ExerciseType3SentenceOrderInit === 'function') ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+            const checkBtn = document.getElementById('check-all');
+            if (checkBtn) checkBtn.addEventListener('click', checkAllExercises);
+        });
+        (function() {
+            function applyHtmlI18n() {
+                const lang = document.getElementById('language-selector').value;
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                    if (translation) el.textContent = translation;
+                });
+            }
+            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+            const langSelector = document.getElementById('language-selector');
+            if (langSelector) langSelector.addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+        })();
+    </script>
+</body>
+</html>

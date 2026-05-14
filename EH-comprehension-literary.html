@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literary Analysis - Comprehension Club</title>
+    <link rel="stylesheet" href="styles/comprehension.css">
+    <style>
+        :root {
+            /* Literary theme — deep plum & gold for classic literature */
+            --primary-color: #6a4c9c;
+            --primary-light: #efe6fa;
+            --primary-dark: #4a2e6b;
+            --bg-body: linear-gradient(135deg, #f9f5ff, #f2ebfc, #faf5ff);
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="EH-comprehension-body">
+
+    <!-- Language Selector -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #6a4c9c; background: white; color: #333; font-weight: bold;">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n-comprehension="common.siteName">English Hub</span>
+    </div>
+
+    <div class="EH-comprehension-lesson-container">
+        <div class="EH-comprehension-lesson-content">
+            <!-- Lesson Header -->
+            <div class="EH-comprehension-lesson-header">
+                <h1 class="EH-comprehension-lesson-title" data-i18n-comprehension="literaryLesson.title">Literary Analysis</h1>
+                <p class="EH-comprehension-lesson-subtitle" data-i18n-comprehension="literaryLesson.subtitle">Advanced Level Reading Comprehension</p>
+                <div class="EH-comprehension-lesson-level" data-i18n-comprehension="literaryLesson.level">Level: C1-C2 (Advanced)</div>
+            </div>
+
+            <!-- Reading Passage -->
+            <div class="EH-comprehension-passage-container">
+                <div class="EH-comprehension-passage-header">
+                    <h2 class="EH-comprehension-passage-title" data-i18n-comprehension="literaryLesson.passageTitle">Reading Passage</h2>
+                    <div class="EH-comprehension-reading-time" data-i18n-comprehension="literaryLesson.readingTime">Reading Time: 6-8 minutes</div>
+                </div>
+
+                <div class="EH-comprehension-passage-text">
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="literaryLesson.passage.p1">Shakespeare is above all writers, at least above all modern writers, the poet of nature; the poet that holds up to his readers a faithful mirror of manners and of life. His characters are not modified by the customs of particular places, unpractised by the rest of the world; by the peculiarities of studies or professions, which can operate but upon small numbers; or by the accidents of transient fashions or temporary opinions.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="literaryLesson.passage.p2">They are the genuine progeny of common humanity, such as the world will always supply, and observation will always find. His persons act and speak by the influence of those general passions and principles by which all minds are agitated, and the whole system of life is continued in motion.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="literaryLesson.passage.p3">In the writings of other poets, a character is too often an individual; in those of Shakespeare, it is commonly a species. It is from this wide extension of design that so much instruction is derived. It is this which fills the plays of Shakespeare with practical axioms and domestic wisdom.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="literaryLesson.passage.p4">Shakespeare has no heroes; his scenes are occupied only by men, who act and speak as the reader thinks that he should himself have spoken or acted on the same occasion. Even where the agency is supernatural, the dialogue is level with life. Other writers disguise the most natural passions and most frequent incidents; Shakespeare sets them before us, naked in their genuine excellence.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="literaryLesson.passage.p5">Upon every other stage the universal agent is love, by whose power all good and evil is distributed, and every action quickened or retarded. To bring a lover, a lady, and a rival into the fable; to entangle them in contradictory obligations; to perplex them with oppositions of interest; and finally to drive them by violent means to a happy end, is the great business of the modern dramatist.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="literaryLesson.passage.p6">But love is only one of many passions; and as it has no great influence upon the sum of life, it has little operation in the dramas of a poet who caught his ideas from the living world, and exhibited only what he saw before him. He knew that any other passion, as it was regular or exorbitant, was a cause of happiness or calamity.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="literaryLesson.passage.p7">Shakespeare has united the powers of exciting laughter and sorrow not only in one mind but in one composition. Almost all his plays are divided between serious and ludicrous characters, and, in the successive revolutions of the drama, sometimes producing seriousness and sorrow, and sometimes levity and laughter.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="literaryLesson.passage.p8">That this is a practice contrary to the rules of criticism will be readily allowed; but there is always an appeal open from criticism to nature. The end of writing is to instruct; the end of poetry is to instruct by pleasing. A play is a composition that, being intended to be represented, imitates a series of actions with dialogue.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="literaryLesson.passage.p9">Shakespeare's plays are not in the rigorous and critical sense either tragedies or comedies, but compositions of a distinct kind; they exhibit the real state of sublunary nature, which partakes of good and evil, joy and sorrow, mingled with endless variety of proportion and innumerable modes of combination.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="literaryLesson.passage.p10">In his tragic scenes, there is always something wanting; his comedy has something of peculiar excellence. His tragedy seems to be skill, his comedy to be instinct. The force of his comic scenes has suffered little diminution from the changes made by a century and a half, for they depend upon principles that are permanent in human nature.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="literaryLesson.passage.p11">The pleasure of tragedy proceeds from our consciousness of virtue; that of comedy arises from our consciousness of folly. He who feels not the passions of distress while he hears a tale of sorrow, or enjoys not the gaiety of a well-told jest, may be considered as little liable to the influence of dramatic poetry.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="literaryLesson.passage.p12">From "Preface to Shakespeare" by Samuel Johnson (1765)</p>
+                </div>
+
+                <!-- Vocabulary Preview -->
+                <div class="EH-comprehension-vocabulary-preview">
+                    <h3 class="EH-comprehension-vocabulary-title" data-i18n-comprehension="literaryLesson.vocabularyPreview">Vocabulary Preview</h3>
+                    <div class="EH-comprehension-vocabulary-list">
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="literaryLesson.vocab.progeny">progeny</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="literaryLesson.vocab.agitated">agitated</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="literaryLesson.vocab.axioms">axioms</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="literaryLesson.vocab.exorbitant">exorbitant</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="literaryLesson.vocab.ludicrous">ludicrous</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="literaryLesson.vocab.sublunary">sublunary</span>
+                    </div>
+                </div>
+
+                <!-- Audio Player -->
+                <div class="EH-comprehension-audio-player">
+                    <h3 class="EH-comprehension-audio-title" data-i18n-comprehension="literaryLesson.listenTitle">Listen to the Story</h3>
+
+                    <div class="EH-comprehension-audio-controls">
+                        <button class="EH-comprehension-audio-btn play" id="EH-literary-play-btn" title="Play">
+                            <span class="EH-comprehension-audio-icon">▶</span>
+                            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.play">Play</span>
+                        </button>
+                        <button class="EH-comprehension-audio-btn" id="EH-literary-pause-btn" title="Pause">
+                            <span class="EH-comprehension-audio-icon">⏸</span>
+                            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.pause">Pause</span>
+                        </button>
+                        <button class="EH-comprehension-audio-btn" id="EH-literary-stop-btn" title="Stop">
+                            <span class="EH-comprehension-audio-icon">⏹</span>
+                            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.stop">Stop</span>
+                        </button>
+
+                        <div class="EH-audio-volume-control">
+                            <button class="EH-comprehension-audio-btn volume" id="EH-literary-volume-btn" title="Volume">
+                                <span class="EH-comprehension-audio-icon">🔊</span>
+                                <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.volume">Volume</span>
+                            </button>
+                            <div class="EH-audio-volume-slider-container">
+                                <input type="range" class="EH-audio-volume-slider" id="EH-literary-volume-slider" min="0" max="1" step="0.1" value="1">
+                            </div>
+                        </div>
+
+                        <div class="EH-audio-speed-control">
+                            <button class="EH-comprehension-audio-btn speed" id="EH-literary-speed-btn" title="Playback Speed">
+                                <span class="EH-comprehension-audio-icon">1x</span>
+                                <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.speed">Speed</span>
+                            </button>
+                            <div class="EH-audio-speed-options" id="EH-literary-speed-options">
+                                <button class="EH-audio-speed-option" data-speed="0.5">0.5x</button>
+                                <button class="EH-audio-speed-option" data-speed="0.75">0.75x</button>
+                                <button class="EH-audio-speed-option" data-speed="1" data-selected="true">1x</button>
+                                <button class="EH-audio-speed-option" data-speed="1.25">1.25x</button>
+                                <button class="EH-audio-speed-option" data-speed="1.5">1.5x</button>
+                                <button class="EH-audio-speed-option" data-speed="2">2x</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="EH-comprehension-audio-progress">
+                        <div class="EH-comprehension-audio-progress-background" id="EH-literary-progress-background">
+                            <div class="EH-comprehension-audio-progress-bar" id="EH-literary-progress-bar"></div>
+                            <div class="EH-comprehension-audio-progress-thumb" id="EH-literary-progress-thumb"></div>
+                        </div>
+                        <input type="range" class="EH-comprehension-audio-progress-slider" id="EH-literary-progress-slider" min="0" max="100" value="0" step="0.1">
+                    </div>
+
+                    <div style="text-align: center; color: #666; font-size: 0.9rem;" id="EH-literary-time-display">0:00 / 0:00</div>
+                </div>
+            </div>
+
+            <!-- Comprehension Questions (Multiple Choice) -->
+            <div class="EH-comprehension-questions-container">
+                <h2 class="EH-comprehension-questions-title" data-i18n-comprehension="literaryLesson.questionsTitle">Comprehension Questions</h2>
+
+                <!-- Question 1 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">1</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="literaryLesson.question1">According to Johnson, what makes Shakespeare above all modern writers?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q1-a" name="literary-q1" value="a"><label for="literary-q1-a" data-i18n-comprehension="literaryLesson.q1a">His use of elaborate metaphors</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q1-b" name="literary-q1" value="b"><label for="literary-q1-b" data-i18n-comprehension="literaryLesson.q1b">He is the poet of nature who holds a faithful mirror to manners and life</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q1-c" name="literary-q1" value="c"><label for="literary-q1-c" data-i18n-comprehension="literaryLesson.q1c">His plays are always historically accurate</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q1-d" name="literary-q1" value="d"><label for="literary-q1-d" data-i18n-comprehension="literaryLesson.q1d">He never wrote about supernatural events</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="literary-q1-feedback"></div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">2</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="literaryLesson.question2">How does Johnson contrast Shakespeare's characters with those of other poets?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q2-a" name="literary-q2" value="a"><label for="literary-q2-a" data-i18n-comprehension="literaryLesson.q2a">Other poets write about species; Shakespeare writes about individuals</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q2-b" name="literary-q2" value="b"><label for="literary-q2-b" data-i18n-comprehension="literaryLesson.q2b">Other poets write about individuals; Shakespeare writes about a species (universal types)</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q2-c" name="literary-q2" value="c"><label for="literary-q2-c" data-i18n-comprehension="literaryLesson.q2c">Both write the same way</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q2-d" name="literary-q2" value="d"><label for="literary-q2-d" data-i18n-comprehension="literaryLesson.q2d">Shakespeare only writes about kings and queens</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="literary-q2-feedback"></div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">3</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="literaryLesson.question3">What does Johnson say about the role of love in Shakespeare's plays compared to other dramatists?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q3-a" name="literary-q3" value="a"><label for="literary-q3-a" data-i18n-comprehension="literaryLesson.q3a">Love is the universal agent on every stage including Shakespeare's</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q3-b" name="literary-q3" value="b"><label for="literary-q3-b" data-i18n-comprehension="literaryLesson.q3b">Love has little influence upon the sum of life, so it has little operation in Shakespeare's dramas</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q3-c" name="literary-q3" value="c"><label for="literary-q3-c" data-i18n-comprehension="literaryLesson.q3c">Shakespeare wrote only about love</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q3-d" name="literary-q3" value="d"><label for="literary-q3-d" data-i18n-comprehension="literaryLesson.q3d">Love is more important in Shakespeare than in other writers</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="literary-q3-feedback"></div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">4</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="literaryLesson.question4">What does Johnson say Shakespeare has united in one composition?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q4-a" name="literary-q4" value="a"><label for="literary-q4-a" data-i18n-comprehension="literaryLesson.q4a">Comedy and tragedy in separate plays</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q4-b" name="literary-q4" value="b"><label for="literary-q4-b" data-i18n-comprehension="literaryLesson.q4b">The powers of exciting laughter and sorrow</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q4-c" name="literary-q4" value="c"><label for="literary-q4-c" data-i18n-comprehension="literaryLesson.q4c">All his plays as pure comedies</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q4-d" name="literary-q4" value="d"><label for="literary-q4-d" data-i18n-comprehension="literaryLesson.q4d">Historical facts and fiction</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="literary-q4-feedback"></div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">5</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="literaryLesson.question5">How does Johnson describe Shakespeare's comedies versus his tragedies?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q5-a" name="literary-q5" value="a"><label for="literary-q5-a" data-i18n-comprehension="literaryLesson.q5a">Both are equally skillful</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q5-b" name="literary-q5" value="b"><label for="literary-q5-b" data-i18n-comprehension="literaryLesson.q5b">His tragedy seems to be skill; his comedy seems to be instinct</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q5-c" name="literary-q5" value="c"><label for="literary-q5-c" data-i18n-comprehension="literaryLesson.q5c">His comedies are poorly written</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q5-d" name="literary-q5" value="d"><label for="literary-q5-d" data-i18n-comprehension="literaryLesson.q5d">His tragedies are instinctive</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="literary-q5-feedback"></div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">6</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="literaryLesson.question6">According to Johnson, from what does the pleasure of tragedy proceed?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q6-a" name="literary-q6" value="a"><label for="literary-q6-a" data-i18n-comprehension="literaryLesson.q6a">Our consciousness of folly</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q6-b" name="literary-q6" value="b"><label for="literary-q6-b" data-i18n-comprehension="literaryLesson.q6b">Our consciousness of virtue</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q6-c" name="literary-q6" value="c"><label for="literary-q6-c" data-i18n-comprehension="literaryLesson.q6c">The happy ending</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q6-d" name="literary-q6" value="d"><label for="literary-q6-d" data-i18n-comprehension="literaryLesson.q6d">The supernatural elements</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="literary-q6-feedback"></div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">7</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="literaryLesson.question7">What does Johnson say about the appeal from criticism?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q7-a" name="literary-q7" value="a"><label for="literary-q7-a" data-i18n-comprehension="literaryLesson.q7a">There is always an appeal open from criticism to nature</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q7-b" name="literary-q7" value="b"><label for="literary-q7-b" data-i18n-comprehension="literaryLesson.q7b">Criticism is always correct</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q7-c" name="literary-q7" value="c"><label for="literary-q7-c" data-i18n-comprehension="literaryLesson.q7c">Nature should follow criticism</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="literary-q7-d" name="literary-q7" value="d"><label for="literary-q7-d" data-i18n-comprehension="literaryLesson.q7d">There is no appeal possible</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="literary-q7-feedback"></div>
+                </div>
+            </div>
+
+            <!-- True/False Exercise -->
+            <div class="EH-comprehension-true-false-container">
+                <h2 class="EH-comprehension-true-false-title" data-i18n-comprehension="literaryLesson.trueFalseTitle">True or False</h2>
+
+                <div class="EH-comprehension-true-false-question" data-lesson="literary">
+                    <p class="EH-comprehension-true-false-statement" data-i18n-comprehension="literaryLesson.tf1.statement">Johnson argues that Shakespeare's characters are modified by the customs of particular places.</p>
+                    <div class="EH-comprehension-true-false-options">
+                        <button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="literary" data-i18n-comprehension="common.false">False</button>
+                        <button class="EH-comprehension-true-false-option" data-answer="true" data-lesson="literary" data-i18n-comprehension="common.true">True</button>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="tf1-feedback"></div>
+                </div>
+
+                <div class="EH-comprehension-true-false-question" data-lesson="literary">
+                    <p class="EH-comprehension-true-false-statement" data-i18n-comprehension="literaryLesson.tf2.statement">Johnson claims that Shakespeare exhibits the real state of nature which partakes of both good and evil, joy and sorrow.</p>
+                    <div class="EH-comprehension-true-false-options">
+                        <button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="literary" data-i18n-comprehension="common.false">False</button>
+                        <button class="EH-comprehension-true-false-option" data-answer="true" data-lesson="literary" data-i18n-comprehension="common.true">True</button>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="tf2-feedback"></div>
+                </div>
+
+                <div class="EH-comprehension-true-false-question" data-lesson="literary">
+                    <p class="EH-comprehension-true-false-statement" data-i18n-comprehension="literaryLesson.tf3.statement">According to Johnson, Shakespeare's comic scenes have lost most of their force due to the passage of time.</p>
+                    <div class="EH-comprehension-true-false-options">
+                        <button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="literary" data-i18n-comprehension="common.false">False</button>
+                        <button class="EH-comprehension-true-false-option" data-answer="true" data-lesson="literary" data-i18n-comprehension="common.true">True</button>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="tf3-feedback"></div>
+                </div>
+            </div>
+
+            <!-- Fill in the Blanks Exercise -->
+            <div class="EH-comprehension-fill-blanks-container">
+                <h2 class="EH-comprehension-fill-blanks-title" data-i18n-comprehension="literaryLesson.fillBlanksTitle">Fill in the Blanks</h2>
+
+                <!-- Fill Exercise A -->
+                <div class="EH-comprehension-fill-blanks-question">
+                    <p class="EH-comprehension-fill-blanks-text" data-i18n-comprehension="literaryLesson.fill1.text">Shakespeare is the poet of __________ who holds up a faithful mirror of manners and life. His characters are the genuine progeny of common __________. In his plays, a character is commonly a __________ rather than an individual.</p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill1-1" data-lesson="literary" placeholder="Answer 1">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill1-2" data-lesson="literary" placeholder="Answer 2">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill1-3" data-lesson="literary" placeholder="Answer 3">
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="fill1-feedback"></div>
+                </div>
+
+                <!-- Fill Exercise B -->
+                <div class="EH-comprehension-fill-blanks-question">
+                    <p class="EH-comprehension-fill-blanks-text" data-i18n-comprehension="literaryLesson.fill2.text">Shakespeare's plays are not strictly either tragedies or comedies but compositions of a distinct kind. They exhibit the real state of __________ nature. The pleasure of tragedy proceeds from our consciousness of __________; that of comedy arises from our consciousness of __________.</p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill2-1" placeholder="Answer 1">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill2-2" placeholder="Answer 2">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill2-3" placeholder="Answer 3">
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="fill2-feedback"></div>
+                </div>
+            </div>
+
+            <!-- Sentence Ordering Exercise -->
+            <div class="EH-comprehension-ordering-container">
+                <h2 class="EH-comprehension-ordering-title" data-i18n-comprehension="literaryLesson.orderingTitle">Put the Sentences in Order</h2>
+                <p class="EH-comprehension-ordering-instructions" data-i18n-comprehension="literaryLesson.orderingInstructions">Drag and drop the sentences to show the correct order of events:</p>
+
+                <div class="EH-comprehension-ordering-list" id="ordering-list">
+                    <!-- Shuffled order (data-order values indicate correct sequence 1..7) -->
+                    <div class="EH-comprehension-ordering-item" data-order="4" data-i18n-comprehension="literaryLesson.order1">
+                        <div class="EH-comprehension-ordering-number">1</div>
+                        <div class="EH-comprehension-ordering-text">Love has little influence upon the sum of life and therefore little operation in Shakespeare's dramas.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="2" data-i18n-comprehension="literaryLesson.order2">
+                        <div class="EH-comprehension-ordering-number">2</div>
+                        <div class="EH-comprehension-ordering-text">His characters are the genuine progeny of common humanity, not modified by local customs.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="6" data-i18n-comprehension="literaryLesson.order3">
+                        <div class="EH-comprehension-ordering-number">3</div>
+                        <div class="EH-comprehension-ordering-text">His plays are not strictly tragedies or comedies but exhibit the real state of nature with joy and sorrow mingled.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="1" data-i18n-comprehension="literaryLesson.order4">
+                        <div class="EH-comprehension-ordering-number">4</div>
+                        <div class="EH-comprehension-ordering-text">Shakespeare is above all writers as the poet of nature.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="7" data-i18n-comprehension="literaryLesson.order5">
+                        <div class="EH-comprehension-ordering-number">5</div>
+                        <div class="EH-comprehension-ordering-text">The pleasure of tragedy proceeds from consciousness of virtue; comedy from consciousness of folly.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="5" data-i18n-comprehension="literaryLesson.order6">
+                        <div class="EH-comprehension-ordering-number">6</div>
+                        <div class="EH-comprehension-ordering-text">Shakespeare has united the powers of exciting laughter and sorrow in one composition.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="3" data-i18n-comprehension="literaryLesson.order7">
+                        <div class="EH-comprehension-ordering-number">7</div>
+                        <div class="EH-comprehension-ordering-text">In other poets, a character is an individual; in Shakespeare, it is a species.</div>
+                    </div>
+                </div>
+                <div class="EH-comprehension-answer-feedback" id="ordering-feedback"></div>
+            </div>
+
+            <!-- Check All Exercises Button -->
+            <button class="EH-comprehension-check-all-exercises" id="EH-literary-check-all" data-i18n-comprehension="literaryLesson.checkAllExercises">Check All Exercises</button>
+
+            <!-- Score Display -->
+            <div class="EH-comprehension-score-display" id="EH-literary-score-display">
+                <h3 class="EH-comprehension-score-title" data-i18n-comprehension="literaryLesson.yourScore">Your Score</h3>
+                <div class="EH-comprehension-score-value" id="EH-literary-score-value">0/20</div>
+                <p class="EH-comprehension-score-feedback" id="EH-literary-score-feedback" data-i18n-comprehension="literaryLesson.scoreFeedback.default">Check your answers to see your score!</p>
+            </div>
+
+            <!-- Vocabulary Building Section -->
+            <div class="EH-comprehension-vocabulary-section">
+                <h2 class="EH-comprehension-vocabulary-section-title" data-i18n-comprehension="literaryLesson.vocabularyTitle">Vocabulary Building</h2>
+                <div class="EH-comprehension-vocabulary-grid">
+                    <!-- Card 1: progeny -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="literaryLesson.vocab1.word">progeny</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="literaryLesson.vocab1.pronunciation">/ˈprɒdʒəni/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="literaryLesson.vocab1.definition">Offspring or descendants; products or results.</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="literaryLesson.vocab1.example">"Shakespeare's characters are the genuine progeny of common humanity."</div>
+                    </div>
+                    <!-- Card 2: agitated -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="literaryLesson.vocab2.word">agitated</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="literaryLesson.vocab2.pronunciation">/ˈædʒɪteɪtɪd/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="literaryLesson.vocab2.definition">Disturbed, excited, or moved emotionally.</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="literaryLesson.vocab2.example">"All minds are agitated by the general passions that Shakespeare portrays."</div>
+                    </div>
+                    <!-- Card 3: axioms -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="literaryLesson.vocab3.word">axioms</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="literaryLesson.vocab3.pronunciation">/ˈæksiəmz/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="literaryLesson.vocab3.definition">Self-evident truths or established principles.</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="literaryLesson.vocab3.example">"Shakespeare's plays are filled with practical axioms and domestic wisdom."</div>
+                    </div>
+                    <!-- Card 4: exorbitant -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="literaryLesson.vocab4.word">exorbitant</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="literaryLesson.vocab4.pronunciation">/ɪɡˈzɔːbɪtənt/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="literaryLesson.vocab4.definition">Excessive; going beyond reasonable bounds.</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="literaryLesson.vocab4.example">"A passion that becomes exorbitant is a cause of calamity."</div>
+                    </div>
+                    <!-- Card 5: ludicrous -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="literaryLesson.vocab5.word">ludicrous</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="literaryLesson.vocab5.pronunciation">/ˈluːdɪkrəs/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="literaryLesson.vocab5.definition">So foolish or unreasonable as to be amusing; absurd.</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="literaryLesson.vocab5.example">"Shakespeare's plays contain both serious and ludicrous characters."</div>
+                    </div>
+                    <!-- Card 6: sublunary -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="literaryLesson.vocab6.word">sublunary</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="literaryLesson.vocab6.pronunciation">/sʌbˈluːnəri/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="literaryLesson.vocab6.definition">Belonging to this world; earthly (literally, under the moon).</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="literaryLesson.vocab6.example">"Shakespeare exhibits the real state of sublunary nature, mixed with good and evil."</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="EH-comprehension-navigation">
+                <!-- <button class="EH-comprehension-nav-button" onclick="window.location.href='EH-comprehension-economics.html'">
+                    ← <span data-i18n-comprehension="literaryLesson.nextLesson">Previous: Economic Theories</span>
+                </button> -->
+                <button class="EH-comprehension-nav-button back" onclick="window.location.href='EH-general-comprehension-club.html'">
+                    <span data-i18n-comprehension="literaryLesson.backToClub">Back to Comprehension Club</span> →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Common Footer -->
+    <footer class="EH-common-footer">
+        <div class="EH-common-footer-content">
+            <div class="EH-common-footer-developer" data-i18n-comprehension="footer.developer">Developer: Mejri Ziad</div>
+            <div class="EH-common-footer-links">
+                <a href="policy.html" data-i18n-comprehension="footer.privacy">Privacy Policy</a>
+                <a href="terms.html" data-i18n-comprehension="footer.terms">Terms of Service</a>
+                <a href="contact.html" data-i18n-comprehension="footer.contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- i18n translations and exercise scripts -->
+    <script src="scripts/translation-comprehension.js"></script>
+    <script src="scripts/translations/i18n_comprehension_en.js"></script>
+    <script src="scripts/translations/i18n_comprehension_fr.js"></script>
+    <script src="scripts/translations/i18n_comprehension_ar.js"></script>
+    <script src="scripts/comprehension-exercises.js"></script>
+
+    <script>
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize translation system for comprehension pages
+            if (typeof initTranslationSystem === 'function') {
+                initTranslationSystem('comprehension', 'en', 'language-selector');
+            }
+
+            // Register the literary lesson configuration
+            ComprehensionExercises.registerLesson('literary', {
+                mcQuestions: 7,
+                audioPath: 'assets/audio/lessons/comprehension/literary-story.mp3',
+                correctAnswers: {
+                    // Multiple choice answers
+                    'literary-q1': 'b',
+                    'literary-q2': 'b',
+                    'literary-q3': 'b',
+                    'literary-q4': 'b',
+                    'literary-q5': 'b',
+                    'literary-q6': 'b',
+                    'literary-q7': 'a',
+                    // True/False
+                    'tf1': 'false',
+                    'tf2': 'true',
+                    'tf3': 'false',
+                    // Sentence ordering (correct sequence of data-order values: 1,2,3,4,5,6,7)
+                    'ordering': ['1', '2', '3', '4', '5', '6', '7']
+                },
+                fillBlanks: [
+                    {
+                        ids: ['fill1-1', 'fill1-2', 'fill1-3'],
+                        answers: ['nature', 'humanity', 'species'],
+                        feedbackId: 'fill1-feedback'
+                    },
+                    {
+                        ids: ['fill2-1', 'fill2-2', 'fill2-3'],
+                        answers: ['sublunary', 'virtue', 'folly'],
+                        feedbackId: 'fill2-feedback'
+                    }
+                ]
+            });
+
+            // Initialize exercises for literary lesson
+            if (typeof ComprehensionExercises !== 'undefined' && ComprehensionExercises.initLesson) {
+                ComprehensionExercises.initLesson('literary');
+            }
+        });
+    </script>
+</body>
+</html>

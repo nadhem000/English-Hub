@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Theories - Comprehension Club</title>
+    <link rel="stylesheet" href="styles/comprehension.css">
+    <style>
+        :root {
+            /* Economics theme — deep green & gold (classical economics) */
+            --primary-color: #2d6a4f;
+            --primary-light: #d8f3dc;
+            --primary-dark: #1b4332;
+            --bg-body: linear-gradient(135deg, #f4f8f0, #e9f5e9, #f0f7ea);
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="EH-comprehension-body">
+
+    <!-- Language Selector -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #2d6a4f; background: white; color: #333; font-weight: bold;">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n-comprehension="common.siteName">English Hub</span>
+    </div>
+
+    <div class="EH-comprehension-lesson-container">
+        <div class="EH-comprehension-lesson-content">
+            <!-- Lesson Header -->
+            <div class="EH-comprehension-lesson-header">
+                <h1 class="EH-comprehension-lesson-title" data-i18n-comprehension="economicsLesson.title">Economic Theories</h1>
+                <p class="EH-comprehension-lesson-subtitle" data-i18n-comprehension="economicsLesson.subtitle">Advanced Level Reading Comprehension</p>
+                <div class="EH-comprehension-lesson-level" data-i18n-comprehension="economicsLesson.level">Level: C1-C2 (Advanced)</div>
+            </div>
+
+            <!-- Reading Passage -->
+            <div class="EH-comprehension-passage-container">
+                <div class="EH-comprehension-passage-header">
+                    <h2 class="EH-comprehension-passage-title" data-i18n-comprehension="economicsLesson.passageTitle">Reading Passage</h2>
+                    <div class="EH-comprehension-reading-time" data-i18n-comprehension="economicsLesson.readingTime">Reading Time: 6-8 minutes</div>
+                </div>
+
+                <div class="EH-comprehension-passage-text">
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p1">The greatest improvement in the productive powers of labour, and the greater part of the skill, dexterity, and judgment with which it is anywhere directed, or applied, seem to have been the effects of the division of labour.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p2">The effects of the division of labour, in the general business of society, will be more easily understood by considering in what manner it operates in some particular manufactures. It is commonly supposed to be carried furthest in some very trifling ones; not perhaps that it really is carried further in them than in others of more importance, but that in those trifling manufactures which are destined to supply the small wants of but a small number of people, the whole number of workmen must necessarily be small; and those employed in every different branch of the work can often be collected into the same workhouse, and placed at once under the view of the spectator.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p3">In those great manufactures, on the contrary, which are destined to supply the great wants of the great body of the people, every different branch of the work employs so great a number of workmen that it is impossible to collect them all into the same workhouse. We can seldom see more, at one time, than those employed in one single branch. Though in such manufactures, therefore, the work may really be divided into a much greater number of parts than in those of a more trifling kind, the division is not near so obvious, and has accordingly been much less observed.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p4">To take an example, therefore, from a very trifling manufacture – the trade of the pin-maker. A workman not educated to this business (which the division of labour has rendered a distinct trade), nor acquainted with the use of the machinery employed in it (to the invention of which the same division of labour has probably given occasion), could scarce, perhaps, with his utmost industry, make one pin in a day, and certainly could not make twenty.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p5">But in the way in which this business is now carried on, not only the whole work is a peculiar trade, but it is divided into a number of branches, of which the greater part are likewise peculiar trades. One man draws out the wire, another straights it, a third cuts it, a fourth points it, a fifth grinds it at the top for receiving the head; to make the head requires two or three distinct operations; to put it on is a peculiar business, to whiten the pins is another; it is even a trade by itself to put them into the paper.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p6">I have seen a small manufactory of this kind where ten men only were employed, and where some of them consequently performed two or three distinct operations. But though they were very poor, and therefore but indifferently accommodated with the necessary machinery, they could, when they exerted themselves, make among them about twelve pounds of pins in a day. There are in a pound upwards of four thousand pins of a middling size. Those ten persons, therefore, could make among them upwards of forty-eight thousand pins in a day.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p7">Each person, therefore, making a tenth part of forty-eight thousand pins, might be considered as making four thousand eight hundred pins in a day. But if they had all wrought separately and independently, and without any of them having been educated to this peculiar business, they certainly could not each of them have made twenty, perhaps not one pin in a day.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p8">The division of labour, however, so far as it can be introduced, occasions, in every art, a proportionable increase of the productive powers of labour. The separation of different trades and employments from one another seems to have taken place in consequence of this advantage.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p9">This great increase of the quantity of work which, in consequence of the division of labour, the same number of people are capable of performing, is owing to three different circumstances: first, to the increase of dexterity in every particular workman; secondly, to the saving of the time which is commonly lost in passing from one species of work to another; and lastly, to the invention of a great number of machines which facilitate and abridge labour, and enable one man to do the work of many.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p10">First, the improvement of the dexterity of the workman necessarily increases the quantity of the work he can perform; and the division of labour, by reducing every man's business to some one simple operation, and by making this operation the sole employment of his life, necessarily increases very much the dexterity of the workman.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p11">Secondly, the advantage which is gained by saving the time commonly lost in passing from one sort of work to another is much greater than we might at first imagine. It is impossible to pass very quickly from one kind of work to another that is carried on in a different place and with quite different tools. A country weaver, who cultivates a small farm, must lose a good deal of time in passing from his loom to the field and from the field to his loom.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p12">Thirdly, everybody must be sensible how much labour is facilitated and abridged by the application of proper machinery. It would be unnecessary to give any example. I shall only observe, therefore, that the invention of all those machines by which labour is so much facilitated and abridged seems to have been originally owing to the division of labour.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="economicsLesson.passage.p13">From "An Inquiry into the Nature and Causes of the Wealth of Nations" by Adam Smith (Book I, Chapter I)</p>
+                </div>
+
+                <!-- Vocabulary Preview -->
+                <div class="EH-comprehension-vocabulary-preview">
+                    <h3 class="EH-comprehension-vocabulary-title" data-i18n-comprehension="economicsLesson.vocabularyPreview">Vocabulary Preview</h3>
+                    <div class="EH-comprehension-vocabulary-list">
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="economicsLesson.vocab.dexterity">dexterity</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="economicsLesson.vocab.manufactory">manufactory</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="economicsLesson.vocab.abridge">abridge</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="economicsLesson.vocab.peculiar">peculiar</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="economicsLesson.vocab.wrought">wrought</span>
+                    </div>
+                </div>
+
+                <!-- Audio Player -->
+                <div class="EH-comprehension-audio-player">
+                    <h3 class="EH-comprehension-audio-title" data-i18n-comprehension="economicsLesson.listenTitle">Listen to the Story</h3>
+
+                    <div class="EH-comprehension-audio-controls">
+                        <button class="EH-comprehension-audio-btn play" id="EH-economics-play-btn" title="Play">
+                            <span class="EH-comprehension-audio-icon">▶</span>
+                            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.play">Play</span>
+                        </button>
+                        <button class="EH-comprehension-audio-btn" id="EH-economics-pause-btn" title="Pause">
+                            <span class="EH-comprehension-audio-icon">⏸</span>
+                            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.pause">Pause</span>
+                        </button>
+                        <button class="EH-comprehension-audio-btn" id="EH-economics-stop-btn" title="Stop">
+                            <span class="EH-comprehension-audio-icon">⏹</span>
+                            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.stop">Stop</span>
+                        </button>
+
+                        <div class="EH-audio-volume-control">
+                            <button class="EH-comprehension-audio-btn volume" id="EH-economics-volume-btn" title="Volume">
+                                <span class="EH-comprehension-audio-icon">🔊</span>
+                                <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.volume">Volume</span>
+                            </button>
+                            <div class="EH-audio-volume-slider-container">
+                                <input type="range" class="EH-audio-volume-slider" id="EH-economics-volume-slider" min="0" max="1" step="0.1" value="1">
+                            </div>
+                        </div>
+
+                        <div class="EH-audio-speed-control">
+                            <button class="EH-comprehension-audio-btn speed" id="EH-economics-speed-btn" title="Playback Speed">
+                                <span class="EH-comprehension-audio-icon">1x</span>
+                                <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.speed">Speed</span>
+                            </button>
+                            <div class="EH-audio-speed-options" id="EH-economics-speed-options">
+                                <button class="EH-audio-speed-option" data-speed="0.5">0.5x</button>
+                                <button class="EH-audio-speed-option" data-speed="0.75">0.75x</button>
+                                <button class="EH-audio-speed-option" data-speed="1" data-selected="true">1x</button>
+                                <button class="EH-audio-speed-option" data-speed="1.25">1.25x</button>
+                                <button class="EH-audio-speed-option" data-speed="1.5">1.5x</button>
+                                <button class="EH-audio-speed-option" data-speed="2">2x</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="EH-comprehension-audio-progress">
+                        <div class="EH-comprehension-audio-progress-background" id="EH-economics-progress-background">
+                            <div class="EH-comprehension-audio-progress-bar" id="EH-economics-progress-bar"></div>
+                            <div class="EH-comprehension-audio-progress-thumb" id="EH-economics-progress-thumb"></div>
+                        </div>
+                        <input type="range" class="EH-comprehension-audio-progress-slider" id="EH-economics-progress-slider" min="0" max="100" value="0" step="0.1">
+                    </div>
+
+                    <div style="text-align: center; color: #666; font-size: 0.9rem;" id="EH-economics-time-display">0:00 / 0:00</div>
+                </div>
+            </div>
+
+            <!-- Comprehension Questions (Multiple Choice) -->
+            <div class="EH-comprehension-questions-container">
+                <h2 class="EH-comprehension-questions-title" data-i18n-comprehension="economicsLesson.questionsTitle">Comprehension Questions</h2>
+
+                <!-- Question 1 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">1</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="economicsLesson.question1">According to Adam Smith, what is the main cause of the greatest improvement in the productive powers of labour?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q1-a" name="economics-q1" value="a"><label for="economics-q1-a" data-i18n-comprehension="economicsLesson.q1a">The invention of steam engines</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q1-b" name="economics-q1" value="b"><label for="economics-q1-b" data-i18n-comprehension="economicsLesson.q1b">The division of labour</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q1-c" name="economics-q1" value="c"><label for="economics-q1-c" data-i18n-comprehension="economicsLesson.q1c">Increased education of workers</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q1-d" name="economics-q1" value="d"><label for="economics-q1-d" data-i18n-comprehension="economicsLesson.q1d">Government regulation of trade</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="economics-q1-feedback"></div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">2</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="economicsLesson.question2">Why does Smith choose the pin-making trade as his example?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q2-a" name="economics-q2" value="a"><label for="economics-q2-a" data-i18n-comprehension="economicsLesson.q2a">Because it is the most profitable industry</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q2-b" name="economics-q2" value="b"><label for="economics-q2-b" data-i18n-comprehension="economicsLesson.q2b">Because it is a trifling manufacture where the division of labour is very obvious</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q2-c" name="economics-q2" value="c"><label for="economics-q2-c" data-i18n-comprehension="economicsLesson.q2c">Because pins were the most important product of his time</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q2-d" name="economics-q2" value="d"><label for="economics-q2-d" data-i18n-comprehension="economicsLesson.q2d">Because he once worked in a pin factory</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="economics-q2-feedback"></div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">3</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="economicsLesson.question3">How many pins could ten men make in a day in the small manufactory Smith observed?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q3-a" name="economics-q3" value="a"><label for="economics-q3-a" data-i18n-comprehension="economicsLesson.q3a">About 4,800 pins</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q3-b" name="economics-q3" value="b"><label for="economics-q3-b" data-i18n-comprehension="economicsLesson.q3b">About 48,000 pins</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q3-c" name="economics-q3" value="c"><label for="economics-q3-c" data-i18n-comprehension="economicsLesson.q3c">About 20 pins</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q3-d" name="economics-q3" value="d"><label for="economics-q3-d" data-i18n-comprehension="economicsLesson.q3d">About 12,000 pins</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="economics-q3-feedback"></div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">4</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="economicsLesson.question4">How many pins would each worker have made per day if they had worked separately without division of labour?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q4-a" name="economics-q4" value="a"><label for="economics-q4-a" data-i18n-comprehension="economicsLesson.q4a">4,800 pins</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q4-b" name="economics-q4" value="b"><label for="economics-q4-b" data-i18n-comprehension="economicsLesson.q4b">48,000 pins</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q4-c" name="economics-q4" value="c"><label for="economics-q4-c" data-i18n-comprehension="economicsLesson.q4c">Probably not even one pin</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q4-d" name="economics-q4" value="d"><label for="economics-q4-d" data-i18n-comprehension="economicsLesson.q4d">20 pins exactly</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="economics-q4-feedback"></div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">5</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="economicsLesson.question5">How many circumstances does Smith list as reasons for the increase in work quantity due to division of labour?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q5-a" name="economics-q5" value="a"><label for="economics-q5-a" data-i18n-comprehension="economicsLesson.q5a">Two</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q5-b" name="economics-q5" value="b"><label for="economics-q5-b" data-i18n-comprehension="economicsLesson.q5b">Three</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q5-c" name="economics-q5" value="c"><label for="economics-q5-c" data-i18n-comprehension="economicsLesson.q5c">Four</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q5-d" name="economics-q5" value="d"><label for="economics-q5-d" data-i18n-comprehension="economicsLesson.q5d">Five</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="economics-q5-feedback"></div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">6</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="economicsLesson.question6">Which of the following is NOT one of the three circumstances Smith identifies?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q6-a" name="economics-q6" value="a"><label for="economics-q6-a" data-i18n-comprehension="economicsLesson.q6a">Increase of dexterity in each workman</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q6-b" name="economics-q6" value="b"><label for="economics-q6-b" data-i18n-comprehension="economicsLesson.q6b">Saving of time lost in passing from one work to another</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q6-c" name="economics-q6" value="c"><label for="economics-q6-c" data-i18n-comprehension="economicsLesson.q6c">Government subsidies for manufacturing</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q6-d" name="economics-q6" value="d"><label for="economics-q6-d" data-i18n-comprehension="economicsLesson.q6d">Invention of machines that facilitate labour</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="economics-q6-feedback"></div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">7</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="economicsLesson.question7">What example does Smith give to illustrate time lost when switching between tasks?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q7-a" name="economics-q7" value="a"><label for="economics-q7-a" data-i18n-comprehension="economicsLesson.q7a">A weaver who also farms</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q7-b" name="economics-q7" value="b"><label for="economics-q7-b" data-i18n-comprehension="economicsLesson.q7b">A blacksmith who makes nails</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q7-c" name="economics-q7" value="c"><label for="economics-q7-c" data-i18n-comprehension="economicsLesson.q7c">A carpenter who builds houses</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="economics-q7-d" name="economics-q7" value="d"><label for="economics-q7-d" data-i18n-comprehension="economicsLesson.q7d">A miner who digs coal</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="economics-q7-feedback"></div>
+                </div>
+            </div>
+
+            <!-- True/False Exercise -->
+            <div class="EH-comprehension-true-false-container">
+                <h2 class="EH-comprehension-true-false-title" data-i18n-comprehension="economicsLesson.trueFalseTitle">True or False</h2>
+
+                <div class="EH-comprehension-true-false-question" data-lesson="economics">
+                    <p class="EH-comprehension-true-false-statement" data-i18n-comprehension="economicsLesson.tf1.statement">Adam Smith argues that the division of labour is most obvious in large, important manufactures.</p>
+                    <div class="EH-comprehension-true-false-options">
+                        <button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="economics" data-i18n-comprehension="common.false">False</button>
+                        <button class="EH-comprehension-true-false-option" data-answer="true" data-lesson="economics" data-i18n-comprehension="common.true">True</button>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="tf1-feedback"></div>
+                </div>
+
+                <div class="EH-comprehension-true-false-question" data-lesson="economics">
+                    <p class="EH-comprehension-true-false-statement" data-i18n-comprehension="economicsLesson.tf2.statement">In the pin manufactory Smith observed, some workers performed two or three distinct operations.</p>
+                    <div class="EH-comprehension-true-false-options">
+                        <button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="economics" data-i18n-comprehension="common.false">False</button>
+                        <button class="EH-comprehension-true-false-option" data-answer="true" data-lesson="economics" data-i18n-comprehension="common.true">True</button>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="tf2-feedback"></div>
+                </div>
+
+                <div class="EH-comprehension-true-false-question" data-lesson="economics">
+                    <p class="EH-comprehension-true-false-statement" data-i18n-comprehension="economicsLesson.tf3.statement">Smith claims that the invention of machinery is unrelated to the division of labour.</p>
+                    <div class="EH-comprehension-true-false-options">
+                        <button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="economics" data-i18n-comprehension="common.false">False</button>
+                        <button class="EH-comprehension-true-false-option" data-answer="true" data-lesson="economics" data-i18n-comprehension="common.true">True</button>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="tf3-feedback"></div>
+                </div>
+            </div>
+
+            <!-- Fill in the Blanks Exercise -->
+            <div class="EH-comprehension-fill-blanks-container">
+                <h2 class="EH-comprehension-fill-blanks-title" data-i18n-comprehension="economicsLesson.fillBlanksTitle">Fill in the Blanks</h2>
+
+                <!-- Fill Exercise A -->
+                <div class="EH-comprehension-fill-blanks-question">
+                    <p class="EH-comprehension-fill-blanks-text" data-i18n-comprehension="economicsLesson.fill1.text">The division of labour occasions a proportionable increase of the __________ powers of labour. Smith observed a small __________ where ten men made about twelve pounds of pins per day, which is upwards of forty-eight thousand pins. Each man might be considered as making four thousand eight hundred __________ per day.</p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill1-1" data-lesson="economics" placeholder="Answer 1">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill1-2" data-lesson="economics" placeholder="Answer 2">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill1-3" data-lesson="economics" placeholder="Answer 3">
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="fill1-feedback"></div>
+                </div>
+
+                <!-- Fill Exercise B -->
+                <div class="EH-comprehension-fill-blanks-question">
+                    <p class="EH-comprehension-fill-blanks-text" data-i18n-comprehension="economicsLesson.fill2.text">The increase in work quantity is owing to three circumstances: first, the increase of __________ in every workman; second, the saving of the time lost in passing from one species of work to another; and lastly, the invention of __________ which facilitate and __________ labour.</p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill2-1" data-lesson="economics" placeholder="Answer 1">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill2-2" data-lesson="economics" placeholder="Answer 2">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill2-3" data-lesson="economics" placeholder="Answer 3">
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="fill2-feedback"></div>
+                </div>
+            </div>
+
+            <!-- Sentence Ordering Exercise -->
+            <div class="EH-comprehension-ordering-container">
+                <h2 class="EH-comprehension-ordering-title" data-i18n-comprehension="economicsLesson.orderingTitle">Put the Sentences in Order</h2>
+                <p class="EH-comprehension-ordering-instructions" data-i18n-comprehension="economicsLesson.orderingInstructions">Drag and drop the sentences to show the correct order of events:</p>
+
+                <div class="EH-comprehension-ordering-list" id="ordering-list">
+                    <div class="EH-comprehension-ordering-item" data-order="2" data-i18n-comprehension="economicsLesson.order1">
+                        <div class="EH-comprehension-ordering-number">1</div>
+                        <div class="EH-comprehension-ordering-text">Smith uses the pin-making trade as an example because it is a trifling manufacture where division is obvious.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="3" data-i18n-comprehension="economicsLesson.order2">
+                        <div class="EH-comprehension-ordering-number">2</div>
+                        <div class="EH-comprehension-ordering-text">A single uneducated workman could not make twenty pins in a day.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="4" data-i18n-comprehension="economicsLesson.order3">
+                        <div class="EH-comprehension-ordering-number">3</div>
+                        <div class="EH-comprehension-ordering-text">In a small manufactory, ten men made forty-eight thousand pins in a day.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="5" data-i18n-comprehension="economicsLesson.order4">
+                        <div class="EH-comprehension-ordering-number">4</div>
+                        <div class="EH-comprehension-ordering-text">The division of labour leads to three advantages: increased dexterity, saved time, and machine invention.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="6" data-i18n-comprehension="economicsLesson.order5">
+                        <div class="EH-comprehension-ordering-number">5</div>
+                        <div class="EH-comprehension-ordering-text">Switching between different kinds of work wastes time, as with a weaver who also farms.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="7" data-i18n-comprehension="economicsLesson.order6">
+                        <div class="EH-comprehension-ordering-number">6</div>
+                        <div class="EH-comprehension-ordering-text">The invention of machinery itself originally owes to the division of labour.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="1" data-i18n-comprehension="economicsLesson.order7">
+                        <div class="EH-comprehension-ordering-number">7</div>
+                        <div class="EH-comprehension-ordering-text">The division of labour causes the greatest improvement in productive powers.</div>
+                    </div>
+                </div>
+                <div class="EH-comprehension-answer-feedback" id="ordering-feedback"></div>
+            </div>
+
+            <!-- Check All Exercises Button -->
+            <button class="EH-comprehension-check-all-exercises" id="EH-economics-check-all" data-i18n-comprehension="economicsLesson.checkAllExercises">Check All Exercises</button>
+
+            <!-- Score Display -->
+            <div class="EH-comprehension-score-display" id="EH-economics-score-display">
+                <h3 class="EH-comprehension-score-title" data-i18n-comprehension="economicsLesson.yourScore">Your Score</h3>
+                <div class="EH-comprehension-score-value" id="EH-economics-score-value">0/20</div>
+                <p class="EH-comprehension-score-feedback" id="EH-economics-score-feedback" data-i18n-comprehension="economicsLesson.scoreFeedback.default">Check your answers to see your score!</p>
+            </div>
+
+            <!-- Vocabulary Building Section -->
+            <div class="EH-comprehension-vocabulary-section">
+                <h2 class="EH-comprehension-vocabulary-section-title" data-i18n-comprehension="economicsLesson.vocabularyTitle">Vocabulary Building</h2>
+                <div class="EH-comprehension-vocabulary-grid">
+                    <!-- Card 1: Dexterity -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="economicsLesson.vocab1.word">dexterity</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="economicsLesson.vocab1.pronunciation">/dekˈsterəti/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="economicsLesson.vocab1.definition">Skill and speed in performing tasks, especially with the hands.</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="economicsLesson.vocab1.example">"The division of labour increases the dexterity of each workman by focusing him on a single operation."</div>
+                    </div>
+                    <!-- Card 2: Manufactory -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="economicsLesson.vocab2.word">manufactory</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="economicsLesson.vocab2.pronunciation">/ˌmænjuˈfæktəri/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="economicsLesson.vocab2.definition">An 18th-century term for a factory where goods are manufactured.</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="economicsLesson.vocab2.example">"Smith visited a small manufactory where ten men made pins."</div>
+                    </div>
+                    <!-- Card 3: Abridge -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="economicsLesson.vocab3.word">abridge</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="economicsLesson.vocab3.pronunciation">/əˈbrɪdʒ/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="economicsLesson.vocab3.definition">To shorten or reduce; in economics, to make work less time-consuming.</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="economicsLesson.vocab3.example">"Machines abridge labour, enabling one man to do the work of many."</div>
+                    </div>
+                    <!-- Card 4: Peculiar -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="economicsLesson.vocab4.word">peculiar</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="economicsLesson.vocab4.pronunciation">/pɪˈkjuːliə/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="economicsLesson.vocab4.definition">Belonging exclusively to one person, group, or trade; characteristic.</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="economicsLesson.vocab4.example">"Making the head of a pin became a peculiar business under division of labour."</div>
+                    </div>
+                    <!-- Card 5: Wrought -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="economicsLesson.vocab5.word">wrought</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="economicsLesson.vocab5.pronunciation">/rɔːt/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="economicsLesson.vocab5.definition">Shaped or made by work; worked (archaic past participle of work).</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="economicsLesson.vocab5.example">"If they had all wrought separately, they could not have made twenty pins."</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="EH-comprehension-navigation">
+                <button class="EH-comprehension-nav-button back" onclick="window.location.href='EH-general-comprehension-club.html'">
+                     ← <span data-i18n-comprehension="economicsLesson.backToClub">Back to Comprehension Club</span>
+                </button>
+    <button class="EH-comprehension-nav-button" onclick="window.location.href='EH-comprehension-literary.html'">
+        <span data-i18n-comprehension="economicsLesson.nextLesson">Next: Literary Analysis</span> →
+    </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Common Footer -->
+    <footer class="EH-common-footer">
+        <div class="EH-common-footer-content">
+            <div class="EH-common-footer-developer" data-i18n-comprehension="footer.developer">Developer: Mejri Ziad</div>
+            <div class="EH-common-footer-links">
+                <a href="policy.html" data-i18n-comprehension="footer.privacy">Privacy Policy</a>
+                <a href="terms.html" data-i18n-comprehension="footer.terms">Terms of Service</a>
+                <a href="contact.html" data-i18n-comprehension="footer.contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- i18n translations and exercise scripts -->
+    <script src="scripts/translation-comprehension.js"></script>
+    <script src="scripts/translations/i18n_comprehension_en.js"></script>
+    <script src="scripts/translations/i18n_comprehension_fr.js"></script>
+    <script src="scripts/translations/i18n_comprehension_ar.js"></script>
+    <script src="scripts/comprehension-exercises.js"></script>
+
+    <script>
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize translation system for comprehension pages
+            if (typeof initTranslationSystem === 'function') {
+                initTranslationSystem('comprehension', 'en', 'language-selector');
+            }
+
+            // Register the economics lesson configuration
+            ComprehensionExercises.registerLesson('economics', {
+                mcQuestions: 7,
+                audioPath: 'assets/audio/lessons/comprehension/economics-story.mp3',
+                correctAnswers: {
+                    // Multiple choice answers
+                    'economics-q1': 'b',
+                    'economics-q2': 'b',
+                    'economics-q3': 'b',
+                    'economics-q4': 'c',
+                    'economics-q5': 'b',
+                    'economics-q6': 'c',
+                    'economics-q7': 'a',
+                    // True/False
+                    'tf1': 'false',
+                    'tf2': 'true',
+                    'tf3': 'false',
+                    // Sentence ordering (correct sequence of data-order values: 1,2,3,4,5,6,7)
+                    'ordering': ['1', '2', '3', '4', '5', '6', '7']
+                },
+                fillBlanks: [
+                    {
+                        ids: ['fill1-1', 'fill1-2', 'fill1-3'],
+                        answers: ['productive', 'manufactory', 'pins'],
+                        feedbackId: 'fill1-feedback'
+                    },
+                    {
+                        ids: ['fill2-1', 'fill2-2', 'fill2-3'],
+                        answers: ['dexterity', 'machines', 'abridge'],
+                        feedbackId: 'fill2-feedback'
+                    }
+                ]
+            });
+
+            // Initialize exercises for economics lesson
+            if (typeof ComprehensionExercises !== 'undefined' && ComprehensionExercises.initLesson) {
+                ComprehensionExercises.initLesson('economics');
+            }
+        });
+    </script>
+</body>
+</html>

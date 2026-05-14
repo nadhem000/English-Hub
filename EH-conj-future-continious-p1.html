@@ -3,1180 +3,445 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Continuous Tense: Generality - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>Future Continuous I: Introduction & Basic Form - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #1e88e5, #2196f3, #42a5f5);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-        
-        .EH-conjugation-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-        }
-        
-        .EH-conjugation-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .EH-conjugation-title {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .EH-conjugation-subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-        }
-        
-        .EH-conjugation-content {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
-        
-        .EH-conjugation-section {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .EH-conjugation-section-title {
-            font-size: 1.8rem;
-            color: #1e88e5;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #42a5f5;
-        }
-        
-        .EH-conjugation-subsection {
-            margin-bottom: 25px;
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .EH-conjugation-subsection-title {
-            font-size: 1.4rem;
-            color: #2196f3;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .EH-conjugation-subsection-icon {
-            font-size: 1.6rem;
-            margin-right: 10px;
-        }
-        
-        .EH-conjugation-rule {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f5f5f5;
-            border-radius: 10px;
-            border-left: 4px solid #42a5f5;
-        }
-        
-        .EH-conjugation-rule-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #1e88e5;
-        }
-        
-        .EH-conjugation-examples {
-            background: #e3f2fd;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-        }
-        
-        .EH-conjugation-example {
-            margin-bottom: 8px;
-            padding-left: 10px;
-            border-left: 2px solid #42a5f5;
-        }
-        
-        .EH-conjugation-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        
-        .EH-conjugation-table th,
-        .EH-conjugation-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        
-        .EH-conjugation-table th {
-            background-color: #2196f3;
-            color: white;
-        }
-        
-        .EH-conjugation-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        .EH-conjugation-table tr:hover {
-            background-color: #e3f2fd;
-        }
-        
-        /* Exercise Styles */
-        .EH-exercise-section {
-            margin-top: 40px;
-        }
-        
-        .EH-exercise-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .EH-exercise-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .EH-exercise-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .EH-exercise-number {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, #2196f3, #42a5f5);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-text {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .EH-exercise-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option input {
-            cursor: pointer;
-        }
-        
-        .EH-exercise-option label {
-            cursor: pointer;
-        }
-        
-        /* Type 1: Multiple Choice Styles */
-        .EH-exercise-type1-possibilities3-answers-control {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
-            gap: 20px;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn {
-            background: #2196f3;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn:hover {
-            background: #1e88e5;
-        }
-
-        .EH-exercise-type1-possibilities3-score-display {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            display: none;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-title {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #1e88e5;
-        }
-
-        .EH-exercise-type1-possibilities3-score-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #2196f3;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-feedback {
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        .EH-exercise-type1-possibilities3-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.correct {
-            background-color: #d4edda;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.incorrect {
-            background-color: #f8d7da;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 2: Fill in the Blank Styles */
-        .EH-exercise-type2-fillblank-input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .EH-exercise-type2-fillblank-input:focus {
-            border-color: #2196f3;
-            outline: none;
-        }
-        
-        .EH-exercise-type2-fillblank-input-correct {
-            border-color: #28a745;
-            background-color: #d4edda;
-        }
-        
-        .EH-exercise-type2-fillblank-input-incorrect {
-            border-color: #dc3545;
-            background-color: #f8d7da;
-        }
-        
-        .EH-exercise-type2-fillblank-input-empty {
-            border-color: #ffc107;
-        }
-        
-        .EH-exercise-type2-fillblank-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type2-fillblank-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type2-fillblank-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 3: Sentence Ordering Styles */
-        .EH-exercise-type3-sentenceorder-word-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 15px;
-            border: 2px dashed #e0e0e0;
-            border-radius: 10px;
-            min-height: 60px;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word {
-            background: #e3f2fd;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid #90caf9;
-            cursor: move;
-            user-select: none;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word:hover {
-            background: #bbdefb;
-        }
-        
-        .EH-exercise-type3-sentenceorder-dragging {
-            opacity: 0.5;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct {
-            border-color: #28a745;
-            background-color: #f8fff8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect {
-            border-color: #dc3545;
-            background-color: #fff8f8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Navigation Buttons */
-        .EH-conjugation-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-        
-        .EH-conjugation-nav-button {
-            background: #2196f3;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .EH-conjugation-nav-button:hover {
-            background: #1e88e5;
-        }
-        
-        .EH-conjugation-nav-button.back {
-            background: #42a5f5;
-        }
-        
-        .EH-conjugation-nav-button.back:hover {
-            background: #2196f3;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .EH-conjugation-title {
-                font-size: 2rem;
-            }
-            
-            .EH-exercise-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .EH-conjugation-navigation {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .EH-conjugation-nav-button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .EH-conjugation-content {
-                padding: 20px;
-            }
+        :root {
+            --bg-gradient: linear-gradient(135deg, #c5e0f0, #a8d0e8, #8cc0dc, #70b0d0);
+            --content-bg: #f4faff;
+            --card-bg: #ffffff;
+            --subsection-bg: #eef4fc;
+            --rule-bg: #e5eff9;
+            --example-bg: #dce8f5;
+            --table-stripe: #ecf3fa;
+            --title-color: #1a4b6e;
+            --text-color: #1c3e55;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #2c7cb6;
+            --primary-hover: #1f6396;
+            --primary-light: #4896c8;
+            --accent: #3a86c0;
+            --exercise-number-gradient: linear-gradient(135deg, #2c7cb6, #1a5a82);
+            --rule-border: #2c7cb6;
+            --example-border: #2c7cb6;
+            --nav-btn-bg: #2c7cb6;
+            --nav-btn-hover: #1f6396;
+            --nav-back-btn-bg: #4896c8;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #2c7cb6;
+            --refract-divider-color: #8cb4d4;
+            --refract-translation-bg: #e0edf8;
+            --refract-translation-border: #2c7cb6;
+            --refract-english-color: #1c3e55;
+            --section-divider: #caddf0;
+            --card-border: #caddf0;
+            --input-border: #a8c0dc;
+            --dashed-border: #a8c0dc;
+            --table-border: #b8cce4;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #e8f0f8;
+            --neutral-color: #4c6f8c;
+            --neutral-border: #b0c8e0;
+            --empty-input-border: #98b4d0;
+            --empty-input-bg: #f2f8ff;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #2c7cb6;
+            --language-selector-color: #1c3e55;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #1a3f5c, #204e70, #265e84, #2c6e98);
+            --content-bg: #1a2f40;
+            --card-bg: #213a4f;
+            --subsection-bg: #213a4f;
+            --rule-bg: #1a2f40;
+            --example-bg: #1a2f40;
+            --table-stripe: #1e3548;
+            --title-color: #8bc8f0;
+            --text-color: #d6eaff;
+            --header-text: #d6eaff;
+            --header-text-light: #aac8e0;
+            --primary: #4a9ed9;
+            --primary-hover: #68b0e6;
+            --primary-light: #4a9ed9;
+            --accent: #4a9ed9;
+            --rule-border: #4a9ed9;
+            --example-border: #4a9ed9;
+            --exercise-number-gradient: linear-gradient(135deg, #4a9ed9, #2c7cb6);
+            --nav-btn-bg: #4a9ed9;
+            --nav-btn-hover: #2c7cb6;
+            --nav-back-btn-bg: #68b0e6;
+            --nav-back-btn-color: #0a1a2a;
+            --nav-back-btn-hover: #4a9ed9;
+            --refract-divider-color: #6caad4;
+            --refract-translation-bg: #2c4a68;
+            --refract-translation-border: #6caad4;
+            --refract-english-color: #cce8ff;
+            --section-divider: #2a4a66;
+            --card-border: #2a4a66;
+            --input-border: #3a6a8e;
+            --dashed-border: #3a6a8e;
+            --table-border: #2e5670;
+            --white: #e0f0ff;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #2a4a60;
+            --neutral-color: #b0d0e8;
+            --neutral-border: #3a6a8e;
+            --empty-input-border: #3a6a8e;
+            --empty-input-bg: #1e384c;
+            --language-selector-bg: #213a4f;
+            --language-selector-border: #4a9ed9;
+            --language-selector-color: #d6eaff;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="futureContinuous1.title">Future Continuous Tense: Generality</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="futureContinuous1.subtitle">Learn to talk about actions that will be in progress at a specific time in the future</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="futureContinuous1.title.line1">Future Continuous I:</div>
+                <div class="EH-conjugation-title-line" data-i18n="futureContinuous1.title.line2">Introduction & Basic Form</div>
+                <div class="EH-conjugation-subtitle" data-i18n="futureContinuous1.title.line3">Actions in progress at a specific future time, predictions, and polite inquiries.</div>
+                <div class="EH-conjugation-subtitle" data-i18n="futureContinuous1.title.line4">lesson: 1/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Introduction Section -->
+            <!-- Section 1: Introduction to Future Continuous -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futureContinuous1.introduction.title">Introduction to Future Continuous</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futureContinuous1.intro.title">I. 1. Introduction to Future Continuous</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📚</span>
-                        <span data-i18n="futureContinuous1.introduction.whatIs">What is the Future Continuous Tense?</span>
+                        <span class="EH-conjugation-subsection-icon">⏳</span>
+                        <span data-i18n="futureContinuous1.intro.heading">What is the Future Continuous Tense?</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.introduction.definitionTitle">Definition:</div>
-                        <p data-i18n="futureContinuous1.introduction.definition">The Future Continuous tense is used to talk about actions that will be in progress at a specific time in the future.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.intro.desc1">📘 Definition:</div>
+                        <p data-i18n="futureContinuous1.intro.desc2">The Future Continuous tense is used to talk about <strong>actions that will be in progress at a specific time in the future</strong>. It often expresses duration, prediction, or polite questions about future plans.</p>
                     </div>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.introduction.usesTitle">When to use:</div>
+                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.intro.coreTitle">💡 When to use:</div>
                         <ul>
-                            <li data-i18n="futureContinuous1.introduction.use1">Actions that will be in progress at a specific time in the future</li>
-                            <li data-i18n="futureContinuous1.introduction.use2">Predicting or guessing about future events</li>
-                            <li data-i18n="futureContinuous1.introduction.use3">Politely asking about someone's plans</li>
-                            <li data-i18n="futureContinuous1.introduction.use4">Talking about multiple actions happening at the same time in the future</li>
+                            <li data-i18n="futureContinuous1.intro.core1"><strong>Action in progress at a specific future time:</strong> I will be working at 5 PM tomorrow.</li>
+                            <li data-i18n="futureContinuous1.intro.core2"><strong>Predicting or guessing future events:</strong> She will be studying when you arrive.</li>
+                            <li data-i18n="futureContinuous1.intro.core3"><strong>Polite inquiries about plans:</strong> Will you be using the car tomorrow?</li>
+                            <li data-i18n="futureContinuous1.intro.core4"><strong>Simultaneous future actions:</strong> They will be traveling while we are working.</li>
                         </ul>
                     </div>
                     <div class="EH-conjugation-examples">
-                        <div class="EH-conjugation-rule-title" data-i18n="common.examples">Examples:</div>
-                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.introduction.example1">I will be working at 5 PM tomorrow.</div>
-                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.introduction.example2">She will be studying when you arrive.</div>
-                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.introduction.example3">They will be traveling all next week.</div>
-                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.introduction.example4">He will be sleeping at midnight.</div>
+                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.intro.ex1">I will be working at 5 PM tomorrow.</div>
+                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.intro.ex2">She will be studying when you arrive.</div>
+                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.intro.ex3">They will be traveling all next week.</div>
+                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.intro.ex4">He will be sleeping at midnight.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Structure Section -->
+            <!-- Section 2: Basic Structure -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futureContinuous1.structure.title">Basic Structure</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futureContinuous1.basic.title">I. 2. Basic Structure</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="futureContinuous1.structure.conjugation">How to Form the Future Continuous</span>
+                        <span class="EH-conjugation-subsection-icon">🔧</span>
+                        <span data-i18n="futureContinuous1.basic.heading">Form: will be + verb‑ing</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.structure.ruleTitle">Basic Rule:</div>
-                        <p data-i18n="futureContinuous1.structure.rule">Use "will be" + verb-ing for all subjects.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.basic.desc1">📘 Rule:</div>
+                        <p data-i18n="futureContinuous1.basic.desc2">For all subjects (I, you, he, she, it, we, they), the Future Continuous is formed with <strong>will be + present participle (-ing form)</strong>. Negative: add <strong>not</strong> after <strong>will</strong>. Questions: invert <strong>will</strong> and the subject.</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
                         <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.conjugation">Conjugation</th>
-                                <th data-i18n="common.example">Example (work)</th>
-                            </tr>
+                            <tr><th data-i18n="futureContinuous1.basic.subjectCol">Subject</th><th data-i18n="futureContinuous1.basic.conjugationCol">Conjugation</th><th data-i18n="futureContinuous1.basic.exampleCol">Example (work)</th></tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="futureContinuous1.structure.willBeWorking">will be working</td>
-                                <td data-i18n="futureContinuous1.structure.exampleI">I will be working tomorrow.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="futureContinuous1.structure.willBeWorking">will be working</td>
-                                <td data-i18n="futureContinuous1.structure.exampleYou">You will be working next week.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="futureContinuous1.structure.willBeWorking">will be working</td>
-                                <td data-i18n="futureContinuous1.structure.exampleHe">He will be working at the office.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="futureContinuous1.structure.willBeWorking">will be working</td>
-                                <td data-i18n="futureContinuous1.structure.exampleShe">She will be working on a project.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.it">It</td>
-                                <td data-i18n="futureContinuous1.structure.willBeWorking">will be working</td>
-                                <td data-i18n="futureContinuous1.structure.exampleIt">It will be working properly.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="futureContinuous1.structure.willBeWorking">will be working</td>
-                                <td data-i18n="futureContinuous1.structure.exampleWe">We will be working together.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="futureContinuous1.structure.willBeWorking">will be working</td>
-                                <td data-i18n="futureContinuous1.structure.exampleThey">They will be working all day.</td>
-                            </tr>
+                            <tr><td>I</td><td>will be working</td><td data-i18n="futureContinuous1.basic.exI">I will be working tomorrow.</td></tr>
+                            <tr><td>You</td><td>will be working</td><td data-i18n="futureContinuous1.basic.exYou">You will be working next week.</td></tr>
+                            <tr><td>He</td><td>will be working</td><td data-i18n="futureContinuous1.basic.exHe">He will be working at the office.</td></tr>
+                            <tr><td>She</td><td>will be working</td><td data-i18n="futureContinuous1.basic.exShe">She will be working on a project.</td></tr>
+                            <tr><td>It</td><td>will be working</td><td data-i18n="futureContinuous1.basic.exIt">It will be working properly.</td></tr>
+                            <tr><td>We</td><td>will be working</td><td data-i18n="futureContinuous1.basic.exWe">We will be working together.</td></tr>
+                            <tr><td>They</td><td>will be working</td><td data-i18n="futureContinuous1.basic.exThey">They will be working all day.</td></tr>
                         </tbody>
                     </table>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.structure.negativeTitle">Negative Form:</div>
-                        <p data-i18n="futureContinuous1.structure.negativeRule">Add "not" between "will" and "be".</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.basic.negativeTitle">❌ Negative Form:</div>
+                        <p data-i18n="futureContinuous1.basic.negativeDesc">Add <strong>not</strong> between <strong>will</strong> and <strong>be</strong>. Contracted: <strong>won't be</strong>.</p>
                         <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.structure.negativeExample1">I will not be working tomorrow.</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.structure.negativeExample2">She will not be working at that time.</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.structure.negativeExample3">They will not be working late.</div>
+                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.basic.negEx1">I will not be working tomorrow.</div>
+                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.basic.negEx2">She won't be working at that time.</div>
                         </div>
                     </div>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.structure.questionTitle">Question Form:</div>
-                        <p data-i18n="futureContinuous1.structure.questionRule">Invert the subject and "will".</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.basic.questionTitle">❓ Question Form:</div>
+                        <p data-i18n="futureContinuous1.basic.questionDesc">Invert <strong>will</strong> and the subject.</p>
                         <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.structure.questionExample1">Will you be working tomorrow?</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.structure.questionExample2">Will she be working at 5 PM?</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.structure.questionExample3">Will they be working together?</div>
+                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.basic.qEx1">Will you be working tomorrow?</div>
+                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.basic.qEx2">Will she be working at 5 PM?</div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- To Be Section -->
+            <!-- Section 3: Verb "to be" in Future Continuous -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futureContinuous1.toBe.title">The Verb "To Be" in Future Continuous</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futureContinuous1.verbToBe.title">I. 3. The Verb "To Be" in Future Continuous</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="futureContinuous1.toBe.conjugation">Using "To Be" in Future Continuous</span>
+                        <span class="EH-conjugation-subsection-icon">⚖️</span>
+                        <span data-i18n="futureContinuous1.verbToBe.heading">Using "to be" as an action verb</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.toBe.ruleTitle">Important Note:</div>
-                        <p data-i18n="futureContinuous1.toBe.rule">The verb "to be" is used as a helping verb in Future Continuous. It is not used in the -ing form.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.verbToBe.desc1">📘 Note:</div>
+                        <p data-i18n="futureContinuous1.verbToBe.desc2">When "to be" is the main verb, the Future Continuous becomes <strong>will be being</strong>. This form is rare but used to emphasise a temporary state or behaviour in the future.</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.conjugation">Conjugation</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="futureContinuous1.verbToBe.subjectCol">Subject</th><th data-i18n="futureContinuous1.verbToBe.conjugationCol">Conjugation</th><th data-i18n="futureContinuous1.verbToBe.exampleCol">Example</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="futureContinuous1.toBe.willBeBeing">will be being</td>
-                                <td data-i18n="futureContinuous1.toBe.exampleI">I will be being careful tomorrow.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="futureContinuous1.toBe.willBeBeing">will be being</td>
-                                <td data-i18n="futureContinuous1.toBe.exampleYou">You will be being kind to everyone.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="futureContinuous1.toBe.willBeBeing">will be being</td>
-                                <td data-i18n="futureContinuous1.toBe.exampleHe">He will be being helpful all day.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="futureContinuous1.toBe.willBeBeing">will be being</td>
-                                <td data-i18n="futureContinuous1.toBe.exampleShe">She will be being patient with the children.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.it">It</td>
-                                <td data-i18n="futureContinuous1.toBe.willBeBeing">will be being</td>
-                                <td data-i18n="futureContinuous1.toBe.exampleIt">It will be being difficult to understand.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="futureContinuous1.toBe.willBeBeing">will be being</td>
-                                <td data-i18n="futureContinuous1.toBe.exampleWe">We will be being quiet during the movie.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="futureContinuous1.toBe.willBeBeing">will be being</td>
-                                <td data-i18n="futureContinuous1.toBe.exampleThey">They will be being friendly to new students.</td>
-                            </tr>
+                            <tr><td>I</td><td>will be being</td><td data-i18n="futureContinuous1.verbToBe.exI">I will be being careful tomorrow.</td></tr>
+                            <tr><td>You</td><td>will be being</td><td data-i18n="futureContinuous1.verbToBe.exYou">You will be being kind to everyone.</td></tr>
+                            <tr><td>He</td><td>will be being</td><td data-i18n="futureContinuous1.verbToBe.exHe">He will be being helpful all day.</td></tr>
+                            <tr><td>She</td><td>will be being</td><td data-i18n="futureContinuous1.verbToBe.exShe">She will be being patient with the children.</td></tr>
+                            <tr><td>It</td><td>will be being</td><td data-i18n="futureContinuous1.verbToBe.exIt">It will be being difficult to understand.</td></tr>
+                            <tr><td>We</td><td>will be being</td><td data-i18n="futureContinuous1.verbToBe.exWe">We will be being quiet during the movie.</td></tr>
+                            <tr><td>They</td><td>will be being</td><td data-i18n="futureContinuous1.verbToBe.exThey">They will be being friendly to new students.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.toBe.negativeTitle">Negative Form:</div>
-                        <p data-i18n="futureContinuous1.toBe.negativeRule">Add "not" between "will" and "be".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.toBe.negativeExample1">I will not be being lazy.</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.toBe.negativeExample2">She will not be being rude.</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.toBe.negativeExample3">They will not be being noisy.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.toBe.questionTitle">Question Form:</div>
-                        <p data-i18n="futureContinuous1.toBe.questionRule">Invert the subject and "will".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.toBe.questionExample1">Will I be being helpful?</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.toBe.questionExample2">Will she be being careful?</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.toBe.questionExample3">Will they be being friendly?</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.verbToBe.negEx">I will not be being lazy. / She won't be being rude.</div>
+                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.verbToBe.qEx">Will you be being helpful? / Will they be being noisy?</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- To Have Section -->
+            <!-- Section 4: Verb "to have" in Future Continuous -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futureContinuous1.toHave.title">The Verb "To Have" in Future Continuous</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futureContinuous1.verbToHave.title">I. 4. The Verb "To Have" in Future Continuous</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="futureContinuous1.toHave.conjugation">Using "To Have" in Future Continuous</span>
+                        <span class="EH-conjugation-subsection-icon">🍽️</span>
+                        <span data-i18n="futureContinuous1.verbToHave.heading">Expressing experiences or events</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.toHave.ruleTitle">Important Note:</div>
-                        <p data-i18n="futureContinuous1.toHave.rule">"To have" in Future Continuous usually means "experiencing" or "participating in" something in the future.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.verbToHave.desc1">📘 Note:</div>
+                        <p data-i18n="futureContinuous1.verbToHave.desc2"><strong>Will be having</strong> often means "experiencing" or "participating in" something (a meal, a meeting, a problem).</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="common.conjugation">Conjugation</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="futureContinuous1.verbToHave.subjectCol">Subject</th><th data-i18n="futureContinuous1.verbToHave.conjugationCol">Conjugation</th><th data-i18n="futureContinuous1.verbToHave.exampleCol">Example</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="futureContinuous1.toHave.willBeHaving">will be having</td>
-                                <td data-i18n="futureContinuous1.toHave.exampleI">I will be having lunch at noon tomorrow.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="futureContinuous1.toHave.willBeHaving">will be having</td>
-                                <td data-i18n="futureContinuous1.toHave.exampleYou">You will be having a good time next week.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="futureContinuous1.toHave.willBeHaving">will be having</td>
-                                <td data-i18n="futureContinuous1.toHave.exampleHe">He will be having trouble with the computer.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="futureContinuous1.toHave.willBeHaving">will be having</td>
-                                <td data-i18n="futureContinuous1.toHave.exampleShe">She will be having a party next weekend.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.it">It</td>
-                                <td data-i18n="futureContinuous1.toHave.willBeHaving">will be having</td>
-                                <td data-i18n="futureContinuous1.toHave.exampleIt">It will be having an effect on everyone.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="futureContinuous1.toHave.willBeHaving">will be having</td>
-                                <td data-i18n="futureContinuous1.toHave.exampleWe">We will be having a meeting at 3 PM tomorrow.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="futureContinuous1.toHave.willBeHaving">will be having</td>
-                                <td data-i18n="futureContinuous1.toHave.exampleThey">They will be having fun at the beach next month.</td>
-                            </tr>
+                            <tr><td>I</td><td>will be having</td><td data-i18n="futureContinuous1.verbToHave.exI">I will be having lunch at noon tomorrow.</td></tr>
+                            <tr><td>You</td><td>will be having</td><td data-i18n="futureContinuous1.verbToHave.exYou">You will be having a good time next week.</td></tr>
+                            <tr><td>He</td><td>will be having</td><td data-i18n="futureContinuous1.verbToHave.exHe">He will be having trouble with the computer.</td></tr>
+                            <tr><td>She</td><td>will be having</td><td data-i18n="futureContinuous1.verbToHave.exShe">She will be having a party next weekend.</td></tr>
+                            <tr><td>It</td><td>will be having</td><td data-i18n="futureContinuous1.verbToHave.exIt">It will be having an effect on everyone.</td></tr>
+                            <tr><td>We</td><td>will be having</td><td data-i18n="futureContinuous1.verbToHave.exWe">We will be having a meeting at 3 PM tomorrow.</td></tr>
+                            <tr><td>They</td><td>will be having</td><td data-i18n="futureContinuous1.verbToHave.exThey">They will be having fun at the beach next month.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.toHave.negativeTitle">Negative Form:</div>
-                        <p data-i18n="futureContinuous1.toHave.negativeRule">Add "not" between "will" and "be".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.toHave.negativeExample1">I will not be having fun.</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.toHave.negativeExample2">She will not be having problems.</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.toHave.negativeExample3">They will not be having a party.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.toHave.questionTitle">Question Form:</div>
-                        <p data-i18n="futureContinuous1.toHave.questionRule">Invert the subject and "will".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.toHave.questionExample1">Will you be having a good time?</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.toHave.questionExample2">Will she be having trouble?</div>
-                            <div class="EH-conercise-type2-fillblank-example" data-i18n="futureContinuous1.toHave.questionExample3">Will they be having a meeting?</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.verbToHave.negEx">I will not be having fun. / They won't be having a party.</div>
+                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.verbToHave.qEx">Will you be having a good time? / Will she be having trouble?</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Irregular Verbs Section -->
+            <!-- Section 5: Common Verbs -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futureContinuous1.irregularVerbs.title">Common Verbs in Future Continuous</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futureContinuous1.commonVerbs.title">I. 5. Common Verbs in Future Continuous</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⚠️</span>
-                        <span data-i18n="futureContinuous1.irregularVerbs.conjugation">Verb Conjugations in Future Continuous</span>
+                        <span class="EH-conjugation-subsection-icon">📝</span>
+                        <span data-i18n="futureContinuous1.commonVerbs.heading">All verbs follow the same pattern</span>
                     </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.irregularVerbs.ruleTitle">About Verbs in Future Continuous:</div>
-                        <p data-i18n="futureContinuous1.irregularVerbs.rule">All verbs follow the same pattern: "will be" + verb-ing.</p>
-                    </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.verb">Verb</th>
-                                <th data-i18n="futureContinuous1.irregularVerbs.continuousForm">Continuous Form</th>
-                                <th data-i18n="common.example">Example</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="futureContinuous1.commonVerbs.verbCol">Verb</th><th data-i18n="futureContinuous1.commonVerbs.ingCol">-ing form</th><th data-i18n="futureContinuous1.commonVerbs.exampleCol">Example</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="futureContinuous1.irregularVerbs.go">go</td>
-                                <td data-i18n="futureContinuous1.irregularVerbs.going">going</td>
-                                <td data-i18n="futureContinuous1.irregularVerbs.goExample">I will be going to school when you call.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="futureContinuous1.irregularVerbs.do">do</td>
-                                <td data-i18n="futureContinuous1.irregularVerbs.doing">doing</td>
-                                <td data-i18n="futureContinuous1.irregularVerbs.doExample">He will be doing his homework at 7 PM tomorrow.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="futureContinuous1.irregularVerbs.have">have</td>
-                                <td data-i18n="futureContinuous1.irregularVerbs.having">having</td>
-                                <td data-i18n="futureContinuous1.irregularVerbs.haveExample">She will be having breakfast when I arrive.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="futureContinuous1.irregularVerbs.eat">eat</td>
-                                <td data-i18n="futureContinuous1.irregularVerbs.eating">eating</td>
-                                <td data-i18n="futureContinuous1.irregularVerbs.eatExample">We will be eating dinner at that time.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="futureContinuous1.irregularVerbs.see">see</td>
-                                <td data-i18n="futureContinuous1.irregularVerbs.seeing">seeing</td>
-                                <td data-i18n="futureContinuous1.irregularVerbs.seeExample">They will be seeing a movie tomorrow.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="futureContinuous1.irregularVerbs.take">take</td>
-                                <td data-i18n="futureContinuous1.irregularVerbs.taking">taking</td>
-                                <td data-i18n="futureContinuous1.irregularVerbs.takeExample">I will be taking a bus to work.</td>
-                            </tr>
+                            <tr><td>go</td><td>going</td><td data-i18n="futureContinuous1.commonVerbs.exGo">I will be going to school when you call.</td></tr>
+                            <tr><td>do</td><td>doing</td><td data-i18n="futureContinuous1.commonVerbs.exDo">He will be doing his homework at 7 PM tomorrow.</td></tr>
+                            <tr><td>have</td><td>having</td><td data-i18n="futureContinuous1.commonVerbs.exHave">She will be having breakfast when I arrive.</td></tr>
+                            <tr><td>eat</td><td>eating</td><td data-i18n="futureContinuous1.commonVerbs.exEat">We will be eating dinner at that time.</td></tr>
+                            <tr><td>see</td><td>seeing</td><td data-i18n="futureContinuous1.commonVerbs.exSee">They will be seeing a movie tomorrow.</td></tr>
+                            <tr><td>take</td><td>taking</td><td data-i18n="futureContinuous1.commonVerbs.exTake">I will be taking a bus to work.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futureContinuous1.irregularVerbs.moreExamplesTitle">More Examples:</div>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.irregularVerbs.example1">I will be going to the store when it starts raining.</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.irregularVerbs.example2">She will be doing her homework after school tomorrow.</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.irregularVerbs.example3">We will be having a great time at the party next week.</div>
-                            <div class="EH-conjugation-example" data-i18n="futureContinuous1.irregularVerbs.example4">He will be eating breakfast when the phone rings.</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.commonVerbs.extra1">I will be going to the store when it starts raining.</div>
+                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.commonVerbs.extra2">She will be doing her homework after school tomorrow.</div>
+                        <div class="EH-conjugation-example" data-i18n="futureContinuous1.commonVerbs.extra3">We will be having a great time at the party next week.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Exercises Section -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futureContinuous1.exercises.title">Practice Exercises</h2>
-                
-                <!-- Type 1: Multiple Choice Exercises -->
-                <h3 style="color: #1e88e5; margin-bottom: 20px;">Multiple Choice</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 1 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">1</div>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q1">Choose the correct form of the verb "to be":</p>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q1Sentence">She ______ reading a book at 8 PM tomorrow.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="futureContinuous1.exercises.q1a">is</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="futureContinuous1.exercises.q1b">will be</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="futureContinuous1.exercises.q1c">was</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 2 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">2</div>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q2">Choose the correct form of the verb "to have":</p>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q2Sentence">They ______ breakfast at 9 AM tomorrow.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="futureContinuous1.exercises.q2a">had</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="futureContinuous1.exercises.q2b">will be having</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="futureContinuous1.exercises.q2c">have</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 3 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">3</div>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q3">Choose the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q3Sentence">He ______ (work) in his office at 3 PM tomorrow.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="futureContinuous1.exercises.q3a">work</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="futureContinuous1.exercises.q3b">will be working</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="futureContinuous1.exercises.q3c">worked</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 4 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">4</div>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q4">Choose the correct negative form:</p>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q4Sentence">I ______ watching TV at 10 PM tomorrow.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="futureContinuous1.exercises.q4a">will not be</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="futureContinuous1.exercises.q4b">did not</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="futureContinuous1.exercises.q4c">not</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 5 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">5</div>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q5">Choose the correct question form:</p>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q5Sentence">______ she working here tomorrow?</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="futureContinuous1.exercises.q5a">Do</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="futureContinuous1.exercises.q5b">Will</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="futureContinuous1.exercises.q5c">Is</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 6 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">6</div>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q6">Choose the correct -ing form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q6Sentence">He will be ______ to school when I see him.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-a" name="EH-exercise-type1-possibilities3-q6" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q6-a" data-i18n="futureContinuous1.exercises.q6a">go</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-b" name="EH-exercise-type1-possibilities3-q6" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q6-b" data-i18n="futureContinuous1.exercises.q6b">going</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-c" name="EH-exercise-type1-possibilities3-q6" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q6-c" data-i18n="futureContinuous1.exercises.q6c">went</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q6-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Type 2: Fill in the Blank Exercises -->
-                <h3 style="color: #1e88e5; margin: 40px 0 20px 0;">Fill in the Blank</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 7 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">7</div>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q7">Complete the sentence with the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q7Sentence">I ______ (to read) a book at 8 PM tomorrow.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q1-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 8 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">8</div>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q8">Complete the sentence with the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q8Sentence">She ______ (to write) a letter when I arrive.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q2-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 9 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">9</div>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q9">Complete the sentence with the correct form of the verb:</p>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q9Sentence">They ______ (to play) soccer in the park tomorrow afternoon.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q3-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Type 3: Sentence Ordering Exercises -->
-                <h3 style="color: #1e88e5; margin: 40px 0 20px 0;">Sentence Ordering</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 10 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">10</div>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q10">Arrange the words to form a correct sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q1-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word1" data-original-index="1">He</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word3" data-original-index="3">soccer</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word4" data-original-index="4">tomorrow</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word2" data-original-index="2">will be playing</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word5" data-original-index="5">.</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 11 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">11</div>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q11">Arrange the words to form a correct sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q2-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word1" data-original-index="1">We</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word3" data-original-index="3">watching</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word2" data-original-index="2">will not be</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word4" data-original-index="4">TV</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word5" data-original-index="5">.</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 12 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">12</div>
-                        <p class="EH-exercise-text" data-i18n="futureContinuous1.exercises.q12">Arrange the words to form a correct question:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q3-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word1" data-original-index="1">Will</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word3" data-original-index="3">studying</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word5" data-original-index="5">?</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word4" data-original-index="4">English</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word2" data-original-index="2">you</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word6" data-original-index="6">tomorrow</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Answer Check and Score System -->
+                <h2 class="EH-conjugation-section-title" data-i18n="futureContinuous1.exercises.title">Practice: Future Continuous Basics</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+                <div class="EH-exercise-container" id="mc-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+                <div class="EH-exercise-container" id="fill-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+                <div class="EH-exercise-container" id="order-exercises"></div>
                 <div class="EH-exercise-type1-possibilities3-answers-control">
-                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers">Check All Answers</button>
-                    <div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
                         <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
-                        <div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback">Check your answers to see how you did!</p>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Navigation Buttons -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='conjugation.html'">
-                    ← <span data-i18n="common.backToConjugation">Back to Verb Conjugation</span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='EH-conj-future-continuous-p2.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson</span> →
-                </button>
             </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
-    <script src="scripts/translations/i18n_en.js"></script>
-    <script src="scripts/translations/i18n_fr.js"></script>
-    <script src="scripts/translations/i18n_ar.js"></script>
-    <script src="scripts/common-i18n.js"></script>
-    <script src="scripts/exercise.js"></script>
-    
     <script>
-        // Correct answers for Type 1 exercises
-        const correctAnswersType1 = {
-            'EH-exercise-type1-possibilities3-q1': 'b', // She will be reading a book at 8 PM tomorrow.
-            'EH-exercise-type1-possibilities3-q2': 'b', // They will be having breakfast at 9 AM tomorrow.
-            'EH-exercise-type1-possibilities3-q3': 'b', // He will be working in his office at 3 PM tomorrow.
-            'EH-exercise-type1-possibilities3-q4': 'a', // I will not be watching TV at 10 PM tomorrow.
-            'EH-exercise-type1-possibilities3-q5': 'b', // Will she working here tomorrow?
-            'EH-exercise-type1-possibilities3-q6': 'b'  // He will be going to school when I see him.
+        window.I18N = {
+            en: {
+                common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                futureContinuous1: {
+                    title: { line1: "Future Continuous I:", line2: "Introduction & Basic Form", line3: "Actions in progress at a specific future time, predictions, and polite inquiries.", line4: "lesson: 1/3" },
+                    intro: { title: "I. 1. Introduction to Future Continuous", heading: "What is the Future Continuous Tense?", desc1: "📘 Definition:", desc2: "The Future Continuous tense is used to talk about actions that will be in progress at a specific time in the future. It often expresses duration, prediction, or polite questions about future plans.", coreTitle: "💡 When to use:", core1: "Action in progress at a specific future time: I will be working at 5 PM tomorrow.", core2: "Predicting or guessing future events: She will be studying when you arrive.", core3: "Polite inquiries about plans: Will you be using the car tomorrow?", core4: "Simultaneous future actions: They will be traveling while we are working.", ex1: "I will be working at 5 PM tomorrow.", ex2: "She will be studying when you arrive.", ex3: "They will be traveling all next week.", ex4: "He will be sleeping at midnight." },
+                    basic: { title: "I. 2. Basic Structure", heading: "Form: will be + verb‑ing", desc1: "📘 Rule:", desc2: "For all subjects (I, you, he, she, it, we, they), the Future Continuous is formed with will be + present participle (-ing form). Negative: add not after will. Questions: invert will and the subject.", subjectCol: "Subject", conjugationCol: "Conjugation", exampleCol: "Example (work)", exI: "I will be working tomorrow.", exYou: "You will be working next week.", exHe: "He will be working at the office.", exShe: "She will be working on a project.", exIt: "It will be working properly.", exWe: "We will be working together.", exThey: "They will be working all day.", negativeTitle: "❌ Negative Form:", negativeDesc: "Add not between will and be. Contracted: won't be.", negEx1: "I will not be working tomorrow.", negEx2: "She won't be working at that time.", questionTitle: "❓ Question Form:", questionDesc: "Invert will and the subject.", qEx1: "Will you be working tomorrow?", qEx2: "Will she be working at 5 PM?" },
+                    verbToBe: { title: "I. 3. The Verb 'To Be' in Future Continuous", heading: "Using 'to be' as an action verb", desc1: "📘 Note:", desc2: "When 'to be' is the main verb, the Future Continuous becomes will be being. This form is rare but used to emphasise a temporary state or behaviour in the future.", subjectCol: "Subject", conjugationCol: "Conjugation", exampleCol: "Example", exI: "I will be being careful tomorrow.", exYou: "You will be being kind to everyone.", exHe: "He will be being helpful all day.", exShe: "She will be being patient with the children.", exIt: "It will be being difficult to understand.", exWe: "We will be being quiet during the movie.", exThey: "They will be being friendly to new students.", negEx: "I will not be being lazy. / She won't be being rude.", qEx: "Will you be being helpful? / Will they be being noisy?" },
+                    verbToHave: { title: "I. 4. The Verb 'To Have' in Future Continuous", heading: "Expressing experiences or events", desc1: "📘 Note:", desc2: "Will be having often means 'experiencing' or 'participating in' something (a meal, a meeting, a problem).", subjectCol: "Subject", conjugationCol: "Conjugation", exampleCol: "Example", exI: "I will be having lunch at noon tomorrow.", exYou: "You will be having a good time next week.", exHe: "He will be having trouble with the computer.", exShe: "She will be having a party next weekend.", exIt: "It will be having an effect on everyone.", exWe: "We will be having a meeting at 3 PM tomorrow.", exThey: "They will be having fun at the beach next month.", negEx: "I will not be having fun. / They won't be having a party.", qEx: "Will you be having a good time? / Will she be having trouble?" },
+                    commonVerbs: { title: "I. 5. Common Verbs in Future Continuous", heading: "All verbs follow the same pattern", verbCol: "Verb", ingCol: "-ing form", exampleCol: "Example", exGo: "I will be going to school when you call.", exDo: "He will be doing his homework at 7 PM tomorrow.", exHave: "She will be having breakfast when I arrive.", exEat: "We will be eating dinner at that time.", exSee: "They will be seeing a movie tomorrow.", exTake: "I will be taking a bus to work.", extra1: "I will be going to the store when it starts raining.", extra2: "She will be doing her homework after school tomorrow.", extra3: "We will be having a great time at the party next week." },
+                    exercises: { title: "Practice: Future Continuous Basics", q1: "Choose the correct form: She ______ reading a book at 8 PM tomorrow.", q1a: "is", q1b: "will be", q1c: "was", q2: "They ______ breakfast at 9 AM tomorrow.", q2a: "had", q2b: "will be having", q2c: "have", q3: "He ______ (work) in his office at 3 PM tomorrow.", q3a: "work", q3b: "will be working", q3c: "worked", q4: "I ______ watching TV at 10 PM tomorrow. (negative)", q4a: "will not be", q4b: "did not", q4c: "not", q5: "______ she working here tomorrow? (question)", q5a: "Do", q5b: "Will", q5c: "Is", q6: "He will be ______ to school when I see him.", q6a: "go", q6b: "going", q6c: "went", q7: "Complete: I ______ (to read) a book at 8 PM tomorrow.", q8: "Complete: She ______ (to write) a letter when I arrive.", q9: "Complete: They ______ (to play) soccer in the park tomorrow afternoon.", q10: "Arrange: (He / will be playing / soccer / tomorrow / .)", q11: "Arrange: (We / will not be / watching / TV / .)", q12: "Arrange: (Will / you / be / studying / English / tomorrow / ?)" }
+                }
+            },
+            fr: {
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
+                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+                futureContinuous1: {
+                    title: { line1: "Futur Continu I :", line2: "Introduction et forme de base", line3: "Actions en cours à un moment précis du futur, prédictions et demandes polies.", line4: "leçon : 1/3" },
+                    intro: { title: "I. 1. Introduction au Futur Continu", heading: "Qu'est-ce que le Futur Continu ?", desc1: "📘 Définition :", desc2: "Le Futur Continu exprime des actions qui seront en cours à un moment spécifique du futur.", coreTitle: "💡 Quand l'utiliser :", core1: "Action en cours à un moment futur : Je travaillerai à 17h demain.", core2: "Prédictions : Elle étudiera quand tu arriveras.", core3: "Demandes polies : Utiliseras-tu la voiture demain ?", core4: "Actions simultanées : Ils voyageront pendant que nous travaillerons.", ex1: "Je travaillerai à 17h demain.", ex2: "Elle étudiera quand tu arriveras.", ex3: "Ils voyageront toute la semaine prochaine.", ex4: "Il dormira à minuit." },
+                    basic: { title: "I. 2. Structure de base", heading: "Forme : will be + verbe-ing", desc1: "📘 Règle :", desc2: "Pour tous les sujets : will be + participe présent.", subjectCol: "Sujet", conjugationCol: "Conjugaison", exampleCol: "Exemple (travailler)", exI: "Je travaillerai demain.", exYou: "Tu travailleras la semaine prochaine.", exHe: "Il travaillera au bureau.", exShe: "Elle travaillera sur un projet.", exIt: "Cela fonctionnera correctement.", exWe: "Nous travaillerons ensemble.", exThey: "Ils travailleront toute la journée.", negativeTitle: "❌ Négation :", negativeDesc: "Ajouter not entre will et be.", negEx1: "Je ne travaillerai pas demain.", negEx2: "Elle ne travaillera pas à ce moment.", questionTitle: "❓ Interrogation :", questionDesc: "Inverser will et le sujet.", qEx1: "Travailleras-tu demain ?", qEx2: "Travaillera-t-elle à 17h ?" },
+                    verbToBe: { title: "I. 3. Le verbe 'être' au Futur Continu", heading: "Être comme verbe d'action", desc1: "📘 Note :", desc2: "Forme will be being (rare, insiste sur un état temporaire).", subjectCol: "Sujet", conjugationCol: "Conjugaison", exampleCol: "Exemple", exI: "Je serai prudent demain.", exYou: "Tu seras gentil avec tout le monde.", exHe: "Il sera serviable toute la journée.", exShe: "Elle sera patiente avec les enfants.", exIt: "Ce sera difficile à comprendre.", exWe: "Nous serons silencieux pendant le film.", exThey: "Ils seront sympathiques avec les nouveaux.", negEx: "Je ne serai pas paresseux.", qEx: "Seras-tu serviable ?" },
+                    verbToHave: { title: "I. 4. Le verbe 'avoir' au Futur Continu", heading: "Exprimer des expériences ou événements", desc1: "📘 Note :", desc2: "Will be having = participer à, vivre.", subjectCol: "Sujet", conjugationCol: "Conjugaison", exampleCol: "Exemple", exI: "Je déjeunerai à midi demain.", exYou: "Tu passeras un bon moment.", exHe: "Il aura des problèmes avec l'ordinateur.", exShe: "Elle fera une fête le week-end prochain.", exIt: "Cela aura un effet sur tout le monde.", exWe: "Nous aurons une réunion à 15h.", exThey: "Ils s'amuseront à la plage.", negEx: "Je ne m'amuserai pas.", qEx: "Passeras-tu un bon moment ?" },
+                    commonVerbs: { title: "I. 5. Verbes courants au Futur Continu", heading: "Tous les verbes suivent le même modèle", verbCol: "Verbe", ingCol: "Forme -ing", exampleCol: "Exemple", exGo: "J'irai à l'école quand tu appelleras.", exDo: "Il fera ses devoirs à 19h demain.", exHave: "Elle prendra son petit-déjeuner quand j'arriverai.", exEat: "Nous dînerons à ce moment-là.", exSee: "Ils verront un film demain.", exTake: "Je prendrai le bus pour aller au travail.", extra1: "J'irai au magasin quand il se mettra à pleuvoir.", extra2: "Elle fera ses devoirs après l'école demain.", extra3: "Nous passerons un bon moment à la fête la semaine prochaine." }
+                }
+            },
+            ar: {
+                common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+                futureContinuous1: {
+                    title: { line1: "المستقبل المستمر: 1", line2: "المقدمة والشكل الأساسي", line3: "أفعال مستمرة في وقت محدد بالمستقبل، وتنبؤات، واستفسارات مهذبة.", line4: "الدرس: 1/3" },
+                    intro: { title: "I. 1. مقدمة إلى المستقبل المستمر", heading: "ما هو زمن المستقبل المستمر؟", desc1: "📘 تعريف:", desc2: "يستخدم المستقبل المستمر للأفعال التي ستكون مستمرة في وقت محدد في المستقبل.", coreTitle: "💡 متى نستخدمه:", core1: "فعل مستمر في وقت مستقبلي: سأعمل الساعة 5 مساءً غدًا.", core2: "تخمين أحداث مستقبلية: ستدرس عندما تصل.", core3: "استفسار مهذب: هل ستستخدم السيارة غدًا؟", core4: "أحداث متزامنة: سيسافرون بينما نعمل.", ex1: "سأعمل الساعة 5 مساءً غدًا.", ex2: "ستدرس عندما تصل.", ex3: "سيسافرون طوال الأسبوع القادم.", ex4: "سينام في منتصف الليل." },
+                    basic: { title: "I. 2. البنية الأساسية", heading: "الصيغة: will be + فعل -ing", desc1: "📘 القاعدة:", desc2: "لجميع الفاعلين: will be + اسم الفاعل.", subjectCol: "الفاعل", conjugationCol: "التصريف", exampleCol: "مثال (عمل)", exI: "سأعمل غدًا.", exYou: "ستعمل الأسبوع القادم.", exHe: "سيعمل في المكتب.", exShe: "ستعمل على مشروع.", exIt: "سيعمل بشكل صحيح.", exWe: "سنعمل معًا.", exThey: "سيعملون طوال اليوم.", negativeTitle: "❌ النفي:", negativeDesc: "نضيف not بين will و be.", negEx1: "لن أعمل غدًا.", negEx2: "لن تعمل في ذلك الوقت.", questionTitle: "❓ السؤال:", questionDesc: "نقلب will والفاعل.", qEx1: "هل ستعمل غدًا؟", qEx2: "هل ستعمل الساعة 5 مساءً؟" },
+                    verbToBe: { title: "I. 3. فعل 'يكون' في المستقبل المستمر", heading: "استخدام 'يكون' كفعل رئيسي", desc1: "📘 ملاحظة:", desc2: "will be being (نادر، للتأكيد على حالة مؤقتة).", subjectCol: "الفاعل", conjugationCol: "التصريف", exampleCol: "مثال", exI: "سأكون حذرًا غدًا.", exYou: "ستكون لطيفًا مع الجميع.", exHe: "سيكون مفيدًا طوال اليوم.", exShe: "ستكون صبورة مع الأطفال.", exIt: "سيكون من الصعب فهمه.", exWe: "سنكون هادئين أثناء الفيلم.", exThey: "سيكونون ودودين مع الطلاب الجدد.", negEx: "لن أكون كسولًا.", qEx: "هل ستكون مفيدًا؟" },
+                    verbToHave: { title: "I. 4. فعل 'يملك' في المستقبل المستمر", heading: "التعبير عن تجارب أو أحداث", desc1: "📘 ملاحظة:", desc2: "will be having = يمر بـ / يشارك في.", subjectCol: "الفاعل", conjugationCol: "التصريف", exampleCol: "مثال", exI: "سأتناول الغداء ظهرًا غدًا.", exYou: "ستقضي وقتًا ممتعًا الأسبوع القادم.", exHe: "سيعاني من مشكلة مع الحاسوب.", exShe: "ستقيم حفلة نهاية الأسبوع القادم.", exIt: "سيكون له تأثير على الجميع.", exWe: "سيكون لدينا اجتماع الساعة 3 مساءً غدًا.", exThey: "سيمرحون على الشاطئ الشهر القادم.", negEx: "لن أستمتع.", qEx: "هل ستقضي وقتًا ممتعًا؟" },
+                    commonVerbs: { title: "I. 5. الأفعال الشائعة في المستقبل المستمر", heading: "جميع الأفعال تتبع نفس النمط", verbCol: "الفعل", ingCol: "صيغة -ing", exampleCol: "مثال", exGo: "سأذهب إلى المدرسة عندما تتصل.", exDo: "سوف يؤدي واجبه المنزلي الساعة 7 مساءً غدًا.", exHave: "ستتناول الإفطار عندما أصل.", exEat: "سنتناول العشاء في ذلك الوقت.", exSee: "سيرون فيلمًا غدًا.", exTake: "سأستقل الحافلة إلى العمل.", extra1: "سأذهب إلى المتجر عندما يبدأ المطر.", extra2: "ستؤدي واجبها المنزلي بعد المدرسة غدًا.", extra3: "سنقضي وقتًا رائعًا في الحفلة الأسبوع القادم." }
+                }
+            }
         };
-        
-        // Correct answers for Type 2 exercises
-        const correctAnswersType2 = {
-            'EH-exercise-type2-fillblank-q1': 'will be reading',     // I will be reading a book at 8 PM tomorrow.
-            'EH-exercise-type2-fillblank-q2': 'will be writing',   // She will be writing a letter when I arrive.
-            'EH-exercise-type2-fillblank-q3': 'will be playing'      // They will be playing soccer in the park tomorrow afternoon.
-        };
-        
-        // Correct answers for Type 3 exercises
-        const correctAnswersType3 = {
-            'EH-exercise-type3-sentenceorder-q1': 'He will be playing soccer tomorrow .',
-            'EH-exercise-type3-sentenceorder-q2': 'We will not be watching TV .',
-            'EH-exercise-type3-sentenceorder-q3': 'Will you studying English tomorrow ?'
-        };
-        
-        // Combined function to check all exercise types
+    </script>
+    <script src="scripts/translation-refraction.js"></script>
+    <script src="scripts/exercise-conjugation.js"></script>
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
+    <script>
+        // Multiple choice exercises
+        const correctAnswersType1 = buildMultipleChoiceExercise({
+            containerId: 'mc-exercises',
+            prefix: 'EH-exercise-type1-possibilities3',
+            questions: [
+                { questionTextKey: 'futureContinuous1.exercises.q1', options: [{ value: 'a', labelKey: 'futureContinuous1.exercises.q1a' }, { value: 'b', labelKey: 'futureContinuous1.exercises.q1b' }, { value: 'c', labelKey: 'futureContinuous1.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'futureContinuous1.exercises.q2', options: [{ value: 'a', labelKey: 'futureContinuous1.exercises.q2a' }, { value: 'b', labelKey: 'futureContinuous1.exercises.q2b' }, { value: 'c', labelKey: 'futureContinuous1.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'futureContinuous1.exercises.q3', options: [{ value: 'a', labelKey: 'futureContinuous1.exercises.q3a' }, { value: 'b', labelKey: 'futureContinuous1.exercises.q3b' }, { value: 'c', labelKey: 'futureContinuous1.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'futureContinuous1.exercises.q4', options: [{ value: 'a', labelKey: 'futureContinuous1.exercises.q4a' }, { value: 'b', labelKey: 'futureContinuous1.exercises.q4b' }, { value: 'c', labelKey: 'futureContinuous1.exercises.q4c' }], correctAnswer: 'a' },
+                { questionTextKey: 'futureContinuous1.exercises.q5', options: [{ value: 'a', labelKey: 'futureContinuous1.exercises.q5a' }, { value: 'b', labelKey: 'futureContinuous1.exercises.q5b' }, { value: 'c', labelKey: 'futureContinuous1.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'futureContinuous1.exercises.q6', options: [{ value: 'a', labelKey: 'futureContinuous1.exercises.q6a' }, { value: 'b', labelKey: 'futureContinuous1.exercises.q6b' }, { value: 'c', labelKey: 'futureContinuous1.exercises.q6c' }], correctAnswer: 'b' }
+            ]
+        });
+    </script>
+    <script>
+        // Fill-in-the-blank exercises
+        correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises',
+            prefix: 'fill',
+            questions: [
+                { questionTextKey: 'futureContinuous1.exercises.q7', answers: ['will be reading'] },
+                { questionTextKey: 'futureContinuous1.exercises.q8', answers: ['will be writing'] },
+                { questionTextKey: 'futureContinuous1.exercises.q9', answers: ['will be playing'] }
+            ]
+        });
+    </script>
+    <script>
+        // Sentence ordering exercises
+        const correctAnswersType3 = buildSentenceOrderingExercise({
+            containerId: 'order-exercises',
+            prefix: 'order',
+            questions: [
+                { questionTextKey: 'futureContinuous1.exercises.q10', words: ['He', 'will be playing', 'soccer', 'tomorrow', '.'], correctSentence: 'He will be playing soccer tomorrow .' },
+                { questionTextKey: 'futureContinuous1.exercises.q11', words: ['We', 'will not be', 'watching', 'TV', '.'], correctSentence: 'We will not be watching TV .' },
+                { questionTextKey: 'futureContinuous1.exercises.q12', words: ['Will', 'you', 'be', 'studying', 'English', 'tomorrow', '?'], correctSentence: 'Will you be studying English tomorrow ?' }
+            ]
+        });
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
-            
-            // Check Type 1 exercises
-            const type1Score = ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            totalScore += type1Score;
-            totalQuestions += Object.keys(correctAnswersType1).length;
-            
-            // Check Type 2 exercises
-            const type2Score = ExerciseType2FillBlankCheckAnswers(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            totalScore += type2Score;
-            totalQuestions += Object.keys(correctAnswersType2).length;
-            
-            // Check Type 3 exercises
-            const type3Score = ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            totalScore += type3Score;
-            totalQuestions += Object.keys(correctAnswersType3).length;
-            
-            // Update combined score display
-            const scoreValue = document.getElementById('EH-exercise-type1-possibilities3-score-value');
-            const scoreFeedback = document.getElementById('EH-exercise-type1-possibilities3-score-feedback');
-            
-            if (scoreValue) scoreValue.textContent = `${totalScore}/${totalQuestions}`;
-            
-            if (scoreFeedback) {
-                if (totalScore === totalQuestions) {
-                    scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
-                } else if (totalScore >= totalQuestions * 0.7) {
-                    scoreFeedback.textContent = 'Good job! You did well on this exercise.';
-                } else if (totalScore >= totalQuestions * 0.5) {
-                    scoreFeedback.textContent = 'Not bad, but you might want to review the material again.';
-                } else {
-                    scoreFeedback.textContent = 'You might want to review the material and try again.';
-                }
+            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+            totalQuestions += 6;
+            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+            totalQuestions += 3;
+            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+            totalQuestions += 3;
+            const scoreEl = document.getElementById('score-value');
+            const fbEl = document.getElementById('score-feedback');
+            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+            if (fbEl) {
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! You mastered the Future Continuous basics!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit the structure.';
+                else fbEl.textContent = 'Review the lesson and try again.';
             }
-            
-            return totalScore;
+            document.getElementById('score-display').style.display = 'block';
+            if (typeof EHScoreEffects !== 'undefined' && EHScoreEffects.show) {
+                EHScoreEffects.show(totalScore, totalQuestions);
+            }
         }
-        
-        // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
-            // Set up answer checking for all exercise types
-            ExerciseType1Possibilities3Init(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            ExerciseType2FillBlankInit(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            ExerciseType3SentenceOrderInit(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            
-            // Replace the default check button with our combined function
-            const checkButton = document.getElementById('EH-exercise-type1-possibilities3-check-answers');
-            if (checkButton) {
-                checkButton.addEventListener('click', checkAllExercises);
-            }
+            if (typeof ExerciseType2FillBlankInit === 'function') ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+            if (typeof ExerciseType3SentenceOrderInit === 'function') ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+            document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
+        (function() {
+            function applyHtmlI18n() {
+                const lang = document.getElementById('language-selector').value;
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                    if (translation) el.textContent = translation;
+                });
+            }
+            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+        })();
     </script>
 </body>
 </html>

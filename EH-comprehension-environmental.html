@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Challenges - Comprehension Club</title>
+    <link rel="stylesheet" href="styles/comprehension.css">
+    <style>
+        :root {
+            /* Environmental theme — teal / forest green palette */
+            --primary-color: #2e7d64;
+            --primary-light: #d0ece5;
+            --primary-dark: #1f5e4a;
+            --bg-body: linear-gradient(135deg, #e8f3f0, #f0faf5, #e0f2e9);
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="EH-comprehension-body">
+
+    <!-- Language Selector -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #2e7d64; background: white; color: #333; font-weight: bold;">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n-comprehension="common.siteName">English Hub</span>
+    </div>
+
+    <div class="EH-comprehension-lesson-container">
+        <div class="EH-comprehension-lesson-content">
+            <!-- Lesson Header -->
+            <div class="EH-comprehension-lesson-header">
+                <h1 class="EH-comprehension-lesson-title" data-i18n-comprehension="environmentalLesson.title">Environmental Challenges</h1>
+                <p class="EH-comprehension-lesson-subtitle" data-i18n-comprehension="environmentalLesson.subtitle">Intermediate Level Reading Comprehension</p>
+                <div class="EH-comprehension-lesson-level" data-i18n-comprehension="environmentalLesson.level">Level: B1-B2 (Intermediate)</div>
+            </div>
+
+            <!-- Reading Passage -->
+            <div class="EH-comprehension-passage-container">
+                <div class="EH-comprehension-passage-header">
+                    <h2 class="EH-comprehension-passage-title" data-i18n-comprehension="environmentalLesson.passageTitle">Reading Passage</h2>
+                    <div class="EH-comprehension-reading-time" data-i18n-comprehension="environmentalLesson.readingTime">Reading Time: 4-5 minutes</div>
+                </div>
+
+                <div class="EH-comprehension-passage-text">
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="environmentalLesson.passage.p1">Our planet is facing serious environmental challenges. Climate change, pollution, deforestation, and loss of biodiversity are problems that affect everyone. Scientists warn that if we do not take action soon, the consequences will be severe. However, many people and organizations around the world are working to find solutions.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="environmentalLesson.passage.p2">One of the biggest challenges is climate change. The Earth's average temperature is rising because of greenhouse gases like carbon dioxide. These gases come from burning fossil fuels such as coal, oil, and natural gas. Cars, factories, and power plants release large amounts of these gases. As a result, ice caps are melting, sea levels are rising, and weather is becoming more extreme. Some areas experience terrible droughts, while others face floods and storms.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="environmentalLesson.passage.p3">Another major problem is pollution. Plastic waste has become a huge issue, especially in our oceans. Millions of tons of plastic enter the sea every year. Fish and other sea animals eat the plastic, which harms them and can also enter our food chain. Air pollution from factories and vehicles causes breathing problems and other health issues. Many cities have days when the air is unsafe to breathe.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="environmentalLesson.passage.p4">Deforestation is also a serious concern. Forests are being cut down for farmland, wood, and roads. When forests disappear, animals lose their homes. This leads to a loss of biodiversity. Biodiversity means the variety of living things on Earth. Many species of plants and animals are now endangered, and some have already become extinct. Forests also help absorb carbon dioxide, so cutting them down makes climate change worse.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="environmentalLesson.passage.p5">Fortunately, there are many solutions. Renewable energy sources like solar, wind, and hydroelectric power do not produce greenhouse gases. Many countries are building more wind farms and solar panels. Recycling reduces the amount of waste that goes to landfills. Using less plastic, planting trees, and protecting natural areas also help. Individuals can make a difference by saving energy at home, using public transport, and buying products that are environmentally friendly.</p>
+                    
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="environmentalLesson.passage.p6">Governments also play an important role. Some have introduced laws to limit pollution and protect forests. International agreements like the Paris Agreement bring countries together to fight climate change. Every person, from a child to a world leader, can take steps to protect our planet. The future of the Earth depends on the choices we make today.</p>
+                </div>
+
+                <!-- Vocabulary Preview -->
+                <div class="EH-comprehension-vocabulary-preview">
+                    <h3 class="EH-comprehension-vocabulary-title" data-i18n-comprehension="environmentalLesson.vocabularyPreview">Vocabulary Preview</h3>
+                    <div class="EH-comprehension-vocabulary-list">
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="environmentalLesson.vocab.climateChange">climate change</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="environmentalLesson.vocab.greenhouseGases">greenhouse gases</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="environmentalLesson.vocab.deforestation">deforestation</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="environmentalLesson.vocab.biodiversity">biodiversity</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="environmentalLesson.vocab.renewableEnergy">renewable energy</span>
+                    </div>
+                </div>
+
+                <!-- Audio Player -->
+                <div class="EH-comprehension-audio-player">
+                    <h3 class="EH-comprehension-audio-title" data-i18n-comprehension="environmentalLesson.listenTitle">Listen to the Story</h3>
+
+                    <div class="EH-comprehension-audio-controls">
+                        <button class="EH-comprehension-audio-btn play" id="EH-environmental-play-btn" title="Play">
+                            <span class="EH-comprehension-audio-icon">▶</span>
+                            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.play">Play</span>
+                        </button>
+                        <button class="EH-comprehension-audio-btn" id="EH-environmental-pause-btn" title="Pause">
+                            <span class="EH-comprehension-audio-icon">⏸</span>
+                            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.pause">Pause</span>
+                        </button>
+                        <button class="EH-comprehension-audio-btn" id="EH-environmental-stop-btn" title="Stop">
+                            <span class="EH-comprehension-audio-icon">⏹</span>
+                            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.stop">Stop</span>
+                        </button>
+
+                        <div class="EH-audio-volume-control">
+                            <button class="EH-comprehension-audio-btn volume" id="EH-environmental-volume-btn" title="Volume">
+                                <span class="EH-comprehension-audio-icon">🔊</span>
+                                <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.volume">Volume</span>
+                            </button>
+                            <div class="EH-audio-volume-slider-container">
+                                <input type="range" class="EH-audio-volume-slider" id="EH-environmental-volume-slider" min="0" max="1" step="0.1" value="1">
+                            </div>
+                        </div>
+
+                        <div class="EH-audio-speed-control">
+                            <button class="EH-comprehension-audio-btn speed" id="EH-environmental-speed-btn" title="Playback Speed">
+                                <span class="EH-comprehension-audio-icon">1x</span>
+                                <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.speed">Speed</span>
+                            </button>
+                            <div class="EH-audio-speed-options" id="EH-environmental-speed-options">
+                                <button class="EH-audio-speed-option" data-speed="0.5">0.5x</button>
+                                <button class="EH-audio-speed-option" data-speed="0.75">0.75x</button>
+                                <button class="EH-audio-speed-option" data-speed="1" data-selected="true">1x</button>
+                                <button class="EH-audio-speed-option" data-speed="1.25">1.25x</button>
+                                <button class="EH-audio-speed-option" data-speed="1.5">1.5x</button>
+                                <button class="EH-audio-speed-option" data-speed="2">2x</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="EH-comprehension-audio-progress">
+                        <div class="EH-comprehension-audio-progress-background" id="EH-environmental-progress-background">
+                            <div class="EH-comprehension-audio-progress-bar" id="EH-environmental-progress-bar"></div>
+                            <div class="EH-comprehension-audio-progress-thumb" id="EH-environmental-progress-thumb"></div>
+                        </div>
+                        <input type="range" class="EH-comprehension-audio-progress-slider" id="EH-environmental-progress-slider" min="0" max="100" value="0" step="0.1">
+                    </div>
+
+                    <div style="text-align: center; color: #666; font-size: 0.9rem;" id="EH-environmental-time-display">0:00 / 0:00</div>
+                </div>
+            </div>
+
+            <!-- Comprehension Questions (Multiple Choice) -->
+            <div class="EH-comprehension-questions-container">
+                <h2 class="EH-comprehension-questions-title" data-i18n-comprehension="environmentalLesson.questionsTitle">Comprehension Questions</h2>
+
+                <!-- Question 1 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">1</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="environmentalLesson.question1">What is causing the Earth's average temperature to rise?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q1-a" name="environmental-q1" value="a"><label for="environmental-q1-a" data-i18n-comprehension="environmentalLesson.q1a">Too many trees</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q1-b" name="environmental-q1" value="b"><label for="environmental-q1-b" data-i18n-comprehension="environmentalLesson.q1b">Greenhouse gases from burning fossil fuels</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q1-c" name="environmental-q1" value="c"><label for="environmental-q1-c" data-i18n-comprehension="environmentalLesson.q1c">Ocean currents</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="environmental-q1-feedback"></div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">2</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="environmentalLesson.question2">What happens when ice caps melt?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q2-a" name="environmental-q2" value="a"><label for="environmental-q2-a" data-i18n-comprehension="environmentalLesson.q2a">Sea levels rise</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q2-b" name="environmental-q2" value="b"><label for="environmental-q2-b" data-i18n-comprehension="environmentalLesson.q2b">The weather becomes colder</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q2-c" name="environmental-q2" value="c"><label for="environmental-q2-c" data-i18n-comprehension="environmentalLesson.q2c">Deserts disappear</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="environmental-q2-feedback"></div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">3</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="environmentalLesson.question3">How does plastic waste affect sea animals?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q3-a" name="environmental-q3" value="a"><label for="environmental-q3-a" data-i18n-comprehension="environmentalLesson.q3a">It helps them find food</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q3-b" name="environmental-q3" value="b"><label for="environmental-q3-b" data-i18n-comprehension="environmentalLesson.q3b">They eat it, which harms them</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q3-c" name="environmental-q3" value="c"><label for="environmental-q3-c" data-i18n-comprehension="environmentalLesson.q3c">It makes the water cleaner</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="environmental-q3-feedback"></div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">4</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="environmentalLesson.question4">What is deforestation?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q4-a" name="environmental-q4" value="a"><label for="environmental-q4-a" data-i18n-comprehension="environmentalLesson.q4a">Planting new forests</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q4-b" name="environmental-q4" value="b"><label for="environmental-q4-b" data-i18n-comprehension="environmentalLesson.q4b">Cutting down forests</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q4-c" name="environmental-q4" value="c"><label for="environmental-q4-c" data-i18n-comprehension="environmentalLesson.q4c">Protecting wild animals</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="environmental-q4-feedback"></div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">5</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="environmentalLesson.question5">Why does deforestation make climate change worse?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q5-a" name="environmental-q5" value="a"><label for="environmental-q5-a" data-i18n-comprehension="environmentalLesson.q5a">Trees absorb carbon dioxide</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q5-b" name="environmental-q5" value="b"><label for="environmental-q5-b" data-i18n-comprehension="environmentalLesson.q5b">Trees produce greenhouse gases</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q5-c" name="environmental-q5" value="c"><label for="environmental-q5-c" data-i18n-comprehension="environmentalLesson.q5c">Forests cool the Earth too much</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="environmental-q5-feedback"></div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">6</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="environmentalLesson.question6">Which of these is an example of renewable energy?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q6-a" name="environmental-q6" value="a"><label for="environmental-q6-a" data-i18n-comprehension="environmentalLesson.q6a">Coal</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q6-b" name="environmental-q6" value="b"><label for="environmental-q6-b" data-i18n-comprehension="environmentalLesson.q6b">Natural gas</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q6-c" name="environmental-q6" value="c"><label for="environmental-q6-c" data-i18n-comprehension="environmentalLesson.q6c">Solar power</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="environmental-q6-feedback"></div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">7</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="environmentalLesson.question7">What is the main message of the passage?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q7-a" name="environmental-q7" value="a"><label for="environmental-q7-a" data-i18n-comprehension="environmentalLesson.q7a">Environmental problems are too big to solve</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q7-b" name="environmental-q7" value="b"><label for="environmental-q7-b" data-i18n-comprehension="environmentalLesson.q7b">There are serious challenges, but also solutions that individuals and governments can take</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="environmental-q7-c" name="environmental-q7" value="c"><label for="environmental-q7-c" data-i18n-comprehension="environmentalLesson.q7c">Only world leaders can help the environment</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="environmental-q7-feedback"></div>
+                </div>
+            </div>
+
+            <!-- True/False Exercise -->
+            <div class="EH-comprehension-true-false-container">
+                <h2 class="EH-comprehension-true-false-title" data-i18n-comprehension="environmentalLesson.trueFalseTitle">True or False</h2>
+
+                <div class="EH-comprehension-true-false-question" data-lesson="environmental">
+                    <p class="EH-comprehension-true-false-statement" data-i18n-comprehension="environmentalLesson.tf1.statement">Air pollution can cause breathing problems.</p>
+                    <div class="EH-comprehension-true-false-options">
+                        <button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="environmental" data-i18n-comprehension="common.false">False</button>
+                        <button class="EH-comprehension-true-false-option" data-answer="true" data-lesson="environmental" data-i18n-comprehension="common.true">True</button>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="tf1-feedback"></div>
+                </div>
+
+                <div class="EH-comprehension-true-false-question" data-lesson="environmental">
+                    <p class="EH-comprehension-true-false-statement" data-i18n-comprehension="environmentalLesson.tf2.statement">Cutting down forests helps increase biodiversity.</p>
+                    <div class="EH-comprehension-true-false-options">
+                        <button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="environmental" data-i18n-comprehension="common.false">False</button>
+                        <button class="EH-comprehension-true-false-option" data-answer="true" data-lesson="environmental" data-i18n-comprehension="common.true">True</button>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="tf2-feedback"></div>
+                </div>
+
+                <div class="EH-comprehension-true-false-question" data-lesson="environmental">
+                    <p class="EH-comprehension-true-false-statement" data-i18n-comprehension="environmentalLesson.tf3.statement">The Paris Agreement is an international agreement to fight climate change.</p>
+                    <div class="EH-comprehension-true-false-options">
+                        <button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="environmental" data-i18n-comprehension="common.false">False</button>
+                        <button class="EH-comprehension-true-false-option" data-answer="true" data-lesson="environmental" data-i18n-comprehension="common.true">True</button>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="tf3-feedback"></div>
+                </div>
+            </div>
+
+            <!-- Fill in the Blanks Exercise -->
+            <div class="EH-comprehension-fill-blanks-container">
+                <h2 class="EH-comprehension-fill-blanks-title" data-i18n-comprehension="environmentalLesson.fillBlanksTitle">Fill in the Blanks</h2>
+
+                <!-- Fill Exercise A -->
+                <div class="EH-comprehension-fill-blanks-question">
+                    <p class="EH-comprehension-fill-blanks-text" data-i18n-comprehension="environmentalLesson.fill1.text">Burning fossil fuels releases _________ gases like carbon dioxide. These gases trap heat and cause the Earth's _________ to rise. As a result, we see more extreme weather events such as droughts and _________.</p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill1-1" data-lesson="environmental" placeholder="Answer 1">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill1-2" data-lesson="environmental" placeholder="Answer 2">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill1-3" data-lesson="environmental" placeholder="Answer 3">
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="fill1-feedback"></div>
+                </div>
+
+                <!-- Fill Exercise B -->
+                <div class="EH-comprehension-fill-blanks-question">
+                    <p class="EH-comprehension-fill-blanks-text" data-i18n-comprehension="environmentalLesson.fill2.text">Forests are important because they absorb _________ and provide homes for animals. When we cut down forests, we lose _________ , which means the variety of living things. We can help by using less plastic, planting _________, and using renewable energy.</p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill2-1" placeholder="Answer 1">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill2-2" placeholder="Answer 2">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill2-3" placeholder="Answer 3">
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="fill2-feedback"></div>
+                </div>
+            </div>
+
+            <!-- Sentence Ordering Exercise -->
+            <div class="EH-comprehension-ordering-container">
+                <h2 class="EH-comprehension-ordering-title" data-i18n-comprehension="environmentalLesson.orderingTitle">Put the Sentences in Order</h2>
+                <p class="EH-comprehension-ordering-instructions" data-i18n-comprehension="environmentalLesson.orderingInstructions">Drag and drop the sentences to show the correct order of events:</p>
+
+                <div class="EH-comprehension-ordering-list" id="ordering-list">
+                    <!-- Shuffled order (data-order values indicate correct sequence 1..6) -->
+                    <div class="EH-comprehension-ordering-item" data-order="1" data-i18n-comprehension="environmentalLesson.order1">
+                        <div class="EH-comprehension-ordering-number">1</div>
+                        <div class="EH-comprehension-ordering-text">Climate change is caused by greenhouse gases from burning fossil fuels.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="3" data-i18n-comprehension="environmentalLesson.order2">
+                        <div class="EH-comprehension-ordering-number">2</div>
+                        <div class="EH-comprehension-ordering-text">Many countries are building wind farms and solar panels to use renewable energy.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="6" data-i18n-comprehension="environmentalLesson.order3">
+                        <div class="EH-comprehension-ordering-number">3</div>
+                        <div class="EH-comprehension-ordering-text">The future of the Earth depends on the choices we make today.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="4" data-i18n-comprehension="environmentalLesson.order4">
+                        <div class="EH-comprehension-ordering-number">4</div>
+                        <div class="EH-comprehension-ordering-text">Individuals can also help by saving energy and using public transport.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="2" data-i18n-comprehension="environmentalLesson.order5">
+                        <div class="EH-comprehension-ordering-number">5</div>
+                        <div class="EH-comprehension-ordering-text">Deforestation makes the problem worse because trees absorb carbon dioxide.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="5" data-i18n-comprehension="environmentalLesson.order6">
+                        <div class="EH-comprehension-ordering-number">6</div>
+                        <div class="EH-comprehension-ordering-text">Governments have introduced laws and international agreements to protect the planet.</div>
+                    </div>
+                </div>
+                <div class="EH-comprehension-answer-feedback" id="ordering-feedback"></div>
+            </div>
+
+            <!-- Check All Exercises Button -->
+            <button class="EH-comprehension-check-all-exercises" id="EH-environmental-check-all" data-i18n-comprehension="environmentalLesson.checkAllExercises">Check All Exercises</button>
+
+            <!-- Score Display -->
+            <div class="EH-comprehension-score-display" id="EH-environmental-score-display">
+                <h3 class="EH-comprehension-score-title" data-i18n-comprehension="environmentalLesson.yourScore">Your Score</h3>
+                <div class="EH-comprehension-score-value" id="EH-environmental-score-value">0/20</div>
+                <p class="EH-comprehension-score-feedback" id="EH-environmental-score-feedback" data-i18n-comprehension="environmentalLesson.scoreFeedback.default">Check your answers to see your score!</p>
+            </div>
+
+            <!-- Vocabulary Building Section -->
+            <div class="EH-comprehension-vocabulary-section">
+                <h2 class="EH-comprehension-vocabulary-section-title" data-i18n-comprehension="environmentalLesson.vocabularyTitle">Vocabulary Building</h2>
+                <div class="EH-comprehension-vocabulary-grid">
+                    <!-- Card 1: Climate change -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="environmentalLesson.vocab1.word">Climate change</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="environmentalLesson.vocab1.pronunciation">/ˈklaɪmət tʃeɪndʒ/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="environmentalLesson.vocab1.definition">Long-term changes in temperature and weather patterns</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="environmentalLesson.vocab1.example">"Climate change is causing more frequent heatwaves and storms."</div>
+                    </div>
+                    <!-- Card 2: Greenhouse gases -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="environmentalLesson.vocab2.word">Greenhouse gases</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="environmentalLesson.vocab2.pronunciation">/ˈɡriːnhaʊs ˈɡæsɪz/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="environmentalLesson.vocab2.definition">Gases that trap heat in the atmosphere, causing global warming</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="environmentalLesson.vocab2.example">"Carbon dioxide and methane are two important greenhouse gases."</div>
+                    </div>
+                    <!-- Card 3: Deforestation -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="environmentalLesson.vocab3.word">Deforestation</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="environmentalLesson.vocab3.pronunciation">/diːˌfɒrɪˈsteɪʃən/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="environmentalLesson.vocab3.definition">The action of clearing a wide area of trees</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="environmentalLesson.vocab3.example">"Deforestation in the Amazon rainforest has increased dramatically."</div>
+                    </div>
+                    <!-- Card 4: Biodiversity -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="environmentalLesson.vocab4.word">Biodiversity</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="environmentalLesson.vocab4.pronunciation">/ˌbaɪəʊdaɪˈvɜːsəti/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="environmentalLesson.vocab4.definition">The variety of plant and animal life in a particular habitat</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="environmentalLesson.vocab4.example">"Coral reefs are known for their rich biodiversity."</div>
+                    </div>
+                    <!-- Card 5: Renewable energy -->
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="environmentalLesson.vocab5.word">Renewable energy</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="environmentalLesson.vocab5.pronunciation">/rɪˈnjuːəbl ˈenədʒi/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="environmentalLesson.vocab5.definition">Energy from sources that are not depleted when used, such as wind or solar</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="environmentalLesson.vocab5.example">"Switching to renewable energy can reduce air pollution."</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="EH-comprehension-navigation">
+                <button class="EH-comprehension-nav-button back" onclick="window.location.href='EH-general-comprehension-club.html'">
+                    ← <span data-i18n-comprehension="environmentalLesson.backToClub">Back to Comprehension Club</span>
+                </button>
+                <!-- <button class="EH-comprehension-nav-button" onclick="window.location.href='EH-general-comprehension-club.html'">
+                    <span data-i18n-comprehension="environmentalLesson.nextLesson">Back to Comprehension Club</span> →
+                </button> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Common Footer -->
+    <footer class="EH-common-footer">
+        <div class="EH-common-footer-content">
+            <div class="EH-common-footer-developer" data-i18n-comprehension="footer.developer">Developer: Mejri Ziad</div>
+            <div class="EH-common-footer-links">
+                <a href="policy.html" data-i18n-comprehension="footer.privacy">Privacy Policy</a>
+                <a href="terms.html" data-i18n-comprehension="footer.terms">Terms of Service</a>
+                <a href="contact.html" data-i18n-comprehension="footer.contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- i18n translations and exercise scripts -->
+    <script src="scripts/translation-comprehension.js"></script>
+    <script src="scripts/translations/i18n_comprehension_en.js"></script>
+    <script src="scripts/translations/i18n_comprehension_fr.js"></script>
+    <script src="scripts/translations/i18n_comprehension_ar.js"></script>
+    <script src="scripts/comprehension-exercises.js"></script>
+
+    <script>
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize translation system for comprehension pages
+            initTranslationSystem('comprehension', 'en', 'language-selector');
+
+            // Register the environmental lesson configuration
+            ComprehensionExercises.registerLesson('environmental', {
+                mcQuestions: 7,
+                audioPath: 'assets/audio/lessons/comprehension/environmental-story.mp3',
+                correctAnswers: {
+                    // Multiple choice answers
+                    'environmental-q1': 'b',
+                    'environmental-q2': 'a',
+                    'environmental-q3': 'b',
+                    'environmental-q4': 'b',
+                    'environmental-q5': 'a',
+                    'environmental-q6': 'c',
+                    'environmental-q7': 'b',
+                    // True/False
+                    'tf1': 'true',
+                    'tf2': 'false',
+                    'tf3': 'true',
+                    // Sentence ordering (indexes of items in correct order: 1,5,2,4,6,3)
+                    'ordering': ['1', '5', '2', '4', '6', '3']
+                },
+                fillBlanks: [
+                    {
+                        ids: ['fill1-1', 'fill1-2', 'fill1-3'],
+                        answers: ['greenhouse', 'temperature', 'floods'],
+                        feedbackId: 'fill1-feedback'
+                    },
+                    {
+                        ids: ['fill2-1', 'fill2-2', 'fill2-3'],
+                        answers: ['carbon dioxide', 'biodiversity', 'trees'],
+                        feedbackId: 'fill2-feedback'
+                    }
+                ]
+            });
+
+            // Initialize exercises for environmental lesson
+            ComprehensionExercises.initLesson('environmental');
+        });
+    </script>
+</body>
+</html>

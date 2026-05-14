@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Perfect II: Questions & Adverbs - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #f7e9cd, #eedfc0, #e2d0aa, #d4bd8c);
+            --content-bg: #fefaf2;
+            --card-bg: #ffffff;
+            --subsection-bg: #fef5e8;
+            --rule-bg: #fbefdc;
+            --example-bg: #f7e9d0;
+            --table-stripe: #fdf6ea;
+            --title-color: #6b4c2a;
+            --text-color: #4a3824;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #c48a3c;
+            --primary-hover: #a5722e;
+            --primary-light: #d69e52;
+            --accent: #c48a3c;
+            --exercise-number-gradient: linear-gradient(135deg, #c48a3c, #a06e2a);
+            --rule-border: #c48a3c;
+            --example-border: #c48a3c;
+            --nav-btn-bg: #c48a3c;
+            --nav-btn-hover: #a06e2a;
+            --nav-back-btn-bg: #d69e52;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #c48a3c;
+            --refract-divider-color: #dbbc8c;
+            --refract-translation-bg: #f5e8d4;
+            --refract-translation-border: #c48a3c;
+            --refract-english-color: #4a3824;
+            --section-divider: #e9dbbc;
+            --card-border: #e9dbbc;
+            --input-border: #dbc8a8;
+            --dashed-border: #dbc8a8;
+            --table-border: #e0d0b0;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #f2ece0;
+            --neutral-color: #6b5a42;
+            --neutral-border: #dbc8a8;
+            --empty-input-border: #cdb894;
+            --empty-input-bg: #fef9f0;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #c48a3c;
+            --language-selector-color: #4a3824;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #5c4018, #6e4e20, #805c28, #926a30);
+            --content-bg: #3e2e1c;
+            --card-bg: #4d3a24;
+            --subsection-bg: #4d3a24;
+            --rule-bg: #3e2e1c;
+            --example-bg: #3e2e1c;
+            --table-stripe: #463320;
+            --title-color: #f5dca8;
+            --text-color: #f2e2c8;
+            --header-text: #f2e2c8;
+            --header-text-light: #d4bc94;
+            --primary: #e0a453;
+            --primary-hover: #ecb46a;
+            --primary-light: #e0a453;
+            --accent: #e0a453;
+            --rule-border: #e0a453;
+            --example-border: #e0a453;
+            --exercise-number-gradient: linear-gradient(135deg, #e0a453, #c48a3c);
+            --nav-btn-bg: #e0a453;
+            --nav-btn-hover: #c48a3c;
+            --nav-back-btn-bg: #ecb46a;
+            --nav-back-btn-color: #2a1e0c;
+            --nav-back-btn-hover: #e0a453;
+            --refract-divider-color: #dbbc8c;
+            --refract-translation-bg: #5c482c;
+            --refract-translation-border: #dbbc8c;
+            --refract-english-color: #f0dcc0;
+            --section-divider: #5c482c;
+            --card-border: #5c482c;
+            --input-border: #6e5838;
+            --dashed-border: #6e5838;
+            --table-border: #5e4c30;
+            --white: #f0e0c8;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #4a3a24;
+            --neutral-color: #d4bc94;
+            --neutral-border: #6e5838;
+            --empty-input-border: #6e5838;
+            --empty-input-bg: #3e2e1c;
+            --language-selector-bg: #4d3a24;
+            --language-selector-border: #e0a453;
+            --language-selector-color: #f2e2c8;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+    </div>
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+    </div>
+    <div class="EH-conjugation-container">
+        <header class="EH-conjugation-header">
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="pastPerfect2.title.line1">Past Perfect Tense: II:</div>
+                <div class="EH-conjugation-title-line" data-i18n="pastPerfect2.title.line2">Questions & Adverbs</div>
+                <div class="EH-conjugation-subtitle" data-i18n="pastPerfect2.title.line3">Questions and time expressions in the past perfect.</div>
+                <div class="EH-conjugation-subtitle" data-i18n="pastPerfect2.title.line4">lesson: 2/3</div>
+            </div>
+        </header>
+        <div class="EH-conjugation-content">
+            <!-- Section 1: Forming Questions -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect2.questions.title">II. 1. Forming Questions in Past Perfect</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">❓</span>
+                        <span data-i18n="pastPerfect2.questions.heading">Basic question structure</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect2.questions.desc1">📘 Rule:</div>
+                        <p data-i18n="pastPerfect2.questions.desc2">In the past perfect tense, we form questions by inverting the subject and auxiliary verb "had". The main verb remains in the past participle form. Types: Yes/No questions, Wh- questions, and negative questions.</p>
+                    </div>
+                    <table class="EH-conjugation-table">
+                        <thead><tr><th data-i18n="pastPerfect2.questions.typeCol">Question Type</th><th data-i18n="pastPerfect2.questions.structureCol">Structure</th><th data-i18n="pastPerfect2.questions.exampleCol">Example</th></tr></thead>
+                        <tbody>
+                            <tr><td data-i18n="pastPerfect2.questions.yesNo">Yes/No</td><td data-i18n="pastPerfect2.questions.structYesNo">Had + subject + past participle?</td><td data-i18n="pastPerfect2.questions.exYesNo">Had you finished your work?</td></tr>
+                            <tr><td data-i18n="pastPerfect2.questions.wh">Wh-</td><td data-i18n="pastPerfect2.questions.structWh">Wh- word + had + subject + past participle?</td><td data-i18n="pastPerfect2.questions.exWh">What had she done?</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Section 2: Questions with To Be -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect2.toBe.title">II. 2. Questions with "To Be" in Past Perfect</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🔍</span>
+                        <span data-i18n="pastPerfect2.toBe.heading">Using had been in questions</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect2.toBe.formula">Formula: Had + Subject + Been + ...?</div>
+                        <p data-i18n="pastPerfect2.toBe.desc">Example: Had I been to London before? / Where had you been before the meeting?</p>
+                    </div>
+                    <table class="EH-conjugation-table">
+                        <thead><tr><th data-i18n="pastPerfect2.toBe.subjectCol">Subject</th><th data-i18n="pastPerfect2.toBe.statementCol">Statement</th><th data-i18n="pastPerfect2.toBe.questionCol">Question</th></tr></thead>
+                        <tbody>
+                            <tr><td>I</td><td data-i18n="pastPerfect2.toBe.statI">I had been to London before.</td><td data-i18n="pastPerfect2.toBe.qI">Had I been to London before?</td></tr>
+                            <tr><td>She</td><td data-i18n="pastPerfect2.toBe.statShe">She had been a teacher.</td><td data-i18n="pastPerfect2.toBe.qShe">Had she been a teacher?</td></tr>
+                            <tr><td>They</td><td data-i18n="pastPerfect2.toBe.statThey">They had been married since 2010.</td><td data-i18n="pastPerfect2.toBe.qThey">Had they been married since 2010?</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Section 3: Questions with To Have -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect2.toHave.title">II. 3. Questions with "To Have" in Past Perfect</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🛠️</span>
+                        <span data-i18n="pastPerfect2.toHave.heading">Had + subject + had + ...?</span>
+                    </h3>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect2.toHave.ex1">Had I had breakfast? (Yes/No)</div>
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect2.toHave.ex2">What had you had for breakfast? (Wh-)</div>
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect2.toHave.ex3">How many interviews had they had?</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 4: Time Expressions -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect2.timeExpr.title">II. 4. Time Expressions in Past Perfect</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">⏱️</span>
+                        <span data-i18n="pastPerfect2.timeExpr.heading">Already, just, never, ever, before, by the time</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect2.timeExpr.placement">Placement rules:</div>
+                        <p data-i18n="pastPerfect2.timeExpr.desc">Adverbs like already, just, never go after "had" but before the past participle. "Before" and "by the time" introduce time clauses.</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect2.timeExpr.ex1">I had already finished when he arrived.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect2.timeExpr.ex2">She had just left.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect2.timeExpr.ex3">By the time we arrived, they had left.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercises -->
+            <div class="EH-conjugation-section EH-exercise-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect2.exercises.title">Practice: Questions, Adverbs & Time Expressions</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+                <div class="EH-exercise-container" id="mc-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+                <div class="EH-exercise-container" id="fill-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+                <div class="EH-exercise-container" id="order-exercises"></div>
+                <div class="EH-exercise-type1-possibilities3-answers-control">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
+                        <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.I18N = {
+            en: {
+                common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                pastPerfect2: {
+                    title: { line1: "Past Perfect Tense: II:", line2: "Questions & Adverbs", line3: "Questions and time expressions in the past perfect.", line4: "lesson: 2/3" },
+                    questions: { title: "II. 1. Forming Questions in Past Perfect", heading: "Basic question structure", desc1: "📘 Rule:", desc2: "In the past perfect tense, we form questions by inverting the subject and auxiliary verb 'had'. The main verb remains in the past participle form.", typeCol: "Question Type", structureCol: "Structure", exampleCol: "Example", yesNo: "Yes/No", structYesNo: "Had + subject + past participle?", exYesNo: "Had you finished your work?", wh: "Wh-", structWh: "Wh- word + had + subject + past participle?", exWh: "What had she done?" },
+                    toBe: { title: "II. 2. Questions with 'To Be' in Past Perfect", heading: "Using had been in questions", formula: "Formula: Had + Subject + Been + ...?", desc: "Example: Had I been to London before? / Where had you been before the meeting?", subjectCol: "Subject", statementCol: "Statement", questionCol: "Question", statI: "I had been to London before.", qI: "Had I been to London before?", statShe: "She had been a teacher.", qShe: "Had she been a teacher?", statThey: "They had been married since 2010.", qThey: "Had they been married since 2010?" },
+                    toHave: { title: "II. 3. Questions with 'To Have' in Past Perfect", heading: "Had + subject + had + ...?", ex1: "Had I had breakfast? (Yes/No)", ex2: "What had you had for breakfast? (Wh-)", ex3: "How many interviews had they had?" },
+                    timeExpr: { title: "II. 4. Time Expressions in Past Perfect", heading: "Already, just, never, ever, before, by the time", placement: "Placement rules:", desc: "Adverbs like already, just, never go after 'had' but before the past participle. 'Before' and 'by the time' introduce time clauses.", ex1: "I had already finished when he arrived.", ex2: "She had just left.", ex3: "By the time we arrived, they had left." },
+                    exercises: {
+                        title: "Practice: Questions, Adverbs & Time Expressions",
+                        q1: "______ you finished your work before he arrived?", q1a: "Did", q1b: "Had", q1c: "Have",
+                        q2: "______ she been to Paris before?", q2a: "Has", q2b: "Had", q2c: "Was",
+                        q3: "______ they had breakfast before leaving?", q3a: "Did", q3b: "Had", q3c: "Have",
+                        q4: "She ______ visited Paris. (before)", q4a: "had before visited", q4b: "had visited before", q4c: "before had visited",
+                        q5: "We had met ______.", q5a: "before", q5b: "now", q5c: "tomorrow",
+                        q6: "______ she ______ the movie? (see)", q6a: "Had, saw", q6b: "Had, seen", q6c: "Did, see",
+                        q7: "Complete the question: ______ you finished your homework?",
+                        q8: "Complete the Wh- question: Where ______ she been before that?",
+                        q9: "Insert the correct adverb (already/just/never): They had ______ left when I arrived. (a short time before)",
+                        q10: "Arrange (question): Had, you, seen, that movie, before, ?",
+                        q11: "Arrange (negative sentence): She, had, not, visited, Paris, .",
+                        q12: "Arrange (time clause): By the time, he, arrived, we, had, left, ."
+                    }
+                }
+            },
+            fr: {
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
+                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+                pastPerfect2: {
+                    title: { line1: "Past Perfect Tense : II :", line2: "Questions et adverbes", line3: "Questions et expressions de temps au past perfect.", line4: "leçon : 2/3" },
+                    questions: { title: "II. 1. Former des questions au past perfect", heading: "Structure de base", desc1: "📘 Règle :", desc2: "Au past perfect, on forme les questions en inversant le sujet et l'auxiliaire 'had'. Le verbe principal reste au participe passé.", typeCol: "Type de question", structureCol: "Structure", exampleCol: "Exemple", yesNo: "Oui/Non", structYesNo: "Had + sujet + participe passé ?", exYesNo: "Aviez-vous terminé votre travail ?", wh: "Wh-", structWh: "Mot Wh- + had + sujet + participe passé ?", exWh: "Qu'avait-elle fait ?" },
+                    toBe: { title: "II. 2. Questions avec 'To Be' au past perfect", heading: "Utiliser had been", formula: "Formule : Had + Sujet + Been + ... ?", desc: "Exemple : Avais-je été à Londres avant ? / Où étiez-vous allé avant la réunion ?", subjectCol: "Sujet", statementCol: "Affirmation", questionCol: "Question", statI: "J'avais été à Londres avant.", qI: "Avais-je été à Londres avant ?", statShe: "Elle avait été enseignante.", qShe: "Avait-elle été enseignante ?", statThey: "Ils étaient mariés depuis 2010.", qThey: "Étaient-ils mariés depuis 2010 ?" },
+                    toHave: { title: "II. 3. Questions avec 'To Have' au past perfect", heading: "Had + sujet + had + ... ?", ex1: "Avais-je pris mon petit-déjeuner ?", ex2: "Qu'aviez-vous mangé au petit-déjeuner ?", ex3: "Combien d'entretiens avaient-ils eus ?" },
+                    timeExpr: { title: "II. 4. Expressions de temps au past perfect", heading: "Already, just, never, ever, before, by the time", placement: "Règles de placement :", desc: "Les adverbes already, just, never se placent après 'had' mais avant le participe passé. 'Before' et 'by the time' introduisent des propositions temporelles.", ex1: "J'avais déjà fini quand il est arrivé.", ex2: "Elle venait de partir.", ex3: "Au moment où nous sommes arrivés, ils étaient partis." }
+                }
+            },
+            ar: {
+                common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+                pastPerfect2: {
+                    title: { line1: "الماضي التام: 2:", line2: "الأسئلة والظروف", line3: "الأسئلة وتعابير الوقت في الماضي التام.", line4: "الدرس: 2/3" },
+                    questions: { title: "II. 1. تكوين الأسئلة في الماضي التام", heading: "بنية السؤال الأساسية", desc1: "📘 القاعدة:", desc2: "في الماضي التام، نشكل الأسئلة بعكس الفاعل والفعل المساعد 'had'. يبقى الفعل الرئيسي في اسم المفعول.", typeCol: "نوع السؤال", structureCol: "البنية", exampleCol: "مثال", yesNo: "نعم/لا", structYesNo: "Had + فاعل + اسم المفعول؟", exYesNo: "هل كنت قد أنهيت عملك؟", wh: "Wh-", structWh: "كلمة استفهام + had + فاعل + اسم المفعول؟", exWh: "ماذا كانت قد فعلت؟" },
+                    toBe: { title: "II. 2. أسئلة مع 'To Be' في الماضي التام", heading: "استخدام had been", formula: "الصيغة: Had + فاعل + Been + ...؟", desc: "مثال: هل كنت قد ذهبت إلى لندن من قبل؟ / أين كنت قبل الاجتماع؟", subjectCol: "الفاعل", statementCol: "الجملة الإخبارية", questionCol: "السؤال", statI: "لقد كنت قد ذهبت إلى لندن من قبل.", qI: "هل كنت قد ذهبت إلى لندن من قبل؟", statShe: "لقد كانت معلمة.", qShe: "هل كانت معلمة؟", statThey: "لقد كانا متزوجين منذ 2010.", qThey: "هل كانا متزوجين منذ 2010؟" },
+                    toHave: { title: "II. 3. أسئلة مع 'To Have' في الماضي التام", heading: "Had + فاعل + had + ...؟", ex1: "هل كنت قد تناولت الفطور؟", ex2: "ماذا كنت قد تناولت على الفطور؟", ex3: "كم مقابلة كانوا قد خاضوها؟" },
+                    timeExpr: { title: "II. 4. تعابير الوقت في الماضي التام", heading: "already, just, never, ever, before, by the time", placement: "قواعد الموضع:", desc: "الظروف already, just, never تأتي بعد 'had' وقبل اسم المفعول. 'Before' و 'by the time' تقدم عبارات زمانية.", ex1: "كنت قد انتهيت بالفعل عندما وصل.", ex2: "كانت قد غادرت للتو.", ex3: "عندما وصلنا، كانوا قد غادروا." }
+                }
+            }
+        };
+    </script>
+    <script src="scripts/translation-refraction.js"></script>
+    <script src="scripts/exercise-conjugation.js"></script>
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
+    <script>
+        const correctAnswersType1 = buildMultipleChoiceExercise({
+            containerId: 'mc-exercises', prefix: 'EH-exercise-type1-possibilities3',
+            questions: [
+                { questionTextKey: 'pastPerfect2.exercises.q1', options: [{ value: 'a', labelKey: 'pastPerfect2.exercises.q1a' }, { value: 'b', labelKey: 'pastPerfect2.exercises.q1b' }, { value: 'c', labelKey: 'pastPerfect2.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'pastPerfect2.exercises.q2', options: [{ value: 'a', labelKey: 'pastPerfect2.exercises.q2a' }, { value: 'b', labelKey: 'pastPerfect2.exercises.q2b' }, { value: 'c', labelKey: 'pastPerfect2.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'pastPerfect2.exercises.q3', options: [{ value: 'a', labelKey: 'pastPerfect2.exercises.q3a' }, { value: 'b', labelKey: 'pastPerfect2.exercises.q3b' }, { value: 'c', labelKey: 'pastPerfect2.exercises.q3c' }], correctAnswer: 'b' },
+                { questionTextKey: 'pastPerfect2.exercises.q4', options: [{ value: 'a', labelKey: 'pastPerfect2.exercises.q4a' }, { value: 'b', labelKey: 'pastPerfect2.exercises.q4b' }, { value: 'c', labelKey: 'pastPerfect2.exercises.q4c' }], correctAnswer: 'b' },
+                { questionTextKey: 'pastPerfect2.exercises.q5', options: [{ value: 'a', labelKey: 'pastPerfect2.exercises.q5a' }, { value: 'b', labelKey: 'pastPerfect2.exercises.q5b' }, { value: 'c', labelKey: 'pastPerfect2.exercises.q5c' }], correctAnswer: 'a' },
+                { questionTextKey: 'pastPerfect2.exercises.q6', options: [{ value: 'a', labelKey: 'pastPerfect2.exercises.q6a' }, { value: 'b', labelKey: 'pastPerfect2.exercises.q6b' }, { value: 'c', labelKey: 'pastPerfect2.exercises.q6c' }], correctAnswer: 'b' }
+            ]
+        });
+    </script>
+    <script>
+        correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises', prefix: 'fill',
+            questions: [
+                { questionTextKey: 'pastPerfect2.exercises.q7', answers: ['Had'] },
+                { questionTextKey: 'pastPerfect2.exercises.q8', answers: ['had'] },
+                { questionTextKey: 'pastPerfect2.exercises.q9', answers: ['just'] }
+            ]
+        });
+    </script>
+    <script>
+        const correctAnswersType3 = buildSentenceOrderingExercise({
+            containerId: 'order-exercises', prefix: 'order',
+            questions: [
+                { questionTextKey: 'pastPerfect2.exercises.q10', words: ['Had', 'you', 'seen', 'that movie', 'before', '?'], correctSentence: 'Had you seen that movie before ?' },
+                { questionTextKey: 'pastPerfect2.exercises.q11', words: ['She', 'had', 'not', 'visited', 'Paris', '.'], correctSentence: 'She had not visited Paris .' },
+                { questionTextKey: 'pastPerfect2.exercises.q12', words: ['By the time', 'he', 'arrived', 'we', 'had', 'left', '.'], correctSentence: 'By the time he arrived we had left .' }
+            ]
+        });
+    </script>
+    <script>
+        function checkAllExercises() {
+            let totalScore = 0, totalQuestions = 0;
+            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+            totalQuestions += 6;
+            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+            totalQuestions += 3;
+            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+            totalQuestions += 3;
+            const scoreEl = document.getElementById('score-value');
+            const fbEl = document.getElementById('score-feedback');
+            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+            if (fbEl) {
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered past perfect questions!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit question formation.';
+                else fbEl.textContent = 'Review the lesson and try again.';
+            }
+            document.getElementById('score-display').style.display = 'block';
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+            document.getElementById('check-all').addEventListener('click', checkAllExercises);
+        });
+        (function() {
+            function applyHtmlI18n() {
+                const lang = document.getElementById('language-selector').value;
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                    if (translation) el.textContent = translation;
+                });
+            }
+            window.addEventListener('load', () => setTimeout(applyHtmlI18n, 100));
+            document.getElementById('language-selector').addEventListener('change', () => setTimeout(applyHtmlI18n, 50));
+        })();
+    </script>
+</body>
+</html>

@@ -3,1161 +3,518 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Present Continuous: Questions & Adverbs - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>Present Continuous II: Questions & Adverbs - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #2e8b57, #3cb371, #66cdaa);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-        
-        .EH-conjugation-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-        }
-        
-        .EH-conjugation-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .EH-conjugation-title {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .EH-conjugation-subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-        }
-        
-        .EH-conjugation-content {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
-        
-        .EH-conjugation-section {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .EH-conjugation-section-title {
-            font-size: 1.8rem;
-            color: #2e8b57;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #66cdaa;
-        }
-        
-        .EH-conjugation-subsection {
-            margin-bottom: 25px;
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .EH-conjugation-subsection-title {
-            font-size: 1.4rem;
-            color: #3cb371;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .EH-conjugation-subsection-icon {
-            font-size: 1.6rem;
-            margin-right: 10px;
-        }
-        
-        .EH-conjugation-rule {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f5f5f5;
-            border-radius: 10px;
-            border-left: 4px solid #66cdaa;
-        }
-        
-        .EH-conjugation-rule-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #2e8b57;
-        }
-        
-        .EH-conjugation-examples {
-            background: #e8f5e9;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-        }
-        
-        .EH-conjugation-example {
-            margin-bottom: 8px;
-            padding-left: 10px;
-            border-left: 2px solid #66cdaa;
-        }
-        
-        .EH-conjugation-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        
-        .EH-conjugation-table th,
-        .EH-conjugation-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        
-        .EH-conjugation-table th {
-            background-color: #3cb371;
-            color: white;
-        }
-        
-        .EH-conjugation-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        .EH-conjugation-table tr:hover {
-            background-color: #e8f5e9;
-        }
-        
-        /* Exercise Styles */
-        .EH-exercise-section {
-            margin-top: 40px;
-        }
-        
-        .EH-exercise-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .EH-exercise-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .EH-exercise-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .EH-exercise-number {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, #3cb371, #66cdaa);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-text {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .EH-exercise-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option input {
-            cursor: pointer;
-        }
-        
-        .EH-exercise-option label {
-            cursor: pointer;
-        }
-        
-        /* Type 1: Multiple Choice Styles */
-        .EH-exercise-type1-possibilities3-answers-control {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
-            gap: 20px;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn {
-            background: #3cb371;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn:hover {
-            background: #2e8b57;
-        }
-
-        .EH-exercise-type1-possibilities3-score-display {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            display: none;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-title {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #2e8b57;
-        }
-
-        .EH-exercise-type1-possibilities3-score-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #3cb371;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-feedback {
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        .EH-exercise-type1-possibilities3-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.correct {
-            background-color: #d4edda;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.incorrect {
-            background-color: #f8d7da;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 2: Fill in the Blank Styles */
-        .EH-exercise-type2-fillblank-input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .EH-exercise-type2-fillblank-input:focus {
-            border-color: #3cb371;
-            outline: none;
-        }
-        
-        .EH-exercise-type2-fillblank-input-correct {
-            border-color: #28a745;
-            background-color: #d4edda;
-        }
-        
-        .EH-exercise-type2-fillblank-input-incorrect {
-            border-color: #dc3545;
-            background-color: #f8d7da;
-        }
-        
-        .EH-exercise-type2-fillblank-input-empty {
-            border-color: #ffc107;
-        }
-        
-        .EH-exercise-type2-fillblank-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type2-fillblank-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type2-fillblank-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 3: Sentence Ordering Styles */
-        .EH-exercise-type3-sentenceorder-word-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 15px;
-            border: 2px dashed #e0e0e0;
-            border-radius: 10px;
-            min-height: 60px;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word {
-            background: #e8f5e9;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid #a5d6a7;
-            cursor: move;
-            user-select: none;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word:hover {
-            background: #c8e6c9;
-        }
-        
-        .EH-exercise-type3-sentenceorder-dragging {
-            opacity: 0.5;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct {
-            border-color: #28a745;
-            background-color: #f8fff8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect {
-            border-color: #dc3545;
-            background-color: #fff8f8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Navigation Buttons */
-        .EH-conjugation-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-        
-        .EH-conjugation-nav-button {
-            background: #3cb371;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .EH-conjugation-nav-button:hover {
-            background: #2e8b57;
-        }
-        
-        .EH-conjugation-nav-button.back {
-            background: #66cdaa;
-        }
-        
-        .EH-conjugation-nav-button.back:hover {
-            background: #3cb371;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .EH-conjugation-title {
-                font-size: 2rem;
-            }
-            
-            .EH-exercise-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .EH-conjugation-navigation {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .EH-conjugation-nav-button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .EH-conjugation-content {
-                padding: 20px;
-            }
+        :root {
+            --bg-gradient: linear-gradient(135deg, #c5e0f0, #b0d4e8, #9ac8e0, #85bcd8);
+            --content-bg: #f5fafd;
+            --card-bg: #ffffff;
+            --subsection-bg: #eef5fa;
+            --rule-bg: #e6f0f7;
+            --example-bg: #ddeaf4;
+            --table-stripe: #eef3f9;
+            --title-color: #1c5775;
+            --text-color: #1c3a4a;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #3c8db0;
+            --primary-hover: #2c6f8c;
+            --primary-light: #5aa0c0;
+            --accent: #4682b4;
+            --exercise-number-gradient: linear-gradient(135deg, #3c8db0, #2c6f8c);
+            --rule-border: #3c8db0;
+            --example-border: #3c8db0;
+            --nav-btn-bg: #3c8db0;
+            --nav-btn-hover: #2c6f8c;
+            --nav-back-btn-bg: #5aa0c0;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #3c8db0;
+            --refract-divider-color: #8cb8d0;
+            --refract-translation-bg: #e5f0f8;
+            --refract-translation-border: #3c8db0;
+            --refract-english-color: #1c3a4a;
+            --section-divider: #cde0ec;
+            --card-border: #c8dde8;
+            --input-border: #b0cce0;
+            --dashed-border: #b0cce0;
+            --table-border: #bed4e4;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #eef0f5;
+            --neutral-color: #4a6a7a;
+            --neutral-border: #c0d0e0;
+            --empty-input-border: #a0bcd8;
+            --empty-input-bg: #f2f8ff;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #3c8db0;
+            --language-selector-color: #1c3a4a;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #1a4055, #1f506a, #25607f, #2b7094);
+            --content-bg: #1a3342;
+            --card-bg: #1f4052;
+            --subsection-bg: #1f4052;
+            --rule-bg: #1a3342;
+            --example-bg: #1a3342;
+            --table-stripe: #1e384a;
+            --title-color: #9ccee8;
+            --text-color: #d4eaf4;
+            --header-text: #d4eaf4;
+            --header-text-light: #b0cce0;
+            --primary: #68accc;
+            --primary-hover: #7cbee0;
+            --primary-light: #68accc;
+            --accent: #68accc;
+            --rule-border: #68accc;
+            --example-border: #68accc;
+            --exercise-number-gradient: linear-gradient(135deg, #68accc, #3c8db0);
+            --nav-btn-bg: #68accc;
+            --nav-btn-hover: #3c8db0;
+            --nav-back-btn-bg: #7cbee0;
+            --nav-back-btn-color: #0a202f;
+            --nav-back-btn-hover: #68accc;
+            --refract-divider-color: #7aa8c4;
+            --refract-translation-bg: #2a4a62;
+            --refract-translation-border: #7aa8c4;
+            --refract-english-color: #d0e4f0;
+            --section-divider: #2a4a62;
+            --card-border: #2a4a62;
+            --input-border: #3a6080;
+            --dashed-border: #3a6080;
+            --table-border: #2e5270;
+            --white: #e0ecf4;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #2a3e52;
+            --neutral-color: #b0cce0;
+            --neutral-border: #3a6080;
+            --empty-input-border: #3a6080;
+            --empty-input-bg: #1a3342;
+            --language-selector-bg: #1f4052;
+            --language-selector-border: #68accc;
+            --language-selector-color: #d4eaf4;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="presentContinuous2.title">Present Continuous: Questions & Adverbs</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="presentContinuous2.subtitle">Learn to form questions and use time expressions correctly in the present continuous</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="presentContinuous2.title.line1">Present Continuous Tense II:</div>
+                <div class="EH-conjugation-title-line" data-i18n="presentContinuous2.title.line2">Questions & Adverbs</div>
+                <div class="EH-conjugation-subtitle" data-i18n="presentContinuous2.title.line3">Master questions and time expressions correctly in the present continuous</div>
+                <div class="EH-conjugation-subtitle" data-i18n="presentContinuous2.title.line4">lesson: 2/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Introduction Section -->
+            <!-- Section 1: Forming Questions -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous2.introduction.title">Forming Questions in Present Continuous</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous2.questions.title">II. 1. Forming Questions in Present Continuous</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">❓</span>
-                        <span data-i18n="presentContinuous2.introduction.whatIs">How to Form Questions</span>
+                        <span data-i18n="presentContinuous2.questions.heading">Basic question structure & types</span>
                     </h3>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.introduction.definitionTitle">Basic Question Structure:</div>
-                        <p data-i18n="presentContinuous2.introduction.definition">In the present continuous tense, we form questions by inverting the subject and the appropriate form of the verb "to be" (am, is, are).</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.introduction.typesTitle">Types of Questions:</div>
-                        <ul>
-                            <li data-i18n="presentContinuous2.introduction.type1">Yes/No Questions (questions that can be answered with yes or no)</li>
-                            <li data-i18n="presentContinuous2.introduction.type2">Wh- Questions (questions that begin with what, where, when, why, who, how)</li>
-                            <li data-i18n="presentContinuous2.introduction.type3">Negative Questions</li>
-                        </ul>
+                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.questions.desc1">📘 Question formation:</div>
+                        <p data-i18n="presentContinuous2.questions.desc2">In the present continuous, we form questions by inverting the subject and the appropriate form of "to be" (am, is, are). Types: Yes/No questions, Wh- questions, and negative questions.</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Questions with To Be Section -->
+            <!-- Section 2: Questions with "To Be" -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous2.toBeQuestions.title">Questions with "To Be" in Present Continuous</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous2.toBe.title">II. 2. Questions with "To Be"</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="presentContinuous2.toBeQuestions.conjugation">Question Formation with "To Be"</span>
+                        <span class="EH-conjugation-subsection-icon">🔨</span>
+                        <span data-i18n="presentContinuous2.toBe.heading">Yes/No and Wh- questions with to be</span>
                     </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.toBeQuestions.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="presentContinuous2.toBeQuestions.rule">In the present continuous tense, "to be" is the auxiliary verb. We form questions by placing the appropriate form of "to be" before the subject.</p>
-                        <p data-i18n="presentContinuous2.toBeQuestions.formula">Formula: [Am/Is/Are] + [Subject] + [Verb-ing] + [Rest of Sentence] + ?</p>
-                    </div>
-                    
                     <table class="EH-conjugation-table">
                         <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="presentContinuous2.toBeQuestions.statement">Statement</th>
-                                <th data-i18n="presentContinuous2.toBeQuestions.question">Question</th>
-                            </tr>
+                            <tr><th data-i18n="presentContinuous2.toBe.subject">Subject</th><th data-i18n="presentContinuous2.toBe.statement">Statement</th><th data-i18n="presentContinuous2.toBe.question">Question</th></tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="presentContinuous2.toBeQuestions.statementI">I am studying English.</td>
-                                <td data-i18n="presentContinuous2.toBeQuestions.questionI">Am I studying English?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="presentContinuous2.toBeQuestions.statementYou">You are watching TV.</td>
-                                <td data-i18n="presentContinuous2.toBeQuestions.questionYou">Are you watching TV?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="presentContinuous2.toBeQuestions.statementHe">He is working now.</td>
-                                <td data-i18n="presentContinuous2.toBeQuestions.questionHe">Is he working now?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="presentContinuous2.toBeQuestions.statementShe">She is cooking dinner.</td>
-                                <td data-i18n="presentContinuous2.toBeQuestions.questionShe">Is she cooking dinner?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="presentContinuous2.toBeQuestions.statementWe">We are playing soccer.</td>
-                                <td data-i18n="presentContinuous2.toBeQuestions.questionWe">Are we playing soccer?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="presentContinuous2.toBeQuestions.statementThey">They are waiting for the bus.</td>
-                                <td data-i18n="presentContinuous2.toBeQuestions.questionThey">Are they waiting for the bus?</td>
-                            </tr>
+                            <tr><td data-i18n="presentContinuous2.toBe.subjI">I</td><td data-i18n="presentContinuous2.toBe.stmtI">I am studying English.</td><td data-i18n="presentContinuous2.toBe.quesI">Am I studying English?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.toBe.subjYou">You</td><td data-i18n="presentContinuous2.toBe.stmtYou">You are watching TV.</td><td data-i18n="presentContinuous2.toBe.quesYou">Are you watching TV?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.toBe.subjHe">He</td><td data-i18n="presentContinuous2.toBe.stmtHe">He is working now.</td><td data-i18n="presentContinuous2.toBe.quesHe">Is he working now?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.toBe.subjShe">She</td><td data-i18n="presentContinuous2.toBe.stmtShe">She is cooking dinner.</td><td data-i18n="presentContinuous2.toBe.quesShe">Is she cooking dinner?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.toBe.subjWe">We</td><td data-i18n="presentContinuous2.toBe.stmtWe">We are playing soccer.</td><td data-i18n="presentContinuous2.toBe.quesWe">Are we playing soccer?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.toBe.subjThey">They</td><td data-i18n="presentContinuous2.toBe.stmtThey">They are waiting for the bus.</td><td data-i18n="presentContinuous2.toBe.quesThey">Are they waiting for the bus?</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.toBeQuestions.whTitle">Wh- Questions with Present Continuous:</div>
-                        <p data-i18n="presentContinuous2.toBeQuestions.whRule">For Wh- questions, place the question word at the beginning, then follow with the inverted subject and verb.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.toBeQuestions.whExample1">What are you doing?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.toBeQuestions.whExample2">Where is she going?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.toBeQuestions.whExample3">Why are they running?</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous2.toBe.wh1">What are you doing?</div>
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous2.toBe.wh2">Where is she going?</div>
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous2.toBe.wh3">Why are they running?</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Questions with To Have Section -->
+            <!-- Section 3: Questions with "To Have" -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous2.toHaveQuestions.title">Questions with "To Have" in Present Continuous</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous2.toHave.title">II. 3. Questions with "To Have"</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="presentContinuous2.toHaveQuestions.conjugation">Question Formation with "To Have"</span>
+                        <span class="EH-conjugation-subsection-icon">🤝</span>
+                        <span data-i18n="presentContinuous2.toHave.heading">Using "to have" as main verb in questions</span>
                     </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.toHaveQuestions.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="presentContinuous2.toHaveQuestions.rule">When "to have" is used as a main verb in the present continuous, we form questions by inverting the subject and the appropriate form of "to be" (am, is, are).</p>
-                        <p data-i18n="presentContinuous2.toHaveQuestions.formula">Formula: [Am/Is/Are] + [Subject] + [Having] + [Rest of Sentence] + ?</p>
-                    </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="presentContinuous2.toHaveQuestions.statement">Statement</th>
-                                <th data-i18n="presentContinuous2.toHaveQuestions.question">Question</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentContinuous2.toHave.subject">Subject</th><th data-i18n="presentContinuous2.toHave.statement">Statement</th><th data-i18n="presentContinuous2.toHave.question">Question</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="presentContinuous2.toHaveQuestions.statementI">I am having a good time.</td>
-                                <td data-i18n="presentContinuous2.toHaveQuestions.questionI">Am I having a good time?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="presentContinuous2.toHaveQuestions.statementYou">You are having problems.</td>
-                                <td data-i18n="presentContinuous2.toHaveQuestions.questionYou">Are you having problems?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="presentContinuous2.toHaveQuestions.statementHe">He is having a party.</td>
-                                <td data-i18n="presentContinuous2.toHaveQuestions.questionHe">Is he having a party?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="presentContinuous2.toHaveQuestions.statementShe">She is having lunch.</td>
-                                <td data-i18n="presentContinuous2.toHaveQuestions.questionShe">Is she having lunch?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="presentContinuous2.toHaveQuestions.statementWe">We are having a meeting.</td>
-                                <td data-i18n="presentContinuous2.toHaveQuestions.questionWe">Are we having a meeting?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="presentContinuous2.toHaveQuestions.statementThey">They are having fun.</td>
-                                <td data-i18n="presentContinuous2.toHaveQuestions.questionThey">Are they having fun?</td>
-                            </tr>
+                            <tr><td data-i18n="presentContinuous2.toHave.subjI">I</td><td data-i18n="presentContinuous2.toHave.stmtI">I am having a good time.</td><td data-i18n="presentContinuous2.toHave.quesI">Am I having a good time?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.toHave.subjYou">You</td><td data-i18n="presentContinuous2.toHave.stmtYou">You are having problems.</td><td data-i18n="presentContinuous2.toHave.quesYou">Are you having problems?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.toHave.subjHe">He</td><td data-i18n="presentContinuous2.toHave.stmtHe">He is having a party.</td><td data-i18n="presentContinuous2.toHave.quesHe">Is he having a party?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.toHave.subjShe">She</td><td data-i18n="presentContinuous2.toHave.stmtShe">She is having lunch.</td><td data-i18n="presentContinuous2.toHave.quesShe">Is she having lunch?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.toHave.subjWe">We</td><td data-i18n="presentContinuous2.toHave.stmtWe">We are having a meeting.</td><td data-i18n="presentContinuous2.toHave.quesWe">Are we having a meeting?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.toHave.subjThey">They</td><td data-i18n="presentContinuous2.toHave.stmtThey">They are having fun.</td><td data-i18n="presentContinuous2.toHave.quesThey">Are they having fun?</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.toHaveQuestions.whTitle">Wh- Questions with "To Have":</div>
-                        <p data-i18n="presentContinuous2.toHaveQuestions.whRule">For Wh- questions, place the question word at the beginning, then follow with "am/is/are," subject, "having," and the rest of the sentence.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.toHaveQuestions.whExample1">What are you having for dinner?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.toHaveQuestions.whExample2">Where is she having her birthday party?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.toHaveQuestions.whExample3">Why are they having so much trouble?</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous2.toHave.wh1">What are you having for dinner?</div>
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous2.toHave.wh2">Where is she having her birthday party?</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Questions with Other Verbs Section -->
+            <!-- Section 4: Questions with Other Verbs -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous2.otherVerbsQuestions.title">Questions with Other Verbs</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous2.other.title">II. 4. Questions with Other Verbs</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📝</span>
-                        <span data-i18n="presentContinuous2.otherVerbsQuestions.conjugation">Question Formation with Regular and Irregular Verbs</span>
+                        <span class="EH-conjugation-subsection-icon">📚</span>
+                        <span data-i18n="presentContinuous2.other.heading">General rule for all other verbs</span>
                     </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.otherVerbsQuestions.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="presentContinuous2.otherVerbsQuestions.rule">For all other verbs in the present continuous, we form questions by inverting the subject and the appropriate form of "to be" (am, is, are).</p>
-                        <p data-i18n="presentContinuous2.otherVerbsQuestions.formula">Formula: [Am/Is/Are] + [Subject] + [Verb-ing] + [Rest of Sentence] + ?</p>
-                    </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="presentContinuous2.otherVerbsQuestions.statement">Statement</th>
-                                <th data-i18n="presentContinuous2.otherVerbsQuestions.question">Question</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentContinuous2.other.subject">Subject</th><th data-i18n="presentContinuous2.other.statement">Statement</th><th data-i18n="presentContinuous2.other.question">Question</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="presentContinuous2.otherVerbsQuestions.statementI">I am reading a book.</td>
-                                <td data-i18n="presentContinuous2.otherVerbsQuestions.questionI">Am I reading a book?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="presentContinuous2.otherVerbsQuestions.statementYou">You are studying for the exam.</td>
-                                <td data-i18n="presentContinuous2.otherVerbsQuestions.questionYou">Are you studying for the exam?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="presentContinuous2.otherVerbsQuestions.statementHe">He is playing football.</td>
-                                <td data-i18n="presentContinuous2.otherVerbsQuestions.questionHe">Is he playing football?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="presentContinuous2.otherVerbsQuestions.statementShe">She is writing a letter.</td>
-                                <td data-i18n="presentContinuous2.otherVerbsQuestions.questionShe">Is she writing a letter?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="presentContinuous2.otherVerbsQuestions.statementWe">We are watching a movie.</td>
-                                <td data-i18n="presentContinuous2.otherVerbsQuestions.questionWe">Are we watching a movie?</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="presentContinuous2.otherVerbsQuestions.statementThey">They are cooking dinner.</td>
-                                <td data-i18n="presentContinuous2.otherVerbsQuestions.questionThey">Are they cooking dinner?</td>
-                            </tr>
+                            <tr><td data-i18n="presentContinuous2.other.subjI">I</td><td data-i18n="presentContinuous2.other.stmtI">I am reading a book.</td><td data-i18n="presentContinuous2.other.quesI">Am I reading a book?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.other.subjYou">You</td><td data-i18n="presentContinuous2.other.stmtYou">You are studying for the exam.</td><td data-i18n="presentContinuous2.other.quesYou">Are you studying for the exam?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.other.subjHe">He</td><td data-i18n="presentContinuous2.other.stmtHe">He is playing football.</td><td data-i18n="presentContinuous2.other.quesHe">Is he playing football?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.other.subjShe">She</td><td data-i18n="presentContinuous2.other.stmtShe">She is writing a letter.</td><td data-i18n="presentContinuous2.other.quesShe">Is she writing a letter?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.other.subjWe">We</td><td data-i18n="presentContinuous2.other.stmtWe">We are watching a movie.</td><td data-i18n="presentContinuous2.other.quesWe">Are we watching a movie?</td></tr>
+                            <tr><td data-i18n="presentContinuous2.other.subjThey">They</td><td data-i18n="presentContinuous2.other.stmtThey">They are cooking dinner.</td><td data-i18n="presentContinuous2.other.quesThey">Are they cooking dinner?</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.otherVerbsQuestions.whTitle">Wh- Questions with Other Verbs:</div>
-                        <p data-i18n="presentContinuous2.otherVerbsQuestions.whRule">For Wh- questions, place the question word at the beginning, then follow with "am/is/are," subject, verb-ing, and the rest of the sentence.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.otherVerbsQuestions.whExample1">What are you reading?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.otherVerbsQuestions.whExample2">Where is he going?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.otherVerbsQuestions.whExample3">Why are they laughing?</div>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.otherVerbsQuestions.irregularTitle">Questions with Irregular Verbs:</div>
-                        <p data-i18n="presentContinuous2.otherVerbsQuestions.irregularRule">Even with irregular verbs, we still use the same question structure in the present continuous tense.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.otherVerbsQuestions.irregularExample1">Are you doing your homework? (do → doing)</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.otherVerbsQuestions.irregularExample2">Is she making dinner? (make → making)</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.otherVerbsQuestions.irregularExample3">Are they taking a break? (take → taking)</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous2.other.wh1">What are you reading?</div>
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous2.other.wh2">Why are they laughing?</div>
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous2.other.irregular">Are you doing your homework? (do → doing)</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Adverbs of Time Section -->
+            <!-- Section 5: Time Expressions -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous2.adverbs.title">Time Expressions in Present Continuous</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous2.time.title">II. 5. Time Expressions in Present Continuous</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">⏱️</span>
-                        <span data-i18n="presentContinuous2.adverbs.whatAre">What Are Time Expressions?</span>
+                        <span class="EH-conjugation-subsection-icon">⏰</span>
+                        <span data-i18n="presentContinuous2.time.heading">Common time expressions & placement</span>
                     </h3>
-                    
+                    <table class="EH-conjugation-table">
+                        <thead><tr><th data-i18n="presentContinuous2.time.expression">Time Expression</th><th data-i18n="presentContinuous2.time.meaning">Meaning</th><th data-i18n="presentContinuous2.time.example">Example</th></tr></thead>
+                        <tbody>
+                            <tr><td data-i18n="presentContinuous2.time.expNow">now</td><td data-i18n="presentContinuous2.time.meaningNow">at this moment</td><td data-i18n="presentContinuous2.time.exNow">I am studying now.</td></tr>
+                            <tr><td data-i18n="presentContinuous2.time.expRightNow">right now</td><td data-i18n="presentContinuous2.time.meaningRightNow">at this exact moment</td><td data-i18n="presentContinuous2.time.exRightNow">She is calling you right now.</td></tr>
+                            <tr><td data-i18n="presentContinuous2.time.expAtMoment">at the moment</td><td data-i18n="presentContinuous2.time.meaningAtMoment">currently</td><td data-i18n="presentContinuous2.time.exAtMoment">We are working at the moment.</td></tr>
+                            <tr><td data-i18n="presentContinuous2.time.expCurrently">currently</td><td data-i18n="presentContinuous2.time.meaningCurrently">at the present time</td><td data-i18n="presentContinuous2.time.exCurrently">He is currently living in Paris.</td></tr>
+                            <tr><td data-i18n="presentContinuous2.time.expToday">today</td><td data-i18n="presentContinuous2.time.meaningToday">on this day</td><td data-i18n="presentContinuous2.time.exToday">They are visiting their grandparents today.</td></tr>
+                            <tr><td data-i18n="presentContinuous2.time.expThisWeek">this week</td><td data-i18n="presentContinuous2.time.meaningThisWeek">during the current week</td><td data-i18n="presentContinuous2.time.exThisWeek">I am working on a project this week.</td></tr>
+                        </tbody>
+                    </table>
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.adverbs.definitionTitle">Definition:</div>
-                        <p data-i18n="presentContinuous2.adverbs.definition">Time expressions tell us when something is happening. They are commonly used with the present continuous tense to indicate that an action is happening now or around now.</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.time.placementTitle">📘 Placement:</div>
+                        <p data-i18n="presentContinuous2.time.placementDesc">Usually at the end of the sentence. For emphasis, at the beginning. In questions, at the end.</p>
                     </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.adverbs.commonAdverbsTitle">Common Time Expressions in Present Continuous:</div>
-                        <table class="EH-conjugation-table">
-                            <thead>
-                                <tr>
-                                    <th data-i18n="presentContinuous2.adverbs.adverb">Time Expression</th>
-                                    <th data-i18n="presentContinuous2.adverbs.meaning">Meaning</th>
-                                    <th data-i18n="presentContinuous2.adverbs.example">Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td data-i18n="presentContinuous2.adverbs.now">now</td>
-                                    <td data-i18n="presentContinuous2.adverbs.nowMeaning">at this moment</td>
-                                    <td data-i18n="presentContinuous2.adverbs.nowExample">I am studying now.</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentContinuous2.adverbs.rightNow">right now</td>
-                                    <td data-i18n="presentContinuous2.adverbs.rightNowMeaning">at this exact moment</td>
-                                    <td data-i18n="presentContinuous2.adverbs.rightNowExample">She is calling you right now.</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentContinuous2.adverbs.atTheMoment">at the moment</td>
-                                    <td data-i18n="presentContinuous2.adverbs.atTheMomentMeaning">currently</td>
-                                    <td data-i18n="presentContinuous2.adverbs.atTheMomentExample">We are working at the moment.</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentContinuous2.adverbs.currently">currently</td>
-                                    <td data-i18n="presentContinuous2.adverbs.currentlyMeaning">at the present time</td>
-                                    <td data-i18n="presentContinuous2.adverbs.currentlyExample">He is currently living in Paris.</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentContinuous2.adverbs.today">today</td>
-                                    <td data-i18n="presentContinuous2.adverbs.todayMeaning">on this day</td>
-                                    <td data-i18n="presentContinuous2.adverbs.todayExample">They are visiting their grandparents today.</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentContinuous2.adverbs.thisWeek">this week</td>
-                                    <td data-i18n="presentContinuous2.adverbs.thisWeekMeaning">during the current week</td>
-                                    <td data-i18n="presentContinuous2.adverbs.thisWeekExample">I am working on a project this week.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.adverbs.placementTitle">Placement in Sentences:</div>
-                        <p data-i18n="presentContinuous2.adverbs.placementRule1">1. Usually at the end of the sentence:</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.adverbs.placementExample1">I am studying English now.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.adverbs.placementExample2">She is working at the moment.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.adverbs.placementExample3">They are playing football today.</div>
-                        </div>
-                        
-                        <p data-i18n="presentContinuous2.adverbs.placementRule2">2. Sometimes at the beginning for emphasis:</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.adverbs.placementExample4">Right now, I am studying English.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.adverbs.placementExample5">At the moment, she is working.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous2.adverbs.questionsTitle">Time Expressions in Questions:</div>
-                        <p data-i18n="presentContinuous2.adverbs.questionsRule">In questions, time expressions usually come at the end of the question.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.adverbs.questionsExample1">Are you studying now?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.adverbs.questionsExample2">What is she doing at the moment?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous2.adverbs.questionsExample3">Where are they going today?</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous2.time.placementEx1">Right now, I am studying English.</div>
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous2.time.placementEx2">Are you studying now?</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Exercises Section -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous2.exercises.title">Practice Exercises</h2>
-                
-                <!-- Type 1: Multiple Choice Exercises -->
-                <h3 style="color: #2e8b57; margin-bottom: 20px;">Multiple Choice</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 1 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">1</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q1">Choose the correct question form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q1Sentence">______ you studying English now?</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="presentContinuous2.exercises.q1a">Do</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="presentContinuous2.exercises.q1b">Are</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="presentContinuous2.exercises.q1c">Is</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 2 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">2</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q2">Choose the correct question form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q2Sentence">______ she watching TV right now?</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="presentContinuous2.exercises.q2a">Do</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="presentContinuous2.exercises.q2b">Does</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="presentContinuous2.exercises.q2c">Is</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 3 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">3</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q3">Choose the correct question form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q3Sentence">What ______ they doing at the moment?</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="presentContinuous2.exercises.q3a">are</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="presentContinuous2.exercises.q3b">do</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="presentContinuous2.exercises.q3c">is</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 4 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">4</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q4">Choose the correct time expression placement:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q4Sentence">She ______ studying English. (now)</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="presentContinuous2.exercises.q4a">now is</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="presentContinuous2.exercises.q4b">is now</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="presentContinuous2.exercises.q4c">is studying now</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 5 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">5</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q5">Choose the correct time expression:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q5Sentence">We are working on a project ______. (at this exact moment)</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="presentContinuous2.exercises.q5a">today</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="presentContinuous2.exercises.q5b">right now</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="presentContinuous2.exercises.q5c">this week</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 6 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">6</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q6">Choose the correct form of the verb in a question:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q6Sentence">______ you ______ to the party tonight? (go)</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-a" name="EH-exercise-type1-possibilities3-q6" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q6-a" data-i18n="presentContinuous2.exercises.q6a">Are, going</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-b" name="EH-exercise-type1-possibilities3-q6" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q6-b" data-i18n="presentContinuous2.exercises.q6b">Do, go</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-c" name="EH-exercise-type1-possibilities3-q6" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q6-c" data-i18n="presentContinuous2.exercises.q6c">Are, go</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q6-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Type 2: Fill in the Blank Exercises -->
-                <h3 style="color: #2e8b57; margin: 40px 0 20px 0;">Fill in the Blank</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 7 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">7</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q7">Complete the question with the correct form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q7Sentence">______ you watching TV now?</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q1-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 8 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">8</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q8">Complete the question with the correct form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q8Sentence">What ______ she doing at the moment?</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q2-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 9 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">9</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q9">Complete the sentence with the correct time expression:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q9Sentence">They are studying for their exams ______. (during the current week)</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q3-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Type 3: Sentence Ordering Exercises -->
-                <h3 style="color: #2e8b57; margin: 40px 0 20px 0;">Sentence Ordering</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 10 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">10</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q10">Arrange the words to form a correct question:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q1-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word1" data-original-index="1">Are</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word3" data-original-index="3">watching</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word5" data-original-index="5">?</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word4" data-original-index="4">TV</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word2" data-original-index="2">you</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word6" data-original-index="6">now</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 11 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">11</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q11">Arrange the words to form a correct question:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q2-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word1" data-original-index="1">What</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word3" data-original-index="3">doing</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word5" data-original-index="5">?</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word4" data-original-index="4">they</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word2" data-original-index="2">are</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word6" data-original-index="6">at the moment</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 12 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">12</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous2.exercises.q12">Arrange the words to form a correct sentence with a time expression:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q3-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word1" data-original-index="1">She</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word3" data-original-index="3">studying</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word5" data-original-index="5">English</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word4" data-original-index="4">is</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word2" data-original-index="2">right now</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Answer Check and Score System -->
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous2.exercises.title">Practice: Questions & Time Expressions</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+                <div class="EH-exercise-container" id="mc-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+                <div class="EH-exercise-container" id="fill-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+                <div class="EH-exercise-container" id="order-exercises"></div>
                 <div class="EH-exercise-type1-possibilities3-answers-control">
-                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers">Check All Answers</button>
-                    <div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
                         <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
-                        <div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback">Check your answers to see how you did!</p>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Navigation Buttons -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='conjugation.html'">
-                    ← <span data-i18n="common.backToConjugation">Back to Verb Conjugation</span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='EH-conj-present-continuous-p3.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson</span> →
-                </button>
             </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
-    <script src="scripts/translations/i18n_en.js"></script>
-    <script src="scripts/translations/i18n_fr.js"></script>
-    <script src="scripts/translations/i18n_ar.js"></script>
-    <script src="scripts/common-i18n.js"></script>
-    <script src="scripts/exercise.js"></script>
-    
     <script>
-        // Correct answers for Type 1 exercises
-        const correctAnswersType1 = {
-            'EH-exercise-type1-possibilities3-q1': 'b', // Are you studying English now?
-            'EH-exercise-type1-possibilities3-q2': 'c', // Is she watching TV right now?
-            'EH-exercise-type1-possibilities3-q3': 'a', // What are they doing at the moment?
-            'EH-exercise-type1-possibilities3-q4': 'c', // She is studying English now.
-            'EH-exercise-type1-possibilities3-q5': 'b', // We are working on a project right now.
-            'EH-exercise-type1-possibilities3-q6': 'a'  // Are you going to the party tonight?
-        };
-        
-        // Correct answers for Type 2 exercises
-        const correctAnswersType2 = {
-            'EH-exercise-type2-fillblank-q1': 'Are',     // Are you watching TV now?
-            'EH-exercise-type2-fillblank-q2': 'is',      // What is she doing at the moment?
-            'EH-exercise-type2-fillblank-q3': 'this week' // They are studying for their exams this week.
-        };
-        
-        // Correct answers for Type 3 exercises
-        const correctAnswersType3 = {
-            'EH-exercise-type3-sentenceorder-q1': 'Are you watching TV now ?',
-            'EH-exercise-type3-sentenceorder-q2': 'What are they doing at the moment ?',
-            'EH-exercise-type3-sentenceorder-q3': 'She is studying English right now'
-        };
-        
-        // Combined function to check all exercise types
-        function checkAllExercises() {
-            let totalScore = 0;
-            let totalQuestions = 0;
-            
-            // Check Type 1 exercises
-            const type1Score = ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            totalScore += type1Score;
-            totalQuestions += Object.keys(correctAnswersType1).length;
-            
-            // Check Type 2 exercises
-            const type2Score = ExerciseType2FillBlankCheckAnswers(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            totalScore += type2Score;
-            totalQuestions += Object.keys(correctAnswersType2).length;
-            
-            // Check Type 3 exercises
-            const type3Score = ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            totalScore += type3Score;
-            totalQuestions += Object.keys(correctAnswersType3).length;
-            
-            // Update combined score display
-            const scoreValue = document.getElementById('EH-exercise-type1-possibilities3-score-value');
-            const scoreFeedback = document.getElementById('EH-exercise-type1-possibilities3-score-feedback');
-            
-            if (scoreValue) scoreValue.textContent = `${totalScore}/${totalQuestions}`;
-            
-            if (scoreFeedback) {
-                if (totalScore === totalQuestions) {
-                    scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
-                } else if (totalScore >= totalQuestions * 0.7) {
-                    scoreFeedback.textContent = 'Good job! You did well on this exercise.';
-                } else if (totalScore >= totalQuestions * 0.5) {
-                    scoreFeedback.textContent = 'Not bad, but you might want to review the material again.';
-                } else {
-                    scoreFeedback.textContent = 'You might want to review the material and try again.';
+        window.I18N = {
+            en: {
+                common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                presentContinuous2: {
+                    title: { line1: "Present Continuous Tense II:", line2: "Questions & Adverbs", line3: "Master questions and time expressions correctly in the present continuous", line4: "lesson: 2/3" },
+                    questions: { title: "II. 1. Forming Questions in Present Continuous", heading: "Basic question structure & types", desc1: "📘 Question formation:", desc2: "In the present continuous, we form questions by inverting the subject and the appropriate form of \"to be\" (am, is, are). Types: Yes/No questions, Wh- questions, and negative questions." },
+                    toBe: {
+                        title: "II. 2. Questions with \"To Be\"", heading: "Yes/No and Wh- questions with to be", subject: "Subject", statement: "Statement", question: "Question",
+                        subjI: "I", stmtI: "I am studying English.", quesI: "Am I studying English?",
+                        subjYou: "You", stmtYou: "You are watching TV.", quesYou: "Are you watching TV?",
+                        subjHe: "He", stmtHe: "He is working now.", quesHe: "Is he working now?",
+                        subjShe: "She", stmtShe: "She is cooking dinner.", quesShe: "Is she cooking dinner?",
+                        subjWe: "We", stmtWe: "We are playing soccer.", quesWe: "Are we playing soccer?",
+                        subjThey: "They", stmtThey: "They are waiting for the bus.", quesThey: "Are they waiting for the bus?",
+                        wh1: "What are you doing?", wh2: "Where is she going?", wh3: "Why are they running?"
+                    },
+                    toHave: {
+                        title: "II. 3. Questions with \"To Have\"", heading: "Using \"to have\" as main verb in questions", subject: "Subject", statement: "Statement", question: "Question",
+                        subjI: "I", stmtI: "I am having a good time.", quesI: "Am I having a good time?",
+                        subjYou: "You", stmtYou: "You are having problems.", quesYou: "Are you having problems?",
+                        subjHe: "He", stmtHe: "He is having a party.", quesHe: "Is he having a party?",
+                        subjShe: "She", stmtShe: "She is having lunch.", quesShe: "Is she having lunch?",
+                        subjWe: "We", stmtWe: "We are having a meeting.", quesWe: "Are we having a meeting?",
+                        subjThey: "They", stmtThey: "They are having fun.", quesThey: "Are they having fun?",
+                        wh1: "What are you having for dinner?", wh2: "Where is she having her birthday party?"
+                    },
+                    other: {
+                        title: "II. 4. Questions with Other Verbs", heading: "General rule for all other verbs", subject: "Subject", statement: "Statement", question: "Question",
+                        subjI: "I", stmtI: "I am reading a book.", quesI: "Am I reading a book?",
+                        subjYou: "You", stmtYou: "You are studying for the exam.", quesYou: "Are you studying for the exam?",
+                        subjHe: "He", stmtHe: "He is playing football.", quesHe: "Is he playing football?",
+                        subjShe: "She", stmtShe: "She is writing a letter.", quesShe: "Is she writing a letter?",
+                        subjWe: "We", stmtWe: "We are watching a movie.", quesWe: "Are we watching a movie?",
+                        subjThey: "They", stmtThey: "They are cooking dinner.", quesThey: "Are they cooking dinner?",
+                        wh1: "What are you reading?", wh2: "Why are they laughing?", irregular: "Are you doing your homework? (do → doing)"
+                    },
+                    time: {
+                        title: "II. 5. Time Expressions in Present Continuous", heading: "Common time expressions & placement",
+                        expression: "Time Expression", meaning: "Meaning", example: "Example",
+                        expNow: "now", meaningNow: "at this moment", exNow: "I am studying now.",
+                        expRightNow: "right now", meaningRightNow: "at this exact moment", exRightNow: "She is calling you right now.",
+                        expAtMoment: "at the moment", meaningAtMoment: "currently", exAtMoment: "We are working at the moment.",
+                        expCurrently: "currently", meaningCurrently: "at the present time", exCurrently: "He is currently living in Paris.",
+                        expToday: "today", meaningToday: "on this day", exToday: "They are visiting their grandparents today.",
+                        expThisWeek: "this week", meaningThisWeek: "during the current week", exThisWeek: "I am working on a project this week.",
+                        placementTitle: "📘 Placement:", placementDesc: "Usually at the end of the sentence. For emphasis, at the beginning. In questions, at the end.",
+                        placementEx1: "Right now, I am studying English.", placementEx2: "Are you studying now?"
+                    },
+                    exercises: {
+                        title: "Practice: Questions & Time Expressions",
+                        q1: "Choose the correct question form: ______ you studying English now?", q1a: "Do", q1b: "Are", q1c: "Is",
+                        q2: "Choose the correct question form: ______ she watching TV right now?", q2a: "Do", q2b: "Does", q2c: "Is",
+                        q3: "Choose the correct question form: What ______ they doing at the moment?", q3a: "are", q3b: "do", q3c: "is",
+                        q4: "Choose the correct time expression placement: She ______ studying English. (now)", q4a: "now is", q4b: "is now", q4c: "is studying now",
+                        q5: "Choose the correct time expression: We are working on a project ______. (at this exact moment)", q5a: "today", q5b: "right now", q5c: "this week",
+                        q6: "Choose the correct verb form: ______ you ______ to the party tonight? (go)", q6a: "Are, going", q6b: "Do, go", q6c: "Are, go",
+                        q7: "Complete the question: ______ you watching TV now?",
+                        q8: "Complete the question: What ______ she doing at the moment?",
+                        q9: "Complete with the correct time expression: They are studying for their exams ______. (during the current week)",
+                        q10: "Arrange: Are, you, watching, TV, now, ?",
+                        q11: "Arrange: What, are, they, doing, at the moment, ?",
+                        q12: "Arrange: She, is, studying, English, right now"
+                    }
+                }
+            },
+            fr: {
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
+                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+                presentContinuous2: {
+                    title: { line1: "Présent Continu II :", line2: "Questions & Adverbes", line3: "Maîtrisez les questions et les expressions de temps au présent continu", line4: "leçon : 2/3" },
+                    questions: { title: "II. 1. Former des questions au présent continu", heading: "Structure de base et types", desc1: "📘 Formation des questions :", desc2: "Au présent continu, on forme les questions en inversant le sujet et la forme appropriée de 'to be' (am, is, are). Types : questions oui/non, questions Wh-, et questions négatives." },
+                    toBe: {
+                        title: "II. 2. Questions avec 'To Be'", heading: "Questions oui/non et Wh- avec to be", subject: "Sujet", statement: "Déclaration", question: "Question",
+                        subjI: "Je", stmtI: "Je suis en train d'étudier l'anglais.", quesI: "Suis-je en train d'étudier l'anglais ?",
+                        subjYou: "Tu", stmtYou: "Tu regardes la télé.", quesYou: "Regardes-tu la télé ?",
+                        subjHe: "Il", stmtHe: "Il travaille maintenant.", quesHe: "Travaille-t-il maintenant ?",
+                        subjShe: "Elle", stmtShe: "Elle prépare le dîner.", quesShe: "Prépare-t-elle le dîner ?",
+                        subjWe: "Nous", stmtWe: "Nous jouons au football.", quesWe: "Jouons-nous au football ?",
+                        subjThey: "Ils/Elles", stmtThey: "Ils attendent le bus.", quesThey: "Attendent-ils le bus ?",
+                        wh1: "Que fais-tu ?", wh2: "Où va-t-elle ?", wh3: "Pourquoi courent-ils ?"
+                    },
+                    toHave: {
+                        title: "II. 3. Questions avec 'To Have'", heading: "Utiliser 'to have' comme verbe principal", subject: "Sujet", statement: "Déclaration", question: "Question",
+                        subjI: "Je", stmtI: "Je m'amuse bien.", quesI: "Est-ce que je m'amuse bien ?",
+                        subjYou: "Tu", stmtYou: "Tu as des problèmes.", quesYou: "As-tu des problèmes ?",
+                        subjHe: "Il", stmtHe: "Il fait une fête.", quesHe: "Fait-il une fête ?",
+                        subjShe: "Elle", stmtShe: "Elle déjeune.", quesShe: "Déjeune-t-elle ?",
+                        subjWe: "Nous", stmtWe: "Nous avons une réunion.", quesWe: "Avons-nous une réunion ?",
+                        subjThey: "Ils/Elles", stmtThey: "Ils s'amusent.", quesThey: "S'amusent-ils ?",
+                        wh1: "Qu'est-ce que tu manges pour dîner ?", wh2: "Où fête-t-elle son anniversaire ?"
+                    },
+                    other: {
+                        title: "II. 4. Questions avec d'autres verbes", heading: "Règle générale pour tous les autres verbes", subject: "Sujet", statement: "Déclaration", question: "Question",
+                        subjI: "Je", stmtI: "Je lis un livre.", quesI: "Est-ce que je lis un livre ?",
+                        subjYou: "Tu", stmtYou: "Tu étudies pour l'examen.", quesYou: "Étudies-tu pour l'examen ?",
+                        subjHe: "Il", stmtHe: "Il joue au football.", quesHe: "Joue-t-il au football ?",
+                        subjShe: "Elle", stmtShe: "Elle écrit une lettre.", quesShe: "Écrit-elle une lettre ?",
+                        subjWe: "Nous", stmtWe: "Nous regardons un film.", quesWe: "Regardons-nous un film ?",
+                        subjThey: "Ils/Elles", stmtThey: "Ils préparent le dîner.", quesThey: "Préparent-ils le dîner ?",
+                        wh1: "Que lis-tu ?", wh2: "Pourquoi rient-ils ?", irregular: "Est-ce que tu fais tes devoirs ? (do → doing)"
+                    },
+                    time: {
+                        title: "II. 5. Expressions de temps au présent continu", heading: "Expressions courantes et placement",
+                        expression: "Expression", meaning: "Signification", example: "Exemple",
+                        expNow: "maintenant", meaningNow: "à cet instant", exNow: "J'étudie maintenant.",
+                        expRightNow: "tout de suite", meaningRightNow: "à cet instant précis", exRightNow: "Elle t'appelle tout de suite.",
+                        expAtMoment: "en ce moment", meaningAtMoment: "actuellement", exAtMoment: "Nous travaillons en ce moment.",
+                        expCurrently: "actuellement", meaningCurrently: "au moment présent", exCurrently: "Il vit actuellement à Paris.",
+                        expToday: "aujourd'hui", meaningToday: "ce jour", exToday: "Ils rendent visite à leurs grands-parents aujourd'hui.",
+                        expThisWeek: "cette semaine", meaningThisWeek: "pendant la semaine en cours", exThisWeek: "Je travaille sur un projet cette semaine.",
+                        placementTitle: "📘 Placement :", placementDesc: "Généralement à la fin de la phrase. Pour insister, au début. Dans les questions, à la fin.",
+                        placementEx1: "En ce moment, j'étudie l'anglais.", placementEx2: "Est-ce que tu étudies maintenant ?"
+                    }
+                }
+            },
+            ar: {
+                common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+                presentContinuous2: {
+                    title: { line1: "المضارع المستمر II:", line2: "الأدوات الاستفهامية والظروف", line3: "أتقن الأسئلة والتعبيرات الزمنية بشكل صحيح في المضارع المستمر", line4: "الدرس: 2/3" },
+                    questions: { title: "II. 1. تكوين الأسئلة في المضارع المستمر", heading: "بنية السؤال الأساسية والأنواع", desc1: "📘 تكوين السؤال:", desc2: "في المضارع المستمر، نشكل الأسئلة بعكس الفاعل والشكل المناسب من 'to be' (am, is, are). الأنواع: أسئلة بنعم/لا، أسئلة Wh-، وأسئلة منفية." },
+                    toBe: {
+                        title: "II. 2. أسئلة مع 'To Be'", heading: "أسئلة بنعم/لا و Wh- مع to be", subject: "الفاعل", statement: "الجملة الخبرية", question: "السؤال",
+                        subjI: "أنا", stmtI: "أنا أدرس الإنجليزية.", quesI: "هل أدرس الإنجليزية؟",
+                        subjYou: "أنت", stmtYou: "أنت تشاهد التلفاز.", quesYou: "هل تشاهد التلفاز؟",
+                        subjHe: "هو", stmtHe: "هو يعمل الآن.", quesHe: "هل يعمل الآن؟",
+                        subjShe: "هي", stmtShe: "هي تطهو العشاء.", quesShe: "هل تطهو العشاء؟",
+                        subjWe: "نحن", stmtWe: "نحن نلعب كرة القدم.", quesWe: "هل نلعب كرة القدم؟",
+                        subjThey: "هم", stmtThey: "هم ينتظرون الحافلة.", quesThey: "هل ينتظرون الحافلة؟",
+                        wh1: "ماذا تفعل؟", wh2: "أين تذهب؟", wh3: "لماذا يركضون؟"
+                    },
+                    toHave: {
+                        title: "II. 3. أسئلة مع 'To Have'", heading: "استخدام 'to have' كفعل رئيسي", subject: "الفاعل", statement: "الجملة الخبرية", question: "السؤال",
+                        subjI: "أنا", stmtI: "أنا أقضي وقتًا ممتعًا.", quesI: "هل أقضي وقتًا ممتعًا؟",
+                        subjYou: "أنت", stmtYou: "أنت تواجه مشاكل.", quesYou: "هل تواجه مشاكل؟",
+                        subjHe: "هو", stmtHe: "هو يقيم حفلة.", quesHe: "هل يقيم حفلة؟",
+                        subjShe: "هي", stmtShe: "هي تتناول الغداء.", quesShe: "هل تتناول الغداء؟",
+                        subjWe: "نحن", stmtWe: "نحن نعقد اجتماعًا.", quesWe: "هل نعقد اجتماعًا؟",
+                        subjThey: "هم", stmtThey: "هم يستمتعون.", quesThey: "هل يستمتعون؟",
+                        wh1: "ماذا تتناول على العشاء؟", wh2: "أين ستحتفل بعيد ميلادها؟"
+                    },
+                    other: {
+                        title: "II. 4. أسئلة مع أفعال أخرى", heading: "قاعدة عامة لجميع الأفعال الأخرى", subject: "الفاعل", statement: "الجملة الخبرية", question: "السؤال",
+                        subjI: "أنا", stmtI: "أنا أقرأ كتابًا.", quesI: "هل أقرأ كتابًا؟",
+                        subjYou: "أنت", stmtYou: "أنت تدرس للامتحان.", quesYou: "هل تدرس للامتحان؟",
+                        subjHe: "هو", stmtHe: "هو يلعب كرة القدم.", quesHe: "هل يلعب كرة القدم؟",
+                        subjShe: "هي", stmtShe: "هي تكتب رسالة.", quesShe: "هل تكتب رسالة؟",
+                        subjWe: "نحن", stmtWe: "نحن نشاهد فيلمًا.", quesWe: "هل نشاهد فيلمًا؟",
+                        subjThey: "هم", stmtThey: "هم يطهون العشاء.", quesThey: "هل يطهون العشاء؟",
+                        wh1: "ماذا تقرأ؟", wh2: "لماذا يضحكون؟", irregular: "هل تقوم بواجبك المنزلي؟ (do → doing)"
+                    },
+                    time: {
+                        title: "II. 5. التعبيرات الزمنية في المضارع المستمر", heading: "التعبيرات الزمنية الشائعة ومواضعها",
+                        expression: "التعبير الزمني", meaning: "المعنى", example: "مثال",
+                        expNow: "الآن", meaningNow: "في هذه اللحظة", exNow: "أنا أدرس الآن.",
+                        expRightNow: "حالاً", meaningRightNow: "في هذه اللحظة بالضبط", exRightNow: "هي تتصل بك حالاً.",
+                        expAtMoment: "في هذه اللحظة", meaningAtMoment: "حاليًا", exAtMoment: "نحن نعمل في هذه اللحظة.",
+                        expCurrently: "حاليًا", meaningCurrently: "في الوقت الحاضر", exCurrently: "هو يعيش حاليًا في باريس.",
+                        expToday: "اليوم", meaningToday: "في هذا اليوم", exToday: "هم يزورون أجدادهم اليوم.",
+                        expThisWeek: "هذا الأسبوع", meaningThisWeek: "خلال الأسبوع الحالي", exThisWeek: "أنا أعمل على مشروع هذا الأسبوع.",
+                        placementTitle: "📘 الموضع:", placementDesc: "عادة في نهاية الجملة. للتوكيد، في البداية. في الأسئلة، في النهاية.",
+                        placementEx1: "الآن، أنا أدرس الإنجليزية.", placementEx2: "هل تدرس الآن؟"
+                    }
                 }
             }
-            
-            return totalScore;
-        }
-        
-        // Initialize when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set up answer checking for all exercise types
-            ExerciseType1Possibilities3Init(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            ExerciseType2FillBlankInit(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            ExerciseType3SentenceOrderInit(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            
-            // Replace the default check button with our combined function
-            const checkButton = document.getElementById('EH-exercise-type1-possibilities3-check-answers');
-            if (checkButton) {
-                checkButton.addEventListener('click', checkAllExercises);
-            }
+        };
+    </script>
+    <script src="scripts/translation-refraction.js"></script>
+    <script src="scripts/exercise-conjugation.js"></script>
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
+    <script>
+        const correctAnswersType1 = buildMultipleChoiceExercise({
+            containerId: 'mc-exercises', prefix: 'EH-exercise-type1-possibilities3',
+            questions: [
+                { questionTextKey: 'presentContinuous2.exercises.q1', options: [{ value: 'a', labelKey: 'presentContinuous2.exercises.q1a' }, { value: 'b', labelKey: 'presentContinuous2.exercises.q1b' }, { value: 'c', labelKey: 'presentContinuous2.exercises.q1c' }], correctAnswer: 'b' },
+                { questionTextKey: 'presentContinuous2.exercises.q2', options: [{ value: 'a', labelKey: 'presentContinuous2.exercises.q2a' }, { value: 'b', labelKey: 'presentContinuous2.exercises.q2b' }, { value: 'c', labelKey: 'presentContinuous2.exercises.q2c' }], correctAnswer: 'c' },
+                { questionTextKey: 'presentContinuous2.exercises.q3', options: [{ value: 'a', labelKey: 'presentContinuous2.exercises.q3a' }, { value: 'b', labelKey: 'presentContinuous2.exercises.q3b' }, { value: 'c', labelKey: 'presentContinuous2.exercises.q3c' }], correctAnswer: 'a' },
+                { questionTextKey: 'presentContinuous2.exercises.q4', options: [{ value: 'a', labelKey: 'presentContinuous2.exercises.q4a' }, { value: 'b', labelKey: 'presentContinuous2.exercises.q4b' }, { value: 'c', labelKey: 'presentContinuous2.exercises.q4c' }], correctAnswer: 'c' },
+                { questionTextKey: 'presentContinuous2.exercises.q5', options: [{ value: 'a', labelKey: 'presentContinuous2.exercises.q5a' }, { value: 'b', labelKey: 'presentContinuous2.exercises.q5b' }, { value: 'c', labelKey: 'presentContinuous2.exercises.q5c' }], correctAnswer: 'b' },
+                { questionTextKey: 'presentContinuous2.exercises.q6', options: [{ value: 'a', labelKey: 'presentContinuous2.exercises.q6a' }, { value: 'b', labelKey: 'presentContinuous2.exercises.q6b' }, { value: 'c', labelKey: 'presentContinuous2.exercises.q6c' }], correctAnswer: 'a' }
+            ]
         });
+        const correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises', prefix: 'fill',
+            questions: [
+                { questionTextKey: 'presentContinuous2.exercises.q7', answers: ['Are'] },
+                { questionTextKey: 'presentContinuous2.exercises.q8', answers: ['is'] },
+                { questionTextKey: 'presentContinuous2.exercises.q9', answers: ['this week'] }
+            ]
+        });
+        const correctAnswersType3 = buildSentenceOrderingExercise({
+            containerId: 'order-exercises', prefix: 'order',
+            questions: [
+                { questionTextKey: 'presentContinuous2.exercises.q10', words: ['Are', 'you', 'watching', 'TV', 'now', '?'], correctSentence: 'Are you watching TV now ?' },
+                { questionTextKey: 'presentContinuous2.exercises.q11', words: ['What', 'are', 'they', 'doing', 'at the moment', '?'], correctSentence: 'What are they doing at the moment ?' },
+                { questionTextKey: 'presentContinuous2.exercises.q12', words: ['She', 'is', 'studying', 'English', 'right now'], correctSentence: 'She is studying English right now' }
+            ]
+        });
+        function checkAllExercises() {
+            let totalScore = 0, totalQuestions = 0;
+            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3'); totalQuestions += 6;
+            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill'); totalQuestions += 3;
+            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order'); totalQuestions += 3;
+            const scoreEl = document.getElementById('score-value');
+            const fbEl = document.getElementById('score-feedback');
+            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+            if (fbEl) {
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered present continuous questions!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit question formation.';
+                else fbEl.textContent = 'Review the lesson and try again.';
+            }
+            document.getElementById('score-display').style.display = 'block';
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+            document.getElementById('check-all').addEventListener('click', checkAllExercises);
+        });
+        (function() {
+            function applyHtmlI18n() {
+                const lang = document.getElementById('language-selector').value;
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                    if (translation) el.textContent = translation;
+                });
+            }
+            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+        })();
     </script>
 </body>
 </html>

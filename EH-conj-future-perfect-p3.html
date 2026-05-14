@@ -3,217 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Perfect: Negative, Passive & Idioms - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <title>Future Perfect III: Negative, Passive & Idioms - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-        /* ---------- Theme (future perfect p3 palette) ---------- */
         :root {
-            --bg-gradient: linear-gradient(135deg, #B03A2E, #E67E22, #F8C291);
-            --title-color: #B03A2E;
-            --primary: #E67E22;
-            --primary-hover: #B03A2E;
-            --primary-light: #F8C291;
-            --accent: #F8C291;
-            --rule-bg: #fdebd0;
-            --rule-border: #F8C291;
-            --example-bg: #fdebd0;
-            --example-border: #F8C291;
-            --exercise-number-gradient: linear-gradient(135deg, #E67E22, #F8C291);
-            --nav-btn-bg: #E67E22;
-            --nav-btn-hover: #B03A2E;
-            --nav-back-btn-bg: #F8C291;
-            --nav-back-btn-color: #92400e;
-            --nav-back-btn-hover: #E67E22;
-
-            /* ---------- Universal / Neutral (same for all pages) ---------- */
-            --header-text: white;
-            --header-text-light: rgba(255, 255, 255, 0.9);
-            --content-bg: rgba(255, 255, 255, 0.95);
-            --text-color: #333;
-            --white: white;
-            --section-divider: #e0e0e0;
-            --card-bg: white;
-            --subsection-bg: white;
-            --card-border: #e0e0e0;
-            --input-border: #e0e0e0;
-            --dashed-border: #e0e0e0;
-            --table-border: #ddd;
-            --table-stripe: #f2f2f2;
-            --correct-bg: #d4edda;
-            --correct-color: #155724;
-            --correct-border: #c3e6cb;
-            --incorrect-bg: #f8d7da;
-            --incorrect-color: #721c24;
-            --incorrect-border: #f5c6cb;
+            --bg-gradient: linear-gradient(135deg, #e2d4f0, #d4c4e8, #c2b0dc, #b49ed4);
+            --content-bg: #faf8fe;
+            --card-bg: #ffffff;
+            --subsection-bg: #f5f0fc;
+            --rule-bg: #efe8fa;
+            --example-bg: #e8e0f5;
+            --table-stripe: #f2ecfa;
+            --title-color: #4a2c6e;
+            --text-color: #36284a;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #7b5cb8;
+            --primary-hover: #644a9a;
+            --primary-light: #9478c8;
+            --accent: #886cc4;
+            --exercise-number-gradient: linear-gradient(135deg, #7b5cb8, #5a3e8a);
+            --rule-border: #7b5cb8;
+            --example-border: #7b5cb8;
+            --nav-btn-bg: #7b5cb8;
+            --nav-btn-hover: #644a9a;
+            --nav-back-btn-bg: #886cc4;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #7b5cb8;
+            --refract-divider-color: #b8a4dc;
+            --refract-translation-bg: #ede6f8;
+            --refract-translation-border: #7b5cb8;
+            --refract-english-color: #36284a;
+            --section-divider: #dcd0f0;
+            --card-border: #dcd0f0;
+            --input-border: #c8b8e0;
+            --dashed-border: #c8b8e0;
+            --table-border: #d4c4e8;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #f0ecf6;
+            --neutral-color: #5a4a74;
+            --neutral-border: #c8b8dc;
+            --empty-input-border: #b8a4d4;
+            --empty-input-bg: #faf7fe;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #7b5cb8;
+            --language-selector-color: #36284a;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #2a1e42, #342654, #3e2e66, #483678);
+            --content-bg: #241e3a;
+            --card-bg: #2e2848;
+            --subsection-bg: #2e2848;
+            --rule-bg: #241e3a;
+            --example-bg: #241e3a;
+            --table-stripe: #282240;
+            --title-color: #c8b4f0;
+            --text-color: #ddd4f0;
+            --header-text: #ddd4f0;
+            --header-text-light: #b4a4d8;
+            --primary: #9a7cdc;
+            --primary-hover: #ac92e8;
+            --primary-light: #9a7cdc;
+            --accent: #9a7cdc;
+            --rule-border: #9a7cdc;
+            --example-border: #9a7cdc;
+            --exercise-number-gradient: linear-gradient(135deg, #9a7cdc, #7b5cb8);
+            --nav-btn-bg: #9a7cdc;
+            --nav-btn-hover: #7b5cb8;
+            --nav-back-btn-bg: #ac92e8;
+            --nav-back-btn-color: #0e0822;
+            --nav-back-btn-hover: #9a7cdc;
+            --refract-divider-color: #b8a0e8;
+            --refract-translation-bg: #3a2c60;
+            --refract-translation-border: #b8a0e8;
+            --refract-english-color: #e8dcf8;
+            --section-divider: #342a58;
+            --card-border: #342a58;
+            --input-border: #4a3a78;
+            --dashed-border: #4a3a78;
+            --table-border: #3e3268;
+            --white: #e8e0f8;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #322a50;
+            --neutral-color: #c8bce8;
+            --neutral-border: #4a3a78;
+            --empty-input-border: #4a3a78;
+            --empty-input-bg: #241e3a;
+            --language-selector-bg: #2e2848;
+            --language-selector-border: #9a7cdc;
+            --language-selector-color: #ddd4f0;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
-    <link rel="stylesheet" href="styles/style-conjugation.css">
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="futurePerfect3.title">Future Perfect Tense: Negative, Passive & Idioms</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="futurePerfect3.subtitle">Master negative constructions, the passive voice, and idiomatic expressions in the future perfect</p>
-        </header>
-        
-        <div class="EH-conjugation-content">
-            <!-- Introduction -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect3.introduction.title">Beyond Statements</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📌</span>
-                        <span data-i18n="futurePerfect3.introduction.whatIs">Expanding Your Future Perfect Skills</span>
-                    </h3>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect3.introduction.definitionTitle">Overview:</div>
-                        <p data-i18n="futurePerfect3.introduction.definition">The future perfect is not only for simple statements. You can use it in negative forms, passive constructions, and a variety of idiomatic expressions that add nuance to your English.</p>
-                    </div>
-                </div>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="futurePerfect3.title.line1">Future Perfect Tense: III:</div>
+                <div class="EH-conjugation-title-line" data-i18n="futurePerfect3.title.line2">Negative, Passive & Idioms</div>
+                <div class="EH-conjugation-subtitle" data-i18n="futurePerfect3.title.line3">Negative constructions, the passive voice, and idiomatic expressions in the future perfect</div>
+                <div class="EH-conjugation-subtitle" data-i18n="futurePerfect3.title.line4">lesson: 3/3</div>
             </div>
-            
-            <!-- Negative Forms -->
+        </header>
+        <div class="EH-conjugation-content">
+            <!-- Section 1: Negative Forms -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect3.negative.title">Negative Forms in Future Perfect</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect3.negative.title">III. 1. Negative Forms in Future Perfect</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">❌</span>
-                        <span data-i18n="futurePerfect3.negative.conjugation">How to Form Negatives</span>
+                        <span class="EH-conjugation-subsection-icon">🚫</span>
+                        <span data-i18n="futurePerfect3.negative.heading">How to form negatives</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect3.negative.ruleTitle">Basic Rule:</div>
-                        <p data-i18n="futurePerfect3.negative.rule">Add "not" after the auxiliary "will" (contraction: won't) + "have" + past participle for all subjects.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect3.negative.example1">I will not (won't) have finished my work.</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect3.negative.example2">She will not have been to London.</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect3.negative.example3">They will not have had breakfast by then.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect3.negative.desc1">📘 Basic Rule:</div>
+                        <p data-i18n="futurePerfect3.negative.desc2">Add "not" after the auxiliary "will" (contraction: won't) + "have" + past participle for all subjects.</p>
                     </div>
-                    
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="futurePerfect3.negative.ex1">I will not (won't) have finished my work.</div>
+                        <div class="EH-conjugation-example" data-i18n="futurePerfect3.negative.ex2">She will not have been to London.</div>
+                        <div class="EH-conjugation-example" data-i18n="futurePerfect3.negative.ex3">They will not have had breakfast by then.</div>
+                    </div>
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr><th data-i18n="common.subject">Subject</th><th data-i18n="common.negativeForm">Negative</th><th data-i18n="common.example">Example</th></tr>
-                        </thead>
+                        <thead><tr><th data-i18n="futurePerfect3.negative.subject">Subject</th><th data-i18n="futurePerfect3.negative.negativeForm">Negative Form</th><th data-i18n="futurePerfect3.negative.example">Example</th></tr></thead>
                         <tbody>
-                            <tr><td data-i18n="futurePerfect3.negative.table.subject.I">I</td><td data-i18n="futurePerfect3.negative.table.negative.I">will not / won't have worked</td><td data-i18n="futurePerfect3.negative.table.example.I">I won't have worked there by June.</td></tr>
-                            <tr><td data-i18n="futurePerfect3.negative.table.subject.You">You</td><td data-i18n="futurePerfect3.negative.table.negative.You">will not / won't have worked</td><td data-i18n="futurePerfect3.negative.table.example.You">You won't have worked long enough.</td></tr>
-                            <tr><td data-i18n="futurePerfect3.negative.table.subject.He">He</td><td data-i18n="futurePerfect3.negative.table.negative.He">will not / won't have worked</td><td data-i18n="futurePerfect3.negative.table.example.He">He won't have worked at that company.</td></tr>
-                            <tr><td data-i18n="futurePerfect3.negative.table.subject.She">She</td><td data-i18n="futurePerfect3.negative.table.negative.She">will not / won't have been</td><td data-i18n="futurePerfect3.negative.table.example.She">She won't have been to Paris.</td></tr>
-                            <tr><td data-i18n="futurePerfect3.negative.table.subject.It">It</td><td data-i18n="futurePerfect3.negative.table.negative.It">will not / won't have worked</td><td data-i18n="futurePerfect3.negative.table.example.It">It won't have worked properly.</td></tr>
-                            <tr><td data-i18n="futurePerfect3.negative.table.subject.We">We</td><td data-i18n="futurePerfect3.negative.table.negative.We">will not / won't have had</td><td data-i18n="futurePerfect3.negative.table.example.We">We won't have had time.</td></tr>
-                            <tr><td data-i18n="futurePerfect3.negative.table.subject.They">They</td><td data-i18n="futurePerfect3.negative.table.negative.They">will not / won't have seen</td><td data-i18n="futurePerfect3.negative.table.example.They">They won't have seen the movie.</td></tr>
+                            <tr><td>I</td><td>will not / won't have worked</td><td data-i18n="futurePerfect3.negative.exI">I won't have worked there by June.</td></tr>
+                            <tr><td>You</td><td>will not / won't have worked</td><td data-i18n="futurePerfect3.negative.exYou">You won't have worked long enough.</td></tr>
+                            <tr><td>He</td><td>will not / won't have worked</td><td data-i18n="futurePerfect3.negative.exHe">He won't have worked at that company.</td></tr>
+                            <tr><td>She</td><td>will not / won't have been</td><td data-i18n="futurePerfect3.negative.exShe">She won't have been to Paris.</td></tr>
+                            <tr><td>It</td><td>will not / won't have worked</td><td data-i18n="futurePerfect3.negative.exIt">It won't have worked properly.</td></tr>
+                            <tr><td>We</td><td>will not / won't have had</td><td data-i18n="futurePerfect3.negative.exWe">We won't have had time.</td></tr>
+                            <tr><td>They</td><td>will not / won't have seen</td><td data-i18n="futurePerfect3.negative.exThey">They won't have seen the movie.</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            
-            <!-- Passive Voice -->
+            <!-- Section 2: Passive Voice -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect3.passive.title">Passive Voice in Future Perfect</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect3.passive.title">III. 2. Passive Voice in Future Perfect</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">🔄</span>
-                        <span data-i18n="futurePerfect3.passive.conjugation">Forming the Passive</span>
+                        <span data-i18n="futurePerfect3.passive.heading">Forming the passive</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect3.passive.ruleTitle">Structure:</div>
-                        <p data-i18n="futurePerfect3.passive.rule">The passive in future perfect is formed with: <strong>will have been + past participle</strong>. The agent may be mentioned with "by".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect3.passive.example1">The work will have been finished by 6 PM.</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect3.passive.example2">All the tickets will have been sold by noon.</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect3.passive.example3">Will the report have been completed by then?</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect3.passive.desc1">📘 Structure:</div>
+                        <p data-i18n="futurePerfect3.passive.desc2">The passive in future perfect is formed with: <strong>will have been + past participle</strong>. The agent may be mentioned with "by".</p>
                     </div>
-                    
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="futurePerfect3.passive.ex1">The work will have been finished by 6 PM.</div>
+                        <div class="EH-conjugation-example" data-i18n="futurePerfect3.passive.ex2">All the tickets will have been sold by noon.</div>
+                        <div class="EH-conjugation-example" data-i18n="futurePerfect3.passive.ex3">Will the report have been completed by then?</div>
+                    </div>
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr><th data-i18n="common.subject">Subject</th><th data-i18n="common.active">Active</th><th data-i18n="common.passive">Passive</th></tr>
-                        </thead>
+                        <thead><tr><th data-i18n="futurePerfect3.passive.subject">Subject</th><th data-i18n="futurePerfect3.passive.active">Active</th><th data-i18n="futurePerfect3.passive.passive">Passive</th></tr></thead>
                         <tbody>
-                            <tr><td data-i18n="futurePerfect3.passive.table.subject.report">The report</td><td data-i18n="futurePerfect3.passive.table.active.report">They will have finished it.</td><td data-i18n="futurePerfect3.passive.table.passive.report">It will have been finished.</td></tr>
-                            <tr><td data-i18n="futurePerfect3.passive.table.subject.cake">The cake</td><td data-i18n="futurePerfect3.passive.table.active.cake">She will have baked it.</td><td data-i18n="futurePerfect3.passive.table.passive.cake">It will have been baked.</td></tr>
-                            <tr><td data-i18n="futurePerfect3.passive.table.subject.decision">The decision</td><td data-i18n="futurePerfect3.passive.table.active.decision">We will have made it.</td><td data-i18n="futurePerfect3.passive.table.passive.decision">It will have been made.</td></tr>
-                            <tr><td data-i18n="futurePerfect3.passive.table.subject.keys">The keys</td><td data-i18n="futurePerfect3.passive.table.active.keys">He will have lost them.</td><td data-i18n="futurePerfect3.passive.table.passive.keys">They will have been lost.</td></tr>
+                            <tr><td>The report</td><td data-i18n="futurePerfect3.passive.actReport">They will have finished it.</td><td data-i18n="futurePerfect3.passive.passReport">It will have been finished.</td></tr>
+                            <tr><td>The cake</td><td data-i18n="futurePerfect3.passive.actCake">She will have baked it.</td><td data-i18n="futurePerfect3.passive.passCake">It will have been baked.</td></tr>
+                            <tr><td>The decision</td><td data-i18n="futurePerfect3.passive.actDecision">We will have made it.</td><td data-i18n="futurePerfect3.passive.passDecision">It will have been made.</td></tr>
+                            <tr><td>The keys</td><td data-i18n="futurePerfect3.passive.actKeys">He will have lost them.</td><td data-i18n="futurePerfect3.passive.passKeys">They will have been lost.</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            
-            <!-- Idiomatic Expressions -->
+            <!-- Section 3: Idiomatic Expressions -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect3.idioms.title">Idiomatic Expressions with Future Perfect</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect3.idioms.title">III. 3. Idiomatic Expressions with Future Perfect</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">✨</span>
-                        <span data-i18n="futurePerfect3.idioms.conjugation">Common Adverbs & Fixed Patterns</span>
+                        <span class="EH-conjugation-subsection-icon">💡</span>
+                        <span data-i18n="futurePerfect3.idioms.heading">Common adverbs & fixed patterns</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect3.idioms.alreadyJustTitle">already / just / never / ever</div>
-                        <p data-i18n="futurePerfect3.idioms.alreadyJustRule">These adverbs usually go after "will have" but before the past participle.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect3.idioms.alreadyExample">I will have already finished by then.</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect3.idioms.justExample">She will have just arrived.</div>
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect3.idioms.neverExample">He will have never seen snow.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect3.idioms.adverbsTitle">📘 already / just / never / ever:</div>
+                        <p data-i18n="futurePerfect3.idioms.adverbsDesc">These adverbs usually go after "will have" but before the past participle. Examples: <em>I will have already finished by then. She will have just arrived. He will have never seen snow.</em></p>
                     </div>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect3.idioms.byTheTimeTitle">by the time / by then</div>
-                        <p data-i18n="futurePerfect3.idioms.byTheTimeRule">These time expressions are frequently used with future perfect to set a deadline.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect3.idioms.byTheTimeExample">By the time you arrive, we will have left.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect3.idioms.byTitle">📘 by the time / by then:</div>
+                        <p data-i18n="futurePerfect3.idioms.byDesc">These time expressions are frequently used with future perfect to set a deadline. Example: <em>By the time you arrive, we will have left.</em></p>
                     </div>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect3.idioms.surelyDoubtTitle">surely / no doubt / likely</div>
-                        <p data-i18n="futurePerfect3.idioms.surelyDoubtRule">Used to express assumptions about completed actions in the future.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="futurePerfect3.idioms.surelyExample">They will surely have heard the news by now.</div>
-                        </div>
+                        <div class="EH-conjugation-rule-title" data-i18n="futurePerfect3.idioms.surelyTitle">📘 surely / no doubt / likely:</div>
+                        <p data-i18n="futurePerfect3.idioms.surelyDesc">Used to express assumptions about completed actions in the future. Example: <em>They will surely have heard the news by now.</em></p>
                     </div>
                 </div>
             </div>
-            
-            <!-- EXERCISES (12) – dynamic slots -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect3.exercises.title">Practice Exercises</h2>
-                
-                <!-- 6 Multiple Choice -->
-                <h3 style="color: #B03A2E; margin-bottom: 20px;">Multiple Choice</h3>
+                <h2 class="EH-conjugation-section-title" data-i18n="futurePerfect3.exercises.title">Practice: Negative, Passive & Idioms</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
                 <div class="EH-exercise-container" id="mc-exercises"></div>
-                
-                <!-- 3 Fill in the Blank -->
-                <h3 style="color: #B03A2E; margin: 40px 0 20px 0;">Fill in the Blank</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
                 <div class="EH-exercise-container" id="fill-exercises"></div>
-                
-                <!-- 3 Sentence Ordering -->
-                <h3 style="color: #B03A2E; margin: 40px 0 20px 0;">Sentence Ordering</h3>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
                 <div class="EH-exercise-container" id="order-exercises"></div>
-                
-                <!-- Score & check button -->
                 <div class="EH-exercise-type1-possibilities3-answers-control">
                     <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
                     <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
@@ -223,371 +236,132 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Navigation (modular pattern) -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-future-perfect-p2.html'">
-                    <span data-i18n="common.previousLesson">← Previous Lesson</span>
-                </button>
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-future-perfect-p4.html'">
-                    <span data-i18n="common.nextLesson">Next Lesson →</span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.returnToConjugation">← Return to Conjugation</span>
-                </button>
-            </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
     <script>
         window.I18N = {
             en: {
-                common: {
-                    siteName: "English Hub",
-                    previousLesson: "← Previous Lesson",
-                    returnToConjugation: "← Return to Conjugation",
-                    nextLesson: "Next Lesson →",
-                    subject: "Subject",
-                    conjugation: "Conjugation",
-                    example: "Example",
-                    examples: "Examples:",
-                    i: "I", you: "You", he: "He", she: "She", it: "It", we: "We", they: "They",
-                    verb: "Verb", negativeForm: "Negative", active: "Active", passive: "Passive"
-                },
-                footer: {
-                    developer: "Developer: Mejri Ziad",
-                    privacy: "Privacy Policy",
-                    terms: "Terms of Service",
-                    contact: "Contact"
-                },
+                common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
                 futurePerfect3: {
-                    title: "Future Perfect Tense: Negative, Passive & Idioms",
-                    subtitle: "Master negative constructions, the passive voice, and idiomatic expressions in the future perfect",
-                    introduction: { title: "Beyond Statements", whatIs: "Expanding Your Future Perfect Skills", definitionTitle: "Overview:", definition: "The future perfect is not only for simple statements. You can use it in negative forms, passive constructions, and a variety of idiomatic expressions that add nuance to your English." },
-                    negative: {
-                        title: "Negative Forms in Future Perfect", conjugation: "How to Form Negatives", ruleTitle: "Basic Rule:", rule: "Add \"not\" after the auxiliary \"will\" (contraction: won't) + \"have\" + past participle for all subjects.",
-                        example1: "I will not (won't) have finished my work.", example2: "She will not have been to London.", example3: "They will not have had breakfast by then.",
-                        table: {
-                            subject: { I: "I", You: "You", He: "He", She: "She", It: "It", We: "We", They: "They" },
-                            negative: { I: "will not / won't have worked", You: "will not / won't have worked", He: "will not / won't have worked", She: "will not / won't have been", It: "will not / won't have worked", We: "will not / won't have had", They: "will not / won't have seen" },
-                            example: { I: "I won't have worked there by June.", You: "You won't have worked long enough.", He: "He won't have worked at that company.", She: "She won't have been to Paris.", It: "It won't have worked properly.", We: "We won't have had time.", They: "They won't have seen the movie." }
-                        }
-                    },
-                    passive: {
-                        title: "Passive Voice in Future Perfect", conjugation: "Forming the Passive", ruleTitle: "Structure:", rule: "The passive in future perfect is formed with: will have been + past participle. The agent may be mentioned with \"by\".",
-                        example1: "The work will have been finished by 6 PM.", example2: "All the tickets will have been sold by noon.", example3: "Will the report have been completed by then?",
-                        table: {
-                            subject: { report: "The report", cake: "The cake", decision: "The decision", keys: "The keys" },
-                            active: { report: "They will have finished it.", cake: "She will have baked it.", decision: "We will have made it.", keys: "He will have lost them." },
-                            passive: { report: "It will have been finished.", cake: "It will have been baked.", decision: "It will have been made.", keys: "They will have been lost." }
-                        }
-                    },
-                    idioms: {
-                        title: "Idiomatic Expressions with Future Perfect", conjugation: "Common Adverbs & Fixed Patterns",
-                        alreadyJustTitle: "already / just / never / ever", alreadyJustRule: "These adverbs usually go after \"will have\" but before the past participle.",
-                        alreadyExample: "I will have already finished by then.", justExample: "She will have just arrived.", neverExample: "He will have never seen snow.",
-                        byTheTimeTitle: "by the time / by then", byTheTimeRule: "These time expressions are frequently used with future perfect to set a deadline.",
-                        byTheTimeExample: "By the time you arrive, we will have left.",
-                        surelyDoubtTitle: "surely / no doubt / likely", surelyDoubtRule: "Used to express assumptions about completed actions in the future.",
-                        surelyExample: "They will surely have heard the news by now."
-                    },
+                    title: { line1: "Future Perfect Tense: III:", line2: "Negative, Passive & Idioms", line3: "Negative constructions, the passive voice, and idiomatic expressions in the future perfect", line4: "lesson: 3/3" },
+                    negative: { title: "III. 1. Negative Forms in Future Perfect", heading: "How to form negatives", desc1: "📘 Basic Rule:", desc2: "Add 'not' after the auxiliary 'will' (contraction: won't) + 'have' + past participle for all subjects.", ex1: "I will not (won't) have finished my work.", ex2: "She will not have been to London.", ex3: "They will not have had breakfast by then.", subject: "Subject", negativeForm: "Negative Form", example: "Example", exI: "I won't have worked there by June.", exYou: "You won't have worked long enough.", exHe: "He won't have worked at that company.", exShe: "She won't have been to Paris.", exIt: "It won't have worked properly.", exWe: "We won't have had time.", exThey: "They won't have seen the movie." },
+                    passive: { title: "III. 2. Passive Voice in Future Perfect", heading: "Forming the passive", desc1: "📘 Structure:", desc2: "The passive in future perfect is formed with: will have been + past participle. The agent may be mentioned with 'by'.", ex1: "The work will have been finished by 6 PM.", ex2: "All the tickets will have been sold by noon.", ex3: "Will the report have been completed by then?", subject: "Subject", active: "Active", passive: "Passive", actReport: "They will have finished it.", passReport: "It will have been finished.", actCake: "She will have baked it.", passCake: "It will have been baked.", actDecision: "We will have made it.", passDecision: "It will have been made.", actKeys: "He will have lost them.", passKeys: "They will have been lost." },
+                    idioms: { title: "III. 3. Idiomatic Expressions with Future Perfect", heading: "Common adverbs & fixed patterns", adverbsTitle: "📘 already / just / never / ever:", adverbsDesc: "These adverbs usually go after 'will have' but before the past participle. Examples: I will have already finished by then. She will have just arrived. He will have never seen snow.", byTitle: "📘 by the time / by then:", byDesc: "These time expressions are frequently used with future perfect to set a deadline. Example: By the time you arrive, we will have left.", surelyTitle: "📘 surely / no doubt / likely:", surelyDesc: "Used to express assumptions about completed actions in the future. Example: They will surely have heard the news by now." },
                     exercises: {
-                        title: "Practice Exercises",
-                        q1: "Choose the correct negative form:", q1Sentence: "I ______ my work by 5 PM.", q1a: "won't have finished", q1b: "will have not finished", q1c: "will not finish",
-                        q2: "Choose the correct passive form:", q2Sentence: "The report ______ by Monday.", q2a: "will have been completed", q2b: "will have completed", q2c: "will be completed",
-                        q3: "Choose the correct negative with \"to be\":", q3Sentence: "She ______ to Paris before 2026.", q3a: "won't have been", q3b: "will have not been", q3c: "will not be",
-                        q4: "Choose the correct passive:", q4Sentence: "The tickets ______ by tomorrow.", q4a: "will have been sold", q4b: "will have sold", q4c: "will be sold",
-                        q5: "Choose the correct adverb placement:", q5Sentence: "They ______ left by the time we arrive.", q5a: "will have already", q5b: "will already have", q5c: "already will have",
-                        q6: "Choose the correct time expression:", q6Sentence: "We will have left ______ you arrive.", q6a: "by the time", q6b: "while", q6c: "during",
-                        q7: "Complete with negative future perfect:", q7Sentence: "He ______ (finish) the project by Friday.",
-                        q8: "Complete with passive:", q8Sentence: "The documents ______ (send) before the meeting.",
-                        q9: "Insert the correct adverb (already/just/never):", q9Sentence: "She will have ______ left when you call. (before that time)",
-                        q10: "Arrange the negative sentence:",
-                        q11: "Arrange the passive sentence:",
-                        q12: "Arrange the sentence with adverb:"
+                        title: "Practice: Negative, Passive & Idioms",
+                        q1: "I ______ my work by 5 PM.", q1a: "won't have finished", q1b: "will have not finished", q1c: "will not finish",
+                        q2: "The report ______ by Monday.", q2a: "will have been completed", q2b: "will have completed", q2c: "will be completed",
+                        q3: "She ______ to Paris before 2026.", q3a: "won't have been", q3b: "will have not been", q3c: "will not be",
+                        q4: "The tickets ______ by tomorrow.", q4a: "will have been sold", q4b: "will have sold", q4c: "will be sold",
+                        q5: "They ______ left by the time we arrive.", q5a: "will have already", q5b: "will already have", q5c: "already will have",
+                        q6: "We will have left ______ you arrive.", q6a: "by the time", q6b: "while", q6c: "during",
+                        q7: "He ______ (finish) the project by Friday. (negative future perfect)",
+                        q8: "The documents ______ (send) before the meeting. (passive)",
+                        q9: "She will have ______ left when you call.",
+                        q10: "Arrange negative sentence: (They / will / not / have / arrived / by then / .)",
+                        q11: "Arrange passive sentence: (The work / will / have / been / finished / by tomorrow / .)",
+                        q12: "Arrange sentence with adverb: (I / will / have / already / left / .)"
                     }
                 }
             },
             fr: {
-                common: {
-                    siteName: "English Hub",
-                    previousLesson: "← Previous Lesson (Leçon Précédente)",
-                    returnToConjugation: "← Return to Conjugation (Retour au Conjugaison)",
-                    nextLesson: "Next Lesson (Leçon Suivante) →",
-                    subject: "Sujet", conjugation: "Conjugaison", example: "Exemple", examples: "Exemples :",
-                    i: "Je", you: "Vous", he: "Il", she: "Elle", it: "Il/Elle", we: "Nous", they: "Ils/Elles",
-                    verb: "Verbe", negativeForm: "Négatif", active: "Actif", passive: "Passif"
-                },
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
                 footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
                 futurePerfect3: {
-                    title: "Future Perfect Tense: Negative, Passive & Idioms (Future Perfect : Négatif, Passif et Expressions idiomatiques)",
-                    subtitle: "Master negative constructions, the passive voice, and idiomatic expressions in the future perfect (Maîtrisez les formes négatives, la voix passive et les expressions idiomatiques au future perfect)",
-                    introduction: { title: "Beyond Statements (Au-delà des affirmations)", whatIs: "Expanding Your Future Perfect Skills (Élargissez vos compétences en future perfect)", definitionTitle: "Overview: (Aperçu :)", definition: "The future perfect is not only for simple statements. You can use it in negative forms, passive constructions, and a variety of idiomatic expressions that add nuance to your English. (Le future perfect ne sert pas seulement pour des affirmations simples. Vous pouvez l'utiliser dans des formes négatives, des constructions passives et diverses expressions idiomatiques.)" },
-                    negative: {
-                        title: "Negative Forms in Future Perfect (Formes négatives au future perfect)", conjugation: "How to Form Negatives (Comment former les négatifs)", ruleTitle: "Basic Rule: (Règle de base :)", rule: "Add \"not\" after the auxiliary \"will\" (contraction: won't) + \"have\" + past participle for all subjects. (Ajoutez \"not\" après l'auxiliaire \"will\" (contraction : won't) + \"have\" + participe passé pour tous les sujets.)",
-                        example1: "I will not (won't) have finished my work. (Je n'aurai pas fini mon travail.)", example2: "She will not have been to London. (Elle ne sera pas allée à Londres.)", example3: "They will not have had breakfast by then. (Ils n'auront pas pris de petit-déjeuner d'ici là.)",
-                        table: {
-                            subject: { I: "I (Je)", You: "You (Vous)", He: "He (Il)", She: "She (Elle)", It: "It (Il/Elle)", We: "We (Nous)", They: "They (Ils/Elles)" },
-                            negative: { I: "will not / won't have worked (n'aurai pas travaillé)", You: "will not / won't have worked (n'aurez pas travaillé)", He: "will not / won't have worked (n'aura pas travaillé)", She: "will not / won't have been (ne sera pas allée)", It: "will not / won't have worked (n'aura pas fonctionné)", We: "will not / won't have had (n'aurons pas eu)", They: "will not / won't have seen (n'auront pas vu)" },
-                            example: { I: "I won't have worked there by June. (Je n'aurai pas travaillé là-bas d'ici juin.)", You: "You won't have worked long enough. (Vous n'aurez pas travaillé assez longtemps.)", He: "He won't have worked at that company. (Il n'aura pas travaillé dans cette entreprise.)", She: "She won't have been to Paris. (Elle ne sera pas allée à Paris.)", It: "It won't have worked properly. (Il n'aura pas fonctionné correctement.)", We: "We won't have had time. (Nous n'aurons pas eu le temps.)", They: "They won't have seen the movie. (Ils n'auront pas vu le film.)" }
-                        }
-                    },
-                    passive: {
-                        title: "Passive Voice in Future Perfect (Voix passive au future perfect)", conjugation: "Forming the Passive (Former le passif)", ruleTitle: "Structure: (Structure :)", rule: "The passive in future perfect is formed with: will have been + past participle. The agent may be mentioned with \"by\". (Le passif au future perfect se forme avec : will have been + participe passé. L'agent peut être mentionné avec \"by\".)",
-                        example1: "The work will have been finished by 6 PM. (Le travail aura été fini à 18h.)", example2: "All the tickets will have been sold by noon. (Tous les billets auront été vendus à midi.)", example3: "Will the report have been completed by then? (Le rapport aura-t-il été terminé d'ici là ?)",
-                        table: {
-                            subject: { report: "The report (Le rapport)", cake: "The cake (Le gâteau)", decision: "The decision (La décision)", keys: "The keys (Les clés)" },
-                            active: { report: "They will have finished it. (Ils l'auront fini.)", cake: "She will have baked it. (Elle l'aura cuit.)", decision: "We will have made it. (Nous l'aurons prise.)", keys: "He will have lost them. (Il les aura perdues.)" },
-                            passive: { report: "It will have been finished. (Il aura été fini.)", cake: "It will have been baked. (Il aura été cuit.)", decision: "It will have been made. (Elle aura été prise.)", keys: "They will have been lost. (Elles auront été perdues.)" }
-                        }
-                    },
-                    idioms: {
-                        title: "Idiomatic Expressions with Future Perfect (Expressions idiomatiques avec le future perfect)", conjugation: "Common Adverbs & Fixed Patterns (Adverbes courants et structures figées)",
-                        alreadyJustTitle: "already / just / never / ever", alreadyJustRule: "These adverbs usually go after \"will have\" but before the past participle. (Ces adverbes se placent généralement après \"will have\" mais avant le participe passé.)",
-                        alreadyExample: "I will have already finished by then. (J'aurai déjà fini d'ici là.)", justExample: "She will have just arrived. (Elle viendra d'arriver.)", neverExample: "He will have never seen snow. (Il n'aura jamais vu de neige.)",
-                        byTheTimeTitle: "by the time / by then", byTheTimeRule: "These time expressions are frequently used with future perfect to set a deadline. (Ces expressions de temps sont souvent utilisées avec le future perfect pour fixer une échéance.)",
-                        byTheTimeExample: "By the time you arrive, we will have left. (Quand vous arriverez, nous serons partis.)",
-                        surelyDoubtTitle: "surely / no doubt / likely", surelyDoubtRule: "Used to express assumptions about completed actions in the future. (Utilisées pour exprimer des suppositions sur des actions achevées dans le futur.)",
-                        surelyExample: "They will surely have heard the news by now. (Ils auront sûrement entendu les nouvelles maintenant.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (Exercices pratiques)", q1: "Choose the correct negative form: (Choisissez la forme négative correcte :)", q1Sentence: "I ______ my work by 5 PM. (Je ______ mon travail à 17h.)", q1a: "won't have finished (n'aurai pas fini)", q1b: "will have not finished (aurai pas fini)", q1c: "will not finish (ne finirai pas)",
-                        q2: "Choose the correct passive form: (Choisissez la forme passive correcte :)", q2Sentence: "The report ______ by Monday. (Le rapport ______ d'ici lundi.)", q2a: "will have been completed (aura été terminé)", q2b: "will have completed (aura terminé)", q2c: "will be completed (sera terminé)",
-                        q3: "Choose the correct negative with \"to be\": (Choisissez la forme négative correcte avec 'être' :)", q3Sentence: "She ______ to Paris before 2026. (Elle ______ à Paris avant 2026.)", q3a: "won't have been (ne sera pas allée)", q3b: "will have not been (ne sera pas été)", q3c: "will not be (ne sera pas)",
-                        q4: "Choose the correct passive: (Choisissez le passif correct :)", q4Sentence: "The tickets ______ by tomorrow. (Les billets ______ d'ici demain.)", q4a: "will have been sold (auront été vendus)", q4b: "will have sold (auront vendu)", q4c: "will be sold (seront vendus)",
-                        q5: "Choose the correct adverb placement: (Placez correctement l'adverbe :)", q5Sentence: "They ______ left by the time we arrive. (Ils ______ partis quand nous arriverons.)", q5a: "will have already (seront déjà)", q5b: "will already have (seront déjà eu)", q5c: "already will have (déjà seront)",
-                        q6: "Choose the correct time expression: (Choisissez l'expression de temps correcte :)", q6Sentence: "We will have left ______ you arrive. (Nous serons partis ______ vous arriviez.)", q6a: "by the time (au moment où)", q6b: "while (pendant que)", q6c: "during (durant)",
-                        q7: "Complete with negative future perfect: (Complétez avec la négation :)", q7Sentence: "He ______ (finish) the project by Friday. (Il ______ (finir) le projet d'ici vendredi.)",
-                        q8: "Complete with passive: (Complétez avec le passif :)", q8Sentence: "The documents ______ (send) before the meeting. (Les documents ______ (envoyer) avant la réunion.)",
-                        q9: "Insert the correct adverb (already/just/never): (Insérez l'adverbe correct (already/just/never) :)", q9Sentence: "She will have ______ left when you call. (before that time) (Elle sera ______ partie quand tu appelleras. (avant ce moment))",
-                        q10: "Arrange the negative sentence: (Remettez la phrase négative dans l'ordre :)", q11: "Arrange the passive sentence: (Remettez la phrase passive dans l'ordre :)", q12: "Arrange the sentence with adverb: (Remettez la phrase avec adverbe dans l'ordre :)"
-                    }
+                    title: { line1: "Futur antérieur III :", line2: "Négation, passif et expressions idiomatiques", line3: "Constructions négatives, voix passive et expressions idiomatiques au futur antérieur", line4: "leçon : 3/3" },
+                    negative: { title: "III. 1. Formes négatives au futur antérieur", heading: "Comment former la négation", desc1: "📘 Règle de base :", desc2: "Ajoutez 'not' après l'auxiliaire 'will' (contraction : won't) + 'have' + participe passé pour tous les sujets.", ex1: "Je n'aurai pas fini mon travail.", ex2: "Elle ne sera pas allée à Londres.", ex3: "Ils n'auront pas pris leur petit-déjeuner d'ici là.", subject: "Sujet", negativeForm: "Forme négative", example: "Exemple", exI: "Je n'aurai pas travaillé là-bas d'ici juin.", exYou: "Tu n'auras pas assez travaillé.", exHe: "Il n'aura pas travaillé dans cette entreprise.", exShe: "Elle ne sera pas allée à Paris.", exIt: "Cela n'aura pas bien fonctionné.", exWe: "Nous n'aurons pas eu le temps.", exThey: "Ils n'auront pas vu le film." },
+                    passive: { title: "III. 2. Voix passive au futur antérieur", heading: "Former le passif", desc1: "📘 Structure :", desc2: "Le passif au futur antérieur se forme avec : will have been + participe passé. L'agent peut être mentionné avec 'by'.", ex1: "Le travail aura été fini d'ici 18h.", ex2: "Tous les billets auront été vendus d'ici midi.", ex3: "Le rapport aura-t-il été complété d'ici là ?", subject: "Sujet", active: "Actif", passive: "Passif", actReport: "Ils l'auront fini.", passReport: "Il aura été fini.", actCake: "Elle l'aura cuit.", passCake: "Il aura été cuit.", actDecision: "Nous l'aurons prise.", passDecision: "Elle aura été prise.", actKeys: "Il les aura perdues.", passKeys: "Elles auront été perdues." },
+                    idioms: { title: "III. 3. Expressions idiomatiques avec le futur antérieur", heading: "Adverbes courants et modèles fixes", adverbsTitle: "📘 already / just / never / ever :", adverbsDesc: "Ces adverbes se placent généralement après 'will have' mais avant le participe passé. Exemples : J'aurai déjà fini d'ici là. Elle viendra d'arriver. Il n'aura jamais vu la neige.", byTitle: "📘 by the time / by then :", byDesc: "Ces expressions de temps sont fréquemment utilisées avec le futur antérieur pour fixer une échéance. Exemple : Au moment où tu arriveras, nous serons partis.", surelyTitle: "📘 surely / no doubt / likely :", surelyDesc: "Utilisées pour exprimer des hypothèses sur des actions achevées dans le futur. Exemple : Ils auront sûrement entendu la nouvelle d'ici maintenant." }
                 }
             },
             ar: {
-                common: {
-                    siteName: "English Hub",
-                    previousLesson: "Previous Lesson (الدرس السابق)← ",
-                    returnToConjugation: "Return to Conjugation (العودة إلى التصريف)← ",
-                    nextLesson: "Next Lesson (الدرس التالي) →",
-                    subject: "الفاعل", conjugation: "التصريف", example: "مثال", examples: "أمثلة:",
-                    i: "أنا", you: "أنت", he: "هو", she: "هي", it: "هو/هي", we: "نحن", they: "هم",
-                    verb: "الفعل", negativeForm: "النفي", active: "مبني للمعلوم", passive: "مبني للمجهول"
-                },
-                footer: { developer: "المطور: Mejri Ziad", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+                common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
                 futurePerfect3: {
-                    title: "Future Perfect Tense: Negative, Passive & Idioms (المستقبل التام: النفي والمبني للمجهول والتعابير الاصطلاحية)",
-                    subtitle: "Master negative constructions, the passive voice, and idiomatic expressions in the future perfect (أتقن استخدام صيغ النفي والمبني للمجهول والتعابير الاصطلاحية في المستقبل التام)",
-                    introduction: { title: "Beyond Statements (ما وراء الجمل الخبرية)", whatIs: "Expanding Your Future Perfect Skills (توسيع مهاراتك في المستقبل التام)", definitionTitle: "Overview: (نظرة عامة:)", definition: "The future perfect is not only for simple statements. You can use it in negative forms, passive constructions, and a variety of idiomatic expressions that add nuance to your English. (لا يقتصر استخدام المستقبل التام على الجمل البسيطة. يمكنك استخدامه في صيغ النفي، والمبني للمجهول، ومجموعة متنوعة من التعابير الاصطلاحية.)" },
-                    negative: {
-                        title: "Negative Forms in Future Perfect (صيغ النفي في المستقبل التام)", conjugation: "How to Form Negatives (كيفية تكوين النفي)", ruleTitle: "Basic Rule: (القاعدة الأساسية:)", rule: "Add \"not\" after the auxiliary \"will\" (contraction: won't) + \"have\" + past participle for all subjects. (أضف \"not\" بعد الفعل المساعد \"will\" (الاختصار: won't) + \"have\" + التصريف الثالث لجميع الضمائر.)",
-                        example1: "I will not (won't) have finished my work. (لن أكون قد أنهيت عملي.)", example2: "She will not have been to London. (لن تكون قد زارت لندن.)", example3: "They will not have had breakfast by then. (لن يكونوا قد تناولوا الإفطار بحلول ذلك الوقت.)",
-                        table: {
-                            subject: { I: "I (أنا)", You: "You (أنت)", He: "He (هو)", She: "She (هي)", It: "It (هو/هي)", We: "We (نحن)", They: "They (هم)" },
-                            negative: { I: "will not / won't have worked (لن أكون قد عملت)", You: "will not / won't have worked (لن تكون قد عملت)", He: "will not / won't have worked (لن يكون قد عمل)", She: "will not / won't have been (لن تكون قد ذهبت)", It: "will not / won't have worked (لن يكون قد عمل)", We: "will not / won't have had (لن نكون قد حصلنا)", They: "will not / won't have seen (لن يكونوا قد شاهدوا)" },
-                            example: { I: "I won't have worked there by June. (لن أكون قد عملت هناك بحلول يونيو.)", You: "You won't have worked long enough. (لن تكون قد عملت لفترة كافية.)", He: "He won't have worked at that company. (لن يكون قد عمل في تلك الشركة.)", She: "She won't have been to Paris. (لن تكون قد زارت باريس.)", It: "It won't have worked properly. (لن يكون قد عمل بشكل صحيح.)", We: "We won't have had time. (لن نكون قد حصلنا على وقت.)", They: "They won't have seen the movie. (لن يكونوا قد شاهدوا الفيلم.)" }
-                        }
-                    },
-                    passive: {
-                        title: "Passive Voice in Future Perfect (المبني للمجهول في المستقبل التام)", conjugation: "Forming the Passive (تكوين المبني للمجهول)", ruleTitle: "Structure: (التركيب:)", rule: "The passive in future perfect is formed with: will have been + past participle. The agent may be mentioned with \"by\". (يتكون المبني للمجهول في المستقبل التام من: will have been + التصريف الثالث. يمكن ذكر الفاعل باستخدام \"by\".)",
-                        example1: "The work will have been finished by 6 PM. (سيكون العمل قد أُنجز بحلول السادسة مساءً.)", example2: "All the tickets will have been sold by noon. (ستكون جميع التذاكر قد بِيعت بحلول الظهر.)", example3: "Will the report have been completed by then? (هل سيكون التقرير قد اكتمل بحلول ذلك الوقت؟)",
-                        table: {
-                            subject: { report: "The report (التقرير)", cake: "The cake (الكعكة)", decision: "The decision (القرار)", keys: "The keys (المفاتيح)" },
-                            active: { report: "They will have finished it. (سيكونون قد أنهوه.)", cake: "She will have baked it. (ستكون قد خبزتها.)", decision: "We will have made it. (سنكون قد اتخذناه.)", keys: "He will have lost them. (سيكون قد أضاعها.)" },
-                            passive: { report: "It will have been finished. (سيكون قد أُنهي.)", cake: "It will have been baked. (ستكون قد خُبزت.)", decision: "It will have been made. (سيكون قد اتُخذ.)", keys: "They will have been lost. (ستكون قد أُضيعت.)" }
-                        }
-                    },
-                    idioms: {
-                        title: "Idiomatic Expressions with Future Perfect (التعابير الاصطلاحية مع المستقبل التام)", conjugation: "Common Adverbs & Fixed Patterns (ظروف شائعة وتراكيب ثابتة)",
-                        alreadyJustTitle: "already / just / never / ever", alreadyJustRule: "These adverbs usually go after \"will have\" but before the past participle. (عادةً ما تأتي هذه الظروف بعد \"will have\" ولكن قبل التصريف الثالث.)",
-                        alreadyExample: "I will have already finished by then. (سأكون قد انتهيت بالفعل بحلول ذلك الوقت.)", justExample: "She will have just arrived. (ستكون قد وصلت للتو.)", neverExample: "He will have never seen snow. (لن يكون قد رأى الثلج أبدًا.)",
-                        byTheTimeTitle: "by the time / by then", byTheTimeRule: "These time expressions are frequently used with future perfect to set a deadline. (تُستخدم تعبيرات الوقت هذه بشكل متكرر مع المستقبل التام لتحديد موعد نهائي.)",
-                        byTheTimeExample: "By the time you arrive, we will have left. (بحلول الوقت الذي تصل فيه، سنكون قد غادرنا.)",
-                        surelyDoubtTitle: "surely / no doubt / likely", surelyDoubtRule: "Used to express assumptions about completed actions in the future. (تُستخدم للتعبير عن افتراضات حول أفعال مكتملة في المستقبل.)",
-                        surelyExample: "They will surely have heard the news by now. (سيكونون بالتأكيد قد سمعوا الأخبار الآن.)"
-                    },
-                    exercises: {
-                        title: "Practice Exercises (تمارين تطبيقية)", q1: "Choose the correct negative form: (اختر صيغة النفي الصحيحة:)", q1Sentence: "I ______ my work by 5 PM. (أنا ______ عملي بحلول الساعة 5 مساءً.)", q1a: "won't have finished (لن أكون قد أنهيت)", q1b: "will have not finished (سأكون لم أنه)", q1c: "will not finish (لن أنهي)",
-                        q2: "Choose the correct passive form: (اختر صيغة المبني للمجهول الصحيحة:)", q2Sentence: "The report ______ by Monday. (التقرير ______ بحلول الاثنين.)", q2a: "will have been completed (سيكون قد اكتمل)", q2b: "will have completed (سيكون أكمل)", q2c: "will be completed (سيكتمل)",
-                        q3: "Choose the correct negative with \"to be\": (اختر النفي الصحيح مع فعل 'يكون':)", q3Sentence: "She ______ to Paris before 2026. (هي ______ إلى باريس قبل 2026.)", q3a: "won't have been (لن تكون قد زارت)", q3b: "will have not been (لن تكون كانت)", q3c: "will not be (لن تكون)",
-                        q4: "Choose the correct passive: (اختر المبني للمجهول الصحيح:)", q4Sentence: "The tickets ______ by tomorrow. (التذاكر ______ بحلول الغد.)", q4a: "will have been sold (ستكون قد بِيعت)", q4b: "will have sold (ستكون باعت)", q4c: "will be sold (ستُباع)",
-                        q5: "Choose the correct adverb placement: (اختر المكان الصحيح للظرف:)", q5Sentence: "They ______ left by the time we arrive. (هم ______ غادروا بحلول وقت وصولنا.)", q5a: "will have already (سيكونون قد بالفعل)", q5b: "will already have (سيكونون بالفعل قد)", q5c: "already will have (بالفعل سيكونون قد)",
-                        q6: "Choose the correct time expression: (اختر تعبير الوقت الصحيح:)", q6Sentence: "We will have left ______ you arrive. (سنكون قد غادرنا ______ تصل.)", q6a: "by the time (بحلول الوقت الذي)", q6b: "while (بينما)", q6c: "during (أثناء)",
-                        q7: "Complete with negative future perfect: (أكمل بصيغة النفي:)", q7Sentence: "He ______ (finish) the project by Friday. (هو ______ (ينهي) المشروع بحلول الجمعة.)",
-                        q8: "Complete with passive: (أكمل بالمبني للمجهول:)", q8Sentence: "The documents ______ (send) before the meeting. (المستندات ______ (ترسل) قبل الاجتماع.)",
-                        q9: "Insert the correct adverb (already/just/never): (أدخل الظرف الصحيح (already/just/never):)", q9Sentence: "She will have ______ left when you call. (before that time) (ستكون ______ غادرت عندما تتصل. (قبل ذلك الوقت))",
-                        q10: "Arrange the negative sentence: (رتب الجملة المنفية:)", q11: "Arrange the passive sentence: (رتب جملة المبني للمجهول:)", q12: "Arrange the sentence with adverb: (رتب الجملة مع الظرف:)"
-                    }
+                    title: { line1: "المستقبل التام: 3:", line2: "النفي، المبني للمجهول، والتعابير الاصطلاحية", line3: "صيغ النفي، المبني للمجهول، والتعابير الاصطلاحية في المستقبل التام", line4: "الدرس: 3/3" },
+                    negative: { title: "III. 1. صيغ النفي في المستقبل التام", heading: "كيفية تكوين النفي", desc1: "📘 القاعدة الأساسية:", desc2: "أضف 'not' بعد الفعل المساعد 'will' (اختصاره won't) + 'have' + التصريف الثالث لجميع الفاعلين.", ex1: "لن أكون قد أنهيت عملي.", ex2: "لن تكون قد ذهبت إلى لندن.", ex3: "لن يكونوا قد تناولوا الفطور بحلول ذلك الوقت.", subject: "الفاعل", negativeForm: "صيغة النفي", example: "مثال", exI: "لن أكون قد عملت هناك بحلول يونيو.", exYou: "لن تكون قد عملت بما فيه الكفاية.", exHe: "لن يكون قد عمل في تلك الشركة.", exShe: "لن تكون قد ذهبت إلى باريس.", exIt: "لن يكون قد عمل بشكل صحيح.", exWe: "لن نكون قد حصلنا على وقت.", exThey: "لن يكونوا قد شاهدوا الفيلم." },
+                    passive: { title: "III. 2. المبني للمجهول في المستقبل التام", heading: "تكوين المبني للمجهول", desc1: "📘 البنية:", desc2: "يتكون المبني للمجهول في المستقبل التام من: will have been + التصريف الثالث. يمكن ذكر الفاعل باستخدام 'by'.", ex1: "سيكون العمل قد أنجز بحلول السادسة مساءً.", ex2: "ستكون جميع التذاكر قد بيعت بحلول الظهر.", ex3: "هل سيكون التقرير قد أكمل بحلول ذلك الوقت؟", subject: "الفاعل", active: "مبني للمعلوم", passive: "مبني للمجهول", actReport: "سيكونون قد أنهوه.", passReport: "سيكون قد أنجز.", actCake: "ستكون قد خبزته.", passCake: "سيكون قد خبز.", actDecision: "سنكون قد اتخذناها.", passDecision: "سيكون قد اتخذ.", actKeys: "سيكون قد فقدها.", passKeys: "ستكون قد فقدت." },
+                    idioms: { title: "III. 3. التعابير الاصطلاحية مع المستقبل التام", heading: "الظروف الشائعة والأنماط الثابتة", adverbsTitle: "📘 already / just / never / ever:", adverbsDesc: "عادة ما تأتي هذه الظروف بعد 'will have' ولكن قبل التصريف الثالث. أمثلة: سأكون قد انتهيت بالفعل بحلول ذلك الوقت. ستكون قد وصلت للتو. لن يكون قد رأى الثلج أبدًا.", byTitle: "📘 by the time / by then:", byDesc: "تُستخدم تعبيرات الوقت هذه بشكل متكرر مع المستقبل التام لتحديد موعد نهائي. مثال: بحلول الوقت الذي تصل فيه، نكون قد غادرنا.", surelyTitle: "📘 surely / no doubt / likely:", surelyDesc: "تُستخدم للتعبير عن افتراضات حول أفعال مكتملة في المستقبل. مثال: سيكونون قد سمعوا الخبر بالتأكيد الآن." }
                 }
             }
         };
     </script>
-
-    <!-- Scripts -->
-    <script src="scripts/common-i18n.js"></script>
-    <!-- Modular exercise engine (future perfect p3 now uses exercise-conjugation.js) -->
+    <script src="scripts/translation-refraction.js"></script>
     <script src="scripts/exercise-conjugation.js"></script>
-
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
     <script>
-        // Build multiple choice exercises
         const correctAnswersType1 = buildMultipleChoiceExercise({
             containerId: 'mc-exercises',
             prefix: 'EH-exercise-type1-possibilities3',
             questions: [
-                {
-                    questionTextKey: 'futurePerfect3.exercises.q1',
-                    options: [
-                        { value: 'a', labelKey: 'futurePerfect3.exercises.q1a' },
-                        { value: 'b', labelKey: 'futurePerfect3.exercises.q1b' },
-                        { value: 'c', labelKey: 'futurePerfect3.exercises.q1c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'futurePerfect3.exercises.q2',
-                    options: [
-                        { value: 'a', labelKey: 'futurePerfect3.exercises.q2a' },
-                        { value: 'b', labelKey: 'futurePerfect3.exercises.q2b' },
-                        { value: 'c', labelKey: 'futurePerfect3.exercises.q2c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'futurePerfect3.exercises.q3',
-                    options: [
-                        { value: 'a', labelKey: 'futurePerfect3.exercises.q3a' },
-                        { value: 'b', labelKey: 'futurePerfect3.exercises.q3b' },
-                        { value: 'c', labelKey: 'futurePerfect3.exercises.q3c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'futurePerfect3.exercises.q4',
-                    options: [
-                        { value: 'a', labelKey: 'futurePerfect3.exercises.q4a' },
-                        { value: 'b', labelKey: 'futurePerfect3.exercises.q4b' },
-                        { value: 'c', labelKey: 'futurePerfect3.exercises.q4c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'futurePerfect3.exercises.q5',
-                    options: [
-                        { value: 'a', labelKey: 'futurePerfect3.exercises.q5a' },
-                        { value: 'b', labelKey: 'futurePerfect3.exercises.q5b' },
-                        { value: 'c', labelKey: 'futurePerfect3.exercises.q5c' }
-                    ],
-                    correctAnswer: 'a'
-                },
-                {
-                    questionTextKey: 'futurePerfect3.exercises.q6',
-                    options: [
-                        { value: 'a', labelKey: 'futurePerfect3.exercises.q6a' },
-                        { value: 'b', labelKey: 'futurePerfect3.exercises.q6b' },
-                        { value: 'c', labelKey: 'futurePerfect3.exercises.q6c' }
-                    ],
-                    correctAnswer: 'a'
-                }
+                { questionTextKey: 'futurePerfect3.exercises.q1', options: [{ value: 'a', labelKey: 'futurePerfect3.exercises.q1a' }, { value: 'b', labelKey: 'futurePerfect3.exercises.q1b' }, { value: 'c', labelKey: 'futurePerfect3.exercises.q1c' }], correctAnswer: 'a' },
+                { questionTextKey: 'futurePerfect3.exercises.q2', options: [{ value: 'a', labelKey: 'futurePerfect3.exercises.q2a' }, { value: 'b', labelKey: 'futurePerfect3.exercises.q2b' }, { value: 'c', labelKey: 'futurePerfect3.exercises.q2c' }], correctAnswer: 'a' },
+                { questionTextKey: 'futurePerfect3.exercises.q3', options: [{ value: 'a', labelKey: 'futurePerfect3.exercises.q3a' }, { value: 'b', labelKey: 'futurePerfect3.exercises.q3b' }, { value: 'c', labelKey: 'futurePerfect3.exercises.q3c' }], correctAnswer: 'a' },
+                { questionTextKey: 'futurePerfect3.exercises.q4', options: [{ value: 'a', labelKey: 'futurePerfect3.exercises.q4a' }, { value: 'b', labelKey: 'futurePerfect3.exercises.q4b' }, { value: 'c', labelKey: 'futurePerfect3.exercises.q4c' }], correctAnswer: 'a' },
+                { questionTextKey: 'futurePerfect3.exercises.q5', options: [{ value: 'a', labelKey: 'futurePerfect3.exercises.q5a' }, { value: 'b', labelKey: 'futurePerfect3.exercises.q5b' }, { value: 'c', labelKey: 'futurePerfect3.exercises.q5c' }], correctAnswer: 'a' },
+                { questionTextKey: 'futurePerfect3.exercises.q6', options: [{ value: 'a', labelKey: 'futurePerfect3.exercises.q6a' }, { value: 'b', labelKey: 'futurePerfect3.exercises.q6b' }, { value: 'c', labelKey: 'futurePerfect3.exercises.q6c' }], correctAnswer: 'a' }
             ]
         });
-
-        // Build fill-in-the-blank exercises
-        const correctAnswersType2 = buildFillInTheBlankExercise({
+    </script>
+    <script>
+        correctAnswersType2 = buildFillInTheBlankExercise({
             containerId: 'fill-exercises',
             prefix: 'fill',
             questions: [
-                {
-                    questionTextKey: 'futurePerfect3.exercises.q7',
-                    answers: ["won't have finished"]
-                },
-                {
-                    questionTextKey: 'futurePerfect3.exercises.q8',
-                    answers: ['will have been sent']
-                },
-                {
-                    questionTextKey: 'futurePerfect3.exercises.q9',
-                    answers: ['already']
-                }
+                { questionTextKey: 'futurePerfect3.exercises.q7', answers: ['won\'t have finished'] },
+                { questionTextKey: 'futurePerfect3.exercises.q8', answers: ['will have been sent'] },
+                { questionTextKey: 'futurePerfect3.exercises.q9', answers: ['already'] }
             ]
         });
-
-        // Build sentence ordering exercises
+    </script>
+    <script>
         const correctAnswersType3 = buildSentenceOrderingExercise({
             containerId: 'order-exercises',
             prefix: 'order',
             questions: [
-                {
-                    questionTextKey: 'futurePerfect3.exercises.q10',
-                    words: ['They', 'will', 'not', 'have', 'arrived', 'by then', '.'],
-                    correctSentence: 'They will not have arrived by then .'
-                },
-                {
-                    questionTextKey: 'futurePerfect3.exercises.q11',
-                    words: ['The work', 'will', 'have', 'been', 'finished', 'by tomorrow', '.'],
-                    correctSentence: 'The work will have been finished by tomorrow .'
-                },
-                {
-                    questionTextKey: 'futurePerfect3.exercises.q12',
-                    words: ['I', 'will', 'have', 'already', 'left', '.'],
-                    correctSentence: 'I will have already left .'
-                }
+                { questionTextKey: 'futurePerfect3.exercises.q10', words: ['They', 'will', 'not', 'have', 'arrived', 'by', 'then', '.'], correctSentence: 'They will not have arrived by then .' },
+                { questionTextKey: 'futurePerfect3.exercises.q11', words: ['The', 'work', 'will', 'have', 'been', 'finished', 'by', 'tomorrow', '.'], correctSentence: 'The work will have been finished by tomorrow .' },
+                { questionTextKey: 'futurePerfect3.exercises.q12', words: ['I', 'will', 'have', 'already', 'left', '.'], correctSentence: 'I will have already left .' }
             ]
         });
-
-        // Check all exercises
+    </script>
+    <script>
         function checkAllExercises() {
             let totalScore = 0;
             let totalQuestions = 0;
-            
             totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
             totalQuestions += 6;
             totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
             totalQuestions += 3;
             totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
             totalQuestions += 3;
-            
             const scoreEl = document.getElementById('score-value');
             const fbEl = document.getElementById('score-feedback');
             if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
             if (fbEl) {
-                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! All correct!';
-                else if (totalScore >= 9) fbEl.textContent = 'Good job! You did well.';
-                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but review some material.';
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered future perfect advanced structures!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit negatives and passive.';
                 else fbEl.textContent = 'Review the lesson and try again.';
             }
             document.getElementById('score-display').style.display = 'block';
+            EHScoreEffects.show(totalScore, totalQuestions);
         }
-
         document.addEventListener('DOMContentLoaded', function() {
-            // Init sentence ordering drag-and-drop
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
             ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
             document.getElementById('check-all').addEventListener('click', checkAllExercises);
         });
-
-        // i18n rendering (handles innerHTML for keys with tags)
         (function() {
             function applyHtmlI18n() {
                 const lang = document.getElementById('language-selector').value;
-                document.querySelectorAll('[data-i18n]').forEach(el => {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
-                    if (translation && /<[^>]*>/.test(translation)) {
-                        el.innerHTML = translation;
-                    } else if (translation) {
-                        el.textContent = translation;
-                    }
+                    if (translation) el.textContent = translation;
                 });
             }
             window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });

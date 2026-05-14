@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Perfect III: Negative, Passive & Idioms - English Hub</title>
+    <link rel="stylesheet" href="styles/style-conjugation.css">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #f0d6f0, #e8c6e8, #dcb0dc, #d09ad0);
+            --content-bg: #fdf5fd;
+            --card-bg: #ffffff;
+            --subsection-bg: #fdf0fd;
+            --rule-bg: #f9e6f9;
+            --example-bg: #f5ddf5;
+            --table-stripe: #fdf2fd;
+            --title-color: #5e2a5e;
+            --text-color: #3a1e3a;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #b86bb8;
+            --primary-hover: #a14ea1;
+            --primary-light: #c985c9;
+            --accent: #b86bb8;
+            --exercise-number-gradient: linear-gradient(135deg, #b86bb8, #914791);
+            --rule-border: #b86bb8;
+            --example-border: #b86bb8;
+            --nav-btn-bg: #b86bb8;
+            --nav-btn-hover: #914791;
+            --nav-back-btn-bg: #c985c9;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #b86bb8;
+            --refract-divider-color: #dbb0db;
+            --refract-translation-bg: #f5e6f5;
+            --refract-translation-border: #b86bb8;
+            --refract-english-color: #3a1e3a;
+            --section-divider: #eaccf0;
+            --card-border: #eaccf0;
+            --input-border: #dbb8db;
+            --dashed-border: #dbb8db;
+            --table-border: #e0c0e0;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #f2e8f2;
+            --neutral-color: #6b4a6b;
+            --neutral-border: #dbb8db;
+            --empty-input-border: #d0aad0;
+            --empty-input-bg: #fef9fe;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #b86bb8;
+            --language-selector-color: #3a1e3a;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #3a1e3a, #4a2a4a, #5a365a, #6a426a);
+            --content-bg: #2a1a2a;
+            --card-bg: #3a253a;
+            --subsection-bg: #3a253a;
+            --rule-bg: #2a1a2a;
+            --example-bg: #2a1a2a;
+            --table-stripe: #342034;
+            --title-color: #e0b8e0;
+            --text-color: #f0dcf0;
+            --header-text: #f0dcf0;
+            --header-text-light: #d4b0d4;
+            --primary: #d498d4;
+            --primary-hover: #e0b0e0;
+            --primary-light: #d498d4;
+            --accent: #d498d4;
+            --rule-border: #d498d4;
+            --example-border: #d498d4;
+            --exercise-number-gradient: linear-gradient(135deg, #d498d4, #b86bb8);
+            --nav-btn-bg: #d498d4;
+            --nav-btn-hover: #b86bb8;
+            --nav-back-btn-bg: #e0b0e0;
+            --nav-back-btn-color: #1a0e1a;
+            --nav-back-btn-hover: #d498d4;
+            --refract-divider-color: #c88cc8;
+            --refract-translation-bg: #4a2e4a;
+            --refract-translation-border: #c88cc8;
+            --refract-english-color: #ecd8ec;
+            --section-divider: #4a2e4a;
+            --card-border: #4a2e4a;
+            --input-border: #5a3e5a;
+            --dashed-border: #5a3e5a;
+            --table-border: #4e344e;
+            --white: #ecd8ec;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #3a2a3a;
+            --neutral-color: #d4b0d4;
+            --neutral-border: #5a3e5a;
+            --empty-input-border: #5a3e5a;
+            --empty-input-bg: #2a1a2a;
+            --language-selector-bg: #3a253a;
+            --language-selector-border: #d498d4;
+            --language-selector-color: #f0dcf0;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+    </div>
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
+    </div>
+    <div class="EH-conjugation-container">
+        <header class="EH-conjugation-header">
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="pastPerfect3.title.line1">Past Perfect Tense: III:</div>
+                <div class="EH-conjugation-title-line" data-i18n="pastPerfect3.title.line2">Negative, Passive & Idioms</div>
+                <div class="EH-conjugation-subtitle" data-i18n="pastPerfect3.title.line3">Negative constructions, the passive voice, and idiomatic expressions in the past perfect.</div>
+                <div class="EH-conjugation-subtitle" data-i18n="pastPerfect3.title.line4">lesson: 3/3</div>
+            </div>
+        </header>
+        <div class="EH-conjugation-content">
+            <!-- Section 1: Negative Forms -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect3.negative.title">III. 1. Negative Forms in Past Perfect</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🚫</span>
+                        <span data-i18n="pastPerfect3.negative.heading">Forming negative statements</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect3.negative.rule">📘 Rule:</div>
+                        <p data-i18n="pastPerfect3.negative.desc">Add <strong>"not"</strong> after the auxiliary <strong>"had"</strong> (contraction: <strong>hadn't</strong>) for all subjects. The past participle remains unchanged.</p>
+                    </div>
+                    <table class="EH-conjugation-table">
+                        <thead><tr><th data-i18n="pastPerfect3.negative.subjectCol">Subject</th><th data-i18n="pastPerfect3.negative.negativeCol">Negative Form</th><th data-i18n="pastPerfect3.negative.exampleCol">Example</th></tr></thead>
+                        <tbody>
+                            <tr><td>I</td><td>had not / hadn't finished</td><td data-i18n="pastPerfect3.negative.exI">I hadn't finished my work before he arrived.</td></tr>
+                            <tr><td>She</td><td>had not / hadn't been</td><td data-i18n="pastPerfect3.negative.exShe">She hadn't been to London before.</td></tr>
+                            <tr><td>They</td><td>had not / hadn't had</td><td data-i18n="pastPerfect3.negative.exThey">They hadn't had breakfast.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Section 2: Passive Voice -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect3.passive.title">III. 2. Passive Voice in Past Perfect</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🔄</span>
+                        <span data-i18n="pastPerfect3.passive.heading">Form: had been + past participle</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect3.passive.structure">Structure:</div>
+                        <p data-i18n="pastPerfect3.passive.desc">The passive in past perfect is formed with: <strong>had been + past participle</strong>. The agent may be introduced with "by".</p>
+                    </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect3.passive.ex1">The letter had been sent before he arrived.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect3.passive.ex2">All the tickets had been sold by noon.</div>
+                        <div class="EH-conjugation-example" data-i18n="pastPerfect3.passive.ex3">Had the work been finished when you checked?</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 3: Idiomatic Expressions -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect3.idioms.title">III. 3. Idiomatic Expressions with Past Perfect</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">💡</span>
+                        <span data-i18n="pastPerfect3.idioms.heading">Hardly ... when, No sooner ... than, Had it not been for, Wish / If only</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect3.idioms.hardlyTitle">✨ Hardly ... when / No sooner ... than</div>
+                        <p data-i18n="pastPerfect3.idioms.hardlyDesc">These emphasize that one event followed immediately after another. Often with inversion.</p>
+                        <p><em data-i18n="pastPerfect3.idioms.hardlyEx">Hardly had I arrived when it started to rain.</em> &nbsp;|&nbsp; <em data-i18n="pastPerfect3.idioms.noSoonerEx">No sooner had she left than the phone rang.</em></p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect3.idioms.hadItNotTitle">🔁 Had it not been for ...</div>
+                        <p data-i18n="pastPerfect3.idioms.hadItNotDesc">Means "if it had not been for" – expresses that something prevented a past event.</p>
+                        <p><em data-i18n="pastPerfect3.idioms.hadItNotEx">Had it not been for your help, I would have failed.</em></p>
+                    </div>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="pastPerfect3.idioms.wishTitle">😔 Wish / If only + past perfect</div>
+                        <p data-i18n="pastPerfect3.idioms.wishDesc">Express regret about the past.</p>
+                        <p><em data-i18n="pastPerfect3.idioms.wishEx">I wish I had studied harder. / If only we had known the truth.</em></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercises -->
+            <div class="EH-conjugation-section EH-exercise-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="pastPerfect3.exercises.title">Practice: Negative, Passive & Idioms</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+                <div class="EH-exercise-container" id="mc-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+                <div class="EH-exercise-container" id="fill-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+                <div class="EH-exercise-container" id="order-exercises"></div>
+                <div class="EH-exercise-type1-possibilities3-answers-control">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
+                        <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.I18N = {
+            en: {
+                common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                pastPerfect3: {
+                    title: { line1: "Past Perfect Tense: III:", line2: "Negative, Passive & Idioms", line3: "Negative constructions, the passive voice, and idiomatic expressions in the past perfect.", line4: "lesson: 3/3" },
+                    negative: { title: "III. 1. Negative Forms in Past Perfect", heading: "Forming negative statements", rule: "📘 Rule:", desc: "Add 'not' after the auxiliary 'had' (contraction: hadn't) for all subjects. The past participle remains unchanged.", subjectCol: "Subject", negativeCol: "Negative Form", exampleCol: "Example", exI: "I hadn't finished my work before he arrived.", exShe: "She hadn't been to London before.", exThey: "They hadn't had breakfast." },
+                    passive: { title: "III. 2. Passive Voice in Past Perfect", heading: "Form: had been + past participle", structure: "Structure:", desc: "The passive in past perfect is formed with: had been + past participle. The agent may be introduced with 'by'.", ex1: "The letter had been sent before he arrived.", ex2: "All the tickets had been sold by noon.", ex3: "Had the work been finished when you checked?" },
+                    idioms: { title: "III. 3. Idiomatic Expressions with Past Perfect", heading: "Hardly ... when, No sooner ... than, Had it not been for, Wish / If only", hardlyTitle: "✨ Hardly ... when / No sooner ... than", hardlyDesc: "These emphasize that one event followed immediately after another. Often with inversion.", hardlyEx: "Hardly had I arrived when it started to rain.", noSoonerEx: "No sooner had she left than the phone rang.", hadItNotTitle: "🔁 Had it not been for ...", hadItNotDesc: "Means 'if it had not been for' – expresses that something prevented a past event.", hadItNotEx: "Had it not been for your help, I would have failed.", wishTitle: "😔 Wish / If only + past perfect", wishDesc: "Express regret about the past.", wishEx: "I wish I had studied harder. / If only we had known the truth." },
+                    exercises: {
+                        title: "Practice: Negative, Passive & Idioms",
+                        q1: "I ______ my work before he arrived.", q1a: "hadn't finished", q1b: "hadn't finish", q1c: "haven't finished",
+                        q2: "The letter ______ by the time we arrived.", q2a: "had been sent", q2b: "had sent", q2c: "was sent",
+                        q3: "______ left when the phone rang.", q3a: "She had hardly", q3b: "Hardly she had", q3c: "She had not",
+                        q4: "They ______ to London before that.", q4a: "hadn't been", q4b: "hadn't be", q4c: "haven't been",
+                        q5: "The dinner ______ by the time we got there.", q5a: "had been eaten", q5b: "had eaten", q5c: "was eaten",
+                        q6: "_______ not been for your help, I would have failed.", q6a: "Had it", q6b: "If it", q6c: "It had",
+                        q7: "Complete with negative past perfect: She ______ (finish) her work before the deadline.",
+                        q8: "Complete with passive: The car ______ (repair) before we bought it.",
+                        q9: "Complete with idiom (hardly/just/never): He ______ (hardly) arrived when it started raining.",
+                        q10: "Arrange (negative sentence): She, had, not, visited, Paris, .",
+                        q11: "Arrange (passive sentence): The cake, had, been, eaten, by the children, .",
+                        q12: "Arrange (inverted idiom): Had, I, known, I, would, have, told, you, ."
+                    }
+                }
+            },
+            fr: {
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
+                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+                pastPerfect3: {
+                    title: { line1: "Past Perfect Tense : III :", line2: "Négatif, Passif & Expressions", line3: "Formes négatives, voix passive et expressions idiomatiques au past perfect.", line4: "leçon : 3/3" },
+                    negative: { title: "III. 1. Formes négatives au past perfect", heading: "Former des phrases négatives", rule: "📘 Règle :", desc: "Ajoutez 'not' après l'auxiliaire 'had' (contraction : hadn't) pour tous les sujets. Le participe passé reste inchangé.", subjectCol: "Sujet", negativeCol: "Forme négative", exampleCol: "Exemple", exI: "Je n'avais pas fini mon travail avant son arrivée.", exShe: "Elle n'était jamais allée à Londres avant.", exThey: "Ils n'avaient pas pris de petit-déjeuner." },
+                    passive: { title: "III. 2. Voix passive au past perfect", heading: "Forme : had been + participe passé", structure: "Structure :", desc: "Le passif au past perfect se forme avec : had been + participe passé. L'agent peut être introduit par 'by'.", ex1: "La lettre avait été envoyée avant son arrivée.", ex2: "Tous les billets avaient été vendus à midi.", ex3: "Le travail avait-il été terminé quand vous avez vérifié ?" },
+                    idioms: { title: "III. 3. Expressions idiomatiques avec le past perfect", heading: "Hardly ... when, No sooner ... than, Had it not been for, Wish / If only", hardlyTitle: "✨ Hardly ... when / No sooner ... than", hardlyDesc: "Ces structures soulignent qu'un événement a immédiatement suivi un autre. Avec inversion.", hardlyEx: "J'étais à peine arrivé qu'il se mit à pleuvoir.", noSoonerEx: "Elle n'était pas plus tôt partie que le téléphone sonna.", hadItNotTitle: "🔁 Had it not been for ...", hadItNotDesc: "Signifie 'si cela n'avait pas été pour' – exprime qu'une chose a empêché un événement passé.", hadItNotEx: "N'eût été ton aide, j'aurais échoué.", wishTitle: "😔 Wish / If only + past perfect", wishDesc: "Exprime un regret à propos du passé.", wishEx: "J'aurais aimé avoir étudié plus. / Si seulement nous avions su la vérité." }
+                }
+            },
+            ar: {
+                common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+                pastPerfect3: {
+                    title: { line1: "الماضي التام: 3:", line2: "النفي، المبني للمجهول والتعابير", line3: "صيغ النفي، المبني للمجهول، والتعابير الاصطلاحية في الماضي التام.", line4: "الدرس: 3/3" },
+                    negative: { title: "III. 1. صيغ النفي في الماضي التام", heading: "تكوين الجمل المنفية", rule: "📘 القاعدة:", desc: "أضف 'not' بعد الفعل المساعد 'had' (اختصار: hadn't) لجميع الفاعلين. يبقى اسم المفعول كما هو.", subjectCol: "الفاعل", negativeCol: "الصيغة المنفية", exampleCol: "مثال", exI: "لم أكن قد أنهيت عمله قبل وصوله.", exShe: "لم تكن قد ذهبت إلى لندن من قبل.", exThey: "لم يكونوا قد تناولوا الفطور." },
+                    passive: { title: "III. 2. المبني للمجهول في الماضي التام", heading: "الصيغة: had been + اسم المفعول", structure: "البنية:", desc: "يتكون المبني للمجهول في الماضي التام من: had been + اسم المفعول. يمكن ذكر الفاعل باستخدام 'by'.", ex1: "كان قد تم إرسال الرسالة قبل وصوله.", ex2: "كان قد تم بيع كل التذاكر بحلول الظهر.", ex3: "هل كان قد تم إنهاء العمل عندما تفقدت؟" },
+                    idioms: { title: "III. 3. التعابير الاصطلاحية مع الماضي التام", heading: "Hardly ... when, No sooner ... than, Had it not been for, Wish / If only", hardlyTitle: "✨ Hardly ... when / No sooner ... than", hardlyDesc: "تؤكد هذه التعابير أن حدثًا تبع آخر فورًا. غالبًا مع قلب الترتيب.", hardlyEx: "ما كدت أصل حتى بدأ المطر يهطل.", noSoonerEx: "ما إن غادرت حتى رن الهاتف.", hadItNotTitle: "🔁 Had it not been for ...", hadItNotDesc: "تعني 'لولا' – تعبر عن أن شيئًا ما منع حدثًا ماضيًا.", hadItNotEx: "لولا مساعدتك لرسبت.", wishTitle: "😔 Wish / If only + past perfect", wishDesc: "يعبر عن الندم على الماضي.", wishEx: "أتمنى لو كنت قد درست بجدية أكبر. / لو كنا فقط عرفنا الحقيقة." }
+                }
+            }
+        };
+    </script>
+    <script src="scripts/translation-refraction.js"></script>
+    <script src="scripts/exercise-conjugation.js"></script>
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
+    <script>
+        const correctAnswersType1 = buildMultipleChoiceExercise({
+            containerId: 'mc-exercises', prefix: 'EH-exercise-type1-possibilities3',
+            questions: [
+                { questionTextKey: 'pastPerfect3.exercises.q1', options: [{ value: 'a', labelKey: 'pastPerfect3.exercises.q1a' }, { value: 'b', labelKey: 'pastPerfect3.exercises.q1b' }, { value: 'c', labelKey: 'pastPerfect3.exercises.q1c' }], correctAnswer: 'a' },
+                { questionTextKey: 'pastPerfect3.exercises.q2', options: [{ value: 'a', labelKey: 'pastPerfect3.exercises.q2a' }, { value: 'b', labelKey: 'pastPerfect3.exercises.q2b' }, { value: 'c', labelKey: 'pastPerfect3.exercises.q2c' }], correctAnswer: 'a' },
+                { questionTextKey: 'pastPerfect3.exercises.q3', options: [{ value: 'a', labelKey: 'pastPerfect3.exercises.q3a' }, { value: 'b', labelKey: 'pastPerfect3.exercises.q3b' }, { value: 'c', labelKey: 'pastPerfect3.exercises.q3c' }], correctAnswer: 'a' },
+                { questionTextKey: 'pastPerfect3.exercises.q4', options: [{ value: 'a', labelKey: 'pastPerfect3.exercises.q4a' }, { value: 'b', labelKey: 'pastPerfect3.exercises.q4b' }, { value: 'c', labelKey: 'pastPerfect3.exercises.q4c' }], correctAnswer: 'a' },
+                { questionTextKey: 'pastPerfect3.exercises.q5', options: [{ value: 'a', labelKey: 'pastPerfect3.exercises.q5a' }, { value: 'b', labelKey: 'pastPerfect3.exercises.q5b' }, { value: 'c', labelKey: 'pastPerfect3.exercises.q5c' }], correctAnswer: 'a' },
+                { questionTextKey: 'pastPerfect3.exercises.q6', options: [{ value: 'a', labelKey: 'pastPerfect3.exercises.q6a' }, { value: 'b', labelKey: 'pastPerfect3.exercises.q6b' }, { value: 'c', labelKey: 'pastPerfect3.exercises.q6c' }], correctAnswer: 'a' }
+            ]
+        });
+    </script>
+    <script>
+        correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises', prefix: 'fill',
+            questions: [
+                { questionTextKey: 'pastPerfect3.exercises.q7', answers: ['hadn\'t finished', 'had not finished'] },
+                { questionTextKey: 'pastPerfect3.exercises.q8', answers: ['had been repaired'] },
+                { questionTextKey: 'pastPerfect3.exercises.q9', answers: ['had hardly'] }
+            ]
+        });
+    </script>
+    <script>
+        const correctAnswersType3 = buildSentenceOrderingExercise({
+            containerId: 'order-exercises', prefix: 'order',
+            questions: [
+                { questionTextKey: 'pastPerfect3.exercises.q10', words: ['She', 'had', 'not', 'visited', 'Paris', '.'], correctSentence: 'She had not visited Paris .' },
+                { questionTextKey: 'pastPerfect3.exercises.q11', words: ['The cake', 'had', 'been', 'eaten', 'by the children', '.'], correctSentence: 'The cake had been eaten by the children .' },
+                { questionTextKey: 'pastPerfect3.exercises.q12', words: ['Had', 'I', 'known', 'I', 'would', 'have', 'told', 'you', '.'], correctSentence: 'Had I known I would have told you .' }
+            ]
+        });
+    </script>
+    <script>
+        function checkAllExercises() {
+            let totalScore = 0, totalQuestions = 0;
+            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3');
+            totalQuestions += 6;
+            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill');
+            totalQuestions += 3;
+            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order');
+            totalQuestions += 3;
+            const scoreEl = document.getElementById('score-value');
+            const fbEl = document.getElementById('score-feedback');
+            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+            if (fbEl) {
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered past perfect negative, passive & idioms!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit negative forms and passive.';
+                else fbEl.textContent = 'Review the lesson and try again.';
+            }
+            document.getElementById('score-display').style.display = 'block';
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+            document.getElementById('check-all').addEventListener('click', checkAllExercises);
+        });
+        (function() {
+            function applyHtmlI18n() {
+                const lang = document.getElementById('language-selector').value;
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                    if (translation) el.textContent = translation;
+                });
+            }
+            window.addEventListener('load', () => setTimeout(applyHtmlI18n, 100));
+            document.getElementById('language-selector').addEventListener('change', () => setTimeout(applyHtmlI18n, 50));
+        })();
+    </script>
+</body>
+</html>

@@ -4,1239 +4,550 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Present Continuous III: Negative, Passive & Idioms - English Hub</title>
-    
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    
+    <link rel="stylesheet" href="styles/style-conjugation.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #3498db, #2980b9, #1f618d);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-        
-        .EH-conjugation-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-        }
-        
-        .EH-conjugation-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .EH-conjugation-title {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .EH-conjugation-subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-        }
-        
-        .EH-conjugation-content {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 30px;
-        }
-        
-        .EH-conjugation-section {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .EH-conjugation-section-title {
-            font-size: 1.8rem;
-            color: #2980b9;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #3498db;
-        }
-        
-        .EH-conjugation-subsection {
-            margin-bottom: 25px;
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .EH-conjugation-subsection-title {
-            font-size: 1.4rem;
-            color: #3498db;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .EH-conjugation-subsection-icon {
-            font-size: 1.6rem;
-            margin-right: 10px;
-        }
-        
-        .EH-conjugation-rule {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f5f5f5;
-            border-radius: 10px;
-            border-left: 4px solid #3498db;
-        }
-        
-        .EH-conjugation-rule-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #2980b9;
-        }
-        
-        .EH-conjugation-examples {
-            background: #e3f2fd;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-        }
-        
-        .EH-conjugation-example {
-            margin-bottom: 8px;
-            padding-left: 10px;
-            border-left: 2px solid #3498db;
-        }
-        
-        .EH-conjugation-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        
-        .EH-conjugation-table th,
-        .EH-conjugation-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        
-        .EH-conjugation-table th {
-            background-color: #3498db;
-            color: white;
-        }
-        
-        .EH-conjugation-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        .EH-conjugation-table tr:hover {
-            background-color: #e3f2fd;
-        }
-        
-        /* Exercise Styles */
-        .EH-exercise-section {
-            margin-top: 40px;
-        }
-        
-        .EH-exercise-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-        
-        .EH-exercise-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .EH-exercise-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .EH-exercise-number {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-text {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .EH-exercise-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .EH-exercise-option input {
-            cursor: pointer;
-        }
-        
-        .EH-exercise-option label {
-            cursor: pointer;
-        }
-        
-        /* Type 1: Multiple Choice Styles */
-        .EH-exercise-type1-possibilities3-answers-control {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
-            gap: 20px;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-        }
-
-        .EH-exercise-type1-possibilities3-check-answers-btn:hover {
-            background: #2980b9;
-        }
-
-        .EH-exercise-type1-possibilities3-score-display {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            display: none;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-title {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #2980b9;
-        }
-
-        .EH-exercise-type1-possibilities3-score-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #3498db;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-score-feedback {
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .EH-exercise-type1-possibilities3-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        .EH-exercise-type1-possibilities3-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.correct {
-            background-color: #d4edda;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #c3e6cb;
-        }
-
-        .EH-exercise-type1-possibilities3-option.incorrect {
-            background-color: #f8d7da;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 2: Fill in the Blank Styles */
-        .EH-exercise-type2-fillblank-input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .EH-exercise-type2-fillblank-input:focus {
-            border-color: #3498db;
-            outline: none;
-        }
-        
-        .EH-exercise-type2-fillblank-input-correct {
-            border-color: #28a745;
-            background-color: #d4edda;
-        }
-        
-        .EH-exercise-type2-fillblank-input-incorrect {
-            border-color: #dc3545;
-            background-color: #f8d7da;
-        }
-        
-        .EH-exercise-type2-fillblank-input-empty {
-            border-color: #ffc107;
-        }
-        
-        .EH-exercise-type2-fillblank-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type2-fillblank-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type2-fillblank-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Type 3: Sentence Ordering Styles */
-        .EH-exercise-type3-sentenceorder-word-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 15px;
-            border: 2px dashed #e0e0e0;
-            border-radius: 10px;
-            min-height: 60px;
-            margin-bottom: 15px;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word {
-            background: #e3f2fd;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid #90caf9;
-            cursor: move;
-            user-select: none;
-        }
-        
-        .EH-exercise-type3-sentenceorder-word:hover {
-            background: #bbdefb;
-        }
-        
-        .EH-exercise-type3-sentenceorder-dragging {
-            opacity: 0.5;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct {
-            border-color: #28a745;
-            background-color: #f8fff8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect {
-            border-color: #dc3545;
-            background-color: #fff8f8;
-        }
-        
-        .EH-exercise-type3-sentenceorder-answer-status {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        .EH-exercise-type3-sentenceorder-correct-answer {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .EH-exercise-type3-sentenceorder-incorrect-answer {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Navigation Buttons */
-        .EH-conjugation-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-        
-        .EH-conjugation-nav-button {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .EH-conjugation-nav-button:hover {
-            background: #2980b9;
-        }
-        
-        .EH-conjugation-nav-button.back {
-            background: #5dade2;
-        }
-        
-        .EH-conjugation-nav-button.back:hover {
-            background: #3498db;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .EH-conjugation-title {
-                font-size: 2rem;
-            }
-            
-            .EH-exercise-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .EH-conjugation-navigation {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .EH-conjugation-nav-button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .EH-conjugation-content {
-                padding: 20px;
-            }
+        :root {
+            --bg-gradient: linear-gradient(135deg, #e0c8f0, #d0b0e8, #c098e0, #b080d8);
+            --content-bg: #fbf5ff;
+            --card-bg: #ffffff;
+            --subsection-bg: #f5ecfc;
+            --rule-bg: #efe4fa;
+            --example-bg: #e8dcf5;
+            --table-stripe: #f5f0fc;
+            --title-color: #4a2c6e;
+            --text-color: #2e1a4a;
+            --header-text: #ffffff;
+            --header-text-light: rgba(255, 255, 255, 0.92);
+            --white: #ffffff;
+            --primary: #8a6cbb;
+            --primary-hover: #7258a0;
+            --primary-light: #9c80cc;
+            --accent: #7a5aaa;
+            --exercise-number-gradient: linear-gradient(135deg, #8a6cbb, #6b4e9e);
+            --rule-border: #8a6cbb;
+            --example-border: #8a6cbb;
+            --nav-btn-bg: #8a6cbb;
+            --nav-btn-hover: #6b4e9e;
+            --nav-back-btn-bg: #9c80cc;
+            --nav-back-btn-color: #ffffff;
+            --nav-back-btn-hover: #8a6cbb;
+            --refract-divider-color: #b89ed8;
+            --refract-translation-bg: #f0e6fc;
+            --refract-translation-border: #8a6cbb;
+            --refract-english-color: #2e1a4a;
+            --section-divider: #dcccf0;
+            --card-border: #d4c4e8;
+            --input-border: #c0b0dc;
+            --dashed-border: #c0b0dc;
+            --table-border: #ccbce4;
+            --correct-bg: #d4f0e0;
+            --correct-color: #0e5e3a;
+            --correct-border: #82c9a0;
+            --incorrect-bg: #fce4e4;
+            --incorrect-color: #8b2e2e;
+            --incorrect-border: #f5b0b0;
+            --neutral-bg: #f0ecf5;
+            --neutral-color: #5a4a7a;
+            --neutral-border: #c8bce0;
+            --empty-input-border: #b8a8d8;
+            --empty-input-bg: #faf5ff;
+            --language-selector-bg: #ffffff;
+            --language-selector-border: #8a6cbb;
+            --language-selector-color: #2e1a4a;
+            --score-flash-high-bg: #a5d6a7;
+            --score-flash-mid-bg: #fff9c4;
+            --score-flash-low-bg: #ffcdd2;
+        }
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #2e1a4a, #3a2260, #462a76, #52328c);
+            --content-bg: #2a1a42;
+            --card-bg: #362a52;
+            --subsection-bg: #362a52;
+            --rule-bg: #2a1a42;
+            --example-bg: #2a1a42;
+            --table-stripe: #2e1e4a;
+            --title-color: #c8a8f0;
+            --text-color: #e0d0f0;
+            --header-text: #e0d0f0;
+            --header-text-light: #c0a8dc;
+            --primary: #aa88dd;
+            --primary-hover: #bb9aee;
+            --primary-light: #aa88dd;
+            --accent: #aa88dd;
+            --rule-border: #aa88dd;
+            --example-border: #aa88dd;
+            --exercise-number-gradient: linear-gradient(135deg, #aa88dd, #8a6cbb);
+            --nav-btn-bg: #aa88dd;
+            --nav-btn-hover: #8a6cbb;
+            --nav-back-btn-bg: #bb9aee;
+            --nav-back-btn-color: #1a0a2a;
+            --nav-back-btn-hover: #aa88dd;
+            --refract-divider-color: #9a7ac8;
+            --refract-translation-bg: #3a2a62;
+            --refract-translation-border: #9a7ac8;
+            --refract-english-color: #e0d0f8;
+            --section-divider: #3a2a62;
+            --card-border: #3a2a62;
+            --input-border: #4a3a78;
+            --dashed-border: #4a3a78;
+            --table-border: #3e3068;
+            --white: #e8dcf4;
+            --correct-bg: #1e4d3a;
+            --correct-color: #a3e6b5;
+            --correct-border: #38b889;
+            --incorrect-bg: #4d2e2e;
+            --incorrect-color: #f0b0b0;
+            --incorrect-border: #c06060;
+            --neutral-bg: #362a52;
+            --neutral-color: #c0a8dc;
+            --neutral-border: #4a3a78;
+            --empty-input-border: #4a3a78;
+            --empty-input-bg: #2a1a42;
+            --language-selector-bg: #362a52;
+            --language-selector-border: #aa88dd;
+            --language-selector-color: #e0d0f0;
+            --score-flash-high-bg: #2e7d32;
+            --score-flash-mid-bg: #f9a825;
+            --score-flash-low-bg: #c62828;
         }
     </style>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #fff; background: rgba(255,255,255,0.9); color: #333; font-weight: bold;">
+    <div class="EH-language-selector-wrapper">
+        <select id="language-selector" class="EH-language-selector">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
         </select>
+        <button id="theme-toggle" class="EH-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
     </div>
-    
     <div class="EH-site-header">
         <a href="index.html" class="EH-site-logo-link" title="Main Page">
             <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
         </a>
         <span class="EH-site-name" data-i18n="common.siteName">English Hub</span>
     </div>
-    
     <div class="EH-conjugation-container">
         <header class="EH-conjugation-header">
-            <h1 class="EH-conjugation-title" data-i18n="presentContinuous3.title">Present Continuous III: Negative, Passive & Idioms</h1>
-            <p class="EH-conjugation-subtitle" data-i18n="presentContinuous3.subtitle">Learn to form negative sentences, use passive voice, and understand common idioms</p>
+            <div class="EH-conjugation-title EH-conjugation-title-wrapper">
+                <div class="EH-conjugation-title-line" data-i18n="presentContinuous3.title.line1">Present Continuous Tense III:</div>
+                <div class="EH-conjugation-title-line" data-i18n="presentContinuous3.title.line2">Negative, Passive & Idioms</div>
+                <div class="EH-conjugation-subtitle" data-i18n="presentContinuous3.title.line3">Master negative sentences, passive voice, and common idioms</div>
+                <div class="EH-conjugation-subtitle" data-i18n="presentContinuous3.title.line4">lesson: 3/3</div>
+            </div>
         </header>
-        
         <div class="EH-conjugation-content">
-            <!-- Introduction Section -->
+            <!-- Section 1: Negative Forms -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.introduction.title">Negative Forms in Present Continuous</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.negative.title">III. 1. Negative Forms in Present Continuous</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">🚫</span>
+                        <span data-i18n="presentContinuous3.negative.heading">Basic negative structure & types</span>
+                    </h3>
+                    <div class="EH-conjugation-rule">
+                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.negative.desc1">📘 Negative formation:</div>
+                        <p data-i18n="presentContinuous3.negative.desc2">We use "not" after the form of "to be" (am, is, are) to form negative sentences in the present continuous.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 2: Negative with "To Be" (as main verb) -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.negativeToBe.title">III. 2. Negative with "To Be" (as main verb)</h2>
+                <div class="EH-conjugation-subsection">
+                    <h3 class="EH-conjugation-subsection-title">
+                        <span class="EH-conjugation-subsection-icon">⚖️</span>
+                        <span data-i18n="presentContinuous3.negativeToBe.heading">Using "to be" in negative sentences</span>
+                    </h3>
+                    <table class="EH-conjugation-table">
+                        <thead>
+                            <tr><th data-i18n="presentContinuous3.negativeToBe.subject">Subject</th><th data-i18n="presentContinuous3.negativeToBe.positive">Positive</th><th data-i18n="presentContinuous3.negativeToBe.negative">Negative</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td data-i18n="presentContinuous3.negativeToBe.subjI">I</td><td data-i18n="presentContinuous3.negativeToBe.posI">I am being careful.</td><td data-i18n="presentContinuous3.negativeToBe.negI">I am not being careful.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeToBe.subjYou">You</td><td data-i18n="presentContinuous3.negativeToBe.posYou">You are being helpful.</td><td data-i18n="presentContinuous3.negativeToBe.negYou">You are not being helpful.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeToBe.subjHe">He</td><td data-i18n="presentContinuous3.negativeToBe.posHe">He is being patient.</td><td data-i18n="presentContinuous3.negativeToBe.negHe">He is not being patient.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeToBe.subjShe">She</td><td data-i18n="presentContinuous3.negativeToBe.posShe">She is being kind.</td><td data-i18n="presentContinuous3.negativeToBe.negShe">She is not being kind.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeToBe.subjWe">We</td><td data-i18n="presentContinuous3.negativeToBe.posWe">We are being quiet.</td><td data-i18n="presentContinuous3.negativeToBe.negWe">We are not being quiet.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeToBe.subjThey">They</td><td data-i18n="presentContinuous3.negativeToBe.posThey">They are being friendly.</td><td data-i18n="presentContinuous3.negativeToBe.negThey">They are not being friendly.</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous3.negativeToBe.contractions">I'm not being careful. / You aren't being helpful. / He isn't being patient.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 3: Negative with "To Have" -->
+            <div class="EH-conjugation-section">
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.negativeToHave.title">III. 3. Negative with "To Have"</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
                         <span class="EH-conjugation-subsection-icon">❌</span>
-                        <span data-i18n="presentContinuous3.introduction.whatIs">How to Form Negative Sentences</span>
+                        <span data-i18n="presentContinuous3.negativeToHave.heading">Using "to have" as main verb</span>
                     </h3>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.introduction.definitionTitle">Basic Negative Structure:</div>
-                        <p data-i18n="presentContinuous3.introduction.definition">In English, we use "not" after the form of "to be" to form negative sentences in the present continuous tense.</p>
-                        <p data-i18n="presentContinuous3.introduction.formula">Formula: [Subject] + [Am/Is/Are] + "not" + [Verb-ing] + [Rest of Sentence]</p>
-                    </div>
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.introduction.typesTitle">Types of Negative Sentences:</div>
-                        <ul>
-                            <li data-i18n="presentContinuous3.introduction.type1">Negative with "To Be"</li>
-                            <li data-i18n="presentContinuous3.introduction.type2">Negative with "To Have"</li>
-                            <li data-i18n="presentContinuous3.introduction.type3">Negative with Other Verbs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Negative with To Be Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.toBeNegative.title">Negative with "To Be"</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="presentContinuous3.toBeNegative.conjugation">Negative Formation with "To Be"</span>
-                    </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.toBeNegative.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="presentContinuous3.toBeNegative.rule">With the verb "to be" in present continuous, we add "not" after the form of "to be" to form negative sentences.</p>
-                        <p data-i18n="presentContinuous3.toBeNegative.formula">Formula: [Subject] + [Am/Is/Are] + "not" + [Being] + [Rest of Sentence]</p>
-                    </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="presentContinuous3.toBeNegative.positive">Positive</th>
-                                <th data-i18n="presentContinuous3.toBeNegative.negative">Negative</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentContinuous3.negativeToHave.subject">Subject</th><th data-i18n="presentContinuous3.negativeToHave.positive">Positive</th><th data-i18n="presentContinuous3.negativeToHave.negative">Negative</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="presentContinuous3.toBeNegative.positiveI">I am being careful.</td>
-                                <td data-i18n="presentContinuous3.toBeNegative.negativeI">I am not being careful.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="presentContinuous3.toBeNegative.positiveYou">You are being helpful.</td>
-                                <td data-i18n="presentContinuous3.toBeNegative.negativeYou">You are not being helpful.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="presentContinuous3.toBeNegative.positiveHe">He is being patient.</td>
-                                <td data-i18n="presentContinuous3.toBeNegative.negativeHe">He is not being patient.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="presentContinuous3.toBeNegative.positiveShe">She is being kind.</td>
-                                <td data-i18n="presentContinuous3.toBeNegative.negativeShe">She is not being kind.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="presentContinuous3.toBeNegative.positiveWe">We are being quiet.</td>
-                                <td data-i18n="presentContinuous3.toBeNegative.negativeWe">We are not being quiet.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="presentContinuous3.toBeNegative.positiveThey">They are being friendly.</td>
-                                <td data-i18n="presentContinuous3.toBeNegative.negativeThey">They are not being friendly.</td>
-                            </tr>
+                            <tr><td data-i18n="presentContinuous3.negativeToHave.subjI">I</td><td data-i18n="presentContinuous3.negativeToHave.posI">I am having lunch.</td><td data-i18n="presentContinuous3.negativeToHave.negI">I am not having lunch.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeToHave.subjYou">You</td><td data-i18n="presentContinuous3.negativeToHave.posYou">You are having a good time.</td><td data-i18n="presentContinuous3.negativeToHave.negYou">You are not having a good time.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeToHave.subjHe">He</td><td data-i18n="presentContinuous3.negativeToHave.posHe">He is having trouble.</td><td data-i18n="presentContinuous3.negativeToHave.negHe">He is not having trouble.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeToHave.subjShe">She</td><td data-i18n="presentContinuous3.negativeToHave.posShe">She is having a party.</td><td data-i18n="presentContinuous3.negativeToHave.negShe">She is not having a party.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeToHave.subjWe">We</td><td data-i18n="presentContinuous3.negativeToHave.posWe">We are having a meeting.</td><td data-i18n="presentContinuous3.negativeToHave.negWe">We are not having a meeting.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeToHave.subjThey">They</td><td data-i18n="presentContinuous3.negativeToHave.posThey">They are having fun.</td><td data-i18n="presentContinuous3.negativeToHave.negThey">They are not having fun.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.toBeNegative.contractionsTitle">Contractions:</div>
-                        <p data-i18n="presentContinuous3.toBeNegative.contractionsRule">In spoken English and informal writing, we often use contractions (short forms).</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.toBeNegative.contractionExample1">I'm not being careful.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.toBeNegative.contractionExample2">You aren't being helpful. (or You're not being helpful)</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.toBeNegative.contractionExample3">He isn't being patient. (or He's not being patient)</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.toBeNegative.contractionExample4">She isn't being kind. (or She's not being kind)</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.toBeNegative.contractionExample5">We aren't being quiet. (or We're not being quiet)</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.toBeNegative.contractionExample6">They aren't being friendly. (or They're not being friendly)</div>
-                        </div>
-                    </div>
                 </div>
             </div>
-            
-            <!-- Negative with To Have Section -->
+            <!-- Section 4: Negative with Other Verbs -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.toHaveNegative.title">Negative with "To Have"</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.negativeOther.title">III. 4. Negative with Other Verbs</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔤</span>
-                        <span data-i18n="presentContinuous3.toHaveNegative.conjugation">Negative Formation with "To Have"</span>
+                        <span class="EH-conjugation-subsection-icon">📖</span>
+                        <span data-i18n="presentContinuous3.negativeOther.heading">General rule for all other verbs</span>
                     </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.toHaveNegative.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="presentContinuous3.toHaveNegative.rule">With the verb "to have" in present continuous, we add "not" after the form of "to be" to form negative sentences.</p>
-                        <p data-i18n="presentContinuous3.toHaveNegative.formula">Formula: [Subject] + [Am/Is/Are] + "not" + [Having] + [Rest of Sentence]</p>
-                    </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="presentContinuous3.toHaveNegative.positive">Positive</th>
-                                <th data-i18n="presentContinuous3.toHaveNegative.negative">Negative</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentContinuous3.negativeOther.subject">Subject</th><th data-i18n="presentContinuous3.negativeOther.positive">Positive</th><th data-i18n="presentContinuous3.negativeOther.negative">Negative</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="presentContinuous3.toHaveNegative.positiveI">I am having lunch.</td>
-                                <td data-i18n="presentContinuous3.toHaveNegative.negativeI">I am not having lunch.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="presentContinuous3.toHaveNegative.positiveYou">You are having a good time.</td>
-                                <td data-i18n="presentContinuous3.toHaveNegative.negativeYou">You are not having a good time.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="presentContinuous3.toHaveNegative.positiveHe">He is having trouble.</td>
-                                <td data-i18n="presentContinuous3.toHaveNegative.negativeHe">He is not having trouble.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="presentContinuous3.toHaveNegative.positiveShe">She is having a party.</td>
-                                <td data-i18n="presentContinuous3.toHaveNegative.negativeShe">She is not having a party.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="presentContinuous3.toHaveNegative.positiveWe">We are having a meeting.</td>
-                                <td data-i18n="presentContinuous3.toHaveNegative.negativeWe">We are not having a meeting.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="presentContinuous3.toHaveNegative.positiveThey">They are having fun.</td>
-                                <td data-i18n="presentContinuous3.toHaveNegative.negativeThey">They are not having fun.</td>
-                            </tr>
+                            <tr><td data-i18n="presentContinuous3.negativeOther.subjI">I</td><td data-i18n="presentContinuous3.negativeOther.posI">I am working now.</td><td data-i18n="presentContinuous3.negativeOther.negI">I am not working now.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeOther.subjYou">You</td><td data-i18n="presentContinuous3.negativeOther.posYou">You are studying English.</td><td data-i18n="presentContinuous3.negativeOther.negYou">You are not studying English.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeOther.subjHe">He</td><td data-i18n="presentContinuous3.negativeOther.posHe">He is playing soccer.</td><td data-i18n="presentContinuous3.negativeOther.negHe">He is not playing soccer.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeOther.subjShe">She</td><td data-i18n="presentContinuous3.negativeOther.posShe">She is reading a book.</td><td data-i18n="presentContinuous3.negativeOther.negShe">She is not reading a book.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeOther.subjWe">We</td><td data-i18n="presentContinuous3.negativeOther.posWe">We are watching a movie.</td><td data-i18n="presentContinuous3.negativeOther.negWe">We are not watching a movie.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.negativeOther.subjThey">They</td><td data-i18n="presentContinuous3.negativeOther.posThey">They are cooking dinner.</td><td data-i18n="presentContinuous3.negativeOther.negThey">They are not cooking dinner.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.toHaveNegative.contractionsTitle">Contractions:</div>
-                        <p data-i18n="presentContinuous3.toHaveNegative.contractionsRule">In spoken English and informal writing, we often use contractions (short forms).</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.toHaveNegative.contractionExample1">I'm not having lunch.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.toHaveNegative.contractionExample2">You aren't having a good time.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.toHaveNegative.contractionExample3">He isn't having trouble.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.toHaveNegative.contractionExample4">She isn't having a party.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.toHaveNegative.contractionExample5">We aren't having a meeting.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.toHaveNegative.contractionExample6">They aren't having fun.</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous3.negativeOther.irregular">I'm not going to the store now. / She isn't doing her homework.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Negative with Other Verbs Section -->
+            <!-- Section 5: Passive Voice -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.otherVerbsNegative.title">Negative with Other Verbs</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.passive.title">III. 5. Passive Voice in Present Continuous</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">📝</span>
-                        <span data-i18n="presentContinuous3.otherVerbsNegative.conjugation">Negative Formation with Regular and Irregular Verbs</span>
+                        <span class="EH-conjugation-subsection-icon">🔁</span>
+                        <span data-i18n="presentContinuous3.passive.heading">Structure & usage of passive voice</span>
                     </h3>
-                    
                     <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.otherVerbsNegative.ruleTitle">Step-by-Step Process:</div>
-                        <p data-i18n="presentContinuous3.otherVerbsNegative.rule">For all other verbs in the present continuous, we add "not" after the form of "to be" to form negative sentences.</p>
-                        <p data-i18n="presentContinuous3.otherVerbsNegative.formula">Formula: [Subject] + [Am/Is/Are] + "not" + [Verb-ing] + [Rest of Sentence]</p>
+                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.passive.desc1">📘 Passive formation:</div>
+                        <p data-i18n="presentContinuous3.passive.desc2">Subject + am/is/are + being + past participle (+ by agent). Use when the doer is unknown or unimportant.</p>
                     </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="common.subject">Subject</th>
-                                <th data-i18n="presentContinuous3.otherVerbsNegative.positive">Positive</th>
-                                <th data-i18n="presentContinuous3.otherVerbsNegative.negative">Negative</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentContinuous3.passive.active">Active Voice</th><th data-i18n="presentContinuous3.passive.passive">Passive Voice</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="common.i">I</td>
-                                <td data-i18n="presentContinuous3.otherVerbsNegative.positiveI">I am working now.</td>
-                                <td data-i18n="presentContinuous3.otherVerbsNegative.negativeI">I am not working now.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.you">You</td>
-                                <td data-i18n="presentContinuous3.otherVerbsNegative.positiveYou">You are studying English.</td>
-                                <td data-i18n="presentContinuous3.otherVerbsNegative.negativeYou">You are not studying English.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.he">He</td>
-                                <td data-i18n="presentContinuous3.otherVerbsNegative.positiveHe">He is playing soccer.</td>
-                                <td data-i18n="presentContinuous3.otherVerbsNegative.negativeHe">He is not playing soccer.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.she">She</td>
-                                <td data-i18n="presentContinuous3.otherVerbsNegative.positiveShe">She is reading a book.</td>
-                                <td data-i18n="presentContinuous3.otherVerbsNegative.negativeShe">She is not reading a book.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.we">We</td>
-                                <td data-i18n="presentContinuous3.otherVerbsNegative.positiveWe">We are watching a movie.</td>
-                                <td data-i18n="presentContinuous3.otherVerbsNegative.negativeWe">We are not watching a movie.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="common.they">They</td>
-                                <td data-i18n="presentContinuous3.otherVerbsNegative.positiveThey">They are cooking dinner.</td>
-                                <td data-i18n="presentContinuous3.otherVerbsNegative.negativeThey">They are not cooking dinner.</td>
-                            </tr>
+                            <tr><td data-i18n="presentContinuous3.passive.act1">I am writing a letter.</td><td data-i18n="presentContinuous3.passive.pass1">A letter is being written by me.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.passive.act2">He is fixing the car.</td><td data-i18n="presentContinuous3.passive.pass2">The car is being fixed by him.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.passive.act3">She is teaching the students.</td><td data-i18n="presentContinuous3.passive.pass3">The students are being taught by her.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.passive.act4">They are selling fruits.</td><td data-i18n="presentContinuous3.passive.pass4">Fruits are being sold by them.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.otherVerbsNegative.contractionsTitle">Contractions:</div>
-                        <p data-i18n="presentContinuous3.otherVerbsNegative.contractionsRule">In spoken English and informal writing, we often use contractions (short forms).</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.otherVerbsNegative.contractionExample1">I'm not working now.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.otherVerbsNegative.contractionExample2">You aren't studying English.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.otherVerbsNegative.contractionExample3">He isn't playing soccer.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.otherVerbsNegative.contractionExample4">She isn't reading a book.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.otherVerbsNegative.contractionExample5">We aren't watching a movie.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.otherVerbsNegative.contractionExample6">They aren't cooking dinner.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.otherVerbsNegative.irregularTitle">Negative with Irregular Verbs:</div>
-                        <p data-i18n="presentContinuous3.otherVerbsNegative.irregularRule">Even with irregular verbs, we still use the same negative structure in the present continuous tense.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.otherVerbsNegative.irregularExample1">I'm not going to the store now. (go → going)</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.otherVerbsNegative.irregularExample2">She isn't doing her homework. (do → doing)</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.otherVerbsNegative.irregularExample3">They aren't taking a break. (take → taking)</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous3.passive.neg">The house is not being built by workers.</div>
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous3.passive.question">Is the car being fixed by him?</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Passive Voice Section -->
+            <!-- Section 6: Common Idioms -->
             <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.passive.title">Passive Voice in Present Continuous</h2>
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.idioms.title">III. 6. Common Idioms in Present Continuous</h2>
                 <div class="EH-conjugation-subsection">
                     <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">🔄</span>
-                        <span data-i18n="presentContinuous3.passive.whatIs">What is Passive Voice?</span>
+                        <span class="EH-conjugation-subsection-icon">💡</span>
+                        <span data-i18n="presentContinuous3.idioms.heading">Idiomatic expressions with present continuous</span>
                     </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.passive.definitionTitle">Definition:</div>
-                        <p data-i18n="presentContinuous3.passive.definition">In passive voice, the subject receives the action rather than performing it. We use passive voice when the doer of the action is unknown, unimportant, or obvious from context.</p>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.passive.structureTitle">Structure of Passive Voice in Present Continuous:</div>
-                        <p data-i18n="presentContinuous3.passive.structureRule">Formula: [Subject] + [am/is/are] + "being" + [Past Participle] + [by + agent (optional)]</p>
-                        <p data-i18n="presentContinuous3.passive.structureExample">Example: "The house is being built by workers."</p>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.passive.formationTitle">Forming Passive Voice:</div>
-                        <p data-i18n="presentContinuous3.passive.formationRule">To form passive voice in present continuous tense, use the appropriate form of "to be" (am, is, are) followed by "being" and the past participle of the main verb.</p>
-                    </div>
-                    
                     <table class="EH-conjugation-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="presentContinuous3.passive.active">Active Voice</th>
-                                <th data-i18n="presentContinuous3.passive.passive">Passive Voice</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th data-i18n="presentContinuous3.idioms.idiom">Idiom</th><th data-i18n="presentContinuous3.idioms.meaning">Meaning</th><th data-i18n="presentContinuous3.idioms.example">Example</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td data-i18n="presentContinuous3.passive.activeExample1">I am writing a letter.</td>
-                                <td data-i18n="presentContinuous3.passive.passiveExample1">A letter is being written by me.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentContinuous3.passive.activeExample2">You are cleaning the room.</td>
-                                <td data-i18n="presentContinuous3.passive.passiveExample2">The room is being cleaned by you.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentContinuous3.passive.activeExample3">He is fixing the car.</td>
-                                <td data-i18n="presentContinuous3.passive.passiveExample3">The car is being fixed by him.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentContinuous3.passive.activeExample4">She is teaching the students.</td>
-                                <td data-i18n="presentContinuous3.passive.passiveExample4">The students are being taught by her.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentContinuous3.passive.activeExample5">We are building houses.</td>
-                                <td data-i18n="presentContinuous3.passive.passiveExample5">Houses are being built by us.</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="presentContinuous3.passive.activeExample6">They are selling fruits.</td>
-                                <td data-i18n="presentContinuous3.passive.passiveExample6">Fruits are being sold by them.</td>
-                            </tr>
+                            <tr><td data-i18n="presentContinuous3.idioms.id1">raining cats and dogs</td><td data-i18n="presentContinuous3.idioms.meaning1">raining very heavily</td><td data-i18n="presentContinuous3.idioms.ex1">It's raining cats and dogs right now.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.idioms.id2">hitting the books</td><td data-i18n="presentContinuous3.idioms.meaning2">studying hard</td><td data-i18n="presentContinuous3.idioms.ex2">I'm hitting the books for my exam tomorrow.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.idioms.id3">burning the midnight oil</td><td data-i18n="presentContinuous3.idioms.meaning3">working late into the night</td><td data-i18n="presentContinuous3.idioms.ex3">She's burning the midnight oil.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.idioms.id4">spilling the beans</td><td data-i18n="presentContinuous3.idioms.meaning4">revealing a secret</td><td data-i18n="presentContinuous3.idioms.ex4">He's spilling the beans about the party.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.idioms.id5">beating around the bush</td><td data-i18n="presentContinuous3.idioms.meaning5">avoiding the main topic</td><td data-i18n="presentContinuous3.idioms.ex5">Stop beating around the bush.</td></tr>
+                            <tr><td data-i18n="presentContinuous3.idioms.id6">barking up the wrong tree</td><td data-i18n="presentContinuous3.idioms.meaning6">making a wrong assumption</td><td data-i18n="presentContinuous3.idioms.ex6">You're barking up the wrong tree.</td></tr>
                         </tbody>
                     </table>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.passive.negativeTitle">Negative Passive Voice:</div>
-                        <p data-i18n="presentContinuous3.passive.negativeRule">To form negative passive voice, add "not" after the form of "to be".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.passive.negativeExample1">The house is not being built by workers.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.passive.negativeExample2">The car is not being fixed by him.</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.passive.negativeExample3">The students are not being taught by her.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.passive.questionTitle">Question Form in Passive Voice:</div>
-                        <p data-i18n="presentContinuous3.passive.questionRule">To form questions in passive voice, invert the subject and the form of "to be".</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.passive.questionExample1">Is the house being built by workers?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.passive.questionExample2">Is the car being fixed by him?</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.passive.questionExample3">Are the students being taught by her?</div>
-                        </div>
+                    <div class="EH-conjugation-examples">
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous3.idioms.extra1">I'm feeling under the weather today.</div>
+                        <div class="EH-conjugation-example" data-i18n="presentContinuous3.idioms.extra2">They're having the time of their lives on vacation.</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Idioms Section -->
-            <div class="EH-conjugation-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.idioms.title">Common Idioms in Present Continuous</h2>
-                <div class="EH-conjugation-subsection">
-                    <h3 class="EH-conjugation-subsection-title">
-                        <span class="EH-conjugation-subsection-icon">💬</span>
-                        <span data-i18n="presentContinuous3.idioms.whatAre">What Are Idioms?</span>
-                    </h3>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.idioms.definitionTitle">Definition:</div>
-                        <p data-i18n="presentContinuous3.idioms.definition">Idioms are expressions whose meanings cannot be understood from the literal definitions of the words that make them up. They often use the present continuous tense to describe ongoing actions or temporary situations.</p>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.idioms.commonIdiomsTitle">Common Idioms in Present Continuous:</div>
-                        <table class="EH-conjugation-table">
-                            <thead>
-                                <tr>
-                                    <th data-i18n="presentContinuous3.idioms.idiom">Idiom</th>
-                                    <th data-i18n="presentContinuous3.idioms.meaning">Meaning</th>
-                                    <th data-i18n="presentContinuous3.idioms.example">Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td data-i18n="presentContinuous3.idioms.rainingCatsAndDogs">Raining cats and dogs</td>
-                                    <td data-i18n="presentContinuous3.idioms.rainingCatsAndDogsMeaning">Raining very heavily</td>
-                                    <td data-i18n="presentContinuous3.idioms.rainingCatsAndDogsExample">"It's raining cats and dogs right now."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentContinuous3.idioms.hittingTheBooks">Hitting the books</td>
-                                    <td data-i18n="presentContinuous3.idioms.hittingTheBooksMeaning">Studying hard</td>
-                                    <td data-i18n="presentContinuous3.idioms.hittingTheBooksExample">"I'm hitting the books for my exam tomorrow."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentContinuous3.idioms.burningTheMidnightOil">Burning the midnight oil</td>
-                                    <td data-i18n="presentContinuous3.idioms.burningTheMidnightOilMeaning">Working late into the night</td>
-                                    <td data-i18n="presentContinuous3.idioms.burningTheMidnightOilExample">"She's burning the midnight oil to finish her project."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentContinuous3.idioms.spillingTheBeans">Spilling the beans</td>
-                                    <td data-i18n="presentContinuous3.idioms.spillingTheBeansMeaning">Revealing a secret</td>
-                                    <td data-i18n="presentContinuous3.idioms.spillingTheBeansExample">"He's spilling the beans about the surprise party."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentContinuous3.idioms.beatingAroundTheBush">Beating around the bush</td>
-                                    <td data-i18n="presentContinuous3.idioms.beatingAroundTheBushMeaning">Avoiding the main topic</td>
-                                    <td data-i18n="presentContinuous3.idioms.beatingAroundTheBushExample">"Stop beating around the bush and tell me what happened."</td>
-                                </tr>
-                                <tr>
-                                    <td data-i18n="presentContinuous3.idioms.barkingUpTheWrongTree">Barking up the wrong tree</td>
-                                    <td data-i18n="presentContinuous3.idioms.barkingUpTheWrongTreeMeaning">Making a wrong assumption</td>
-                                    <td data-i18n="presentContinuous3.idioms.barkingUpTheWrongTreeExample">"If you think I took your book, you're barking up the wrong tree."</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div class="EH-conjugation-rule">
-                        <div class="EH-conjugation-rule-title" data-i18n="presentContinuous3.idioms.usageTitle">Using Idioms in Sentences:</div>
-                        <p data-i18n="presentContinuous3.idioms.usageRule">Idioms are often used in present continuous tense to describe actions happening now or temporary situations.</p>
-                        <div class="EH-conjugation-examples">
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.idioms.usageExample1">"I'm feeling under the weather today." (I'm feeling sick)</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.idioms.usageExample2">"She's walking on air after hearing the good news." (She's very happy)</div>
-                            <div class="EH-conjugation-example" data-i18n="presentContinuous3.idioms.usageExample3">"They're having the time of their lives on vacation." (They're having a great time)</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Exercises Section -->
+            <!-- Exercises -->
             <div class="EH-conjugation-section EH-exercise-section">
-                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.exercises.title">Practice Exercises</h2>
-                
-                <!-- Type 1: Multiple Choice Exercises -->
-                <h3 style="color: #2980b9; margin-bottom: 20px;">Multiple Choice</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 1 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">1</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q1">Choose the correct negative form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q1Sentence">She ______ a book right now.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-a" name="EH-exercise-type1-possibilities3-q1" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q1-a" data-i18n="presentContinuous3.exercises.q1a">is not reading</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-b" name="EH-exercise-type1-possibilities3-q1" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q1-b" data-i18n="presentContinuous3.exercises.q1b">does not read</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q1-c" name="EH-exercise-type1-possibilities3-q1" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q1-c" data-i18n="presentContinuous3.exercises.q1c">not is reading</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 2 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">2</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q2">Choose the correct negative form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q2Sentence">They ______ TV at the moment.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-a" name="EH-exercise-type1-possibilities3-q2" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q2-a" data-i18n="presentContinuous3.exercises.q2a">doesn't watching</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-b" name="EH-exercise-type1-possibilities3-q2" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q2-b" data-i18n="presentContinuous3.exercises.q2b">aren't watching</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q2-c" name="EH-exercise-type1-possibilities3-q2" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q2-c" data-i18n="presentContinuous3.exercises.q2c">not watching</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 3 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">3</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q3">Choose the correct passive form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q3Sentence">The house ______ by workers.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-a" name="EH-exercise-type1-possibilities3-q3" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q3-a" data-i18n="presentContinuous3.exercises.q3a">is being built</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-b" name="EH-exercise-type1-possibilities3-q3" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q3-b" data-i18n="presentContinuous3.exercises.q3b">is building</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q3-c" name="EH-exercise-type1-possibilities3-q3" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q3-c" data-i18n="presentContinuous3.exercises.q3c">is being building</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q3-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 4 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">4</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q4">Choose the correct idiom meaning:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q4Sentence">"Hitting the books" means:</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-a" name="EH-exercise-type1-possibilities3-q4" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q4-a" data-i18n="presentContinuous3.exercises.q4a">Getting angry</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-b" name="EH-exercise-type1-possibilities3-q4" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q4-b" data-i18n="presentContinuous3.exercises.q4b">Studying hard</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q4-c" name="EH-exercise-type1-possibilities3-q4" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q4-c" data-i18n="presentContinuous3.exercises.q4c">Damaging books</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q4-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 5 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">5</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q5">Choose the correct negative passive form:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q5Sentence">The car ______ by him right now.</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-a" name="EH-exercise-type1-possibilities3-q5" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q5-a" data-i18n="presentContinuous3.exercises.q5a">is not being fixed</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-b" name="EH-exercise-type1-possibilities3-q5" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q5-b" data-i18n="presentContinuous3.exercises.q5b">doesn't fixing</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q5-c" name="EH-exercise-type1-possibilities3-q5" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q5-c" data-i18n="presentContinuous3.exercises.q5c">not is fixing</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q5-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 6 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">6</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q6">Choose the correct idiom meaning:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q6Sentence">"Burning the midnight oil" means:</p>
-                        <div class="EH-exercise-options">
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-a" name="EH-exercise-type1-possibilities3-q6" value="a">
-                                <label for="EH-exercise-type1-possibilities3-q6-a" data-i18n="presentContinuous3.exercises.q6a">Working late into the night</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-b" name="EH-exercise-type1-possibilities3-q6" value="b">
-                                <label for="EH-exercise-type1-possibilities3-q6-b" data-i18n="presentContinuous3.exercises.q6b">Having a fire</label>
-                            </div>
-                            <div class="EH-exercise-option EH-exercise-type1-possibilities3-option">
-                                <input type="radio" id="EH-exercise-type1-possibilities3-q6-c" name="EH-exercise-type1-possibilities3-q6" value="c">
-                                <label for="EH-exercise-type1-possibilities3-q6-c" data-i18n="presentContinuous3.exercises.q6c">Cooking dinner</label>
-                            </div>
-                        </div>
-                        <div class="EH-exercise-type1-possibilities3-answer-status" id="EH-exercise-type1-possibilities3-q6-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Type 2: Fill in the Blank Exercises -->
-                <h3 style="color: #2980b9; margin: 40px 0 20px 0;">Fill in the Blank</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 7 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">7</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q7">Complete the negative sentence:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q7Sentence">I ______ (not/study) right now.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q1-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 8 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">8</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q8">Complete the passive sentence:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q8Sentence">The report ______ (write) by the team at the moment.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q2-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 9 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">9</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q9">Complete the negative passive sentence:</p>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q9Sentence">The room ______ (not/clean) right now.</p>
-                        <input type="text" class="EH-exercise-type2-fillblank-input" id="EH-exercise-type2-fillblank-q3-input" placeholder="Type your answer here">
-                        <div class="EH-exercise-type2-fillblank-answer-status" id="EH-exercise-type2-fillblank-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Type 3: Sentence Ordering Exercises -->
-                <h3 style="color: #2980b9; margin: 40px 0 20px 0;">Sentence Ordering</h3>
-                <div class="EH-exercise-container">
-                    <!-- Exercise 10 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">10</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q10">Arrange the words to form a correct negative sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q1-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word1" data-original-index="1">He</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word3" data-original-index="3">not</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word5" data-original-index="5">.</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word4" data-original-index="4">now</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word2" data-original-index="2">is</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q1-word6" data-original-index="6">working</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q1-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 11 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">11</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q11">Arrange the words to form a correct passive sentence:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q2-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word1" data-original-index="1">The</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word3" data-original-index="3">by</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word5" data-original-index="5">.</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word4" data-original-index="4">workers</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word2" data-original-index="2">house</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word7" data-original-index="7">is</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word8" data-original-index="8">being</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q2-word6" data-original-index="6">built</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q2-status"></div>
-                    </div>
-                    
-                    <!-- Exercise 12 -->
-                    <div class="EH-exercise-card">
-                        <div class="EH-exercise-number">12</div>
-                        <p class="EH-exercise-text" data-i18n="presentContinuous3.exercises.q12">Arrange the words to form a sentence with an idiom:</p>
-                        <div class="EH-exercise-type3-sentenceorder-word-container" id="EH-exercise-type3-sentenceorder-q3-words">
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word1" data-original-index="1">It</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word3" data-original-index="3">cats</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word5" data-original-index="5">dogs</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word4" data-original-index="4">and</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word2" data-original-index="2">is raining</span>
-                            <span class="EH-exercise-type3-sentenceorder-word" id="EH-exercise-type3-sentenceorder-q3-word6" data-original-index="6">.</span>
-                        </div>
-                        <div class="EH-exercise-type3-sentenceorder-answer-status" id="EH-exercise-type3-sentenceorder-q3-status"></div>
-                    </div>
-                </div>
-                
-                <!-- Answer Check and Score System -->
+                <h2 class="EH-conjugation-section-title" data-i18n="presentContinuous3.exercises.title">Practice: Negative, Passive & Idioms</h2>
+                <h3 class="EH-exercise-section-heading">Multiple Choice</h3>
+                <div class="EH-exercise-container" id="mc-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Fill in the Blank</h3>
+                <div class="EH-exercise-container" id="fill-exercises"></div>
+                <h3 class="EH-exercise-section-heading EH-exercise-section-heading-top">Sentence Ordering</h3>
+                <div class="EH-exercise-container" id="order-exercises"></div>
                 <div class="EH-exercise-type1-possibilities3-answers-control">
-                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="EH-exercise-type1-possibilities3-check-answers">Check All Answers</button>
-                    <div class="EH-exercise-type1-possibilities3-score-display" id="EH-exercise-type1-possibilities3-score-display">
+                    <button class="EH-exercise-type1-possibilities3-check-answers-btn" id="check-all">Check All Answers</button>
+                    <div class="EH-exercise-type1-possibilities3-score-display" id="score-display">
                         <h3 class="EH-exercise-type1-possibilities3-score-title">Your Score</h3>
-                        <div class="EH-exercise-type1-possibilities3-score-value" id="EH-exercise-type1-possibilities3-score-value">0/12</div>
-                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="EH-exercise-type1-possibilities3-score-feedback">Check your answers to see how you did!</p>
+                        <div class="EH-exercise-type1-possibilities3-score-value" id="score-value">0/12</div>
+                        <p class="EH-exercise-type1-possibilities3-score-feedback" id="score-feedback">Check your answers to see your progress!</p>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Navigation Buttons -->
-            <div class="EH-conjugation-navigation">
-                <button class="EH-conjugation-nav-button back" onclick="window.location.href='EH-conj-present-continuous-p2.html'">
-                    ← <span data-i18n="common.backToConjugation">Back to Present Continuous II</span>
-                </button>
-                <button class="EH-conjugation-nav-button" onclick="window.location.href='conjugation.html'">
-                    <span data-i18n="common.backToConjugation">Back to Verb Conjugation</span> →
-                </button>
             </div>
         </div>
     </div>
-    
-    <footer class="EH-common-footer">
-        <div class="EH-common-footer-content">
-            <div class="EH-common-footer-developer" data-i18n="footer.developer">Developer: Mejri Ziad</div>
-            <div class="EH-common-footer-links">
-                <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                <a href="#" data-i18n="footer.contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- i18n translations -->
-    <script src="scripts/translations/i18n_en.js"></script>
-    <script src="scripts/translations/i18n_fr.js"></script>
-    <script src="scripts/translations/i18n_ar.js"></script>
-    <script src="scripts/common-i18n.js"></script>
-    <script src="scripts/exercise.js"></script>
-    
     <script>
-        // Correct answers for Type 1 exercises
-        const correctAnswersType1 = {
-            'EH-exercise-type1-possibilities3-q1': 'a', // She is not reading a book right now.
-            'EH-exercise-type1-possibilities3-q2': 'b', // They aren't watching TV at the moment.
-            'EH-exercise-type1-possibilities3-q3': 'a', // The house is being built by workers.
-            'EH-exercise-type1-possibilities3-q4': 'b', // Hitting the books means studying hard.
-            'EH-exercise-type1-possibilities3-q5': 'a', // The car is not being fixed by him right now.
-            'EH-exercise-type1-possibilities3-q6': 'a'  // Burning the midnight oil means working late into the night.
-        };
-        
-        // Correct answers for Type 2 exercises
-        const correctAnswersType2 = {
-            'EH-exercise-type2-fillblank-q1': 'am not studying',     // I am not studying right now.
-            'EH-exercise-type2-fillblank-q2': 'is being written',   // The report is being written by the team at the moment.
-            'EH-exercise-type2-fillblank-q3': 'is not being cleaned' // The room is not being cleaned right now.
-        };
-        
-        // Correct answers for Type 3 exercises
-        const correctAnswersType3 = {
-            'EH-exercise-type3-sentenceorder-q1': 'He is not working now .',
-            'EH-exercise-type3-sentenceorder-q2': 'The house is being built by workers .',
-            'EH-exercise-type3-sentenceorder-q3': 'It is raining cats and dogs .'
-        };
-        
-        // Combined function to check all exercise types
-        function checkAllExercises() {
-            let totalScore = 0;
-            let totalQuestions = 0;
-            
-            // Check Type 1 exercises
-            const type1Score = ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            totalScore += type1Score;
-            totalQuestions += Object.keys(correctAnswersType1).length;
-            
-            // Check Type 2 exercises
-            const type2Score = ExerciseType2FillBlankCheckAnswers(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            totalScore += type2Score;
-            totalQuestions += Object.keys(correctAnswersType2).length;
-            
-            // Check Type 3 exercises
-            const type3Score = ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            totalScore += type3Score;
-            totalQuestions += Object.keys(correctAnswersType3).length;
-            
-            // Update combined score display
-            const scoreValue = document.getElementById('EH-exercise-type1-possibilities3-score-value');
-            const scoreFeedback = document.getElementById('EH-exercise-type1-possibilities3-score-feedback');
-            
-            if (scoreValue) scoreValue.textContent = `${totalScore}/${totalQuestions}`;
-            
-            if (scoreFeedback) {
-                if (totalScore === totalQuestions) {
-                    scoreFeedback.textContent = 'Excellent! You got all the answers correct!';
-                } else if (totalScore >= totalQuestions * 0.7) {
-                    scoreFeedback.textContent = 'Good job! You did well on this exercise.';
-                } else if (totalScore >= totalQuestions * 0.5) {
-                    scoreFeedback.textContent = 'Not bad, but you might want to review the material again.';
-                } else {
-                    scoreFeedback.textContent = 'You might want to review the material and try again.';
+        window.I18N = {
+            en: {
+                common: { siteName: "English Hub", previousLesson: "← Previous Lesson", returnToConjugation: "← Return to Conjugation", nextLesson: "Next Lesson →" },
+                footer: { developer: "Developer: Mejri Ziad", privacy: "Privacy Policy", terms: "Terms of Service", contact: "Contact" },
+                presentContinuous3: {
+                    title: { line1: "Present Continuous Tense III:", line2: "Negative, Passive & Idioms", line3: "Master negative sentences, passive voice, and common idioms", line4: "lesson: 3/3" },
+                    negative: { title: "III. 1. Negative Forms in Present Continuous", heading: "Basic negative structure & types", desc1: "📘 Negative formation:", desc2: "We use \"not\" after the form of \"to be\" (am, is, are) to form negative sentences in the present continuous." },
+                    negativeToBe: {
+                        title: "III. 2. Negative with \"To Be\" (as main verb)", heading: "Using \"to be\" in negative sentences", subject: "Subject", positive: "Positive", negative: "Negative",
+                        subjI: "I", posI: "I am being careful.", negI: "I am not being careful.",
+                        subjYou: "You", posYou: "You are being helpful.", negYou: "You are not being helpful.",
+                        subjHe: "He", posHe: "He is being patient.", negHe: "He is not being patient.",
+                        subjShe: "She", posShe: "She is being kind.", negShe: "She is not being kind.",
+                        subjWe: "We", posWe: "We are being quiet.", negWe: "We are not being quiet.",
+                        subjThey: "They", posThey: "They are being friendly.", negThey: "They are not being friendly.",
+                        contractions: "I'm not being careful. / You aren't being helpful. / He isn't being patient."
+                    },
+                    negativeToHave: {
+                        title: "III. 3. Negative with \"To Have\"", heading: "Using \"to have\" as main verb", subject: "Subject", positive: "Positive", negative: "Negative",
+                        subjI: "I", posI: "I am having lunch.", negI: "I am not having lunch.",
+                        subjYou: "You", posYou: "You are having a good time.", negYou: "You are not having a good time.",
+                        subjHe: "He", posHe: "He is having trouble.", negHe: "He is not having trouble.",
+                        subjShe: "She", posShe: "She is having a party.", negShe: "She is not having a party.",
+                        subjWe: "We", posWe: "We are having a meeting.", negWe: "We are not having a meeting.",
+                        subjThey: "They", posThey: "They are having fun.", negThey: "They are not having fun."
+                    },
+                    negativeOther: {
+                        title: "III. 4. Negative with Other Verbs", heading: "General rule for all other verbs", subject: "Subject", positive: "Positive", negative: "Negative",
+                        subjI: "I", posI: "I am working now.", negI: "I am not working now.",
+                        subjYou: "You", posYou: "You are studying English.", negYou: "You are not studying English.",
+                        subjHe: "He", posHe: "He is playing soccer.", negHe: "He is not playing soccer.",
+                        subjShe: "She", posShe: "She is reading a book.", negShe: "She is not reading a book.",
+                        subjWe: "We", posWe: "We are watching a movie.", negWe: "We are not watching a movie.",
+                        subjThey: "They", posThey: "They are cooking dinner.", negThey: "They are not cooking dinner.",
+                        irregular: "I'm not going to the store now. / She isn't doing her homework."
+                    },
+                    passive: {
+                        title: "III. 5. Passive Voice in Present Continuous", heading: "Structure & usage of passive voice", desc1: "📘 Passive formation:", desc2: "Subject + am/is/are + being + past participle (+ by agent). Use when the doer is unknown or unimportant.",
+                        active: "Active Voice", passive: "Passive Voice",
+                        act1: "I am writing a letter.", pass1: "A letter is being written by me.",
+                        act2: "He is fixing the car.", pass2: "The car is being fixed by him.",
+                        act3: "She is teaching the students.", pass3: "The students are being taught by her.",
+                        act4: "They are selling fruits.", pass4: "Fruits are being sold by them.",
+                        neg: "The house is not being built by workers.", question: "Is the car being fixed by him?"
+                    },
+                    idioms: {
+                        title: "III. 6. Common Idioms in Present Continuous", heading: "Idiomatic expressions with present continuous", idiom: "Idiom", meaning: "Meaning", example: "Example",
+                        id1: "raining cats and dogs", meaning1: "raining very heavily", ex1: "It's raining cats and dogs right now.",
+                        id2: "hitting the books", meaning2: "studying hard", ex2: "I'm hitting the books for my exam tomorrow.",
+                        id3: "burning the midnight oil", meaning3: "working late into the night", ex3: "She's burning the midnight oil.",
+                        id4: "spilling the beans", meaning4: "revealing a secret", ex4: "He's spilling the beans about the party.",
+                        id5: "beating around the bush", meaning5: "avoiding the main topic", ex5: "Stop beating around the bush.",
+                        id6: "barking up the wrong tree", meaning6: "making a wrong assumption", ex6: "You're barking up the wrong tree.",
+                        extra1: "I'm feeling under the weather today.", extra2: "They're having the time of their lives on vacation."
+                    },
+                    exercises: {
+                        title: "Practice: Negative, Passive & Idioms",
+                        q1: "Choose the correct negative form: She ______ a book right now.", q1a: "is not reading", q1b: "does not read", q1c: "not is reading",
+                        q2: "Choose the correct negative form: They ______ TV at the moment.", q2a: "doesn't watching", q2b: "aren't watching", q2c: "not watching",
+                        q3: "Choose the correct passive form: The house ______ by workers.", q3a: "is being built", q3b: "is building", q3c: "is being building",
+                        q4: "Choose the correct idiom meaning: 'Hitting the books' means:", q4a: "Getting angry", q4b: "Studying hard", q4c: "Damaging books",
+                        q5: "Choose the correct negative passive form: The car ______ by him right now.", q5a: "is not being fixed", q5b: "doesn't fixing", q5c: "not is fixing",
+                        q6: "Choose the correct idiom meaning: 'Burning the midnight oil' means:", q6a: "Working late into the night", q6b: "Having a fire", q6c: "Cooking dinner",
+                        q7: "Complete the negative sentence: I ______ (not/study) right now.",
+                        q8: "Complete the passive sentence: The report ______ (write) by the team at the moment.",
+                        q9: "Complete the negative passive sentence: The room ______ (not/clean) right now.",
+                        q10: "Arrange: He, is, not, working, now, .",
+                        q11: "Arrange: The, house, is, being, built, by, workers, .",
+                        q12: "Arrange: It, is raining, cats and dogs, ."
+                    }
+                }
+            },
+            fr: {
+                common: { siteName: "English Hub", previousLesson: "← Leçon Précédente", returnToConjugation: "← Retour au Conjugaison", nextLesson: "Leçon Suivante →" },
+                footer: { developer: "Développeur : Mejri Ziad", privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", contact: "Contact" },
+                presentContinuous3: {
+                    title: { line1: "Présent Continu III :", line2: "Négation, Passif & Expressions", line3: "Maîtrisez les phrases négatives, la voix passive et les expressions idiomatiques", line4: "leçon : 3/3" },
+                    negative: { title: "III. 1. Formes négatives au présent continu", heading: "Structure négative de base & types", desc1: "📘 Formation de la négation :", desc2: "On utilise 'not' après la forme de 'to be' (am, is, are) pour former des phrases négatives au présent continu." },
+                    negativeToBe: {
+                        title: "III. 2. Négation avec 'To Be' (comme verbe principal)", heading: "Utiliser 'to be' dans les phrases négatives", subject: "Sujet", positive: "Positif", negative: "Négatif",
+                        subjI: "Je", posI: "Je suis prudent.", negI: "Je ne suis pas prudent.",
+                        subjYou: "Tu", posYou: "Tu es utile.", negYou: "Tu n'es pas utile.",
+                        subjHe: "Il", posHe: "Il est patient.", negHe: "Il n'est pas patient.",
+                        subjShe: "Elle", posShe: "Elle est gentille.", negShe: "Elle n'est pas gentille.",
+                        subjWe: "Nous", posWe: "Nous sommes tranquilles.", negWe: "Nous ne sommes pas tranquilles.",
+                        subjThey: "Ils/Elles", posThey: "Ils sont aimables.", negThey: "Ils ne sont pas aimables.",
+                        contractions: "Je ne suis pas prudent. / Tu n'es pas utile. / Il n'est pas patient."
+                    },
+                    negativeToHave: {
+                        title: "III. 3. Négation avec 'To Have'", heading: "Utiliser 'to have' comme verbe principal", subject: "Sujet", positive: "Positif", negative: "Négatif",
+                        subjI: "Je", posI: "Je déjeune.", negI: "Je ne déjeune pas.",
+                        subjYou: "Tu", posYou: "Tu t'amuses bien.", negYou: "Tu ne t'amuses pas bien.",
+                        subjHe: "Il", posHe: "Il a des ennuis.", negHe: "Il n'a pas d'ennuis.",
+                        subjShe: "Elle", posShe: "Elle fait une fête.", negShe: "Elle ne fait pas de fête.",
+                        subjWe: "Nous", posWe: "Nous avons une réunion.", negWe: "Nous n'avons pas de réunion.",
+                        subjThey: "Ils/Elles", posThey: "Ils s'amusent.", negThey: "Ils ne s'amusent pas."
+                    },
+                    negativeOther: {
+                        title: "III. 4. Négation avec d'autres verbes", heading: "Règle générale pour tous les autres verbes", subject: "Sujet", positive: "Positif", negative: "Négatif",
+                        subjI: "Je", posI: "Je travaille maintenant.", negI: "Je ne travaille pas maintenant.",
+                        subjYou: "Tu", posYou: "Tu étudies l'anglais.", negYou: "Tu n'étudies pas l'anglais.",
+                        subjHe: "Il", posHe: "Il joue au football.", negHe: "Il ne joue pas au football.",
+                        subjShe: "Elle", posShe: "Elle lit un livre.", negShe: "Elle ne lit pas de livre.",
+                        subjWe: "Nous", posWe: "Nous regardons un film.", negWe: "Nous ne regardons pas de film.",
+                        subjThey: "Ils/Elles", posThey: "Ils préparent le dîner.", negThey: "Ils ne préparent pas le dîner.",
+                        irregular: "Je ne vais pas au magasin maintenant. / Elle ne fait pas ses devoirs."
+                    },
+                    passive: {
+                        title: "III. 5. Voix passive au présent continu", heading: "Structure et utilisation de la voix passive", desc1: "📘 Formation passive :", desc2: "Sujet + am/is/are + being + participe passé (+ par agent). À utiliser quand l'agent est inconnu ou sans importance.",
+                        active: "Voix active", passive: "Voix passive",
+                        act1: "J'écris une lettre.", pass1: "Une lettre est écrite par moi.",
+                        act2: "Il répare la voiture.", pass2: "La voiture est réparée par lui.",
+                        act3: "Elle enseigne aux étudiants.", pass3: "Les étudiants sont enseignés par elle.",
+                        act4: "Ils vendent des fruits.", pass4: "Les fruits sont vendus par eux.",
+                        neg: "La maison n'est pas construite par les ouvriers.", question: "La voiture est-elle réparée par lui ?"
+                    },
+                    idioms: {
+                        title: "III. 6. Expressions idiomatiques courantes au présent continu", heading: "Expressions idiomatiques avec le présent continu", idiom: "Expression", meaning: "Signification", example: "Exemple",
+                        id1: "il pleut des cordes", meaning1: "pleuvoir très fort", ex1: "Il pleut des cordes en ce moment.",
+                        id2: "réviser intensément", meaning2: "étudier dur", ex2: "Je réviser intensément pour mon examen de demain.",
+                        id3: "brûler la chandelle par les deux bouts", meaning3: "travailler tard dans la nuit", ex3: "Elle brûle la chandelle par les deux bouts.",
+                        id4: "vendre la mèche", meaning4: "révéler un secret", ex4: "Il vend la mèche à propos de la fête surprise.",
+                        id5: "tourner autour du pot", meaning5: "éviter le sujet principal", ex5: "Arrête de tourner autour du pot.",
+                        id6: "se tromper de cible", meaning6: "faire une mauvaise supposition", ex6: "Tu te trompes de cible.",
+                        extra1: "Je ne me sens pas bien aujourd'hui.", extra2: "Ils passent le meilleur moment de leur vie en vacances."
+                    }
+                }
+            },
+            ar: {
+                common: { siteName: "English Hub", previousLesson: "الدرس السابق← ", returnToConjugation: "العودة إلى التصريف← ", nextLesson: "الدرس التالي →" },
+                footer: { developer: "المطور: ماجري زياد", privacy: "سياسة الخصوصية", terms: "شروط الخدمة", contact: "اتصل بنا" },
+                presentContinuous3: {
+                    title: { line1: "المضارع المستمر III:", line2: "النفي، المبني للمجهول والتعابير", line3: "أتقن الجمل المنفية، والمبني للمجهول، والتعابير الشائعة", line4: "الدرس: 3/3" },
+                    negative: { title: "III. 1. صيغ النفي في المضارع المستمر", heading: "بنية النفي الأساسية والأنواع", desc1: "📘 تكوين النفي:", desc2: "نستخدم 'not' بعد شكل 'to be' (am, is, are) لتكوين جمل منفية في المضارع المستمر." },
+                    negativeToBe: {
+                        title: "III. 2. النفي مع 'To Be' (كفعل رئيسي)", heading: "استخدام 'to be' في الجمل المنفية", subject: "الفاعل", positive: "الإثبات", negative: "النفي",
+                        subjI: "أنا", posI: "أنا حذر.", negI: "أنا لست حذرًا.",
+                        subjYou: "أنت", posYou: "أنت مفيد.", negYou: "أنت لست مفيدًا.",
+                        subjHe: "هو", posHe: "هو صبور.", negHe: "هو ليس صبورًا.",
+                        subjShe: "هي", posShe: "هي لطيفة.", negShe: "هي ليست لطيفة.",
+                        subjWe: "نحن", posWe: "نحن هادئون.", negWe: "نحن لسنا هادئين.",
+                        subjThey: "هم", posThey: "هم ودودون.", negThey: "هم ليسوا ودودين.",
+                        contractions: "أنا لست حذرًا. / أنت لست مفيدًا. / هو ليس صبورًا."
+                    },
+                    negativeToHave: {
+                        title: "III. 3. النفي مع 'To Have'", heading: "استخدام 'to have' كفعل رئيسي", subject: "الفاعل", positive: "الإثبات", negative: "النفي",
+                        subjI: "أنا", posI: "أنا أتناول الغداء.", negI: "أنا لا أتناول الغداء.",
+                        subjYou: "أنت", posYou: "أنت تقضي وقتًا ممتعًا.", negYou: "أنت لا تقضي وقتًا ممتعًا.",
+                        subjHe: "هو", posHe: "هو يواجه مشكلة.", negHe: "هو لا يواجه مشكلة.",
+                        subjShe: "هي", posShe: "هي تقيم حفلة.", negShe: "هي لا تقيم حفلة.",
+                        subjWe: "نحن", posWe: "نحن نعقد اجتماعًا.", negWe: "نحن لا نعقد اجتماعًا.",
+                        subjThey: "هم", posThey: "هم يستمتعون.", negThey: "هم لا يستمتعون."
+                    },
+                    negativeOther: {
+                        title: "III. 4. النفي مع أفعال أخرى", heading: "قاعدة عامة لجميع الأفعال الأخرى", subject: "الفاعل", positive: "الإثبات", negative: "النفي",
+                        subjI: "أنا", posI: "أنا أعمل الآن.", negI: "أنا لا أعمل الآن.",
+                        subjYou: "أنت", posYou: "أنت تدرس الإنجليزية.", negYou: "أنت لا تدرس الإنجليزية.",
+                        subjHe: "هو", posHe: "هو يلعب كرة القدم.", negHe: "هو لا يلعب كرة القدم.",
+                        subjShe: "هي", posShe: "هي تقرأ كتابًا.", negShe: "هي لا تقرأ كتابًا.",
+                        subjWe: "نحن", posWe: "نحن نشاهد فيلمًا.", negWe: "نحن لا نشاهد فيلمًا.",
+                        subjThey: "هم", posThey: "هم يطهون العشاء.", negThey: "هم لا يطهون العشاء.",
+                        irregular: "أنا لا أذهب إلى المتجر الآن. / هي لا تقوم بواجبها المنزلي."
+                    },
+                    passive: {
+                        title: "III. 5. المبني للمجهول في المضارع المستمر", heading: "بنية واستخدام المبني للمجهول", desc1: "📘 تكوين المبني للمجهول:", desc2: "الفاعل + am/is/are + being + التصريف الثالث (+ بواسطة الفاعل). يُستخدم عندما يكون الفاعل غير معروف أو غير مهم.",
+                        active: "المبني للمعلوم", passive: "المبني للمجهول",
+                        act1: "أنا أكتب رسالة.", pass1: "تُكتب رسالة بواسطتي.",
+                        act2: "هو يصلح السيارة.", pass2: "تُصلح السيارة بواسطته.",
+                        act3: "هي تدرس الطلاب.", pass3: "يُدرس الطلاب بواسطتها.",
+                        act4: "هم يبيعون الفواكه.", pass4: "تُباع الفواكه بواسطتهم.",
+                        neg: "المنزل لا يتم بناؤه من قبل العمال.", question: "هل يتم إصلاح السيارة بواسطته؟"
+                    },
+                    idioms: {
+                        title: "III. 6. التعابير الشائعة في المضارع المستمر", heading: "تعبيرات اصطلاحية مع المضارع المستمر", idiom: "التعبير", meaning: "المعنى", example: "مثال",
+                        id1: "تمطر بغزارة", meaning1: "تمطر بشدة", ex1: "إنها تمطر بغزارة الآن.",
+                        id2: "يذاكر بجد", meaning2: "يدرس باجتهاد", ex2: "أنا أذاكر بجد لامتحان الغد.",
+                        id3: "يعمل حتى وقت متأخر", meaning3: "يعمل حتى ساعات متأخرة من الليل", ex3: "إنها تعمل حتى وقت متأخر.",
+                        id4: "يفشي السر", meaning4: "يكشف سرًا", ex4: "هو يفضي السر عن الحفلة المفاجئة.",
+                        id5: "يدور حول الموضوع", meaning5: "يتجنب الموضوع الرئيسي", ex5: "توقف عن الدوران حول الموضوع.",
+                        id6: "يخطئ في الافتراض", meaning6: "يخطئ في الافتراض", ex6: "أنت تخطئ في الافتراض.",
+                        extra1: "أنا أشعر بتوعك اليوم.", extra2: "إنهم يقضون أفضل أوقات حياتهم في الإجازة."
+                    }
                 }
             }
-            
-            return totalScore;
-        }
-        
-        // Initialize when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set up answer checking for all exercise types
-            ExerciseType1Possibilities3Init(correctAnswersType1, Object.keys(correctAnswersType1).length, 'EH-exercise-type1-possibilities3');
-            ExerciseType2FillBlankInit(correctAnswersType2, Object.keys(correctAnswersType2).length, 'EH-exercise-type2-fillblank');
-            ExerciseType3SentenceOrderInit(correctAnswersType3, Object.keys(correctAnswersType3).length, 'EH-exercise-type3-sentenceorder');
-            
-            // Replace the default check button with our combined function
-            const checkButton = document.getElementById('EH-exercise-type1-possibilities3-check-answers');
-            if (checkButton) {
-                checkButton.addEventListener('click', checkAllExercises);
-            }
+        };
+    </script>
+    <script src="scripts/translation-refraction.js"></script>
+    <script src="scripts/exercise-conjugation.js"></script>
+    <script src="scripts/special-effects.js"></script>
+    <script src="scripts/common-sections.js"></script>
+    <script>
+        const correctAnswersType1 = buildMultipleChoiceExercise({
+            containerId: 'mc-exercises', prefix: 'EH-exercise-type1-possibilities3',
+            questions: [
+                { questionTextKey: 'presentContinuous3.exercises.q1', options: [{ value: 'a', labelKey: 'presentContinuous3.exercises.q1a' }, { value: 'b', labelKey: 'presentContinuous3.exercises.q1b' }, { value: 'c', labelKey: 'presentContinuous3.exercises.q1c' }], correctAnswer: 'a' },
+                { questionTextKey: 'presentContinuous3.exercises.q2', options: [{ value: 'a', labelKey: 'presentContinuous3.exercises.q2a' }, { value: 'b', labelKey: 'presentContinuous3.exercises.q2b' }, { value: 'c', labelKey: 'presentContinuous3.exercises.q2c' }], correctAnswer: 'b' },
+                { questionTextKey: 'presentContinuous3.exercises.q3', options: [{ value: 'a', labelKey: 'presentContinuous3.exercises.q3a' }, { value: 'b', labelKey: 'presentContinuous3.exercises.q3b' }, { value: 'c', labelKey: 'presentContinuous3.exercises.q3c' }], correctAnswer: 'a' },
+                { questionTextKey: 'presentContinuous3.exercises.q4', options: [{ value: 'a', labelKey: 'presentContinuous3.exercises.q4a' }, { value: 'b', labelKey: 'presentContinuous3.exercises.q4b' }, { value: 'c', labelKey: 'presentContinuous3.exercises.q4c' }], correctAnswer: 'b' },
+                { questionTextKey: 'presentContinuous3.exercises.q5', options: [{ value: 'a', labelKey: 'presentContinuous3.exercises.q5a' }, { value: 'b', labelKey: 'presentContinuous3.exercises.q5b' }, { value: 'c', labelKey: 'presentContinuous3.exercises.q5c' }], correctAnswer: 'a' },
+                { questionTextKey: 'presentContinuous3.exercises.q6', options: [{ value: 'a', labelKey: 'presentContinuous3.exercises.q6a' }, { value: 'b', labelKey: 'presentContinuous3.exercises.q6b' }, { value: 'c', labelKey: 'presentContinuous3.exercises.q6c' }], correctAnswer: 'a' }
+            ]
         });
+        const correctAnswersType2 = buildFillInTheBlankExercise({
+            containerId: 'fill-exercises', prefix: 'fill',
+            questions: [
+                { questionTextKey: 'presentContinuous3.exercises.q7', answers: ['am not studying'] },
+                { questionTextKey: 'presentContinuous3.exercises.q8', answers: ['is being written'] },
+                { questionTextKey: 'presentContinuous3.exercises.q9', answers: ['is not being cleaned'] }
+            ]
+        });
+        const correctAnswersType3 = buildSentenceOrderingExercise({
+            containerId: 'order-exercises', prefix: 'order',
+            questions: [
+                { questionTextKey: 'presentContinuous3.exercises.q10', words: ['He', 'is', 'not', 'working', 'now', '.'], correctSentence: 'He is not working now .' },
+                { questionTextKey: 'presentContinuous3.exercises.q11', words: ['The', 'house', 'is', 'being', 'built', 'by', 'workers', '.'], correctSentence: 'The house is being built by workers .' },
+                { questionTextKey: 'presentContinuous3.exercises.q12', words: ['It', 'is raining', 'cats and dogs', '.'], correctSentence: 'It is raining cats and dogs .' }
+            ]
+        });
+        function checkAllExercises() {
+            let totalScore = 0, totalQuestions = 0;
+            totalScore += ExerciseType1Possibilities3CheckAnswers(correctAnswersType1, 6, 'EH-exercise-type1-possibilities3'); totalQuestions += 6;
+            totalScore += ExerciseType2FillBlankCheckAnswers(correctAnswersType2, 3, 'fill'); totalQuestions += 3;
+            totalScore += ExerciseType3SentenceOrderCheckAnswers(correctAnswersType3, 3, 'order'); totalQuestions += 3;
+            const scoreEl = document.getElementById('score-value');
+            const fbEl = document.getElementById('score-feedback');
+            if (scoreEl) scoreEl.textContent = `${totalScore}/${totalQuestions}`;
+            if (fbEl) {
+                if (totalScore === totalQuestions) fbEl.textContent = 'Excellent! Mastered negative, passive & idioms!';
+                else if (totalScore >= 9) fbEl.textContent = 'Good job! Review a few details.';
+                else if (totalScore >= 6) fbEl.textContent = 'Not bad, but revisit the structures.';
+                else fbEl.textContent = 'Review the lesson and try again.';
+            }
+            document.getElementById('score-display').style.display = 'block';
+            EHScoreEffects.show(totalScore, totalQuestions);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            ExerciseType2FillBlankInit(correctAnswersType2, 3, 'fill');
+            ExerciseType3SentenceOrderInit(correctAnswersType3, 3, 'order');
+            document.getElementById('check-all').addEventListener('click', checkAllExercises);
+        });
+        (function() {
+            function applyHtmlI18n() {
+                const lang = document.getElementById('language-selector').value;
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const translation = key.split('.').reduce((obj, i) => obj && obj[i], window.I18N[lang]);
+                    if (translation) el.textContent = translation;
+                });
+            }
+            window.addEventListener('load', function() { setTimeout(applyHtmlI18n, 100); });
+            document.getElementById('language-selector').addEventListener('change', function() { setTimeout(applyHtmlI18n, 50); });
+        })();
     </script>
 </body>
 </html>

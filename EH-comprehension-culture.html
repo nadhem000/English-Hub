@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Differences - Comprehension Club</title>
+    <link rel="stylesheet" href="styles/comprehension.css">
+    <style>
+        :root {
+            --primary-color: #d97846;
+            --primary-light: #f7e0d0;
+            --primary-dark: #b85c2a;
+            --bg-body: linear-gradient(135deg, #fff4e8, #ffe8dc, #fef0e6);
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="EH-comprehension-body">
+
+    <!-- Language Selector -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <select id="language-selector" style="padding: 8px 12px; border-radius: 8px; border: 2px solid #d97846; background: white; color: #333; font-weight: bold;">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <div class="EH-site-header">
+        <a href="index.html" class="EH-site-logo-link" title="Main Page">
+            <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-site-logo">
+        </a>
+        <span class="EH-site-name" data-i18n-comprehension="common.siteName">English Hub</span>
+    </div>
+
+    <div class="EH-comprehension-lesson-container">
+        <div class="EH-comprehension-lesson-content">
+            <!-- Lesson Header -->
+            <div class="EH-comprehension-lesson-header">
+                <h1 class="EH-comprehension-lesson-title" data-i18n-comprehension="cultureLesson.title">Cultural Differences</h1>
+                <p class="EH-comprehension-lesson-subtitle" data-i18n-comprehension="cultureLesson.subtitle">Intermediate Level Reading Comprehension</p>
+                <div class="EH-comprehension-lesson-level" data-i18n-comprehension="cultureLesson.level">Level: B1-B2 (Intermediate)</div>
+            </div>
+
+            <!-- Reading Passage -->
+            <div class="EH-comprehension-passage-container">
+                <div class="EH-comprehension-passage-header">
+                    <h2 class="EH-comprehension-passage-title" data-i18n-comprehension="cultureLesson.passageTitle">Reading Passage</h2>
+                    <div class="EH-comprehension-reading-time" data-i18n-comprehension="cultureLesson.readingTime">Reading Time: 4-5 minutes</div>
+                </div>
+
+                <div class="EH-comprehension-passage-text">
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="cultureLesson.passage.p1">Every country has its own unique customs and traditions. When people travel or move to another country, they often experience culture shock – the feeling of being confused or uncomfortable because things are different. Understanding cultural differences can help us avoid misunderstandings and build better relationships with people from other backgrounds.</p>
+
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="cultureLesson.passage.p2">One important cultural difference is greetings. In many Western countries like the United States, people often shake hands when they meet for the first time. In some European countries, close friends might kiss each other on both cheeks. However, in Japan, people bow to show respect. The depth of the bow depends on the person's social status. In Thailand, people press their hands together in a prayer-like gesture called the "wai" and slightly bow their head.</p>
+
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="cultureLesson.passage.p3">Personal space is another area where cultures differ. In North America, people usually stand about an arm's length away from each other during conversations. In many Latin American and Middle Eastern countries, people stand much closer when talking. If a North American backs away, it might seem rude to someone from a culture that prefers closer contact.</p>
+
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="cultureLesson.passage.p4">Attitudes toward time also vary greatly. In Germany, Switzerland, and Japan, punctuality is extremely important. Being late for a meeting is considered disrespectful. However, in countries like Mexico, Brazil, and Saudi Arabia, time is viewed more flexibly. Arriving 15 or 30 minutes late might be perfectly acceptable in social situations. People from these cultures often prioritize relationships over strict schedules.</p>
+
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="cultureLesson.passage.p5">Dining customs also reflect cultural values. In China and many Asian countries, it is polite to serve food to others before serving yourself. In India, many people eat with their right hand because the left hand is considered unclean. In Western cultures, people use forks, knives, and spoons. Making slurping noises while eating noodles is acceptable and even a compliment to the chef in Japan, but considered rude in many other countries.</p>
+
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="cultureLesson.passage.p6">Gift-giving customs provide another fascinating example. In China, it is polite to refuse a gift a few times before finally accepting it. The recipient does not open the gift in front of the giver to avoid seeming greedy. In contrast, in Western cultures, people usually open gifts immediately and express thanks. In some Middle Eastern cultures, it is important to use both hands when giving or receiving a gift to show respect.</p>
+
+                    <p class="EH-comprehension-passage-paragraph" data-i18n-comprehension="cultureLesson.passage.p7">Learning about cultural differences does not mean one way is right and another is wrong. Different cultures have developed different solutions to everyday social situations. By being open-minded and respectful, we can learn from each other and appreciate the rich diversity of human customs around the world.</p>
+                </div>
+
+                <!-- Vocabulary Preview -->
+                <div class="EH-comprehension-vocabulary-preview">
+                    <h3 class="EH-comprehension-vocabulary-title" data-i18n-comprehension="cultureLesson.vocabularyPreview">Vocabulary Preview</h3>
+                    <div class="EH-comprehension-vocabulary-list">
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="cultureLesson.vocab.cultureShock">culture shock</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="cultureLesson.vocab.customs">customs</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="cultureLesson.vocab.punctuality">punctuality</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="cultureLesson.vocab.bow">bow</span>
+                        <span class="EH-comprehension-vocabulary-item" data-i18n-comprehension="cultureLesson.vocab.recipient">recipient</span>
+                    </div>
+                </div>
+
+                <!-- Audio Player -->
+                <div class="EH-comprehension-audio-player">
+                    <h3 class="EH-comprehension-audio-title" data-i18n-comprehension="cultureLesson.listenTitle">Listen to the Story</h3>
+
+                    <div class="EH-comprehension-audio-controls">
+                        <button class="EH-comprehension-audio-btn play" id="EH-culture-play-btn" title="Play">
+                            <span class="EH-comprehension-audio-icon">▶</span>
+                            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.play">Play</span>
+                        </button>
+                        <button class="EH-comprehension-audio-btn" id="EH-culture-pause-btn" title="Pause">
+                            <span class="EH-comprehension-audio-icon">⏸</span>
+                            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.pause">Pause</span>
+                        </button>
+                        <button class="EH-comprehension-audio-btn" id="EH-culture-stop-btn" title="Stop">
+                            <span class="EH-comprehension-audio-icon">⏹</span>
+                            <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.stop">Stop</span>
+                        </button>
+
+                        <div class="EH-audio-volume-control">
+                            <button class="EH-comprehension-audio-btn volume" id="EH-culture-volume-btn" title="Volume">
+                                <span class="EH-comprehension-audio-icon">🔊</span>
+                                <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.volume">Volume</span>
+                            </button>
+                            <div class="EH-audio-volume-slider-container">
+                                <input type="range" class="EH-audio-volume-slider" id="EH-culture-volume-slider" min="0" max="1" step="0.1" value="1">
+                            </div>
+                        </div>
+
+                        <div class="EH-audio-speed-control">
+                            <button class="EH-comprehension-audio-btn speed" id="EH-culture-speed-btn" title="Playback Speed">
+                                <span class="EH-comprehension-audio-icon">1x</span>
+                                <span class="EH-comprehension-sr-only" data-i18n-comprehension="common.speed">Speed</span>
+                            </button>
+                            <div class="EH-audio-speed-options" id="EH-culture-speed-options">
+                                <button class="EH-audio-speed-option" data-speed="0.5">0.5x</button>
+                                <button class="EH-audio-speed-option" data-speed="0.75">0.75x</button>
+                                <button class="EH-audio-speed-option" data-speed="1" data-selected="true">1x</button>
+                                <button class="EH-audio-speed-option" data-speed="1.25">1.25x</button>
+                                <button class="EH-audio-speed-option" data-speed="1.5">1.5x</button>
+                                <button class="EH-audio-speed-option" data-speed="2">2x</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="EH-comprehension-audio-progress">
+                        <div class="EH-comprehension-audio-progress-background" id="EH-culture-progress-background">
+                            <div class="EH-comprehension-audio-progress-bar" id="EH-culture-progress-bar"></div>
+                            <div class="EH-comprehension-audio-progress-thumb" id="EH-culture-progress-thumb"></div>
+                        </div>
+                        <input type="range" class="EH-comprehension-audio-progress-slider" id="EH-culture-progress-slider" min="0" max="100" value="0" step="0.1">
+                    </div>
+
+                    <div style="text-align: center; color: #666; font-size: 0.9rem;" id="EH-culture-time-display">0:00 / 0:00</div>
+                </div>
+            </div>
+
+            <!-- Comprehension Questions -->
+            <div class="EH-comprehension-questions-container">
+                <h2 class="EH-comprehension-questions-title" data-i18n-comprehension="cultureLesson.questionsTitle">Comprehension Questions</h2>
+
+                <!-- Question 1 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">1</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="cultureLesson.question1">What is culture shock?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q1-a" name="culture-q1" value="a"><label for="culture-q1-a" data-i18n-comprehension="cultureLesson.q1a">A sudden illness caused by different food</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q1-b" name="culture-q1" value="b"><label for="culture-q1-b" data-i18n-comprehension="cultureLesson.q1b">The feeling of being confused or uncomfortable because things are different</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q1-c" name="culture-q1" value="c"><label for="culture-q1-c" data-i18n-comprehension="cultureLesson.q1c">A type of greeting used in Japan</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="culture-q1-feedback"></div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">2</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="cultureLesson.question2">How do people in Japan typically greet each other?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q2-a" name="culture-q2" value="a"><label for="culture-q2-a" data-i18n-comprehension="cultureLesson.q2a">They shake hands</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q2-b" name="culture-q2" value="b"><label for="culture-q2-b" data-i18n-comprehension="cultureLesson.q2b">They kiss on both cheeks</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q2-c" name="culture-q2" value="c"><label for="culture-q2-c" data-i18n-comprehension="cultureLesson.q2c">They bow</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="culture-q2-feedback"></div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">3</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="cultureLesson.question3">What happens if a North American person stands far away during a conversation?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q3-a" name="culture-q3" value="a"><label for="culture-q3-a" data-i18n-comprehension="cultureLesson.q3a">It might seem rude to someone from a culture that prefers closer contact</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q3-b" name="culture-q3" value="b"><label for="culture-q3-b" data-i18n-comprehension="cultureLesson.q3b">It is always considered respectful</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q3-c" name="culture-q3" value="c"><label for="culture-q3-c" data-i18n-comprehension="cultureLesson.q3c">No one notices the distance</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="culture-q3-feedback"></div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">4</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="cultureLesson.question4">In which countries is punctuality extremely important?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q4-a" name="culture-q4" value="a"><label for="culture-q4-a" data-i18n-comprehension="cultureLesson.q4a">Mexico, Brazil, and Saudi Arabia</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q4-b" name="culture-q4" value="b"><label for="culture-q4-b" data-i18n-comprehension="cultureLesson.q4b">United States, Canada, and Mexico</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q4-c" name="culture-q4" value="c"><label for="culture-q4-c" data-i18n-comprehension="cultureLesson.q4c">Germany, Switzerland, and Japan</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="culture-q4-feedback"></div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">5</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="cultureLesson.question5">In China, what is the polite way to behave with a gift?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q5-a" name="culture-q5" value="a"><label for="culture-q5-a" data-i18n-comprehension="cultureLesson.q5a">Open it immediately and express thanks</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q5-b" name="culture-q5" value="b"><label for="culture-q5-b" data-i18n-comprehension="cultureLesson.q5b">Refuse it a few times before finally accepting it</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q5-c" name="culture-q5" value="c"><label for="culture-q5-c" data-i18n-comprehension="cultureLesson.q5c">Always use both hands to give it</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="culture-q5-feedback"></div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">6</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="cultureLesson.question6">According to the passage, what is considered a compliment to the chef in Japan?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q6-a" name="culture-q6" value="a"><label for="culture-q6-a" data-i18n-comprehension="cultureLesson.q6a">Asking for more food</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q6-b" name="culture-q6" value="b"><label for="culture-q6-b" data-i18n-comprehension="cultureLesson.q6b">Making slurping noises while eating noodles</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q6-c" name="culture-q6" value="c"><label for="culture-q6-c" data-i18n-comprehension="cultureLesson.q6c">Eating everything on the plate</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="culture-q6-feedback"></div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="EH-comprehension-question-card">
+                    <div class="EH-comprehension-question-number">7</div>
+                    <p class="EH-comprehension-question-text" data-i18n-comprehension="cultureLesson.question7">What is the main message of the passage?</p>
+                    <div class="EH-comprehension-options">
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q7-a" name="culture-q7" value="a"><label for="culture-q7-a" data-i18n-comprehension="cultureLesson.q7a">Western customs are better than Eastern customs</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q7-b" name="culture-q7" value="b"><label for="culture-q7-b" data-i18n-comprehension="cultureLesson.q7b">Everyone should follow the same customs</label></div>
+                        <div class="EH-comprehension-option"><input type="radio" id="culture-q7-c" name="culture-q7" value="c"><label for="culture-q7-c" data-i18n-comprehension="cultureLesson.q7c">Different cultures have different customs, and we should be respectful</label></div>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="culture-q7-feedback"></div>
+                </div>
+            </div>
+
+            <!-- True/False Exercise -->
+            <div class="EH-comprehension-true-false-container">
+                <h2 class="EH-comprehension-true-false-title" data-i18n-comprehension="cultureLesson.trueFalseTitle">True or False</h2>
+
+                <div class="EH-comprehension-true-false-question" data-lesson="culture">
+                    <p class="EH-comprehension-true-false-statement" data-i18n-comprehension="cultureLesson.tf1.statement">In Thailand, people greet each other with a handshake.</p>
+                    <div class="EH-comprehension-true-false-options">
+                        <button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="culture" data-i18n-comprehension="common.false">False</button>
+                        <button class="EH-comprehension-true-false-option" data-answer="true" data-i18n-comprehension="common.true">True</button>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="tf1-feedback"></div>
+                </div>
+
+                <div class="EH-comprehension-true-false-question" data-lesson="culture">
+                    <p class="EH-comprehension-true-false-statement" data-i18n-comprehension="cultureLesson.tf2.statement">In many Latin American countries, people stand closer during conversations compared to North Americans.</p>
+                    <div class="EH-comprehension-true-false-options">
+                        <button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="culture" data-i18n-comprehension="common.false">False</button>
+                        <button class="EH-comprehension-true-false-option" data-answer="true" data-i18n-comprehension="common.true">True</button>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="tf2-feedback"></div>
+                </div>
+
+                <div class="EH-comprehension-true-false-question" data-lesson="culture">
+                    <p class="EH-comprehension-true-false-statement" data-i18n-comprehension="cultureLesson.tf3.statement">In India, it is polite to eat with your left hand.</p>
+                    <div class="EH-comprehension-true-false-options">
+                        <button class="EH-comprehension-true-false-option" data-answer="false" data-lesson="culture" data-i18n-comprehension="common.false">False</button>
+                        <button class="EH-comprehension-true-false-option" data-answer="true" data-i18n-comprehension="common.true">True</button>
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="tf3-feedback"></div>
+                </div>
+            </div>
+
+            <!-- Fill in the Blanks Exercise -->
+            <div class="EH-comprehension-fill-blanks-container">
+                <h2 class="EH-comprehension-fill-blanks-title" data-i18n-comprehension="cultureLesson.fillBlanksTitle">Fill in the Blanks</h2>
+
+                <div class="EH-comprehension-fill-blanks-question">
+                    <p class="EH-comprehension-fill-blanks-text" data-i18n-comprehension="cultureLesson.fill1.text">In Japan, people _____ to show respect. The depth depends on the person's social _____. In Thailand, people press their hands together in a gesture called the "_____".</p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill1-1" data-lesson="culture" placeholder="Answer 1">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill1-2" data-lesson="culture" placeholder="Answer 2">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill1-3" data-lesson="culture" placeholder="Answer 3">
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="fill1-feedback"></div>
+                </div>
+
+                <div class="EH-comprehension-fill-blanks-question">
+                    <p class="EH-comprehension-fill-blanks-text" data-i18n-comprehension="cultureLesson.fill2.text">In Germany and _____, punctuality is extremely important. In Mexico and Brazil, time is viewed more _____ because relationships are often prioritized over strict _____.</p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill2-1" placeholder="Answer 1">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill2-2" placeholder="Answer 2">
+                        <input type="text" class="EH-comprehension-blank-input" id="fill2-3" placeholder="Answer 3">
+                    </div>
+                    <div class="EH-comprehension-answer-feedback" id="fill2-feedback"></div>
+                </div>
+            </div>
+
+            <!-- Sentence Ordering Exercise -->
+            <div class="EH-comprehension-ordering-container">
+                <h2 class="EH-comprehension-ordering-title" data-i18n-comprehension="cultureLesson.orderingTitle">Put the Sentences in Order</h2>
+                <p class="EH-comprehension-ordering-instructions" data-i18n-comprehension="cultureLesson.orderingInstructions">Drag and drop the sentences to show the correct order of events:</p>
+
+                <div class="EH-comprehension-ordering-list" id="ordering-list">
+                    <div class="EH-comprehension-ordering-item" data-order="4" data-i18n-comprehension="cultureLesson.order1">
+                        <div class="EH-comprehension-ordering-number">1</div>
+                        <div class="EH-comprehension-ordering-text">Attitudes toward time differ – some cultures value punctuality, others are more flexible.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="1" data-i18n-comprehension="cultureLesson.order2">
+                        <div class="EH-comprehension-ordering-number">2</div>
+                        <div class="EH-comprehension-ordering-text">Every country has its own unique customs and traditions.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="3" data-i18n-comprehension="cultureLesson.order3">
+                        <div class="EH-comprehension-ordering-number">3</div>
+                        <div class="EH-comprehension-ordering-text">Personal space also varies: North Americans stand farther apart than Latin Americans.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="5" data-i18n-comprehension="cultureLesson.order4">
+                        <div class="EH-comprehension-ordering-number">4</div>
+                        <div class="EH-comprehension-ordering-text">In China, it is polite to refuse a gift a few times before finally accepting it.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="2" data-i18n-comprehension="cultureLesson.order5">
+                        <div class="EH-comprehension-ordering-number">5</div>
+                        <div class="EH-comprehension-ordering-text">In Japan, people bow, while in Western countries people shake hands.</div>
+                    </div>
+                    <div class="EH-comprehension-ordering-item" data-order="6" data-i18n-comprehension="cultureLesson.order6">
+                        <div class="EH-comprehension-ordering-number">6</div>
+                        <div class="EH-comprehension-ordering-text">Learning about cultural differences helps us appreciate diversity.</div>
+                    </div>
+                </div>
+                <div class="EH-comprehension-answer-feedback" id="ordering-feedback"></div>
+            </div>
+
+            <!-- Check All Exercises Button -->
+            <button class="EH-comprehension-check-all-exercises" id="EH-culture-check-all" data-i18n-comprehension="cultureLesson.checkAllExercises">Check All Exercises</button>
+
+            <!-- Score Display -->
+            <div class="EH-comprehension-score-display" id="EH-culture-score-display">
+                <h3 class="EH-comprehension-score-title" data-i18n-comprehension="cultureLesson.yourScore">Your Score</h3>
+                <div class="EH-comprehension-score-value" id="EH-culture-score-value">0/20</div>
+                <p class="EH-comprehension-score-feedback" id="EH-culture-score-feedback" data-i18n-comprehension="cultureLesson.scoreFeedback.default">Check your answers to see your score!</p>
+            </div>
+
+            <!-- Vocabulary Section -->
+            <div class="EH-comprehension-vocabulary-section">
+                <h2 class="EH-comprehension-vocabulary-section-title" data-i18n-comprehension="cultureLesson.vocabularyTitle">Vocabulary Building</h2>
+                <div class="EH-comprehension-vocabulary-grid">
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="cultureLesson.vocab1.word">Culture shock</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="cultureLesson.vocab1.pronunciation">/ˈkʌltʃər ʃɒk/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="cultureLesson.vocab1.definition">The feeling of being confused or anxious when visiting a different culture</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="cultureLesson.vocab1.example">"After moving to Japan, Maria experienced culture shock because everything was different."</div>
+                    </div>
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="cultureLesson.vocab2.word">Customs</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="cultureLesson.vocab2.pronunciation">/ˈkʌstəmz/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="cultureLesson.vocab2.definition">Traditional and usual ways of behaving in a particular society</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="cultureLesson.vocab2.example">"It is important to learn local customs before traveling to another country."</div>
+                    </div>
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="cultureLesson.vocab3.word">Punctuality</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="cultureLesson.vocab3.pronunciation">/ˌpʌŋktʃuˈæləti/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="cultureLesson.vocab3.definition">The habit of being on time; not arriving late</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="cultureLesson.vocab3.example">"Punctuality is highly valued in German business culture."</div>
+                    </div>
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="cultureLesson.vocab4.word">Bow</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="cultureLesson.vocab4.pronunciation">/baʊ/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="cultureLesson.vocab4.definition">To bend your head or body forward as a sign of respect</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="cultureLesson.vocab4.example">"In Japan, it is customary to bow when meeting someone for the first time."</div>
+                    </div>
+                    <div class="EH-comprehension-vocabulary-card">
+                        <div class="EH-comprehension-vocabulary-word" data-i18n-comprehension="cultureLesson.vocab5.word">Recipient</div>
+                        <div class="EH-comprehension-vocabulary-pronunciation" data-i18n-comprehension="cultureLesson.vocab5.pronunciation">/rɪˈsɪpiənt/</div>
+                        <div class="EH-comprehension-vocabulary-definition" data-i18n-comprehension="cultureLesson.vocab5.definition">A person who receives something</div>
+                        <div class="EH-comprehension-vocabulary-example" data-i18n-comprehension="cultureLesson.vocab5.example">"The recipient of the gift should show appreciation."</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="EH-comprehension-navigation">
+                <!-- <button class="EH-comprehension-nav-button" onclick="window.location.href='EH-comprehension-perfumery.html'">
+                    <span data-i18n-comprehension="cultureLesson.backToClub">Previous: The Perfumery Shop</span> →
+                </button> -->
+                <button class="EH-comprehension-nav-button back" onclick="window.location.href='EH-general-comprehension-club.html'">
+                    <span data-i18n-comprehension="cultureLesson.nextLesson">Back to Comprehension Club</span>← 
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Common Footer -->
+    <footer class="EH-common-footer">
+        <div class="EH-common-footer-content">
+            <div class="EH-common-footer-developer" data-i18n-comprehension="footer.developer">Developer: Mejri Ziad</div>
+            <div class="EH-common-footer-links">
+                <a href="policy.html" data-i18n-comprehension="footer.privacy">Privacy Policy</a>
+                <a href="terms.html" data-i18n-comprehension="footer.terms">Terms of Service</a>
+                <a href="contact.html" data-i18n-comprehension="footer.contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- i18n translations -->
+    <script src="scripts/translation-comprehension.js"></script>
+    <script src="scripts/translations/i18n_comprehension_en.js"></script>
+    <script src="scripts/translations/i18n_comprehension_fr.js"></script>
+    <script src="scripts/translations/i18n_comprehension_ar.js"></script>
+    <script src="scripts/comprehension-exercises.js"></script>
+
+    <script>
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize translation system for comprehension pages
+            initTranslationSystem('comprehension', 'en', 'language-selector');
+
+            // Register the culture lesson configuration
+            ComprehensionExercises.registerLesson('culture', {
+                mcQuestions: 7,
+                audioPath: 'assets/audio/lessons/comprehension/cultures-story.mp3',
+                correctAnswers: {
+                    'culture-q1': 'b',
+                    'culture-q2': 'c',
+                    'culture-q3': 'a',
+                    'culture-q4': 'c',
+                    'culture-q5': 'b',
+                    'culture-q6': 'b',
+                    'culture-q7': 'c',
+                    'tf1': 'false',
+                    'tf2': 'true',
+                    'tf3': 'false',
+                    'ordering': ['2', '5', '3', '1', '4', '6']
+                },
+                fillBlanks: [
+                    {
+                        ids: ['fill1-1', 'fill1-2', 'fill1-3'],
+                        answers: ['bow', 'status', 'wai'],
+                        feedbackId: 'fill1-feedback'
+                    },
+                    {
+                        ids: ['fill2-1', 'fill2-2', 'fill2-3'],
+                        answers: ['Japan', 'flexibly', 'schedules'],
+                        feedbackId: 'fill2-feedback'
+                    }
+                ]
+            });
+
+            // Initialize exercises for culture lesson
+            ComprehensionExercises.initLesson('culture');
+        });
+    </script>
+</body>
+</html>
