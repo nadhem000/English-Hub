@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prefix Detective | Words Detective | English Hub</title>
+    <link rel="stylesheet" href="styles/style-words-detect.css">
+    <style>
+        /* ===== GAME‑SPECIFIC STYLES ===== */
+        .EH-words-detect-game-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .EH-words-detect-game-icon { font-size: 2.2rem; }
+        .EH-words-detect-game-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(120deg, var(--EH-words-detect-common-title-color), #b873ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin: 0;
+        }
+        .EH-words-detect-level-selector-area {
+            text-align: center;
+            margin: 1rem 0 1.5rem;
+        }
+        .EH-words-detect-level-selector-area label {
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        .EH-words-detect-level-select {
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            border: 1px solid var(--EH-words-detect-common-border);
+            background: var(--EH-words-detect-common-card-bg);
+            color: var(--EH-words-detect-common-text-color);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .EH-words-detect-sentence-card {
+            background: var(--EH-words-detect-common-status-bg);
+            border-radius: 1.5rem;
+            padding: 1.2rem;
+            margin: 1rem 0;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .EH-words-detect-root-area {
+            text-align: center;
+            margin: 0.8rem 0 1.2rem;
+            background: var(--EH-words-detect-common-card-bg);
+            padding: 0.7rem;
+            border-radius: 2rem;
+            border: 1px solid var(--EH-words-detect-common-border);
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .EH-words-detect-root-label {
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        .EH-words-detect-root-word {
+            font-weight: 500;
+        }
+        /* dual‑pill for sentence only */
+        .EH-words-detect-dual-text-wrapper {
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+        }
+        .EH-words-detect-translation-pill {
+            background: rgba(100, 70, 160, 0.15);
+            border-radius: 2rem;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.85rem;
+            font-style: italic;
+            color: var(--EH-words-detect-common-title-color);
+            white-space: nowrap;
+        }
+        html[dir="rtl"] .EH-words-detect-translation-pill {
+            direction: rtl;
+            unicode-bidi: embed;
+        }
+        .EH-words-detect-prefix-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .EH-words-detect-prefix-btn {
+            background: var(--EH-words-detect-common-title-color);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .EH-words-detect-prefix-btn:hover { transform: scale(0.96); background: #6a3eac; }
+        .EH-words-detect-prefix-btn:disabled { opacity: 0.5; transform: none; cursor: default; }
+        .EH-words-detect-constructed-word {
+            text-align: center;
+            font-size: 1.3rem;
+            margin: 0.8rem 0;
+            padding: 0.6rem;
+            background: var(--EH-words-detect-common-card-bg);
+            border-radius: 2rem;
+            border: 1px dashed var(--EH-words-detect-common-border);
+            min-height: 3rem;
+        }
+        .EH-words-detect-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        .EH-words-detect-btn {
+            padding: 0.7rem 1.6rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            background: var(--EH-words-detect-common-card-bg);
+            border: 1px solid var(--EH-words-detect-common-border);
+            color: var(--EH-words-detect-common-text-color);
+        }
+        .EH-words-detect-next-btn {
+            background: var(--EH-words-detect-common-title-color);
+            color: white;
+            display: block;
+            margin: 0.5rem auto 0;
+        }
+        .EH-words-detect-feedback {
+            min-height: 3rem;
+            margin: 1rem 0;
+            text-align: center;
+            font-weight: 500;
+        }
+        .EH-words-detect-score, .EH-words-detect-progress-text {
+            text-align: center;
+            margin-top: 0.6rem;
+            font-size: 1rem;
+        }
+        .EH-words-detect-signin-area {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--EH-words-detect-common-status-bg);
+            border-radius: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.8rem;
+        }
+        .EH-words-detect-signin-input {
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            border: 1px solid var(--EH-words-detect-common-border);
+            background: var(--EH-words-detect-common-card-bg);
+            color: var(--EH-words-detect-common-text-color);
+        }
+        .EH-words-detect-signin-btn, .EH-words-detect-signout-btn, .EH-words-detect-reset-btn {
+            background: var(--EH-words-detect-common-title-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .EH-words-detect-signout-btn { background: #c62828; }
+        .EH-words-detect-reset-btn {
+            background: transparent;
+            border: 1px solid var(--EH-words-detect-common-border);
+            color: var(--EH-words-detect-common-text-color);
+        }
+        .EH-words-detect-player-name {
+            font-weight: bold;
+            color: var(--EH-words-detect-common-title-color);
+        }
+        html[dir="rtl"] .EH-words-detect-root-label {
+            margin-left: 0.5rem;
+            margin-right: 0;
+        }
+        html[dir="rtl"] .EH-words-detect-level-selector-area label {
+            margin-left: 0.5rem;
+            margin-right: 0;
+        }
+        @media (max-width: 480px) {
+            .EH-words-detect-prefix-btn { padding: 0.5rem 1rem; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER (identical to other games) ===== -->
+    <div class="EH-words-detect-common-site-header">
+        <div class="EH-words-detect-common-brand">
+            <a href="index.html" class="EH-words-detect-common-site-logo-link" title="Main Page">
+                <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-words-detect-common-site-logo">
+            </a>
+            <span class="EH-words-detect-common-site-name" data-i18n="siteName">English Hub</span>
+        </div>
+        <div class="EH-words-detect-common-header-controls">
+            <select id="EH-words-detect-common-lang-select" class="EH-words-detect-common-language-select">
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="ar">العربية</option>
+            </select>
+            <button id="EH-words-detect-common-theme-toggle-btn" class="EH-words-detect-common-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+        </div>
+    </div>
+
+    <main class="EH-words-detect-common-cards-container">
+        <div class="EH-words-detect-common-card" style="max-width: 680px; margin: 0 auto; width: 100%;">
+            <div class="EH-words-detect-signin-area" id="signInArea"></div>
+
+            <div class="EH-words-detect-game-header">
+                <span class="EH-words-detect-game-icon">🔤</span>
+                <h2 class="EH-words-detect-game-title" data-i18n="game.title">Prefix Detective</h2>
+            </div>
+
+            <div class="EH-words-detect-level-selector-area">
+                <label for="levelSelect" data-i18n="game.levelLabel">Level:</label>
+                <select id="levelSelect" class="EH-words-detect-level-select">
+                    <option value="0" data-i18n="game.level1">Beginner</option>
+                    <option value="1" data-i18n="game.level2">Intermediate</option>
+                    <option value="2" data-i18n="game.level3">Advanced</option>
+                </select>
+            </div>
+
+            <!-- Sentence (English + pill underneath) -->
+            <div class="EH-words-detect-sentence-card" id="sentenceDisplay"></div>
+
+            <!-- Root word (plain English, no pill) -->
+            <div style="text-align: center;">
+                <div class="EH-words-detect-root-area">
+                    <span class="EH-words-detect-root-label">📖 Root:</span>
+                    <span class="EH-words-detect-root-word" id="rootWordDisplay"></span>
+                </div>
+            </div>
+
+            <div class="EH-words-detect-prefix-container" id="prefixContainer"></div>
+            <div class="EH-words-detect-constructed-word" id="constructedWordDisplay"></div>
+            <div class="EH-words-detect-feedback" id="feedback"></div>
+            <div class="EH-words-detect-buttons">
+                <button class="EH-words-detect-btn EH-words-detect-next-btn" id="nextButton" style="display:none;" data-i18n="game.nextWord">Next Word ➡️</button>
+            </div>
+            <div class="EH-words-detect-score">
+                <span data-i18n="game.scoreLabel">Score:</span>
+                <span id="scoreDisplay">0/0</span>
+            </div>
+            <div class="EH-words-detect-progress-text" id="progressText"></div>
+        </div>
+    </main>
+
+    <script>
+        if (!window.I18N) window.I18N = {};
+        const prefixI18N = {
+            en: {
+                siteName: "English Hub",
+                footer: {
+                    developer: "Developer: Mejri Ziad",
+                    privacy: "Privacy Policy",
+                    terms: "Terms of Service",
+                    contact: "Contact"
+                },
+                game: {
+                    title: "Prefix Detective",
+                    levelLabel: "Level:",
+                    level1: "Beginner",
+                    level2: "Intermediate",
+                    level3: "Advanced",
+                    rootLabel: "Root:",
+                    nextWord: "Next Word ➡️",
+                    scoreLabel: "Score:",
+                    progress: "Question {current} of {total}",
+                    correct: "🎉 Correct! Great prefix choice.",
+                    wrong: "❌ Oops! The correct prefix is {prefix}.",
+                    completion: "🏆 Congratulations! You've mastered all prefixes!",
+                    signInPrompt: "Enter your name to save progress",
+                    signInBtn: "Sign In",
+                    signOutBtn: "Sign Out",
+                    welcome: "Welcome, {name}",
+                    noName: "Please enter a name.",
+                    resetProgress: "Reset Progress"
+                }
+            },
+            fr: {
+                siteName: "English Hub",
+                footer: {
+                    developer: "Développeur : Mejri Ziad",
+                    privacy: "Politique de confidentialité",
+                    terms: "Conditions d'utilisation",
+                    contact: "Contact"
+                },
+                game: {
+                    title: "Détective des préfixes",
+                    levelLabel: "Niveau :",
+                    level1: "Débutant",
+                    level2: "Intermédiaire",
+                    level3: "Avancé",
+                    rootLabel: "Racine :",
+                    nextWord: "Mot suivant ➡️",
+                    scoreLabel: "Score :",
+                    progress: "Question {current} sur {total}",
+                    correct: "🎉 Correct ! Excellent choix de préfixe.",
+                    wrong: "❌ Oups ! Le bon préfixe est {prefix}.",
+                    completion: "🏆 Félicitations ! Vous maîtrisez tous les préfixes !",
+                    signInPrompt: "Entrez votre nom pour sauvegarder",
+                    signInBtn: "Connexion",
+                    signOutBtn: "Déconnexion",
+                    welcome: "Bienvenue, {name}",
+                    noName: "Veuillez entrer un nom.",
+                    resetProgress: "Réinitialiser"
+                }
+            },
+            ar: {
+                siteName: "English Hub",
+                footer: {
+                    developer: "المطور: ماجري زياد",
+                    privacy: "سياسة الخصوصية",
+                    terms: "شروط الخدمة",
+                    contact: "اتصل بنا"
+                },
+                game: {
+                    title: "محقق البادئات",
+                    levelLabel: "المستوى:",
+                    level1: "مبتدئ",
+                    level2: "متوسط",
+                    level3: "متقدم",
+                    rootLabel: "الجذر:",
+                    nextWord: "➡️ الكلمة التالية",
+                    scoreLabel: "النتيجة:",
+                    progress: "سؤال {current} من {total}",
+                    correct: "🎉 صحيح! اختيار بادئة ممتاز.",
+                    wrong: "❌ عذراً! البادئة الصحيحة هي {prefix}.",
+                    completion: "🏆 تهانينا! أتقنت جميع البادئات!",
+                    signInPrompt: "أدخل اسمك لحفظ التقدم",
+                    signInBtn: "تسجيل الدخول",
+                    signOutBtn: "تسجيل الخروج",
+                    welcome: "مرحباً، {name}",
+                    noName: "الرجاء إدخال اسم.",
+                    resetProgress: "إعادة تعيين"
+                }
+            }
+        };
+        for (const lang in prefixI18N) {
+            if (!window.I18N[lang]) window.I18N[lang] = {};
+            Object.assign(window.I18N[lang], prefixI18N[lang]);
+        }
+    </script>
+
+    <script src="scripts/translation-words-detect.js"></script>
+    <script src="scripts/common-sections-words-detect.js"></script>
+
+    <script>
+        window.EH_GAME_INDEX = 2;
+
+        // ---------- Storage (same as other games) ----------
+        const PLAYERS_KEY = 'EH_words_detect_players';
+        const PROGRESS_KEY = 'EH_words_detect_player_progress';
+        const SETTINGS_KEY = 'EH_words_detect_settings';
+        const GAME_PROGRESS_PREFIX = 'EH_words_detect_prefix_';
+
+        function getPlayerId(name) {
+            let hash = 0;
+            for (let i = 0; i < name.length; i++) hash = ((hash << 5) - hash) + name.charCodeAt(i) | 0;
+            return 'player_' + Math.abs(hash);
+        }
+        function loadSettings() { try { return JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}'); } catch(e) { return {}; } }
+        function saveSettings(s) { localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)); }
+        function getCurrentPlayerName() { return loadSettings().lastPlayer || ''; }
+        function setCurrentPlayerName(n) { let s = loadSettings(); s.lastPlayer = n; saveSettings(s); }
+        function clearCurrentPlayerName() { let s = loadSettings(); s.lastPlayer = ''; saveSettings(s); }
+        function loadPlayers() { try { return JSON.parse(localStorage.getItem(PLAYERS_KEY) || '[]'); } catch(e) { return []; } }
+        function savePlayers(p) { localStorage.setItem(PLAYERS_KEY, JSON.stringify(p)); }
+        function loadProgress() { try { return JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}'); } catch(e) { return {}; } }
+        function saveProgress(p) { localStorage.setItem(PROGRESS_KEY, JSON.stringify(p)); }
+        function ensurePlayer(name, lang) {
+            let players = loadPlayers();
+            let id = getPlayerId(name);
+            let player = players.find(p => p.id === id);
+            if (!player) { player = { id, name, regLang: lang || 'en' }; players.push(player); savePlayers(players); }
+            else if (player.name !== name) { player.name = name; savePlayers(players); }
+            return player;
+        }
+        function updateDashboardProgress(playerName, levelIndex, percent) {
+            if (!playerName) return;
+            const playerId = getPlayerId(playerName);
+            const gameIndex = window.EH_GAME_INDEX;
+            const progress = loadProgress();
+            if (!progress[playerId]) progress[playerId] = {};
+            const cardKey = String(gameIndex);
+            if (!progress[playerId][cardKey]) progress[playerId][cardKey] = { level1: 0, level2: 0, level3: 0 };
+            const fields = ['level1', 'level2', 'level3'];
+            const fieldName = fields[levelIndex] || 'level1';
+            progress[playerId][cardKey][fieldName] = Math.min(100, Math.round(percent));
+            saveProgress(progress);
+        }
+
+        // ---------- Level data (sentence + root, with translations for the pill) ----------
+        const prefixGameData = {
+            0: [
+                { correct: "re", prefixes: ["re", "un", "pre"],
+                  sentenceEn: "Please ____write the email before sending.",
+                  sentenceTrans: { en: "", fr: "Veuillez ____écrire l'e-mail avant de l'envoyer.", ar: "الرجاء ____كتابة البريد الإلكتروني قبل الإرسال." },
+                  rootEn: "write" },
+                { correct: "un", prefixes: ["un", "re", "dis"],
+                  sentenceEn: "She was ____happy with the service.",
+                  sentenceTrans: { en: "", fr: "Elle était ____heureuse du service.", ar: "كانت ____سعيدة بالخدمة." },
+                  rootEn: "happy" },
+                { correct: "pre", prefixes: ["pre", "re", "mis"],
+                  sentenceEn: "You should ____view the lesson before class.",
+                  sentenceTrans: { en: "", fr: "Tu devrais ____voir la leçon avant le cours.", ar: "يجب عليك ____معاينة الدرس قبل الفصل." },
+                  rootEn: "view" },
+                { correct: "dis", prefixes: ["dis", "re", "un"],
+                  sentenceEn: "The manager had to ____approve the request.",
+                  sentenceTrans: { en: "", fr: "Le manager a dû ____approuver la demande.", ar: "كان على المدير ____الموافقة على الطلب." },
+                  rootEn: "approve" }
+            ],
+            1: [
+                { correct: "mis", prefixes: ["mis", "over", "sub"],
+                  sentenceEn: "He often ____spells common words.",
+                  sentenceTrans: { en: "", fr: "Il ____écrit souvent des mots courants.", ar: "غالبًا ما ي____تهجئة الكلمات الشائعة." },
+                  rootEn: "spells" },
+                { correct: "over", prefixes: ["over", "under", "mis"],
+                  sentenceEn: "Don't ____cook the pasta, it becomes soft.",
+                  sentenceTrans: { en: "", fr: "Ne ____cuis pas les pâtes, elles deviennent molles.", ar: "لا ت____طهِ المعكرونة، تصبح طرية." },
+                  rootEn: "cook" },
+                { correct: "under", prefixes: ["under", "sub", "over"],
+                  sentenceEn: "The country is ____developed, lacking infrastructure.",
+                  sentenceTrans: { en: "", fr: "Le pays est ____développé, manque d'infrastructures.", ar: "البلد ____متطور، يفتقر إلى البنية التحتية." },
+                  rootEn: "developed" },
+                { correct: "sub", prefixes: ["sub", "mis", "under"],
+                  sentenceEn: "We took the ____way tunnel to cross.",
+                  sentenceTrans: { en: "", fr: "Nous avons pris le tunnel ____terrain pour traverser.", ar: "أخذنا النفق ____أرضي للعبور." },
+                  rootEn: "way" }
+            ],
+            2: [
+                { correct: "anti", prefixes: ["anti", "inter", "super"],
+                  sentenceEn: "The medicine acts as an ____biotic.",
+                  sentenceTrans: { en: "", fr: "Le médicament agit comme un ____biotique.", ar: "يعمل الدواء كمضاد ____حيوي." },
+                  rootEn: "biotic" },
+                { correct: "inter", prefixes: ["inter", "anti", "semi"],
+                  sentenceEn: "____national cooperation is essential for peace.",
+                  sentenceTrans: { en: "", fr: "La coopération ____nationale est essentielle pour la paix.", ar: "التعاون ____وطني ضروري للسلام." },
+                  rootEn: "national" },
+                { correct: "super", prefixes: ["super", "semi", "anti"],
+                  sentenceEn: "His performance was ____human.",
+                  sentenceTrans: { en: "", fr: "Sa performance était ____humaine.", ar: "كان أداؤه ____بشرياً." },
+                  rootEn: "human" },
+                { correct: "semi", prefixes: ["semi", "inter", "super"],
+                  sentenceEn: "The event is ____annual, happening twice a year.",
+                  sentenceTrans: { en: "", fr: "L'événement est ____annuel, deux fois par an.", ar: "الحدث ____سنوي، يحدث مرتين في السنة." },
+                  rootEn: "annual" }
+            ]
+        };
+
+        class PrefixDetectiveGame {
+            constructor() {
+                this.player = getCurrentPlayerName();
+                this.currentLevel = 0;
+                this.currentIndex = 0;
+                this.score = 0;
+                this.totalAnswered = 0;
+                this.gameActive = true;
+                this.currentQuestion = null;
+                this.sentenceEl = document.getElementById('sentenceDisplay');
+                this.rootWordEl = document.getElementById('rootWordDisplay');
+                this.prefixContainer = document.getElementById('prefixContainer');
+                this.constructedEl = document.getElementById('constructedWordDisplay');
+                this.feedbackEl = document.getElementById('feedback');
+                this.nextBtn = document.getElementById('nextButton');
+                this.scoreDisplay = document.getElementById('scoreDisplay');
+                this.progressTextEl = document.getElementById('progressText');
+                this.levelSelect = document.getElementById('levelSelect');
+                this.langSelect = document.getElementById('EH-words-detect-common-lang-select');
+                this.init();
+            }
+
+            getLang() { return this.langSelect ? this.langSelect.value : 'en'; }
+            t(key, replacements = {}) {
+                let raw = key;
+                if (window.I18N && window.I18N[this.getLang()]) {
+                    const parts = key.split('.');
+                    let val = window.I18N[this.getLang()];
+                    for (let p of parts) if (val && typeof val === 'object' && p in val) val = val[p]; else break;
+                    if (typeof val === 'string') raw = val;
+                }
+                for (let [k, v] of Object.entries(replacements)) raw = raw.replace(`{${k}}`, v);
+                return raw;
+            }
+
+            init() {
+                this.levelSelect.addEventListener('change', () => this.onLevelChange());
+                this.nextBtn.addEventListener('click', () => this.nextQuestion());
+                this.langSelect.addEventListener('change', () => {
+                    this.onLanguageChange();
+                    if (this.getLang() === 'ar') document.documentElement.setAttribute('dir', 'rtl');
+                    else document.documentElement.removeAttribute('dir');
+                    this.refreshCurrentQuestionUI();
+                });
+
+                // Theme is handled by common-sections-words-detect.js – no duplicate listener here
+
+                this.renderSignIn();
+                this.loadSavedProgress();
+                this.loadQuestion();
+                this.updateUITexts();
+            }
+
+            renderSignIn() {
+                const area = document.getElementById('signInArea');
+                if (!area) return;
+                if (this.player) {
+                    area.innerHTML = `
+                        <span class="EH-words-detect-player-name">${this.t('game.welcome', { name: this.player })}</span>
+                        <button class="EH-words-detect-signout-btn" id="signOutBtn">${this.t('game.signOutBtn')}</button>
+                        <button class="EH-words-detect-reset-btn" id="resetProgressBtn">🔄 ${this.t('game.resetProgress')}</button>
+                    `;
+                    document.getElementById('signOutBtn')?.addEventListener('click', () => this.signOut());
+                    document.getElementById('resetProgressBtn')?.addEventListener('click', () => this.resetAllProgress());
+                } else {
+                    area.innerHTML = `
+                        <input type="text" class="EH-words-detect-signin-input" id="playerNameInput" placeholder="Your name" maxlength="20">
+                        <button class="EH-words-detect-signin-btn" id="signInBtn">${this.t('game.signInBtn')}</button>
+                        <div id="signInError" style="color:#c62828; font-size:0.8rem;"></div>
+                    `;
+                    document.getElementById('signInBtn')?.addEventListener('click', () => this.signIn());
+                }
+            }
+
+            signIn() {
+                const input = document.getElementById('playerNameInput');
+                const error = document.getElementById('signInError');
+                const name = input?.value.trim();
+                if (!name) { error.textContent = this.t('game.noName'); return; }
+                setCurrentPlayerName(name);
+                this.player = name;
+                ensurePlayer(name, this.getLang());
+                this.loadSavedProgress();
+                this.renderSignIn();
+                this.loadQuestion();
+                this.updateUITexts();
+            }
+
+            signOut() {
+                clearCurrentPlayerName();
+                this.player = '';
+                this.resetProgressForCurrentLevel();
+                this.renderSignIn();
+                this.loadQuestion();
+                this.updateUITexts();
+            }
+
+            resetAllProgress() {
+                if (!this.player) return;
+                localStorage.removeItem(GAME_PROGRESS_PREFIX + this.player);
+                this.resetProgressForCurrentLevel();
+                const playerId = getPlayerId(this.player);
+                const progress = loadProgress();
+                if (!progress[playerId]) progress[playerId] = {};
+                progress[playerId][String(window.EH_GAME_INDEX)] = { level1: 0, level2: 0, level3: 0 };
+                saveProgress(progress);
+                this.loadQuestion();
+            }
+
+            loadSavedProgress() {
+                if (!this.player) return;
+                const raw = localStorage.getItem(GAME_PROGRESS_PREFIX + this.player);
+                if (raw) {
+                    try {
+                        const data = JSON.parse(raw);
+                        this.currentLevel = data.level ?? 0;
+                        this.currentIndex = data.index ?? 0;
+                        this.score = data.score ?? 0;
+                        this.totalAnswered = data.totalAnswered ?? 0;
+                        this.levelSelect.value = this.currentLevel;
+                    } catch(e) {}
+                }
+            }
+
+            saveLocalProgress() {
+                if (!this.player) return;
+                const save = { level: this.currentLevel, index: this.currentIndex, score: this.score, totalAnswered: this.totalAnswered };
+                localStorage.setItem(GAME_PROGRESS_PREFIX + this.player, JSON.stringify(save));
+                const totalQuestions = this.getCurrentLevelQuestions().length;
+                const percent = totalQuestions > 0 ? (this.totalAnswered / totalQuestions) * 100 : 0;
+                updateDashboardProgress(this.player, this.currentLevel, percent);
+            }
+
+            getCurrentLevelQuestions() { return prefixGameData[this.currentLevel] || []; }
+
+            onLevelChange() {
+                this.currentLevel = parseInt(this.levelSelect.value, 10);
+                this.resetProgressForCurrentLevel();
+                this.saveLocalProgress();
+                this.loadQuestion();
+                this.updateUITexts();
+            }
+
+            resetProgressForCurrentLevel() {
+                this.currentIndex = 0;
+                this.score = 0;
+                this.totalAnswered = 0;
+                this.updateScoreUI();
+            }
+
+            renderSentenceDual() {
+                if (!this.currentQuestion) return;
+                const lang = this.getLang();
+                const sentenceEnglish = this.currentQuestion.sentenceEn;
+                let sentenceTrans = this.currentQuestion.sentenceTrans[lang];
+                if (lang === 'en') sentenceTrans = '';
+                const wrapper = document.createElement('div');
+                wrapper.className = 'EH-words-detect-dual-text-wrapper';
+                const engSpan = document.createElement('span');
+                engSpan.textContent = sentenceEnglish;
+                engSpan.setAttribute('dir', 'ltr');
+                wrapper.appendChild(engSpan);
+                if (sentenceTrans && sentenceTrans.trim() !== '') {
+                    const pill = document.createElement('span');
+                    pill.className = 'EH-words-detect-translation-pill';
+                    pill.textContent = sentenceTrans;
+                    if (lang === 'ar') pill.setAttribute('dir', 'rtl');
+                    wrapper.appendChild(pill);
+                }
+                this.sentenceEl.innerHTML = '';
+                this.sentenceEl.appendChild(wrapper);
+            }
+
+            renderRootPlain() {
+                if (this.currentQuestion) {
+                    this.rootWordEl.textContent = this.currentQuestion.rootEn;
+                }
+            }
+
+            refreshCurrentQuestionUI() {
+                if (!this.currentQuestion) return;
+                this.renderSentenceDual();
+                this.renderRootPlain();
+                this.constructedEl.textContent = '';
+            }
+
+            loadQuestion() {
+                const questions = this.getCurrentLevelQuestions();
+                if (this.currentIndex >= questions.length) {
+                    this.showCompletion();
+                    return;
+                }
+                this.currentQuestion = questions[this.currentIndex];
+                this.gameActive = true;
+                this.refreshCurrentQuestionUI();
+
+                this.prefixContainer.innerHTML = '';
+                this.currentQuestion.prefixes.forEach(prefix => {
+                    const btn = document.createElement('button');
+                    btn.className = 'EH-words-detect-prefix-btn';
+                    btn.textContent = prefix + '-';
+                    btn.addEventListener('click', () => this.checkAnswer(prefix));
+                    this.prefixContainer.appendChild(btn);
+                });
+                this.feedbackEl.innerHTML = '';
+                this.nextBtn.style.display = 'none';
+                this.constructedEl.innerHTML = '';
+                this.updateProgressText();
+                this.updateScoreUI();
+            }
+
+            checkAnswer(selectedPrefix) {
+                if (!this.gameActive) return;
+                const correctPrefix = this.currentQuestion.correct;
+                const fullWord = selectedPrefix + this.currentQuestion.rootEn;
+                this.constructedEl.innerHTML = `<strong>${fullWord}</strong>`;
+                document.querySelectorAll('.EH-words-detect-prefix-btn').forEach(btn => btn.disabled = true);
+                if (selectedPrefix === correctPrefix) {
+                    this.score++;
+                    this.feedbackEl.innerHTML = `<span style="color:#2e7d32;">${this.t('game.correct')}</span>`;
+                } else {
+                    this.feedbackEl.innerHTML = `<span style="color:#c62828;">${this.t('game.wrong', { prefix: correctPrefix + '-' })}</span>`;
+                }
+                this.totalAnswered++;
+                this.updateScoreUI();
+                this.gameActive = false;
+                this.nextBtn.style.display = 'block';
+                this.saveLocalProgress();
+            }
+
+            nextQuestion() {
+                this.currentIndex++;
+                this.loadQuestion();
+                this.saveLocalProgress();
+            }
+
+            updateScoreUI() {
+                const total = this.getCurrentLevelQuestions().length;
+                this.scoreDisplay.textContent = `${this.score}/${total}`;
+            }
+
+            updateProgressText() {
+                const total = this.getCurrentLevelQuestions().length;
+                this.progressTextEl.textContent = this.t('game.progress', { current: this.currentIndex + 1, total });
+            }
+
+            showCompletion() {
+                this.feedbackEl.innerHTML = `<span style="color:#4caf50;">${this.t('game.completion')}</span>`;
+                this.nextBtn.style.display = 'none';
+                this.prefixContainer.innerHTML = '';
+                this.gameActive = false;
+            }
+
+            updateUITexts() {
+                const opts = this.levelSelect.options;
+                if (opts[0]) opts[0].text = this.t('game.level1');
+                if (opts[1]) opts[1].text = this.t('game.level2');
+                if (opts[2]) opts[2].text = this.t('game.level3');
+                this.updateScoreUI();
+                this.updateProgressText();
+                this.renderSignIn();
+                const footer = document.querySelector('footer.EH-words-detect-common-footer');
+                if (footer) footer.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (key) el.textContent = this.t(key);
+                });
+            }
+
+            onLanguageChange() {
+                this.updateUITexts();
+                if (this.currentQuestion) this.refreshCurrentQuestionUI();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => { new PrefixDetectiveGame(); });
+    </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 // Service Worker for English Hub
-// Version: 2.1.1
-const CACHE_NAME = 'english-hub-v2.1.1';
-const DYNAMIC_CACHE_NAME = 'english-hub-dynamic-v2.1.1';
+// Version: 2.1.2
+const CACHE_NAME = 'english-hub-v2.1.2';
+const DYNAMIC_CACHE_NAME = 'english-hub-dynamic-v2.1.2';
 
 // Core assets that are essential for the app to work
 const CORE_ASSETS = [
@@ -141,7 +141,7 @@ self.addEventListener('message', (event) => {
   }
   
   if (event.data && event.data.type === 'GET_VERSION') {
-    event.ports[0].postMessage({ version: '2.1.1', cacheName: CACHE_NAME });
+    event.ports[0].postMessage({ version: '2.1.2', cacheName: CACHE_NAME });
   }
 });
 

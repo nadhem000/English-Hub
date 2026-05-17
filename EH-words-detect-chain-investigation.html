@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Chain | Words Detective | English Hub</title>
+    <!-- Main site stylesheet – provides header, card, footer, progress bars, etc. -->
+    <link rel="stylesheet" href="styles/style-words-detect.css">
+    <style>
+        /* ===== GAME‑SPECIFIC STYLES – all colors use CSS variables ===== */
+        :root {
+            /* Core game colors */
+            --EH-words-detect-common-primary: #5e3a7c;
+            --EH-words-detect-common-primary-light: #7e5aa2;
+            --EH-words-detect-letter: #1e1e2a;
+            --EH-words-detect-success: #2e7d32;
+            --EH-words-detect-error: #c62828;
+            --EH-words-detect-warning: #f57c00;
+            
+            /* Additional variables for consistent theming (replaces hardcoded values) */
+            --EH-words-detect-letter-used-bg: #aaa;
+            --EH-words-detect-answer-area-bg: rgba(0, 0, 0, 0.05);
+            --EH-words-detect-letter-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            --EH-words-detect-clue-card-bg: rgba(128, 128, 128, 0.08);
+            --EH-words-detect-feedback-correct: var(--EH-words-detect-success);
+            --EH-words-detect-feedback-wrong: var(--EH-words-detect-error);
+            --EH-words-detect-button-text-light: var(--EH-words-detect-white, #ffffff);
+        }
+
+        [data-theme="dark"] {
+            --EH-words-detect-common-primary: #b388ff;
+            --EH-words-detect-common-primary-light: #d1b3ff;
+            --EH-words-detect-letter: #eef2ff;
+            --EH-words-detect-success: #2e7d32;
+            --EH-words-detect-error: #c62828;
+            --EH-words-detect-warning: #f57c00;
+            
+            /* Dark mode overrides */
+            --EH-words-detect-letter-used-bg: #555;
+            --EH-words-detect-answer-area-bg: rgba(255, 255, 255, 0.05);
+            --EH-words-detect-letter-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            --EH-words-detect-clue-card-bg: rgba(200, 200, 255, 0.08);
+            --EH-words-detect-button-text-light: var(--EH-words-detect-white, #f0f0f0);
+        }
+
+        .EH-words-detect-game-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .EH-words-detect-game-icon { font-size: 2rem; }
+        .EH-words-detect-game-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(120deg, var(--EH-words-detect-common-primary), #b873ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .EH-words-detect-level-selector-area {
+            text-align: center;
+            margin: 1rem 0 1.5rem;
+        }
+        .EH-words-detect-level-selector-area label {
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        .EH-words-detect-level-select {
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            border: 1px solid var(--EH-words-detect-common-border);
+            background: var(--EH-words-detect-common-card-bg);
+            color: var(--EH-words-detect-common-text-color);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .EH-words-detect-clue-card {
+            background: var(--EH-words-detect-clue-card-bg);
+            border-radius: 1.5rem;
+            padding: 1rem;
+            text-align: center;
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+        .EH-words-detect-scramble-letters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.6rem;
+            margin: 1.5rem 0;
+        }
+        .EH-words-detect-letter-btn {
+            width: 60px;
+            height: 60px;
+            background: var(--EH-words-detect-common-primary-light);
+            color: var(--EH-words-detect-letter);
+            font-size: 1.8rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: transform 0.1s;
+            box-shadow: var(--EH-words-detect-letter-shadow);
+        }
+        .EH-words-detect-letter-btn.used {
+            opacity: 0.3;
+            pointer-events: none;
+            background: var(--EH-words-detect-letter-used-bg);
+        }
+        .EH-words-detect-answer-area {
+            background: var(--EH-words-detect-answer-area-bg);
+            border: 2px dashed var(--EH-words-detect-common-border);
+            border-radius: 1.5rem;
+            padding: 1rem;
+            min-height: 70px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            margin: 1.2rem 0;
+        }
+        .EH-words-detect-answer-letter {
+            background: var(--EH-words-detect-common-primary);
+            color: var(--EH-words-detect-button-text-light);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .EH-words-detect-game-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        .EH-words-detect-btn {
+            padding: 0.7rem 1.6rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            background: var(--EH-words-detect-common-card-bg);
+            border: 1px solid var(--EH-words-detect-common-border);
+            color: var(--EH-words-detect-common-text-color);
+        }
+        .EH-words-detect-btn-check {
+            background: var(--EH-words-detect-success);
+            color: var(--EH-words-detect-button-text-light);
+            border: none;
+        }
+        .EH-words-detect-btn-reset {
+            background: var(--EH-words-detect-error);
+            color: var(--EH-words-detect-button-text-light);
+            border: none;
+        }
+        .EH-words-detect-btn-hint {
+            background: var(--EH-words-detect-warning);
+            color: var(--EH-words-detect-button-text-light);
+            border: none;
+        }
+        .EH-words-detect-next-btn {
+            background: var(--EH-words-detect-common-primary);
+            color: var(--EH-words-detect-button-text-light);
+            display: block;
+            margin: 0 auto;
+        }
+        .EH-words-detect-feedback {
+            min-height: 3rem;
+            margin: 1rem 0;
+            text-align: center;
+            font-weight: 500;
+        }
+        .EH-words-detect-score,
+        .EH-words-detect-progress-text {
+            text-align: center;
+            margin-top: 0.8rem;
+            font-size: 1rem;
+        }
+        /* Sign‑in area */
+        .EH-words-detect-signin-area {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--EH-words-detect-common-status-bg);
+            border-radius: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.8rem;
+        }
+        .EH-words-detect-signin-input,
+        .EH-words-detect-level-select {
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            border: 1px solid var(--EH-words-detect-common-border);
+            background: var(--EH-words-detect-common-card-bg);
+            color: var(--EH-words-detect-common-text-color);
+        }
+        .EH-words-detect-signin-btn,
+        .EH-words-detect-signout-btn,
+        .EH-words-detect-reset-btn {
+            background: var(--EH-words-detect-common-primary);
+            color: var(--EH-words-detect-button-text-light);
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .EH-words-detect-signout-btn { background: var(--EH-words-detect-error); }
+        .EH-words-detect-reset-btn {
+            background: var(--EH-words-detect-transparent);
+            border: 1px solid var(--EH-words-detect-common-border);
+            color: var(--EH-words-detect-common-text-color);
+        }
+        .EH-words-detect-player-name {
+            font-weight: bold;
+            color: var(--EH-words-detect-common-primary);
+        }
+        html[dir="rtl"] .EH-words-detect-answer-area {
+            direction: ltr !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER (identical to your main page) ===== -->
+    <div class="EH-words-detect-common-site-header">
+        <div class="EH-words-detect-common-brand">
+            <a href="index.html" class="EH-words-detect-common-site-logo-link" title="Main Page">
+                <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-words-detect-common-site-logo">
+            </a>
+            <span class="EH-words-detect-common-site-name" data-i18n="siteName">English Hub</span>
+        </div>
+        <div class="EH-words-detect-common-header-controls">
+            <select id="EH-words-detect-common-lang-select" class="EH-words-detect-common-language-select">
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="ar">العربية</option>
+            </select>
+            <button id="EH-words-detect-common-theme-toggle-btn" class="EH-words-detect-common-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+        </div>
+    </div>
+
+    <!-- ===== MAIN GAME CARD ===== -->
+    <main class="EH-words-detect-common-cards-container">
+        <div class="EH-words-detect-common-card" style="max-width: 640px; margin: 0 auto; width: 100%;">
+            <!-- Sign‑in area -->
+            <div class="EH-words-detect-signin-area" id="signInArea"></div>
+
+            <!-- Game header -->
+            <div class="EH-words-detect-game-header">
+                <span class="EH-words-detect-game-icon">🔗</span>
+                <h2 class="EH-words-detect-game-title" data-i18n="game.title">Word Chain</h2>
+            </div>
+
+            <!-- Level selector -->
+            <div class="EH-words-detect-level-selector-area">
+                <label for="levelSelect" data-i18n="game.levelLabel">Level:</label>
+                <select id="levelSelect" class="EH-words-detect-level-select">
+                    <option value="0" data-i18n="game.level1">Beginner</option>
+                    <option value="1" data-i18n="game.level2">Intermediate</option>
+                    <option value="2" data-i18n="game.level3">Advanced</option>
+                </select>
+            </div>
+
+            <!-- Clue -->
+            <div class="EH-words-detect-clue-card" id="clueText"></div>
+
+            <!-- Scrambled letters -->
+            <div class="EH-words-detect-scramble-letters" id="scrambleContainer"></div>
+
+            <!-- Answer area -->
+            <div class="EH-words-detect-answer-area" id="answerContainer"></div>
+
+            <!-- Action buttons -->
+            <div class="EH-words-detect-game-buttons">
+                <button class="EH-words-detect-btn EH-words-detect-btn-reset" id="btnReset" data-i18n="game.resetBtn">🔄 Clear</button>
+                <button class="EH-words-detect-btn EH-words-detect-btn-hint" id="btnHint" data-i18n="game.hintBtn">💡 Hint</button>
+                <button class="EH-words-detect-btn EH-words-detect-btn-check" id="btnCheck" data-i18n="game.checkBtn">✔️ Check</button>
+            </div>
+
+            <!-- Feedback -->
+            <div class="EH-words-detect-feedback" id="feedback"></div>
+
+            <!-- Next button -->
+            <button class="EH-words-detect-btn EH-words-detect-next-btn" id="nextButton" style="display:none;" data-i18n="game.nextWord">Next Word ➡️</button>
+
+            <!-- Score & progress -->
+            <div class="EH-words-detect-score">
+                <span data-i18n="game.scoreLabel">Score:</span>
+                <span id="scoreDisplay">0/0</span>
+            </div>
+            <div class="EH-words-detect-progress-text" id="progressText"></div>
+        </div>
+    </main>
+
+    <!-- Footer will be injected here by script -->
+    <div id="footerContainer"></div>
+
+    <!-- ===== EXTEND I18N (add game‑specific and footer keys) ===== -->
+    <script>
+        if (!window.I18N) window.I18N = {};
+        const fullI18N = {
+            en: {
+                siteName: "English Hub",
+                footer: {
+                    developer: "Developer: Mejri Ziad",
+                    privacy: "Privacy Policy",
+                    terms: "Terms of Service",
+                    contact: "Contact"
+                },
+                game: {
+                    title: "Word Chain",
+                    levelLabel: "Level:",
+                    level1: "Beginner",
+                    level2: "Intermediate",
+                    level3: "Advanced",
+                    resetBtn: "🔄 Clear",
+                    hintBtn: "💡 Hint",
+                    checkBtn: "✔️ Check",
+                    nextWord: "Next Word ➡️",
+                    scoreLabel: "Score:",
+                    progress: "Word {current} of {total}",
+                    correct: "🎉 Correct! Well done.",
+                    wrong: "❌ Oops! The correct word is: {word}",
+                    completion: "🏆 All words completed! Master detective!",
+                    signInPrompt: "Enter your name to save progress",
+                    signInBtn: "Sign In",
+                    signOutBtn: "Sign Out",
+                    welcome: "Welcome, {name}",
+                    noName: "Please enter a name.",
+                    resetProgress: "Reset Progress",
+                    clueLabel: "🔍 Clue:"
+                }
+            },
+            fr: {
+                siteName: "English Hub",
+                footer: {
+                    developer: "Développeur : Mejri Ziad",
+                    privacy: "Politique de confidentialité",
+                    terms: "Conditions d'utilisation",
+                    contact: "Contact"
+                },
+                game: {
+                    title: "Chaîne de mots",
+                    levelLabel: "Niveau :",
+                    level1: "Débutant",
+                    level2: "Intermédiaire",
+                    level3: "Avancé",
+                    resetBtn: "🔄 Effacer",
+                    hintBtn: "💡 Indice",
+                    checkBtn: "✔️ Vérifier",
+                    nextWord: "Mot suivant ➡️",
+                    scoreLabel: "Score :",
+                    progress: "Mot {current} sur {total}",
+                    correct: "🎉 Correct ! Bien joué.",
+                    wrong: "❌ Oups ! Le mot correct est : {word}",
+                    completion: "🏆 Tous les mots terminés !",
+                    signInPrompt: "Entrez votre nom pour sauvegarder",
+                    signInBtn: "Connexion",
+                    signOutBtn: "Déconnexion",
+                    welcome: "Bienvenue, {name}",
+                    noName: "Veuillez entrer un nom.",
+                    resetProgress: "Réinitialiser",
+                    clueLabel: "🔍 Indice :"
+                }
+            },
+            ar: {
+                siteName: "English Hub",
+                footer: {
+                    developer: "المطور: ماجري زياد",
+                    privacy: "سياسة الخصوصية",
+                    terms: "شروط الخدمة",
+                    contact: "اتصل بنا"
+                },
+                game: {
+                    title: "سلسلة الكلمات",
+                    levelLabel: "المستوى:",
+                    level1: "مبتدئ",
+                    level2: "متوسط",
+                    level3: "متقدم",
+                    resetBtn: "🔄 مسح",
+                    hintBtn: "💡 تلميح",
+                    checkBtn: "✔️ تحقق",
+                    nextWord: "➡️ الكلمة التالية",
+                    scoreLabel: "النتيجة:",
+                    progress: "كلمة {current} من {total}",
+                    correct: "🎉 صحيح! أحسنت.",
+                    wrong: "❌ عذراً! الكلمة الصحيحة هي: {word}",
+                    completion: "🏆 تم إكمال جميع الكلمات!",
+                    signInPrompt: "أدخل اسمك لحفظ التقدم",
+                    signInBtn: "تسجيل الدخول",
+                    signOutBtn: "تسجيل الخروج",
+                    welcome: "مرحباً، {name}",
+                    noName: "الرجاء إدخال اسم.",
+                    resetProgress: "إعادة تعيين",
+                    clueLabel: "🔍 تلميح:"
+                }
+            }
+        };
+        for (const lang in fullI18N) {
+            if (!window.I18N[lang]) window.I18N[lang] = {};
+            Object.assign(window.I18N[lang], fullI18N[lang]);
+        }
+    </script>
+
+    <!-- ===== EXTERNAL SCRIPTS (same order as False Friends) ===== -->
+    <script src="scripts/translation-words-detect.js"></script>
+    <script src="scripts/common-sections-words-detect.js"></script>
+
+    <!-- ===== GAME LOGIC (handles only dynamic parts, respects global translation pills) ===== -->
+    <script>
+    window.EH_GAME_INDEX = 0;   // Case File #1
+
+    // Translation helper (unchanged)
+    function getTranslation(lang, key) {
+        if (!window.I18N || !window.I18N[lang]) return key;
+        const parts = key.split('.');
+        let val = window.I18N[lang];
+        for (let p of parts) {
+            if (val && typeof val === 'object' && p in val) val = val[p];
+            else return key;
+        }
+        return typeof val === 'string' ? val : key;
+    }
+
+    // Storage keys
+    const PLAYERS_KEY = 'EH_words_detect_players';
+    const PROGRESS_KEY = 'EH_words_detect_player_progress';
+    const SETTINGS_KEY = 'EH_words_detect_settings';
+    const GAME_PROGRESS_PREFIX = 'EH_words_detect_wordchain_';
+
+    function getPlayerId(name) {
+        let h = 0;
+        for (let i = 0; i < name.length; i++)
+            h = ((h << 5) - h) + name.charCodeAt(i) | 0;
+        return 'player_' + Math.abs(h);
+    }
+    function loadSettings() {
+        try { return JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}') || {}; }
+        catch(e) { return {}; }
+    }
+    function saveSettings(s) { localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)); }
+    function getCurrentPlayer() { return loadSettings().lastPlayer || ''; }
+    function setCurrentPlayer(n) { let s = loadSettings(); s.lastPlayer = n; saveSettings(s); }
+    function clearCurrentPlayer() { let s = loadSettings(); s.lastPlayer = ''; saveSettings(s); }
+    function loadPlayers() {
+        try { return JSON.parse(localStorage.getItem(PLAYERS_KEY) || '[]'); }
+        catch(e) { return []; }
+    }
+    function savePlayers(p) { localStorage.setItem(PLAYERS_KEY, JSON.stringify(p)); }
+    function loadProgress() {
+        try { return JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}'); }
+        catch(e) { return {}; }
+    }
+    function saveProgress(p) { localStorage.setItem(PROGRESS_KEY, JSON.stringify(p)); }
+    function ensurePlayer(name, lang) {
+        let players = loadPlayers();
+        let id = getPlayerId(name);
+        let p = players.find(p => p.id === id);
+        if (!p) {
+            p = { id, name, regLang: lang || 'en' };
+            players.push(p);
+            savePlayers(players);
+        }
+        return p;
+    }
+    function updateDashboardProgress(playerName, levelIndex, percent) {
+        if (!playerName) return;
+        const playerId = getPlayerId(playerName);
+        const gameIndex = window.EH_GAME_INDEX !== undefined ? window.EH_GAME_INDEX : 0;
+        const progress = loadProgress();
+        if (!progress[playerId]) progress[playerId] = {};
+        const cardKey = String(gameIndex);
+        if (!progress[playerId][cardKey]) {
+            progress[playerId][cardKey] = { level1: 0, level2: 0, level3: 0 };
+        }
+        const fields = ['level1', 'level2', 'level3'];
+        const fieldName = fields[levelIndex] || 'level1';
+        progress[playerId][cardKey][fieldName] = Math.min(100, Math.round(percent));
+        saveProgress(progress);
+    }
+
+    // ===== WORD DATA (unchanged) =====
+    const levelData = {
+        0: [
+            { clue: { en: "A furry animal that says meow", fr: "Un animal à fourrure qui dit miaou", ar: "حيوان فروي يقول مياو" }, answer: "cat", scrambled: "tca" },
+            { clue: { en: "You use it to write", fr: "Tu l'utilises pour écrire", ar: "تستخدمه للكتابة" }, answer: "pen", scrambled: "enp" },
+            { clue: { en: "Opposite of hot", fr: "Le contraire de chaud", ar: "عكس حار" }, answer: "cold", scrambled: "ocdl" },
+            { clue: { en: "A fruit that is yellow and curved", fr: "Un fruit jaune et courbé", ar: "فاكهة صفراء ومقوسة" }, answer: "banana", scrambled: "naabna" }
+        ],
+        1: [
+            { clue: { en: "Very large in size (synonym of huge)", fr: "Très grand en taille (synonyme de énorme)", ar: "كبير جداً في الحجم (مرادف لضخم)" }, answer: "enormous", scrambled: "senomrou" },
+            { clue: { en: "To look at something for a long time", fr: "Regarder quelque chose longtemps", ar: "النظر إلى شيء لفترة طويلة" }, answer: "stare", scrambled: "rtase" },
+            { clue: { en: "A person who travels to space", fr: "Une personne qui voyage dans l'espace", ar: "شخص يسافر إلى الفضاء" }, answer: "astronaut", scrambled: "rsonaautt" }
+        ],
+        2: [
+            { clue: { en: "A long, narrative poem about heroic deeds", fr: "Un long poème narratif sur des actes héroïques", ar: "قصيدة سردية طويلة عن الأعمال البطولية" }, answer: "epic", scrambled: "ipce" },
+            { clue: { en: "Unable to be heard", fr: "Impossible à entendre", ar: "غير قادر على أن يُسمع" }, answer: "inaudible", scrambled: "ndubiealai" },
+            { clue: { en: "A word that sounds the same as another but different meaning", fr: "Un mot qui se prononce pareil mais a un sens différent", ar: "كلمة تنطق مثل أخرى لكن بمعنى مختلف" }, answer: "homophone", scrambled: "pehomohfon" }
+        ]
+    };
+
+    class WordChainGame {
+        constructor() {
+            this.player = getCurrentPlayer();
+            this.currentLevel = 0;
+            this.currentIndex = 0;
+            this.score = 0;
+            this.totalAnswered = 0;
+            this.answerLetters = [];
+            this.scrambleLetters = [];
+            this.currentItem = null;
+            this.gameActive = true;
+            this.dom = {
+                signInArea: document.getElementById('signInArea'),
+                levelSelect: document.getElementById('levelSelect'),
+                clue: document.getElementById('clueText'),
+                scrambleContainer: document.getElementById('scrambleContainer'),
+                answerContainer: document.getElementById('answerContainer'),
+                feedback: document.getElementById('feedback'),
+                nextBtn: document.getElementById('nextButton'),
+                scoreDisplay: document.getElementById('scoreDisplay'),
+                progressText: document.getElementById('progressText'),
+                btnReset: document.getElementById('btnReset'),
+                btnHint: document.getElementById('btnHint'),
+                btnCheck: document.getElementById('btnCheck'),
+                langSelect: document.getElementById('EH-words-detect-common-lang-select'),
+                themeBtn: document.getElementById('EH-words-detect-common-theme-toggle-btn')
+            };
+            this.init();
+        }
+
+        getLang() { return this.dom.langSelect?.value || 'en'; }
+        t(key, repl = {}) {
+            let raw = getTranslation(this.getLang(), key);
+            for (let [k, v] of Object.entries(repl)) raw = raw.replace(`{${k}}`, v);
+            return raw;
+        }
+
+        // ========== NEW: Per‑level storage ==========
+        getStorageKey() { return GAME_PROGRESS_PREFIX + this.player; }
+
+        // Load full progress object (levels object)
+        loadFullProgress() {
+            if (!this.player) return null;
+            const raw = localStorage.getItem(this.getStorageKey());
+            if (!raw) return null;
+            try { return JSON.parse(raw); } catch(e) { return null; }
+        }
+
+        // Save full progress object
+        saveFullProgress(progressObj) {
+            if (!this.player) return;
+            localStorage.setItem(this.getStorageKey(), JSON.stringify(progressObj));
+        }
+
+        // Save current level's data into the full object
+        saveCurrentLevelProgress() {
+            if (!this.player) return;
+            let full = this.loadFullProgress() || {};
+            full[this.currentLevel] = {
+                index: this.currentIndex,
+                score: this.score,
+                totalAnswered: this.totalAnswered
+            };
+            this.saveFullProgress(full);
+            // Update dashboard bar for this level
+            const totalWords = this.getCurrentData().length;
+            const percent = totalWords > 0 ? (this.totalAnswered / totalWords) * 100 : 0;
+            updateDashboardProgress(this.player, this.currentLevel, percent);
+        }
+
+        // Load progress for a specific level (returns true if data existed)
+        loadLevelProgress(level) {
+            const full = this.loadFullProgress();
+            const data = full && full[level] ? full[level] : null;
+            if (data) {
+                this.currentIndex = data.index || 0;
+                this.score = data.score || 0;
+                this.totalAnswered = data.totalAnswered || 0;
+                return true;
+            } else {
+                // No saved progress for this level – start fresh
+                this.currentIndex = 0;
+                this.score = 0;
+                this.totalAnswered = 0;
+                return false;
+            }
+        }
+
+        // Legacy migration: convert old single‑object storage to new per‑level format
+        migrateOldProgress() {
+            if (!this.player) return;
+            const oldKey = this.getStorageKey();
+            const oldRaw = localStorage.getItem(oldKey);
+            if (!oldRaw) return;
+            try {
+                const old = JSON.parse(oldRaw);
+                // old structure: { level, index, score, totalAnswered }
+                if (old.hasOwnProperty('level') && !old.hasOwnProperty('0')) {
+                    const oldLevel = old.level;
+                    const newFull = {};
+                    newFull[oldLevel] = {
+                        index: old.index || 0,
+                        score: old.score || 0,
+                        totalAnswered: old.totalAnswered || 0
+                    };
+                    this.saveFullProgress(newFull);
+                    // Optionally remove old entry to avoid re‑migration
+                    // localStorage.removeItem(oldKey);
+                }
+            } catch(e) {}
+        }
+
+        // ========== Modified loadSavedProgress ==========
+        loadSavedProgress() {
+            if (!this.player) return;
+            this.migrateOldProgress();   // handle old data
+            // Determine which level to start with: either stored last level or 0
+            let lastLevel = 0;
+            const full = this.loadFullProgress();
+            if (full) {
+                // Try to find the highest level with progress, otherwise use level 0
+                const levelsWithData = Object.keys(full).map(Number).filter(l => full[l] && (full[l].totalAnswered > 0 || full[l].index > 0));
+                if (levelsWithData.length) lastLevel = Math.max(...levelsWithData);
+            }
+            this.currentLevel = lastLevel;
+            this.dom.levelSelect.value = this.currentLevel;
+            this.loadLevelProgress(this.currentLevel);
+        }
+
+        // Reset progress for the current level only (and save the reset)
+        resetProgressForCurrentLevel() {
+            this.currentIndex = 0;
+            this.score = 0;
+            this.totalAnswered = 0;
+            this.saveCurrentLevelProgress();   // persist the reset
+        }
+
+        // Reset all levels for this player
+        resetAllProgress() {
+            if (!this.player) return;
+            localStorage.removeItem(this.getStorageKey());   // wipe per‑level storage
+            this.resetProgressForCurrentLevel();             // reset current UI state
+            // Also reset dashboard bars for this card
+            const playerId = getPlayerId(this.player);
+            const progress = loadProgress();
+            if (!progress[playerId]) progress[playerId] = {};
+            progress[playerId][String(window.EH_GAME_INDEX)] = { level1: 0, level2: 0, level3: 0 };
+            saveProgress(progress);
+            this.loadQuestion();
+        }
+
+        // ========== Modified changeLevel ==========
+        changeLevel() {
+            // Save current level's progress before switching
+            this.saveCurrentLevelProgress();
+
+            // Switch to new level
+            this.currentLevel = parseInt(this.dom.levelSelect.value, 10);
+
+            // Load progress for the new level (or fresh if none)
+            this.loadLevelProgress(this.currentLevel);
+
+            // Refresh UI and question
+            this.loadQuestion();
+            this.onLanguageChange();
+        }
+
+        // ========== Other methods (mostly unchanged, but save progress on each action) ==========
+        init() {
+            this.dom.levelSelect.addEventListener('change', () => this.changeLevel());
+            this.dom.btnReset.addEventListener('click', () => this.resetAnswer());
+            this.dom.btnHint.addEventListener('click', () => this.giveHint());
+            this.dom.btnCheck.addEventListener('click', () => this.checkAnswer());
+            this.dom.nextBtn.addEventListener('click', () => this.nextWord());
+            this.dom.langSelect.addEventListener('change', () => {
+                this.onLanguageChange();
+                if (this.getLang() === 'ar') document.documentElement.setAttribute('dir', 'rtl');
+                else document.documentElement.removeAttribute('dir');
+            });
+
+            const settings = loadSettings();
+            if (settings.theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+            if (settings.lang) this.dom.langSelect.value = settings.lang;
+            if (this.getLang() === 'ar') document.documentElement.setAttribute('dir', 'rtl');
+
+            this.renderSignIn();
+            this.loadSavedProgress();
+            this.loadQuestion();
+            this.onLanguageChange();
+        }
+
+        renderSignIn() {
+            const area = this.dom.signInArea;
+            if (!area) return;
+            if (this.player) {
+                area.innerHTML = `
+                    <span class="EH-words-detect-player-name">${this.t('game.welcome', { name: this.player })}</span>
+                    <button class="EH-words-detect-signout-btn" id="signOutBtn">${this.t('game.signOutBtn')}</button>
+                    <button class="EH-words-detect-reset-btn" id="resetProgressBtn">🔄 ${this.t('game.resetProgress')}</button>
+                `;
+                document.getElementById('signOutBtn')?.addEventListener('click', () => this.signOut());
+                document.getElementById('resetProgressBtn')?.addEventListener('click', () => this.resetAllProgress());
+            } else {
+                area.innerHTML = `
+                    <input type="text" class="EH-words-detect-signin-input" id="playerNameInput" placeholder="Your name" maxlength="20">
+                    <button class="EH-words-detect-signin-btn" id="signInBtn">${this.t('game.signInBtn')}</button>
+                    <div id="signInError" style="color:var(--EH-words-detect-error);font-size:0.8rem;"></div>
+                `;
+                document.getElementById('signInBtn')?.addEventListener('click', () => this.signIn());
+            }
+        }
+
+        signIn() {
+            const input = document.getElementById('playerNameInput');
+            const error = document.getElementById('signInError');
+            const name = input?.value.trim();
+            if (!name) { error.textContent = this.t('game.noName'); return; }
+            setCurrentPlayer(name);
+            this.player = name;
+            ensurePlayer(name, this.getLang());
+            this.loadSavedProgress();   // now loads per‑level progress
+            this.renderSignIn();
+            this.loadQuestion();
+            this.onLanguageChange();
+        }
+
+        signOut() {
+            clearCurrentPlayer();
+            this.player = '';
+            this.resetProgressForCurrentLevel();   // clear local state
+            this.renderSignIn();
+            this.loadQuestion();
+            this.onLanguageChange();
+        }
+
+        // Called after checking answer or next word – ensures progress is saved
+        saveLocalProgress() {
+            this.saveCurrentLevelProgress();   // unified saving
+        }
+
+        getCurrentData() { return levelData[this.currentLevel] || []; }
+
+        loadQuestion() {
+            const data = this.getCurrentData();
+            if (this.currentIndex >= data.length) {
+                this.showCompletion();
+                return;
+            }
+            this.currentItem = data[this.currentIndex];
+            this.renderClue();
+            this.scrambleLetters = this.currentItem.scrambled.split('');
+            this.answerLetters = [];
+            this.gameActive = true;
+            this.dom.feedback.innerHTML = '';
+            this.dom.nextBtn.style.display = 'none';
+            this.dom.btnCheck.disabled = false;
+            this.renderScramble();
+            this.renderAnswer();
+            this.updateProgressText();
+            this.updateScoreUI();
+        }
+
+        renderClue() {
+            if (!this.currentItem) return;
+            const lang = this.getLang();
+            const clueObj = this.currentItem.clue || {};
+            const clueEn = clueObj.en || '';
+            const clueNative = clueObj[lang] || clueEn;
+            const label = this.t('game.clueLabel');
+
+            if (lang === 'en') {
+                this.dom.clue.innerHTML = `<strong>${label}</strong> ${clueEn}`;
+                return;
+            }
+            const wrapper = document.createElement('div');
+            wrapper.className = 'EH-words-detect-dual-text-wrapper';
+            wrapper.style.display = 'inline-block';
+            wrapper.style.textAlign = 'center';
+            const engSpan = document.createElement('span');
+            engSpan.textContent = clueEn;
+            engSpan.setAttribute('dir', 'ltr');
+            engSpan.style.display = 'inline-block';
+            const pill = document.createElement('span');
+            pill.className = 'EH-words-detect-translation-pill';
+            pill.textContent = clueNative;
+            if (lang === 'ar') pill.setAttribute('dir', 'rtl');
+            wrapper.appendChild(engSpan);
+            wrapper.appendChild(pill);
+            this.dom.clue.innerHTML = `<strong>${label}</strong> `;
+            this.dom.clue.appendChild(wrapper);
+        }
+
+        renderScramble() {
+            this.dom.scrambleContainer.innerHTML = '';
+            this.scrambleLetters.forEach((letter, idx) => {
+                if (letter === null) return;
+                const btn = document.createElement('button');
+                btn.className = 'EH-words-detect-letter-btn';
+                btn.textContent = letter;
+                btn.addEventListener('click', () => this.addLetter(idx));
+                this.dom.scrambleContainer.appendChild(btn);
+            });
+        }
+
+        addLetter(idx) {
+            if (!this.gameActive) return;
+            const letter = this.scrambleLetters[idx];
+            if (letter === null) return;
+            this.answerLetters.push(letter);
+            this.scrambleLetters[idx] = null;
+            this.renderScramble();
+            this.renderAnswer();
+        }
+
+        removeAnswerLetter(ansIdx) {
+            const letter = this.answerLetters[ansIdx];
+            this.answerLetters.splice(ansIdx, 1);
+            for (let i = 0; i < this.scrambleLetters.length; i++) {
+                if (this.scrambleLetters[i] === null) {
+                    this.scrambleLetters[i] = letter;
+                    break;
+                }
+            }
+            this.renderScramble();
+            this.renderAnswer();
+        }
+
+        renderAnswer() {
+            this.dom.answerContainer.innerHTML = '';
+            this.answerLetters.forEach((letter, idx) => {
+                const span = document.createElement('span');
+                span.className = 'EH-words-detect-answer-letter';
+                span.textContent = letter;
+                span.addEventListener('click', () => this.removeAnswerLetter(idx));
+                this.dom.answerContainer.appendChild(span);
+            });
+        }
+
+        resetAnswer() {
+            if (!this.gameActive) return;
+            const allLetters = this.currentItem.scrambled.split('');
+            const usedLetters = [...this.answerLetters];
+            this.scrambleLetters = [];
+            for (const ch of allLetters) {
+                if (usedLetters.includes(ch)) {
+                    const idx = usedLetters.indexOf(ch);
+                    usedLetters.splice(idx, 1);
+                } else {
+                    this.scrambleLetters.push(ch);
+                }
+            }
+            while (usedLetters.length) {
+                this.scrambleLetters.push(usedLetters.pop());
+            }
+            this.answerLetters = [];
+            this.renderScramble();
+            this.renderAnswer();
+        }
+
+        giveHint() {
+            if (!this.gameActive) return;
+            const correct = this.currentItem.answer;
+            if (this.answerLetters.length < correct.length) {
+                const needed = correct[this.answerLetters.length];
+                for (let i = 0; i < this.scrambleLetters.length; i++) {
+                    if (this.scrambleLetters[i] === needed) {
+                        this.addLetter(i);
+                        break;
+                    }
+                }
+            }
+        }
+
+        checkAnswer() {
+            if (!this.gameActive) return;
+            const userWord = this.answerLetters.join('').toLowerCase();
+            const correctWord = this.currentItem.answer.toLowerCase();
+            if (userWord === correctWord) {
+                this.score++;
+                this.dom.feedback.innerHTML = `<span style="color:var(--EH-words-detect-success);">${this.t('game.correct')}</span>`;
+            } else {
+                this.dom.feedback.innerHTML = `<span style="color:var(--EH-words-detect-error);">${this.t('game.wrong', { word: this.currentItem.answer })}</span>`;
+            }
+            this.totalAnswered++;
+            this.updateScoreUI();
+            this.gameActive = false;
+            this.dom.btnCheck.disabled = true;
+            this.dom.nextBtn.style.display = 'block';
+            this.saveLocalProgress();   // persist after answer
+        }
+
+        nextWord() {
+            this.currentIndex++;
+            this.loadQuestion();
+            this.saveLocalProgress();   // persist after moving to next word
+            this.onLanguageChange();
+        }
+
+        updateScoreUI() {
+            const total = this.getCurrentData().length;
+            this.dom.scoreDisplay.textContent = `${this.score}/${total}`;
+        }
+
+        updateProgressText() {
+            const total = this.getCurrentData().length;
+            this.dom.progressText.textContent = this.t('game.progress', { current: this.currentIndex + 1, total });
+        }
+
+        showCompletion() {
+            this.dom.feedback.innerHTML = `<span style="color:var(--EH-words-detect-success);">${this.t('game.completion')}</span>`;
+            this.dom.nextBtn.style.display = 'none';
+            this.gameActive = false;
+        }
+
+        onLanguageChange() {
+            this.translateLevelOptions();
+            this.updateDynamicTexts();
+            this.updateFooterTranslation();
+            this.renderSignIn();
+            if (this.currentItem) this.renderClue();
+        }
+
+        translateLevelOptions() {
+            const select = this.dom.levelSelect;
+            if (!select) return;
+            select.options[0].textContent = this.t('game.level1');
+            select.options[1].textContent = this.t('game.level2');
+            select.options[2].textContent = this.t('game.level3');
+        }
+
+        updateDynamicTexts() {
+            this.updateProgressText();
+            this.updateScoreUI();
+        }
+
+        updateFooterTranslation() {
+            const footer = document.querySelector('footer.EH-words-detect-common-footer');
+            if (!footer) return;
+            const lang = this.getLang();
+            const elements = footer.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (!key) return;
+                const translation = getTranslation(lang, key);
+                if (translation) el.textContent = translation;
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => { new WordChainGame(); });
+</script>
+</body>
+</html>

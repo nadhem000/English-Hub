@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>False Friend or True Friend? | Words Detective | English Hub</title>
+    <!-- Reuse your existing stylesheet (variables, header, cards, responsive, RTL) -->
+    <link rel="stylesheet" href="styles/style-words-detect.css">
+    <style>
+        /* ========== GAME‑SPECIFIC OVERRIDES (keeps EH-words-detect prefix) ========== */
+        :root {
+            /* New variables for this game (success / error / warning) */
+            --EH-words-detect-success: #2e7d32;
+            --EH-words-detect-success-hover: #1b5e20;
+            --EH-words-detect-error: #c62828;
+            --EH-words-detect-error-hover: #b71c1c;
+            --EH-words-detect-warning: #f57c00;
+        }
+        [data-theme="dark"] {
+            /* Dark variants (same values – can be adjusted later) */
+            --EH-words-detect-success: #2e7d32;
+            --EH-words-detect-success-hover: #1b5e20;
+            --EH-words-detect-error: #c62828;
+            --EH-words-detect-error-hover: #b71c1c;
+            --EH-words-detect-warning: #f57c00;
+        }
+
+        .EH-words-detect-game-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            direction: ltr !important;
+        }
+        .EH-words-detect-game-icon {
+            font-size: 2.5rem;
+            filter: drop-shadow(2px 6px 12px rgba(0,0,0,0.1));
+        }
+        .EH-words-detect-game-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(120deg, var(--EH-words-detect-common-title-color), #a07de0);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin: 0;
+        }
+        .EH-words-detect-level-selector-area {
+            margin: 1rem 0 1.5rem;
+            text-align: center;
+        }
+        .EH-words-detect-level-selector-area label {
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        .EH-words-detect-level-select {
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            border: 1px solid var(--EH-words-detect-common-border);
+            background: var(--EH-words-detect-common-card-bg);
+            color: var(--EH-words-detect-common-text-color);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .EH-words-detect-question-card {
+            background: var(--EH-words-detect-common-status-bg);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .EH-words-detect-word-pair {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        .EH-words-detect-word-english {
+            font-weight: bold;
+            color: var(--EH-words-detect-common-title-color);
+        }
+        .EH-words-detect-word-native {
+            font-style: italic;
+            opacity: 0.8;
+        }
+        .EH-words-detect-question-hint {
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .EH-words-detect-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        .EH-words-detect-btn {
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--EH-words-detect-common-transition, all 0.3s);
+            background: var(--EH-words-detect-common-card-bg);
+            color: var(--EH-words-detect-common-text-color);
+            border: 1px solid var(--EH-words-detect-common-border);
+        }
+        .EH-words-detect-btn:hover {
+            background: var(--EH-words-detect-common-status-bg);
+            transform: scale(0.97);
+        }
+        .EH-words-detect-btn-true {
+            background: var(--EH-words-detect-success);
+            color: var(--EH-words-detect-white);
+            border-color: var(--EH-words-detect-success);
+        }
+        .EH-words-detect-btn-false {
+            background: var(--EH-words-detect-error);
+            color: var(--EH-words-detect-white);
+            border-color: var(--EH-words-detect-error);
+        }
+        .EH-words-detect-btn-true:hover {
+            background: var(--EH-words-detect-success-hover);
+        }
+        .EH-words-detect-btn-false:hover {
+            background: var(--EH-words-detect-error-hover);
+        }
+        .EH-words-detect-feedback {
+            min-height: 3.5rem;
+            margin: 1rem 0;
+            font-weight: 500;
+            text-align: center;
+        }
+        .EH-words-detect-explanation {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            margin-top: 0.5rem;
+        }
+        .EH-words-detect-next-btn {
+            background: var(--EH-words-detect-common-title-color);
+            color: var(--EH-words-detect-white);
+            font-weight: bold;
+            border: none;
+            display: block;
+            margin: 1rem auto 0;
+        }
+        .EH-words-detect-score {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        .EH-words-detect-progress-text {
+            margin-top: 0.4rem;
+            color: var(--EH-words-detect-common-text-color);
+            opacity: 0.8;
+            text-align: center;
+        }
+        /* Sign‑in area */
+        .EH-words-detect-signin-area {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--EH-words-detect-common-status-bg);
+            border-radius: 1.5rem;
+            text-align: center;
+        }
+        .EH-words-detect-signin-input {
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            border: 1px solid var(--EH-words-detect-common-border);
+            background: var(--EH-words-detect-common-card-bg);
+            color: var(--EH-words-detect-common-text-color);
+            font-size: 0.9rem;
+            margin-right: 0.5rem;
+            width: auto;
+        }
+        .EH-words-detect-signin-btn {
+            background: var(--EH-words-detect-common-title-color);
+            color: var(--EH-words-detect-white);
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .EH-words-detect-signout-btn {
+            background: var(--EH-words-detect-error);
+            color: var(--EH-words-detect-white);
+            border: none;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            margin-left: 0.8rem;
+            cursor: pointer;
+        }
+        .EH-words-detect-player-name {
+            font-weight: 600;
+            color: var(--EH-words-detect-common-title-color);
+        }
+        /* RTL adjustments */
+        html[dir="rtl"] .EH-words-detect-signin-input {
+            margin-left: 0.5rem;
+            margin-right: 0;
+        }
+        html[dir="rtl"] .EH-words-detect-signout-btn {
+            margin-left: 0;
+            margin-right: 0.8rem;
+        }
+        html[dir="rtl"] .EH-words-detect-level-selector-area label {
+            margin-left: 0.5rem;
+            margin-right: 0;
+        }
+        /* Force Arabic translation pill for title to display RTL */
+        html[dir="rtl"] .EH-words-detect-game-header .EH-words-detect-translation-pill {
+            direction: rtl !important;
+            text-align: right !important;
+            unicode-bidi: embed;
+        }
+        .EH-words-detect-explanation {
+            direction: ltr;
+            text-align: left;
+        }
+        /* ---------- Reset Progress button ---------- */
+        .EH-words-detect-reset-btn {
+            background: var(--EH-words-detect-transparent);
+            color: var(--EH-words-detect-common-text-color);
+            border: 1px solid var(--EH-words-detect-common-border);
+            padding: 0.4rem 1.2rem;
+            border-radius: 2rem;
+            margin-left: 0.8rem;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .EH-words-detect-reset-btn:hover {
+            background: var(--EH-words-detect-common-status-bg);
+            border-color: var(--EH-words-detect-reset-accent);
+            color: var(--EH-words-detect-reset-accent);
+            transform: scale(0.97);
+        }
+        /* RTL: flip margin */
+        html[dir="rtl"] .EH-words-detect-reset-btn {
+            margin-left: 0;
+            margin-right: 0.8rem;
+        }
+        /* Small screens: full‑width & stack */
+        @media (max-width: 480px) {
+            .EH-words-detect-signin-area {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                justify-content: center;
+            }
+            .EH-words-detect-reset-btn {
+                margin-left: 0;
+                margin-top: 0.4rem;
+                width: 100%;
+                max-width: 220px;
+            }
+            html[dir="rtl"] .EH-words-detect-reset-btn {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER (identical to your main page) ===== -->
+    <div class="EH-words-detect-common-site-header">
+        <div class="EH-words-detect-common-brand">
+            <a href="index.html" class="EH-words-detect-common-site-logo-link" title="Main Page">
+                <img src="assets/icons/icon-192x192.png" alt="English Hub Logo" class="EH-words-detect-common-site-logo">
+            </a>
+            <span class="EH-words-detect-common-site-name" data-i18n="siteName">English Hub</span>
+        </div>
+        <div class="EH-words-detect-common-header-controls">
+            <select id="EH-words-detect-common-lang-select" class="EH-words-detect-common-language-select">
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="ar">العربية</option>
+            </select>
+            <button id="EH-words-detect-common-theme-toggle-btn" class="EH-words-detect-common-theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+        </div>
+    </div>
+    <!-- ===== MAIN GAME (fits inside a standard card) ===== -->
+    <main class="EH-words-detect-common-cards-container">
+        <div class="EH-words-detect-common-card" style="max-width: 640px; margin: 0 auto; width: 100%;">
+            <!-- Sign‑in / sign‑out block -->
+            <div class="EH-words-detect-signin-area" id="signInArea"></div>
+            <!-- Game header -->
+            <div class="EH-words-detect-game-header">
+                <span class="EH-words-detect-game-icon">🔍</span>
+                <h2 class="EH-words-detect-game-title" data-i18n="game.title">False Friend or True Friend?</h2>
+            </div>
+            <!-- Level selector -->
+            <div class="EH-words-detect-level-selector-area">
+                <label for="levelSelect" data-i18n="game.levelLabel">Level:</label>
+                <select id="levelSelect" class="EH-words-detect-level-select">
+                    <option value="0" data-i18n="game.level1">Beginner</option>
+                    <option value="1" data-i18n="game.level2">Intermediate</option>
+                    <option value="2" data-i18n="game.level3">Advanced</option>
+                </select>
+            </div>
+            <!-- Question card -->
+            <div class="EH-words-detect-question-card">
+                <div class="EH-words-detect-word-pair">
+                    <span class="EH-words-detect-word-english" id="englishWord"></span>
+                    <span>→</span>
+                    <span class="EH-words-detect-word-native" id="nativeWord"></span>
+                </div>
+                <p class="EH-words-detect-question-hint">
+                    <span data-i18n="game.questionHint">Does it have the same meaning?</span>
+                </p>
+            </div>
+            <!-- Buttons -->
+            <div class="EH-words-detect-buttons" id="buttonContainer">
+                <button class="EH-words-detect-btn EH-words-detect-btn-true" id="btnTrue" data-i18n="game.trueFriend">✅ True Friend</button>
+                <button class="EH-words-detect-btn EH-words-detect-btn-false" id="btnFalse" data-i18n="game.falseFriend">❌ False Friend</button>
+            </div>
+            <!-- Feedback -->
+            <div class="EH-words-detect-feedback" id="feedback"></div>
+            <button class="EH-words-detect-btn EH-words-detect-next-btn" id="nextButton" style="display:none;" data-i18n="game.nextWord">Next Word ➡️</button>
+            <!-- Score & progress -->
+            <div class="EH-words-detect-score">
+                <span data-i18n="game.scoreLabel">Score:</span>
+                <span id="scoreDisplay">0/0</span>
+            </div>
+            <div class="EH-words-detect-progress-text" id="progressText"></div>
+        </div>
+    </main>
+    <!-- ===== SCRIPTS ===== -->
+    <!-- 1. Extend the global I18N object with ALL needed translations (game + footer) -->
+    <script>
+        if (!window.I18N) window.I18N = {};
+        const gameI18N = {
+            en: {
+                siteName: "English Hub",
+                footer: {
+                    developer: "Developer: Mejri Ziad",
+                    privacy: "Privacy Policy",
+                    terms: "Terms of Service",
+                    contact: "Contact"
+                },
+                game: {
+                    title: "False Friend or True Friend?",
+                    levelLabel: "Level:",
+                    level1: "Beginner",
+                    level2: "Intermediate",
+                    level3: "Advanced",
+                    questionHint: "Does it have the same meaning?",
+                    trueFriend: "✅ True Friend",
+                    falseFriend: "❌ False Friend",
+                    nextWord: "Next Word \u200E➡️",
+                    scoreLabel: "Score:",
+                    progress: "Word {current} of {total}",
+                    correct: "🎉 Correct!",
+                    wrong: "❌ Oops! Wrong answer.",
+                    completion: "🏆 All words completed! Great detective work.",
+                    signInPrompt: "Please enter your name to save progress",
+                    signInBtn: "Sign In",
+                    signOutBtn: "Sign Out",
+                    welcome: "Welcome, {name}",
+                    noName: "Please enter a name.",
+                    resetProgress: "Reset Progress"
+                }
+            },
+            fr: {
+                siteName: "English Hub",
+                footer: {
+                    developer: "Développeur : Mejri Ziad",
+                    privacy: "Politique de confidentialité",
+                    terms: "Conditions d'utilisation",
+                    contact: "Contact"
+                },
+                game: {
+                    title: "Vrai ami ou faux ami ?",
+                    levelLabel: "Niveau :",
+                    level1: "Débutant",
+                    level2: "Intermédiaire",
+                    level3: "Avancé",
+                    questionHint: "Est-ce que ça a la même signification ?",
+                    trueFriend: "✅ Vrai ami",
+                    falseFriend: "❌ Faux ami",
+                    nextWord: "Mot suivant \u200E➡️",
+                    scoreLabel: "Score :",
+                    progress: "Mot {current} sur {total}",
+                    correct: "🎉 Correct !",
+                    wrong: "❌ Oups ! Mauvaise réponse.",
+                    completion: "🏆 Tous les mots terminés ! Beau travail de détective.",
+                    signInPrompt: "Entrez votre nom pour sauvegarder la progression",
+                    signInBtn: "Se connecter",
+                    signOutBtn: "Se déconnecter",
+                    welcome: "Bienvenue, {name}",
+                    noName: "Veuillez entrer un nom.",
+                    resetProgress: "Réinitialiser"
+                }
+            },
+            ar: {
+                siteName: "English Hub",
+                footer: {
+                    developer: "المطور: ماجري زياد",
+                    privacy: "سياسة الخصوصية",
+                    terms: "شروط الخدمة",
+                    contact: "اتصل بنا"
+                },
+                game: {
+                    title: "صديق حقيقي أم صديق مزيف؟",
+                    levelLabel: "المستوى:",
+                    level1: "مبتدئ",
+                    level2: "متوسط",
+                    level3: "متقدم",
+                    questionHint: "هل له نفس المعنى؟",
+                    trueFriend: "✅ صديق حقيقي",
+                    falseFriend: "❌ صديق مزيف",
+                    nextWord: "\u200E➡️ الكلمة التالية",
+                    scoreLabel: "النتيجة:",
+                    progress: "كلمة {current} من {total}",
+                    correct: "🎉 صحيح!",
+                    wrong: "❌ عذرًا! إجابة خاطئة.",
+                    completion: "🏆 تم إكمال جميع الكلمات! عمل تحري رائع.",
+                    signInPrompt: "يرجى إدخال اسمك لحفظ التقدم",
+                    signInBtn: "تسجيل الدخول",
+                    signOutBtn: "تسجيل الخروج",
+                    welcome: "مرحبًا، {name}",
+                    noName: "يرجى إدخال اسم.",
+                    resetProgress: "إعادة تعيين"
+                }
+            }
+        };
+        for (const lang in gameI18N) {
+            if (!window.I18N[lang]) window.I18N[lang] = {};
+            Object.assign(window.I18N[lang], gameI18N[lang]);
+        }
+    </script>
+    <!-- 2. Your existing translation / theme / RTL script (handles dual‑pill automatically) -->
+    <script src="scripts/translation-words-detect.js"></script>
+    <!-- 3. Footer injector (creates footer, will be translated via global script + manual update) -->
+    <script src="scripts/common-sections-words-detect.js"></script>
+    <!-- 4. Adapted game script with sign‑in, level selector, footer translation fix, and DASHBOARD PROGRESS INTEGRATION -->
+    <script>
+        // Card index: 0 = Case File #1, 1 = Case File #2, 2 = Case File #3
+        window.EH_GAME_INDEX = 1;
+        (function() {
+            'use strict';
+            // ========== TRANSLATION HELPER (uses extended I18N) ==========
+            function t(key, lang, replacements) {
+                if (!window.I18N || !window.I18N[lang]) return key;
+                const keys = key.split('.');
+                let val = window.I18N[lang];
+                for (let k of keys) {
+                    if (val && typeof val === 'object' && k in val) val = val[k];
+                    else return key;
+                }
+                if (typeof val !== 'string') return key;
+                if (replacements) {
+                    for (const [placeholder, value] of Object.entries(replacements)) {
+                        val = val.replace(`{${placeholder}}`, value);
+                    }
+                }
+                return val;
+            }
+            // ========== STORAGE KEYS (match the dashboard) ==========
+            const PLAYERS_KEY = 'EH_words_detect_players';
+            const PROGRESS_KEY = 'EH_words_detect_player_progress';
+            const SETTINGS_KEY = 'EH_words_detect_settings';
+            // ---------- Settings helpers ----------
+            function loadSettings() {
+                const raw = localStorage.getItem(SETTINGS_KEY);
+                if (!raw) return { lang: 'en', theme: null, lastPlayer: '' };
+                try {
+                    const settings = JSON.parse(raw);
+                    if (!settings.hasOwnProperty('lang')) settings.lang = 'en';
+                    if (!settings.hasOwnProperty('theme')) settings.theme = null;
+                    if (!settings.hasOwnProperty('lastPlayer')) settings.lastPlayer = '';
+                    return settings;
+                } catch (e) {
+                    return { lang: 'en', theme: null, lastPlayer: '' };
+                }
+            }
+            function saveSettings(settings) {
+                localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+            }
+            function getCurrentPlayerName() {
+                const settings = loadSettings();
+                return settings.lastPlayer || '';
+            }
+            function setCurrentPlayerName(name) {
+                const settings = loadSettings();
+                settings.lastPlayer = name.trim();
+                saveSettings(settings);
+            }
+            function clearCurrentPlayerName() {
+                const settings = loadSettings();
+                settings.lastPlayer = '';
+                saveSettings(settings);
+            }
+            // One‑time migration: move old separate key into settings
+            (function migrateOldPlayerKey() {
+                const oldKey = 'EH_words_detect_current_player';
+                const oldName = localStorage.getItem(oldKey);
+                if (oldName !== null) {
+                    const settings = loadSettings();
+                    if (!settings.lastPlayer) {
+                        settings.lastPlayer = oldName;
+                        saveSettings(settings);
+                    }
+                    localStorage.removeItem(oldKey);
+                }
+            })();
+            // ---------- Player management ----------
+            function getPlayerId(name) {
+                let hash = 0;
+                for (let i = 0; i < name.length; i++) {
+                    const char = name.charCodeAt(i);
+                    hash = ((hash << 5) - hash) + char;
+                    hash |= 0;
+                }
+                return 'player_' + Math.abs(hash);
+            }
+            function loadPlayers() {
+                const raw = localStorage.getItem(PLAYERS_KEY);
+                if (!raw) return [];
+                try { return JSON.parse(raw); } catch(e) { return []; }
+            }
+            function savePlayers(players) {
+                localStorage.setItem(PLAYERS_KEY, JSON.stringify(players));
+            }
+            function ensurePlayer(name, lang) {
+                const players = loadPlayers();
+                const id = getPlayerId(name);
+                let player = players.find(p => p.id === id);
+                if (!player) {
+                    player = { id, name, regLang: lang || 'en' };
+                    players.push(player);
+                    savePlayers(players);
+                } else if (player.name !== name || !player.regLang) {
+                    player.name = name;
+                    player.regLang = lang || player.regLang || 'en';
+                    savePlayers(players);
+                }
+                return player;
+            }
+            // ---------- Dashboard progress ----------
+            function loadProgress() {
+                const raw = localStorage.getItem(PROGRESS_KEY);
+                if (!raw) return {};
+                try { return JSON.parse(raw); } catch(e) { return {}; }
+            }
+            function saveProgress(progressObj) {
+                localStorage.setItem(PROGRESS_KEY, JSON.stringify(progressObj));
+            }
+            function updateDashboardProgress(playerName, levelIndex, percent) {
+                if (!playerName) return;
+                const playerId = getPlayerId(playerName);
+                const gameIndex = window.EH_GAME_INDEX;
+                if (gameIndex === undefined) return;
+                const progress = loadProgress();
+                if (!progress[playerId]) progress[playerId] = {};
+                const cardKey = String(gameIndex);
+                if (!progress[playerId][cardKey]) {
+                    progress[playerId][cardKey] = { level1: 0, level2: 0, level3: 0 };
+                }
+                const fields = ['level1', 'level2', 'level3'];
+                const fieldName = fields[levelIndex] || 'level1';
+                progress[playerId][cardKey][fieldName] = Math.min(100, Math.round(percent));
+                saveProgress(progress);
+            }
+            // ========== WORD DATA ==========
+            const levelData = {
+                0: [
+                    { 
+                        english: "library", 
+                        native: { en: "library", fr: "bibliothèque", ar: "مكتبة" },
+                        isTrueFriend: { en: true, fr: true, ar: true },
+                        explanation: "Both mean a place with books."
+                    },
+                    { 
+                        english: "photo", 
+                        native: { en: "photo", fr: "photo", ar: "صورة" },
+                        isTrueFriend: { en: true, fr: true, ar: true },
+                        explanation: "Same meaning in both languages."
+                    },
+                    { 
+                        english: "animal", 
+                        native: { en: "animal", fr: "animal", ar: "حيوان" },
+                        isTrueFriend: { en: true, fr: true, ar: true },
+                        explanation: "Same word, same meaning."
+                    }
+                ],
+                1: [
+                    { 
+                        english: "sensible", 
+                        native: { en: "sensitive", fr: "raisonnable", ar: "حساس" },
+                        isTrueFriend: { en: false, fr: false, ar: false },
+                        explanation: "English 'sensible' = reasonable; the shown word means something else."
+                    },
+                    { 
+                        english: "actually", 
+                        native: { en: "currently", fr: "actuellement", ar: "حالياً" },
+                        isTrueFriend: { en: false, fr: false, ar: false },
+                        explanation: "English 'actually' = in fact; the shown word means 'currently'."
+                    },
+                    { 
+                        english: "eventually", 
+                        native: { en: "possibly", fr: "éventuellement", ar: "ممكن" },
+                        isTrueFriend: { en: false, fr: false, ar: false },
+                        explanation: "English 'eventually' = in the end; the shown word means 'possibly'."
+                    }
+                ],
+                2: [
+                    { 
+                        english: "library", 
+                        native: { en: "bookstore", fr: "librairie", ar: "مكتبة" },
+                        isTrueFriend: { en: false, fr: false, ar: false },
+                        explanation: "English 'library' ≠ bookstore. (In Arabic, 'مكتبة' can mean both.)"
+                    },
+                    { 
+                        english: "sympathetic", 
+                        native: { en: "nice", fr: "sympathique", ar: "لطيف" },
+                        isTrueFriend: { en: false, fr: false, ar: false },
+                        explanation: "English 'sympathetic' = compassionate; the shown word means 'nice/friendly'."
+                    },
+                    { 
+                        english: "assist", 
+                        native: { en: "attend", fr: "assister", ar: "حضر" },
+                        isTrueFriend: { en: false, fr: false, ar: false },
+                        explanation: "English 'assist' = help; the shown word means 'to attend'."
+                    }
+                ]
+            };
+            // ========== GAME LOGIC ==========
+            class FauxAmisGame {
+                constructor() {
+                    this.player = '';
+                    this.currentLevel = 0;
+                    this.currentIndex = 0;
+                    this.score = 0;
+                    this.totalAnswered = 0;
+                    this.gameActive = false;
+                    this.englishWordEl = document.getElementById('englishWord');
+                    this.nativeWordEl = document.getElementById('nativeWord');
+                    this.feedbackEl = document.getElementById('feedback');
+                    this.nextButton = document.getElementById('nextButton');
+                    this.btnTrue = document.getElementById('btnTrue');
+                    this.btnFalse = document.getElementById('btnFalse');
+                    this.scoreDisplay = document.getElementById('scoreDisplay');
+                    this.progressText = document.getElementById('progressText');
+                    this.levelSelect = document.getElementById('levelSelect');
+                    this.init();
+                }
+                init() {
+                    this.nextButton.addEventListener('click', () => this.loadNext());
+                    this.btnTrue.addEventListener('click', () => this.checkAnswer(true));
+                    this.btnFalse.addEventListener('click', () => this.checkAnswer(false));
+                    this.levelSelect.addEventListener('change', () => this.onLevelChange());
+                    this.renderSignInArea();
+                    this.tryAutoSignIn();
+                    this.loadQuestion();
+                    this.translateLevelOptions();
+                    const langSelect = document.getElementById('EH-words-detect-common-lang-select');
+                    if (langSelect) {
+                        langSelect.addEventListener('change', () => this.onLanguageChange());
+                    }
+                }
+                // ---- Per‑level progress storage ----
+                loadAllGameProgress(playerName) {
+                    if (!playerName) return {};
+                    const raw = localStorage.getItem('EH_words_detect_game_' + playerName);
+                    return raw ? JSON.parse(raw) : {};
+                }
+                saveAllGameProgress(playerName, progressObj) {
+                    if (!playerName) return;
+                    localStorage.setItem('EH_words_detect_game_' + playerName, JSON.stringify(progressObj));
+                }
+                getLevelProgress(playerName, level) {
+                    const all = this.loadAllGameProgress(playerName);
+                    return all[level] || null;
+                }
+                setLevelProgress(playerName, level, data) {
+                    const all = this.loadAllGameProgress(playerName);
+                    all[level] = data;
+                    this.saveAllGameProgress(playerName, all);
+                }
+                // Called whenever we need to persist the current level's state
+                saveGameProgressLocal() {
+                    if (!this.player) return;
+                    const data = {
+                        currentIndex: this.currentIndex,
+                        score: this.score,
+                        totalAnswered: this.totalAnswered
+                    };
+                    this.setLevelProgress(this.player, this.currentLevel, data);
+                }
+                // Save both local and dashboard progress
+                saveAllProgress() {
+                    this.saveGameProgressLocal();
+                    if (this.player) {
+                        const total = this.getCurrentData().length;
+                        const percent = total > 0 ? (this.totalAnswered / total) * 100 : 0;
+                        updateDashboardProgress(this.player, this.currentLevel, percent);
+                    }
+                }
+                // ---- Level change ----
+                onLevelChange() {
+                    const newLevel = parseInt(this.levelSelect.value, 10);
+                    if (newLevel === this.currentLevel) return;
+                    // Save current progress before switching
+                    this.saveGameProgressLocal();
+                    this.currentLevel = newLevel;
+                    // Try to load saved progress for the new level
+                    const saved = this.getLevelProgress(this.player, this.currentLevel);
+                    if (saved) {
+                        this.currentIndex = saved.currentIndex || 0;
+                        this.score = saved.score || 0;
+                        this.totalAnswered = saved.totalAnswered || 0;
+                    } else {
+                        this.resetProgressForCurrentLevel();
+                    }
+                    // Ensure player data exists
+                    if (this.player) {
+                        ensurePlayer(this.player, this.getCurrentLang());
+                    }
+                    this.loadQuestion();
+                }
+                resetProgressForCurrentLevel() {
+                    this.currentIndex = 0;
+                    this.score = 0;
+                    this.totalAnswered = 0;
+                }
+                // ---- Sign‑in / out ----
+                renderSignInArea() {
+                    const area = document.getElementById('signInArea');
+                    if (!area) return;
+                    const currentPlayer = getCurrentPlayerName();
+                    const lang = this.getCurrentLang();
+                    if (currentPlayer) {
+                        area.innerHTML = `
+                            <span class="EH-words-detect-player-name">${this.escapeHtml(
+                                t('game.welcome', lang, { name: currentPlayer })
+                            )}</span>
+                            <button class="EH-words-detect-signout-btn" id="signOutBtn">${this.escapeHtml(t('game.signOutBtn', lang))}</button>
+                            <button class="EH-words-detect-reset-btn" id="resetProgressBtn" title="Reset all progress for this game">🔄 ${this.escapeHtml(t('game.resetProgress', lang))}</button>
+                        `;
+                        document.getElementById('signOutBtn').addEventListener('click', () => this.signOut());
+                        document.getElementById('resetProgressBtn').addEventListener('click', () => this.resetCurrentPlayerProgress());
+                    } else {
+                        area.innerHTML = `
+                            <p style="margin-bottom:0.5rem;">${this.escapeHtml(t('game.signInPrompt', lang))}</p>
+                            <input type="text" class="EH-words-detect-signin-input" id="playerNameInput" placeholder="Your name" maxlength="20">
+                            <button class="EH-words-detect-signin-btn" id="signInBtn">${this.escapeHtml(t('game.signInBtn', lang))}</button>
+                            <div id="signInError" style="color: var(--EH-words-detect-error); font-size:0.8rem; margin-top:0.3rem;"></div>
+                        `;
+                        document.getElementById('signInBtn').addEventListener('click', () => this.signIn());
+                    }
+                }
+                signIn() {
+                    const nameInput = document.getElementById('playerNameInput');
+                    const errorDiv = document.getElementById('signInError');
+                    const name = nameInput.value.trim();
+                    const lang = this.getCurrentLang();
+                    if (!name) {
+                        errorDiv.textContent = t('game.noName', lang);
+                        return;
+                    }
+                    setCurrentPlayerName(name);
+                    this.player = name;
+                    ensurePlayer(name, lang);
+                    // Load progress for the current level (now per‑level)
+                    const saved = this.getLevelProgress(this.player, this.currentLevel);
+                    if (saved) {
+                        this.currentIndex = saved.currentIndex || 0;
+                        this.score = saved.score || 0;
+                        this.totalAnswered = saved.totalAnswered || 0;
+                    } else {
+                        this.resetProgressForCurrentLevel();
+                    }
+                    this.renderSignInArea();
+                    this.loadQuestion();
+                    this.updateDynamicTexts();
+                }
+                signOut() {
+                    clearCurrentPlayerName();
+                    this.player = '';
+                    this.resetProgressForCurrentLevel();
+                    this.renderSignInArea();
+                    this.loadQuestion();
+                    this.updateDynamicTexts();
+                }
+                tryAutoSignIn() {
+                    const savedPlayer = getCurrentPlayerName();
+                    if (savedPlayer) {
+                        this.player = savedPlayer;
+                        const saved = this.getLevelProgress(this.player, this.currentLevel);
+                        if (saved) {
+                            this.currentIndex = saved.currentIndex || 0;
+                            this.score = saved.score || 0;
+                            this.totalAnswered = saved.totalAnswered || 0;
+                        }
+                    }
+                }
+                // ---- Core game ----
+                getCurrentData() {
+                    return levelData[this.currentLevel] || [];
+                }
+                loadQuestion() {
+                    const data = this.getCurrentData();
+                    if (this.currentIndex >= data.length) {
+                        this.showCompletion();
+                        if (this.player) {
+                            updateDashboardProgress(this.player, this.currentLevel, 100);
+                        }
+                        return;
+                    }
+                    const item = data[this.currentIndex];
+                    const lang = this.getCurrentLang();
+                    this.englishWordEl.textContent = item.english;
+                    this.nativeWordEl.textContent = this.getNativeForItem(item, lang);
+                    this.feedbackEl.innerHTML = '';
+                    this.setNextButtonVisible(false);
+                    this.btnTrue.disabled = false;
+                    this.btnFalse.disabled = false;
+                    this.updateProgressText();
+                    this.gameActive = true;
+                }
+                getNativeForItem(item, lang) {
+                    if (item.native && typeof item.native === 'object') {
+                        return item.native[lang] || item.native['en'] || '';
+                    }
+                    return item.native;
+                }
+                getIsTrueFriendForItem(item, lang) {
+                    if (item.isTrueFriend && typeof item.isTrueFriend === 'object') {
+                        return item.isTrueFriend[lang] !== undefined ? item.isTrueFriend[lang] : item.isTrueFriend;
+                    }
+                    return item.isTrueFriend;
+                }
+                checkAnswer(userAnswer) {
+                    if (!this.gameActive) return;
+                    const data = this.getCurrentData();
+                    const item = data[this.currentIndex];
+                    const lang = this.getCurrentLang();
+                    const correct = this.getIsTrueFriendForItem(item, lang);
+                    const msg = userAnswer === correct ? t('game.correct', lang) : t('game.wrong', lang);
+                    this.feedbackEl.innerHTML = `${msg}<div class="EH-words-detect-explanation">${item.explanation}</div>`;
+                    if (userAnswer === correct) this.score++;
+                    this.totalAnswered++;
+                    this.updateScoreDisplay();
+                    this.btnTrue.disabled = true;
+                    this.btnFalse.disabled = true;
+                    this.setNextButtonVisible(true);
+                    this.gameActive = false;
+                    this.saveAllProgress();
+                }
+                loadNext() {
+                    this.currentIndex++;
+                    this.loadQuestion();
+                    this.saveAllProgress();
+                }
+                updateScoreDisplay() {
+                    this.scoreDisplay.textContent = `${this.score}/${this.totalAnswered}`;
+                }
+                updateProgressText() {
+                    const lang = this.getCurrentLang();
+                    const total = this.getCurrentData().length;
+                    this.progressText.textContent = t('game.progress', lang, { current: this.currentIndex + 1, total });
+                }
+                translateLevelOptions() {
+                    const lang = this.getCurrentLang();
+                    const select = document.getElementById('levelSelect');
+                    if (!select) return;
+                    select.options[0].text = t('game.level1', lang);
+                    select.options[1].text = t('game.level2', lang);
+                    select.options[2].text = t('game.level3', lang);
+                }
+                showCompletion() {
+                    const lang = this.getCurrentLang();
+                    this.feedbackEl.innerHTML = t('game.completion', lang);
+                    this.setNextButtonVisible(false);
+                    this.btnTrue.disabled = true;
+                    this.btnFalse.disabled = true;
+                    this.progressText.textContent = '';
+                    this.gameActive = false;
+                }
+                getCurrentLang() {
+                    const select = document.getElementById('EH-words-detect-common-lang-select');
+                    return select ? select.value : 'en';
+                }
+                onLanguageChange() {
+                    const data = this.getCurrentData();
+                    if (this.currentIndex < data.length) {
+                        const item = data[this.currentIndex];
+                        const lang = this.getCurrentLang();
+                        this.nativeWordEl.textContent = this.getNativeForItem(item, lang);
+                    }
+                    this.updateDynamicTexts();
+                    this.updateFooterTranslation();
+                    this.translateLevelOptions();
+                }
+                updateDynamicTexts() {
+                    this.updateScoreDisplay();
+                    this.updateProgressText();
+                    this.renderSignInArea();
+                }
+/**
+ * Show or hide the "Next" button, taking the translation wrapper into account.
+ * @param {boolean} visible - true to show, false to hide
+ */
+setNextButtonVisible(visible) {
+    const wrapper = this.nextButton.closest('.EH-words-detect-dual-text-wrapper');
+    if (wrapper) {
+        // '' allows the default CSS (flex) to apply when visible
+        wrapper.style.display = visible ? '' : 'none';
+    }
+    // The button itself also uses its own default (block) when visible
+    this.nextButton.style.display = visible ? '' : 'none';
+}
+                updateFooterTranslation() {
+                    const lang = this.getCurrentLang();
+                    if (!window.I18N || !window.I18N[lang]) return;
+                    const footer = document.querySelector('footer.EH-words-detect-common-footer');
+                    if (!footer) return;
+                    const elements = footer.querySelectorAll('[data-i18n]');
+                    elements.forEach(el => {
+                        const key = el.getAttribute('data-i18n');
+                        if (!key) return;
+                        const translation = t(key, lang);
+                        if (translation) el.textContent = translation;
+                    });
+                }
+                escapeHtml(str) {
+                    const div = document.createElement('div');
+                    div.textContent = str;
+                    return div.innerHTML;
+                }
+                // Reset all levels for this player
+                resetCurrentPlayerProgress() {
+                    if (!this.player) return;
+                    // Clear per‑level progress
+                    localStorage.removeItem('EH_words_detect_game_' + this.player);
+                    // Reset dashboard bars for the current card
+                    const playerId = getPlayerId(this.player);
+                    const progress = loadProgress();
+                    if (!progress[playerId]) progress[playerId] = {};
+                    progress[playerId][String(window.EH_GAME_INDEX)] = { level1: 0, level2: 0, level3: 0 };
+                    saveProgress(progress);
+                    // Reset current state
+                    this.currentIndex = 0;
+                    this.score = 0;
+                    this.totalAnswered = 0;
+                    this.updateScoreDisplay();
+                    this.loadQuestion();
+                }
+            }
+            function initGame() {
+                new FauxAmisGame();
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initGame);
+            } else {
+                initGame();
+            }
+        })();
+    </script>
+</body>
+</html>
